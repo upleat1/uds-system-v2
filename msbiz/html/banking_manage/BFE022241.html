@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[원스탑] 이체한도/PIN설정 (타행 보유 OTP 선택)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="인증센터" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">기업뱅킹 신규가입</h1>
+            
+            <div class="section">
+                <p class="h2 bold">간편한 온라인 서비스 이용을 위해 <br>기업뱅킹에 가입해보세요!</p>
+                <h2 class="h2 gap_sm">기업뱅킹 신규정보</h2>
+                <div class="form_group gap_xxxs">
+                    <div class="form_tit">출금계좌번호</div><!-- 220929 텍스트수정 -->
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn readonly" title="출금계좌정보">000000-00-000000</button>
+                        </div>
+                    </div>
+                    <!-- 220929 추가 -->
+                    <div class="form_btm_wrap">
+                        <span class="selection">
+                            <input type="checkbox" id="chk" name="chk">
+                            <label for="chk" class="label"><em>출금계좌없이 기업인터넷뱅킹 가입</em></label>
+                        </span>
+                    </div>
+                    <!-- //220929 추가 -->     
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">출금계좌 비밀번호</div>
+                    <div class="form_row">
+                        <!-- 220907 class 및 버튼추가 -->
+                        <div class="input js_unit int_btn" role="button" aria-label="{개발:입력값},출금계좌 비밀번호 입력" onclick="">
+                            <input type="tel" aria-hidden="true" placeholder="숫자 4자리 입력" title="출금계좌 비밀번호 입력" readonly class="bg_white">
+                            <button type="button" class="btn point sm round">비밀번호 확인</button>
+                        </div>
+                        <!-- //220907 class 및 버튼추가 -->
+                    </div>
+                    <p class="tip_info">숫자 4자리를 입력해주세요.</p>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">아이디</div>
+                    <div class="form_row"> 
+                        <div class="input int_btn">
+                            <input type="text" placeholder="아이디 입력" title="아이디 입력" readonly class="bg_white">
+                            <button type="button" class="btn point sm round">중복확인</button>
+                        </div>
+                    </div>
+                    <p class="tip_info">영문 또는 영문/숫자 조합으로 6~12자리를 입력해주세요.</p>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">사용자암호</div>
+                    <div class="form_row"> 
+                        <div class="input js_unit" role="button" aria-label="{개발:입력값},사용자암호 입력" onclick="">
+                            <input type="tel" aria-hidden="true" placeholder="8~12자리 입력" title="사용자암호 입력" readonly class="bg_white">
+                        </div>
+                    </div>
+                    <p class="tip_info">영문/숫자/특수기호 조합으로 10~12자리를 입력해주세요.</p>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">사용자암호 확인</div>
+                    <div class="form_row"> 
+                        <div class="input js_unit" role="button" aria-label="{개발:입력값},사용자암호 확인" onclick="">
+                            <input type="tel" aria-hidden="true" placeholder="사용자암호 다시 입력" title="사용자암호 확인" readonly class="bg_white">
+                        </div>
+                    </div>
+                    <p class="tip_info">영문/숫자/특수기호 조합으로 10~12자리를 입력해주세요.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="h2">OTP 등록</h2>
+                <div class="tab_wrap box">
+                    <div class="tab_radio">
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="rdo1_1" name="rdo1">
+                                <label for="rdo1_1" class="label"><em>타행발급 OTP 등록</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="rdo1_2" name="rdo1"checked>
+                                <label for="rdo1_2" class="label"><em>KB 모바일OTP 발급</em></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tab_panel">
+                        <h3 class="hidden">타행발급 OTP 등록</h3>
+                    </div>
+                    <!-- KB 모바일OTP 발급 -->
+                    <div class="tab_panel">
+                        <h3 class="hidden">KB 모바일OTP 발급</h3>
+                        <div class="form_group">
+                            <div class="form_tit">발급대상
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont"> 
+                                            Master(대표자) 모바일OTP만 발급하거나<br>
+                                            Sub(직원)용 OTP도 미리 함께 발급할 수 있습니다.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_row gap_xs_2">
+                                <div class="rdoChk_group">
+                                    <span class="selection">
+                                        <input type="radio" id="radio1" name="radio" checked>
+                                        <label for="radio1" class="label"><em>Master(대표자)</em></label>
+                                    </span>
+                                </div>
+                                <div class="rdoChk_group">
+                                    <span class="selection">
+                                        <input type="radio" id="radio2" name="radio">
+                                        <label for="radio2" class="label"><em>Master(대표자) + Sub(직원)</em></label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">OTP 밴더코드</div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" title="OTP 밴더코드" value="(512)에이티솔루션즈" readonly>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">OTP 일련번호</div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" title="OTP 일련번호" value="12345678" readonly>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="form_group"><!-- 221011 에러메세지 class="error" 삭제 -->
+                            <div class="form_tit">1일 이체한도</div>
+                            <div class="form_row"> 
+                                <div class="input js_unit" role="button" aria-label="{개발:입력값}, 1일 이체한도 입력" onclick="">
+                                    <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="1일 이체한도 입력" readonly class="bg_white"><!-- 220907 접근성 추가 : id/aria-labelledby 매칭 --><!-- 221011 id="labelledby01" 삭제 -->
+                                </div>
+                            </div>
+                            <p class="tip_info">최대 한도는 5억원입니다.</p><!-- 221011 추가 -->
+                            <!-- 221011 삭제 <p class="tip" aria-labelledby="labelledby01">최대 한도는 5억원입니다.</p> -->
+                        </div>
+                        <div class="form_group"><!-- 221011 에러메세지 class="error" 삭제 -->
+                            <div class="form_tit">1회 이체한도</div>
+                            <div class="form_row"> 
+                                <div class="input js_unit" role="button" aria-label="{개발:입력값}, 1회 이체한도 입력" onclick="">
+                                    <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="1회 이체한도 입력" readonly class="bg_white"><!-- 220907 접근성 추가 : id/aria-labelledby 매칭 --><!-- 221011 id="labelledby02" 삭제 -->
+                                </div>
+                            </div>
+                            <p class="tip_info">최대 한도는 1억원입니다.</p><!-- 221011 추가 -->
+                            <!-- 221011 삭제 <p class="tip" aria-labelledby="labelledby02">최대 한도는 1억원입니다.</p> -->
+                        </div>
+                    </div>
+                    <!-- //KB 모바일OTP 발급 -->
+                </div>
+            </div>
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">이용안내</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>Master(대표자) OTP 발급이 완료되면, Master(대표자)가 Sub(직원) OTP도 미리 발급할 수 있습니다.</li>
+                        <li>모바일OTP로 거래 시 이체 가능한 최대한도는 1일 5억원, 1회 1억원입니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">확인</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

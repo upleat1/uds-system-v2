@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="title" content="KB기업뱅킹">
+<link rel="shortcut icon" type="image/x-icon" href="/msbiz/guide/assets/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/msbiz/guide/assets/css/ui_guide.css">
+<script src="/msbiz/guide/assets/vendor/jquery.min.js"></script>
+<script src="/msbiz/guide/assets/vendor/swiper.min.js"></script>
+<script src="/msbiz/guide/assets/js/worksheet.js"></script>
+<title>Worksheet | KB기업뱅킹 Publishing Guide</title>
+</head>
+<body data-project="app" data-util="worksheet">
+<style>
+.flexs {display:flex; justify-content:space-around;}
+.flexs article {border:solid 1px red; align-items: center; padding:10px 10px; width:50%;}
+.flexs article a {line-height:30px;padding:10px 10px; margin:-10px -10px; display:block; height:100%; width:100%; text-align:center;}
+.flexs article.firs {flex:1;}
+@media screen and (max-width: 1024px){
+.flexs {display:block;}
+.flexs div{border:solid 1px blue; width:100%; text-align:center;}
+}
+
+
+.g_board {border:0px; position:absolute; clip:(0, 0, 0, 0); width:1px; height:1px; margin:-1px;overflow:hidden;}
+.g_board .ct{text-align:center!important}
+.g_board table{text-align:center}
+.g_board table th:last-child, .g_board table tbody td:last-child{border-right:none}
+.g_board table td{position:relative;padding:7px 5px;background-color:#fff;font-weight:700;font-size:12px;color:#666}
+.g_board table td a {background-color:#fff; width:100%; height:100%; display:block; margin:-9px -5px; padding:9px 5px; border:solid 1px red;}
+.g_board table td a:hover {background-color:yellow;}
+.g_board table td button:before, .g_board table thead th button:after{content:'';position:absolute;top:50%;left:50%;width:8px;height:2px;margin:-1px 0 0 -3px;background-color:#666}
+.g_board table td button:before{transform:rotate(-45deg)}
+.g_board table td button:after{transform:rotate(45deg)}
+.g_board table td select{height:27px;line-height:25px;width:100%;border:none;font-weight:700;font-size:12px;color:#666}
+.g_board table td{line-height:20px;margin-top:1px;padding:7px 5px;background-color:#f9f9f9;font-size:13px;color:#666; border:solid 1px red;vertical-align:middle;word-break:break-all; }
+.g_board table td a{display:block;position:relative; margin:-7px -5px;padding:7px 5px;height:100%;font-weight:500;color:#fff; background:rgb(0, 0, 0); text-decoration:underline; border:solid 1px blueviolet;}
+.g_board table td a:before {content:''; display:block; width:30px; height:30px; transform: translateX(-50%); position:absolute; top:0%; left:50%; background-image:url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' enable-background='new 0 0 50 50'%3E%3Cpath fill='%23fff' d='M 7 7 C 5.3 7 4 8.3 4 10 L 4 38 L 6 36 L 6 15 L 44 15 L 44 40 C 44 40.6 43.6 41 43 41 L 11 41 L 9 43 L 43 43 C 44.7 43 46 41.7 46 40 L 46 10 C 46 8.3 44.7 7 43 7 L 7 7 z M 7 9 L 43 9 C 43.6 9 44 9.4 44 10 L 44 13 L 6 13 L 6 10 C 6 9.4 6.4 9 7 9 z M 8 10 C 7.4477153 10 7 10.447715 7 11 C 7 11.552285 7.4477153 12 8 12 C 8.5522847 12 9 11.552285 9 11 C 9 10.447715 8.5522847 10 8 10 z M 11 10 C 10.447715 10 10 10.447715 10 11 C 10 11.552285 10.447715 12 11 12 C 11.552285 12 12 11.552285 12 11 C 12 10.447715 11.552285 10 11 10 z M 14 10 C 13.447715 10 13 10.447715 13 11 C 13 11.552285 13.447715 12 14 12 C 14.552285 12 15 11.552285 15 11 C 15 10.447715 14.552285 10 14 10 z M 11 24 L 11 26 L 19.59375 26 L 4.09375 41.5 L 5.5 42.90625 L 21 27.40625 L 21 36 L 23 36 L 23 25 L 23 24 L 22 24 L 11 24 z' /%3E%3C/svg%3E%0A");background-position:50% 50%;background-size:30px 30px;background-repeat:no-repeat}
+.flexs [data-class=test] { background:#000;}
+.flexs [data-class=test] a { color:#fff;}
+</style>
+<div class="flexs">
+	<article data-class="test">
+		<input type="text" data-value="002" data-code="010110" id="username">
+	</article>
+	<article data-class="test">
+		<a href="#">33333333333333333333333</a>
+	</article>
+	<article id="binding" data-columns="3" data-class="tvie">
+		<a href="#">2222222222222222222222222</a>
+	</article>
+</div>
+    <div class="g_board catch">
+		<table>
+			<colgroup>
+				<col style="width:50%" />
+				<col style="width:50%" />
+			</colgroup>
+			<tr>
+				<td>
+					<a href="#">111111111111111111111111111111111111111111111111111111</a>
+				</td>
+				<td>
+					<a href="#">111111111111111111111111111111111111111111111111111111</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<script>
+		let input = document.querySelector('#username');
+		input.setAttribute('data-auto', true);
+		console.log(input.dataset);
+		input.dataset.size="big";
+		console.log(input.getAttribute('data-size'));
+	</script>
+</body>
+</html>

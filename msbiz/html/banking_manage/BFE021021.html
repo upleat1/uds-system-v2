@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[계좌뷰가입]계좌번호 선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/library/sortable.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+    </div><!-- //wrap -->
+    <div id="bfe021021" class="popup bottom" role="dialog" aria-hidden="true">
+        <!-- 220729 리웍 -->
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>계좌번호 선택</h1>
+                </div>
+            </div>
+            <div class="pop_body acc_choice">
+                <div class="pop_section">
+                    <ul class="acc_list acc_type2">
+                        <li>
+                            <a href="#none">
+                                <span class="bk_name">별명/별명없는 경우 상품명</span>
+                                <span class="bk_num number">1111-000-1111</span>
+                                <span class="bk_pay">잔액 : <em class="number">225,000</em><em class="num_unit">원</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <span class="bk_num number">1111-000-2222</span>
+                                <span class="bk_pay">잔액 : <em class="number">225,000</em><em class="num_unit">원</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <span class="bk_num number">1111-000-3333</span>
+                                <span class="bk_pay">잔액 : <em class="number">225,000</em><em class="num_unit">원</em></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+        <!-- //220729 리웍 -->
+    </div>
+    <!--// 업무 HTML 선언 END -->
+    
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function () {
+        UICommon.Layer.open('#bfe021021');
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

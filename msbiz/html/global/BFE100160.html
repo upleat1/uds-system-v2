@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[중간결재 내역]결재함결재한내역-결재목록조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="승인/결재" href="/msbiz/app/css/approval.css">
+	<!-- 220823 global.css 추가 -->
+	<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">중간결재 내역</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>고객님께서 중간결재하신 내역은 아래와 같습니다.</li>
+                <li>최종 결재완료된 거래는 ‘결재관리&gt;결재완료내역’에서 조회하시기 바랍니다.</li>
+                <li>해당 거래목록을 선택하시면 상세 내역을 조회하실 수 있습니다.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="h3">등록내역</h2>
+            <ul class="list_data">
+                <li>
+                    <div class="key">총건수</div>
+                    <div class="value"><span class="number">2</span><span class="num_unit">건</span></div>
+                </li>
+                <li>
+                    <div class="key">총원화금액</div>
+                    <div class="value"><span class="number">2,000,000</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">USD(달러)</div>
+                    <div class="value"><span class="number">0.00</span></div>
+                </li>
+                <li>
+                    <div class="key">EUR(유로화)</div>
+                    <div class="value"><span class="number">0.00</span></div>
+                </li>
+                <li>
+                    <div class="key">JPY(엔화)</div>
+                    <div class="value"><span class="number">0</span></div>
+                </li>
+                <li>
+                    <div class="key">CNY(위안화)</div>
+                    <div class="value"><span class="number">0</span></div>
+                </li>
+            </ul>
+        </div>
+        <!-- 등록내역 리스트 -->
+        <div class="section">
+            <div class="list_data_group">
+                <div class="list_data_group_s">
+                    <div class="h3 grid">
+                        <div class="col"><strong>계좌이체(즉시)</strong></div>
+                        <div class="col append">
+                            <span class="badge line2">진행중</span><!-- 221011 class 'line'->'line2' 변경 -->
+                        </div>
+                    </div>
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">등록일시</div>
+                            <div class="value"><span class="number">2022.04.19 14:20:11</span></div>
+                        </li>
+                        <li>
+                            <div class="key">입금계좌번호</div>
+                            <div class="value"><span class="number">111111-11-111111</span></div>
+                        </li>
+                        <li>
+                            <div class="key">최근거래자</div>
+                            <div class="value">한국민</div>
+                        </li>
+                        <li>
+                            <div class="key">실행일자</div>
+                            <div class="value"><span class="number">2022.04.15</span></div>
+                        </li>
+                        <li>
+                            <div class="key">금액</div>
+                            <div class="value"><strong class="number">1,000,000,000</strong><span class="num_unit">원</span></div>
+                        </li>
+                    </ul>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm">결재상태 확인</button></span>
+                    </div>
+                </div>
+                <div class="list_data_group_s">
+                    <div class="h3 grid">
+                        <div class="col"><strong>계좌이체(즉시)</strong></div>
+                        <div class="col append">
+                            <span class="badge line2">진행중</span><!-- 221011 class 'line'->'line2' 변경 -->
+                        </div>
+                    </div>
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">등록일시</div>
+                            <div class="value"><span class="number">2022.04.19 14:20:11</span></div>
+                        </li>
+                        <li>
+                            <div class="key">입금계좌번호</div>
+                            <div class="value"><span class="number">111111-11-111111</span></div>
+                        </li>
+                        <li>
+                            <div class="key">최근거래자</div>
+                            <div class="value">한국민</div>
+                        </li>
+                        <li>
+                            <div class="key">실행일자</div>
+                            <div class="value"><span class="number">2022.04.15</span></div>
+                        </li>
+                        <li>
+                            <div class="key">금액</div>
+                            <div class="value"><strong class="number">1,000,000</strong><span class="num_unit">원</span></div>
+                        </li>
+                    </ul>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm">결재상태 확인</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //등록내역 리스트 -->
+        
+        <!-- 내역 없을때 -->
+		<div class="section">
+			<div class="result nodata">
+				<p class="tit">조회하실 내역이 없습니다.</p>
+			</div>
+		</div>
+        <!-- // 내역 없을때 -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<script>
+    /* 업무 SCRIPT */
+</script>
+</body>
+</html>

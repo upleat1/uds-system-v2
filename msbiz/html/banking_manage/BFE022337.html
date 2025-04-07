@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[OTP 분실등록 해제] OTP목록</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹관리" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="h1">OTP목록조회</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>OTP의 상태를 먼저 조회하시고 해제할 OTP를 선택하여 서비스를 진행해주세요.</li>
+                <li>OTP상태조회는 최대 10개까지 한번에 조회가 가능합니다.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">OTP 등록 현황</h2>
+            <div>
+                <div class="chk_data_list ban_otp_chk_list">
+                    <div class="chk_head clearfix">
+                        <span class="selection">
+                            <input type="checkbox" id="chkData1" name="chkData" checked="">
+                            <label for="chkData1" class="label"><strong>실물OTP</strong></label>
+                        </span>
+                        <span class="badge approval fr">정상</span>
+                    </div>
+                    <ul class="list_data noline">
+                        <li>
+                            <div class="key">일련번호</div>
+                            <div class="value"><span class="number">1015803525</span></div>
+                        </li>
+                        <li>
+                            <div class="key">사용자</div>
+                            <div class="value">김국민(ID정보)</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chk_data_list ban_otp_chk_list">
+                    <div class="chk_head clearfix">
+                        <span class="selection">
+                            <input type="checkbox" id="chkData2" name="chkData">
+                            <label for="chkData2" class="label"><strong>실물OTP</strong></label>
+                        </span>
+                        <span class="badge approval fr">정상</span>
+                    </div>
+                    <ul class="list_data noline">
+                        <li>
+                            <div class="key">일련번호</div>
+                            <div class="value"><span class="number">1015803525</span></div>
+                        </li>
+                        <li>
+                            <div class="key">사용자</div>
+                            <div class="value">김국민(ID정보)</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chk_data_list ban_otp_chk_list">
+                    <div class="chk_head clearfix">
+                        <span class="selection">
+                            <input type="checkbox" id="chkData3" name="chkData">
+                            <label for="chkData3" class="label"><strong>실물OTP</strong></label>
+                        </span>
+                        <span class="badge refusal fr">오류</span>
+                    </div>
+                    <ul class="list_data noline">
+                        <li>
+                            <div class="key">일련번호</div>
+                            <div class="value"><span class="number">1015803525</span></div>
+                        </li>
+                        <li>
+                            <div class="key">사용자</div>
+                            <div class="value">김국민(ID정보)<br />
+                                <button type="button" class="btn outline xxs gap_xs">오류해제</button><!-- 221011 br태그추가 class="gap_xs" 추가 -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chk_data_list ban_otp_chk_list">
+                    <div class="chk_head clearfix">
+                        <span class="selection">
+                            <input type="checkbox" id="chkData4" name="chkData">
+                            <label for="chkData4" class="label"><strong>실물OTP</strong></label>
+                        </span>
+                        <span class="badge approval fr">정상</span>
+                    </div>
+                    <ul class="list_data noline">
+                        <li>
+                            <div class="key">일련번호</div>
+                            <div class="value"><span class="number">1015803525</span></div>
+                        </li>
+                        <li>
+                            <div class="key">사용자</div>
+                            <div class="value">김국민(ID정보)</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chk_data_list ban_otp_chk_list">
+                    <div class="chk_head clearfix">
+                        <span class="selection">
+                            <input type="checkbox" id="chkData5" name="chkData">
+                            <label for="chkData5" class="label"><strong>실물OTP</strong></label>
+                        </span>
+                        <span class="badge refusal fr">오류</span>
+                    </div>
+                    <ul class="list_data noline">
+                        <li>
+                            <div class="key">일련번호</div>
+                            <div class="value"><span class="number">1015803525</span></div>
+                        </li>
+                        <li>
+                            <div class="key">사용자</div>
+                            <div class="value">김국민(ID정보)<br />
+                                <button type="button" class="btn outline xxs gap_xs">오류해제</button><!-- 221011 br태그추가 class="gap_xs" 추가 -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">OTP상태조회</button></span>
+            </div>
+        </div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

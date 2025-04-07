@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[지로납부]지로입력납부입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공과금 전용 스타일" href="/msbiz/app/css/utility.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_utility">
+            <h1 class="h1">지로입력납부 입력</h1>
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <!-- OCR, QOCR 만 노출 -->
+                    <li>정액 OCR(OCR 표시가 흑색)인 경우 고객조회번호는 적색사각형 밑의 내용 중 번호를 입력하십시오.</li>
+                    <!-- //OCR, QOCR 만 노출 -->
+                    <li>또한 이중납부방지를 위하여 입력값(지로번호, 납부금액, 고객조회번호)이 동일한 경우 납부회차를 다르게 입력하시면 납부가 가능합니다. </li>
+                </ul>
+            </div>
+            <div class="section">
+
+                <div class="img_area">
+                    <!-- 220805 이미지 변경 -->
+                    <!-- Case : OCR -->
+                    <!-- <img src="/msbiz/app/img/utility/giro_03.png" alt="지로통지서 샘플이미지 : 지로통지서 내 지로번호와 금액, 고객조회번호, 금액체크코드의 위치를 알려주며, 상단 중앙 1번에 지로번호와 상단 오른쪽 2번에 금액 용지 정중앙에 3번 고객조회번호와 중앙 우측에 4번 금액체크코드가 표시되어 있습니다."> -->
+                    <!-- //Case : OCR -->
+                    <!-- Case : MICR -->
+                    <img src="/msbiz/app/img/utility/giro_04.png" alt="지로통지서 샘플이미지 : 지로통지서 내 지로번호와 금액 위치를 알려주며, 상단 중앙 1번에 지로번호와 상단 오른쪽 2번에 금액이 표시되어 있습니다.">
+                    <!-- //Case : MICR -->
+                    <!-- //220805 이미지 변경 -->
+                </div>
+
+                <div class="form_group">
+                    <!-- 220801 타이틀에 숫자 추가 -->
+                    <div class="form_tit">
+                        <span>지로번호</span>
+                        <em class="ut_step_no">1</em>
+                    </div>
+                    <!-- //220801 타이틀에 숫자 추가 -->
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="tel" value="1230495" title="지로번호 입력" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <!-- 220801 타이틀에 숫자 추가 -->
+                    <div class="form_tit">
+                        <span>금액</span>
+                        <em class="ut_step_no">2</em>
+                    </div>
+                    <!-- //220801 타이틀에 숫자 추가 -->
+                    <div class="form_row">
+                        <div class="input unit js_init" role="button" aria-label="" onclick="">
+                            <input type="tel" class="bg_white" placeholder="숫자만 입력" title="금액" readonly="readonly" aria-hidden="true" data-unit="원">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OCR 에서만 노출 -->
+                <div class="form_group">
+                    <!-- 220801 타이틀에 숫자 추가 -->
+                    <div class="form_tit">
+                        <span>고객조회번호</span>
+                        <em class="ut_step_no">3</em>
+                    </div>
+                    <!-- //220801 타이틀에 숫자 추가 -->
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="" onclick="">
+                            <input type="tel" class="bg_white" placeholder="숫자만 입력" title="고객조회번호" readonly="readonly" aria-hidden="true">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <!-- 220801 타이틀에 숫자 추가 -->
+                    <div class="form_tit">
+                        <span>금액체크코드</span>
+                        <em class="ut_step_no">4</em>
+                    </div>
+                    <!-- //220801 타이틀에 숫자 추가 -->
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="" onclick="">
+                            <input type="tel" class="bg_white" placeholder="숫자만 입력" title="금액체크코드" readonly="readonly" aria-hidden="true">
+                        </div>
+
+                        <!-- 221007 클래스 값 변경 -->
+                        <p class="tip_info">OCR의 경우 반드시 입력 요망</p>
+                    </div>
+                </div>
+                <!-- //OCR 에서만 노출 -->
+
+                <div class="form_group">
+                    <div class="form_tit">납부회차</div>
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="" onclick="">
+                            <input type="tel" class="bg_white" placeholder="숫자만 입력" title="납부회차" readonly="readonly" aria-hidden="true">
+                        </div>
+                    </div>
+                    <!-- 221007 클래스 값 변경 -->
+                    <p class="tip_info">지로통지서에 지정되어 있는 경우에만 입력</p>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">납부자명</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" title="납부자명">
+                        </div>
+                    </div>
+                    <!-- 221007 클래스 값 변경 -->
+                    <p class="tip_info">입력하지 않을 경우 출금계좌 예금주</p>
+                </div>
+                <!-- 220801 전화번호 입력 수정 -->
+                <div class="form_group tel">
+                    <div class="form_tit">납부오류 시 연락가능 번호</div>
+                    <div class="form_row col">
+                        <div class="select">
+                            <button type="button" class="select_btn" title="전화번호 앞자리">선택</button>
+                        </div>
+                        <div class="input">
+                            <input type="tel" value="" maxlength="8" title="전화번호">
+                        </div>
+                    </div>
+                    <!-- 221007 클래스 값 변경 -->
+                    <p class="tip_info">휴대폰이 없을 경우 일반전화번호를 입력해 주세요.</p>
+                </div>
+                <!-- //220801 전화번호 입력 수정 -->
+
+                <div class="form_group">
+                    <div class="form_tit">출금계좌번호</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            <button type="button" class="select_btn" title="출금계좌정보 선택">849501-01-297276 (급여통장)</button>
+                        </div>
+                    </div>
+                    <!-- 220729 gap_sm 클래스 추가 -->
+                    <div class="form_btm_wrap right gap_sm">
+                        <a href="#none" class="btn_txt link xs ico_reset ut_ico_revert" onclick="$(this).nextAll().removeClass('hidden').attr('aria-hidden', false);">출금가능금액</a>
+                        <p class="sum_hint hidden fc_nega" aria-hidden="true">출금가능금액이 부족합니다</p>
+                        <p class="sum_hint hidden" aria-hidden="true">출금가능금액 : <strong class="number fc_posi">1,787,888,000</strong><span class="num_unit">원</span></p>
+                        <p class="sum_hint hidden" aria-hidden="true">1일 이체잔여한도 : <strong class="number fc_nega">21,787,888,000</strong><span class="num_unit">원</span></p>
+                    </div>
+                </div>
+
+                <!-- MICR 에서만 노출 -->
+                <div class="form_group">
+                    <div class="form_tit">고객확인정보</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <!-- 220729 type="text"로 변경 -->
+                            <input type="text" placeholder="숫자만 입력" title="고객확인정보">
+                        </div>
+                    </div>
+                    <!-- 221007 클래스 값 변경 -->
+                    <p class="tip_info">고객확인 정보를 입력하세요(예: 고객번호, 회원번호, 주소 등)</p>
+                </div>
+                <!-- //MICR 에서만 노출 -->
+            </div>
+            <!-- 220729 section 밖으로 이동 -->
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span>
+                        <button type="button" class="btn secondary lg">취소</button>
+                    </span>
+                    <span>
+                        <button type="button" class="btn primary lg">납부하기</button>
+                    </span>
+                </div>
+            </div>
+            <!-- //220729 section 밖으로 이동 -->
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

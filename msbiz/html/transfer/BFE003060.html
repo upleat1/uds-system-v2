@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[계좌이체]국세납부본거래</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/transfer.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">국세납부 본거래</h1>
+            <div class="result finish">
+                <div class="result_ani">
+                    <img src="/msbiz/app/img/common/result_ani.gif" alt="">
+                </div>
+                <p class="tit">이체가 완료되었습니다.</p>
+                <div class="caption">
+                    <div class="p_sub">안내사항
+                        <div class="tooltip_limited">
+                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                <div class="tooltip_cont"> 
+                                    타행계좌로 이체 시 입금은행의 사정에 따라 해당 계좌의 입금이 다소 지연될 수 있습니다.
+                                </div>
+                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="h3">납부정보</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">이체금액</div>
+                        <div class="value"><span class="number fc_posi">50,000</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">출금계좌</div>
+                        <div class="value"><span class="number">342-01-0019-156</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수수료</div>
+                        <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">납부기관</div>
+                        <div class="value">국세청 서울지방국세청 관악세무서 징수관</div>
+                    </li>
+                    <li>
+                        <div class="key">납부계좌번호</div>
+                        <div class="value"><span class="number">0126-2101-1-41-57691430</span></div>
+                    </li>
+                    <li>
+                        <div class="key">징수과목<br>(납세의무자)</div>
+                        <div class="value">부가가치세(국민은행테)</div>
+                    </li>
+                    <li>
+                        <div class="key">결과</div>
+                        <div class="value">정상</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg">홈</button></span>  
+                    <span><button type="button" class="btn primary lg">납부내역조회</button></span>  
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function(){
+        
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

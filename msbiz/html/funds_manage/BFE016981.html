@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[전자세금계산서 발행] 바텀시트_조회조건 선택 바텀시트</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+
+            <div class="sort_wrap">
+                <h2 class="hidden">조회조건</h2>
+                <div class="sort_detail">
+                    <button class="btn_txt ico_arrdown" title="조회기간설정" onclick="UICommon.Layer.open('#bottomLayer1');">
+                        <span><em class="number">2022.04.01~2022.04.05</em></span>
+                    </button>
+                </div>       
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <!-- layer html : default -->
+    <div id="bottomLayer1" class="popup bottom half" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>조회조건</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <div class="form_group">
+                        <div class="form_tit">조회기간</div><!-- 220729 리웍: 타이틀수정 -->
+                        <div class="form_row">
+                            <div class="tab_wrap box">
+                        <div class="tab_radio">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="rdo1" name="rdo1" data-show="#radioShow1" checked>
+                                    <label for="rdo1" class="label"><em>직접입력</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="rdo2" name="rdo1" data-show="#radioShow2">
+                                    <label for="rdo2" class="label"><em>월별</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="rdo3" name="rdo1" data-show="#radioShow3">
+                                    <label for="rdo3" class="label"><em>분기별</em></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tab_panel" role="tabpanel" id="radioShow1">
+                            <div class="form_date_term">
+                                <div class="input date">
+                                    <input type="tel" title="시작일 입력" maxlength="8" value="20210301" class="finished">
+                                    <button type="button" class="btn_cal" title="시작일 선택"></button>                    
+                                </div>
+                                <span class="space">~</span>
+                                <div class="input date">
+                                    <input type="tel" title="종료일 입력" maxlength="8" value="20210331" class="finished">
+                                    <button type="button" class="btn_cal" title="종료일 선택"></button>                              
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_panel" role="tabpanel" id="radioShow2">
+                            <div class="select">
+                                <button type="button" class="select_btn active" title="월별 선택">2022년 5월</button>
+                            </div>
+                        </div>
+                        <div class="tab_panel" role="tabpanel" id="radioShow3">
+                            <div class="select">
+                                <button type="button" class="select_btn active" title="분기별 선택">2022년 1분기</button>
+                            </div>
+                        </div>
+                    </div>              
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">                        
+                        <span><button type="button" class="btn primary lg ui_pop_close">조회</button></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+    <!-- //layer html : default -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

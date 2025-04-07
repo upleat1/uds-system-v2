@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[전계좌조회] KB국민은행 계좌목록</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">다른금융 전계좌조회</h1>
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="input">
+                            <!-- case 사업장이 하나 -->
+                            <!-- <div class="input_txt">국민상사</div> -->
+                            <!-- //case 사업장이 하나 -->
+                            <!-- case 사업장이 여러개 -->
+                            <div class="select">
+                                <button type="button" class="select_btn fs17 active" title="사업장 선택">국민상사</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            </div>
+                            <!-- //case 사업장이 여러개 -->
+                        </div>
+                    </div>   
+                </div> 
+            </div>
+            <div class="tab_wrap account_all all_inquiry">
+                <div class="tab_list">
+                    <div class="scroll_wrap">
+                        <a href="#">KB국민은행</a>
+                        <a href="#" class="active">다른금융</a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <div class="section all_top_link">
+                        <ul class="list_link icon ico_app">
+                            <li>
+                                <a href="#none" class="link">다른 앱에 등록된 계좌가 있습니다.</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="acc_pannel acc_all">
+                        <div class="fold_box">
+                            <!-- 마스터 진입 -->
+                            <div class="acc_wrap">
+                                <div class="hgroup">
+                                    <div class="acc_txt">
+                                        총 잔액 <div class="tooltip_limited">
+                                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                                <p class="tooltip_tit">총 잔액 합계</p>
+                                                <div class="tooltip_cont"> 
+                                                    <ul class="bul">
+                                                        <li>오픈뱅킹의 입출금, 예적금, 신탁, 펀드 잔액의 합계입니다.</li><!-- 오픈뱅킹만 가입자 -->
+                                                        <li>오픈뱅킹과 Star CMS의 입출금, 예적금, 신탁, 펀드 잔액의 합계입니다.</li><!-- 오픈뱅킹+CMS 가입자 -->
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                            </div>
+                                        </div>
+                                        <span class="switch">
+                                            <input type="checkbox" id="switch1" checked="">
+                                            <label for="switch1"><span class="hidden">총잔액노출</span></label>
+                                        </span>
+                                    </div>
+                                    <div><button type="button" class="btn_txt ico_reset sm2"><span class="hidden">계좌잔액</span>업데이트</button></div>
+                                </div>
+                                <!-- 잔액 노출 -->
+                                <div class="acc_sum_wrap">
+                                    <div class="acc_pay">
+                                        <strong class="number">2,825,120,000</strong><span class="num_unit">원</span>
+                                    </div>
+                                </div>
+                                <!-- //잔액 노출 -->
+                            </div>
+                            <div class="btn_area">
+                                <span><a href="#none">충전</a></span>
+                                <span><a href="#none" class="primary">이체</a></span>
+                            </div>
+                            <!-- //마스터 진입 -->
+                            <!-- 서브 진입 -->
+                            <!-- <div class="btn_area">
+                                <span><a href="#none" class="primary">이체</a></span>
+                            </div> -->
+                            <!-- //서브 진입 -->
+                        </div>
+                    </div>
+                    <hr class="hr_divide">
+                    <div class="section_f">
+                        <h3 class="hidden">계좌목록</h3>
+                        <div class="list_top_wrap acc_menu">
+                            <div class="col">
+                                <button type="button" class="btn_add">다른금융 등록</button>
+                            </div>
+                            <div class="col col_r">
+                                <button type="button" class="btn_set">계좌설정</button>
+                            </div>
+                        </div>
+                        <!-- 입출금 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">
+                                        입출금<span class="count">(5)</span>
+                                    </strong>
+                                    <span class="pay"><strong class="number">1,500,000</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //입출금 -->
+                        <!-- 예적금 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">예적금<span class="count">(2)</span></strong>
+                                    <span class="pay"><strong class="number">200,000,500,000</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //예적금 -->
+                        <!-- 대출 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">대출<span class="count">(2)</span></strong>
+                                    <span class="pay"><strong class="number">231,000,500</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //대출 -->
+                        <!-- 외환 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">외환<span class="count">(2)</span></strong>
+                                    <span class="pay"><strong class="number">1,500,500</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //외환 -->
+                        <!-- 펀드 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle on" role="button" aria-expanded="true">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">펀드<span class="count">(3)</span></strong>
+                                    <span class="pay"><strong class="number">51,500,500</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                    <div class="acc_pannel">
+                                        <div class="acc_wrap inc_btn">
+                                            <div class="acc_top_info"> 
+                                                <span class="badge pdt9">CMS</span>
+                                            </div>
+                                            <!-- 221007 접근성수정 -->
+                                            <div class="acc_area">
+                                                <a href="#none" id="aria5_1">
+                                                    <div class="acc_bank col"><!-- 220729 리웍 class 수정 -->
+                                                        <span class="icon_bank_090 xs"></span><!-- 220729 리웍 class="xs" 추가 -->
+                                                        <span class="bk_name">카카오</span>
+                                                        <span class="bk_num">
+                                                            <span class="number">33331023569</span>
+                                                            <button type="button" class="btn_txt ico_copy" onclick="UICommon.Layer.toast('계좌번호가 복사되었습니다.')"><span class="hidden">100000-01-000000 계좌번호 복사하기</span></button><!-- 221107 버튼 위치 변경 -->
+                                                        </span> 
+                                                    </div>
+                                                    <div class="acc_name bold">별명노출</div><!-- 220729 리웍 class="bold" 추가 -->
+                                                    <div class="acc_name">상품명노출</div>
+                                                </a>
+                                            </div>
+                                            <!-- //221007 접근성수정 -->
+                                            <div class="acc_info_wrap">
+                                                <div class="acc_info">
+                                                    <span class="tit">신규일</span><span class="number">2022.05.20</span>
+                                                </div>
+                                                <div class="acc_info">
+                                                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
+                                                    <strong class="number fc_gray3">(D-99)</strong><!-- 220729 리웍 수정 -->
+                                                </div>
+                                                <div class="acc_info">
+                                                    <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em>11.15</span><span class="num_unit">%</span>
+                                                </div>
+                                            </div>
+                                            <div class="acc_sum_wrap">
+                                                <div class="acc_pay">
+                                                    <span class="unit">평가액</span><strong class="number">1,000,000,000,000</strong><span class="num_unit">원</span>
+                                                </div>
+                                                <div class="update_time">
+                                                    업데이트 : <span class="number">2022.06.07 17:00:32</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn_menu" id="layer_more" aria-describedby="aria5_1"><span class="ico_menu"></span><span class="hidden">메뉴</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //펀드 -->
+                        <!-- 신탁 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">신탁<span class="count">(3)</span></strong>
+                                    <span class="pay"><strong class="number">51,500,500</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //신탁 -->
+                        <!-- 퇴직연금 -->
+                        <div class="acc_acco_list retire">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">퇴직연금<span class="count">(2)</span></strong>
+                                    <strong class="pay">총 가입자 <span class="number">30</span><span class="num_unit">명</span></strong>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //퇴직연금 -->
+                        <!-- 보험 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">보험<span class="count">(1)</span></strong>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //보험 -->
+                        <!-- 증권 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">증권<span class="count">(1)</span></strong>
+                                    <span class="pay"><strong class="number">100,000</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //증권 -->
+                        <div class="sec_inner">
+                            <div class="btn_cnt_wrap">
+                                <span><button type="button" class="btn outline md">+ 오픈뱅킹 등록</button></span>
+                            </div>
+                            <div class="btn_wrap center gap_sm_3">
+                                <button type="button" class="btn_txt ico_help">오픈뱅킹 이용안내</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+    
+</body>
+</html>

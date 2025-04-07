@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[이체한도 조회/변경]이체한도 조회/변경_진행안내_법인</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹관리" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+    <!-- 220729 리웍 -->
+	<div id="content">
+		<h1 class="h1">필수준비사항 및 진행안내</h1>
+        <div class="section">
+            <!-- 221013 개선 -->
+            <div class="h2">
+                <h2>신청대상: 법인사업자</h2>
+                <div class="tooltip_limited">
+                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                        <div class="tooltip_cont"> 
+                            사업자번호 가운데 2자리가 81,86,87,88이면서, 법인등록번호 5,6번째자리가 11인 상버에 따른 영리법인 본점의 단독 대표자만 거래 가능
+                        </div>
+                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <!-- //221013 개선 -->
+            <p class="depth">주식회사 단독 대표이사(공동사업자 제외)</p>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">필수 준비사항</h2>
+            <ul class="list icon noline prepare">
+                <li class="item1">대표자 주민등록증 또는 운전면허증</li>
+                <li class="item2">사업자등록증명원</li>
+                <li class="item3">법인등기사항전부증명서[제출용]</li><!-- 221013 문구수정 -->
+            </ul>
+            <p class="depth info">신청일로부터 90일이내 발급된 서류만 이용가능합니다.</p>
+        </div>
+
+        <!-- 221013 개선 -->
+        <div class="section">
+            <h2 class="h2">신청절차</h2>
+            <ol class="depth step ban">
+                <li><strong>(고객) 신청</strong>
+                    <ul class="sub_list">
+                        <li>1. 휴대폰 본인 확인</li>
+                        <li>2. 신분증 / 법인 서류 촬영</li>
+                        <li>3. 다른은행 계좌인증</li>
+                    </ul>
+                    <p class="depth info">다른은행 법인 계좌로 1원 입금 추가인증을 진행합니다.</p>
+                </li>
+                <li><strong>(KB국민은행) 서류심사</strong>
+                    <ul class="sub_list">
+                        <li>1. 서류 심사 (1~2영업일 소요)</li>
+                        <li>2. 심사 결과 알림톡 전송</li>
+                    </ul>
+                </li>
+                <li><strong>(고객) 거래 진행</strong>
+                    <p class="sub_txt">본 거래 진행</p>
+                    <p class="depth info">심사완료일을 포함하여 3영업일 이내에 정보 등록을 완료해 주세요.</p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">신청업무 : OTP비밀번호 오류해제</h2><!-- 221019 수정 -->
+            <div class="rdoChk_group">
+                <span class="selection">
+                    <input type="checkbox" id="chk1" checked><!-- 221019 수정 -->
+                    <label for="chk1" class="label"><em>이체한도 증액</em></label><!-- 221019 수정 -->
+                </span>
+                <span class="selection">
+                    <input type="checkbox" id="chk2" checked>
+                    <label for="chk2" class="label"><em>비밀번호 분실/오류초기화</em></label><!-- 221019 수정 -->
+                </span>
+            </div>
+
+            <div class="right gap_xs">
+                <button type="button" class="btn_txt ico_arr">신청업무 추가하기</button>
+            </div>
+            <p class="depth info">신청 업무를 추가하시면 한 번의 실명확인 서류 제출로 여러 건의 업무 처리가 가능합니다.</p>
+        </div>
+        <!-- //221013 개선 -->
+
+        <div class="inform_btm_wrap"> 
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">이용안내<span class="arrow"><span class="hidden">열기</span></span></button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+                    <li>영업일 9:00 ~ 16:00 사이 접수 건에 한해 당일 처리 가능하며, 이외 접수 시 익영업일 처리됩니다.</li>
+                    <li>신분증 훼손 등으로 본인여부 판별이 어려운 경우, 절차 진행이 제한될 수 있습니다.</li>
+                    <li>휴대폰 본인확인시 통신사로 대표자 본인 명의를 확인해주세요.</li>
+                    <li>일부 법인격 및 임의단체의 경우 감액신청만 가능하며, 증액신청은 가까운 영업점을 이용해주세요.</li>
+                    <li>동시신청 가능 제신고 업무 안내
+                        <ul class="depth dash">
+                            <li>OTP 비밀번호 오류해제</li>
+                            <li>OTP분실등록 해제</li>
+                            <li>이체한도 증액</li>
+                            <li>계좌비밀번호 분실 / 오류초기화</li>
+                            <li>법인 고객정보변경</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+    </div><!-- //content -->
+    <!-- //220729 리웍 -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

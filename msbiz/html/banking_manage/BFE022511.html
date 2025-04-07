@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[이체한도 설정]이체한도 설정(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content" data-ui="full_pop"><!-- 풀팝업일 경우 추가 : data-ui="full_pop"-->
+            <h1 class="h1">Sub 이체한도 변경</h1>
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <li>모바일OTP 등록 대상 Sub의 이체한도가 모바일OTP 이체한도 이하여야 등록할 수 있습니다.</li>
+                    <li>모바일OTP 이체한도는 1일 최대 5억 / 1회 최대 1억 입니다.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <p class="h3 bold">현재 이체한도</p>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">Master 이체한도</div>
+                        <div class="value">
+                            <span class="number">1</span><span class="num_unit">일</span> <span class="number">600,000,000</span><span class="num_unit">원</span><br>
+                            <span class="number">1</span><span class="num_unit">회</span> <span class="number">400,000,000</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">모바일OTP 이체한도</div>
+                        <div class="value">
+                            <span class="number">1</span><span class="num_unit">일</span> <span class="number">500,000,000</span><span class="num_unit">원</span><br>
+                            <span class="number">1</span><span class="num_unit">회</span> <span class="number">100,000,000</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">김국민(ID정보) 이체한도 </div>
+                        <div class="value">
+                            <span class="number">1</span><span class="num_unit">일</span> <span class="number">600,000,000</span><span class="num_unit">원</span><br>
+                            <span class="number">1</span><span class="num_unit">회</span> <span class="number">30,000,000</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2 class="h2 mgb_0">변경할 이체한도</h2>
+                <div class="form_group">
+                    <div class="form_tit">1일 이체한도</div>
+                    <div class="form_row">
+                        <p class="hidden">이체금액 단축키로 입력</p>
+                        <div class="btn_trans_group">
+                            <span><button type="button" class="btn"><em class="number">1</em><em class="num_unit">억</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">1000</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">100</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">10</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn">최대</button></span>
+                        </div>    
+                    </div>
+                    <div class="form_row"> 
+                        <div class="input unit js_unit">
+                            <input type="tel" maxlength="16" placeholder="숫자만 입력" title="1일 이체한도" data-unit="원">
+                        </div>
+                        <p class="form_hangul" aria-hidden="true">1억원</p>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">1회 이체한도</div>
+                    <div class="form_row">
+                        <p class="hidden">이체금액 단축키로 입력</p>
+                        <div class="btn_trans_group">
+                            <span><button type="button" class="btn"><em class="number">1</em><em class="num_unit">억</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">1000</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">100</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">10</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn">최대</button></span>
+                        </div>    
+                    </div>
+                    <div class="form_row"> 
+                        <div class="input unit js_unit">
+                            <input type="tel" maxlength="16" placeholder="숫자만 입력" title="1회 이체한도" data-unit="원">
+                        </div>
+                        <p class="form_hangul" aria-hidden="true">100만원</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="h2">결재요청</h2>
+                <div class="table">
+                    <table>
+                        <caption>결재요청 안내 양식(표) 입니다.</caption>
+                        <colgroup>
+                            <col style="width:40%">
+                            <col style="width:60%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">결재자고객명</th>
+                                <td>김국민</td>
+                            </tr>
+                        </tbody>
+                    </table>   
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">결재메모</div>
+                    <div class="form_row">
+                        <div class="textarea">
+                            <textarea title="결재메모" placeholder="내용을 입력해 주세요."></textarea>        
+                            <p class="num_info"><span><em class="curr">0</em> / 1,000byte</span> (한글 500자)</p>            
+                        </div> 
+                    </div>
+                </div>
+            </div>
+                
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg" disabled>확인</button></span><!-- 모든 항목이 입력되면 버튼 활성화 disabled 삭제 -->
+                </div>
+            </div>
+            
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+</html>

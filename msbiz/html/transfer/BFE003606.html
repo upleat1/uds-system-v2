@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[자금모으기]처리결과조회</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="hidden">자금모으기</h1>
+		<div class="tab_wrap">
+			<div class="tab_list" role="tablist">
+				<div class="scroll_wrap">
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_1">자금모으기</button>
+					<button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_2">처리결과조회</button>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_1">
+				<h2 class="hidden">자금모으기</h2>
+				<div class="section">
+					탭메뉴 1 콘텐츠 
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_2">
+				<h2 class="hidden">처리결과조회</h2>
+				<div class="inform_top_wrap">
+					<ul class="depth bul">
+						<li>Star CMS 자금모으기를 실행한 결과를 기간 및 실행 결과 별 조회가 가능합니다.</li>
+						<li>오픈뱅킹 자금모으기 실행 결과는 계좌거래내역조회에서 확인하실 수 있습니다.</li>
+					</ul>
+					<div class="btn_wrap btm">
+						<a href="#none" class="btn_txt ico_arr">계좌거래내역조회</a>
+					</div>
+				</div> 
+				<div class="section">
+					<h3 class="h2">조회조건</h3>
+					<div class="form_group">
+						<div class="form_tit">조회기간</div>
+						<div class="form_row">
+							<div class="rdoChk_box">
+								<span class="selection">
+									<input type="radio" id="period1" name="period">
+									<label for="period1" class="label"><em>오늘</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period2" name="period">
+									<label for="period2" class="label"><em>1주일</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period3" name="period" checked>
+									<label for="period3" class="label"><em>1개월</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period4" name="period">
+									<label for="period4" class="label"><em>3개월</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period5" name="period">
+									<label for="period5" class="label"><em>6개월</em></label>
+								</span>
+							</div>
+							<div class="form_date_term">
+								<div class="input date">
+									<input type="tel" title="시작일 입력" maxlength="8" value ="2021.03.01">
+									<button type="button" class="btn_cal" title="시작일 선택"></button>                    
+								</div>
+								<span class="space">~</span>
+								<div class="input date">
+									<input type="tel" title="종료일 입력" maxlength="8" value ="2021.03.31"> 
+									<button type="button" class="btn_cal" title="종료일 선택"></button>                              
+								</div>
+							</div>              
+						</div>
+					</div>
+
+					<div class="form_group">
+						<div class="form_tit">구분</div>
+						<div class="form_row">
+							<div class="rdoChk_group">
+								<ul class="rdoChk_ul2">
+									<li>
+										<span class="selection">
+											<input type="radio" id="transferlist1_1" name="transferlist1" checked>
+											<label for="transferlist1_1" class="label"><em>전체</em></label>
+										</span>
+									</li>
+									<li>
+										<span class="selection">
+											<input type="radio" id="transferlist1_2" name="transferlist1">
+											<label for="transferlist1_2" class="label"><em>정상</em></label>
+										</span>
+									</li>
+									<li>
+										<span class="selection">
+											<input type="radio" id="transferlist1_3" name="transferlist1">
+											<label for="transferlist1_3" class="label"><em>오류</em></label>
+										</span>
+									</li>
+									<li>
+										<span class="selection">
+										<input type="radio" id="transferlist1_4" name="transferlist1">
+										<label for="transferlist1_4" class="label"><em>확인요망</em></label>
+									</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="btn_cnt_wrap">
+						<span><button type="button" class="btn primary lg">조회</button></span>
+					</div>
+				</div>
+				
+				<hr class="hr_divide">
+
+				<!-- 조회결과영역 -->
+				<div class="section">
+					<h2 class="h2">조회결과</h2>
+					<div class="hgroup">
+						<div class="fs15 number">2022.04.21 ~ 2022.05.21</div>
+						<div class="fs15">총 <span class="number fs15">11</span>건</div>
+					</div>
+					<div class="list_btm_wrap total gap_sm">
+						<div class="col col_l"><strong class="fs16">총 이체금액</strong></div>
+						<div class="col col_r"><strong class="number">10,000,000</strong><strong class="num_unit">원</strong></div>
+					</div>
+				</div>
+
+				<div class="section_f">
+					<div class="acc_list_wrap">
+						<div class="acc_pannel">
+							<div class="acc_wrap">
+								<div class="acc_bank md">
+									<span class="icon_bank_004"></span>
+									<span class="bk_name">KB국민</span>
+									<span class="bk_num block fs18">574498-90-009768</span>
+									<div class="acc_sum">자금모으기 일시 <span class="number">2022.07.07 10:10:42</span></div>
+								</div>
+								<div class="acc_sum_wrap">
+									<div class="acc_pay">
+										<strong class="number">3,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</div>
+								<div class="btn_top_area">
+									<span class="badge approval">정상</span>
+								</div>
+								<div class="toggle_sm_wrap noline">
+									<div class="toggle_panel" role="region">
+										<ul class="list_data type2 noline">
+											<li>
+												<div class="key">입금계좌</div>
+												<div class="value right number">111111-1111-11111</div>
+											</li>
+											<li>
+												<div class="key">자금모으기 그룹</div>
+												<div class="value right">그룹명</div>
+											</li>
+										</ul>
+									</div>
+									<button class="tit js_toggle mgt_0" aria-expanded="false">이체정보</button>
+								</div>
+							</div>
+						</div>
+						<div class="acc_pannel">
+							<div class="acc_wrap">
+								<div class="acc_bank md">
+									<span class="icon_bank_020"></span>
+									<span class="bk_name">우리</span>
+									<span class="bk_num block fs18">574498-90-009768</span>
+									<div class="acc_sum">자금모으기 일시 <span class="number">2022.07.07 10:10:42</span></div>
+								</div>
+								<div class="acc_sum_wrap">
+									<div class="acc_pay">
+										<strong class="number">3,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</div>
+								<div class="btn_top_area">
+									<button type="button" class="btn outline nega xxs">오류<i class="arrow"></i></button>
+								</div>
+								<div class="toggle_sm_wrap noline">
+									<div class="toggle_panel" role="region">
+										<ul class="list_data type2 noline">
+											<li>
+												<div class="key">입금계좌</div>
+												<div class="value right number">111111-1111-11111</div>
+											</li>
+											<li>
+												<div class="key">자금모으기 그룹</div>
+												<div class="value right">그룹명</div>
+											</li>
+										</ul>
+									</div>
+									<button class="tit js_toggle mgt_0" aria-expanded="false">이체정보</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="btn_list_btm more">
+						<button type="button" class="btn">더보기</button>
+					</div>
+				</div>
+				<!-- //조회결과영역 -->
+
+				<!-- 리스트 없음 -->
+				<div class="result nodata sm">
+					<p class="tit">조회하신 내역이 없습니다.</p>
+				</div>
+				<!-- //리스트 없음 -->
+
+			</div>
+		</div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

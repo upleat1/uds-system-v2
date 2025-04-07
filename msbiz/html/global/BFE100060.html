@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[메인] 다국어 메인_로그인 후</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+	<!-- 221013 다국어 description 단어 수정 --> 
+    <link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap">
+    <!-- 220829 헤더 영역 추가 -->
+    <header id="global_header">
+        <div class="inner">
+            <p class="page_logo"><span class="hidden">KB Kookmin Bank</span></p>
+            <button type="button" class="btn_all_menu"><span class="hidden">전체 메뉴</span></button>
+        </div>
+    </header>
+    <!-- //220829 헤더 영역 추가 -->
+    <div id="content" class="g_main">
+        <h1 class="hidden">KB국민은행 로그인 후</h1>
+        <div class="main_welcome_txt">
+            <h2 class="tit">Global Financial Group <!-- 221031 strong class="medium" 태그삭제 --><!-- 221012 class="medium" 추가 --><!-- <strong class="medium"> -->KB<!-- </strong> --></h2>
+            <p class="txt">Driven by world-class tanlents and bold innovation, to become your trusted financial partner for a lifetime</p>
+        </div>
+        <div class="my_account_wrap">
+            <!-- 결재권한이 있는 사용자 한하여 노출 -->
+            <div class="approval">
+                <h3 class="tit">결재함</h3>
+                <div class="app_count">
+                    <dl>
+                        <dt>Requested</dt>
+                        <dd><a href="#;">99+</a></dd><!-- 220829 a태그 추가 -->
+                    </dl>
+                    <dl>
+                        <dt>Progressed</dt>
+                        <dd><a href="#;">99+</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>Completed</dt>
+                        <dd><a href="#;">99+</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- //결재권한이 있는 사용자 한하여 노출 -->
+            <!-- 계좌 슬라이드 -->
+            <div class="ui_swiper _autoHeight" data-title="대표계좌"><!-- 221004 data-title 추가 -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="account_panel">
+
+                            <!-- 221031 삭제 -->
+                            <!-- <div class="my_account_info">
+                                221014 마크업 삭제 및 추가
+                                <p class="acc_name">KB국민ONE통장 ・ 저축예금</p>
+                                <span class="number">000000-01-000000</span>
+                                <button type="button" class="acc_num">
+                                    <span class="hidden">계좌번호 복사하기</span>
+                                    <i class="ico_20_copy"></i>
+                                </button>
+
+                                221028 a태그 추가
+                                <a href="#">
+                                    <button type="button" class="main_account_head" title="계좌번호복사">
+                                        <span class="icon_bank_004 mm"></span>
+                                        <span class="acc_name">KB국민ONE통장 ・ 저축예금</span>
+                                        <span class="acc_num number">123456-78-901234<span class="copy"></span></span>
+                                    </button>
+                                    //221014 마크업 삭제 및 추가
+                                    <div class="acc_sum kor">
+                                        <span class="hidden">잔액</span>
+                                        <span class="number">20,412,342,000</span>
+                                        <span class="num_unit">won</span>
+                                    </div>
+                                </a>
+                                //221028 a태그 추가
+                                <button type="button" class="btn primary btn_trans">이체</button>
+                            </div>
+
+                            <div class="recent_tranfer toggle_sm_wrap">
+                                <div class="toggle_panel" role="region">
+                                    <span class="hidden">최근거래내역 조회목록</span>
+                                    조회목록
+                                    <ul class="recent_list">
+                                        <li>
+                                            <div class="label">
+                                                221014 p, span 태그순서변경
+                                                <span class="date number">22.08.17 10:21:24</span>
+                                                <p class="name">최대글자열자최대글자열자</p>
+                                            </div>
+                                            <div class="value">
+                                                <span class="hidden">입금</span>
+                                                <span class="number fc_posi">+ 8,123,456,789,000</span><span class="num_unit">won</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="label">
+                                                221014 p, span 태그순서변경
+                                                <span class="date number">22.08.17 10:21:24</span>
+                                                <p class="name">8월 회식비</p>
+                                            </div>
+                                            <div class="value">
+                                                <span class="hidden">출금</span>
+                                                <span class="number fc_nega">- 789,000</span><span class="num_unit">won</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="label">
+                                                221014 p, span 태그순서변경
+                                                <span class="date number">22.08.17 10:21:24</span>
+                                                <p class="name">8월 성과급</p>
+                                            </div>
+                                            <div class="value">
+                                                <span class="hidden">입금</span>
+                                                <span class="number fc_posi">+ 123,456,789,000</span><span class="num_unit">won</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="label">
+                                                221014 p, span 태그순서변경
+                                                <span class="date number">22.08.17 10:21:24</span>
+                                                <p class="name">7월 성과급</p>
+                                            </div>
+                                            <div class="value">
+                                                <span class="hidden">입금</span>
+                                                <span class="number fc_posi">+ 123,456,789,000</span><span class="num_unit">won</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="label">
+                                                221014 p, span 태그순서변경
+                                                <span class="date number">22.08.17 10:21:24</span>
+                                                <p class="name">국민상사(주)</p>
+                                            </div>
+                                            <div class="value">
+                                                <span class="hidden">출금</span>
+                                                <span class="number fc_nega">- 123,456,789,000</span><span class="num_unit">won</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    //조회목록
+                                    조회목록 nodata 추가 : 220901
+                                    <div class="result nodata sm">
+                                        <p class="tit">조회하신 내역이 없습니다.</p>
+                                    </div>
+                                    //조회목록 nodata
+                                </div>
+                                <button class="tit js_toggle" aria-expanded="false">최근거래내역조회</button>
+                            </div> -->
+                            <!-- //221031 삭제 -->
+
+                            <!-- 221031 추가 -->
+                            <div class="main_account">
+                                <a href="#" class="main_account_info btn_move btn_move" title="거래내역조회로 이동">
+                                    <div class="main_account_head">
+                                        <span class="icon_bank_004 mm"></span>
+                                        <span class="acc_name">KB국민ONE통장 ・ 저축예금</span>
+                                        <span class="acc_num number">123456-78-901234</span>
+                                        <button type="button" class="acc_num_copy"><span class="hidden">계좌번호복사</span></button> 
+                                    </div> 
+                                    <!-- 221107 button 위치 수정 -->                                    
+                                    <div class="main_account_amount">
+                                        <strong class="num"><strong class="number">20,123,456,000</strong>
+                                        <strong class="unit">won</strong></strong>
+                                    </div>
+                                </a>
+                                <!-- 221107 button 위치 수정 -->
+                                <!-- <button type="button" class="acc_num_copy"><span class="hidden">계좌번호복사</span></button> -->
+                                <div class="btn_set">
+                                    <button type="button" class="primary">이체</button>
+                                </div>
+                                <div class="toggle_sm_wrap">
+                                    <div class="toggle_panel" role="region">
+                                            <!-- 221108 다국어 BFE000020 소스와 같음 -->
+                                            <ul class="m_my_trans_history">
+                                                <li>
+                                                    <span class="lb">
+                                                        <span class="name">8월 성과급8월 성과급8월 성과급8월 성과급</span>
+                                                        <span class=" time number">22.08.16 00:00:02</span>
+                                                    </span>
+                                                    <span class="val">
+                                                        <span class="number fc_nega">-20,890,999</span><span class="unit">원</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="lb">
+                                                        <span class="name">8월 회식비</span>
+                                                        <span class=" time number">22.08.16 00:00:02</span>
+                                                    </span>
+                                                    <span class="val">
+                                                        <span class="number fc_nega">-4,000,000</span><span class="unit">원</span>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span class="lb">
+                                                        <span class="name">8월 회식비</span>
+                                                        <span class=" time number">22.08.16 00:00:02</span>
+                                                    </span>
+                                                    <span class="val">
+                                                        <span class="number fc_posi">-4,000,000</span><span class="unit">원</span>
+                                                    </span>
+                                                </li>
+                                                <!-- 221102 입출금 메모 없는 경우 추가 / 디자이너분 요청 -->
+                                                <li class="empty_name">
+                                                    <span class="lb">
+                                                        <span class=" time number">22.08.16 00:00:02</span>
+                                                    </span>
+                                                    <span class="val">
+                                                        <span class="number fc_posi">+ 4,000,000</span>
+                                                        <span class="unit">won</span>
+                                                    </span>
+                                                </li>
+                                                <!-- //221102 입출금 메모 없는 경우 추가 -->
+                                            </ul>
+                                            <!--//221108 다국어 BFE000020 소스와 같음 -->
+                                        </ul>
+                                        <!-- 조회 내역이 없는 경우  -->
+                                        <div class="result nodata sm">
+                                            <p class="tit">조회하신 내역이 없습니다.</p>
+                                        </div>
+                                        <!-- //조회 내역이 없는 경우  -->
+                                    </div>
+                                    <button class="tit js_toggle" aria-expanded="false">최근거래내역조회</button>
+                                </div>
+                            </div>
+                            <!-- //221031 추가 -->
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- 221031 삭제 -->
+                        <!-- <div class="account_panel">
+                            <div class="my_account_info">
+                                221028 a태그 추가
+                                <a href="#">
+                                    <p class="acc_name">KB국민ONE통장 ・ 저축예금</p>
+                                    <div class="acc_num">
+                                        <span class="number">1111-01-000000</span>
+                                        <button type="button" class="ico_20_copy"><span class="hidden">계좌번호 복사하기</span></button>
+                                    </div>
+                                    <div class="acc_sum global">
+                                        <span class="hidden">잔액</span>
+                                        <p>
+                                            <span class="unit">USD</span>
+                                            <span class="number">3,523,000.00</span>
+                                        </p>
+                                        <p>
+                                            <span class="unit">EUR</span>
+                                            <span class="number">93,000.00</span>
+                                        </p>
+                                        <p>
+                                            <span class="unit">JPY</span>
+                                            <span class="number">223,000.00</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                //221028 a태그 추가
+                                <button type="button" class="btn primary btn_trans">국내외화이체</button>
+                            </div>
+                            <div class="recent_tranfer toggle_sm_wrap">
+                                <div class="toggle_panel" role="region">
+                                    <span class="hidden">최근거래내역 조회목록</span>
+                                    <ul class="recent_list">
+                                        <li>
+                                            <div class="label">
+                                                <p class="name">최대글자열자최대글자열자</p>
+                                                <span class="date number">22.08.17 10:21:24</span>
+                                            </div>
+                                            <div class="value">
+                                                <span class="hidden">입금</span>
+                                                <span class="number fc_posi">+ 8,123,456,789,000</span><span class="num_unit">won</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="label">
+                                                <p class="name">8월 회식비</p>
+                                                <span class="date number">22.08.17 10:21:24</span>
+                                            </div>
+                                            <div class="value">
+                                                <span class="hidden">출금</span>
+                                                <span class="number fc_nega">- 789,000</span><span class="num_unit">won</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="label">
+                                                <p class="name">8월 성과급</p>
+                                                <span class="date number">22.08.17 10:21:24</span>
+                                            </div>
+                                            <div class="value">
+                                                <span class="hidden">입금</span>
+                                                <span class="number fc_posi">+ 123,456,789,000</span><span class="num_unit">won</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="tit js_toggle" aria-expanded="false">최근거래내역조회</button>
+                            </div>
+                        </div> -->
+                        <!-- //221031 삭제 -->
+
+                        <!-- 221031 추가 -->
+                        <div class="main_account ht2">
+                            <a href="#" class="main_account_info btn_move" title="거래내역조회로 이동">
+                                <div class="main_account_head">
+                                    <span class="icon_bank_004 mm"></span>
+                                    <span class="acc_name">KB국민ONE통장 ・ 저축예금</span>
+                                    <span class="acc_num number">123456-78-901234</span>
+                                </div>
+                                <!-- 221107 button 위치 수정 -->
+                                <button type="button" class="acc_num_copy"><span class="hidden">계좌번호복사</span></button>
+                                <div class="main_account_amount multi2">
+                                    <strong class="num s forex">
+                                        <span class="num_item">
+                                            <span class="lb">USD</span><strong class="number">3,456,000.00</strong>
+                                        </span>
+                                        <span class="num_item">
+                                            <span class="lb">EUR</span><strong class="number">96,000.00</strong>
+                                        </span>
+                                        <span class="num_item">
+                                            <span class="lb">JPY</span><strong class="number">3,000.00</strong>
+                                        </span>
+                                    </strong>
+                                    <strong class="g_txt">잔액 숨김</strong>
+                                </div>
+                            </a>
+                            <!-- 221107 button 위치 수정 -->
+                            <!-- <button type="button" class="acc_num_copy"><span class="hidden">계좌번호복사</span></button> -->
+                            <div class="btn_set">
+                                <button type="button" class="primary">국내외화이체</button>
+                            </div>
+                            <div class="toggle_sm_wrap">
+                                <div class="toggle_panel" role="region">
+                                    <ul class="m_my_trans_history">
+                                        <li>
+                                            <span class="lb">
+                                                <span class="name">8월 성과급8월 성과급8월 성과급8월 성과급</span>
+                                                <span class=" time number">22.08.16 00:00:02</span>
+                                            </span>
+                                            <span class="val">
+                                                <span class="number fc_nega">- 20,890,999</span>
+                                                <span class="unit">won</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="lb">
+                                                <span class="name">8월 회식비</span>
+                                                <span class=" time number">22.08.16 00:00:02</span>
+                                            </span>
+                                            <span class="val">
+                                                <span class="number fc_nega">- 4,000,000</span>
+                                                <span class="unit">won</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="lb">
+                                                <span class="name">8월 회식비</span>
+                                                <span class=" time number">22.08.16 00:00:02</span>
+                                            </span>
+                                            <span class="val">
+                                                <span class="number fc_posi">+ 4,000,000</span>
+                                                <span class="unit">won</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <!-- 조회 내역이 없는 경우  -->
+                                    <div class="result nodata sm">
+                                        <p class="tit">조회하신 내역이 없습니다.</p>
+                                    </div>
+                                    <!-- //조회 내역이 없는 경우  -->
+                                </div>
+                                <button class="tit js_toggle" aria-expanded="false">최근거래내역조회</button>
+                            </div>
+                        </div>
+                        <!-- //221031 추가 -->
+                        
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- //계좌 슬라이드 -->
+        </div>
+        <!-- 업무 바로가기 리스트 -->
+        <div class="works_link">
+            <h3 class="hidden">업무 바로가기</h3>
+            <ul class="list_link">
+                <li class="all_account">
+                    <a href="#;" class="link">전계좌조회</a>
+                </li>
+                <li class="acc_transfer">
+                    <a href="#;" class="link">계좌이체</a>
+                </li>
+                <li class="sal_transfer">
+                    <a href="#;" class="link">급여이체</a>
+                </li>
+                <li class="overseas">
+                    <a href="#;" class="link">해외송금</a>
+                </li>
+                <li class="domestic">
+                    <a href="#;" class="link">국내외화이체</a>
+                </li>
+            </ul>
+        </div>
+        <!-- //업무 바로가기 리스트 -->
+        <!-- 환율정보 -->
+        <div class="exchange_info">
+            <h3 class="tit">환율정보</h3>
+            <div class="ex_time">
+                <span class="date">고시기준회차 : <span class="number">2022.08.21 09:23:52</span></span>
+                <span class="num">1회차</span>
+            </div>
+            <div class="rdoChk_box">
+                <span class="selection">
+                    <input type="radio" id="radioBox1_1" name="radio_box11" checked>
+                    <label for="radioBox1_1" class="label"><em>현찰</em></label>
+                </span>
+                <span class="selection">
+                    <input type="radio" id="radioBox1_2" name="radio_box11">
+                    <label for="radioBox1_2" class="label"><em>송금</em></label>
+                </span>
+            </div>
+            <div class="table">
+                <table>
+                    <caption>화폐, 사실때, 파실때 정보로 구성된 테이블</caption>
+                    <colgroup>
+                        <col style="width:33.333%">
+                        <col style="width:33.333%">
+                        <col style="width:33.333%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">화폐</th>
+                            <th scope="col">사실 때<!-- 송금 : 보낼때(입금) --></th>
+                            <th scope="col">파실 때<!-- 송금 : 받을때(출금) --></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="country_v">
+                                    <span class="country_flag_im sm usd"></span>
+                                    <span class="name">USD</span>
+                                </div>
+                            </td>
+                            <td><span class="fc_nega number">1,192.37</span></td>
+                            <td><span class="fc_posi number">1,234.83</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="country_v">
+                                    <span class="country_flag_im sm jpy"></span>
+                                    <span class="name">JPY</span>
+                                </div>
+                            </td>
+                            <td><span class="fc_nega number">983.23</span></td>
+                            <td><span class="fc_posi number">1,018.25</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="country_v">
+                                    <span class="country_flag_im sm eur"></span>
+                                    <span class="name">EUR</span>
+                                </div>
+                            </td>
+                            <td><span class="fc_nega number">1,311.39</span></td>
+                            <td><span class="fc_posi number">1,364.35</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn_list_btm">
+                <span><button type="button" class="btn outline md">환율 조회 더보기</button></span>
+                <span><button type="button" class="btn outline md">환율계산기</button></span>
+            </div>
+        </div>
+        <!-- //환율정보 -->
+        <div class="customer_center">
+            <!-- 221012 strong -> span 태그수정 -->
+            <span class="center_num">Global Customer Center <span class="number">1599-4477</span></span>
+            <span class="operating_time">Mon to Fri 09:00 ~ 18:00 (except on holidays)</span>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<script>
+    /* 업무 SCRIPT */
+    $(function(){
+        $('.g_main .js_toggle').on('click', function (e) {
+            var $this = $(this),
+                $swiperWrapper = $('.swiper-wrapper');
+            $swiperWrapper.css('height', 'auto');
+        });
+    });
+</script>
+</body>
+</html>

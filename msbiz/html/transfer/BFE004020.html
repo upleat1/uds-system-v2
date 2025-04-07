@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[금/구리/철거래 결제]구리/철거래결제_정보입력</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	
+	<div id="content">
+		<div class="tab_wrap">
+			<div class="tab_list" role="tablist">
+				<div class="scroll_wrap">
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_1">금거래 결제</button>
+					<button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_2">구리/철 결제</button>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_1">
+				<h1 class="hidden">금거래 결제</h1>
+				BFE003990.html
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_2">
+				<h2 class="hidden">구리/철 결제</h2>
+				<div class="inform_top_wrap">
+					<p class="fs15">즉시결제란 구리 철스크랩 사업자간 기작성된 세금계산서의 합계금액(공급가액+부가세액)을 전액 결제하는 것을 말하며, 기업구매자금대출 등 조세특례제한법 제7조의 2에서 정하는 여신상품을 이용하는 경우 부가가치세액만 결제하는 방식도 포함됩니다.</p>
+				</div>
+				<div class="section">
+					<!-- 대금결제 방식 선택 -->
+					<div class="form_group">
+						<div class="form_tit">대금결제 방식 선택</div>
+						<div class="form_row">
+							<div class="select">
+								<button type="button" class="select_btn" title="대금결제 방식 선택">선택</button><!-- 선택값 입력 시 : 클래스 active 추가 -->
+							</div>
+						</div>
+					</div>
+					<!-- //대금결제 방식 선택 -->
+
+					<!-- 세금계산서 작성일자 -->
+					<div class="form_group">
+						<div class="form_tit">세금계산서 작성일자</div>
+						<div class="form_row">
+							<!-- 220729 : 리웍 -->
+							<div class="input date" role="button" aria-label="{작성일자 입력값}, 세금계산서 작성일자 입력" >
+								<input type="tel" aria-hidden="true" maxlength="6" title="세금계산서 작성일자" placeholder="날짜입력" value="2022.06.15" readonly class="bg_white" >
+								<button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+							</div>
+							<!-- //220729 : 리웍 -->
+						</div>
+					</div>
+					<!-- //세금계산서 작성일자 -->
+
+					<!-- 거래품목 -->
+					<div class="form_group">
+						<div class="form_tit">거래품목</div>
+						<div class="form_row">
+							<div class="rdoChk_group inline">
+								<span class="selection">
+									<input type="radio" id="transferlist2_1" name="transferlist2" checked>
+									<label for="transferlist2_1" class="label"><em>구리스크랩</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="transferlist2_2" name="transferlist2">
+									<label for="transferlist2_2" class="label"><em>철스크랩</em></label>
+								</span>
+							</div>
+						</div>
+					</div>
+					<!-- //거래품목 -->
+				</div>
+
+				<hr class="hr_divide">
+
+				<div class="section">
+
+					<!-- 공급자 과세유형 영역 -->
+					<div class="form_group">
+						<div class="form_tit">공급자 과세유형</div>
+						<div class="form_row">
+							<div class="rdoChk_box">
+								<span class="selection">
+									<input type="radio" id="taxtype2_1" name="taxtype2" checked="">
+									<label for="taxtype2_1" class="label"><em>일반과세자</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="taxtype2_2" name="taxtype2">
+									<label for="taxtype2_2" class="label"><em>간이과세자</em></label>
+								</span>
+							</div>
+						</div>
+					</div>
+					<!-- //공급자 과세유형 영역 -->
+
+					<!-- 공급자 사업자번호 -->
+					<div class="form_group error"><!-- class에 success 또는 error 추가 -->
+						<div class="form_tit">공급자 사업자번호</div>
+						<!-- 220729 : 리웍 -->
+						<div class="form_row col business_num">
+							<span class="input" role="button" aria-label="{사업자번호 첫번째 3자리 입력값}, 사업자번호 첫번째 3자리 입력" ><input type="tel" id="ariaId2_1" aria-hidden="true" maxlength="3" placeholder="3자리" title="사업자번호 첫번째 3자리" readonly class="bg_white" ></span>
+							<span class="space">-</span>
+							<span class="input" role="button" aria-label="{사업자번호 중간 2자리 입력값}, 사업자번호 중간 2자리 입력" ><input type="tel" id="ariaId2_2" aria-hidden="true" maxlength="2" placeholder="2자리" title="사업자번호 중간 2자리" readonly class="bg_white" ></span>
+							<span class="space">-</span>
+							<span class="input" role="button" aria-label="{사업자번호 마지막 5자리 입력값}, 사업자번호 마지막 5자리 입력" ><input type="tel" id="ariaId2_3" aria-hidden="true" maxlength="5" placeholder="5자리" title="사업자번호 마지막 5자리" readonly class="bg_white" ></span>
+						</div>
+						<!-- //220729 : 리웍 -->
+						<p class="tip" aria-labelledby="ariaId2_1" >공급자 사업자 번호를 입력해 주십시오.</p>
+						<p class="tip" aria-labelledby="ariaId2_1">사업자번호는 10자리 입니다. 확인 후 거래하여 주십시오.</p>
+					</div>
+					<!-- // 공급자 사업자번호 -->
+
+					<!-- 공급자명 -->
+					<div class="form_group error">
+                        <div class="form_tit">공급자명</div>
+                        <div class="form_row">
+                            <div class="input">
+                                <input type="text" id="ariaId2_4" placeholder="공급자명" title="공급자명" value="" class="bg_white">
+                            </div>
+                        </div>
+						<p class="tip" aria-labelledby="ariaId2_4" >사업자명을 입력해 주십시오.</p>
+                    </div>
+					<!-- // 공급자명 -->
+
+					<!-- 합계금액 계산 방법 선택 영역 -->
+					<div class="form_group">
+						<h2 class="h2">합계금액 계산 방법 선택</h2>
+						<div class="form_row">
+							<div class="rdoChk_box">
+								<span class="selection">
+									<input type="radio" id="calcmethod2_1" name="calcmethod2" checked="">
+									<label for="calcmethod2_1" class="label"><em>자동계산</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="calcmethod2_2" name="calcmethod2">
+									<label for="calcmethod2_2" class="label"><em>직접입력</em></label>
+								</span>
+							</div>
+						</div>
+					</div>
+					<!-- //합계금액 계산 방법 선택 영역 -->
+
+					<!-- 합계금액 -->
+					<div class="form_group error">
+                        <div class="form_tit">합계금액</div>
+                        <div class="form_row">
+							<div class="input unit" role="button" aria-label="{합계급액 값}, 합계금액 입력" >
+                                <input type="tel" id="ariaId2_5" placeholder="숫자만 입력" title="합계금액" data-unit="원" aria-hidden="true" class="bg_white" readonly >
+                            </div>
+                        </div>
+						<p class="tip" aria-labelledby="ariaId2_5" >합계금액을 입력하여 주십시오.</p>
+                    </div>
+					<!-- //합계금액 -->
+
+					<!-- 공급가액 -->
+					<div class="form_group error">
+                        <div class="form_tit">공급가액</div>
+                        <div class="form_row">
+                            <div class="input unit" role="button">
+                                <input type="tel" id="ariaId2_6" title="공급가액" data-unit="원" readonly>
+                            </div>
+                        </div>
+						<p class="tip" aria-labelledby="ariaId2_6">세금계산서의 공급가액과 부가세액의 합이 세금계산서 합계금액과 일치하지 않습니다. 확인 후 거래하여 주십시오.</p>
+                    </div>
+					<!-- //공급가액 -->
+
+					<!-- 부가세액 -->
+					<div class="form_group error">
+                        <div class="form_tit">부가세액</div>
+                        <div class="form_row">
+                            <div class="input unit" role="button">
+                                <input type="tel" id="ariaId2_7" title="부가세액" data-unit="원" readonly>
+                            </div>
+                        </div>
+						<p class="tip_info">공급사업자가 간이과세자인 경우 부가가치세는 0원으로 간주되며, 공제받을 수 있는 매입세액으로 인정되지 않습니다.</p>
+						<p class="tip" aria-labelledby="ariaId2_7">부가세액이 공급가액의 10%가 아닙니다. 확인 후 거래하여 주십시오.</p>
+                    </div>
+					<!-- //부가세액 -->
+				</div>	
+
+				<hr class="hr_divide">
+
+				<div class="section">
+
+					<!-- 출금계좌번호 -->
+					<div class="form_group">
+						<div class="form_tit">출금계좌번호</div>
+						<div class="form_row">
+							<div class="select">
+								<button type="button" class="select_btn" title="출금계좌번호 선택">선택</button><!-- 선택값 입력 시 : 클래스 active 추가 -->
+							</div>
+						</div>
+						<!-- 220729 리웍 -->
+						<div class="toggle_sm_wrap gap_xxs">
+							<button class="tit js_toggle" aria-expanded="false">출금가능금액</button>
+							<div class="toggle_panel addinfo_panel" role="region">
+								<div class="form_btm_wrap right">
+									<p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>
+									<p class="sum_hint">1일 이체잔여한도 : <span class="number fc_nega">21,787,888,000</span><span class="num_unit">원</span></p>                
+								</div>
+							</div>
+						</div>
+						<!-- //220729 리웍 -->
+					</div>
+					<!-- //출금계좌번호 -->
+
+					<!-- 이체금액 -->
+					<div class="form_group error">
+                        <div class="form_tit">이체금액</div>
+                        <div class="form_row">
+							<div class="input unit" role="button" role="button" aria-label="{이체금액 값}, 이체금액 입력" >
+                                <input type="tel" id="ariaId2_8" placeholder="숫자만 입력" title="이체금액" data-unit="원" aria-hidden="true" class="bg_white" readonly >
+                            </div>
+                        </div>
+						<p class="form_hangul" aria-hidden="true">삼만구천육백원</p><!-- 220729 : 추가 -->
+						<p class="tip" aria-labelledby="ariaId2_8">이체금액과 세금계산서 합계금액이 일치하지 않습니다. 확인 후 거래하여 주십시오.</p>
+                    </div>
+					<!-- // 이체금액 -->
+					
+					<!-- 입금기관 -->
+					<div class="form_group error">
+						<div class="form_tit">입금기관</div>
+						<div class="form_row">
+							<div class="select">
+								<button type="button" id="ariaId2_9" class="select_btn active" title="입금기관 선택">선택</button>
+							</div>
+						</div>
+						<p class="tip" aria-labelledby="ariaId2_9">입금은행을 선택하여 주십시오.</p>
+					</div>
+					<!-- //입금기관 -->
+
+					<!-- 입금계좌번호 -->
+					<div class="form_group error">
+                        <div class="form_tit">입금계좌번호</div>
+                        <div class="form_row">
+							<div class="input" role="button" aria-label="{입금계좌번호 값}, 입금계좌번호 입력" >
+                                <input type="tel" id="ariaId2_10" placeholder="숫자만 입력" title="입금계좌번호" aria-hidden="true" class="bg_white" readonly >
+                            </div>
+                        </div>
+						<p class="tip" aria-labelledby="ariaId2_10">입금계좌번호를 입력하여 주십시오.</p>
+						<div class="btn_wrap btm gap_xs">
+							<a href="#none" class="btn_txt ico_arr" title="입금지정계좌">입금지정계좌</a>
+							<a href="#none" class="btn_txt ico_arr" title="자주 쓰는 입금계좌">자주 쓰는 입금계좌</a>
+						</div>
+                    </div>
+					<!-- //입금계좌번호 -->
+
+					<!-- 증명서발급번호 -->
+					<div class="form_group error">
+                        <div class="form_tit">증명서발급번호</div>
+                        <div class="form_row">
+                            <div class="input" role="button">
+                                <input type="tel" id="ariaId2_11" placeholder="16자 이내 입력 가능(한글/영문/숫자)" title="증명서발급번호" >
+                            </div>
+                        </div>
+						<p class="tip" aria-labelledby="ariaId2_11">증명서발급번호를 입력하여 주십시오.</p>
+                    </div>
+					<!-- //증명서발급번호 -->
+				</div>
+
+				<hr class="hr_divide">
+
+				<div class="section">
+					<div class="table_group">
+						<h2 class="h3">금(Gold)거래 결제 스마트뱅킹 이체 한도 안내</h2>
+						<div class="table">
+							<table class="center">
+								<caption>KB국민은행, 타행 이체한도 확인</caption>
+								<colgroup>
+									<col style="width:34%">
+									<col style="width:33%">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">KB국민은행으로 이체</th>
+										<th scope="col">타행으로 이체</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1일 결제한도</td>
+										<td>기업뱅킹 1회 이체 한도 내</td>
+										<td>기업뱅킹 1회 이체 한도 내(최대 10억)</td>
+									</tr>
+									<tr>
+										<td>1회 결제한도</td>
+										<td>기업뱅킹 1일 이체 한도 내</td>
+										<td>기업뱅킹 1일 이체 한도 내</td>
+									</tr>
+								</tbody>
+							</table>   
+						</div>
+					</div>
+				</div>
+				<div class="inform_btm_wrap">
+					<button class="tit js_toggle" aria-expanded="false" aria-controls="notice2_1">안내사항</button>
+					<div class="toggle_panel" role="region" id="notice2_1">
+						<ul class="depth bul">
+							<li>거래 종료 후 공급가액은 매출자에게, 부가세액은 국세청 부가세 관리계정에 자동 입금됩니다. 단, 기업구매자금대출 등 기존 여신 상품의 결제방식을 이용하는 경우에는 부가세액만 국세청 부가세 관리계정에 입금됩니다.</li>
+							<li>전용계좌를 사용하지 않고 대금을 결제하는 경우 매입자ㆍ매출자 모두에게 제품가액의 20%의 가산세가 부과됩니다.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="btn_confirm_wrap">
+					<div class="btn_area">
+						<span><button type="button" class="btn primary lg" disabled >확인</button></span>  
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

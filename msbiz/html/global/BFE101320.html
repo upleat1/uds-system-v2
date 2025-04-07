@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[이체상황확인]계좌이체상세</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+		<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	
+	<div id="content">
+		<div class="section">
+			<h1 class="h1">계좌이체상세</h1>
+			<div class="list_data_group">
+				<h2 class="h3 mgt_0">예약이체내역</h2>
+				<ul class="list_data">
+					<li>
+						<div class="key">예약등록일</div>
+						<div class="value"><span class="number">2022.06.07</span></div>
+					</li>
+					<li>
+						<div class="key">이체 지정일</div>
+						<div class="value"><span class="number">2022.06.07 14:00</span></div>
+					</li>
+					<li>
+						<div class="key">예약명</div>
+						<div class="value">{입력한 예약명}</div>
+					</li>
+					<li>
+						<div class="key">총 이체건수</div>
+						<div class="value"><span class="number">1</span><span class="num_unit">건</span></div>
+					</li>
+					<li>
+						<div class="key">총 등록금액</div>
+						<div class="value"><span class="number fc_nega">1,500</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">정상 등록금액</div>
+						<div class="value"><span class="number fc_nega">1,500</span><span class="num_unit">원</span></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="list_data_group">
+				<h2 class="h3">예약출금내역</h2>
+				<ul class="list_data">
+					<li>
+						<div class="key">출금계좌</div>
+						
+                        <div class="value">
+                            <div class="bank_name"><span class="icon_bank_004 md"></span><span>KB국민</span></div>
+                            <div class="account_num"><span class="number">432102-01-271831</span></div>
+                        </div>
+                        
+					</li>
+					<li>
+						<div class="key">출금 합계액</div>
+						<div class="value"><span class="number fc_nega">1,500</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">총 수수료</div>
+						<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<hr class="hr_divide">
+
+		<div class="section">
+			<!-- 다건일 경우 -->
+			<div class="chk_data_group">
+				<div class="chk_total">
+					<span class="selection">
+						<input type="checkbox" id="checkType1" class="chk_all">
+						<label for="checkType1" class="label bold fs18"><em>전체선택</em></label>
+					</span>
+				</div>
+
+				<div class="chk_data_list_group">
+					<!-- 다건1 -->
+					<div class="chk_data_list">
+						
+						<div class="hgroup_head">
+							<div>
+								<div class="chk_head">
+									<span class="selection chk">
+										<input type="checkbox" id="checkCHK1">
+										<label for="checkCHK1" class="label"><em>석가쁨손정진선 (하)</em></label>
+									</span>
+								</div>
+							</div>
+							<div>
+								<span class="badge line">예약중</span>
+							</div>
+						</div>
+
+						<ul class="list_data noline">
+							<li>
+								<div class="key">이체 처리일</div>
+								<div class="value"><span class="number">-</span></div>
+							</li>
+							<li>
+								<div class="key">받는 분 계좌번호</div>
+								<div class="value"><em>KB국민</em><br><span class="number">242437-04-005580</span></div>
+							</li>
+							<li>
+								<div class="key">이체금액</div>
+								<div class="value">
+									<span class="number fc_nega">200</span><span class="num_unit">원</span>
+								</div>
+							</li>
+							<li>
+								<div class="key">수수료</div>
+								<div class="value">
+									<span class="number">0</span><span class="num_unit">원</span>
+								</div>
+							</li>
+							<li>
+								<div class="key">받는 분 통장메모</div>
+								<div class="value">석가쁨손정진선 (하)</div>
+							</li>
+							<li>
+								<div class="key">내 통장메모</div>
+								<div class="value">{입력한 내통장 메모}</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 다건2 -->
+					<div class="chk_data_list">
+						
+						<div class="hgroup_head">
+							<div>
+								<div class="chk_head">
+									<span class="selection chk">
+										<input type="checkbox" id="checkCHK2">
+										<label for="checkCHK2" class="label"><em>석가쁨손정진선 2 (하)</em></label>
+									</span>
+								</div>
+							</div>
+							<div>
+								<span class="badge line">결제중</span>
+							</div>
+						</div>
+						
+						<ul class="list_data noline">
+							<li>
+								<div class="key">이체 처리일</div>
+								<div class="value"><span class="number">-</span></div>
+							</li>
+							<li>
+								<div class="key">받는 분 계좌번호</div>
+								<div class="value"><em>KB국민</em><br><span class="number">242437-04-005580</span></div>
+							</li>
+							<li>
+								<div class="key">이체금액</div>
+								<div class="value">
+									<span class="number fc_nega">200</span><span class="num_unit">원</span>
+								</div>
+							</li>
+							<li>
+								<div class="key">수수료</div>
+								<div class="value">
+									<span class="number">0</span><span class="num_unit">원</span>
+								</div>
+							</li>
+							<li>
+								<div class="key">받는 분 통장메모</div>
+								<div class="value">석가쁨손정진선 (하)</div>
+							</li>
+							<li>
+								<div class="key">내 통장메모</div>
+								<div class="value">{입력한 내통장 메모}</div>
+							</li>
+						</ul>
+					</div>
+				</div>		
+			</div>
+			<!-- //다건일 경우 -->
+
+			<!-- 단건일 경우 -->
+			<div class="list_data_group gap_sm_2">
+				
+				<div class="hgroup_head">
+					<div>
+						<h2 class="h3">석가쁨손정진선 (하)</h2>
+					</div>
+					<div>
+						<span class="badge line">결재중</span><span class="badge line">예약중</span>
+					</div>
+				</div>
+
+				<ul class="list_data noline">
+					<li>
+						<div class="key">이체 처리일</div>
+						<div class="value"><span class="number">-</span></div>
+					</li>
+					<li>
+						<div class="key">받는 분 계좌번호</div>
+						<div class="value"><em>KB국민</em><br><span class="number">242437-04-005580</span></div>
+					</li>
+					<li>
+						<div class="key">이체금액</div>
+						<div class="value">
+							<span class="number fc_nega">200</span><span class="num_unit">원</span>
+						</div>
+					</li>
+					<li>
+						<div class="key">수수료</div>
+						<div class="value">
+							<span class="number">0</span><span class="num_unit">원</span>
+						</div>
+					</li>
+					<li>
+						<div class="key">받는 분 통장메모</div>
+						<div class="value">석가쁨손정진선 (하)</div>
+					</li>
+					<li>
+						<div class="key">내 통장메모</div>
+						<div class="value">{입력한 내통장 메모}</div>
+					</li>
+				</ul>
+			</div>	
+			<!-- //단건일 경우 -->
+		</div>
+
+		<!-- 목록만 나오는 경우 -->
+		<!-- <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">목록</button></span>  
+            </div>    
+        </div> -->
+		<!-- //목록만 나오는 경우 -->
+
+		<div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">목록</button></span>  
+                <span><button type="button" class="btn primary lg">예약취소</button></span>  
+            </div>    
+        </div>
+		
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

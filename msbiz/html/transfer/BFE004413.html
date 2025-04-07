@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>정보입력 - 자동이체등록</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<!-- wrap -->
+        
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE003820_3')">최근/자주쓰는/내계좌(바텀)</button></span>
+        </div>
+
+
+        <!-- layer html : 최근/자주쓰는/내계좌 선택 -->
+        <div id="BFE003820_3" class="popup bottom" role="dialog" aria-hidden="true">
+            <article class="pop_wrap">
+                <div class="pop_head">
+                    <div>
+                        <h1>최근/자주쓰는/내계좌 선택</h1>
+                    </div>
+                </div>
+                <div class="pop_body">
+                    <div class="pop_section tr_deposit tr_acc_all_pop">
+                        <div class="tab_wrap">
+                            <div class="tab_list" role="tablist">
+                                <div class="scroll_wrap">
+                                    <button role="tab" aria-selected="true" aria-controls="tabpanel4_1">최근</button>
+                                    <button role="tab" aria-selected="false" aria-controls="tabpanel4_2">자주쓰는</button>
+                                    <button role="tab" aria-selected="false" aria-controls="tabpanel4_3">내계좌</button>
+                                </div>
+                                <div class="btn_area">
+                                    <button type="button" class="btn_ico_search"><span class="hidden">계좌검색</span></button> <!-- 클릭시 active 클래스 추가, 다른탭메뉴 aria-selected="false" 로 변경해주세요 -->
+                                </div>
+                            </div>
+        
+                            <!-- 최근 -->
+                            <div role="tabpanel" class="tab_panel" id="tabpanel4_1">
+                                <h2 class="hidden">최근 사용한 계좌</h2>
+                                <div class="section inner">
+                                    <p class="depth info gap_xs_2">최근 3개월 이내 이체된 입금계좌입니다.</p><!-- 220729 리웍 -->
+                                    <ul class="acc_list favorite transfer">
+                                        <li>
+                                            <a href="#" class="acc_bank">
+                                                <span class="icon_bank_004 md"></span>
+                                                <span class="bk_user">
+                                                    <strong class="user">김국민</strong> 
+                                                    <em class="number date">2021.01.30</em>
+                                                </span>
+                                                <span class="bk_name">KB국민</span>
+                                                <span class="bk_num number">574498-90-009768</span>
+                                                <span class="bk_pay balance"><span class="blind">출금가능금액</span><em class="number">100,000</em> <em class="num_unit">원</em></span>
+                                            </a>
+                                            <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="acc_bank">
+                                                <span class="icon_bank_050 md"></span>
+                                                <span class="bk_user">
+                                                    <strong class="user">김국민</strong>
+                                                    <em class="number date">2021.01.30</em>
+                                                </span>
+                                                <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                                <span class="bk_num number">57449890009768</strong>
+                                                <span class="bk_pay balance"><span class="blind">출금가능금액</span><em class="number">100,000</em> <em class="num_unit">원</em></span>
+                                            </a>
+                                            <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="acc_bank">
+                                                <span class="icon_bank_050 md"></span>
+                                                <span class="bk_user">
+                                                    <strong class="user">김국민</strong>
+                                                    <em class="number date">2021.01.30</em>
+                                                </span>
+                                                <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                                <span class="bk_num number">57449890009768</span>
+                                                <span class="bk_pay balance"><span class="blind">출금가능금액</span><em class="number">100,000</em> <em class="num_unit">원</em></span>
+                                            </a>
+                                            <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                        </li>
+                                    </ul>
+                                    <!-- 이체내역없음 -->
+                                    <div class="result nodata sm gap_lg">
+                                        <p class="tit">최근 이체내역이 없습니다.</p>
+                                    </div>
+                                    <!-- //이체내역없음 -->		
+                                </div>
+                            </div>
+                            <!-- //최근 -->
+        
+                            <!-- 자주쓰는 -->
+                            <div role="tabpanel" class="tab_panel" id="tabpanel4_2">
+                                <h2 class="hidden">자주 쓰는 계좌</h2>
+                                <div class="section inner">
+                                    <p class="depth info gap_xs_2">자주쓰는 계좌로 등록된 입금계좌입니다.</p><!-- 220729 리웍 -->
+                                    <ul class="acc_list favorite transfer">
+                                        <li>
+                                            <a href="#" class="acc_bank">
+                                                <span class="icon_bank_004 md"></span>
+                                                <span class="bk_user">
+                                                    <strong class="user">김국민</strong> 
+                                                </span>
+                                                <span class="bk_name">KB국민</span>
+                                                <span class="bk_num number">574498-90-009768</span>
+                                            </a>
+                                            <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="acc_bank">
+                                                <span class="icon_bank_050 md"></span>
+                                                <span class="bk_user">
+                                                    <strong class="user">김국민</strong>
+                                                </span>
+                                                <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                                <span class="bk_num number">574498-90-009768</strong>
+                                            </a>
+                                            <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="acc_bank">
+                                                <span class="icon_bank_050 md"></span>
+                                                <span class="bk_user">
+                                                    <strong class="user">김국민</strong>
+                                                </span>
+                                                <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                                <span class="bk_num number">574498-90-009768</span>
+                                            </a>
+                                            <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                        </li>
+                                    </ul>
+    
+                                    <!-- 등록계좌없음 -->
+                                    <div class="result nodata sm gap_lg">
+                                        <p class="tit">등록된 자주쓰는계좌가 없습니다.<br>등록하시겠습니까?</p>
+                                        <div class="list_btm_wrap">
+                                            <button type="button" class="btn outline sm">자주쓰는 계좌 등록</button>
+                                        </div>
+                                    </div>
+                                    <!-- //등록계좌없음 -->
+                                </div>	
+                            </div>
+                            <!-- //자주쓰는 -->
+        
+                            <!-- 내계좌 -->
+                            <div role="tabpanel" class="tab_panel" id="tabpanel4_3">
+                                <h2 class="hidden">내 계좌</h2>
+                                <div class="section inner">
+                                    <div class="tab_wrap box gap_sm_3">
+                                        <div class="tab_list" role="tablist">
+                                            <button type="button" role="tab" aria-selected="true" aria-controls="tab2panel1_1">국민은행</button>
+                                            <button type="button" role="tab" aria-selected="false" aria-controls="tab2panel1_2">다른금융</button>
+                                        </div>
+                                        <div class="tab_panel" role="tabpanel" id="tab2panel1_1">
+                                            <h3 class="hidden">국민은행</h3>
+                                            <!-- <p class="depth info gap_0">계좌비밀번호, 보안매체, 인증서, 추가인증 없이 이체할 수 있습니다.</p> 220824 문구 삭제 요청-->
+                                            <div class="account_all gap_xs_2">
+                                                <div class="acc_acco_list">
+                                                    <div class="tit_area js_toggle on minus_right" role="button" aria-expanded="true">
+                                                        <div class="tit btn_toggle">
+                                                            <strong class="cate">예금<span class="count">(5)</span></strong>
+                                                        </div>
+                                                        <span class="arrow"><span class="hidden">열기</span></span>
+                                                    </div>
+                                                    <div class="toggle_panel">
+                                                        <ul class="acc_list favorite transfer">
+                                                            <li>
+                                                                <a href="#" class="acc_bank">
+                                                                    <span class="icon_bank_004 md"></span>
+                                                                    <span class="bk_user">
+                                                                        <strong class="user">KB국민ONE통장-보통예금</strong> 
+                                                                    </span>
+                                                                    <span class="bk_name">KB국민</span>
+                                                                    <span class="bk_num number">574498-90-009768</span>
+                                                                </a>
+                                                                <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="acc_bank">
+                                                                    <span class="icon_bank_050 md"></span>
+                                                                    <span class="bk_user">
+                                                                        <strong class="user">KB국민ONE통장-보통예금</strong>
+                                                                    </span>
+                                                                    <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                                                    <span class="bk_num number">57449890009768</strong>
+                                                                </a>
+                                                                <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="acc_acco_list">
+                                                    <div class="tit_area js_toggle minus_right" role="button" aria-expanded="false">
+                                                        <div class="tit btn_toggle">
+                                                            <strong class="cate">펀드<span class="count">(1)</span></strong>
+                                                        </div>
+                                                        <span class="arrow"><span class="hidden">열기</span></span>
+                                                    </div>
+                                                    <div class="toggle_panel">
+                                                        <ul class="acc_list favorite transfer">
+                                                            <li>
+                                                                <a href="#" class="acc_bank">
+                                                                    <span class="icon_bank_004 md"></span>
+                                                                    <span class="bk_user">
+                                                                        <strong class="user">KB국민ONE통장-보통예금</strong> 
+                                                                    </span>
+                                                                    <span class="bk_name">KB국민</span>
+                                                                    <span class="bk_num number">574498-90-009768</span>
+                                                                </a>
+                                                                <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="acc_acco_list">
+                                                    <div class="tit_area js_toggle minus_right" role="button" aria-expanded="false">
+                                                        <div class="tit btn_toggle">
+                                                            <strong class="cate">대출<span class="count">(0)</span></strong>
+                                                        </div>
+                                                        <span class="arrow"><span class="hidden">열기</span></span>
+                                                    </div>
+                                                    <div class="toggle_panel">
+                                                        <!-- 등록계좌없음 -->
+                                                        <div class="result nodata sm gap_lg">
+                                                            <p class="tit">등록된 다른금융 계좌가 없습니다.</p>
+                                                        </div>
+                                                        <!-- //등록계좌없음 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab_panel" role="tabpanel" id="tab2panel1_2">
+                                            <h3 class="hidden">다른금융</h3>
+                                            <!-- <p class="depth info gap_0">계좌비밀번호, 보안매체, 인증서, 추가인증 없이 이체할 수 있습니다.</p> 220824 문구 삭제 요청-->
+                                            <div class="account_all gap_xs_2">
+                                                <div class="acc_acco_list">
+                                                    <div class="tit_area js_toggle on minus_right" role="button" aria-expanded="true">
+                                                        <div class="tit btn_toggle">
+                                                            <strong class="cate">예금<span class="count">(5)</span></strong>
+                                                        </div>
+                                                        <span class="arrow"><span class="hidden">열기</span></span>
+                                                    </div>
+                                                    <div class="toggle_panel">
+                                                        <ul class="acc_list favorite transfer">
+                                                            <li>
+                                                                <a href="#" class="acc_bank">
+                                                                    <span class="icon_bank_004 md"></span>
+                                                                    <span class="bk_user">
+                                                                        <strong class="user">KB국민ONE통장-보통예금</strong> 
+                                                                    </span>
+                                                                    <span class="bk_name">KB국민</span>
+                                                                    <span class="bk_num number">574498-90-009768</span>
+                                                                </a>
+                                                                <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="acc_bank">
+                                                                    <span class="icon_bank_050 md"></span>
+                                                                    <span class="bk_user">
+                                                                        <strong class="user">KB국민ONE통장-보통예금</strong>
+                                                                    </span>
+                                                                    <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                                                    <span class="bk_num number">57449890009768</strong>
+                                                                </a>
+                                                                <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="acc_acco_list">
+                                                    <div class="tit_area js_toggle minus_right" role="button" aria-expanded="false">
+                                                        <div class="tit btn_toggle">
+                                                            <strong class="cate">펀드<span class="count">(1)</span></strong>
+                                                        </div>
+                                                        <span class="arrow"><span class="hidden">열기</span></span>
+                                                    </div>
+                                                    <div class="toggle_panel">
+                                                        <ul class="acc_list favorite transfer">
+                                                            <li>
+                                                                <a href="#" class="acc_bank">
+                                                                    <span class="icon_bank_004 md"></span>
+                                                                    <span class="bk_user">
+                                                                        <strong class="user">KB국민ONE통장-보통예금</strong> 
+                                                                    </span>
+                                                                    <span class="bk_name">KB국민</span>
+                                                                    <span class="bk_num number">574498-90-009768</span>
+                                                                </a>
+                                                                <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="acc_acco_list">
+                                                    <div class="tit_area js_toggle minus_right" role="button" aria-expanded="false">
+                                                        <div class="tit btn_toggle">
+                                                            <strong class="cate">대출<span class="count">(0)</span></strong>
+                                                        </div>
+                                                        <span class="arrow"><span class="hidden">열기</span></span>
+                                                    </div>
+                                                    <div class="toggle_panel">
+                                                        <!-- 등록계좌없음 -->
+                                                        <div class="result nodata sm gap_lg">
+                                                            <p class="tit">등록된 다른금융 계좌가 없습니다.</p>
+                                                        </div>
+                                                        <!-- //등록계좌없음 -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //법인사업자 접속시 노출-->
+                            </div>
+                            <!-- //내계좌 -->
+    
+                            <!-- 검색 -->
+                            <div role="tabpanel" class="tab_panel" >
+                                <div class="section">
+                                    <div class="acc_search_form">
+                                        <div class="form_row">
+                                            <input type="text" placeholder="검색어를 입력해주세요. " title="검색어입력">
+                                            <button type="button" class="btn_clear"><span class="hidden">입력내용 초기화</span></button> <!-- 개발요청 : 개발에서 x 버튼 컨트롤 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 검색결과 -->
+                                <div class="section inner">
+                                    <ul class="acc_list transfer">
+                                        <li>
+                                            <a href="#" class="acc_bank">
+                                                <span class="icon_bank_004 md"></span>
+                                                <span class="bk_user">
+                                                    <strong class="user">김국민</strong> 
+                                                    <em class="number date">2021.01.30</em>
+                                                </span>
+                                                <span class="bk_name">KB국민</span>
+                                                <span class="bk_num number">574498-90-009768</span>
+                                                <span class="bk_nick">별명입니다</span>
+                                                <span class="bk_sum"><em class="number fc_posi">1,000</em><em class="num_unit">원</em></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="acc_bank">
+                                                <span class="icon_bank_050 md"></span>
+                                                <span class="bk_user">
+                                                    <strong class="user">김국민</strong>
+                                                    <em class="number date">2021.01.30</em>
+                                                </span>
+                                                <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                                <span class="bk_num number">574498-90-009768</span>
+                                                <span class="bk_nick">별명입니다</span>
+                                                <span class="bk_sum"><em class="number fc_posi">1,000</em><em class="num_unit">원</em></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="acc_bank">
+                                                <span class="icon_bank_050 md"></span>
+                                                <span class="bk_user">
+                                                    <strong class="user">김국민</strong>
+                                                    <em class="number date">2021.01.30</em>
+                                                </span>
+                                                <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                                <span class="bk_num number">574498-90-009768</span>
+                                                <span class="bk_nick">별명입니다</span>
+                                                <span class="bk_sum"><em class="number fc_posi">1,000</em><em class="num_unit">원</em></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+    
+                                    <!-- 결과 없음 -->
+                                    <div class="result nodata sm">
+                                        <p class="tit">계좌번호를 모르시나요?</p>
+                                        <div class="list_btm_wrap">
+                                            <button type="button" class="btn outline sm">연락처로 송금하기</button>
+                                        </div>
+                                    </div>
+                                    <!-- //결과 없음 -->
+                                </div>
+                                <!-- //검색결과 -->
+                            </div>
+                            <!-- //검색 -->
+        
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+            </article>
+        </div>
+        <!-- //layer html : 최근/자주쓰는/내계좌 선택 -->  
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

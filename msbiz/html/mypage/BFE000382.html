@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[바텀시트]My페이지_금융정보_조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/transfer.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!-- 조회 START -->
+    <div id="bottomAccountInquiry" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>조회</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <div class="form_group gap_0">
+						<div class="form_tit">알림분류</div>
+						<div class="form_row">
+							<div class="select">
+								<button type="button" class="select_btn" title="알림분류선택">선택</button><!-- 선택후 'active' 추가 -->
+							</div>
+						</div>
+					</div>
+                    <div class="form_group">
+						<div class="form_tit">조회기간</div>
+						<div class="form_row">
+							<div class="rdoChk_box">
+								<span class="selection">
+									<input type="radio" id="period1" name="period">
+									<label for="period1" class="label"><em>3일</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period2" name="period">
+									<label for="period2" class="label"><em>1주일</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period3" name="period" checked="">
+									<label for="period3" class="label"><em>1개월</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period4" name="period">
+									<label for="period4" class="label"><em>3개월</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period5" name="period">
+									<label for="period5" class="label"><em>6개월</em></label>
+								</span>
+							</div>
+							<div class="form_date_term">
+								<div class="input date">
+									<input type="tel" title="시작일 입력" maxlength="8" value="2021.03.01">
+									<button type="button" class="btn_cal" title="시작일 선택"></button>                    
+								</div>
+								<span class="space">~</span>
+								<div class="input date">
+									<input type="tel" title="종료일 입력" maxlength="8" value="2021.03.31"> 
+									<button type="button" class="btn_cal" title="종료일 선택"></button>                              
+								</div>
+							</div>              
+						</div>
+                        <p class="tip_info">12개월 이내 알림만 조회할 수 있습니다.</p>
+					</div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">조회</button></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+    <!--// 조회 END -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function(){
+        UICommon.Layer.open('#bottomAccountInquiry');
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

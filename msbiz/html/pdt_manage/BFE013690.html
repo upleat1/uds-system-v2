@@ -1,0 +1,104 @@
+<!doctype html>
+<head lang="ko">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>승인내역조회/할인신청</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+		<h1 class="h1">할인신청 정보입력</h1>
+		<div class="inform_top_wrap">
+			<ul class="depth bul">
+				<li>할인대상 내역이 다음과 같습니다.</li>
+				<li>할인실행과 동시에 입금계좌로 입금됩니다.</li>
+				<li>할인을 원하시면 할인요청금액을 입력하시고 [확인] 버튼을 선택하세요.</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<h2 class="h3">상세 내역</h2>
+			<ul class="list_data left">
+				<li>
+					<div class="key">승인번호</div>
+					<div class="value"><span class="number">062202358070</span><br/>결제</div>
+				</li>
+				<li>
+					<div class="key">구매기업<br>사업자등록번호</div>
+					<div class="value"><span class="number">124-81-12655</span></div>
+				</li>				
+				<li>
+					<div class="key">구매기업명</div>
+					<div class="value">모상결송혁만유신령박</div>
+				</li>				
+				<li>
+					<div class="key">승인일자</div>
+					<div class="value"><span class="number">2022.02.28</span></div>
+				</li>
+				<li>
+					<div class="key">승인금액</div>
+					<div class="value"><span class="number">97,900,000</span><span class="num_unit">원</span></div>
+				</li>
+				<li>
+					<div class="key">할인가능금액</div>
+					<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+				</li>
+				<li>
+					<div class="key">결제(만기)일</div>
+					<div class="value"><span class="number">2022.06.28</span></div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<!-- 220729 리웍 -->
+			<div class="form_group error"><!-- error케이스 : error 추가 -->
+				<div class="form_tit">할인요청금액</div>
+				<div class="form_row">
+					<div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 할인요청금액 입력" onclick="">
+						<input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="할인요청금액" data-unit="원" id="id02" readonly class="bg_white">
+					</div>
+					
+				</div>
+				<p class="form_hangul" aria-hidden="true">원</p>
+				<p class="tip" aria-labelledby="id02">할인요청금액을 입력해 주시기 바랍니다.</p>   
+			</div>
+			<!-- //220729 리웍 -->
+		</div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span>  
+				<span><button type="button" class="btn primary lg">확인</button></span>  
+			</div>
+		</div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

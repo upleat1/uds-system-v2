@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[인증서 연결 ID 조회/변경]ID 정보 확인</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="인증센터" href="/msbiz/app/css/certification.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <h1 class="h1">연결ID선택</h1>
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <li>연결할 ID를 선택합니다.</li>
+                    <li>선택한 ID의 계좌번호 및 계좌비밀번호가 일치할 경우 ID 연결이 가능합니다.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">연결중인 ID</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" placeholder="ABCEDCDD001" title="연결중인 ID" value="ABCEDCDD001" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">연결할 ID 선택</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="연결할 ID 선택">인증서 연결 ID 조회</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 연결할 ID 지정이 정상적으로 된 경우 하단에 계좌번호 영역 노출 -->
+                <div class="form_group">
+                    <div class="form_tit">계좌번호</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn" title="계좌번호">123-23121-12*** : 급여통장</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //연결할 ID 지정이 정상적으로 된 경우 하단에 계좌번호 영역 노출 -->
+
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">다음</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+</html>

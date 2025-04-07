@@ -1,0 +1,74 @@
+@charset "utf-8"; 
+
+/*** customer_hcw.css ***/
+.cs_tel_wrap{display: flex;justify-content: space-between;}
+.cs_tel_wrap > div{ position:relative; width: calc(50% - .4rem); padding:6rem 0 1.1rem; border:1px solid var(--fc_08, #dde1e4); border-radius: .2rem; text-align: center;}
+.cs_tel_wrap > div::before{content: '';position:absolute;left:50%;top:1.6rem;margin-left:-2.3rem;width: 4rem;height: 4rem;background:url(/msbiz/app/img/customer/ico_tell_dmfn.png) no-repeat left top;background-size:8rem auto;}
+.cs_tel_wrap .foreign::before{background-position: -4rem top;}
+.cs_tel_wrap .type{margin-bottom:.8rem;font-size: 1.8rem;font-weight: 600;}
+.cs_tel_wrap .foreign .type{margin-bottom: 1.6rem;}
+.cs_tel_wrap a{display: block;font-size: 1.4rem;color: var(--fc_03, #484b51);}
+.acc_list.cs_tel{border-top: 1px solid var(--bdc_01, #ebeef0);}
+.acc_list.cs_tel li{padding: 0;}
+.acc_list.cs_tel li a{padding:2.8rem 2.5rem 2rem 5.6rem;z-index: 1;}
+.acc_list.cs_tel li a::before{content:''; position: absolute; width:4rem;height:4rem; top:2rem; left:0; background: url(/msbiz/app/img/customer/ico_cs_tel.png) no-repeat; background-size:25rem auto;}
+.acc_list.cs_tel .menu1 a::before{background-position:0 0;}
+.acc_list.cs_tel .menu2 a::before{background-position:-4rem 0;}
+.acc_list.cs_tel .menu3 a::before{background-position:-8rem 0;}
+.acc_list.cs_tel li a .tit{margin-bottom: .3rem; font-size: 1.8rem;font-weight: 600;}
+.acc_list.cs_tel li a .number{font-size: 1.5rem;color: var(--fc_03, #484b51);}
+
+
+
+/*** customer_lho.css ***/
+/*  지점찾기 번호표 링크 타입 */ 
+.acc_wrap.cus_link .btn_txt.ico_arr{position: absolute;right: 2rem;top: 50%;}
+.acc_wrap.cus_link .btn_txt.ico_arr::after{border-color:var(--fc_05, #8c949e);}
+
+/* 지점검색 아이콘 */
+.form_group .btn.point.sm.round.int_search_btn{background: transparent;}
+
+.cus_filter_wrap{margin-top: 2.4rem;}
+
+.cus_filter_buttons{overflow: hidden;margin-bottom: 1.6rem;padding: 0 2.4rem}
+.cus_filter_buttons > button{float: left;padding:0 1.6rem;height:3.4rem;border: 1px solid var(--fc_05, #8c949e);border-radius: 1.7rem;font-size:1.5rem;color: var(--fc_05, #8c949e);}
+.cus_filter_buttons > button + button{margin-left: .8rem;}
+.cus_filter_buttons > button.active{color: var(--fc_02, #26282c);font-weight: 700;background: #ffd338;border-color: #ffd338;}
+
+.cus_filter_header{position: relative;height: 4.8rem;background-color: #f7f7f8;padding: 0 4.8rem 0 2.4rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.cus_filter_header .filter_area{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;} /* 개발에 맞춰 추가 */
+.cus_filter_header strong{font-size:1.4rem;position: relative;line-height: 4.8rem;}
+.cus_filter_header strong + strong{padding-left: 0.7rem;}
+.cus_filter_header strong:not(:first-child):before {content: '';display: inline-block;position: absolute;left: .1rem;top: .8rem;width: 0.2rem;height: 0.2rem;background: var(--fc_02, #26282c);}
+.cus_filter_header button{position: absolute;top: 1.4rem;right: 2.4rem;background-color: #f7f7f8;}
+
+.list_office .office_info .office_favorite{float: right;}
+.list_office .list_data{border-color: #c6cbd0;border-bottom: 0;}
+
+/* 예외 구분선 */
+.office_wrap .list_office + .list_office{border-top: 0 none !important;margin-top: 3.2rem;}
+.office_wrap .list_office + .list_office::before{content: "";display:block;height: .8rem;background-color: var(--bdc_01, #ebeef0);margin-bottom:3.2rem;margin-left: -2.4rem;width: 37.5rem;}
+
+/* 대형 리스트 데이터 */
+.list_data.large_text{border-color: #8c949e;}
+.list_data.large_text li{padding: 1.6rem 0;}
+.list_data.large_text li .key{font-size:1.6rem;font-weight: 700;color:#26282c;}
+.list_data.large_text li .value{padding-left: 5rem;}
+.list_data.large_text li .value .number{font-size: 1.7rem;font-weight: 500;}
+.list_data.large_text li .value .num_unit{font-size: 1.6rem;}
+
+.list_data.gap_list{margin-top: 2rem;}
+.list_data.gap_list > li{padding: 0;}
+.list_data.gap_list > li .key{padding-left: 1.4rem;line-height: 1.6;}
+.list_data.gap_list > li .value{padding: 1.6rem 0 1.6rem 1.7rem;}
+.list_data.gap_list > li .value .value_row + .value_row{margin-top: 1.6rem;}
+
+.list_data.color_data > li .key{background: #f7f7f8;border-right: 1px solid #ebeef0;}
+
+.counsel_top{background: url(/msbiz/app/img/customer/counsel_top_banner.jpg) no-repeat center bottom / 32.7rem auto;height: 18rem;}
+
+.plhd_bk input::-webkit-input-placeholder, .plhd_bk input::placeholder{color: var(--fc_02, #26282c);-webkit-text-fill-color: var(--fc_02, #26282c);}
+
+.cate_customer .map_wrap{margin-top: 1.6rem;}
+.chart_wrap{font-size: .9rem;} /* 차트 텍스트 사이즈 20221119 */
+.news_cont{text-align: center;margin-top: 3.2rem;}

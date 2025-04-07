@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>입금계좌선택 팝업 - 급여이체</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<!-- wrap -->
+<div id="wrap">
+	<div id="content">
+		<div class="btn_cnt_wrap">
+			<span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE003461')">입금계좌 선택 - 급여명부</button></span>
+		</div>
+	</div>
+</div>
+<!-- //wrap -->
+
+<!-- layer html : 입금계좌 선택 -->
+<div id="BFE003461" class="popup bottom" role="dialog" aria-hidden="true">
+	<article class="pop_wrap">
+		<div class="pop_head">
+			<div>
+				<h1>입금계좌 선택</h1>
+			</div>
+		</div>
+		<div class="pop_body">
+			<div class="pop_section tr_deposit"><!-- 220923 수정 : class 'tr_deposit' 추가 -->
+				<div class="tab_wrap tr_salary_acc">
+					<div class="tab_list" role="tablist" aria-label="텝메뉴 가로형">
+						<div class="scroll_wrap">
+							<button role="tab" aria-selected="true" aria-controls="tabpanel_1">급여명부</button>
+							<button role="tab" aria-selected="false" aria-controls="tabpanel_2">최근</button>
+							<button role="tab" aria-selected="false" aria-controls="tabpanel_3">자주쓰는</button>
+							<button role="tab" aria-selected="false" aria-controls="tabpanel_4">간편급여장부</button>
+						</div>
+					</div>
+					<div class="tab_panel" role="tabpanel" id="tabpanel_1">
+						<div class="section inner"><!-- 220923 수정 : class 'inner' 추가 -->
+							<h2 class="hidden">급여명부</h2>
+							<div class="tr_salary_list">
+								<p class="p_sub line">급여 명부는 최대 20개의 그룹을 생성하여 그룹당 최대<br> 50명까지 등록하여 편리하게 이체할수 있는 서비스입니다.</p>
+								<!-- No Data -->
+								<div class="result nodata sm"><!-- 220729 리웍 : 위치이동 -->
+									<p class="tit">조회하신 내역이 없습니다.</p>
+								</div>
+								<!-- //No Data -->
+
+								<!-- 220729 리웍 -->
+								<ul class="list_comp label_reverse">
+									<li>
+										<div class="selection">
+											<input type="radio" id="radioV1" name="radio_v">
+											<label for="radioV1" class="label">
+												<span class="row">
+													<strong class="tit">정기급여</strong>
+													<span class="col col_r middle"><span class="number">20</span>건</span>
+												</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="selection">
+											<input type="radio" id="radioV2" name="radio_v">
+											<label for="radioV2" class="label">
+												<span class="row">
+													<strong class="tit">파트타임급여</strong>
+													<span class="col col_r middle"><span class="number">20</span>건</span>
+												</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="selection">
+											<input type="radio" id="radioV3" name="radio_v">
+											<label for="radioV3" class="label">
+												<span class="row">
+													<strong class="tit">정기상여금</strong>
+													<span class="col col_r middle"><span class="number">20</span>건</span>
+												</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="selection">
+											<input type="radio" id="radioV4" name="radio_v">
+											<label for="radioV4" class="label">
+												<span class="row">
+													<strong class="tit">퇴직금</strong>
+													<span class="col col_r middle"><span class="number">8</span>건</span>
+												</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="selection">
+											<input type="radio" id="radioV5" name="radio_v">
+											<label for="radioV5" class="label">
+												<span class="row">
+													<strong class="tit">연말정산금</strong>
+													<span class="col col_r middle"><span class="number">15</span>건</span>
+												</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+								<!-- //220729 리웍 -->
+							</div>
+						</div>
+					</div>
+					<div class="tab_panel" role="tabpanel" id="tabpanel_2">
+						<div class="section inner"><!-- 220923 수정 : class 'inner' 추가 -->
+							<h2 class="hidden">최근 이체계좌</h2>
+							<div class="tr_recent_list">
+								<p class="p_sub">총 이체내역이 50건 이상은 인터넷뱅킹 > 급여이체 메뉴를 이용해주세요.</p>
+								<div class="form_group">
+									<div class="form_tit">거래구분</div>
+									<div class="form_row">
+										<div class="rdoChk_box">
+											<span class="selection">
+												<input type="radio" id="radioBox1" name="radio_box1" checked>
+												<label for="radioBox1" class="label"><em>인터넷처리</em></label>
+											</span>
+											<span class="selection">
+												<input type="radio" id="radioBox2" name="radio_box1">
+												<label for="radioBox2" class="label"><em>탑라인</em></label>
+											</span>
+											<span class="selection">
+												<input type="radio" id="radioBox3" name="radio_box1">
+												<label for="radioBox3" class="label"><em>선일자</em></label>
+											</span>
+										</div>
+									</div>
+								</div>
+								<!-- 221024 수정 : '조회' 버튼 삭제 -->
+							</div>
+						</div>
+						<!-- 221024 수정 : 구분선 삭제 -->
+						<div class="section inner" id="inquiryResult"><!-- 220923 수정 : class 'inner' 추가 -->
+							<div class="tr_recent_list">
+								<!-- No Data -->
+								<div class="result nodata sm">
+									<p class="tit">조회하신 내역이 없습니다.</p>
+								</div>
+								<!-- //No Data -->
+
+								<!-- Data -->
+								<div class="list_top_wrap">
+									<p class="depth info">급여이체를 원하시는 거래내역을 선택해주세요.</p>
+								</div>
+
+								<ul class="list_comp label_reverse">
+									<li>
+										<div class="selection">
+											<input type="radio" id="radio01" name="radio0" disabled>
+											<label for="radio01" class="label">
+												<div class="row">
+													<span class="col top"><em class="number">2022.04.10</em></span>
+													<div class="col append right">
+														<span class="txt">정상 <span class="number">51</span>건</span>
+														<p class="amount"><strong class="number fc_point">400,000,000</strong><span class="num_unit">원</span></p>
+													</div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="selection">
+											<input type="radio" id="radio02" name="radio0">
+											<label for="radio02" class="label">
+												<div class="row">
+													<span class="col top"><em class="number">2022.04.10</em></span>
+													<div class="col append right">
+														<span class="txt fc_posi">정상 <span class="number">20</span>건</span>
+														<p class="amount"><strong class="number fc_point">1,400,000,000</strong><span class="num_unit">원</span></p>
+													</div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="selection">
+											<input type="radio" id="radio03" name="radio0">
+											<label for="radio03" class="label">
+												<div class="row">
+													<span class="col top"><em class="number">2022.04.10</em></span>
+													<div class="col append right">
+														<span class="txt">정상 <span class="number">5</span>건</span>
+														<p class="amount"><strong class="number fc_point">350,000,000</strong><span class="num_unit">원</span></p>
+													</div>
+												</div>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="selection">
+											<input type="radio" id="radio04" name="radio0" disabled>
+											<label for="radio04" class="label">
+												<div class="row">
+													<span class="col top"><em class="number">2022.04.10</em></span>
+													<div class="col append right">
+														<span class="txt">정상 <span class="number">100</span>건</span>
+														<p class="amount"><strong class="number fc_point">50,000,000</strong><span class="num_unit">원</span></p>
+													</div>
+												</div>
+											</label>
+										</div>
+									</li>
+								</ul>
+
+								<div class="btn_list_btm more">
+									<button type="button" class="btn">더보기<span></span></button>
+								</div>
+								<!-- //Data -->
+							</div>
+						</div>
+					</div>
+					<div class="tab_panel" role="tabpanel" id="tabpanel_3">
+						<!-- 상세검색 --><!-- 220923 수정 : 위치 이동 -->
+						<div class="toggle_detail_search">
+							<ul class="acc_group_wrap js_accordion">
+								<li>
+									<a href="#none" role="button" class="tit" aria-expanded="false">상세검색    </a>
+									<div class="toggle_panel" role="region">
+										<div class="form_group">
+											<div class="form_tit">그룹선택</div>
+											<div class="form_row">
+												<div class="select">
+													<button type="button" class="select_btn" title="자주쓰는계좌 그룹선택">전체</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+												</div>
+											</div>
+										</div>
+										<div class="form_group">
+											<div class="form_tit">조회조건</div>
+											<div class="form_row">
+												<div class="select">
+													<button type="button" class="select_btn" title="상세검색 조회조건">전체</button>
+												</div>
+											</div>
+											<div class="form_row">
+												<div class="select">
+													<button type="button" class="select_btn" title="상세검색 조회조건">선택</button>
+												</div>
+											</div>
+											<div class="form_row">
+												<div class="input">            
+													<input type="text" title="선택된 조회조건" value="선택 결과값" class="bg_white" readonly>
+												</div>
+											</div>
+										</div>
+										<div class="btn_cnt_wrap">
+											<span><button type="button" class="btn primary lg">조회</button></span>
+										</div>
+										<hr class="hr_divide full"><!-- 220729 class="full" 추가 -->
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //상세검색 --><!-- //220923 수정 : 위치 이동 -->
+						<div class="section inner mgt_0"><!-- 220923 수정 : class 'inner', 'mgt_0' 추가 -->
+							<h2 class="hidden">자주쓰는 이체계좌</h2>
+							<div class="tr_favorite_list">
+								<!-- No Data -->
+								<div class="result nodata sm">
+									<p class="tit">조회하신 내역이 없습니다.</p>
+								</div>
+                                <!-- //No Data -->
+
+								<ul class="list_comp check has_tit label_reverse"><!-- 220729 class="label_reverse" 추가 -->
+									<li>
+										<div class="inr">
+											<span class="selection">
+												<input type="checkbox" id="chk1_1" name="chk0" checked>
+												<label for="chk1_1" class="label">
+													<span class="acc_check">
+														<span class="acc_name">
+															<span>일이삼사오육칠팔구십</span>
+															<span class="sep_txt">일이삼사오육칠팔구십일이삼사오</span>
+														</span>
+														<span class="acc_num">
+															<span class="bank_name">국민</span>
+															<span class="bank_num number">371102-04-1400999</span>
+														</span>
+													</span>
+												</label>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="inr">
+											<span class="selection">
+												<input type="checkbox" id="chk1_2" name="chk0">
+												<label for="chk1_2" class="label">
+													<span class="acc_check">
+														<span class="acc_name">
+															<span>급여이체</span>
+															<span class="sep_txt">계좌별명</span>
+														</span>
+														<span class="acc_num">
+															<span class="bank_name">한국시티</span>
+															<span class="bank_num number">1254422555458</span>
+														</span>
+													</span>
+												</label>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="inr">
+											<span class="selection">
+												<input type="checkbox" id="chk1_3" name="chk0">
+												<label for="chk1_3" class="label">
+													<span class="acc_check">
+														<span class="acc_name">
+															<span>급여이체</span>
+															<span class="sep_txt">계좌별명</span>
+														</span>
+														<span class="acc_num">
+															<span class="bank_name">한국시티</span>
+															<span class="bank_num number">1254422555458</span>
+														</span>
+													</span>
+												</label>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="inr">
+											<span class="selection">
+												<input type="checkbox" id="chk1_4" name="chk0">
+												<label for="chk1_4" class="label">
+													<span class="acc_check">
+														<span class="acc_name">
+															<span>급여이체</span>
+															<span class="sep_txt">계좌별명</span>
+														</span>
+														<span class="acc_num">
+															<span class="bank_name">한국시티</span>
+															<span class="bank_num number">1254422555458</span>
+														</span>
+													</span>
+												</label>
+											</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab_panel" role="tabpanel" id="tabpanel_4">
+						<div class="section inner"><!-- 220923 수정 : class 'inner' 추가 -->
+							<h2 class="hidden">간편급여장부</h2>
+							<div class="tr_simple_wrap">
+								<!-- 간편급여장부 목록 -->
+								<div class="tr_simple_list">
+									<ul class="depth info gap_0 line"><!-- 220729 class="line", "gap_0" 추가 -->
+										<li>간편급여장부는 ‘간편 세무장부/HR’에서 산출된<br> 급여명세를 전송받는 서비스입니다.</li>
+										<li>명부의 금액을 수정하여 이체하는 경우 ‘간편<br> 세무장부/HR’에서 급여명세를 수정하시기 바랍니다.</li>
+									</ul>
+
+									<!-- 이지샵 서비스 미가입 고객 노출 --><!-- 220729 리웍 : 위치이동 -->
+									<div class="result nodata sm">
+										<p class="tit">간편급여장부는 ‘간편 세무장부/HR’ 서비스에 가입한 고객님만 사용할 수 있는 서비스입니다.</p>
+										<div class="list_btm_wrap">
+											<button type="button" class="btn outline sm">서비스 가입 바로가기</button>
+										</div>
+									</div>
+									<!-- //이지샵 서비스 미가입 고객 노출 --><!-- //220729 리웍 : 위치이동 -->
+
+									<!-- No Data -->
+									<div class="result nodata sm">
+										<p class="tit">조회하신 내역이 없습니다.</p>
+									</div>
+									<!-- //No Data -->
+									
+									<ul class="list_comp label_reverse"><!-- 220729 class="label_reverse" 추가 -->
+										<li>
+											<div class="inr grid">
+												<div class="col">
+													<span class="selection">
+														<input type="radio" id="radioV1-1" name="radio_v1">
+														<label for="radioV1-1" class="label"><strong>정기급여</strong></label>
+													</span>
+												</div>
+												<div class="col append top"><a href="#" class="btn_txt ico_arr"><span class="number">20</span>건</a></div><!-- 220729 리웍 : number 추가 -->
+											</div>
+										</li>
+										<li>
+											<div class="inr grid">
+												<div class="col">
+													<span class="selection">
+														<input type="radio" id="radioV1-2" name="radio_v1">
+														<label for="radioV1-2" class="label"><strong>파트타임급여</strong></label>
+													</span>
+												</div>
+												<div class="col append top"><a href="#" class="btn_txt ico_arr"><span class="number">20</span>건</a></div><!-- 220729 리웍 : number 추가 -->
+											</div>
+										</li>
+										<li>
+											<div class="inr grid">
+												<div class="col">
+													<span class="selection">
+														<input type="radio" id="radioV1-3" name="radio_v1">
+														<label for="radioV1-3" class="label"><strong>정기상여금</strong></label>
+													</span>
+												</div>
+												<div class="col append top"><a href="#" class="btn_txt ico_arr"><span class="number">20</span>건</a></div><!-- 220729 리웍 : number 추가 -->
+											</div>
+										</li>
+										<li>
+											<div class="inr grid">
+												<div class="col">
+													<span class="selection">
+														<input type="radio" id="radioV1-4" name="radio_v1">
+														<label for="radioV1-4" class="label"><strong>퇴직금</strong></label>
+													</span>
+												</div>
+												<div class="col append top"><a href="#" class="btn_txt ico_arr"><span class="number">8</span>건</a></div><!-- 220729 리웍 : number 추가 -->
+											</div>
+										</li>
+										<li>
+											<div class="inr grid">
+												<div class="col">
+													<span class="selection">
+														<input type="radio" id="radioV1-5" name="radio_v1">
+														<label for="radioV1-5" class="label"><strong>연말정산금</strong></label>
+													</span>
+												</div>
+												<div class="col append top"><a href="#" class="btn_txt ico_arr"><span class="number">15</span>건</a></div><!-- 220729 리웍 : number 추가 -->
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //간편급여장부 목록 -->
+								
+								<!-- 간편급여장부 상세 -->
+								<div class="tr_simple_detail" style="display:none"><!-- 필요 시 block 처리(show) -->
+									<div class="h4">
+										<ul class="list_data noline">
+											<li>
+												<div class="key">명부명</div>
+												<div class="value">정기급여</div>
+											</li>
+											<li>
+												<div class="key">직원수</div>
+												<div class="value"><span class="number">20</span> 명</div>
+											</li>
+										</ul>
+									</div>
+
+									<ul class="list_comp">
+										<li>
+											<div class="acc_wrap">
+												<div class="bk_user">홍길동</div>
+												<div class="acc_num">
+													<span class="bk_name">KB국민</span>
+													<span class="number">371102-04-140099</span>
+												</div>
+												<div class="acc_sum_wrap">
+													<div class="acc_pay"><span class="unit hidden">잔액</span>
+														<strong class="number">400,000,000</strong><span class="num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="acc_wrap">
+												<div class="bk_user">홍길동</div>
+												<div class="acc_num">
+													<span class="bk_name">KB국민</span>
+													<span class="number">371102-04-140099</span>
+												</div>
+												<div class="acc_sum_wrap">
+													<div class="acc_pay"><span class="unit hidden">잔액</span>
+														<strong class="number">400,000,000</strong><span class="num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="acc_wrap">
+												<div class="bk_user">홍길동</div>
+												<div class="acc_num">
+													<span class="bk_name">KB국민</span>
+													<span class="number">371102-04-140099</span>
+												</div>
+												<div class="acc_sum_wrap">
+													<div class="acc_pay"><span class="unit hidden">잔액</span>
+														<strong class="number">400,000,000</strong><span class="num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="acc_wrap">
+												<div class="bk_user">홍길동</div>
+												<div class="acc_num">
+													<span class="bk_name">KB국민</span>
+													<span class="number">371102-04-140099</span>
+												</div>
+												<div class="acc_sum_wrap">
+													<div class="acc_pay"><span class="unit hidden">잔액</span>
+														<strong class="number">400,000,000</strong><span class="num_unit">원</span>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //간편급여장부 상세 -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pop_foot">
+			<div>
+				<div class="btn_area">
+					<span><button type="button" class="btn primary lg">확인</button></span><!-- 220729 리웍 -->
+				</div>
+			</div>
+		</div>
+		<button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+	</article>
+</div>
+<!-- //layer html : 입금계좌 선택 -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	$(function(){
+		UICommon.Layer.open('#BFE003461')
+	});
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

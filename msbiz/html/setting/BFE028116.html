@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[법정대리인 휴대폰 인증]휴대폰 인증</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="환경설정" href="/msbiz/app/css/setting.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">법정대리인 휴대폰 인증</h1>
+            <div class="section">
+                <h2 class="h2">약관 및 동의</h2>
+                <div class="agree_wrap">
+                    <div class="agree_total">
+                        <span class="selection">
+                            <input type="checkbox" id="chkAll_1" name="chkAll_1" class="chk_all">
+                            <label for="chkAll_1" class="label"><em>약관 전체동의</em></label>
+                        </span>
+                        <button type="button" class="btn btn_link" title="약관 전체동의"><span class="hidden">바로가기</span></button>
+                    </div>
+                    <ul class="agree_list">
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chk1_1" name="chk1">
+                                <label for="chk1_1" class="label"><em>[필수] 휴대폰본인확인서비스 이용약관</em></label>
+                            </span>
+                            <button type="button" class="btn btn_link" title="[필수] 휴대폰본인확인서비스 이용약관"><span class="hidden">바로가기</span></button>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chk1_2" name="chk1">
+                                <label for="chk1_2" class="label"><em>[필수] 통신사 이용약관 동의</em></label>
+                            </span>
+                            <button type="button" class="btn btn_link" title="[필수] 통신사 이용약관 동의"><span class="hidden">바로가기</span></button>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chk1_3" name="chk1">
+                                <label for="chk1_3" class="label"><em>[필수] 고유실별정보 처리 동의</em></label>
+                            </span>
+                            <button type="button" class="btn btn_link" title="[필수] 고유실별정보 처리 동의"><span class="hidden">바로가기</span></button>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chk1_4" name="chk1">
+                                <label for="chk1_4" class="label"><em>[필수] 개인정보의 수집 및 이용동의</em></label>
+                            </span>
+                            <button type="button" class="btn btn_link" title="[필수] 개인정보의 수집 및 이용동의"><span class="hidden">바로가기</span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="h2">고객정보</h2>
+                <div class="form_group">
+                    <div class="form_tit">보호자 이름</div>
+                    <div class="form_row">
+                        <div class="input"><input type="text" title="보호자 이름" placeholder="보호자 이름"></div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">주민등록번호</div>
+                    <div class="form_row col jumin">
+                        <div class="input">
+                            <input type="tel" maxlength="6" title="주민등록번호 앞자리" placeholder="생년월일">
+                        </div>
+                        <span class="space">-</span>
+                        <div class="input masking">
+                            <input type="tel" maxlength="1" title="주민등록 뒷번호 첫번째자리 입력" placeholder="1" disabled>
+                            <i class="dot" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="h2">휴대폰 본인확인</h2>
+                <div class="form_group">
+                    <div class="form_tit">통신사 선택</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            <button type="button" class="select_btn" title="통신사 선택">선택</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group tel">
+                    <div class="form_tit">휴대폰번호</div>
+                    <div class="form_row col">
+                        <div class="select">
+                            <!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            <button type="button" class="select_btn" title="휴대폰번호 앞자리">010</button>
+                        </div>
+                        <div class="input">
+                            <input type="tel" maxlength="8" title="휴대폰번호" placeholder="숫자만 입력">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <!-- Case: 인증요청 전 -->
+                <ul class="depth bul">
+                    <li>입력하신 휴대폰번호로 SMS 인증번호를 전송합니다.</li>
+                    <li>[인증번호 요청]을 눌러 SMS 인증번호를 입력해주세요.</li>
+                </ul>
+                <div class="form_btm_full_wrap">
+                    <span><button type="button" class="btn outline md">인증번호 요청</button></span>
+                </div>
+                <!-- //Case: 인증요청 전 -->
+                <!-- Case: 인증요청 후 -->
+                <!-- class에 success 또는 error 추가 -->
+                <div class="form_btm_full_wrap">
+                    <span><button type="button" class="btn outline md">인증번호 재발송</button></span>
+                </div>
+                <div class="form_group js_trans error">
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 인증번호, 인증번호 입력" onclick="">
+                            <input type="tel" aria-hidden="true" maxlength="6" placeholder="인증번호 6자리" id="cerNum" title="인증번호" readonly class="bg_white">
+                        </div>
+                    </div>
+                    <div class="form_time_set row">
+                        <div class="col col_l">
+                            <p role="text" class="count_time"><span class="tit">잔여시간</span><span class="number">2:59</span></p>
+                        </div>
+                        <div class="col col_r">
+                            <button type="button" class="btn outline xs">인증시간연장</button>
+                        </div>
+                    </div>
+                    <p class="tip" aria-labelledby="cerNum">인증번호를 다시 확인해주세요.</p><!-- error -->
+                    <p class="tip" aria-labelledby="cerNum">인증이 완료되었습니다.</p><!-- success -->
+                    <div class="btn_wrap certify_btm">
+                        <a href="#none" id="btn_certify_number" class="btn_txt ico_arr">인증번호가 오지않나요?</a>
+                    </div>
+                </div>
+                <!-- //Case: 인증요청 후 -->
+            </div>
+
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <!-- 인증번호 입력 후 button 활성화 : disabled 속성 삭제 -->
+                    <span><button type="button" class="btn primary lg" onclick="" disabled>본인확인</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <!--// 업무 HTML 선언 END -->
+
+    <!-- 업무 SCRIPT START -->
+    <script>
+    </script>
+    <!--// 업무 SCRIPT END -->
+</body>
+
+</html>

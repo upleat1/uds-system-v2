@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>상담신청 취소사유</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+		<h1 class="hidden">상담신청 취소사유</h1>
+
+		<div class="section">
+			<div class="tit_question">
+				<h2 class="h2">상담신청을 취소하시겠습니까?</h2>
+				<p class="p_15">지금까지 입력하신 정보는 모두 삭제됩니다.</p>
+			</div>
+			
+			<p class="caption">신청취소에 대한 사유항목을 선택해 주세요.</p>
+			<div class="rdoChk_group gap_xs">
+				<span class="selection">
+					<input type="radio" id="radioVtoggle1" name="radioVtoggle">
+					<label for="radioVtoggle1" class="label"><em>다른 은행 대출을 받기 위해서</em></label>
+				</span>
+				<span class="selection">
+					<input type="radio" id="radioVtoggle2" name="radioVtoggle">
+					<label for="radioVtoggle2" class="label"><em>원하는 대출 금리보다 높아서</em></label>
+				</span>
+				<span class="selection">
+					<input type="radio" id="radioVtoggle3" name="radioVtoggle">
+					<label for="radioVtoggle3" class="label"><em>대출 의사가 결정되지 않아서</em></label>
+				</span>
+				<span class="selection">
+					<input type="radio" id="radioVtoggle4" name="radioVtoggle" aria-expanded="false" aria-controls="radioVtogglepanel4" >
+					<label for="radioVtoggle4" class="label"><em>기타</em></label>
+				</span>
+				<div class="rdo_panel" role="region" id="radioVtogglepanel4">
+					<div class="form_group error">
+                        <div class="form_row">
+                            <div class="textarea">
+                                <textarea title="기타사유 입력" id="id01" placeholder="기타사유를 입력해 주세요. "></textarea>        
+                                <p class="num_info"><span><em class="curr">3</em> / 200</span>(한글 200자)</p>            
+                            </div>
+                        </div>
+                        <p class="tip" aria-labelledby="id01">에러문구입니다.</p>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg" disabled>확인</button></span>
+			</div>
+		</div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

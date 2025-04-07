@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[My메뉴 설정]My메뉴 추가/삭제</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script>
+        <script src="/msbiz/app/js/library/sortable.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/inquiry.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!-- 업무 관련 HTML 선언 START -->
+<!-- My메뉴 추가/삭제 팝업 : 시작 -->
+<div id="myMenuSetting" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop_wrap">
+        <div class="pop_head">
+            <div>
+                <h1>My메뉴 추가/삭제</h1>
+            </div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_section">
+                <div class="section_f">
+                    <div class="search_wrap">
+                        <div class="input">
+                            <input type="text" class="inp" title="메뉴 검색" placeholder="메뉴를 검색해보세요.">
+                            <button type="submit" class="btn_sch"><span class="hidden">검색</span></button>
+                            <!-- 닫기버튼 <button type="submit" class="btn_close">닫기</button> -->
+                        </div>
+                    </div>
+    
+                    <!-- 메뉴검색 결과 -->
+                    <div class="search_result show" aria-hidden="true"> <!-- [개발] 메뉴 검색 결과 화면이 노출되면 .show 클래스 추가/aria-hidden="false" 닫히면 .hide 클래스 추가/aria-hidden="true" -->
+                        <!-- case : 메뉴검색된 결과가 있을 경우 -->
+                        <div class="result_wrap">
+                            <div class="scroll">
+                                <ul class="rs_list">
+                                    <li>
+                                        <p><span class="fc_posi">펀드</span></p>
+                                        <div class="toggle_right">
+                                            <button type="button" class="ico_24_star_s toggle" aria-pressed="false" title="$메뉴명$"><span class="hidden">마이메뉴 설정</span></button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><span class="fc_posi">펀드</span> &gt; 조회 &gt; <span class="fc_posi">펀드</span>계좌조회</p>
+                                        <div class="toggle_right">
+                                            <button type="button" class="ico_24_star_s toggle" aria-pressed="false" title="펀드 > 조회 > 펀드 > 계좌조회"><span class="hidden">마이메뉴 설정</span></button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><span class="fc_posi">펀드</span> &gt; 조회 &gt; 거래내역조회</p>
+                                        <div class="toggle_right">
+                                            <button type="button" class="ico_24_star_s toggle" aria-pressed="false" title="$메뉴명$"><span class="hidden">마이메뉴 설정</span></button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>상품관리 &gt; 펀드 &gt; <span class="fc_posi">펀드</span> 입금</p>
+                                        <div class="toggle_right">
+                                            <button type="button" class="ico_24_star_s toggle" aria-pressed="false" title="$메뉴명$"><span class="hidden">마이메뉴 설정</span></button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>상품관리 &gt; 펀드 &gt; <span class="fc_posi">펀드</span> 입금&gt; 연금<span class="fc_posi">펀드</span>입금</p>
+                                        <div class="toggle_right">
+                                            <button type="button" class="ico_24_star_s toggle" aria-pressed="false" title="$메뉴명$"><span class="hidden">마이메뉴 설정</span></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //case : 메뉴검색된 결과가 있을 경우 -->
+        
+                        <!-- case : 메뉴검색 결과가 없을 경우 -->
+                        <div class="noresult_wrap bdt_0">
+                            <div class="result nodata sm">
+                                <p class="tit">메뉴 검색 결과가 없습니다.</p>
+                            </div>
+                        </div>
+                        <!-- //case : 메뉴검색 결과가 없을 경우 -->
+                        <!-- //[전담반 Biz-104] 마이메뉴설정 기능개선 : 닫기 버튼 위치변경  -->
+                    </div>
+                    <!-- //메뉴검색 결과 -->
+                </div>
+        
+    
+                <div class="section_f mymn_tree show" aria-hidden="false"> <!-- [개발] 메뉴 검색 결과 화면이 노출되면 .hide 클래스 추가/aria-hidden="true" 닫히면 .show 클래스 추가/aria-hidden="false" : 2022-05-02 hide 클래스 추가시 -->
+           
+                    <!-- 1depth -->
+                    <ul class="mymn_set_acco js_accordion tree">
+                        <li class="dep1">
+                            <a href="#none" role="button" class="tit" aria-expanded="false">뱅킹
+                                <span class="hidden">등록된 마이메뉴 수</span><span class="cate_num">(3)</span><span class="hidden">개</span>
+                            </a>
+                            <div class="toggle_panel" role="region">
+                                <!-- 2depth -->
+                                <ul class="list_acco js_accordion">
+                                    <li class="dep2">
+                                        <span class="selection">
+                                            <input type="checkbox" id="checkbox_1_1" name="checkbox_sel">
+                                            <label for="checkbox_1_1" class="label"><em>2depth</em></label>
+                                        </span>
+                                    </li>
+                                    <li class="dep2">
+                                        <a href="#none" role="button" class="tit" aria-expanded="false">2depth</a>
+                                        <div class="toggle_panel" role="region">
+                                            <!-- 3depth -->
+                                            <ul class="list_acco js_accordion">
+                                                <li class="dep3">
+                                                    <span class="selection">
+                                                        <input type="checkbox" id="checkbox_1_2" name="checkbox_sel">
+                                                        <label for="checkbox_1_2" class="label"><em>3depth</em></label>
+                                                    </span>
+                                                </li>
+                                                <li class="dep3 on">
+                                                    <a href="#none" role="button" class="tit" aria-expanded="false">3depth</a>
+                                                    <div class="toggle_panel" role="region">
+                                                        <!-- 4depth -->
+                                                        <ul class="list_acco js_accordion">
+                                                            <li class="dep4">
+                                                                <span class="selection">
+                                                                    <input type="checkbox" id="checkbox_1_2" name="checkbox_sel">
+                                                                    <label for="checkbox_1_2" class="label"><em>4depth</em></label>
+                                                                </span>
+                                                            </li>
+                                                            <li class="dep4">
+                                                                <a href="#none" role="button" class="tit" aria-expanded="false">4depth</a>
+                                                                <div class="toggle_panel" role="region">
+                                                                    <!-- 5depth -->
+                                                                    <ul class="list_mymn">
+                                                                        <li class="dep5">
+                                                                            <span class="selection">
+                                                                                <input type="checkbox" id="checkbox_1_5" name="checkbox_sel">
+                                                                                <label for="checkbox_1_5" class="label"><em>5depth</em></label>
+                                                                            </span>
+                                                                        </li>
+                                                                        <li class="dep5">
+                                                                            <span class="selection">
+                                                                                <input type="checkbox" id="checkbox_1_6" name="checkbox_sel">
+                                                                                <label for="checkbox_1_6" class="label"><em>5depth</em></label>
+                                                                            </span>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <!-- //5depth -->
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- //4depth -->
+                                                    </div>
+                                                </li>
+                                                <li class="dep3">
+                                                    <a href="#none" role="button" class="tit" aria-expanded="false">3depth</a>
+                                                    <div class="toggle_panel" role="region">
+                                                        <!-- 4depth -->
+                                                        <ul class="list_acco js_accordion">
+                                                            <li class="dep4">
+                                                                <span class="selection">
+                                                                    <input type="checkbox" id="checkbox_1_2" name="checkbox_sel">
+                                                                    <label for="checkbox_1_2" class="label"><em>4depth</em></label>
+                                                                </span>
+                                                            </li>
+                                                            <li class="dep4">
+                                                                <a href="#none" role="button" class="tit" aria-expanded="false">4depth</a>
+                                                                <div class="toggle_panel" role="region">
+                                                                    <!-- 5depth -->
+                                                                    <ul class="list_mymn">
+                                                                        <li class="dep5">
+                                                                            <span class="selection">
+                                                                                <input type="checkbox" id="checkbox_1_5" name="checkbox_sel">
+                                                                                <label for="checkbox_1_5" class="label"><em>5depth</em></label>
+                                                                            </span>
+                                                                        </li>
+                                                                        <li class="dep5">
+                                                                            <span class="selection">
+                                                                                <input type="checkbox" id="checkbox_1_6" name="checkbox_sel">
+                                                                                <label for="checkbox_1_6" class="label"><em>5depth</em></label>
+                                                                            </span>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <!-- //5depth -->
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- //4depth -->
+                                                    </div>
+                                                </li>
+                                            </ul> <!-- //3depth -->
+                                        </div>
+                                    </li>
+                                </ul> <!-- //2depth -->
+                            </div>
+                        </li>
+                        <li class="dep1">
+                            <a href="#none" role="button" class="tit" aria-expanded="false">환경설정
+                                <span class="hidden">등록된 마이메뉴 수</span><span class="cate_num">(3)</span><span class="hidden">개</span>
+                            </a>
+                            <div class="toggle_panel" role="region">
+                                <!-- 2depth -->
+                                <ul class="list_acco js_accordion">
+                                    <li class="dep2">
+                                        <span class="selection">
+                                            <input type="checkbox" id="checkbox_2_1" name="checkbox_sel">
+                                            <label for="checkbox_2_1" class="label"><em>2depth</em></label>
+                                        </span>
+                                    </li>
+                                    <li class="dep2">
+                                        <a href="#none" role="button" class="tit" aria-expanded="false">2depth</a>
+                                        <div class="toggle_panel" role="region">
+                                            <!-- 3depth -->
+                                            <ul class="list_acco js_accordion">
+                                                <li class="dep3">
+                                                    <span class="selection">
+                                                        <input type="checkbox" id="checkbox_2_2" name="checkbox_sel">
+                                                        <label for="checkbox_2_2" class="label"><em>3depth</em></label>
+                                                    </span>
+                                                </li>
+                                                <li class="dep3">
+                                                    <a href="#none" role="button" class="tit" aria-expanded="false">3depth</a>
+                                                    <div class="toggle_panel" role="region">
+                                                        <!-- 4depth -->
+                                                        <ul class="list_acco js_accordion">
+                                                            <li class="dep4">
+                                                                <span class="selection">
+                                                                    <input type="checkbox" id="checkbox_2_3" name="checkbox_sel">
+                                                                    <label for="checkbox_2_3" class="label"><em>4depth</em></label>
+                                                                </span>
+                                                            </li>
+                                                            <li class="dep4">
+                                                                <a href="#none" role="button" class="tit" aria-expanded="false">4depth</a>
+                                                                <div class="toggle_panel" role="region">
+                                                                    <!-- 5depth -->
+                                                                    <ul class="list_mymn">
+                                                                        <li class="dep5">
+                                                                            <span class="selection">
+                                                                                <input type="checkbox" id="checkbox_2_4" name="checkbox_sel">
+                                                                                <label for="checkbox_2_4" class="label"><em>5depth</em></label>
+                                                                            </span>
+                                                                        </li>
+                                                                        <li class="dep5">
+                                                                            <span class="selection">
+                                                                                <input type="checkbox" id="checkbox_2_5" name="checkbox_sel">
+                                                                                <label for="checkbox_2_5" class="label"><em>5depth</em></label>
+                                                                            </span>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <!-- //5depth -->
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- //4depth -->
+                                                    </div>
+                                                </li>
+                                            </ul> <!-- //3depth -->
+                                        </div>
+                                    </li>
+                                    <li class="dep2">
+                                        <span class="selection">
+                                            <input type="checkbox" id="checkbox_2_6" name="checkbox_sel">
+                                            <label for="checkbox_2_6" class="label"><em>2depth</em></label>
+                                        </span>
+                                    </li>
+                                </ul> <!-- //2depth -->
+                            </div>
+                        </li>
+                        <li class="dep1">
+                            <a href="#none" role="button" class="tit" aria-expanded="false">고객센터
+                                <span class="hidden">등록된 마이메뉴 수</span><span class="cate_num">(3)</span><span class="hidden">개</span>
+                            </a>
+                            <div class="toggle_panel" role="region">
+                                <!-- 2depth -->
+                                <ul class="list_acco js_accordion">
+                                    <li class="dep2">
+                                        <a href="#none" role="button" class="tit" aria-expanded="false">2depth</a>
+                                        <div class="toggle_panel" role="region">
+                                            <!-- 3depth -->
+                                            <ul class="list_acco js_accordion">
+                                                <li class="dep3">
+                                                    <span class="selection">
+                                                        <input type="checkbox" id="checkbox_3_2" name="checkbox_sel">
+                                                        <label for="checkbox_3_2" class="label"><em>3depth</em></label>
+                                                    </span>
+                                                </li>
+                                                <li class="dep3">
+                                                    <a href="#none" role="button" class="tit" aria-expanded="false">3depth</a>
+                                                    <div class="toggle_panel" role="region">
+                                                        <!-- 4depth -->
+                                                        <ul class="list_acco js_accordion">
+                                                            <li class="dep4">
+                                                                <span class="selection">
+                                                                    <input type="checkbox" id="checkbox_3_3" name="checkbox_sel">
+                                                                    <label for="checkbox_3_3" class="label"><em>4depth</em></label>
+                                                                </span>
+                                                            </li>
+                                                            <li class="dep4">
+                                                                <a href="#none" role="button" class="tit" aria-expanded="false">4depth</a>
+                                                                <div class="toggle_panel" role="region">
+                                                                    <!-- 5depth -->
+                                                                    <ul class="list_mymn">
+                                                                        <li class="dep5">
+                                                                            <span class="selection">
+                                                                                <input type="checkbox" id="checkbox_3_4" name="checkbox_sel">
+                                                                                <label for="checkbox_1_5" class="label"><em>5depth</em></label>
+                                                                            </span>
+                                                                        </li>
+                                                                        <li class="dep5">
+                                                                            <span class="selection">
+                                                                                <input type="checkbox" id="checkbox_3_4" name="checkbox_sel">
+                                                                                <label for="checkbox_1_6" class="label"><em>5depth</em></label>
+                                                                            </span>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <!-- //5depth -->
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- //4depth -->
+                                                    </div>
+                                                </li>
+                                            </ul> <!-- //3depth -->
+                                        </div>
+                                    </li>
+                                    <li class="dep2">
+                                        <span class="selection">
+                                            <input type="checkbox" id="checkbox_3_1" name="checkbox_sel">
+                                            <label for="checkbox_3_1" class="label"><em>2depth</em></label>
+                                        </span>
+                                    </li>
+                                </ul> <!-- //2depth -->
+                            </div>
+                        </li>
+                    </ul> <!-- //1depth -->
+                </div>
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">저장</button></span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </article>
+</div>
+<!-- My메뉴 추가/삭제 팝업 : 끝 -->
+<!--// 업무 HTML 선언 END -->
+
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function(){
+        UICommon.Layer.open('#myMenuSetting');
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

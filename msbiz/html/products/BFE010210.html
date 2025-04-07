@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[금융투자상품가입유의사항]구속행위규제유의사항(팝)</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<!-- 220729 리웍 : 예/아니요 라디오 영역 마크업 수정 -->
+<div id="wrap">
+    <div id="content" data-ui="full_pop">
+        <h1 class="hidden">금융투자상품가입 유의사항 및 가입확인</h1>
+        <h2 class="pdt_pop_h2">은행상품 구속행위 규제제도 관련 안내</h2>
+        <div class="inform_top_wrap">
+            <ul class="depth dash">
+                <p class="p">고객님께서 가입목적에 맞게 가입기간, 가입금액 등을 자발적으로 결정하신 경우라하더라도 중소기업(개인사업자 포함) 및 그 대표자이거나 신용등급 7등급 이하 개인인 경우 은행법(제52조의2) 상 구속행위 여부판정에 따라 다음의 거래가 제한될 수 있습니다.</p>
+                <li>수신상품 신규</li>
+                <li>수신상품 신규일 이후 1개월 이내 본인명의 대출 거래</li>
+                <li>중소기업의 대표자이신 경우, 대표자로 재직중이신 중소기업의 대출거래</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <!-- 구속행위 규제 대상 고객인 경우 노출 -->
+            <h2 class="hidden">대출거래 관련 질의 및 가입 확인</h2>
+            <h2 class="h3">다음 질문을 읽으신 후 해당하는 답변을 선택하여 주시기 바랍니다.</h2>
+            <div class="form_group">
+                <div class="form_tit">1개월 이내 국민은행과 <span class="fc_nega">본인(또는 대표자로 계시는 중소기업 포함)의 여신거래 계획</span>이 있으십니까?</div>
+                <div class="form_row">
+                    <ul class="rdoChk_ul2">
+                        <li>
+                            <span class="selection mid" onclick="UICommon.Layer.confirm('1개월 이내 여신거래가 있으신 경우 신규가입이 불가합니다.','알림');">
+                                    <input type="radio" id="mid1" name="mid" checked>
+                                    <label for="mid1" class="label">
+                                        <em>예</em>
+                                    </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection mid">
+                                    <input type="radio" id="mid2" name="mid">
+                                    <label for="mid2" class="label">
+                                        <em>아니요</em>
+                                    </label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">위 유의사항을 확인하였으며, 여신거래와 관련하여 <span class="fc_nega">금융상품 가입을 강요받은 사실 없이 자발적 의사</span>에 의하여 본 상품을 가입하시겠습니까?</div>
+                <div class="form_row">
+                    <ul class="rdoChk_ul2">
+                        <li>
+                            <span class="selection mid">
+                                    <input type="radio" id="mid3" name="mid" checked>
+                                    <label for="mid3" class="label">
+                                        <em>예</em>
+                                    </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection mid" onclick="UICommon.Layer.confirm('자발적 의사에 의하지 않는 경우 신규가입이 불가합니다.','알림');">
+                                    <input type="radio" id="mid4" name="mid">
+                                    <label for="mid4" class="label">
+                                        <em>아니요</em>
+                                    </label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //구속행위 규제 대상 고객인 경우 노출 -->
+        </div>
+
+        <div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">다음</button></span>
+			</div>
+		</div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!-- //220729 리웍 : 예/아니요 라디오 영역 마크업 수정 -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

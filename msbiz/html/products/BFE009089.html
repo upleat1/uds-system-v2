@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>인지세정보 안내</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+		<!-- 220817 step 수정 -->
+		<div class="step_wrap js_step">    
+			<div class="step" role="img" aria-label="총 9단계 중 현재 6단계">
+				<span class="current">6</span><span class="mark">/</span><span class="total">9</span>
+			</div>
+			<h1 class="h1">신청정보 확인</h1>
+		</div>
+		<!-- //220817 step 수정 -->
+
+		<div class="inform_top_wrap">
+			<p class="depth">고객님께서 작성하신 약정신청정보를 확인하는 화면입니다.</p>
+		</div>
+
+        <div class="section">
+			<h2 class="h3">약정신청정보 확인</h2>
+			<ul class="list_data lbt">
+				<li>
+					<div class="key">대출상품명</div>
+					<div class="value">KB셀러론</div>
+				</li>
+				<li>
+					<div class="key">신청금액</div>
+					<div class="value"><span class="number">100,000,000</span><span class="num_unit">원</span></div>
+				</li>
+				<li>
+					<div class="key">약정금리</div>
+					<div class="value"><span class="number">4.5</span><span class="num_unit">%</span></div>
+				</li>
+				<li>
+					<div class="key">약정기간</div>
+					<div class="value"><span class="number">1</span><span class="num_unit">년</span></div>
+				</li>
+				<li>
+					<div class="key">마켓명</div>
+					<div class="value">쿠팡주식회사</div>
+				</li>
+				<li>
+					<div class="key">마켓이용ID</div>
+					<div class="value"><span class="number">A00001234</span></div>
+				</li>
+				<li>
+					<div class="key">인지세금액</div>
+					<div class="value"><span class="number">70,000</span><span class="num_unit">원</span></div>
+				</li>
+				<li>
+					<div class="key">고객부담인지세금액</div>
+					<div class="value"><span class="number">35,000</span><span class="num_unit">원</span></div>
+				</li>
+				<li>
+					<div class="key">인지세납부계좌번호</div>
+					<div class="value"><span class="number">422101-01-123456</span></div>
+				</li>
+				<li>
+					<div class="key">고객이용계좌</div>
+					<div class="value"><span class="number">422101-01-123456</span></div>
+				</li>
+				<!-- 220811 추가 -->
+				<li>
+					<div class="key">선정산방식</div>
+					<div class="value"><span class="number">개별선정산</span></div>
+				</li>
+				<!-- //220811 추가 -->
+				<li><!-- 이베이인 경우만 노출 -->
+					<div class="key">정산금수령계좌</div>
+					<div class="value"><span class="number">422101-01-123456</span></div>
+				</li>
+				<!-- <li>
+					<div class="key">상환청구권적용여부</div>
+					<div class="value">상환청구권있음</div>
+				</li> 220907 삭제 -->
+			</ul>
+		</div>
+
+		<div class="section">
+			<h2 class="h3">대표자 및 신청자 정보</h2>
+			<ul class="list_data lbt">
+				<li>
+					<div class="key">대표자명</div>
+					<div class="value">허해쁨</div>
+				</li>
+				<li>
+					<div class="key">대표자 주민번호</div>
+					<div class="value"><span class="number">741111-*******</span></div>
+				</li>
+				<li>
+					<div class="key">담당자명</div>
+					<div class="value">허해쁨</div>
+				</li>
+				<!-- 220811 삭제
+				<li>
+					<div class="key">담당자 전화번호</div>
+					<div class="value"><span class="number">02-1234-1234</span></div>
+				</li> -->
+				<li>
+					<div class="key">담당자 휴대폰번호</div>
+					<div class="value"><span class="number">010-1234-1234</span></div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<div class="agree_check">
+				<span class="selection">
+					<input type="checkbox" id="checkType1_1_sm">
+					<label for="checkType1_1_sm" class="label"><em>위의 내용은 입력한 내용과 동일합니다.</em></label>
+				</span>
+			</div>
+		</div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span><!-- 220907 추가 -->
+				<span><button type="button" class="btn primary lg">다음</button></span>
+			</div>
+		</div>
+
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

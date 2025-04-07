@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[계좌이체]단건이체입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/transfer.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">단건이체입력</h1>
+            <div class="tr_sel_acc_area">
+                <div class="tr_sel_acc_panel">
+                    <button type="button" class="acc" title="출금계좌 선택">
+                        <strong class="bk_name ico"><!-- 2022-07-15 수정 -->
+                            <span class="bank"><span class="icon_bank_004 xs"></span>KB국민</span>
+                            <strong class="bk_num number">574498-90-009768</strong>
+                        </strong>
+                        <span class="nick">계좌별명계좌별명계좌별명계좌별명계좌별명</span><!-- 2022-07-15 수정 -->
+                        <span class="bk_pay">출금가능금액 <em class="number">100,000</em><em class="num_unit">원</em></span>
+                    </button>
+                </div>
+            </div>
+            <div class="p tooltip_limited_wrap">이체한도/수수료
+                <div class="tooltip_limited">
+                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                        <div class="tooltip_cont"> 
+                            <ul class="depth">
+                                <li>1일 이체잔여한도 : <span class="number">100,000,000</span><span class="num_unit">원</span></li>
+                                <li>1회 이체한도 : <span class="number">100,000,000</span><span class="num_unit">원</span></li>
+                                <li>자동로그인 1일 이체잔여한도 : <span class="number">0</span><span class="num_unit">원</span></li> 
+                                <li>다른금융 이체수수료 : <span class="number">0</span><span class="num_unit">원</span></li> 
+                                <li>수수료 면제 잔여횟수 : <span>해당무</span></li>
+                                <li>통합ID로 로그인하여 이체한 금액(<span class="number">100,000</span><span class="num_unit">원</span>)도 이용잔여한도에서 차감됩니다.</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <p class="tip error">위 계좌는 <strong>출금한도가 제한된 계좌</strong>입니다. (1일 이체한도 30만원) 자세한 사항은 1588-9999로 문의주시기 바랍니다.</p>
+                <p class="tip error">위 계좌는 사고신고되어 <strong>출금한도가 제한된 계좌</strong>입니다. 자세한 사항은 1588-9999로 문의주시기 바랍니다.</p>
+            </div>
+            <div class="section js_move">
+                <div class="form_group form_trans error pop_mark"><!-- 221006 'pop_mark' 클래스 추가 -->
+                    <!-- 220729 리웍 -->
+                    <div class="input" role="button" aria-label="보낼금액">
+                        <strong class="input_txt number">10,000</strong><strong class="num_unit">원</strong>
+                    </div>
+                    <!-- //220729 리웍 -->
+                    <p class="money_ko number" id="이체금액텍스트"><span class="bk_pay"> <em class="number">1</em><em class="num_unit">만원</em></span></p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">받는 분</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="받는분 은행 선택">KB국민</button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="받는분 계좌번호 입력" onclick=""><!-- 221004 마크업 수정 -->
+                            <input type="tel" aria-hidden="true" placeholder="계좌번호" title="받는분 계좌번호" value="" class="bg_white" readonly>
+                        </div>
+                        <div class="btn_wrap btm">
+                            <a href="#none" class="btn_txt ico_arr">최근∙자주 ∙빠른 ∙내계좌</a><!-- 2022-07-15 수정 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group"><!-- 220729 class="gap_xs_2" 삭제 -->
+                    <div class="form_tit">내통장 메모</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="내통장 메모 표시">선택</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">받는분 통장 메모</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="받는분 통장 표시">선택</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle_sm_wrap">
+                    <button class="tit js_toggle" aria-expanded="false">추가정보 입력</button>
+                    <div class="toggle_panel addinfo_panel" role="region">
+                        <div class="tab_wrap box">
+                            <div class="tab_radio">
+                                <div class="form_group">
+                                    <div class="form_tit">선택사항 입력</div>
+                                    <div class="form_row">
+                                        <div class="rdoChk_box">
+                                            <span class="selection">
+                                                <input type="radio" id="addInfoForm1" name="addInfoForm" data-show="#addInfoFormPanel1" aria-selected="true" aria-controls="addInfoFormPanel1" checked>
+                                                <label for="addInfoForm1" class="label"><em>예약이체</em></label>
+                                            </span>
+                                            <span class="selection">
+                                                <input type="radio" id="addInfoForm2" name="addInfoForm" data-show="#addInfoFormPanel2" aria-selected="false" aria-controls="addInfoFormPanel2">
+                                                <label for="addInfoForm2" class="label"><em>CMS코드</em></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_panel" role="tabpanel" id="radioShow1">
+                                <h3 class="hidden">예약이체</h3>
+                                <div class="form_group gap_0">
+                                    <div class="form_tit">예약일시</div>
+                                    <!-- 221018 마크업 변경 -->
+                                    <div class="form_row">
+                                        <div class="input date">
+                                            <input type="tel" maxlength="6" title="예약이체날짜" maxlength="8" value="20210301">
+                                            <button type="button" class="btn_cal"><span class="hidden">예약날짜 선택</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- //221018 마크업 변경 -->
+                                    <div class="form_row">
+                                        <div class="select">
+                                            <button type="button" class="select_btn" title="예약시간 선택">17시</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                        </div>
+                                    </div>
+                                    <p class="tip_info">희망이체일 당일, 이체실행 2시간 전까지 등록 가능 (취소는 1시간 전까지 가능)</p>
+                                </div>
+                                <div class="form_group">
+                                    <div class="form_tit">예약명</div>
+                                    <div class="form_row">
+                                        <div class="input">
+                                            <input type="text" placeholder="직접입력" title="예약명">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_panel" role="tabpanel" id="radioShow2">
+                                <h3 class="hidden">CMS코드</h3>
+                                <div class="form_group gap_0">
+                                    <div class="form_row">
+                                        <div class="input">
+                                            <input type="text" placeholder="CMS 코드 입력 1" title="CMS 코드 입력 1">
+                                        </div>
+                                    </div>
+                                    <div class="btn_list_btm"> <!-- 2022-07-20 클래스 수정 -->
+                                        <span><button type="button" class="btn outline sm">CMS코드 추가</button></span> <!-- 2022-07-20 클래스 수정 -->
+                                    </div>
+                                    <p class="tip_info">이용기관에서 각 송금인에게 부여한 송금일 식별 확인번호입니다. 코드를 모르시는 경우 이용기관에 문의해 주세요.</p>
+                                </div>
+                                <!-- 다른금융이체 --><!-- 220729 리웍 -->
+                                <div class="form_group gap_0">
+                                    <div class="form_tit">CMS코드</div>
+                                    <div class="form_row">
+                                        <div class="input">
+                                            <input type="text" placeholder="32자 이내(영문대문자, 숫자만)" title="CMS 코드 입력 32자 이내(영문대문자, 숫자만)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //다른금융이체 --><!-- //220729 리웍 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section"><!-- 220729 리웍 위치 수정 -->
+                <div class="btn_cnt_wrap"> 
+                    <span><button type="button" class="btn outline lg">이체추가</button></span>
+                </div>
+            </div>
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>계좌이체를 통해 최대 10건까지 즉시/예약 이체하실 수 있습니다.</li>
+                        <li>이체지정일시를 변경하시면 자동으로 예약이체가 실행되고 연계/가상계좌, CMS계좌이체는 예약이체가 불가합니다.</li><!-- 220729 리웍 - 오타 -->
+                        <li>일반사용자(Sub)인 경우 관리자(Master)가 출금권한을 부여한 출금계좌만 선택 가능합니다.</li>
+                        <li>[타행10억초과이체] 출금통장에서는 이체금액이 한번에 출금되지만, <strong>받는분 통장 표시에는 10억 단위로 분할입금</strong>될 수 있습니다.</li>
+                        <li>[타행10억초과이체] 입금계좌 오류 또는 이체망 장애 발생 시 이체 처리가 지연되거나 불가능할 수 있으며, 이체 불능 금액은 출금계좌에 재입금됩니다. (이체불능 사유에 따라 한번에 입금되거나 10억원 단위로 입금될 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">확인</button></span>  
+                </div>    
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function(){
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

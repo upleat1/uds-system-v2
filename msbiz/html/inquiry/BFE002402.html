@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[계좌상세정보]계좌상세조회_(구)외화정기예금(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content" data-ui="full_pop"><!-- 풀팝업일 경우 추가 : data-ui="full_pop"-->
+        <h1 class="hidden">계좌상세정보</h1>
+        <div class="section">
+            <h2 class="hidden">계좌정보</h2><!-- 220729 리웍 -->
+            <div class="acc_list_wrap">
+                <div class="acc_pannel open btl">
+                    <div class="acc_wrap">
+                        <div class="acc_name">상품명노출</div>
+                        <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay">
+                                <span class="unit">총잔액 USD</span>
+                                <strong class="number">1,000,000,000.00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="section">
+            <div class="list_data_group">
+                <h2 class="h3">계좌상세</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">사업자명</div>
+                        <div class="value">국민상사</div>
+                    </li>
+                    <li>
+                        <div class="key">신규일</div>
+                        <div class="value">
+                            <span class="number">2020.12.14</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">만기일</div>
+                        <div class="value">
+                            <span class="number">2020.12.14</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">약정금리</div>
+                        <div class="value">
+                            <span class="number">3.8</span>
+                            <span class="number">%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">자동갱신기간</div>
+                        <div class="value">
+                            <span class="number">12</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">총연장횟수</div>
+                        <div class="value">
+                            <span class="number">5</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">통화종류</div>
+                        <div class="value">USD</div>
+                    </li>
+                    <li>
+                        <div class="key">잔액</div>
+                        <div class="value">
+                            <strong class="number">1,200.00</strong>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 유의사항 -->
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+                    <li>조회일 이전 3년 이하 기간별 거래내역을 조회 하실 수 있습니다.</li>
+                    <li>적요(Code): TRN - Transfer(대체), POS - Position(원화), CAN - Cancel(취소), INT - Interest(이자), TAX - Tax(세금), COR - Correction(정정), CUR - Currency(외화현금), PBK - Passbook(통장정리), COC - Correction Cancel(정정취소), CCC - Center Cur(자동이체)</li>
+                    <li>[전체 업데이트]실행일자에 따라 계좌리스트의 잔액과 거래내역의 잔액이 다를 수 있습니다.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //유의사항 -->
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">확인</button></span>
+            </div>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

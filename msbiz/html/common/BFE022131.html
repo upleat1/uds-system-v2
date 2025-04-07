@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[이용안내]접근제한안내</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <div class="result fail">
+                <!-- case : 사업자용 인증서가 아닐 경우 -->
+                <p class="tit">고객님, 죄송합니다.</p>
+                <p class="txt">KB스타기업뱅킹은 사업자용 인증서만 사용하실 수 있습니다.<br>개인용 인증서로 로그인하신 고객님은 이용하실 수 없습니다.</p>
+                
+                <!-- case : 법인사업자만 사용 -->
+                <p class="tit">고객님, 죄송합니다.</p>
+                <p class="txt">법인사업자만 이용할 수 있는 서비스입니다.<br>개인사업자는 이용하실 수 없습니다.</p>
+                
+                <!-- case : 개인사업자만 사용 -->
+                <p class="tit">고객님, 죄송합니다.</p>
+                <p class="txt">개인사업자만 이용할 수 있는 서비스입니다.<br>법인사업자는 이용하실 수 없습니다.</p>
+                
+                <!-- case : Master만 사용  -->
+                <p class="tit">이용권한이 없습니다. </p>
+                <p class="txt">관리자(Master)권한이 있는 사용자만  이용할 수 있는 서비스입니다.<br>서브(Sub)사용자는 이용하실 수 없습니다. 관리자(Master)에게 문의해 주세요.</p>
+                
+                <!-- case : 개인&Master만 사용 -->
+                <p class="tit">이용권한이 없습니다. </p>
+                <p class="txt">해당 서비스는 개인사업자(단독사용자 또는 Master)만 이용 할 수 있는 서비스입니다.<br>법인사업자 또는 서브(Sub)사용자는 이용하실 수 없습니다.</p>
+                
+                <!-- case : 사용권한이 없는 Sub -->
+                <p class="tit">이용권한이 없습니다. </p>
+                <p class="txt">이용 권한이 제한된 서비스입니다.<br>관리자(Master)에게 문의해 주세요.</p>
+                
+                <!-- case : 앱사용권한이 없는 사용자 -->
+                <p class="tit">고객님, 죄송합니다.</p>
+                <p class="txt">KB스타기업뱅킹 서비스 사용 승인을 받은 일반사용자(Sub)만 이용이 가능합니다.<br>관리자(Master)에게 KB스타기업뱅킹 앱 사용 승인을 신청하시기 바랍니다.</p>
+
+                <!-- case : 일부법인/임의단체 -->
+                <p class="tit">고객님, 죄송합니다.</p>
+                <p class="txt">해당 서비스는 일부법인 및 임의단체는<br>이용하실 수 없습니다.</p>
+
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">확인</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[발행점번호 찾기] 발행점찾기(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹관리" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content" data-ui="full_pop"><!-- 220729 풀팝업일경우 data-ui 추가 -->
+		<h1 class="hidden">발행점번호 찾기</h1>
+
+        <div class="tab_wrap">
+            <div class="tab_list" role="tablist">
+                <div class="scroll_wrap">
+                    <button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">지점명으로 검색</button>
+                    <button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">주소로 검색</button>
+                </div>
+            </div>
+            <!-- 지점명으로 검색 -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_1">
+                <h2 class="hidden">지점명으로 검색</h2>
+
+                <div class="section">
+                    <div class="form_group error"> 
+                        <div class="form_tit">지점명</div>
+                        <div class="form_row">
+                            <div class="input"><input type="text" id="id01" placeholder="예) 여의도, 영등포" title="지점명"></div><!-- 220907 접근성 추가 : id/aria-labelledby 매칭 -->
+                        </div>
+                        <p class="tip" aria-labelledby="id01">개발전용 : 오류 텍스트 메시지 (html파일에는 넣지말것, 개발에 백차장님이 공통전달 예정)</p><!-- 220907 접근성 추가 : id/aria-labelledby 매칭 -->
+                    </div>
+                    <div class="btn_cnt_wrap">
+                        <span><button type="button" class="btn primary lg">검색</button></span>
+                    </div>
+                </div>
+
+                <hr class="hr_divide">
+
+                <div class="section">
+                    <ul class="list_link btl">
+                        <li>
+                            <a href="#none" class="link">
+                                <p class="p bold">등촌역점</p>
+                                <p class="p_sub fc_gray gap_xxs">[00000] 서울 양천구 목동 605-4번지</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 지점 없을 경우 -->
+                <div class="result nodata sm"><!-- 220729 위치변경 -->
+                    <p class="tit">해당하는 지점을 찾을 수 없습니다.</p>
+                </div>
+                <!-- //지점 없을 경우 -->
+            </div>
+            <!-- //지점명으로 검색 -->
+
+            <!-- 주소로 검색 -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_2">
+                <h2 class="hidden">주소로 검색</h2>
+
+                <div class="section">
+                    <div class="form_group error"> 
+                        <div class="form_tit">주소</div>
+                        <div class="form_row">
+                            <div class="input"><input type="text" id="labelledby01" placeholder="예) 여의도동, 화산면, 신령읍" title="주소"></div><!-- 220907 접근성 추가 : id/aria-labelledby 매칭 -->
+                        </div>
+                        <p class="tip" aria-labelledby="labelledby01">개발전용 : 오류 텍스트 메시지 (html파일에는 넣지말것, 개발에 백차장님이 공통전달 예정)</p><!-- 개발전용 : validation 결과 메세지 --><!-- 220907 접근성 추가 : id/aria-labelledby 매칭 -->
+                    </div>
+                    <div class="btn_cnt_wrap">
+                        <span><button type="button" class="btn primary lg">검색</button></span>
+                    </div>
+                </div>
+
+                <hr class="hr_divide">
+
+                <div class="section">
+                    <ul class="list_link btl">
+                        <li>
+                            <a href="#none" class="link">
+                                <p class="p bold">동여의도</p>
+                                <p class="p_sub fc_gray gap_xxs">[00000] 서울 영등포구 여의도동 43-2 호정빌딩</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link">
+                                <p class="p bold">서여의도</p>
+                                <p class="p_sub fc_gray gap_xxs">[00000] 서울특별시 영등포구 여의도동 15-22 서여의도본점 서관 1,2층</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 지점 없을 경우 -->
+                <div class="result nodata sm"><!-- 220729 위치변경 -->
+                    <p class="tit">해당하는 지점을 찾을 수 없습니다.</p>
+                </div>
+                <!-- //지점 없을 경우 -->
+            </div>
+            <!-- //주소로 검색 -->
+        </div>
+        
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

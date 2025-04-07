@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[카드사용내역보고서] 월별 현황</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <div class="tab_wrap">
+            <div class="tab_list">
+                <div class="scroll_wrap">
+                    <a href="#" class="active">월별현황</a>
+                    <a href="#">카드사별 현황</a>
+                </div>
+            </div>
+            <div class="link_panel">
+                <!-- 내역있음 -->
+                <h1 class="hidden">월별현황 상세</h1>
+                <div class="section">
+                    <div class="form_group">
+                        <div class="form_tit">사업자/부서</div>
+                        <div class="form_row">
+                            <div class="select">
+                                <button type="button" class="select_btn active" title="카드사 선택">전체</button><!-- 221124 수정: active 추가 --><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="div_inquiryYearSetter"><!-- 개발 id:월별 기간표시(청구내역상세와 다름) -->
+                        <div class="cal_month fu_cal_month gap_sm_3"><!-- 220729 리웍: 클래스수정 -->
+                            <!-- 220802 수정: 연도표기, 버튼 비노출방식 수정 
+                                    이전,다음 버튼 비노출할때 속성 'disabled aria-hidden="true"' 추가
+                            -->
+                            <button type="button" class="btn btn_ico prev"><span class="hidden">이전해</span></button>
+                            <span class="year_txt"><span class="number">2022</span><span class="num_unit">년</span></span>
+                            <button type="button" class="btn btn_ico next" disabled aria-hidden="true"><span class="hidden">다음해</span></button>
+                            <!--// 220802 수정: 연도표기, 버튼 비노출방식 수정 -->
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="hr_divide"><!-- 221005 추가: 디자인 요청으로 디바이더 추가 -->
+
+                <div class="section gap_md">
+                    <h2 class="h2">상세내역</h2>
+
+                    <div class="list_top_wrap">
+                        <div class="col">
+                            <div class="sch_period">
+                                <span class="number">2022.04.21~2022.05.21</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 220729 리웍 -->
+                    <div class="list_data_group">
+                        <div class="list_data_group_s">
+                            <h3 class="h3">1월</h3>
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">이용금액</div>
+                                    <div class="value">
+                                        <span class="number">10,000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">이용건수</div>
+                                    <div class="value">
+                                        <span class="number">1,450</span><span class="num_unit">건</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list_data_group_s">
+                            <h3 class="h3">2월</h3>
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">이용금액</div>
+                                    <div class="value">
+                                        <span class="number">10,000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">이용건수</div>
+                                    <div class="value">
+                                        <span class="number">1,450</span><span class="num_unit">건</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list_data_group_s">
+                            <h3 class="h3">3월</h3>
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">이용금액</div>
+                                    <div class="value">
+                                        <span class="number">10,000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">이용건수</div>
+                                    <div class="value">
+                                        <span class="number">1,450</span><span class="num_unit">건</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list_data_group_s">
+                            <h3 class="h3">4월</h3>
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">이용금액</div>
+                                    <div class="value">
+                                        <span class="number">10,000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">이용건수</div>
+                                    <div class="value">
+                                        <span class="number">1,450</span><span class="num_unit">건</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list_data_group_s">
+                            <h3 class="h3">5월</h3>
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">이용금액</div>
+                                    <div class="value">
+                                        <span class="number">10,000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">이용건수</div>
+                                    <div class="value">
+                                        <span class="number">1,450</span><span class="num_unit">건</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--// 220729 리웍 -->
+                </div>
+                
+                <div class="inform_btm_wrap">
+                    <button class="tit js_toggle on" aria-expanded="true" aria-controls="notice_1_1">유의사항</button>
+                    <div class="toggle_panel" role="region" id="notice_1_1">
+                        <ul class="depth bul">
+                            <li>통합카드관리의 카드승인내역 최종조회일시 기준으로 보여지는 내역으로 현재 이용금액과 다를 수 있습니다.</li>
+                            <li>카드관련 보고서에는 해외승인내역이 포함되지 않으니 해외승인내역 관련 조회는 '자금관리&gt;카드사용내역조회'에서 확인하시기 바랍니다.</li><!-- 221013 수정: 문구수정 --><!-- 220907 수정: 메뉴경로 업데이트 --><!-- 220729 리웍: 엔티티코드 수정 -->
+                        </ul>
+                    </div>
+                </div>
+                <!--// 내역있음 -->
+
+                <!-- 내역없음 -->
+                <div class="result nodata sm"><!-- 220729 리웍: 클래스 추가 -->
+                    <p class="tit">조회내역이 없습니다.</p>
+                </div>
+                <!--// 내역없음 -->
+            </div>
+        </div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

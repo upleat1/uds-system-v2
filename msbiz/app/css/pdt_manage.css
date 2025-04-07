@@ -1,0 +1,316 @@
+@charset "utf-8"; 
+
+
+/*** pdt_lsk.css ***/
+/*  예금계좌조회 - 계좌명 & 계좌별명 width 100% 전체 노출 css */
+.acc_pannel .acc_wrap.inc_btn > .pdt_acc_name{padding-right:0;}
+.acc_pannel .acc_wrap.inc_btn > .pdt_acc_name .pdt_divide::before{content:''; display:inline-block;  width:.1rem; height:1.2rem; margin:.4rem .8rem 0; vertical-align:top; background-color:var(--fc_08, #dde1e4);}
+
+.pdt_detail .acc_pannel.open:last-child{padding-bottom:0;border-bottom:none;}
+.pdt_detail .acc_wrap .acc_sum_wrap{margin-top:2rem;}
+.section.pdt_chk [class^=hr_divide]{height:.1rem;margin:-2.0rem 0 2.8rem;}
+
+/* 220929 수정 : 예금해지계좌조회 상세 */
+.pdt_detail .list_top_wrap .sch_period{font-size:1.5rem;}
+.pdt_detail .list_top_wrap span.number,
+.pdt_detail .list_top_wrap strong.number{font-size:1.7rem;}
+.pdt_detail .list_top_wrap .num_unit{font-size:1.6rem;}
+
+/* 221007 추가 : 예금해지조회 상단여백  */
+.form_group.js_trans_type{margin-top:2rem;}
+
+/* 221025 : 클래스 btn_list_btm_type 추가 */
+.list_data_group_s .btn_list_btm_type{margin-top:2rem;}
+.list_data_group_s .btn_list_btm_type .btn{width: 100%;}
+.list_data_group_s .btn_list_btm_type .btn.outline{border:1px solid var(--fc_05, #8c949e); color:var(--fc_02, #26282c);}
+.list_data_group_s .btn_list_btm_type .btn.outline.sm {font-size: 1.5rem;height:3.6rem; padding:0 1rem;border-radius: .2rem; font-size:1.4rem; line-height:3.2rem;}
+
+:not([class^=section]) > div.inform_top_wrap.pdt_bul .depth > li:first-child{margin-top:-1.2rem;}
+
+/* 예금전환 - 1단계 상품목록 텍스트길이 padding css */
+.list_link li > .inr.pdt_txt{display:table;width:100%;padding: 2rem 9.2rem 1.8rem 0;} 
+
+/* 계좌별명 - 구분 라인 */
+.pdt_sep_txt{display:inline;position:relative;padding-left:1.7rem;color:var(--fc_02, #26282c);}
+.pdt_sep_txt::before{content:'';position:absolute;top:.5rem;left:0.6rem;width:.1rem;height:1.2rem;background-color:var(--fc_08, #dde1e4)}
+
+/* 권유직원 - 지점 & 권유직원 구분 라인 */
+.list_data > li .value .pdt_divide::before{content:''; display:inline-block;  width:.1rem; height:1.2rem; margin:.4rem .7rem 0 .7rem; vertical-align:top; background-color:var(--fc_08, #dde1e4);} 
+
+/* 풀팝업 상단 타이틀 - 중간 타이틀로 반영되는 예외 css */
+.pdt_pop_h2{margin:-.4rem 0 1.6rem;padding:0 2.4rem 1.6rem;font-size:1.8rem}
+
+/* 상품관리_신탁 총 신탁 잔액 */
+.pdt_verifi_wrap {text-align:center; padding:0; margin-bottom:2rem;} 
+.pdt_verifi_wrap .verifi_num {font-size:3rem; font-weight:700; color:var(--fc_02, #26282c); line-height:1.12; margin-top:1.4rem;text-align: right;}
+.pdt_verifi_wrap .verifi_num .number {font-size:2.4rem;vertical-align:middle;}
+.pdt_verifi_wrap .verifi_num .num_unit {font-size:2.3rem; color:var(--fc_02, #26282c);}
+.pdt_verifi_wrap .verifi_num.amount {font-size:2.8rem;}
+.pdt_verifi_wrap .verifi_num.major_account {font-size:2.5rem;}
+.pdt_verifi_wrap .verifi_tit {font-size:1.6rem; color:var(--fc_02, #26282c); margin-top:1.8rem;text-align: left;}
+.pdt_verifi_wrap .verifi_txt {font-size:1.4rem; color:var(--fc_04, #696e76); margin-top:1.8rem;text-align: left;}
+.pdt_verifi_wrap .verifi_txt .number {font-size:1.5rem;}
+.pdt_verifi_wrap .verifi_alert{font-size:1.8rem; font-weight:700; color:var(--fc_02, #26282c); line-height:1.12; margin-top:1.0rem}
+
+/* 상품관리_승낙확인 여부 라디오 체크 */
+.pdt_rdoChk_ul2{margin-top:0;}
+.pdt_rdoChk_ul2:after {display:block;content:'';clear:both}
+.pdt_rdoChk_ul2 li {float:left; width:50%; margin-top:1.6rem}
+.pdt_rdoChk_ul2 li:nth-child(odd) {padding-right:1rem;}
+.pdt_rdoChk_ul2 li:nth-child(even) {padding-left:1rem;}
+.pdt_rdoChk_ul2 li:nth-child(1),
+.pdt_rdoChk_ul2 li:nth-child(2) {margin-top:0;}
+
+/* 상품관리_외화예금 */
+.pdt_tab_tit {display:block; width:100%; min-height:2.6rem; margin-bottom:.8rem; padding-top:.8rem; padding-left:.2rem; font-size:1.6rem; color:var(--fc_04, #696e76); font-weight:400; line-height:inherit; z-index:2;}
+.pdt_name_tit{font-size:1.8rem;vertical-align: middle;}
+.pdt_agree_inr{margin-top:2rem; padding-bottom:1.8rem; border-bottom:1px solid var(--fc_08, #dde1e4);}
+.pdt_agree_inr .agree_check_sm{margin-top:2rem;}
+
+.selection.chk input[type=checkbox] + .label > p {padding: 1.2rem 0 0rem 0; font-size: 1.6rem; line-height:1.4; color:var(--fc_04, #696e76);}
+.table.pdt_noline table {margin-top: -1.6rem; border-top:none;}
+
+/* 국가, 통화 선택 */
+.fo_select_country_list > li {padding:0; border-bottom: 1px solid var(--bdc_01, #ebeef0); line-height:3.2rem;}
+.fo_select_country_list li > a {display:block; position:relative; padding:2rem 0 2rem 4rem; min-height:7.2rem}
+.fo_select_country_list li > a.link {padding:2rem 3.5rem 2rem 4rem; }
+.fo_select_country_list li > a.link:after {display: block; position: absolute; right: .9rem; top: 50%; width: .9rem; height: .9rem; content: ''; margin-top:-.1rem; border: solid var(--fc_05, #8c949e); border-width: 0 1.5px 1.5px 0; transform: rotate(-45deg) translateY(-50%); -webkit-transform: rotate(-45deg) translateY(-50%);}
+.fo_select_country_list > li:first-child {padding:0; border-top:1px solid var(--bdc_01, #ebeef0);}
+.fo_select_country_list > li:first-child a.link {padding-top:2rem;}
+.fo_select_country_list > li:first-child .link:after {margin-top:-.1rem;}
+.fo_select_country_list .im {display:block; position: absolute; left:0; top:50%; width:3.2rem; height:3.2rem; margin-top:-1.7rem; border-radius: 10rem; background-color:var(--fc_09, #ebeef0);}
+
+/* 221004 : 예금계좌조회 nodata 라인 추가 */
+/* 
+.h3 + .pdt_line{margin:.8rem 0; padding:4.8rem 0; border-top:1px solid var(--fc_05, #8c949e); border-bottom:1px solid var(--bdc_01, #ebeef0);}
+.result.nodata.pdt_line{margin:.8rem 0; padding:4.8rem 0; border-top:1px solid var(--fc_05, #8c949e); border-bottom:1px solid var(--bdc_01, #ebeef0);}
+ */
+
+/* 221005 : 외화예금조회결과 계좌복사하기 위치 수정 */
+.account_all .acc_wrap .btn_txt.ico_copy.pdt_toast{position: absolute;left:15rem;}
+
+/* 221006 : 외화예금해지 목록 하단 라인 css 추가 */
+.list_data_group.pdt_type .list_data li{border-top:0;border-bottom:1px solid #f0f3f4;}
+.list_data_group_s.pdt_type .list_data {position:relative;border-top: 1px solid var(--fc_05, #8c949e);border-bottom:0;}
+.list_data_group_s.pdt_type .list_data li{border-top:0;border-bottom:1px solid #f0f3f4;}
+
+/*** pdt_lsh.css ***/
+/* 공통 */
+.p_15 {font-size:1.5rem;}
+
+h1.hidden + .section > .h2:first-child{margin-bottom: 2rem;}
+#content> div:not([class^="section"]) > .h2,
+#content> .h2,
+.h2.type_first{margin: 3.2rem 2.4rem 4.8rem;}
+
+.hgroup_h3 .js_toggle .arrow{display: none;}
+.hgroup_h3 .js_toggle:after { display:inline-block;position: absolute; right:.2rem; top:50%; content:''; width:.9rem; height:.9rem;margin-top: -.7rem; border:solid var(--fc_05, #8c949e);border-width: 0 1.5px 1.5px 0;transform: rotate(45deg);-webkit-transform: rotate(45deg);}
+.hgroup_h3 .js_toggle.on:after {transform: rotate(225deg);-webkit-transform: rotate(225deg);margin-top: -.2rem;}
+
+.h2 + .form_group.address,
+.h3 + .form_group.address{margin-top: -.8rem;}
+.h3 + .btn_list_btm{margin-top: 1.6rem;}
+.list_top_wrap + .h3{margin-top: -.2rem;}
+.list_top_wrap .btn_txt.ico_arrdown{font-size: 1.4rem;padding-right: 2rem;}
+.list_top_wrap .btn_txt.ico_arrdown::after{margin-top: -.6rem;right: .4rem;}
+
+.tit_question{margin-bottom: 4.8rem;}
+.tit_question .h2{margin-bottom: 1rem;}
+
+.section [class^=hr_divide] + .depth{margin-top: -.8rem;}
+
+.select.outline+.select.outline{margin-top: .8rem;}
+
+.depth.bul > li > .tit + .p_sub{margin-top: .8rem;}
+
+.list_link li > .inr > .btn_txt.link{position:absolute; right:0; top:50%; display:block; right:0; margin-top: 0; border:0; transform:translateY(-50%);}
+.list_link li:first-child > .inr > .btn_txt.link{top: calc(50% - .9rem);}
+.list_link li > .link .p + .p_sub,
+.list_link li > .inr .p + .p_sub{margin-top: .8rem;}
+
+.rdoChk_group [class^=selection] + .chk_panel{margin-top: -1rem;}
+
+.agree_list.bdt{padding-top: 2rem;border-top: 1px solid var(--fc_08, #dde1e4);}
+.agree_list .selection input[type=checkbox]:not(:last-child) + .label{padding-right: 3.4rem;}
+
+.pop_wrap .depth + .list_data,
+.pop_wrap .depth + .list_data_group_s{margin-top: 2.4rem;}
+
+.depth.step > li p.tit+p.tit{margin-top: 2rem;}
+
+.js_accordion > li.on .toggle_panel .list_data:not(:first-child){border-top: 1px solid var(--fc_05, #8c949e);}
+.js_accordion > li .toggle_panel .list_data.list_data.bdt{border-top: 1px solid var(--fc_05, #8c949e);}
+.list_acco > li .tit > .h2{margin: 0;}
+
+.list_comp_wrap .chk_total + .list_comp{margin-top: 1.2rem;}
+
+.verifi_wrap + .tip_info{margin-top: -.8rem;}
+
+.office_wrap .list_office + .list_office{margin-top: 3.2rem;padding-top: 3.2rem;border-top: 1px solid var(--bdc_01, #ebeef0);}
+
+.board_list > li > a .badge_wrap{margin-bottom: 1rem;}
+.board_list > li > a .badge_wrap > span{margin-right: .2rem;}
+
+.ico_20_new{background-position: -22rem -14rem;}
+
+.form_group .tab_wrap.box .tab_panel{padding-top: .8rem;}/*BFE011510*/
+
+/* pdt_gray_box */
+.pdt_gray_box{margin: 1.2rem 0 3.2rem;padding: 2rem 1.6rem;background-color: var(--fc_10, #f7f7f8);}
+.pdt_gray_box:last-child{margin-bottom: 0;}
+.p + .pdt_gray_box{margin-top: 2rem;}
+.pdt_gray_box .pdt_lts_1{letter-spacing: -.8px;}
+
+.form_group .tab_wrap.box .tab_panel{padding-top: .8rem;}/*BFE011510*/
+
+/* BFE013500 */
+.inform_top_wrap .inform_checked{display:inline-block;width:1.6rem;height:1.6rem;margin-right:.2rem;background:url(/msbiz/app/img/pdt_manage/inform_checked.png) no-repeat center center / 1.5rem;}
+
+/* 세금계산서 */
+.pd_tax_group{margin-top:3.2rem;}
+.pd_tax_group .hgroup_h3{padding-bottom:1.2rem;margin-bottom:-1px;border-bottom:1px solid var(--fc_05, #8c949e);}
+.pd_tax_group .btn_list_btm{margin-top:2rem;}
+
+/* BFE013520 */
+.section > .agree_check+.agree_check{margin-top:2rem;}
+
+/* BFE014100 */
+.list_data > li.sub{border-top:none;padding-top:0;}
+.list_data > li.sub+.sub{margin-top:-.7rem;}
+.list_data > li.sub .key::before{content:"";display:inline-block;width:.6rem;height:.6rem;border:1px solid #696e76;border-width:0 0 1px 1px;margin:0 .5rem .2rem .2rem;}
+
+/* BFE014220 */
+.rdoChk_box .selection.pd_long{width:34%;}
+
+/* BFE014340 */
+.list_link li p.depth.bul:first-child{margin-top:0;}
+.list_link li p.depth.bul:before{background-color:var(--fc_04, #696e76);}
+.list_link li .btn_ico_34{position:absolute;right:0;top:50%;transform:translateY(-50%);}
+.add_file_wrap{margin:4.8rem 0 3.2rem;text-align:center;}
+.add_file_wrap .btn_add_file{position:relative;width:4.8rem;height:4.8rem;background-color:var(--fc_08, #dde1e4);border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;}
+.add_file_wrap .btn_add_file::before,
+.add_file_wrap .btn_add_file::after{content:'';position:absolute;left:calc(50% - .1rem);top:calc(50% - 1.2rem);display:block;width:.3rem;height:2.4rem;background-color:var(--fc_11, #fff);border-radius:.2rem;}
+.add_file_wrap .btn_add_file::after{transform:rotate(90deg);}
+.add_file_wrap .tit{margin-top:2rem;font-weight:700;}
+.add_file_wrap .txt{margin-top:1.6rem;}
+
+/* BFE011550 */
+.result.ico_bulechip_company::before{content: '';display: block;width: 6rem;height: 6rem;margin: 0 auto;background-color: lightblue;}
+
+/* BFE011510 */
+.pdt_panel_outline > .rdo_panel{ margin-bottom: 1.6rem; padding:2.4rem; border:1px solid var(--fc_08, #dde1e4); border-radius: .4rem; -webkit-border-radius: .4rem; -moz-border-radius: .4rem; -ms-border-radius: .4rem; -o-border-radius: .4rem; }
+.form_group .form_row .rdo_panel .pdt_chk_group{padding-bottom: 2rem;margin-bottom: 2rem;border-bottom: 1px solid #f0f3f5;}
+.form_group .form_row .rdo_panel .pdt_chk_group .selection{margin-bottom: 0;}
+.form_group .form_row .rdo_panel .pdt_chk_group .rdo_panel{padding-left: 3rem;padding-bottom: 0;}
+.hr_divide.mgb_12{margin-bottom: 1.2rem;}
+.pdt_form_forex .select{width: 10rem;}
+.pdt_form_forex .input{flex: 1;}
+
+/* BFE012080 */
+.pdt_acco_agree > li .toggle_panel{padding: 0;}
+.pdt_acco_agree > li .toggle_panel .agree_list{border-bottom: 0;}
+.pdt_acco_agree > li .agree_list .btn_link:after{left: auto;}
+
+/* BFE011540 */
+.pdt_pannel{margin-top: 3.2rem;}
+.pdt_pannel .acc_wrap{padding:2.4rem 2.4rem 2.8rem;}
+.pdt_pannel .acc_wrap .h3:first-child{margin-top: 0;}
+.pdt_pannel .acc_wrap .list_data{padding-left: 0;padding-right: 0;}
+.pdt_pannel .acc_wrap .list_data.noline{padding-bottom: 0;}
+.pdt_pannel .acc_wrap .h3 + .list_data{padding-top: 2rem;}
+
+/* BFE011930 */
+.pdt_cdd_edd_txt {margin-top: 2rem;font-family: 'Roboto', 'KBText';}
+.pdt_cdd_edd_txt p{margin-top: 1rem;font-size: 1.7rem;font-weight: 500;}
+.pdt_cdd_edd_txt strong{font-weight: 700;}
+.pdt_list_needfile{display: flex;justify-content: space-around;text-align: center;margin-top: 2rem;}
+.pdt_list_needfile li{flex: 1;}
+.pdt_list_needfile li::before{content: '';display: block;width: 4.8rem;height: 4.8rem;margin:0 auto;background: url(/msbiz/app/img/pdt_manage/ico_need_file.png) no-repeat 0 0/14.4rem 4.8rem;}
+.pdt_list_needfile li:nth-child(2)::before{background-position: -4.8rem 0;}
+.pdt_list_needfile li:nth-child(3)::before{background-position: -9.6rem 0;}
+.pdt_list_needfile li span{display: block;margin-top: 1.2rem;text-align: center;word-break: keep-all;}
+
+/* BFE011920 - BFE008450 참고 */
+.step_loan{display: flex;justify-content: space-evenly;font-size: 1.3rem;color: var(--fc_03, #484b51);}
+.step_loan li{flex:1;text-align: center;position: relative;color:var(--fc_03, #484b51)}
+.step_loan li::before{content: "";display: block;width:100%;height: .2rem;position: absolute;top: 1.5rem;left:0;background-color: #ffd338;}
+.step_loan li.active{color: var(--fc_02, #26282c); font-weight: 700;}
+.step_loan li.active::after{content: "";display: block;width:50%;height: .2rem;position: absolute;top: 1.5rem;left:50%;background-color: var(--fc_09, #ebeef0);}
+.step_loan li.active .ico_step::after{background-color: var(--bg_01, #fff);}
+.step_loan li:first-child:before{width: 50%;left:50%}
+.step_loan li:last-child:before{width: 50%;}
+.step_loan .ico_step{position: relative;display: block;width: 3.2rem;height: 3.2rem;margin: 0 auto 1.2rem;z-index: 1;}
+.step_loan .ico_step::before{content: "";position: absolute;left: 50%;top: 50%;display: block;width: 1.8rem;height: 1.8rem;transform: translate3d(-50%, -50%, 0);background-color: #ffd338;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;-ms-border-radius: 50%;-o-border-radius: 50%;}
+.step_loan .ico_step::after{content: ""; position: absolute; left: 50%; top: 50%; display: block; width: 1rem; height: 1rem; transform: translate3d(-50%, -50%, 0); background: url(/msbiz/app/img/common/ico_step.png) no-repeat 0 0 / 7rem 1rem; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; -webkit-transform: translate3d(-50%, -50%, 0); -moz-transform: translate3d(-50%, -50%, 0); -ms-transform: translate3d(-50%, -50%, 0); -o-transform: translate3d(-50%, -50%, 0); }
+.step_loan li.active ~ li{color: var(--fc_06, #aab0b8);}
+.step_loan li.active ~ li .ico_step::before{background-color:var(--fc_09, #ebeef0);}
+.step_loan li.active ~ li .ico_step::after{background-color:var(--fc_11, #fff);}
+.step_loan li.active ~ li::before{background-color:var(--fc_09, #ebeef0);}
+.js_accordion > li .toggle_panel .txt_nodata{margin: 2.8rem 0 .8rem;text-align: center;}
+
+/* BFE011521_pop */
+.pdt_bg_kbcertify{padding-top: 6rem;margin-top: 2.8rem !important;background: url(/msbiz/app/img/pdt_manage/bg_pdt_kbcertify.png) no-repeat 50% 0 / 26.4rem auto ;}
+
+
+/*** pdt_kji.css ***/
+.tell_wrap .acc_list li > .acc_bank {padding:2rem 2.4rem 0 4.8rem}
+.tell_wrap .acc_list.tel .tel_link {top:3rem; width:2.4rem; height:2.4rem}
+.tell_wrap .acc_list li > .acc_bank [class^=icon_bank_] {width:3.2rem; height:3.2rem}
+.tell_wrap .acc_list .bk_num.number {font-size:1.6rem; font-weight:700}
+.tell_wrap .acc_list .bk_name {font-size:1.5rem; color:#484b51}
+.tell_wrap .acc_bank [class^=icon_bank_].md::before {top:0; left:0; transform:scale(1); -webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1)}
+
+.cate_pdt_manage .inform_top_wrap .inform_top_list {margin-bottom:0; padding:.7rem 0 .8rem}
+.cate_pdt_manage .inform_top_wrap .inform_top_list .list > li {display:flex; justify-content:space-between; padding:2.0rem 0 1.2rem 0; border-color:#c6cbd0}
+.cate_pdt_manage .inform_top_wrap .inform_top_list .list > li:first-child {padding-top:0}
+.cate_pdt_manage .inform_top_wrap .inform_top_list .list > li:last-child {padding-bottom:0; border-bottom:0}
+
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap .acc_pannel {margin-top:0; padding-bottom:3.2rem; border-bottom:.1rem solid #f0f3f5}
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap h2 + .acc_pannel {margin-top:1.6rem}
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap .acc_pannel.open + .acc_pannel.open {border-top:0}
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap .acc_pannel.open:last-child {padding-bottom:3.2rem}
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap h2:not(:first-child) {margin-top:2rem}
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap .acc_info_wrap {margin-top:1.2rem}/* 220824 여백조절(es) */
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap .acc_wrap .acc_info_wrap .acc_info {font-size:1.5rem; color:#696e76}
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap .acc_wrap .acc_info_wrap .acc_pay .unit {font-size:1.5rem; color:#696e76}
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap .acc_wrap .acc_info_wrap .acc_pay strong span {font-size:1.6rem; font-weight:400; color:#696e76}
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap .h2 {margin:2rem 0 0; padding-bottom:1.3rem;border-bottom:1px solid var(--fc_05, #8c949e)}/* 221012 개발대응 */
+.cate_pdt_manage .section.rate_wrap .acc_list_wrap .acc_pannel.open.btl {margin-top:0; padding-top:1.8rem; border-top:0;}/* 221012 개발대응 */
+
+.list_data_group .ico_24_phone {background-position:-24px -12rem}
+
+
+/*** 기타 ***/
+/* 선택형 데이터 리스트 예외처리 */
+.pdt_selection{display: inline-block;position: relative;z-index: 1;min-height: 2.4rem;padding-left: 3.4rem;}
+
+.pdt_selection.radio .label{display: inline-block;max-width: 100%;line-height: 2.4rem;font-size: 1.6rem;vertical-align: middle;}
+.pdt_selection.radio .label::before{content: '';display: inline-block;position: absolute;left: 0;top: -0.1rem;z-index: 1;width: 2.4rem;height: 2.4rem;border: 2px solid var(--fc_06, #aab0b8);border-radius: 100px;background-color: var(--bg_01, #fff);transition: 0.3s;}
+.pdt_selection.radio .label::after{content: '';display: inline-block;position: absolute;left: 0.6rem;top: 0.5rem;z-index: 1;width: 1.2rem;height: 1.2rem;border-radius: 50%;background: #ffcc00;transform: scale(0);}
+.pdt_selection.radio.checked .label::before{border-color: #ffcc00;}
+.pdt_selection.radio.checked .label::after{animation: radioAni .3s linear forwards;}
+.pdt_selection.radio.disabled .label, .pdt_selection.radio.readonly .label {color: var(--fc_07, #c6cbd0);}
+.pdt_selection.radio.disabled .label::before, .pdt_selection.radio.readonly .label::before {border-color: var(--fc_08, #dde1e4);}
+.pdt_selection.radio.checked.disabled .label::after, .pdt_selection.radio.checked.readonly .label::after {background: var(--fc_08, #dde1e4);}
+
+.pdt_selection.checkbox .label {display:inline-block; position:relative; z-index:1; width:100%; min-height:2.4rem; margin-top:-.2rem; padding-left:3.4rem;}
+.pdt_selection.checkbox .label:before {display:inline-block; content:''; position:absolute; left:0; top:-.1rem; z-index:1; width:2.4rem; height:2.4rem; border:2px solid var(--fc_05, #8c949e); border-radius:100px;background-color:var(--fc_11, #fff); transition: .3s}
+.pdt_selection.checkbox .label:after {display: inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:2.4rem; height:2.4rem; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='12' viewBox='0 0 15 12'%3E%3Cpath style='fill:none;stroke:%238c949e;stroke-linecap:round;stroke-width:.15rem;fill-rule: evenodd;' d='M402,806l4,4,6-7' transform='translate(-399.313 -801.656)'/%3E%3C/svg%3E"); background-position: 50% 50%; background-size:1.5rem 1.2rem; background-repeat: no-repeat}
+.pdt_selection.checkbox.checked .label:before {border-color:#ffcc00; background:#ffcc00;}
+.pdt_selection.checkbox.checked .label:after {background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='12' viewBox='0 0 15 12'%3E%3Cpath style='fill:none;stroke:%2326282c;stroke-linecap:round;stroke-width:.15rem;fill-rule: evenodd;' d='M402,806l4,4,6-7' transform='translate(-399.313 -801.656)'/%3E%3C/svg%3E");animation: chkeckboxAni 0.3s linear}
+.pdt_selection.checkbox.disabled .label:before {border-color:#dde1e4;background-color:#dde1e4}
+.pdt_selection.checkbox.disabled .label:after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='12' viewBox='0 0 15 12'%3E%3Cpath style='fill:none;stroke:%23fff;stroke-linecap:round;stroke-width:.15rem;fill-rule: evenodd;' d='M402,806l4,4,6-7' transform='translate(-399.313 -801.656)'/%3E%3C/svg%3E")}
+.pdt_selection.checkbox.checked.disabled .label:before {background:var(--fc_08, #dde1e4)}
+.pdt_selection.checkbox.checked.disabled .label:after {background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='12' viewBox='0 0 15 12'%3E%3Cpath style='fill:none;stroke:%23fff;stroke-linecap:round;stroke-width:.15rem;fill-rule: evenodd;' d='M402,806l4,4,6-7' transform='translate(-399.313 -801.656)'/%3E%3C/svg%3E")}
+
+/* 펀드 */
+.rate_wrap .acc_pannel .acc_wrap.inc_btn > .pdt_acc_name {width:100%; max-height:4.4rem; padding-right:0; overflow:hidden; text-overflow:ellipsis; word-break:break-word; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+.rate_wrap .acc_pannel .acc_wrap.inc_btn > .pdt_acc_name + .acc_num {margin-top:.2rem;}
+
+/* 퇴직연금 */
+.chk_form_in{margin-top: 1.2rem;}
+.chk_form_in li{padding-bottom: 2rem;}
+.chk_form_in .form_group{padding-left: 3rem;margin-top: 1rem;}
+.acco_in_chk{margin-top: 1.2rem;}
+.acco_in_chk li .tit:after{z-index: 1;}
+.acco_in_chk li .tit .btn_acco{z-index: 5;}

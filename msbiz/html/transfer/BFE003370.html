@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[다른금융착오송금 반환신청]거래내역 선택</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	
+	<div id="content">
+		<h1 class="h1">거래내역 선택</h1>
+		<div class="inform_top_wrap">
+			<p class="fs15">착오송금반환 신청할 <strong>이체 내역을</strong> 선택해주세요.<br>(최근 1년 이내의 이체한 내역 중 1건 선택 가능)</p>
+		</div> 
+		<div class="section">					
+			<div class="form_group">
+				<div class="form_tit">출금계좌번호</div><!-- 220729 : 텍스트 변경 -->
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn active" title="출금 계좌선택">우리 111212-01-123465</button><!-- 220729 : 리웍 -->
+					</div>
+				</div>
+			</div>
+
+			<div class="form_group">
+				<div class="form_tit">조회기간</div>
+				<div class="form_row">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="period1" name="period">
+							<label for="period1" class="label"><em>오늘</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period2" name="period">
+							<label for="period2" class="label"><em>1주일</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period3" name="period" checked>
+							<label for="period3" class="label"><em>1개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period4" name="period">
+							<label for="period4" class="label"><em>3개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period5" name="period">
+							<label for="period5" class="label"><em>6개월</em></label>
+						</span>
+					</div>
+					<div class="form_date_term">
+						<div class="input date">
+							<input type="tel" title="시작일 입력" maxlength="8" value ="2021.03.01">
+							<button type="button" class="btn_cal" title="시작일 선택"></button>                    
+						</div>
+						<span class="space">~</span>
+						<div class="input date">
+							<input type="tel" title="종료일 입력" maxlength="8" value ="2021.03.31"> 
+							<button type="button" class="btn_cal" title="종료일 선택"></button>                              
+						</div>
+					</div>              
+				</div>
+			</div>
+
+			<div class="btn_cnt_wrap">
+				<span><button type="button" class="btn primary lg">조회</button></span>
+			</div>
+		</div>
+
+		<hr class="hr_divide">
+
+		<div class="section">
+			<h2 class="h2">이체내역 조회결과</h2>
+			<p class="fs14"><span class="number fs15">2022.05.08 ~ 2022.06.07</span></p><!-- 221027 : 조회기간 삭제 -->
+			<!-- 조회결과영역 -->
+			<!-- 리스트 -->
+			<div class="chk_data_list_group gap_sm">
+				<div class="chk_data_list">
+					<div class="chk_head">
+						<span class="selection">
+							<input type="radio" id="chkData1" name="chkData" checked="">
+							<label for="chkData1" class="label"><strong class="number">2022.04.22 13:23:29</strong></label>
+						</span>
+					</div>
+					<ul class="list_data noline">
+						<li>
+							<div class="key">받는 분</div>
+							<div class="value">김국민</div>
+						</li>
+						<li>
+							<div class="key top">받는 분 계좌</div><!-- 220729 : top 클래스 추가 -->
+							<div class="value"><span class="icon_bank_004 xs"></span>KB국민<br><span class="number">841501-04-203236</span></div>
+						</li>
+						<li>
+							<div class="key">이체금액</div>
+							<div class="value"><span class="number">56,000</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">반환신청가능금액</div>
+							<div class="value"><span class="number">56,000</span><span class="num_unit">원</span></div>
+						</li>
+					</ul>
+				</div>
+				<div class="chk_data_list">
+					<div class="chk_head">
+						<span class="selection">
+							<input type="radio" id="chkData2" name="chkData" checked="">
+							<label for="chkData2" class="label"><strong class="number">2022.04.22 13:23:29</strong></label>
+						</span>
+					</div>
+					<ul class="list_data noline">
+						<li>
+							<div class="key">받는 분</div>
+							<div class="value">김국민</div>
+						</li>
+						<li>
+							<div class="key">받는 분 계좌</div>
+							<div class="value"><span class="icon_bank_011 xs"></span>농협<br><span class="number">841501-04-203236</span> <span class="number">001</span></div>
+						</li>
+						<li>
+							<div class="key">이체금액</div>
+							<div class="value"><span class="number">56,000</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">반환신청가능금액</div>
+							<div class="value"><span class="number">56,000</span><span class="num_unit">원</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //리스트 -->
+			
+			<div class="btn_list_btm more">
+				<button type="button" class="btn">더보기</button>
+			</div>
+			<!-- 조회결과영역 -->
+
+			<!-- 리스트 없음 -->
+			<div class="result nodata sm gap_lg">
+				<p class="tit">조회하신 내역이 없습니다.</p>
+			</div>
+			<!-- //리스트 없음 -->
+		</div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">이전</button></span>
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

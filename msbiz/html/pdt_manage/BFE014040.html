@@ -1,0 +1,292 @@
+<!doctype html>
+<head lang="ko">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>퇴직연금담당자관리</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="hidden">퇴직연금 담당자 조회</h1>
+
+		<div class="inform_top_wrap">
+			<p class="depth">신탁관리인 및 기타(가입자대표)의 등록/해제는 가입자의 동의 절차가 필요한 업무로 영업점을 이용하여 거래하시기 바랍니다.</p>
+		</div>
+
+		<div class="section">
+			<div class="form_group">
+				<div class="form_tit">계좌번호</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn" title="계좌 선택">선택</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="btn_cnt_wrap">
+				<span><button type="button" class="btn primary lg">조회</button></span>
+			</div>
+		</div>
+
+		<hr class="hr_divide">
+
+		<div class="section">
+			<h2 class="hidden">퇴직연금 담당자 내역</h2>
+			<div class="list_data_group_s">
+				<ul class="list_data left">
+					<li>
+						<div class="key">구분</div>
+						<div class="value"><strong>재무담당자(기업담당자)</strong></div>
+					</li>
+					<li>
+						<div class="key">담당자명</div><!-- 22/07/15 수정 -->
+						<div class="value">홍길동</div>
+					</li>
+				</ul>
+				<div class="toggle_sm_wrap">
+					<button class="tit js_toggle" aria-expanded="false">추가정보</button>
+					<div class="toggle_panel" role="region">
+						<ul class="list_data left">
+							<li>
+								<div class="key">고객번호</div>
+								<div class="value"><span class="number">000000-1******</span></div>
+							</li>
+							<li>
+								<div class="key">휴대폰번호</div>
+								<div class="value"><span class="number">000-49**-00**</span></div>
+							</li>
+							<li>
+								<div class="key">직장전화번호</div>
+								<div class="value"><span class="number">000-000-0000</span></div>
+							</li>
+							<li>
+								<div class="key">이메일주소</div>
+								<div class="value"><span class="number">kbstar@kbstar.com</span></div><!-- 22/07/15 수정 -->
+							</li>
+							<li>
+								<div class="key">등록일자</div>
+								<div class="value"><span class="number">2022.01.01</span></div>
+							</li>
+						</ul>
+						<div class="btn_list_btm">
+							<span><button type="button" class="btn outline sm">정보 수정</button></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list_data_group_s">
+				<ul class="list_data left">
+					<li>
+						<div class="key">구분</div>
+						<div class="value"><strong>재무담당자(기업담당자)</strong></div>
+					</li>
+					<li>
+						<div class="key">담당자명</div><!-- 22/07/15 수정 -->
+						<div class="value">홍길동</div>
+					</li>
+				</ul>
+				<div class="toggle_sm_wrap">
+					<button class="tit js_toggle" aria-expanded="false">추가정보</button>
+					<div class="toggle_panel" role="region">
+						<ul class="list_data left">
+							<li>
+								<div class="key">고객번호</div>
+								<div class="value"><span class="number">000000-1******</span></div>
+							</li>
+							<li>
+								<div class="key">휴대폰번호</div>
+								<div class="value"><span class="number">000-49**-00**</span></div>
+							</li>
+							<li>
+								<div class="key">직장전화번호</div>
+								<div class="value"><span class="number">000-000-0000</span></div>
+							</li>
+							<li>
+								<div class="key">이메일주소</div>
+								<div class="value"><span class="number">kbstar@kbstar.com</span></div><!-- 22/07/15 수정 -->
+							</li>
+							<li>
+								<div class="key">등록일자</div>
+								<div class="value"><span class="number">2022.01.01</span></div>
+							</li>
+						</ul>
+						<div class="btn_list_btm">
+							<span><button type="button" class="btn outline sm">정보 수정</button></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list_data_group_s">
+				<ul class="list_data left">
+					<li>
+						<div class="key">구분</div>
+						<div class="value"><strong>재무담당자(기업담당자)</strong></div>
+					</li>
+					<li>
+						<div class="key">담당자명</div><!-- 22/07/15 수정 -->
+						<div class="value">홍길동</div>
+					</li>
+				</ul>
+				<div class="toggle_sm_wrap">
+					<button class="tit js_toggle" aria-expanded="false">추가정보</button>
+					<div class="toggle_panel" role="region">
+						<ul class="list_data left">
+							<li>
+								<div class="key">고객번호</div>
+								<div class="value"><span class="number">000000-1******</span></div>
+							</li>
+							<li>
+								<div class="key">휴대폰번호</div>
+								<div class="value"><span class="number">000-49**-00**</span></div>
+							</li>
+							<li>
+								<div class="key">직장전화번호</div>
+								<div class="value"><span class="number">000-000-0000</span></div>
+							</li>
+							<li>
+								<div class="key">이메일주소</div>
+								<div class="value"><span class="number">kbstar@kbstar.com</span></div><!-- 22/07/15 수정 -->
+							</li>
+							<li>
+								<div class="key">등록일자</div>
+								<div class="value"><span class="number">2022.01.01</span></div>
+							</li>
+						</ul>
+						<div class="btn_list_btm">
+							<span><button type="button" class="btn outline sm">정보 수정</button></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list_data_group_s">
+				<ul class="list_data left">
+					<li>
+						<div class="key">구분</div>
+						<div class="value"><strong>재무담당자(기업담당자)</strong></div>
+					</li>
+					<li>
+						<div class="key">담당자명</div><!-- 22/07/15 수정 -->
+						<div class="value">홍길동</div>
+					</li>
+				</ul>
+				<div class="toggle_sm_wrap">
+					<button class="tit js_toggle" aria-expanded="false">추가정보</button>
+					<div class="toggle_panel" role="region">
+						<ul class="list_data left">
+							<li>
+								<div class="key">고객번호</div>
+								<div class="value"><span class="number">000000-1******</span></div>
+							</li>
+							<li>
+								<div class="key">휴대폰번호</div>
+								<div class="value"><span class="number">000-49**-00**</span></div>
+							</li>
+							<li>
+								<div class="key">직장전화번호</div>
+								<div class="value"><span class="number">000-000-0000</span></div>
+							</li>
+							<li>
+								<div class="key">이메일주소</div>
+								<div class="value"><span class="number">kbstar@kbstar.com</span></div><!-- 22/07/15 수정 -->
+							</li>
+							<li>
+								<div class="key">등록일자</div>
+								<div class="value"><span class="number">2022.01.01</span></div>
+							</li>
+						</ul>
+						<div class="btn_list_btm">
+							<span><button type="button" class="btn outline sm">정보 수정</button></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list_data_group_s">
+				<ul class="list_data left">
+					<li>
+						<div class="key">구분</div>
+						<div class="value"><strong>인사담당자(기업담당자)</strong></div>
+					</li>
+					<li>
+						<div class="key">담당자명</div><!-- 22/07/15 수정 -->
+						<div class="value">홍길동</div>
+					</li>
+				</ul>
+				<div class="toggle_sm_wrap">
+					<button class="tit js_toggle" aria-expanded="false">추가정보</button>
+					<div class="toggle_panel" role="region">
+						<ul class="list_data left">
+							<li>
+								<div class="key">고객번호</div>
+								<div class="value"><span class="number">000000-1******</span></div>
+							</li>
+							<li>
+								<div class="key">휴대폰번호</div>
+								<div class="value"><span class="number">000-49**-00**</span></div>
+							</li>
+							<li>
+								<div class="key">직장전화번호</div>
+								<div class="value"><span class="number">000-000-0000</span></div>
+							</li>
+							<li>
+								<div class="key">이메일주소</div>
+								<div class="value"><span class="number">kbstar@kbstar.com</span></div><!-- 22/07/15 수정 -->
+							</li>
+							<li>
+								<div class="key">등록일자</div>
+								<div class="value"><span class="number">2022.01.01</span></div>
+							</li>
+						</ul>
+						<div class="btn_list_btm">
+							<span><button type="button" class="btn outline sm">정보 수정</button></span>
+							<span><button type="button" class="btn outline sm">담당자 해제</button></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn_list_btm more">
+				<button type="button" class="btn">더보기</button>
+			</div>
+			
+			<!-- No Data -->
+			<div class="result nodata sm">
+				<p class="tit">조회하신 내역이 없습니다.</p>
+			</div>
+			<!-- //No Data -->
+		</div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" id="layer3a" class="btn primary lg">담당자 등록</button></span>  
+			</div>
+		</div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

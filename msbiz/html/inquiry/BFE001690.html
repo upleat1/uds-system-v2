@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[계좌 순서변경]계좌 순서변경_KB국민은행(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <script src="/msbiz/app/js/library/sortable.min.js"></script> <!-- 메뉴변경 드래그 js -->
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<!-- 220729 리웍 -->
+<div id="wrap">
+	<div id="content">
+        <h1 class="hidden">계좌 순서변경_KB국민은행(팝)</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>드래그로 변경 시, 이동할 계좌를 선택하여 원하는 위치로 끌어다 놓으세요.</li>
+                <li>버튼으로 변경 시, 계좌를 선택한 다음 [위로], [아래로] 버튼을 눌러서 위치를 바꾸세요.</li>
+                <li>계좌순서는 그룹 내에서만 변경할 수 있습니다.</li>
+                <li>현재 로그인한 사업장 내에서만 변경할 수 있습니다. </li>
+            </ul>
+        </div>
+		
+        <div class="tab_wrap account_all">
+            <div class="tab_list" role="tablist">
+                <div class="scroll_wrap">
+                    <a href="#" class="active">KB국민은행</a>
+                    <a href="BFE001680.html">다른금융</a>                    
+                </div>
+            </div>
+            <div class="tab_panel account_all">
+                <div class="section">
+                    <div class="sel_drag_sort">
+                        <span class="selection drag_move">
+                            <input type="radio" id="radioDrag1" name="drag_sort" checked="">
+                            <label for="radioDrag1" class="label"><em class="hidden">드래그로 순서이동</em></label>
+                        </span>
+                        <span class="selection button_move">
+                            <input type="radio" id="radioSort" name="drag_sort">
+                            <label for="radioSort" class="label"><em class="hidden">위아래 버튼으로 순서이동</em></label>
+                        </span>
+                    </div>
+                    <div class="section_r_m">
+                        <!-- 2022-07-20 수정 -->
+                        <div>
+                            <div class="acc_acco_list">
+                                <div class="tit_area js_toggle on" role="button" aria-expanded="true">
+                                    <div class="tit btn_toggle">
+                                        <strong class="cate">입출금</strong>
+                                    </div>
+                                </div>
+                                <div class="toggle_panel">
+                                    <div id="drag1" class="acc_list_wrap type_list drag new_list_drag">
+                                        <div class="acc_pannel li">
+                                            <div class="acc_wrap">
+                                                <div class="acc_bank md">
+                                                    <span class="bk_num">574498-90-009768</span>
+                                                </div>
+                                                <div class="acc_name">우리WON모아예금</div>
+                                            </div>
+                                            <button type="button" class="btn_move"><span class="hidden">드래그로 순서변경</span></button>
+                                            <div class="move_area">
+                                                <button type="button" class="btn_up"><span class="hidden">순서위로</span></button>
+                                                <button type="button" class="btn_down"><span class="hidden">순서아래로</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="acc_pannel li">
+                                            <div class="acc_wrap">
+                                                <div class="acc_bank md">
+                                                    <span class="bk_num">574498-90-009768</span>
+                                                </div>
+                                                <div class="acc_name">듀얼K입출금통장</div>
+                                            </div>
+    
+                                            <button type="button" class="btn_move"><span class="hidden">드래그로
+                                                    순서변경</span></button>
+                                            <div class="move_area">
+                                                <button type="button" class="btn_up"><span
+                                                        class="hidden">순서위로</span></button>
+                                                <button type="button" class="btn_down"><span
+                                                        class="hidden">순서아래로</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="acc_pannel li">
+                                            <div class="acc_wrap">
+                                                <div class="acc_bank md">
+                                                    <span class="bk_num">574498-90-009768</span>
+                                                </div>
+                                                <div class="acc_name">하나원큐적금</div>
+                                            </div>
+    
+                                            <button type="button" class="btn_move"><span class="hidden">드래그로
+                                                    순서변경</span></button>
+                                            <div class="move_area">
+                                                <button type="button" class="btn_up"><span
+                                                        class="hidden">순서위로</span></button>
+                                                <button type="button" class="btn_down"><span
+                                                        class="hidden">순서아래로</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc_acco_list">
+                                <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                    <div class="tit btn_toggle">
+                                        <strong class="cate">예적금</strong>
+                                    </div>
+                                </div>
+                                <div class="toggle_panel">
+                                    <div id="drag2" class="acc_list_wrap type_list drag new_list_drag">
+                                        <div class="acc_pannel li">
+                                            <div class="acc_wrap">
+                                                <div class="acc_bank md">
+                                                    <span class="bk_num">574498-90-009768</span>
+                                                    <div class="acc_name">우리WON모아예금</div>
+                                                </div>
+                                            </div>
+    
+                                            <button type="button" class="btn_move"><span class="hidden">드래그로
+                                                    순서변경</span></button>
+                                            <div class="move_area">
+                                                <button type="button" class="btn_up"><span
+                                                        class="hidden">순서위로</span></button>
+                                                <button type="button" class="btn_down"><span
+                                                        class="hidden">순서아래로</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="acc_pannel li">
+                                            <div class="acc_wrap">
+                                                <div class="acc_bank md">
+                                                    <span class="bk_num">574498-90-009768</span>
+                                                </div>
+                                                <div class="acc_name">듀얼K입출금통장</div>
+                                            </div>
+    
+                                            <button type="button" class="btn_move"><span class="hidden">드래그로
+                                                    순서변경</span></button>
+                                            <div class="move_area">
+                                                <button type="button" class="btn_up"><span
+                                                        class="hidden">순서위로</span></button>
+                                                <button type="button" class="btn_down"><span
+                                                        class="hidden">순서아래로</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="acc_pannel li">
+                                            <div class="acc_wrap">
+                                                <div class="acc_bank md">
+                                                    <span class="bk_num">574498-90-009768</span>
+                                                </div>
+                                                <div class="acc_name">하나원큐적금</div>
+                                            </div>
+    
+                                            <button type="button" class="btn_move"><span class="hidden">드래그로
+                                                    순서변경</span></button>
+                                            <div class="move_area">
+                                                <button type="button" class="btn_up"><span
+                                                        class="hidden">순서위로</span></button>
+                                                <button type="button" class="btn_down"><span
+                                                        class="hidden">순서아래로</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc_acco_list">
+                                <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                    <div class="tit btn_toggle">
+                                        <strong class="cate">펀드</strong>
+                                    </div>
+                                </div>
+                                <div class="toggle_panel">
+                                    <div id="drag3" class="acc_list_wrap type_list drag new_list_drag">
+                                        <div class="acc_pannel li">
+                                            <div class="acc_wrap">
+                                                <div class="acc_bank md">
+                                                    <span class="bk_num">574498-90-009768</span>
+                                                </div>
+                                                <div class="acc_name">우리WON모아예금</div>
+                                            </div>
+    
+                                            <button type="button" class="btn_move"><span class="hidden">드래그로
+                                                    순서변경</span></button>
+                                            <div class="move_area">
+                                                <button type="button" class="btn_up"><span
+                                                        class="hidden">순서위로</span></button>
+                                                <button type="button" class="btn_down"><span
+                                                        class="hidden">순서아래로</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="acc_pannel li">
+                                            <div class="acc_wrap">
+                                                <div class="acc_bank md">
+                                                    <span class="bk_num">574498-90-009768</span>
+                                                </div>
+                                                <div class="acc_name">듀얼K입출금통장</div>
+                                            </div>
+    
+                                            <button type="button" class="btn_move"><span class="hidden">드래그로
+                                                    순서변경</span></button>
+                                            <div class="move_area">
+                                                <button type="button" class="btn_up"><span
+                                                        class="hidden">순서위로</span></button>
+                                                <button type="button" class="btn_down"><span
+                                                        class="hidden">순서아래로</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="acc_pannel li">
+                                            <div class="acc_wrap">
+                                                <div class="acc_bank md">
+                                                    <span class="bk_num">574498-90-009768</span>
+                                                </div>
+                                                <div class="acc_name">하나원큐적금</div>
+                                            </div>
+    
+                                            <button type="button" class="btn_move"><span class="hidden">드래그로
+                                                    순서변경</span></button>
+                                            <div class="move_area">
+                                                <button type="button" class="btn_up"><span
+                                                        class="hidden">순서위로</span></button>
+                                                <button type="button" class="btn_down"><span
+                                                        class="hidden">순서아래로</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">초기화</button></span>
+                <span><button type="button" class="btn primary lg">저장</button></span>
+            </div>
+        </div>
+	</div><!-- //content -->
+    <!-- //220729 리웍 -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

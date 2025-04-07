@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-정보입력_보내는분/받는분정보입력선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+	<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap"><!-- wrap -->
+
+	
+    <div id="content">
+		<!-- step_wrap step2 -->
+			
+		<div class="step_wrap js_step">    
+			<div class="step" role="img" aria-label="총 6단계 중 현재 2단계">
+				<span class="current">2</span><span class="mark">/</span><span class="total">6</span><!-- 220901 다국어 6단계로 수정-->
+			</div>
+			<h1 class="h1">보내는분/받는분 정보입력</h1>
+		</div>
+
+		<div class="section">
+			<h2 class="h2">보내는분</h2><!-- 220826 다국어 (Sender Information) 삭제-->
+
+			<div class="form_group error">
+				<div class="form_tit">보내는분(영문)</div><!--  다국어 220826 (Sender Name) 삭제-->
+				<div class="form_row">
+					<div class="input">
+						<input type="text" id="id11" value="TOTTENHAM HOTSPUR FOOTBALL CLUB" title="보내는분(영문)" readonly> <!-- 221104 다국어 기획 최철원님 readonly 요청 -->
+					</div>
+				</div>
+				<p class="tip" aria-labelledby="id11">보내는 분을 입력해 주세요.</p> <!-- 220825 aria-labelledby 추가 -->
+				<p class="tip_info" aria-labelledby="id01">실명법에 의거하여 반드시 본인 영문명으로 거래하셔야 하며, 영문명 변경이 필요한 경우 가까운 KB국민은행 영업점에 방문하여 변경해 주시기 바랍니다.</p> <!-- 221104 다국어 기획 요청 내용추가 -->
+			</div>
+
+			<!-- 220825 보내는분주소 추가 -->
+			<div class="form_group">
+				<div class="form_tit">보내는분주소(영문)</div> <!-- 220826  다국어 (Sender Address) 삭제 -->
+				<div class="form_row">
+					<div class="input">
+						<input type="text" value="TOTTENHAM HOTSPUR FOOTBALL CLUB" title="보내는분주소(영문)" readonly><!-- 221006 title명 변경 -->
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="input">
+						<input type="text" id="id05" value="154-53" title="보내는분주소(영문) 상세" readonly><!-- 221006 title명 변경 -->
+					</div>
+					<p class="tip_info" aria-labelledby="id05">영문주소가 잘못된 경우 영업점에 문의 후 변경 하시기 바랍니다.</p><!-- 220826 (ppt 있음)소스에 고정안내문구 내용 없어서 추가, 한국어도 내용 없음  -->
+				</div>
+			</div>
+			<!-- //220825 보내는분주소 추가 -->
+
+			<div class="form_group tel">
+				<div class="form_tit">연락처</div><!-- 220826 다국어 (Sender Contact No.) 삭제-->
+				<div class="form_row col">
+					<div class="select">
+						<button type="button" class="select_btn" title="지역번호 선택">02</button>
+					</div>
+					<div class="input" role="button">
+						<input type="tel" id="id04" value="" title="연락처 뒷자리"><!-- 220922 다국어 자택 단어 삭제 --><!-- 221006 title명 변경 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2 class="h2">받는분</h2><!-- 220826  다국어 (Receiver Information) 삭제 -->
+			<div class="form_group error">
+				<div class="form_tit">받는분(영문)</div><!-- 220826  다국어 (Receiver Name) 삭제 -->
+				<div class="form_row">
+					<div class="input">
+						<input type="text" id="id12" title="받는분(영문)"> <!-- 220825 id 추가 --><!-- 221006 title명 변경 -->
+					</div>
+				</div>
+				<p class="tip_info">영문,숫자,일부 특수문자 35자 이내 입력</p><!-- 220826  다국어  placeholder 내용 추가 -->
+				<p class="tip_info" aria-labelledby="id12">받는 분 이름이 길 경우 주소(영문)란에 이어서 입력</p>
+				<p class="tip" aria-labelledby="id12">받는분(영문)을 입력해 주세요.</p> <!-- 220825 aria-labelledby 추가 -->
+			</div>
+			
+			<div class="form_group error">
+				<div class="form_tit">(선택)주소(영문)</div> <!-- 220826 다국어 (Receiver Address) 삭제 -->
+				<div class="form_row">
+					<div class="input">
+						<input type="text" id="id13" title="(선택)주소(영문)"> <!-- 220825 id 추가 --><!-- 221006 title명 변경 -->
+					</div>
+				</div>
+				<p class="tip_info">영문,숫자,일부 특수문자 70자 이내 입력</p><!-- 220826 다국어 placeholder 삭제 -->
+				<p class="tip" aria-labelledby="id13">아랍에미리트로 송금 시 받는분 주소는 필수로 입력해 주세요.</p> <!-- 220825 aria-labelledby 추가 -->
+				<p class="tip" aria-labelledby="id13">중국 내 은행으로 송금하시는 경우에는 정확한 받는분, 받는분 주소(30자 이상)입력이 필수입니다.<br> 미입력시 송금 취소로 인하여 수수료 및 환차손이 발생할 수 있으니 유의하시기 바랍니다.</p> <!-- 220825 aria-labelledby 추가 -->
+				<p class="tip" aria-labelledby="id13">캐나다로 송금 시 받는분 주소는 필수로 입력해 주세요.</p><!-- 220916 다국어 내용 V1.05 추가 -->
+			</div>
+
+			<div class="form_group error">
+				<div class="form_tit">(선택)연락처</div> <!-- 220825 문구 수정 --><!-- 220826 다국어 (Receiver Contact No.) 삭제-->
+				<div class="form_row">
+					<div class="input">
+						<input type="text" title="(선택)연락처"><!-- 221006 title명 변경 -->
+					</div>
+					<p class="tip_info">영문,숫자,일부 특수문자 35자 이내 입력</p><!-- 220916 다국어 aria-labelledby 추가 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- 220825 삭제
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li>
+						<strong>365일 24시간 해외송금 신청이 가능합니다. 단, 외화계좌에서 출금하는 경우 09시~23시까지 신청 가능합니다.</strong>
+					</li>
+					<li>
+						고객님의 해외송금 정보에 따라 다양한 KB국민은행의 해외송금 서비스 중 가장 저렴한 서비스의 수수료를 자동 적용 합니다.<br>
+						과거 거래 횟수, 고객 등급에 따라 더욱 저렴한 수수료가 적용될 수 있습니다. 자세한 수수료 정보는 송금정보 입력하신 후 확인 가능합니다.
+					</li>
+					<li>
+						'송금 보내실 때' 환율이 적용되며, 시간제한없이 30% 환율우대가 적용됩니다.<br>
+						단, 국민은행의 제휴은행으로 송금하는 경우(ONE ASIA 해외송금)에는 고시된 '송금 보내실 때' 환율이 적용됩니다.
+					</li>
+					<li>
+						은행 비영업일 또는 은행 영업일 09:00~16:00 이후 신청하신 송금은 다음 은행 영업일에 해외로 보내집니다.
+					</li>
+					<li>
+						원화/외화계좌에서 출금된 금액은 인터넷뱅킹 1회, 1일 이체한도에 포함됩니다.(외화계좌 출금액은 원화로 환산)
+					</li>
+					<li>
+						송금구분/송금세부구분 항목 이외의 목적의 해외송금의 경우에는 가까운 영업점에 방문 시 송금이 가능합니다.
+					</li>
+					<li>
+						송금정보는 영문, 숫자 그리고 일부 특수문자( / - ? ( ) . , + )만 입력이 가능합니다.
+					</li>
+				</ul>
+			</div>
+		</div> -->
+
+		<div class="btn_confirm_wrap"><!-- btn_confirm_wrap -->
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">다음</button></span>
+			</div>
+		</div>
+
+	</div>
+	
+</div><!-- //wrap -->
+
+
+
+</body>
+</html>

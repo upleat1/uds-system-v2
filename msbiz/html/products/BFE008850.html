@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[건별대출실행]건별대출실행</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">건별 대출신청</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>%사업자명% 고객님의 대출실행가능금액 정보입니다. </li>
+                <li>필요하신 금액만큼 입력 후 [다음] 버튼을 선택 해주세요.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2 class="h3">대출실행가능 금액확인</h2>
+            <ul class="list_data lbt">
+                <li>
+                    <div class="key">상품명</div>
+                    <div class="value">KB메가셀러론</div>
+                </li>
+                <li>
+                    <div class="key">선정산가능금액합계액</div>
+                    <div class="value">
+                        <span class="number">100,000,000</span><span class="num_unit">원</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">한도약정금액</div>
+                    <div class="value">
+                        <span class="number">100,000,000</span><span class="num_unit">원</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">대출잔액</div>
+                    <div class="value">
+                        <span class="number">20,000,000</span><span class="num_unit">원</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">
+                        대출실행가능금액
+                        <div class="tooltip_limited">
+                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                <div class="tooltip_cont"> 
+                                    <ul class="bul">
+                                        <li>선정산(대출)을 신청할 수 있는 금액</li>
+                                        <li>[한도약정금액, 선정산가능금액 합계액] 중 작은금액 – 대출잔액</li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="value">
+                        <strong class="number">80,000,000</strong><span class="num_unit">원</span>
+                        <div class="gap_xxs">
+                            <button type="button" class="btn outline xxs">정산채권 상세정보</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">대출금리</div>
+                    <div class="value">
+                        <strong class="number">4.50</strong><span class="num_unit">%</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">대출만기일</div>
+                    <div class="value">
+                        <strong class="number">2022.01.26</strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">대출금입금계좌</div>
+                    <div class="value">
+                        <span class="number">400401-04-123789</span>
+                    </div>
+                </li>
+            </ul>
+            <!-- 대출 신청금액 -->
+            <div class="form_group error">
+                <div class="form_tit"><h2 class="h3">대출 신청금액</h2></div>
+                <div class="form_row">
+                    
+                    <div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 대출 신청금액 입력" onclick="">
+                        <input type="tel" aria-hidden="true" id="id01" maxlength="16" placeholder="숫자만 입력" title="대출 신청금액" data-unit="원" readonly class="bg_white">
+                    </div>
+                </div>
+                <p class="form_hangul" aria-hidden="true">원</p>
+                <div class="form_btm_wrap">
+                    <p class="tip" aria-labelledby="id01">대출신청금액을 입력해주세요.</p><!-- 개발전용 : validation 결과 메세지 -->
+                    <p class="tip" aria-labelledby="id01">대출실행가능금액보다 입력하신 대출신청금액이 큽니다.</p><!-- 개발전용 : validation 결과 메세지 -->
+                    <p class="tip" aria-labelledby="id01">대출신청금액은 10만원 단위로 입력하셔야 합니다.</p><!-- 개발전용 : validation 결과 메세지 -->
+                </div>
+            </div>
+            <!-- //대출 신청금액 -->
+        </div>
+
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">다음</button></span>              
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

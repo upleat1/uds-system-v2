@@ -1,0 +1,192 @@
+<!doctype html>
+<head lang="ko">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>전자어음수취배서 조회</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+		<h1 class="h1">전자어음수취배서 조회</h1>
+		<div class="inform_top_wrap">전자어음수취배서를 조회할 수 있는 메뉴입니다.<br/>판매기업 사업자등록번호를 확인하시기 바랍니다.</div>
+
+		<div class="section">
+			<div class="form_group">
+				<div class="form_tit">사업자(주민)등록번호</div>				
+				<div class="form_row">
+					<!-- 221024 수정 -->
+					<div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 사업자(주민)등록번호, 사업자(주민)등록번호 입력" onclick="">
+						<input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="사업자(주민)등록번호" class="bg_white" readonly>
+					</div>
+					<!-- //221024 수정 -->
+				</div>
+			</div>
+
+			<div class="form_group">
+				<div class="form_tit">수취 계좌번호</div>
+				<div class="form_row">        
+					<div class="input">            
+						<input type="tel" placeholder="숫자만 입력" title="수취 계좌번호정보" value="" readonly><!-- 221024 추가 및 수정 : class="bg_white" readonly, placeholder 수정 -->
+					</div>
+				</div>    
+			</div>
+
+			<div class="form_group">
+				<div class="form_tit">수취어음 조회기간</div>
+				<div class="form_row">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="period1" name="period" >
+							<label for="period1" class="label"><em>오늘</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period2" name="period">
+							<label for="period2" class="label"><em>1주일</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period3" name="period" checked>
+							<label for="period3" class="label"><em>1개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period4" name="period">
+							<label for="period4" class="label"><em>3개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period5" name="period">
+							<label for="period5" class="label"><em>6개월</em></label>
+						</span>
+					</div>
+					<div class="form_date_term">
+						<div class="input date">
+							<input type="tel" title="시작일 입력" maxlength="8" value ="2021.03.01" readonly>
+							<button type="button" class="btn_cal" title="시작일 선택"></button>                    
+						</div>
+						<span class="space">~</span>
+						<div class="input date">
+							<input type="tel" title="종료일 입력" maxlength="8" value ="2021.03.31" readonly>
+							<button type="button" class="btn_cal" title="종료일 선택"></button>                              
+						</div>
+					</div>              
+				</div>
+			</div>
+
+			<div class="btn_cnt_wrap">
+				<span><button type="button" class="btn primary lg">조회</button></span>
+			</div>
+		</div>
+
+		<hr class="hr_divide">
+
+		<div class="section">
+			<h2 class="h3">전자어음 목록</h2>
+			<div class="list_data_group">
+				<div class="list_data_group_s">
+					<ul class="list_data left">
+						<li>
+							<div class="key">매출채권채무자</div>
+							<div class="value">(한)주사비안종미한</div>
+						</li>
+						<li>
+							<div class="key">채무자 사업자등록번호</div>
+							<div class="value"><span class="number">104-81-75840</span></div>
+						</li>
+						<li>
+							<div class="key">차주명(할인신청인)</div>
+							<div class="value">고용린권동람경오</div>
+						</li>
+						<li>
+							<div class="key">차주(할인신청인) 사업자등록번호</div>
+							<div class="value"><span class="number">135-81-85245</span></div>
+						</li>
+						<li>
+							<div class="key">채권등록일</div>
+							<div class="value"><span class="number">2022.04.21</span></div>
+						</li>
+						<li>
+							<div class="key">대출만기일</div>
+							<div class="value"><span class="number">2022.05.21</span></div>
+						</li>
+					</ul>
+					<div class="btn_list_btm">
+						<span><button type="button" class="btn outline sm">상세조회</button></span>
+					</div>
+				</div>
+				<div class="list_data_group_s">
+					<ul class="list_data left">
+						<li>
+							<div class="key">매출채권채무자</div>
+							<div class="value">(한)주사비안종미한</div>
+						</li>
+						<li>
+							<div class="key">채무자 사업자등록번호</div>
+							<div class="value"><span class="number">104-81-75840</span></div>
+						</li>
+						<li>
+							<div class="key">차주명(할인신청인)</div>
+							<div class="value">고용린권동람경오</div>
+						</li>
+						<li>
+							<div class="key">차주(할인신청인) 사업자등록번호</div>
+							<div class="value"><span class="number">135-81-85245</span></div>
+						</li>
+						<li>
+							<div class="key">채권등록일</div>
+							<div class="value"><span class="number">2022.04.21</span></div>
+						</li>
+						<li>
+							<div class="key">대출만기일</div>
+							<div class="value"><span class="number">2022.05.21</span></div>
+						</li>
+					</ul>
+					<div class="btn_list_btm">
+						<span><button type="button" class="btn outline sm">상세조회</button></span>
+					</div>
+				</div>
+
+				<div class="btn_list_btm more">
+					<button type="button" class="btn">더보기</button>
+				</div>
+			</div>		
+
+			<!-- 조회결과없음 -->
+			<div class="result nodata sm">
+				<p class="tit">조회하실 내역이 없습니다.</p>
+			</div>
+			<!-- //조회결과없음 -->
+		</div>
+			
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span>
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

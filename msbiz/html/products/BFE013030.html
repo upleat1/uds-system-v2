@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[펀드신규]2단계_정보입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_products">
+            <div class="step_wrap js_step">
+                <div class="step" role="img" aria-label="총 4단계 중 현재 2단계">
+                    <span class="current">2</span><span class="mark">/</span><span class="total">4</span>
+                </div>
+                <h1 class="h1">정보입력</h1>
+            </div>
+            <h2 class="hidden">가입정보입력</h2>
+            <div class="inform_top_wrap gap_md">
+                <ul class="depth bul">
+                    <li>신규예약시 출금계좌에서 신규금액을 출금하여 별도의 신탁계정에 예치한 후 펀드별 매입기준가격 적용일에 매입됩니다. 단, 마감후 신규예약 거래는 다음 영업일 신규금액을 출금하여 별도의 신탁계정에 예치한 후 펀드별 매입기준가격 적용일에 매입됩니다.</li>
+                    <li>신규금액을 신탁계정에 예치하는 관계로 출금계좌에서 신규금액 출금시 현금화되지 않은 수표 및 어음은 출금이 불가하여 잔액이 부족한 경우 신규예약이 불가능합니다.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">펀드명</div>
+                    <!-- 220729 class="p" 삭제 및 class="fs17", class="bold" 추가 -->
+                    <p class="fs17 bold gap_xs">미래에셋 차이나H 레버리지1.5 증권투자신탁(주식-파생재간접형) AE</p>
+                    <div class="form_btm_wrap right">
+                        <p class="sum_hint">당일기준가
+                            <!-- 220729 class="fc_nega" 삭제 및 태그 위치 수정 -->
+                            <strong class="number fc_gray3"><em>21,787,888,000</em><span class="num_unit">원</span></strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="form_group js_trans">
+                    <div class="form_tit">저축방식</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" title="저축방식" value="임의식" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">가입금액
+                        <div class="tooltip_limited">
+                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                <p class="tooltip_tit">신규금액 입력 시</p>
+                                <div class="tooltip_cont">
+                                    예시) 선취수수료율 1%인 펀드신규시 신규금액을 100만원으로 입력하면 99만 1백원 투자되며, 9천9백원 선취수수료 차감됨. <!-- 220729 class="fc_nega" 삭제 --><strong>[투자금액은 신규금액 / (1+선취수수료율)을 원단위 절상한 금액]</strong>
+                                </div>
+                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <p class="hidden">가입금액 단축키로 입력</p>
+                        <div class="btn_trans_group">
+                            <span><button type="button" class="btn"><em class="number">100</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">50</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">10</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">5</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">1</em><em class="num_unit">만</em></button></span>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input unit js_unit" role="button" aria-label="가입금액">
+                            <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="가입금액" data-unit="원" readonly class="bg_white">
+                        </div>
+                        <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+
+                        <!-- 221109 추가 -->
+                        <div class="right">
+                            <!-- 가입금액 입력한 경우 해당 펀드의 수수료 정보 노출 -->
+                            <p class="sum_hint">선취수수료 : <strong class="number fc_posi">1,000</strong><span class="num_unit">원</span></p>
+                            <!-- 가입금액 입력한 경우 가입금액에서 해당 펀드의 선취수수료를 제외한 금액 정보 노출 -->
+                            <p class="sum_hint">실투자금액 : <strong class="number fc_nega">29,999,000</strong><span class="num_unit">원</span></p>
+                        </div>
+                        <!-- //221109 추가 -->
+
+                        <p class="tip_info">선취형 펀드의 경우, 신규금액에서 선취수수료를 차감한 금액이 투자됩니다.</p>
+                    </div>
+                </div>
+                <!-- 계좌선택 숨김 -->
+                <!-- hidden -->
+                <div class="form_group " aria-hidden="true">
+                    <div class="form_row">
+                        <div class="form_tit">계좌선택</div>
+                        <div class="form_row">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <!-- 220729 checked="" 수정 -->
+                                    <input type="radio" id="radioBox1" name="radio_box1" checked>
+                                    <label for="radioBox1" class="label"><em>입출금계좌</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="radioBox2" name="radio_box1">
+                                    <label for="radioBox2" class="label"><em>MMF 계좌</em></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //계좌선택 숨김 -->
+                <div class="form_group">
+                    <div class="form_tit">출금계좌번호</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            <!-- 220729 class="number" 삭제 -->
+                            <button type="button" class="select_btn active" title="출금계좌정보 선택">849501-01-297276 (급여통장)</button>
+                        </div>
+                    </div>
+                    <!-- 출금계좌 선택한 경우 -->
+                    <div class="form_btm_wrap right">
+                        <p class="sum_hint">출금가능금액 : <strong class="number fc_posi">1,787,888,000</strong><span class="num_unit">원</span></p>
+                        <p class="sum_hint">1일 이체잔여한도 : <strong class="number fc_nega">21,787,888,000</strong><span class="num_unit">원</span></p>
+                    </div>
+                    <!-- //출금계좌 선택한 경우 -->
+                </div>
+                <!-- inline, rdoChk_box -->
+                <div class="form_group">
+                    <div class="form_tit">계좌비밀번호</div>
+                    <div class="form_row">
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="radioBox3" name="radio_box2" checked>
+                                <label for="radioBox3" class="label"><em>출금계좌와<br>동일하게 설정</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="radioBox4" name="radio_box2">
+                                <label for="radioBox4" class="label"><em>신규 설정</em></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 신규 설정 선택한 경우 -->
+                <div class=" form_group">
+                    <div class="form_tit gap_xs">신규계좌 비밀번호</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" placeholder="숫자 4자리" title="신규계좌 비밀번호" maxlength="4">
+                        </div>
+                    </div>
+                    <div class="form_tit">비밀번호 확인</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" placeholder="숫자 4자리" title="비밀번호 확인" maxlength="4">
+                        </div>
+                    </div>
+                </div>
+                <!-- //신규 설정 선택한 경우 -->
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="form_tit">계약서류 수신방법</div>
+                        <div class="form_row">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <!-- 220729 checked="" 수정 -->
+                                    <input type="radio" id="radioBox5" name="radio_box3" checked>
+                                    <label for="radioBox5" class="label"><em>이메일</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="radioBox6" name="radio_box3">
+                                    <label for="radioBox6" class="label"><em>LMS</em></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 이메일 선택 -->
+                <div class="form_group email">
+                    <div class="form_tit">이메일주소</div>
+                    <div class="form_row col">
+                        <div class="input">
+                            <input type="text" title="ID" placeholder="아이디" value="">
+                        </div>
+                        <span class="space">@</span>
+                        <div class="select">
+                            <button type="button" class="select_btn" title="도메인 선택">도메인</button>
+                        </div>
+                    </div>
+                    <p class="tip_info">고객님이 입력하신 이메일주소로 발송되며, 고객정보의 이메일 주소는 변경되지 않습니다.</p>
+                    <p class="tip_info">『금융소비자보호법』에 따라 이메일 및 문자메시지(LMS) 수신 거절 여부와 관계없이 발송됩니다.</p>
+                    <!-- 221130 추가 -->
+                    <p class="tip_info">고객정보 등록이나 수정이 필요한 경우 '고객정보 수정' 버튼을 선택해주세요.</p>
+                    <div class="right">
+                        <a href="#none" class="btn_txt sm ico_arr" role="button" title="고객정보 수정"><span>고객정보 수정</span></a>
+                    </div>
+                    <!-- //221130 추가 -->
+                </div>
+                <!-- //이메일 선택 -->
+                <!-- LMS 선택 -->
+                <div class="form_group">
+                    <div class="form_tit">휴대폰번호</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" title="ID" value="010-1234-1234" readonly>
+                        </div>
+                    </div>
+                    <p class="tip_info">LMS발송은 가입시점의 고객정보에 등록된 휴대폰번호로 발송됩니다.</p>
+                    <p class="tip_info">『금융소비자보호법』에 따라 이메일 및 문자메시지(LMS) 수신 거절 여부와 관계없이 발송됩니다.</p>
+                    <!-- 221130 추가 -->
+                    <p class="tip_info">고객정보 등록이나 수정이 필요한 경우 '고객정보 수정' 버튼을 선택해주세요.</p>
+                    <div class="right">
+                        <a href="#none" class="btn_txt sm ico_arr" role="button" title="고객정보 수정"><span>고객정보 수정</span></a>
+                    </div>
+                    <!-- //221130 추가 -->
+                </div>
+                <!-- //LMS 선택 -->
+                <div class="form_group">
+                    <div class="form_tit">자산운용보고서 수신방법</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            <button type="button" class="select_btn number active" title="출금계좌정보 선택">이메일</button>
+                        </div>
+                    </div>
+                    <p class="tip_info">이메일 주소 또는 자택/직장 주소 변경/등록은 영업점에서만 처리 가능합니다. 단, 개인사업자는 유선(1588-9999)으로 신청 가능합니다.</p>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">실질수익률보고서 수신방법</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            <button type="button" class="select_btn number active" title="출금계좌정보 선택">이메일</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="form_tit">SMS 수신여부</div>
+                        <div class="form_row">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="radioBox7" name="radio_box4">
+                                    <label for="radioBox7" class="label"><em>거부</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="radioBox8" name="radio_box4" checked>
+                                    <label for="radioBox8" class="label"><em>수신</em></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="form_tit">안내희망 수익률등록</div>
+                        <div class="form_row">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="radioBox8" name="radio_box5" checked>
+                                    <label for="radioBox8" class="label"><em>자동지정</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="radioBox9" name="radio_box5">
+                                    <label for="radioBox9" class="label"><em>고객지정</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="radioBox10" name="radio_box5">
+                                    <label for="radioBox10" class="label"><em>등록안함</em></label>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- 220928 태그추가 -->
+                        <!-- 안내희망 수익률등록 ‘고객지정‘ 선택한 경우 노출 -->
+                        <div class="form_group between">
+                            <div class="form_row">
+                                <div class="form_tit">상승수익률</div>
+                                <!-- 220729 class="plus" 추가 -->
+                                <span class="row_tit plus"></span>
+                                <div class="input unit js_unit" role="button" aria-label="상승수익률">
+                                    <input type="tel" aria-hidden="true" maxlength="" placeholder="숫자만 입력" value="" title="상승수익률" data-unit="%" readonly class="bg_white">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 220928 class="gap_sm" 추가 -->
+                        <div class="form_group between gap_sm">
+                            <div class="form_row">
+                                <div class="form_tit">하락수익률</div>
+                                <!-- 220729 class="minus" 추가 -->
+                                <span class="row_tit minus"></span>
+                                <div class="input unit js_unit" role="button" aria-label="하락수익률">
+                                    <input type="tel" aria-hidden="true" maxlength="" placeholder="숫자만 입력" value="" title="하락수익률" data-unit="%" readonly class="bg_white">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //안내희망 수익률등록 ‘고객지정‘ 선택한 경우 노출 -->
+                        <!-- //220928 태그추가 -->
+                        <!-- 220928 class="gap_xs" 추가 -->
+                        <p class="tip_info gap_xs">안내희망 수익률 SMS통보서비스는 해당 회차의 상승 또는 하락 안내희망 수익률 도달시 최초 1회에 한해 최대값을 기준으로 통보합니다.</p>
+                        <p class="tip_info">자동지정으로 등록하면 상승수익률은 1차 3%, 2차 5%, 3차 7%로 설정되고 하락수익률은 1차 -3%, 2차 -5%, 3차 -7%로 설정됩니다.</p>
+                        <p class="tip_info">선행 차수 미입력 시 다음차수 입력이 불가능 하며, 2차 및 3차 안내희망 수익률은 선행 차수 보다 큰 값이 입력되어야 합니다.</p>
+                    </div>
+                </div>
+                <!-- 220928 태그삭제 -->
+                <!-- 안내희망 수익률등록 ‘고객지정‘ 선택한 경우
+                <div class="form_group between">
+                    <div class="form_row">
+                        <div class="form_tit">상승수익률</div>
+                        220729 class="plus" 추가
+                        <span class="row_tit plus"></span>
+                        <div class="input unit js_unit" role="button" aria-label="상승수익률">
+                            <input type="tel" aria-hidden="true" maxlength="" placeholder="숫자만 입력" value="" title="상승수익률" data-unit="%" readonly class="bg_white">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group between">
+                    <div class="form_row">
+                        <div class="form_tit">하락수익률</div>
+                        220729 class="minus" 추가
+                        <span class="row_tit minus"></span>
+                        <div class="input unit js_unit" role="button" aria-label="하락수익률">
+                            <input type="tel" aria-hidden="true" maxlength="" placeholder="숫자만 입력" value="" title="하락수익률" data-unit="%" readonly class="bg_white">
+                        </div>
+                    </div>
+                </div>
+                //안내희망 수익률등록 ‘고객지정‘ 선택한 경우 -->
+                <!-- //220928 태그삭제 -->
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="form_tit">해피콜 수신동의</div>
+                        <div class="form_row">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="radioBox11" name="radio_box6">
+                                    <label for="radioBox11" class="label"><em>거절</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="radioBox12" name="radio_box6" checked>
+                                    <label for="radioBox12" class="label"><em>동의</em></label>
+                                </span>
+                            </div>
+                        </div>
+                        <p class="tip_info">해피콜은 상품에 대해 정확히 이해하고 가입하셨는지 점검하는 제도입니다.</p>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="form_tit">청약철회제도</div>
+                        <p class="p gap_xs">신규 후 청약철회기간(승낙일로부터 최소 7일)을 적용받는 것에 대해 동의하십니까?</p>
+                        <div class="form_row gap_sm">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="radioBox13" name="radio_box7">
+                                    <label for="radioBox13" class="label"><em>거절</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="radioBox14" name="radio_box7" checked>
+                                    <label for="radioBox14" class="label"><em>동의</em></label>
+                                </span>
+                            </div>
+                        </div>
+                        <p class="tip_info bold">「금융소비자보호에 관한 법률」에 따라 고난도상품 가입시 청약철회기간(승낙 이후 7일) 동안 신규계약을 철회하실 수 있습니다. 다만, 고객이 청약철회기간내 자산을 운용하는데 동의하시는 경우 청약철회기간을 적용받지 않을 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="form_tit">자동이체등록</div>
+                        <div class="form_row">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="radioBox15" name="radio_box8">
+                                    <label for="radioBox15" class="label"><em>등록안함</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="radioBox16" name="radio_box8">
+                                    <label for="radioBox16" class="label"><em>등록</em></label>
+                                </span>
+                            </div>
+                        </div>
+                        <p class="tip_info">자동이체는 출금계좌로 등록됩니다.</p>
+                    </div>
+                </div>
+                <!-- 자동이체등록 ‘등록’ 선택한 경우 -->
+                <div class="form_group">
+                    <div class="rdoChk_group">
+                        <span class="selection agree_arrow">
+                            <input type="checkbox" id="checkChecked">
+                            <label for="checkChecked" class="label"><em>[필수] 계좌간 자동이체 약관동의</em></label>
+                        </span>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">자동이체금액</div>
+                    <div class="form_row">
+                        <p class="hidden">가입금액 단축키로 입력</p>
+                        <div class="btn_trans_group">
+                            <span><button type="button" class="btn"><em class="number">100</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">50</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">10</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">5</em><em class="num_unit">만</em></button></span>
+                            <span><button type="button" class="btn"><em class="number">1</em><em class="num_unit">만</em></button></span>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input unit js_unit" role="button" aria-label="자동이체금액">
+                            <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="자동이체금액" data-unit="원" readonly class="bg_white"><span class="unit">원</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">자동이체일자</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="자동이체일자 선택">4일</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">자동이체기간</div>
+                    <div class="form_row">
+                        <div class="ele_ul_hor">
+                            <div class="select">
+                                <button type="button" class="select_btn active" title="시작일 선택" readonly>2022.07</button>
+                            </div>
+                            <div class="space">-</div>
+                            <div class="select">
+                                <button type="button" class="select_btn active" title="종료일 선택" readonly>2024.05</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //자동이체등록 ‘등록’ 선택한 경우 -->
+                <!-- 220823 form_group 추가 -->
+                <div class="form_group">
+                    <div class="form_tit">관리희망직원 선택</div>
+                    <!-- 공통태그(공통영역) -->
+                    <div class="staff_hope gap_xs">
+                        <div class="staff_hope_sel">
+                            <div class="rdoChk_box"> <span class="selection"> <input type="radio" id="staff_hope_1" name="staff_hope">
+                                    <label for="staff_hope_1" class="label"><em>지점명</em></label> </span> <span class="selection"> <input
+                                        type="radio" id="staff_hope_2" name="staff_hope"> <label for="staff_hope_2"
+                                        class="label"><em>직원이름</em></label> </span> <span class="selection"> <input type="radio"
+                                        id="staff_hope_3" name="staff_hope"> <label for="staff_hope_3"
+                                        class="label"><em>직원번호</em></label> </span> <span class="selection"> <input type="radio"
+                                        id="staff_hope_4" name="staff_hope" checked=""> <label for="staff_hope_4"
+                                        class="label"><em>없음</em></label> </span> </div>
+                        </div>
+                        <!-- 지점명 -->
+                        <div class="staff_hope_cts">
+                            <div class="form_group">
+                                <div class="form_tit hidden">지점명</div>
+                                <div class="form_row">
+                                    <div class="select outline lg"> <button type="button" class="select_btn active"
+                                            title="지점명 선택">지점명</button> <!-- [개발] 버튼에 값이 들어갈 경우 클래스 "active" 추가 -->
+                                    </div>
+                                </div>
+                                <div class="form_row"> <span class="input int_btn"> <input type="text" title="지점명 직접입력"
+                                            placeholder="지점명" value="동여의도(김국민)" disabled=""> <button type="button"
+                                            class="btn point sm round">검색</button> </span> </div>
+                                <div class="form_btm_full_wrap"> <span><button type="button"
+                                            class="btn outline md">검색초기화</button></span> </div>
+                            </div>
+                        </div>
+                        <!-- //지점명 -->
+                        <!-- 직원이름 -->
+                        <div class="staff_hope_cts">
+                            <div class="form_group">
+                                <div class="form_tit hidden">직원이름</div>
+                                <div class="form_row"> <span class="input int_btn"> <input type="text" title="직원이름 직접입력"
+                                            placeholder="직원이름"> <button type="button" class="btn point sm round">검색</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //지점명 -->
+                        <!-- 직원번호 -->
+                        <div class="staff_hope_cts">
+                            <div class="form_group">
+                                <div class="form_tit hidden">직원번호</div>
+                                <div class="form_row"> <span class="input int_btn"> <input type="text" title="직원번호 직접입력"
+                                            placeholder="직원번호"> <button type="button" class="btn point sm round">검색</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //직원번호 -->
+                    </div>
+                    <!-- //공통태그(공통영역) -->
+                </div>
+                <!-- //220823 form_group 추가 -->
+            </div>
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle bd_tg" aria-expanded="false" aria-controls="notice_1_1">취소가능시간</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>국내 레버리지 펀드
+                            <ul class="depth dash">
+                                <li>14:00 이전 거래 : 14:00까지</li>
+                                <li>14:00 경과 후 거래 : 23:30까지</li>
+                            </ul>
+                        </li>
+                        <li>일본 등 일부 해외투자펀드
+                            <ul class="depth dash">
+                                <li>15:00 이전 거래 : 15:00까지</li>
+                                <li>15:00 경과 후 거래 : 23:30까지</li>
+                            </ul>
+                        </li>
+                        <li>국내 주식형·주식혼합형펀드, 중국 관련 레버리지 등 일부 해외투자펀드
+                            <ul class="depth dash">
+                                <li>15:30 이전 거래 : 15:30까지</li>
+                                <li>15:30 경과 후 거래 : 23:30까지</li>
+                            </ul>
+                        </li>
+                        <li>국내 채권혼합형·채권형펀드, MMF, 해외투자펀드
+                            <ul class="depth dash">
+                                <li>17시 이전 거래 : 17:00까지</li>
+                                <li>17시 경과 후 거래 : 23:30까지</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="depth bul">
+                        <li>일부 펀드의 경우 각 펀드의 집합투자규약에서 정한바에 따라 거래기준시간이 달라질 수 있으니, 반드시 집합투자규약 또는 투자설명서를 확인하시기를 바랍니다.</li>
+                        <li>성과보고서 이메일 수신을 신청하시면 신청한 계좌에 한해 매월 말일 기준 잔고 및 수익률을 e-mail로 통보해 드립니다.</li>
+                        <li>SMS 수신을 신청하시면 계좌 수익률, 만기도래 예정일, 매입 및 환매 미처리 내용 등을 등록된 휴대폰으로 통보해 드립니다.</li>
+                        <li>SMS 수신을 신청하시는 경우에는 상승(+) 및 하락(-) 목표수익률 입력이 가능하며 계좌수익률이 목표수익률에 도달하면 등록된 휴대폰으로 해당내용을 통보(최초 도달일 1회에 한함)해 드립니다.</li>
+                        <li>다만, SMS통보대상 목표수익률에 도달하더라도 계좌가 자동으로 환매되지 않으므로, 환매를 원하시는 경우에는 별도의 환매예약 거래를 하시기 바랍니다.</li>
+                        <li>미성년자(만19세 미만)의 펀드 신규 및 환매거래는 법정대리인이 법정대리권 증빙을 통해 KB 국민은행 영업점에서만 처리가능하며 다음의 증빙서류 ㈜를 준비하여 방문해 주시기 바랍니다.
+                            <p class="depth info">증빙서류</p>
+                            <ul class="depth dash">
+                                <li>미성년자 본인명의의 기본증명서(최근 3개월 내 발급분)</li>
+                                <li>미성년자 본인 또는 내점하실 법정대리인 명의의 가족관계증명서</li>
+                                <li>내점하실 법정대리인의 실명확인증표</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_2">안내 사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_2">
+                    <ul class="depth bul">
+                        <li>현재 및 장래에 수익증권 매수를 위한 예약금액(투자자예탁금)을「자본시장과 금융투자업에 관한 법률」제74조에 따라 특정금전신탁 MMT에 예탁합니다. 예탁에 따른 원본과 이익을 보전하지 않으며 신탁재산 운용으로 발생되는 수익 및 손실은 전부 투자자에게 귀속됩니다.</li>
+                        <li>신탁재산의 운용결과 발생된 신탁이익(원단위 미만 절사, 일할계산)은 원천징수 후 출금계좌로 입금됩니다.</li>
+                        <li>인터넷/스타기업뱅킹 신규계좌의 경우 추후 환매/환매예약 거래시에 신규시 지정한 출금계좌로만 환매대금 입금이 가능하므로, 출금계좌 선택시 유의하시기 바랍니다.</li>
+                        <li>당일 인터넷/스타기업뱅킹 거래 취소는 '펀드 예약취소'에서 펀드별 취소가능시간 내에 완료하셔야 합니다.
+                            토요일 및 공휴일 신규(매입)거래의 경우 해당 거래의 직전 영업일 마감시간 후 거래와 동일하게 기준가격이 적용됩니다.</li>
+                        <li>거래 취소는 거래 당일 이용시간(00:20~23:30)에만 할 수 있습니다.</li>
+                        <li>펀드는 투자자보호를 위해 상품위험등급에 따라 상품가입한도가 정해져 있으며, 신규거래시 가입한도를 초과해서 가입할 수 없습니다.</li>
+                        <li>펀드별 신규가입 한도
+                            <div class="table">
+                                <table>
+                                    <caption>펀드별 신규가입 한도</caption>
+                                    <colgroup>
+                                        <col style="width:50%">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">투자위험등급</th>
+                                            <th scope="col">가입한도금액</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="center">매우높은위험</td>
+                                            <td class="center">3억원</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">높은위험</td>
+                                            <td class="center">5억원</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">다소높은위험</td>
+                                            <td class="center">10억원</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">보통/낮은/매우낮은위험</td>
+                                            <td class="center">제한없음</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul class="depth dash">
+                                <li>펀드별 신규가입한도는 신규가입시 적용되는 한도로 상품마다 부여되며, 한도초과시 가입이 불가합니다. (입금시에는 적용되지 않습니다.)</li>
+                                <li>동일 상품에 이미 가입한 금액이 있는 경우, 가입 당시의 신규금액만큼 한도에서 차감됩니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <!-- 개발: 활성화시 disabled 속성 제거 -->
+                    <span><button type="button" class="btn primary lg" disabled>다음</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>급여명부 팝업 - 급여이체</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<!-- wrap -->
+<div id="wrap">
+	<div id="content">
+		<div class="btn_cnt_wrap">
+			<span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE003469')">최근급여내역_탑라인 개인정보활용동의</button></span>
+		</div>
+	</div>
+</div>
+<!-- //wrap -->
+
+<!-- layer html : 최근급여내역_탑라인 개인정보활용동의 -->
+<div id="BFE003469" class="popup bottom" role="dialog" aria-hidden="true">
+	<article class="pop_wrap">
+		<div class="pop_head">
+			<div>
+				<h1>개인정보 활용동의서</h1>
+			</div>
+		</div>
+		<div class="pop_body">
+			<div class="pop_section">
+                <div class="tr_topline_agree">
+                    <h2 class="h3">※ 탑라인 이용 사업자 대상 기업인터넷뱅킹<br>급여이체 제공용</h2>
+                    <p class="p fc_gray2">기업고객의 기업인터넷뱅킹 내 급여이체를 위한 개인정보 활용 및 계약변경을 목적으로 본 계약서 작성이 필요하며, 위 급여이체 정보의 활용/변경에 관한 동의는 급여이체 내 탑라인 이체내역 활용을 위하여 필수적이므로, 위 사항에 동의하셔야만 해당 거래가 가능합니다.</p>
+                    <h2 class="h3">급여이체 정보활용/변경 계약서</h2>
+                    <ul class="list list_top_bd">
+                        <li class="p_sub fc_gray2">
+                            본계약 동의 시, 영업점에 제출한 탑라인 정보의 기업인터넷뱅킹/스타기업뱅킹 內 활용과 급여이체가 가능합니다.
+                        </li>
+                    </ul>
+                    <div class="agree_check">
+                        <span class="selection">
+                            <input type="checkbox" id="checkType1_1_sm">
+                            <label for="checkType1_1_sm" class="label"><em>동의합니다.</em></label>
+                        </span>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<div class="pop_foot">
+			<div>
+				<div class="btn_area">
+					<span><button type="button" class="btn primary lg">확인</button></span>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+	</article>
+</div>
+<!-- //layer html : 최근급여내역_탑라인 개인정보활용동의 -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

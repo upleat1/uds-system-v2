@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[계좌이체]다른금융단건이체입력</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">다른금융계좌이체 단건입력</h1>
+            <div class="tr_sel_acc_area">
+                <div class="tr_sel_acc_panel">
+                    <button type="button" class="acc" title="출금계좌 선택">
+                        <strong class="bk_name ico"><!-- 2022-07-15 수정 -->
+                            <span class="bank"><span class="icon_bank_004 xs"></span>KB국민</span>
+                            <strong class="bk_num number">574498-90-009768</strong>
+                        </strong>
+                        <span class="nick">계좌별명계좌별명계좌별명계좌별명계좌별명</span><!-- 2022-07-15 수정 -->
+                        <span class="bk_pay">출금가능금액 <em class="number">100,000</em><em class="num_unit">원</em></span><!-- 221208 수정 : 텍스트 변경 -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- 220729 : 리웍 -->
+            <div class="section">
+                <div class="hgroup"> <!-- 220929 : 'gap_xxs_minus' 클래스 삭제 -->
+                    <div class="p_sub fc_gray">한도안내 <!-- 220729 : class 추가 -->
+                        <div class="tooltip_limited">
+                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                <div class="tooltip_cont"> 
+                                    오픈뱅킹의 출금한도는 전 금융기관 합산 1일 일천만원으로, KB국민은행의 전자금융 이체한도와는 별도입니다.
+                                </div>
+                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p_sub fc_gray">수수료 면제</div><!-- 220729 : class 추가 -->
+                </div>
+            
+                <div class="amount_wrap">
+                    <div class="tit"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                    <div class="sub"><span class="number">1</span><span class="num_unit">만원</span></div>
+                </div>
+
+                <div class="form_group">
+                    <div class="form_tit">받는 분</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="입금은행 선택">KB국민</span></button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="{계좌번호 입력값}, 계좌번호 입력">
+                            <input type="tel" aria-hidden="true" placeholder="계좌번호" title="계좌번호" readonly class="bg_white">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap btm gap_xs">
+                    <a href="#none" class="btn_txt ico_arr">최근・자주・내계좌</a>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">내 통장 메모</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn" title="내 통장 메모">선택</button><!-- 선택시 class active 추가 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">받는분 통장 메모</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn" title="받는분 통장 메모">선택</button><!-- 선택시 class active 추가 -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle_sm_wrap gap_xs">
+                    <button class="tit js_toggle" aria-expanded="false">추가정보 입력</button>
+                    <div class="toggle_panel" role="region">
+                        <div class="form_group">
+                            <div class="form_tit">CMS코드</div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" title="CMS코드" placeholder="32자 이내(영문대문자, 숫자만 입력)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 221103 : 위치이동 -->
+            <div class="section">
+                <div class="btn_list_btm gap_md">
+                    <span><button type="button" class="btn outline md">이체추가</button></span>
+                </div>
+            </div>
+            <!-- //221103 : 위치이동 -->
+
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth">
+                        <li>CMS코드는 이용기관에서 각 송금인에게 부여한 송금일식별 확인번호입니다. CMS코드를 모르시는 경우 이용기관에 문의해 주세요.</li>
+                    </ul>
+                </div>
+                
+                <!-- 221103 : 위치이동 -->
+                <!-- 
+                <div class="btn_list_btm gap_md">
+                    <span><button type="button" class="btn outline md">이체추가</button></span>
+                </div>
+                -->
+                <!-- //221103 : 위치이동 -->
+            </div>
+            <!-- //220729 : 리웍 -->
+
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">확인</button></span>
+                </div>    
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

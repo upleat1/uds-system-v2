@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[외화송금주소록(해외/국내)]해외송금주소록 등록</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+	
+<!-- wrap -->
+<div id="wrap">
+
+    <div id="content">
+			
+		<h1 class="hidden">해외송금주소록 등록</h1>
+
+		<div class="section"><!-- section -->
+			<div class="form_group error">
+				<div class="form_tit">주소록별명</div>
+				<div class="form_row">
+					<div class="input"><input type="text" id="id01" title="주소록별명"></div><!-- 221006 title명 변경 -->
+				</div>
+                <p class="tip_info">영문 30자 이내 입력.</p>
+				<p class="tip_info">최초 등록 이후, 변경이 불가합니다.</p>
+                <!-- 220920 내용 중복으로 '영어만 입력 가능합니다' 삭제 -->
+				<p class="tip" aria-labelledby="id01">주소록 별명을 입력해 주세요.</p> 
+			</div>
+		</div>
+
+		<div class="section">
+			<h2 class="h2">받는분</h2><!-- 221006 영어문구 제거 -->
+			<div class="form_group error gap_0">
+				<div class="form_tit">받는분(영문)</div><!-- 221006 영어문구 제거 -->
+				<div class="form_row">
+					<div class="input"><input type="text" id="id02" title="받는분(영문)"></div><!-- 221006 영어문구 제거, title명 변경 --> 
+				</div>
+                <p class="tip_info">영문 35자 이내 입력.</p>
+				<p class="tip_info">수취인명이 길 경우 수취인주소란에 계속 입력</p>
+				<p class="tip" aria-labelledby="id02">받는분(영문)을 입력해 주세요.</p> 
+			</div>
+			
+			<div class="form_group error">
+				<div class="form_tit">주소(영문)</div><!-- 221006 영어문구 제거 -->
+				<div class="form_row">
+					<div class="input"><input type="text" id="id03" title="주소(영문)"></div><!-- 221006 영어문구 제거,title명 변경 --> 
+				</div>
+                <p class="tip_info">영문,숫자 70자 이내 입력.</p> <!-- 220915 텍스트 수정 -->
+				<p class="tip" aria-labelledby="id03">주소(영문)을 입력해 주세요. </p> 
+			</div>
+			
+			<div class="form_group">
+				<div class="form_tit">연락처</div><!-- 221006 영어문구 제거 -->
+				<div class="form_row">
+					<div class="input"><input type="text" title="연락처"></div><!-- 221006 영어문구 제거,title명 변경 -->
+				</div>
+			</div>
+		</div><!-- // section -->
+
+		<div class="section"><!-- section -->
+			<h2 class="h2">받는은행</h2><!-- 221006 영어문구 제거 -->
+
+			<div class="form_group">
+				<div class="form_tit">입력선택</div>
+				<div class="form_row">
+					<div class="tab_wrap box"><!-- tab_wrap box -->
+						<div class="tab_radio"><!-- tab_radio -->
+							<div class="rdoChk_box"><!-- rdoChk_box -->
+								<span class="selection">
+									<input type="radio" id="rdo1" name="rdo1" checked>
+									<label for="rdo1" class="label"><em>은행 SWIFT Code</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="rdo2" name="rdo1">
+									<label for="rdo2" class="label"><em>은행명+은행주소</em></label>
+								</span>
+							</div><!-- ////// rdoChk_box -->
+						</div><!-- //// tab_radio -->
+					
+						<!-- radioShow1 -->
+						<div class="tab_panel">
+							<div class="form_group">
+								<div class="form_tit">은행소재국가</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="국가선택">미국</button>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="form_group error">
+								<div class="form_tit">은행 SWIFT Code</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="input int_btn">
+										<input type="text" id="id04" title="은행 SWIFT Code"><!-- 221006 영어문구 제거,title명 변경 --> 
+										<button type="button" class="btn point sm round">코드검증</button>
+									</div>
+								</div>
+                                <p class="tip_info">영문,숫자 8자 또는 11자 입력</p>
+								<p class="tip" aria-labelledby="id04">올바른 SWIFT Code를 입력해 주세요.</p> 
+								<p class="tip" aria-labelledby="id04">받는은행 SWIFT Code를 검증하지 않았습니다.</p>
+								<p class="tip" aria-labelledby="id04">해당 은행은 JPY 해외송금을 받지 않는 은행이므로 거래가 불가합니다.</p> 
+							</div>
+
+							<div class="form_group">
+								<!-- 미국일때 -->
+								<div class="form_tit">은행소재국가</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="국가선택">미국</button>
+									</div>
+								</div>
+								<div class="form_tit"><em>은행번호(ABA/Routing/Fedwire No.)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(ABA/Routing/Fedwire No.)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+								<!-- //미국일때 -->
+                                <p class="tip_info">9자리 입력</p>
+								<p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+							</div>
+							<div class="form_group">
+								<!-- 영국일때 -->
+								<div class="form_tit">은행소재국가</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<!-- 안내 Layer popup : (은행소재국가를 영국으로 선택했을 때 노출) -->
+									<div class="select">
+										<button type="button" class="select_btn active" onclick="UICommon.Layer.alert('<p><strong>영국으로 송금하실 때 수취은행 정보 입력 방법</strong></p><ul class=&quot depth bul &quot><li>IBAN Code(22자리)가 있는 경우 계좌번호 입력란에 IBAN Code를 입력하시고,  은행번호(Sort Code)는 입력하지 않으셔도 됩니다.</li><li>일반 계좌번호가 있는 경우 계좌번호 입력란에 일반 계좌번호를 입력하시고, 은행번호(Sort Code) 입력란에 Sort Code 6자리를 필수로 입력해 주세요.</li></ul>');">영국</button>
+									</div>
+
+									<!-- <div class="select">
+										<button type="button" class="" title="국가선택">영국</button>
+									</div> -->
+								</div>
+								<div class="form_tit"><em>은행번호(Sort Code)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->        
+										<input type="text" title="은행번호(Sort Code)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+								<!-- //영국일때 -->
+                                <p class="tip_info">6자리 입력</p>
+								<p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+							</div>
+							<div class="form_group">
+								<!-- 일본일때 -->
+								<div class="form_tit">은행소재국가</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="국가선택">일본</button>
+									</div>
+								</div>
+								<div class="form_tit"><em>은행번호(Branch Code)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(Branch Code)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+								<!-- //일본일때 -->
+                                <p class="tip_info">3자리 입력</p>
+								<p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+							</div>
+							<div class="form_group">
+								<!-- 캐나다일때 -->
+								<div class="form_tit">은행소재국가</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="국가선택">캐나다</button>
+									</div>
+								</div>
+								<div class="form_tit"><em>은행번호(Transit No.)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(Transit No.)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+								<!-- //캐나다일때 -->
+                                <p class="tip_info">9자리 입력</p>
+								<p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+							</div>
+							<div class="form_group">
+								<!-- 호주일때 -->
+								<div class="form_tit">은행소재국가</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="국가선택">호주</button>
+									</div>
+								</div>
+								<div class="form_tit"><em>은행번호(BSB No.)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(BSB No.)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+								<!-- //호주일때 -->
+                                <p class="tip_info">6자리 입력</p>
+								<p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+							</div>
+							<div class="form_group">
+								<!-- 뉴질랜드일때 -->
+								<div class="form_tit">은행소재국가</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="국가선택">뉴질랜드</button>
+									</div>
+								</div>
+								<div class="form_tit"><em>은행번호(Branch Code)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(Branch Code)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+								<!-- //뉴질랜드일때 -->
+                                <p class="tip_info">6자리 입력</p>
+								<p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+							</div>
+							<div class="form_group">
+								<!-- 그외 국가일때 -->
+								<div class="form_tit">은행소재국가</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="국가선택">독일</button>
+									</div>
+								</div>
+								<div class="form_tit"><em>은행번호(Branch Code)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(Branch Code)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+								<!-- //그외 국가일때 -->
+								<p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+							</div>
+						</div>
+						
+						<!-- radioShow2 -->
+						<div class="tab_panel">
+							<div class="form_group">
+								<div class="form_tit">은행소재국가</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="국가선택">미국</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="form_group error">
+								<div class="form_tit">은행명(영문)</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row error">
+									<div class="input">
+										<input type="text" title="은행명(영문)"><!-- 221006 영어문구 제거,title명 변경 -->
+									</div>
+								</div>
+                                <p class="tip_info">영문,숫자 35자 이내 입력</p>
+							</div>
+
+							<div class="form_group">
+								<div class="form_tit">은행주소(영문)</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="textarea">
+										<textarea title="은행주소(영문) 입력"></textarea>  <!-- 221006 영어문구 제거 -->      
+										<p class="num_info"><span><em class="curr">0</em> / 70byte</span>(영문 70자)</p>            
+									</div>
+								</div>
+							</div>
+
+							<div class="form_group">
+								<!-- 미국일때 -->
+								<div class="form_tit"><em>은행번호(ABA/Routing/Fedwire No.)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(ABA/Routing/Fedwire No.)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+                                <p class="tip_info">9자리 입력</p>
+                                <p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+								<!-- //미국일때 -->
+
+								<!-- 영국일때 -->
+								<div class="form_tit"><em>은행번호(Sort Code)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(Sort Code)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+                                <p class="tip_info">6자리 입력</p>
+                                <p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+								<!-- //영국일때 -->
+
+								<!-- 일본일때 -->
+								<div class="form_tit"><em>은행번호(Branch Code)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(Branch Code)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+                                <p class="tip_info">3자리 입력</p>
+                                <p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+								<!-- //일본일때 -->
+
+								<!-- 캐나다일때 -->
+								<div class="form_tit"><em>은행번호(Transit No.)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(Transit No.)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+                                <p class="tip_info">9자리 입력</p>
+                                <p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+								<!-- //캐나다일때 -->
+
+								<!-- 호주일때 -->
+								<div class="form_tit"><em>은행번호(BSB No.)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(BSB No.)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+                                <p class="tip_info">6자리 입력</p>
+                                <p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+								<!-- //호주일때 -->
+
+								<!-- 뉴질랜드일때 -->
+								<div class="form_tit"><em>은행번호(Branch Code)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(Branch Code)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+                                <p class="tip_info">6자리 입력</p>
+                                <p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+								<!-- //뉴질랜드일때 -->
+
+								<!-- 그외 국가일때 -->
+								<div class="form_tit"><em>은행번호(Branch Code)</em>
+									<div class="tooltip_limited">
+										<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+										<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+											<div class="tooltip_cont"> 
+												<ul class="bul">
+													<li>미국
+														<ul class="depth dash">
+															<li>ABA No. / Fedwire No. / Routing No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>캐나다
+														<ul class="depth dash">
+															<li>Transit No.</li>
+															<li>9자리 숫자</li>
+														</ul>
+													</li>
+													<li>호주
+														<ul class="depth dash">
+															<li>BSB No.</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>영국
+														<ul class="depth dash">
+															<li>Sort Code</li>
+															<li>6자리 숫자</li>
+														</ul>
+													</li>
+													<li>뉴질랜드
+														<ul class="depth dash">
+															<li>Branch Code / Clearing Code</li>
+															<li>해외은행에 문의</li>
+														</ul>
+													</li>
+													<li>일본
+														<ul class="depth dash">
+															<li>Branch Code</li>
+															<li>3자리 숫자</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<!-- 221028 키패드 마크업 변경 -->
+									<div class="input"><!-- 221006 aria-label명 변경 -->            
+										<input type="text" title="은행번호(Branch Code)"><!-- 221006 title명 변경 -->
+									</div>
+									<!-- //221028 키패드 마크업 변경 -->
+								</div>
+								<!-- //그외 국가일때 -->
+								<p class="tip_info">은행번호를 입력하지 않으시면 송금처리가 지연되거나 해외은행에서 별도 사전안내 없이 반환될 수 있습니다.</p>
+							</div>
+						</div><!-- //radioShow2 -->
+					
+					</div>
+				</div>
+			</div>
+
+			<div class="form_group error">
+				<div class="form_tit">받는분계좌번호</div><!-- 221006 영어문구 제거 -->
+				<div class="form_row">
+					<!-- 221028 키패드 마크업 변경 -->
+					<div class="input">
+						<input type="text" id="id05" title="받는분계좌번호"><!-- 221006 영어문구 제거 --><!-- 221006 title명 변경 -->
+					</div>
+					<!-- 221028 키패드 마크업 변경 -->
+				</div>
+				<p class="tip" aria-labelledby="id05">받는분계좌번호를 입력해 주세요. </p> <!-- 220907 위치변경 -->
+				<div class="btn_wrap btm">
+					<a href="#none" class="btn_txt ico_arr">IBAN Code 안내</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="section"><!-- section -->
+			<h2 class="h2">중계은행 정보</h2><!-- 221006 영어문구 제거 -->
+
+			<p class="p">특정 중계은행을 지정하고자 하는 경우에만 입력해 주세요.</p>
+			<div class="form_group">
+				<div class="form_tit">은행정보입력선택</div>
+				<div class="form_row">
+					<div class="tab_wrap box">
+						<div class="tab_radio">
+							<div class="rdoChk_box">
+								<span class="selection">
+									<input type="radio" id="rad1" name="rdo33" data-show="#rad11" aria-selected="true" aria-controls="rad11" checked>
+									<label for="rad1" class="label"><em>은행 SWIFT Code</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="rad2" name="rdo33" data-show="#rad22" aria-selected="false" aria-controls="rad22">
+									<label for="rad2" class="label"><em>은행명</em></label>
+								</span>
+							</div>
+						</div>
+
+						
+						<div class="tab_panel" role="tabpanel" id="rad11">
+							<div class="form_group error">
+								<div class="form_tit">은행 SWIFT Code</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="input int_btn">
+										<input type="text" id="id06" title="은행 SWIFT Code"><!-- 221006 영어문구 제거,title명 변경 -->
+										<button type="button" class="btn point sm round">코드검증</button>
+									</div>
+								</div>
+                                <p class="tip_info">영문,숫자 8자 또는 11자 입력</p>
+								<p class="tip" aria-labelledby="id06">올바른 SWIFT Code를 입력해 주세요.</p>
+							</div>
+						</div>
+						
+						<div class="tab_panel" role="tabpanel" id="rad22">
+							<div class="form_group">
+								<div class="form_tit">은행명(영문)</div><!-- 221006 영어문구 제거 -->
+								<div class="form_row">
+									<div class="input">
+										<input type="text" title="은행명(영문)"><!-- 221006 영어문구 제거,title명 변경 -->
+									</div>
+								</div>
+                                <p class="tip_info">영문,숫자 35자 이내 입력</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- //section -->
+
+		<!-- 안내사항 -->
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-controls="notice_1_1">안내사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li>입력하신 정보는 별도의 유효성 검증 없이 등록되므로 송금 시, 불러오기 하신 송금정보의 수정이 필요할 수 있습니다.</li>
+					<li>등록하신 해외송금 정보는 '기업전용송금(인터넷신청)의 직접입력', '바로송금', '정기예약송금' 화면에서 불러오기 가능합니다.</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //안내사항 -->
+
+		<div class="btn_confirm_wrap"><!-- btn_confirm_wrap -->
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">등록</button></span>
+			</div>
+		</div>
+
+    </div><!-- //content -->
+</div>
+<!-- //wrap -->
+
+
+
+</body>
+</html>

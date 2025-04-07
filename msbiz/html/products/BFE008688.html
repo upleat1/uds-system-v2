@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[조건변경]조건변경 신청정보 입력</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <div class="step_wrap js_step">    
+            <div class="step" role="img" aria-label="총 8단계 중 현재 4단계">
+                <span class="current">4</span><span class="mark">/</span><span class="total">8</span>
+            </div>
+            <h1 class="h1">기한연장 신청정보 입력</h1>
+        </div> 
+
+        <div class="inform_top_wrap">
+            <p class="depth">기한연장 신청정보를 입력하십시요.</p>
+        </div>
+        <div class="section">
+            <ul class="list_data">
+                <li>
+                    <div class="key">대출상품명</div>
+                    <div class="value">KB매출더하기론</div>
+                </li>
+                <li>
+                    <div class="key">대출계좌번호</div>
+                    <div class="value"><span class="number">509073-00-028660</span></div>
+                </li>
+                <li>
+                    <div class="key">대출한도</div>
+                    <div class="value"><span class="number">10,000,000</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">신규일자</div>
+                    <div class="value"><span class="number">2022.08.22</span></div>
+                </li>
+                <li>
+                    <div class="key">만기일자</div>
+                    <div class="value"><span class="number">2022.09.21</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="form_group">
+                <div class="form_tit">대출 신청가능한도</div>
+                <div class="form_row"> 
+                    <div class="input unit js_unit">
+                        <input type="tel" maxlength="16" placeholder="숫자만 입력" title="이체금액" data-unit="원" readonly value="300,000,000">
+                    </div>
+                </div>
+                <p class="form_hangul">3억원</p>
+            </div>
+
+            <div class="form_group error">
+                <div class="form_tit">대출 신청금액 (변경후 한도)</div>
+                <div class="form_row"> 
+                    <div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 대출 신청금액 (변경후 한도) 입력" onclick="">
+                        <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="대출 신청금액 (변경후 한도)" data-unit="원" readonly class="bg_white" id="labelledby01"><!-- 220906 접근성 추가 : id/aria-labelledby 매칭 -->
+                    </div>
+                </div>
+                <p class="tip" aria-labelledby="labelledby01">개발전용 : 오류 텍스트 메시지</p><!-- 220906 접근성 추가 : id/aria-labelledby 매칭 -->
+            </div>
+        </div>
+        
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

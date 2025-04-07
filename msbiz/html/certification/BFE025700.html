@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[금융인증서 갱신]사용자 추가본인확인</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="인증센터" href="/msbiz/app/css/certification.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <!-- step -->
+            <div class="step_wrap js_step">    
+                <div class="step" role="img" aria-label="총 6단계 중 현재 4단계">
+                    <span class="current">4</span><span class="mark">/</span><span class="total">6</span>
+                </div>
+                <h1 class="h1">사용자 추가본인확인</h1>
+            </div>
+            <!-- //step -->
+            <div class="section">
+                <!-- 220729 리웍 : 삭제 및 추가 -->
+                <!-- <button type="button" class="btn outline xs">안내</button> -->
+                <div class="btn_wrap btm">
+                    <a href="#none" class="btn_txt ico_arr">이용안내</a>
+                </div>
+                <!-- //220729 리웍 : 삭제 및 추가 -->
+                <div class="form_group">
+                    <div class="form_tit">출금계좌번호</div>
+                    <div class="form_row">        
+                        <div class="input" role="button" aria-label="출금계좌번호 입력" onclick="">
+                            <!-- 220729 readonly 추가 -->
+                            <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="출금계좌번호" value="" readonly class="bg_white">
+                        </div>
+                    </div>
+                    <p class="tip_info">본인확인을 위해 출금계좌번호와 출금계좌비밀번호를 입력하십시오.</p>
+                </div>
+                <!-- 220729 리웍 : 삭제 -->
+                <!-- <div class="form_group">
+                    <div class="form_tit">계좌비밀번호</div>
+                    <div class="form_row">        
+                        <div class="input" role="button" aria-label="계좌비밀번호 입력" onclick="">            
+                            <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="출금계좌번호" value="" class="bg_white">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">보안인증</div>
+                    <ul class="rdoChk_ul2">
+                        <li>
+                            <span class="selection mid">
+                                    <input type="radio" id="mid1" name="mid" checked>
+                                    <label for="mid1" class="label">
+                                        <em>OTP</em>
+                                    </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection mid">
+                                    <input type="radio" id="mid2" name="mid">
+                                    <label for="mid2" class="label">
+                                        <em>KB국민인증서</em>
+                                    </label>
+                            </span>
+                        </li>
+                    </ul>
+
+                    OTP 선택시 노출
+                    <div class="form_row">        
+                        <div class="input" role="button" aria-label="보안인증번호 입력" onclick="">            
+                            <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="출금계좌번호" value="" class="bg_white">
+                        </div>
+                    </div>
+                    <p class="tip_info">OTP 6자리를 입력하세요.</p>
+                    //OTP 선택시 노출
+
+                    KB국민인증서 선택시 노출
+                    <div class="form_btm_full_wrap">
+                        <span><button type="button" class="btn outline md ">KB국민인증서 인증</button></span>
+                    </div>
+                    KB국민인증서 인증 전 노출
+                    <p class="tip_info">KB국민인증서로 인증합니다.</p>
+                    //KB국민인증서 인증 전 노출
+
+                    KB국민인증서 인증 후 노출
+                    <p class="tip_info">인증이 완료되었습니다.</p>
+                    //KB국민인증서 인증 후 노출
+                    //KB국민인증서 선택시 노출 -->
+                    <!-- //220729 리웍 : 삭제 -->
+
+                    <!-- 220729 리웍 : 추가 -->
+                    <!-- 개인사업자인 경우 노출 -->
+                    <div class="form_group">
+                        <div class="form_row">
+                            <div class="form_tit">보안인증</div>
+                            <div class="form_row">
+                                <!-- 221004 삭제및추가 -->
+                                <!-- <div class="rdoChk_box">
+                                    <span class="selection">
+                                        <input type="radio" id="radioBox1" name="radio_box1" checked="">
+                                        <label for="radioBox1" class="label"><em>OTP</em></label>
+                                    </span>
+                                    <span class="selection">
+                                        <input type="radio" id="radioBox2" name="radio_box1">
+                                        <label for="radioBox2" class="label"><em>KB국민인증서</em></label>
+                                    </span>
+                                </div> -->
+
+                                <ul class="rdoChk_ul2">
+                                    <li>
+                                        <span class="selection mid">
+                                                <input type="radio" id="mid1" name="mid" checked>
+                                                <label for="mid1" class="label">
+                                                    <em>OTP</em>
+                                                </label>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="selection mid">
+                                                <input type="radio" id="mid2" name="mid">
+                                                <label for="mid2" class="label">
+                                                    <em>KB국민인증서</em>
+                                                </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <!-- //221004 삭제및추가 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //개인사업자인 경우 노출 -->
+                    <!-- //220729 리웍 : 추가 -->
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">다음</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+</html>

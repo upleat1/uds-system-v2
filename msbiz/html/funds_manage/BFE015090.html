@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[신규기관등록]인증방식선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="h1">인증방식 선택</h1>
+        <div class="section">
+
+            <!-- 사업자 번호 1개일 경우 -->
+            <div class="form_group">
+                <div class="form_tit">사업자 선택</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn readonly" title="사업자번호 선택">552-24-00297</button><!-- 220729 리웍: 클래스,속성 수정 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 사업자 번호 1개 이상일 경우 -->
+            <div class="form_group">
+                <div class="form_tit">사업자 선택</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="사업자번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">인증방식 선택</h2>
+            <!-- 220729 리웍 -->
+            <ul class="list_link btl fu_certify">
+                <li>
+                    <a href="#none" class="link ico_40_certify_all">
+                        <p class="p bold">공동인증서에 등록된 모든 기관<br>한번에 등록</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none" class="link ico_40_certify_bank">
+                        <p class="p bold">원하는 기관 선택하여,<br>공동인증서로 등록</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none" class="link ico_40_certify_id">
+                        <p class="p bold">ID/PW로 원하는 기관 연결</p>
+                    </a>
+                </li>
+            </ul>
+            <!--// 220729 리웍 -->
+        </div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

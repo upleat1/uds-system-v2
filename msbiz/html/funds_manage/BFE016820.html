@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[전자세금계산서 발행] 발행_수정발행_품목</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <!-- step -->
+		<div class="step_wrap js_step">    
+			<div class="step" role="img" aria-label="총 6단계 중 현재 4단계">
+				<span class="current">4</span><span class="mark">/</span><span class="total">6</span>
+			</div>
+            <h1 class="h1">품목</h1>
+		</div>
+        <!-- //step -->
+        
+        <div class="section">
+            <h2 class="hidden">품목정보 입력</h2>
+            <h2 class="h2">공급금액 정보</h2>
+
+            <div class="form_group js_trans">
+                <div class="form_tit">작성일자</div>
+                <div class="form_row">
+                    <div class="input date">
+                        <input type="tel" maxlength="6" title="작성일자" placeholder="작성일자 입력" value="2022.04.21">
+                        <button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group error">
+				<div class="form_tit">공급가액</div>
+				<div class="form_row">
+					<div class="input unit">
+                        <input type="tel" title="공급가액 입력" data-unit="원" value="9,999,999,999,999" readonly id="id02">
+                        <!--  <span class="unit">원</span> -->
+                    </div>
+                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+				</div>
+                <p class="tip" aria-labelledby="id02">에러메세지</p><!-- 개발전용 : validation 결과 메세지 -->
+			</div>
+
+            <div class="form_group">
+				<div class="form_tit">세액</div>
+				<div class="form_row">
+					<div class="input unit">
+                        <input type="tel" title="세액 입력" data-unit="원" value="9,999,999,999,999" readonly>
+                        <span class="unit">원</span>
+                    </div>
+                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+				</div>
+			</div>
+            
+            <div class="form_group">
+				<div class="form_tit">합계금액</div>
+				<div class="form_row">
+					<div class="input unit">
+                        <input type="tel" title="합계금액 입력" data-unit="원" value="9,999,999,999,999" readonly>
+                        <span class="unit">원</span>
+                    </div>
+                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+				</div>
+			</div>
+
+            <div class="form_group">
+                <div class="form_tit">비고</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" placeholder="비고 입력" title="비고" value="">
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">품목정보(최대 16개)</h2>
+
+            <!-- 단가에 부가세 포함(직접입력)/단가에 부가세 미포함 -->
+            <!-- 220802 수정: 마크업 변경 -->
+            <div class="form_group">
+                <div class="form_row">
+                    <div class="rdoChk_group inline">
+                        <span class="selection">
+                            <input type="radio" id="radioBox1" name="radio_box1" checked>
+                            <label for="radioBox1" class="label"><em>직접입력</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioBox2" name="radio_box1">
+                            <label for="radioBox2" class="label"><em>단가에 부가세포함</em></label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--// 220802 수정: 마크업 변경 -->
+
+            <!-- 아코디언: 품목정보(최대4개) -->
+            <ul class="list_acco type_delBtn"><!-- 220829 수정: js_accordion 위치변경 -->
+                <!-- 품목1 : 첫번째 무조건 열려있음 -->
+                <li class="on"><!-- 220829 수정: js_accordion 위치변경 -->
+                    <a href="#none" class="tit">품목1</a><!-- 220802 수정: 접근성 이슈로 마크업 변경 -->  
+                    <div class="toggle_panel">
+                        
+                        <!-- 검색조건 -->
+                        <div class="section_f">
+                            <div class="form_group period">
+                                <div class="form_tit">작성일자</div>
+                                <div class="form_row col">
+                                    <div class="input">
+                                        <input type="tel" value="04" maxlength="2" title="작성일자 월" readonly>
+                                        <span class="unit">월</span>
+                                    </div>
+                                    <div class="input">
+                                        <input type="tel" value="" maxlength="2" title="작성일자 일">                        
+                                        <span class="unit">일</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn_cnt_wrap">
+                                <span><button type="button" class="btn primary lg">품목조회</button></span>
+                            </div>
+                        </div>
+                        <!--// 검색조건 -->
+
+                        <hr class="hr_divide">
+
+                        <!-- 조회결과 -->
+                        <div class="seciton_f">
+                            
+                            <div class="form_group">
+                                <div class="form_tit">품목명</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="품목명 입력" title="품목명" value="">
+                                    </div>
+                                </div>   
+                            </div>
+
+                            <!-- 220729 리웍 -->
+                            <div class="form_group">
+                                <div class="form_tit">규격</div>
+                                <div class="form_row">
+                                    <!-- 220805 수정: 문자키패드용으로 수정 -->
+                                    <div class="input">
+                                        <input type="text" placeholder="규격 입력" title="규격">
+                                    </div>
+                                    <!--// 220805 수정: 문자키패드용으로 수정 -->
+                                </div>   
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">수량</div>
+                                <div class="form_row">
+                                    <!-- 220804 소수점 입력 키패드 -->
+                                    <div class="input"><!-- 220920 수정: 클래스 수정 -->
+                                        <input type="text" placeholder="숫자만 입력" title="수량">
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="form_group">
+                                <div class="form_tit">단가</div>
+                                <div class="form_row">
+                                    <!-- 220804 소수점 입력 키패드 -->
+                                    <div class="input unit js_unit decimal"><!-- 221012 수정: 예외케이스 추가 -->
+                                        <input type="text" placeholder="숫자만 입력" title="수량" data-unit="원"><!-- 220805 수정: data-unit -->
+                                    </div>
+                                    <!-- 220805 삭제: 소숫점표시로 삭제요청
+                                        <p class="form_hangul" aria-hidden="true">원</p> 
+                                    -->
+                                </div>
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">공급가액</div>
+                                <div class="form_row">
+                                    <div class="input unit js_unit" role="button" aria-label="변경되는 숫자, 공급가액 입력" onclick="">
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="공급가액" data-unit="원" readonly class="bg_white">
+                                        <span class="unit">원</span>
+                                    </div>
+                                    <!-- 비활성화시
+                                    <div class="input unit js_unit">
+                                        <input type="tel" placeholder="숫자만 입력" title="공급가액" data-unit="원" readonly>
+                                        <span class="unit">원</span>
+                                    </div>
+                                    -->
+                                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+                                </div>
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">세액</div>
+                                <div class="form_row">
+                                    <div class="input unit js_unit" role="button" aria-label="세액 입력" onclick="">
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="세액" data-unit="원" readonly class="bg_white">
+                                        <span class="unit">원</span>
+                                    </div>
+                                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+                                </div>
+                            </div>
+                            <!--// 220729 리웍 -->
+                            
+                            <div class="form_group">
+                                <div class="form_tit">비고</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="비고 입력" title="비고" value="">
+                                    </div>
+                                </div>   
+                            </div>
+                            
+                            <!-- 221007 수정: 공급가액변동, 환입의 경우 노출 -->
+                            <div class="form_btm_full_wrap">
+                                <span><button type="button" class="btn outline sm">(-) 부호변경</button></span>
+                            </div>
+                            <!--// 221007 수정 -->
+                            
+                        </div>
+                        <!--// 조회결과 -->
+                    </div>
+                    <button type="button" class="btn outline xs btn_del"><span class="hidden">품목1</span>삭제</button><!-- 221006 접근성 대응: hidden텍스트 추가 --><!-- 220802 수정: 접근성 이슈로 마크업 변경 -->
+                </li>
+
+                <!-- 품목2 : 입력값이 있을 때 -->
+                <li class=""><!-- 220829 수정: js_accordion 위치변경 -->
+                    <a href="#none" class="tit">품목2</a><!-- 220802 수정: 접근성 이슈로 마크업 변경 -->
+
+                    <div class="toggle_panel">
+                        
+                        <!-- 검색조건 -->
+                        <div class="section_f">
+                            <div class="form_group period">
+                                <div class="form_tit">작성일자</div>
+                                <div class="form_row col">
+                                    <div class="input">
+                                        <input type="tel" value="04" maxlength="2" title="작성일자 월" readonly>
+                                        <span class="unit">월</span>
+                                    </div>
+                                    <div class="input">
+                                        <input type="tel" value="30" maxlength="2" title="작성일자 일">                        
+                                        <span class="unit">일</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn_cnt_wrap">
+                                <span><button type="button" class="btn primary lg">품목조회</button></span>
+                            </div>
+                        </div>
+
+                        <hr class="hr_divide">
+
+                        <!-- 조회결과 -->
+                        <div class="seciton_f">
+                            
+                            <div class="form_group">
+                                <div class="form_tit">품목명</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="품목명 입력" title="품목명" value="포인트">
+                                    </div>
+                                </div>   
+                            </div>
+
+                            <!-- 220729 리웍 -->
+                            <div class="form_group">
+                                <div class="form_tit">규격</div>
+                                <div class="form_row">
+                                    <!-- 220805 수정: 문자키패드용으로 수정 -->
+                                    <div class="input">
+                                        <input type="text" placeholder="규격 입력" title="규격">
+                                    </div>
+                                    <!--// 220805 수정: 문자키패드용으로 수정 -->
+                                </div>   
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">수량</div>
+                                <div class="form_row">
+                                    <!-- 220804 소수점 입력 키패드 -->
+                                    <div class="input"><!-- 220920 수정: 클래스 수정 -->
+                                        <input type="text" placeholder="숫자만 입력" title="수량">
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="form_group">
+                                <div class="form_tit">단가</div>
+                                <div class="form_row">
+                                    <!-- 220804 소수점 입력 키패드 -->
+                                    <div class="input unit js_unit decimal"><!-- 221012 수정: 예외케이스 추가 -->
+                                        <input type="text" placeholder="숫자만 입력" title="수량" data-unit="원"><!-- 220805 수정: data-unit -->
+                                    </div>
+                                    <!-- 220805 삭제: 소숫점표시로 삭제요청
+                                        <p class="form_hangul" aria-hidden="true">원</p> 
+                                    -->
+                                </div>
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">공급가액</div>
+                                <div class="form_row">
+                                    <div class="input unit js_unit" role="button" aria-label="100000원" onclick="">
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="공급가액" data-unit="원" readonly class="bg_white" value="100,000">
+                                        <span class="unit">원</span>
+                                    </div>
+                                    <!-- 비활성화시
+                                    <div class="input unit js_unit">
+                                        <input type="tel" placeholder="숫자만 입력" title="공급가액" data-unit="원" readonly>
+                                        <span class="unit">원</span>
+                                    </div>
+                                    -->
+                                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+                                </div>
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">세액</div>
+                                <div class="form_row">
+                                    <div class="input unit js_unit" role="button" aria-label="10000원" onclick="">
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="세액" data-unit="원" readonly class="bg_white" value="10,000">
+                                        <span class="unit">원</span>
+                                    </div>
+                                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+                                </div>
+                            </div>
+                            <!--// 220729 리웍 -->
+                            
+                            <div class="form_group">
+                                <div class="form_tit">비고</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="비고 입력" title="비고" value="">
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 품목2에 대한 입력항목이 있을경우 (아코디언 닫혔을때만 노출) -->
+                    <div class="acc_lstResult">
+                        <h3 class="hidden">품목2의 입력정보</h3><!-- 입력항목에 대한 타이틀 -->
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">작성일자</div>
+                                <div class="value">2022.04.30</div>
+                            </li>
+                            <li>
+                                <div class="key">품목명</div>
+                                <div class="value">포인트</div>
+                            </li>
+                            <li>
+                                <div class="key">공급가액</div>
+                                <div class="value">100,000</div>
+                            </li>
+                            <li>
+                                <div class="key">세액</div>
+                                <div class="value">10,000</div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+					<button type="button" class="btn outline xs btn_del"><span class="hidden">품목2</span>삭제</button><!-- 221006 접근성 대응: hidden텍스트 추가 --><!-- 220802 수정: 접근성 이슈로 마크업 변경 -->
+                </li>
+
+                <!-- 품목3 : 입력값이 있을 때 -->
+                <li class=""><!-- 220829 수정: js_accordion 위치변경 -->
+                    <a href="#none" class="tit">품목3</a><!-- 220802 수정: 접근성 이슈로 마크업 변경 -->
+
+                    <div class="toggle_panel">
+                        
+                        <!-- 검색조건 -->
+                        <div class="section_f">
+                            <div class="form_group period">
+                                <div class="form_tit">작성일자</div>
+                                <div class="form_row col">
+                                    <div class="input">
+                                        <input type="tel" value="04" maxlength="2" title="작성일자 월" readonly>
+                                        <span class="unit">월</span>
+                                    </div>
+                                    <div class="input">
+                                        <input type="tel" value="30" maxlength="2" title="작성일자 일">                        
+                                        <span class="unit">일</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn_cnt_wrap">
+                                <span><button type="button" class="btn primary lg">품목조회</button></span>
+                            </div>
+                        </div>
+
+                        <hr class="hr_divide">
+
+                        <!-- 조회결과 -->
+                        <div class="seciton_f">
+                            
+                            <div class="form_group">
+                                <div class="form_tit">품목명</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="품목명 입력" title="품목명" value="포인트">
+                                    </div>
+                                </div>   
+                            </div>
+
+                            <!-- 220729 리웍 -->
+                            <div class="form_group">
+                                <div class="form_tit">규격</div>
+                                <div class="form_row">
+                                    <!-- 220805 수정: 문자키패드용으로 수정 -->
+                                    <div class="input">
+                                        <input type="text" placeholder="규격 입력" title="규격">
+                                    </div>
+                                    <!--// 220805 수정: 문자키패드용으로 수정 -->
+                                </div>   
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">수량</div>
+                                <div class="form_row">
+                                    <!-- 220804 소수점 입력 키패드 -->
+                                    <div class="input"><!-- 220920 수정: 클래스 수정 -->
+                                        <input type="text" placeholder="숫자만 입력" title="수량">
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="form_group">
+                                <div class="form_tit">단가</div>
+                                <div class="form_row">
+                                    <!-- 220804 소수점 입력 키패드 -->
+                                    <div class="input unit js_unit decimal"><!-- 221012 수정: 예외케이스 추가 -->
+                                        <input type="text" placeholder="숫자만 입력" title="수량" data-unit="원"><!-- 220805 수정: data-unit -->
+                                    </div>
+                                    <!-- 220805 삭제: 소숫점표시로 삭제요청
+                                        <p class="form_hangul" aria-hidden="true">원</p> 
+                                    -->
+                                </div>
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">공급가액</div>
+                                <div class="form_row">
+                                    <div class="input unit js_unit" role="button" aria-label="100000원" onclick="">
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="공급가액" data-unit="원" readonly class="bg_white" value="100,000">
+                                        <span class="unit">원</span>
+                                    </div>
+                                    <!-- 비활성화시
+                                    <div class="input unit js_unit">
+                                        <input type="tel" placeholder="숫자만 입력" title="공급가액" data-unit="원" readonly>
+                                        <span class="unit">원</span>
+                                    </div>
+                                    -->
+                                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+                                </div>
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">세액</div>
+                                <div class="form_row">
+                                    <div class="input unit js_unit" role="button" aria-label="10,000원" onclick="">
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="세액" data-unit="원" readonly class="bg_white" value="10,000">
+                                        <span class="unit">원</span>
+                                    </div>
+                                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+                                </div>
+                            </div>
+                            <!--// 220729 리웍 -->
+                            
+                            <div class="form_group">
+                                <div class="form_tit">비고</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="비고 입력" title="비고" value="">
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 품목3에 대한 입력항목이 있을경우 (아코디언 닫혔을때만 노출) -->
+                    <div class="acc_lstResult">
+                        <h3 class="hidden">품목3의 입력정보</h3><!-- 입력항목에 대한 타이틀 -->
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">작성일자</div>
+                                <div class="value">2022.04.30</div>
+                            </li>
+                            <li>
+                                <div class="key">품목명</div>
+                                <div class="value">포인트</div>
+                            </li>
+                            <li>
+                                <div class="key">공급가액</div>
+                                <div class="value">100,000</div>
+                            </li>
+                            <li>
+                                <div class="key">세액</div>
+                                <div class="value">10,000</div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+					<button type="button" class="btn outline xs btn_del"><span class="hidden">품목3</span>삭제</button><!-- 221006 접근성 대응: hidden텍스트 추가 --><!-- 220802 수정: 접근성 이슈로 마크업 변경 -->
+                </li>
+
+                <!-- 품목4 : 입력값 없음 -->
+                <li class=""><!-- 220829 수정: js_accordion 위치변경 -->
+                    <a href="#none" class="tit">품목4</a><!-- 220802 수정: 접근성 이슈로 마크업 변경 -->  
+                    <div class="toggle_panel">
+                        
+                        <!-- 검색조건 -->
+                        <div class="section_f">
+                            <div class="form_group period">
+                                <div class="form_tit">작성일자</div>
+                                <div class="form_row col">
+                                    <div class="input">
+                                        <input type="tel" value="04" maxlength="2" title="작성일자 월" readonly>
+                                        <span class="unit">월</span>
+                                    </div>
+                                    <div class="input">
+                                        <input type="tel" value="" maxlength="2" title="작성일자 일">                        
+                                        <span class="unit">일</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn_cnt_wrap">
+                                <span><button type="button" class="btn primary lg">품목조회</button></span>
+                            </div>
+                        </div>
+                        <!--// 검색조건 -->
+
+                        <hr class="hr_divide">
+
+                        <!-- 조회결과 -->
+                        <div class="seciton_f">
+                            
+                            <div class="form_group">
+                                <div class="form_tit">품목명</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="품목명 입력" title="품목명" value="">
+                                    </div>
+                                </div>   
+                            </div>
+
+                            <!-- 220729 리웍 -->
+                            <div class="form_group">
+                                <div class="form_tit">규격</div>
+                                <div class="form_row">
+                                    <!-- 220805 수정: 문자키패드용으로 수정 -->
+                                    <div class="input">
+                                        <input type="text" placeholder="규격 입력" title="규격">
+                                    </div>
+                                    <!--// 220805 수정: 문자키패드용으로 수정 -->
+                                </div>   
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">수량</div>
+                                <div class="form_row">
+                                    <!-- 220804 소수점 입력 키패드 -->
+                                    <div class="input"><!-- 220920 수정: 클래스 수정 -->
+                                        <input type="text" placeholder="숫자만 입력" title="수량">
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="form_group">
+                                <div class="form_tit">단가</div>
+                                <div class="form_row">
+                                    <!-- 220804 소수점 입력 키패드 -->
+                                    <div class="input unit js_unit decimal"><!-- 221012 수정: 예외케이스 추가 -->
+                                        <input type="tel" placeholder="숫자만 입력" title="수량" data-unit="원"><!-- 220805 수정: data-unit -->
+                                    </div>
+                                    <!-- 220805 삭제: 소숫점표시로 삭제요청
+                                        <p class="form_hangul" aria-hidden="true">원</p> 
+                                    -->
+                                </div>
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">공급가액</div>
+                                <div class="form_row">
+                                    <div class="input unit js_unit" role="button" aria-label="변경되는 숫자, 공급가액 입력" onclick="">
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="공급가액" data-unit="원" readonly class="bg_white">
+                                        <span class="unit">원</span>
+                                    </div>
+                                    <!-- 비활성화시
+                                    <div class="input unit js_unit">
+                                        <input type="tel" placeholder="숫자만 입력" title="공급가액" data-unit="원" readonly>
+                                        <span class="unit">원</span>
+                                    </div>
+                                    -->
+                                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+                                </div>
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">세액</div>
+                                <div class="form_row">
+                                    <div class="input unit js_unit" role="button" aria-label="변경되는 숫자, 세액 입력" onclick="">
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="세액" data-unit="원" readonly class="bg_white">
+                                        <span class="unit">원</span>
+                                    </div>
+                                    <!-- 221013 삭제 : 현업요청 <p class="form_hangul" aria-hidden="true">원</p> -->
+                                </div>
+                            </div>
+                            <!--// 220729 리웍 -->
+                            
+                            <div class="form_group">
+                                <div class="form_tit">비고</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="비고 입력" title="비고" value="">
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <!--// 조회결과 -->
+                    </div>
+                    
+					<button type="button" class="btn outline xs btn_del"><span class="hidden">품목4</span>삭제</button><!-- 221006 접근성 대응: hidden텍스트 추가 --><!-- 220802 수정: 접근성 이슈로 마크업 변경 -->
+                </li>
+            </ul>
+            <!--// 아코디언: 품목정보(최대4개) -->
+
+            <!-- 품목 추가 버튼 -->
+            <!-- 221007 수정: 버튼 클래스명 수정 -->
+            <div class="btn_cnt_wrap gap_md"><!-- 220729 리웍: 클래스추가 -->
+                <span><button type="button" class="btn outline md">합계금액으로 추가</button></span>
+                <span><button type="button" class="btn outline md">추가</button></span>
+            </div>
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn outline md">초기화</button></span>
+            </div>
+
+            <!-- 영세: 합계금액으로 추가 삭제
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn outline md">초기화</button></span>
+                <span><button type="button" class="btn outline md">추가</button></span>
+            </div>
+            -->
+            <!--// 221007 수정: 버튼 클래스명 수정 -->
+        </div>
+        
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">이전</button></span>
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+    $(function(){
+        var accoTypeDel = $('.list_acco.type_delBtn'),
+            result_lst = ".acc_lstResult";
+
+        /* 220916 접근성 대응: aria-expended 속성
+         * a.tit 에 aria-expanded 속성을 추가하여 닫힘/열림 동작할때 마다 값을 바꿔야 합니다.
+         * 닫힘 : aria-expanded="false" 
+         * 열림 : aria-expanded="true" 
+         * 히든텍스트를 삽입한 경우 열림:"닫기", 닫힘: "열기" 텍스트가 바뀌어야 합니다.
+        */
+
+        //default
+        accoTypeDel.find('> li a.tit').attr('aria-expanded','false');//닫힘 : aria-expanded="false" 
+
+        //.on
+        accoTypeDel.find('> li.on a.tit').attr('aria-expanded','true');//열림 : aria-expanded="true"
+        accoTypeDel.find('> li.on .toggle_panel').show();
+
+        //click
+        accoTypeDel.find('> li a.tit').each(function(){//220829 수정: 선택자 수정
+            var t = $(this),
+                spd = 300;
+
+            t.on('click', function(){
+                if( t.closest('li').hasClass('on') ){
+                    t.attr('aria-expanded', 'false').parents('li').removeClass('on').find('.toggle_panel').slideUp(spd);//닫힘 : aria-expanded="false" 
+                    t.siblings(result_lst).show();
+                }else{
+                    t.attr('aria-expanded', 'true').parents('li').find('.toggle_panel').slideDown(spd).parents('li').addClass('on');//열림 : aria-expanded="true"
+                    t.siblings(result_lst).hide();
+                }
+            });
+        });
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>채권조회/대출(할인)신청</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" >
+		<h1 class="h1">할인대상 채권조회</h1>
+		<div class="inform_top_wrap">
+			<ul class="depth bul">
+				<li>귀사의 할인대상채권을 조회하고 할인신청을 하실 수 있는 서비스입니다.</li>
+				<li>전체조회 또는 기간별 조회를 선택하신 후 [조회]버튼을 선택 하세요.</li>
+				<li>할인신청을 하시려면 [할인신청] 버튼을 선택하세요.<br>기간별조회는 채권등록일 기준으로 조회하시고자 하는 기간을 입력하세요.</li>
+				<li>B2B 이체처리 시간 : 1회차(10:00), 2회차(12:00), 3회차(15:00), 4회차(16:50), 5회차(19:00)</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<div class="form_group">
+				<div class="form_tit">조회조건</div>
+				<div class="form_row">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="radioBox1_1" name="radio_box1" checked>
+							<label for="radioBox1_1" class="label"><em>전체조회</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="radioBox1_2" name="radio_box1">
+							<label for="radioBox1_2" class="label"><em>기간별 조회</em></label>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="form_group">
+				<div class="form_tit">판매기업 사업자등록번호</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn" title="판매기업 사업자등록번호 선택">1078637014: 공평울모(매)</button>
+					</div>
+				</div>
+			</div>
+			<!-- 기간별 조회일 경우 show -->
+			<div class="form_group">
+				<div class="form_tit">조회기간</div>
+				<div class="form_row">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="period1" name="period">
+							<label for="period1" class="label"><em>오늘</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period2" name="period">
+							<label for="period2" class="label"><em>1주일</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period3" name="period">
+							<label for="period3" class="label"><em>1개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period4" name="period">
+							<label for="period4" class="label"><em>3개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period5" name="period" checked>
+							<label for="period5" class="label"><em>6개월</em></label>
+						</span>
+					</div>
+					<div class="form_date_term">
+						<div class="input date">
+							<input type="tel" title="시작일 입력" maxlength="8" value ="20210301" readonly>
+							<button type="button" class="btn_cal" title="시작일 선택"></button>                    
+						</div>
+						<span class="space">~</span>
+						<div class="input date">
+							<input type="tel" title="종료일 입력" maxlength="8" value ="20210331" readonly> 
+							<button type="button" class="btn_cal" title="종료일 선택"></button>                              
+						</div>
+					</div>              
+				</div>
+			</div>
+			<!-- // 기간별 조회일 경우 show -->
+
+			<div class="btn_cnt_wrap">
+				<span><button type="button" class="btn primary lg">조회</button></span>
+			</div>
+		</div>
+		
+		<hr class="hr_divide">
+
+		<div class="section">
+			<h2 class="h3">조회결과</h2>
+			<div class="list_top_wrap">
+				<div class="col">
+					<div class="sch_period">
+						<div class="hidden">조회기간</div><!-- 220906 접근성 추가 -->
+						<span class="number">2021.04.21~2022.05.04</span>
+					</div>
+				</div>
+				<div class="col">
+					<span class="total_num">총 <em class="number">11</em><span class="num_unit">건</span></span>
+				</div>
+			</div>
+			<div class="list_data_group">
+				<ul class="list_data left lbt">
+					<li>
+						<div class="key">대출관리번호</div>
+						<div class="value"><span class="number">1391P0-60-308001</span></div>
+					</li>
+					<li>
+						<div class="key">약정일자</div>
+						<div class="value"><span class="number">2011.10.06</span></div>
+					</li>
+					<li>
+						<div class="key">약정만기일</div>
+						<div class="value"><span class="number">2014.10.06</span></div>
+					</li>
+					<li>
+						<div class="key">대출(할인)한도</div>
+						<div class="value"><span class="number">200,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">대출(할인)잔액</div>
+						<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">상환청구권 있는<br>방식 대출 잔액</div>
+						<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">상환청구권 없는<br>방식 대출 잔액</div>
+						<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">총채권금액</div>
+						<div class="value"><span class="number">2,658,612,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">판매기업명</div>
+						<div class="value">PM울모(매)</div>
+					</li>
+					<li>
+						<div class="key">판매기업<br>사업자등록번호</div>
+						<div class="value"><span class="number">107-86-37014</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="list_data_group">
+				<h2 class="h3">할인대상채권</h2>
+				<div class="list_data_group_s">
+					<ul class="list_data left lbt">
+						<li>
+							<div class="key">채권번호</div>
+							<div class="value"><span class="number">20000130062022</span></div>
+						</li>
+						<li>
+							<div class="key">B2B관리번호</div>
+							<div class="value"><span class="number">022202810843</span></div>
+						</li>
+						<li>
+							<div class="key">할인완료금액</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<!-- 221130 추가 -->
+						<li>
+							<div class="key">채권금액</div>
+							<div class="value"><span class="number">34,892,000</span><span class="num_unit">원</span></div>
+						</li>
+						<!-- //221130 추가 -->
+						<li>
+							<div class="key">할인진행금액</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">구매기업명</div>
+							<div class="value">김아언민현규(현)</div>
+						</li>
+						<li>
+							<div class="key">구매사업자등록번호</div>
+							<div class="value"><span class="number">120-81-78027</span></div>
+						</li>
+						<li>
+							<div class="key">채권등록일</div>
+							<div class="value"><span class="number">2022.02.21</span></div>
+						</li>
+						<li>
+							<div class="key">만기일</div>
+							<div class="value"><span class="number">2022.05.02</span></div>
+						</li>
+						<li>
+							<div class="key">할인가능일</div>
+							<div class="value"><span class="number">2022.02.21</span></div>
+						</li>
+					</ul>
+					<div class="btn_list_btm">
+						<span><button type="button" class="btn outline sm">할인신청</button></span>
+					</div>
+				</div>
+				<div class="list_data_group_s">
+					<ul class="list_data left lbt">
+						<li>
+							<div class="key">채권번호</div>
+							<div class="value"><span class="number">20000130062022</span></div>
+						</li>
+						<li>
+							<div class="key">B2B관리번호</div>
+							<div class="value"><span class="number">022202810843</span></div>
+						</li>
+						<li>
+							<div class="key">할인완료금액</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<!-- 221130 추가 -->
+						<li>
+							<div class="key">채권금액</div>
+							<div class="value"><span class="number">34,892,000</span><span class="num_unit">원</span></div>
+						</li>
+						<!-- //221130 추가 -->
+						<li>
+							<div class="key">할인진행금액</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">구매기업명</div>
+							<div class="value">김아언민현규(현)</div>
+						</li>
+						<li>
+							<div class="key">구매사업자등록번호</div>
+							<div class="value"><span class="number">120-81-78027</span></div>
+						</li>
+						<li>
+							<div class="key">채권등록일</div>
+							<div class="value"><span class="number">2022.02.21</span></div>
+						</li>
+						<li>
+							<div class="key">만기일</div>
+							<div class="value"><span class="number">2022.05.02</span></div>
+						</li>
+						<li>
+							<div class="key">할인가능일</div>
+							<div class="value"><span class="number">2022.02.21</span></div>
+						</li>
+					</ul>
+					<div class="btn_list_btm">
+						<span><button type="button" class="btn outline sm">할인신청</button></span>
+					</div>
+				</div>
+				<div class="list_data_group_s">
+					<ul class="list_data left lbt">
+						<li>
+							<div class="key">채권번호</div>
+							<div class="value"><span class="number">20000130062022</span></div>
+						</li>
+						<li>
+							<div class="key">B2B관리번호</div>
+							<div class="value"><span class="number">022202810843</span></div>
+						</li>
+						<li>
+							<div class="key">할인완료금액</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<!-- 221130 추가 -->
+						<li>
+							<div class="key">채권금액</div>
+							<div class="value"><span class="number">34,892,000</span><span class="num_unit">원</span></div>
+						</li>
+						<!-- //221130 추가 -->
+						<li>
+							<div class="key">할인진행금액</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">구매기업명</div>
+							<div class="value">김아언민현규(현)</div>
+						</li>
+						<li>
+							<div class="key">구매사업자등록번호</div>
+							<div class="value"><span class="number">120-81-78027</span></div>
+						</li>
+						<li>
+							<div class="key">채권등록일</div>
+							<div class="value"><span class="number">2022.02.21</span></div>
+						</li>
+						<li>
+							<div class="key">만기일</div>
+							<div class="value"><span class="number">2022.05.02</span></div>
+						</li>
+						<li>
+							<div class="key">할인가능일</div>
+							<div class="value"><span class="number">2022.02.21</span></div>
+						</li>
+					</ul>
+					<div class="btn_list_btm">
+						<span><button type="button" class="btn outline sm">할인신청</button></span>
+					</div>
+				</div>
+				
+				<div class="btn_list_btm more">
+					<button type="button" class="btn">더보기</button>
+				</div>
+			</div>
+			<!-- 조회결과없음 -->
+			<div class="result nodata sm">
+				<p class="tit">조회하실 내역이 없습니다.</p>
+			</div>
+			<!-- //조회결과없음 -->
+		</div>
+
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li>채권만기일 당일에는 확인 하실 수 없으며, 구매기업의 결제계좌에 결제대금이 입금되면 고객님의 계좌로 10:00, 12:00, 15:20, 16:50, 19:00 이후에 자동 입금됩니다.</li>
+					<li>대출한도조회 메뉴에서 대출약정금액과 잔액, 신청가능액을 확인할 수 있습니다.</li>
+					<li>고객님의 대출한도가 있더라도 구매기업의 대출한도가 없으면 할인하실 수 없습니다.</li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

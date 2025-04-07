@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[입금지정계좌]바텀시트-입금지정계좌 검색</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+		<!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<div class="btn_cnt_wrap">
+            <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE004240')">입금지정계좌(바텀)</button></span>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!-- 입금계좌 선택 팝업 -->
+<!-- 220729 리웍 -->
+<div id="BFE004240" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop_wrap">
+        <div class="pop_head">
+            <div>
+                <h1>입금지정계좌</h1>
+            </div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_section">
+                <div class="section">
+                    <div class="form_group">
+                        <div class="form_tit">그룹선택</div>
+                        <div class="form_row">
+                            <div class="select">
+                                <button type="button" class="select_btn active" title="입금지정계좌 그룹 선택">전체</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            </div>
+                        </div>
+                        <div class="btn_cnt_wrap">
+                            <span><button type="button" class="btn primary lg">조회</button></span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="hr_divide full">
+
+                <!-- 221101 노데이터 유형 추가 -->
+                <div class="result nodata sm">
+                    <p class="tit">조회하신 내역이 없습니다.</p>
+                </div>
+                <!-- //221101 노데이터 유형 추가 -->
+
+                <div class="section ui_scroller"><!-- 221024 'ui_scroller' 클래스 추가 -->
+                    <ul class="acc_list acc_type2">
+                        <li>
+                            <a href="#none" class="acc_bank"><!-- 221021 'acc_bank' 클래스 추가 -->
+                                <span class="bk_user">LALABIZ <em class="sep_txt">예금주 명</em></span><!-- 221024 'medium, ff_roboto' 클래스 삭제 -->
+                                <span class="acc_bank_num">
+                                    <span class="icon_bank_004 md"></span><!-- 221021 은행 아이콘 추가 -->
+                                    <span class="bk_name inline">KB국민</span>
+                                    <span class="bk_num number inline mgt_0">574498-90-009768</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="acc_bank"><!-- 221021 'acc_bank' 클래스 추가 -->
+                                <span class="bk_user">LALABIZ <em class="sep_txt">예금주 명</em></span><!-- 221024 'medium, ff_roboto' 클래스 삭제 -->
+                                <span class="acc_bank_num">
+                                    <span class="icon_bank_090 md"></span><!-- 221021 은행 아이콘 추가 -->
+                                    <span class="bk_name inline">카카오뱅크</span>
+                                    <span class="bk_num number inline mgt_0">574498-90-009768</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="acc_bank"><!-- 221021 'acc_bank' 클래스 추가 -->
+                                <span class="bk_user">LALABIZ <em class="sep_txt">예금주 명</em></span><!-- 221024 'medium, ff_roboto' 클래스 삭제 -->
+                                <span class="acc_bank_num">
+                                    <span class="icon_bank_004 md"></span><!-- 221021 은행 아이콘 추가 -->
+                                    <span class="bk_name inline">KB국민</span>
+                                    <span class="bk_num number inline mgt_0">574498-90-009768</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="acc_bank"><!-- 221021 'acc_bank' 클래스 추가 -->
+                                <span class="bk_user">LALABIZ <em class="sep_txt">예금주 명</em></span><!-- 221024 'medium, ff_roboto' 클래스 삭제 -->
+                                <span class="acc_bank_num">
+                                    <span class="icon_bank_004 md"></span><!-- 221021 은행 아이콘 추가 -->
+                                    <span class="bk_name inline">KB국민</span>
+                                    <span class="bk_num number inline mgt_0">574498-90-009768</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="acc_bank"><!-- 221021 'acc_bank' 클래스 추가 -->
+                                <span class="bk_user">LALABIZ <em class="sep_txt">예금주 명</em></span><!-- 221024 'medium, ff_roboto' 클래스 삭제 -->
+                                <span class="acc_bank_num">
+                                    <span class="icon_bank_090 md"></span><!-- 221021 은행 아이콘 추가 -->
+                                    <span class="bk_name inline">카카오뱅크</span>
+                                    <span class="bk_num number inline mgt_0">574498-90-009768</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="acc_bank"><!-- 221021 'acc_bank' 클래스 추가 -->
+                                <span class="bk_user">LALABIZ <em class="sep_txt">예금주 명</em></span><!-- 221024 'medium, ff_roboto' 클래스 삭제 -->
+                                <span class="acc_bank_num">
+                                    <span class="icon_bank_004 md"></span><!-- 221021 은행 아이콘 추가 -->
+                                    <span class="bk_name inline">KB국민</span>
+                                    <span class="bk_num number inline mgt_0">574498-90-009768</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </article>
+</div>
+<!-- //220729 리웍 -->
+<!-- //입금계좌 선택 팝업 -->
+<!--// 업무 HTML 선언 END -->
+
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[거래내역조회]글로벌KB계좌조회_요구불거래내역</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+
+        <div id="content">
+            <h1 class="hidden">글로벌KB계좌조회</h1><!-- 221013 수정: 클래스명 수정 -->
+            <div class="section">
+                <!-- 220729 리웍 -->
+                <div class="acc_pannel open only">
+                    <div class="acc_wrap">
+                        <div class="acc_top_info divide">
+                            <span>베트남</span>
+                            <span>㈜홍길동 무역</span>
+                        </div>
+                        <div class="acc_name">KB기업종합통장-보통예금</div>
+                        <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                        <div class="acc_info_wrap">
+                            <div class="acc_info">
+                                <span class="tit">신규일</span><span class="number">2015.06.16</span>
+                            </div>
+                        </div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay"><span class="unit">잔액</span>
+                                <strong class="num_unit">USD</strong><strong class="number">1,000,000,000.00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// 220729 리웍 -->
+                
+                <!-- 220729 리웍: section 삭제 -->
+                <div class="form_group">
+                    <div class="form_tit">조회기간</div>
+                    <div class="form_row">
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="period1" name="period" checked="">
+                                <label for="period1" class="label"><em>오늘</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period2" name="period">
+                                <label for="period2" class="label"><em>1주일</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period3" name="period">
+                                <label for="period3" class="label"><em>1개월</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period4" name="period">
+                                <label for="period4" class="label"><em>3개월</em></label>
+                            </span>
+                        </div>
+                        <div class="form_date_term">
+                            <div class="input date">
+                                <input type="tel" title="시작일 입력" maxlength="8" value="2022.04.21">
+                                <button type="button" class="btn_cal" title="시작일 선택"></button>                    
+                            </div>
+                            <span class="space">~</span>
+                            <div class="input date">
+                                <input type="tel" title="종료일 입력" maxlength="8" value="2022.04.31"> 
+                                <button type="button" class="btn_cal" title="종료일 선택"></button>                              
+                            </div>
+                        </div>              
+                    </div>
+                </div>
+                <div class="btn_cnt_wrap">
+                    <span><button type="button" class="btn primary lg">조회</button></span>
+                </div>
+            </div>
+
+            <hr class="hr_divide"><!-- 220729 리웍: 속성삭제 -->
+
+            <div class="section">
+                <h2 class="h2">조회결과</h2>
+                <div class="list_top_wrap">
+                    <div class="col">
+                        <div class="sch_period">
+                            <span class="number">2022.04.21~2022.05.21</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list_data_group">
+                    <!-- 220729 리웍:구조변경 -->
+                    <!-- 입금계좌 -->
+                    <div class="list_data_group_s">
+                        <h3 class="hidden">2022.04.21~2022.05.21 까지의 %KB기업종합통장-보통예금 상품명% 거래내역 1</h3>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">거래일시</div>
+                                <div class="value"><span class="number">2020.01.01</span> <span class="number">12:11</span></div>
+                            </li>
+                            <li>
+                                <div class="key">예금주</div>
+                                <div class="value">김국민</div>
+                            </li>
+                            <li>
+                                <div class="key">적요</div>
+                                <div class="value">전자금융</div>
+                            </li>
+                            <li>
+                                <div class="key">거래유형</div>
+                                <div class="value fc_posi">입금</div>
+                            </li>
+                            <li>
+                                <div class="key">입금액</div>
+                                <div class="value fc_posi"><span class="number">34,000</span></div>
+                            </li>
+                            <li>
+                                <div class="key">잔액</div>
+                                <div class="value"><span class="number">10,000</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //입금계좌 -->
+
+                    <!-- 출금계좌 -->
+                    <div class="list_data_group_s">
+                        <h3 class="hidden">2022.04.21~2022.05.21 까지의 %KB기업종합통장-보통예금 상품명% 거래내역 1</h3>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">거래일시</div>
+                                <div class="value"><span class="number">2020.01.01</span> <span class="number">12:11</span></div>
+                            </li>
+                            <li>
+                                <div class="key">예금주</div>
+                                <div class="value">김국민</div>
+                            </li>
+                            <li>
+                                <div class="key">적요</div>
+                                <div class="value">전자금융</div>
+                            </li>
+                            <li>
+                                <div class="key">거래유형</div>
+                                <div class="value fc_nega">출금</div>
+                            </li>
+                            <li>
+                                <div class="key">출금액</div>
+                                <div class="value fc_nega"><span class="number">34,000</span></div>
+                            </li>
+                            <li>
+                                <div class="key">잔액</div>
+                                <div class="value"><span class="number">10,000</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //출금계좌 -->
+
+                    <!-- 입금+수표 -->
+                    <div class="list_data_group_s">
+                        <h3 class="hidden">2022.04.21~2022.05.21 까지의 %KB기업종합통장-보통예금 상품명% 거래내역 1</h3>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">거래일시</div>
+                                <div class="value"><span class="number">2020.01.01</span> <span class="number">12:11</span></div>
+                            </li>
+                            <li>
+                                <div class="key">예금주</div>
+                                <div class="value">김국민</div>
+                            </li>
+                            <li>
+                                <div class="key">적요</div>
+                                <div class="value">전자금융</div>
+                            </li>
+                            <li>
+                                <div class="key">거래유형</div>
+                                <div class="value fc_posi">입금</div>
+                            </li>
+                            <li>
+                                <div class="key">출금액</div>
+                                <div class="value fc_posi"><span class="number">34,000</span></div>
+                            </li>
+                            <li>
+                                <div class="key">잔액</div>
+                                <div class="value"><span class="number">10,000</span></div>
+                            </li>
+                            <li>
+                                <div class="key">수표번호</div>
+                                <div class="value"><span class="number">0000000000</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //입금+수표 -->
+                    <!--// 220729 리웍:구조변경 -->
+                </div>
+            </div>
+
+            <div class="btn_list_btm more">
+                <button type="button" class="btn">더보기</button>
+            </div>
+
+            <div class="result nodata sm"><!-- 220729 리웍: 클래스 추가 -->
+                <p class="tit">조회 내역이 없습니다.</p>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+    
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[바로 ERP 실행]처리 완료 내역(TAB)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+
+        <div id="content">
+            <h1 class="hidden">바로 ERP 처리 내역 및 처리 완료 내역</h1>
+            <div class="tab_wrap">
+                <div class="tab_list" role="tablist">
+                    <div class="scroll_wrap">
+                        <button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_1">처리할 내역</button>
+                        <button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_2">처리 완료 내역</button>
+                        
+                    </div>
+                </div>
+                <div class="link_panel"><!-- 220729 리웍: 클래스수정 -->
+                    <h2 class="hidden">처리 완료 내역</h2>
+                    <div class="inform_top_wrap">
+                        <ul class="depth bul">
+                            <li>바로 ERP 서비스를 통해 처리한 10건이하이체(즉시), 급여이체 거래내역을 조회 할 수 있는 화면입니다.</li>
+                            <li>본인이 등록한 내역만 조회가 가능합니다. 단 관리자(Master)는 모든 사용자가 등록한 내역을 조회 하실 수 있습니다.</li>
+                            <li>먼저 조회조건을 선택하십시오.</li>
+                            <li>조회결과의 상세 내용은 거래종류별 해당 메뉴의 처리결과 메뉴에서 확인하셔야 합니다.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 220729 리웍 -->
+                    <div class="section">
+                        <div class="form_group">
+                            <div class="form_tit">조회기간</div>
+                            <div class="form_row">
+                                <div class="rdoChk_box">
+                                    <span class="selection">
+                                        <input type="radio" id="period1_1" name="period" >
+                                        <label for="period1_1" class="label"><em>당일</em></label>
+                                    </span>
+                                    <span class="selection">
+                                        <input type="radio" id="period1_2" name="period">
+                                        <label for="period1_2" class="label"><em>1주일</em></label>
+                                    </span>
+                                    <span class="selection">
+                                        <input type="radio" id="period1_3" name="period" checked>
+                                        <label for="period1_3" class="label"><em>1개월</em></label>
+                                    </span>
+                                    <span class="selection">
+                                        <input type="radio" id="period1_4" name="period">
+                                        <label for="period1_4" class="label"><em>3개월</em></label>
+                                    </span>
+                                    <span class="selection">
+                                        <input type="radio" id="period1_5" name="period">
+                                        <label for="period1_5" class="label"><em>6개월</em></label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="sort_wrap gap_md">
+                        <h2 class="hidden">조회조건</h2>
+
+                        <!-- 기본형
+                        <div class="sort_detail">
+                            <button class="btn_txt ico_arrdown" title="조회기간설정">
+                                <span><em class="number">3</em>개월<span class="hidden">선택됨</span></span>
+                                <span>전체</span>
+                                <span>최신순</span>
+                            </button>
+                        </div>
+                        --> 
+                        <!-- 조회조건 설정 -->
+                        <div class="sort_detail">
+                            <button class="btn_txt ico_arrdown" title="조회기간설정">
+                                <span><em class="number">04.21~05.21</em></span>
+                                <span><em class="number">10</em><span>건이하</span></span>
+                                <span>최신순</span>
+                                <span class="hidden">선택됨</span>
+                            </button>
+                        </div>      
+                    </div>
+                    <!--// 220729 리웍 -->
+
+                    <div class="section gap_sm_3"><!-- 220729 리웍: 클래스수정 -->                      
+                        <div class="list_data_group">
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">처리 일자</div>
+                                    <div class="value"><span class="number">2022.04.30</span></div>
+                                </li>
+                                <li>
+                                    <div class="key">거래종류</div>
+                                    <div class="value"><span class="number">10</span><span class="num_unit">건이하이체(즉시)</span></div><!-- 220729 리웍: 태그수정 -->
+                                </li>
+                                <li>
+                                    <div class="key">금액</div>
+                                    <div class="value"><strong class="number">2,000</strong><span class="num_unit">원</span></div>
+                                </li>
+                                <li>
+                                    <div class="key">출금계좌번호</div>
+                                    <div class="value"><span class="number">00000000000</span></div>
+                                </li>
+                                <li>
+                                    <div class="key">등록자</div>
+                                    <div class="value">test</div>
+                                </li>
+                                <li>
+                                    <div class="key">결제완료일자</div>
+                                    <div class="value"><span class="number">2022.05.01 00:00</span></div>
+                                </li>
+                            </ul>
+                            <ul class="list_data" >
+                                <li>
+                                    <div class="key">처리 일자</div>
+                                    <div class="value"><span class="number">2022.05.30</span></div>
+                                </li>
+                                <li>
+                                    <div class="key">거래종류</div>
+                                    <div class="value"><span class="number">10</span><span class="num_unit">건이하이체(즉시)</span></div><!-- 220729 리웍: 태그수정 -->
+                                </li>
+                                <li>
+                                    <div class="key">금액</div>
+                                    <div class="value"><strong class="number">2,000</strong><span class="num_unit">원</span></div>
+                                </li>
+                                <li>
+                                    <div class="key">출금계좌번호</div>
+                                    <div class="value"><span class="number">00000000000</span></div>
+                                </li>
+                                <li>
+                                    <div class="key">등록자</div>
+                                    <div class="value">test</div>
+                                </li>
+                                <li>
+                                    <div class="key">결제완료일자</div>
+                                    <div class="value"><span class="number">2022.05.01 00:00</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 220816 수정: 위치수정 -->
+                    <!-- 조회 결과 없음 -->
+                    <div class="result nodata sm"><!-- 220729 리웍: 클래스수정 -->
+                        <p class="tit">조회하신 내역이 없습니다.</p>
+                    </div>
+                    <!-- // 220816 수정: 위치수정 -->
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

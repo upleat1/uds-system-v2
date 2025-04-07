@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>자금관리 차트 가이드</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <style>
+            .test-ul {padding-left:0; padding-right:0;}
+            .test-ul > li + li {margin-top:.8rem;}
+            .test-grid{display:flex; flex-wrap:wrap; width:100%; padding-right:0; border:1px solid #dedede;}
+            .test-grid > li {width:50%; text-align:center; border-left:1px solid #dedede; border-bottom: 1px solid #dedede; padding: 1rem 0;}
+            .test-grid > li:nth-child(odd) {border-left:0;}
+            .test-grid > li:nth-last-child(1), .test-grid > li:nth-last-child(2) {border-bottom:0;}
+        </style>
+        <h1 class="h1">자금관리 차트 가이드</h1>
+
+        <div class="section">
+            <h2 class="h2">차트적용 화면</h2>
+            <ul class="test-grid">
+                <li><a href="BFE015380.html" class="btn_txt link" target="_blank">BFE015380.html</a></li>
+                <li><a href="BFE015440.html" class="btn_txt link" target="_blank">BFE015440.html</a></li>
+                <li><a href="BFE015481.html" class="btn_txt link" target="_blank">BFE015481.html</a></li>
+                <li><a href="BFE015521.html" class="btn_txt link" target="_blank">BFE015521.html</a></li>
+                <li><a href="BFE017110.html" class="btn_txt link" target="_blank">BFE017110.html</a></li>
+                <li><a href="BFE017130.html" class="btn_txt link" target="_blank">BFE017130.html</a></li>
+                <li><a href="BFE017150.html" class="btn_txt link" target="_blank">BFE017150.html</a></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">범례 색상별 클래스명</h2>
+            <ul class="test-ul chart">
+                <li><i class="legend type01"></i>.legend.type01 범례01</li>
+                <li><i class="legend type02"></i>.legend.type02 범례02</li>
+                <li><i class="legend type03"></i>.legend.type03 범례03</li>
+                <li><i class="legend type04"></i>.legend.type04 범례04</li>
+                <li><i class="legend type05"></i>.legend.type05 범례05</li>
+                <li><i class="legend type06"></i>.legend.type06 범례06</li>
+                <li><i class="legend type07"></i>.legend.type07 범례07</li>
+                <li><i class="legend type08"></i>.legend.type08 범례08</li>
+                <li><i class="legend type09"></i>.legend.type09 범례09</li>
+                <li><i class="legend type10"></i>.legend.type10 범례10</li>
+                <li><i class="legend type11"></i>.legend.type11 범례11</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">차트 <a href="BFE015380.html" target="_blank" class="btn_txt link sm">(BFE015380)</a></h2>
+            <div class="chart_wrap">
+                <div class="chart">
+                    <div class="graphbox">
+                        <!-- 차트 삽입 -->
+                        <div style="display:flex; align-items: center; justify-content: center; width:100%; height:15rem; background: #ededed; color:#aaa; font-weight:bold; font-size:1.8rem;">차트 영역</div>
+                    </div>
+                </div>
+                
+                <div class="chart_info center">
+                    <button type="button" class="btn_txt ico_reset sm2">최신업데이트</button>
+                    <span class="sep_txt">
+                        <span class="number">2022.02.26 08:12:00</span> <em class="fc_nega">(오류)</em>
+                    </span>
+                </div>
+            </div>
+
+            <div class="chart_wrap">
+                <!-- 데이터 없을 경우 -->
+                <div class="chart">
+                    <div class="result nodata sm">
+                        <p class="tit">조회하신 정보가 없습니다.</p>
+                    </div>
+                </div>
+                <div class="chart_info center">
+                    <button type="button" class="btn_txt ico_reset sm2">최신업데이트</button>
+                    <span class="sep_txt">
+                        <span class="number">2022.02.26 08:12:00</span> <em class="fc_nega">(오류)</em>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">도넛형 + 세부항목 <a href="BFE017130.html" target="_blank" class="btn_txt link sm">(BFE017130)</a></h2>
+            <div class="chart withLst">
+                <div class="graphbox circle"><!-- 도넛 모양일 경우 circle 클래스 추가 -->
+                    <!-- 차트 삽입 -->
+                    <div style="display:flex; align-items: center; justify-content: center; width:100%; height:15rem; background: #ededed; color:#aaa; font-weight:bold; font-size:1.8rem;">도넛차트 영역</div>
+                </div>
+                <div class="chart_data">
+                    <ul class="list_data chart">
+                        <li>
+                            <div class="key">
+                                <i class="legend type01"></i>수시입출금
+                            </div>
+                            <div class="value">
+                                <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">
+                                <i class="legend type10"></i>예금
+                            </div>
+                            <div class="value">
+                                <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">
+                                <i class="legend type11"></i>적금
+                            </div>
+                            <div class="value">
+                                <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 220914 케이스 추가 -->
+        <div class="section">
+            <h2 class="h2">도넛차트 그릴 수 없을때</h2>
+            <div class="chart withLst">
+                <div class="graphbox circle"><!-- 도넛 모양일 경우 circle 클래스 추가 -->
+                    <img src="/msbiz/app/img/funds_manage/chart_circle_gray.png" aria-hidden="true"><!-- 221107 수정: 데이터 없을 경우 -->
+                </div>
+                <div class="chart_data">
+                    <ul class="list_data chart">
+                        <li>
+                            <div class="key">
+                                <i class="legend type01"></i>수시입출금
+                            </div>
+                            <div class="value">
+                                <span class="number">0</span><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">
+                                <i class="legend type10"></i>예금
+                            </div>
+                            <div class="value">
+                                <span class="number">0</span><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">
+                                <i class="legend type11"></i>적금
+                            </div>
+                            <div class="value">
+                                <span class="number">0</span><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--// 220914 케이스 추가 -->
+
+        <div class="section">
+            <h2 class="h2">데이터 없음: .no-data</h2>
+            <div class="chart withLst no-data">
+                <div class="graphbox circle"><!-- 도넛 모양일 경우 circle 클래스 추가 -->
+                    <!-- 차트 삽입 -->
+                    <div style="display:flex; align-items: center; justify-content: center; width:100%; height:15rem; background: #ededed; color:#aaa; font-weight:bold; font-size:1.8rem;">도넛차트 영역</div>
+                </div>
+                <div class="chart_data">
+                    <ul class="list_data chart">
+                        <li>
+                            <div class="key">
+                                <i class="legend type01"></i>수시입출금
+                            </div>
+                            <div class="value">
+                                <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">
+                                <i class="legend type10"></i>예금
+                            </div>
+                            <div class="value">
+                                <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">
+                                <i class="legend type11"></i>적금
+                            </div>
+                            <div class="value">
+                                <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">자금보고서-테두리형 <a href="BFE015481.html" target="_blank" class="btn_txt link sm">(BFE015481)</a></h2>
+            <div class="chart_wrap border">
+                <!-- 220826 수정: 차트 영역 수정 -->
+                <!-- *항목 같이 나올경우 withLst 클래스 추가
+                    *데이터 없을 경우 no-data 클래스 추가 -->
+                <div class="chart">
+                    <div class="graphbox">
+                        <!-- 차트 삽입 -->
+                        <div style="display:flex; align-items: center; justify-content: center; width:100%; height:15rem; background: #ededed; color:#aaa; font-weight:bold; font-size:1.8rem;">차트 영역</div>
+                    </div>
+                </div>
+                <!--// 220826 수정: 차트 영역 수정 -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="h2">자금보고서-그림자형 + 세부항목 <a href="BFE015440.html" target="_blank" class="btn_txt link sm">(BFE015440)</a></h3>
+            <div class="chart_wrap shadow">
+                <!-- 220826 수정: 차트 영역 수정 -->
+                <!-- *항목 같이 나올경우 withLst 클래스 추가
+                        *데이터 없을 경우 no-data 클래스 추가 -->
+                <div class="chart withLst">
+                    <div class="graphbox">
+                        <!-- 차트 삽입 -->
+                        <div style="display:flex; align-items: center; justify-content: center; width:100%; height:15rem; background: #ededed; color:#aaa; font-weight:bold; font-size:1.8rem;">차트 영역</div>
+                    </div>
+                    <div class="chart_data">
+                        <ul class="list_data chart">
+                            <li>
+                                <div class="key">
+                                    <i class="legend type06"></i>입금
+                                </div>
+                                <div class="value">
+                                    <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">
+                                    <i class="legend type07"></i>출금
+                                </div>
+                                <div class="value">
+                                    <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--// 220826 수정: 차트 영역 수정 -->
+    
+                <div class="chart_info center">
+                    <button type="button" class="btn_txt ico_reset sm2">최신업데이트</button>
+                    <span class="sep_txt">
+                        <span class="number">2022.02.26 08:12:00</span> <em class="fc_nega">(오류)</em>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="h2">자금보고서-그림자형 + 도넛형 + 세부항목 <a href="BFE015521.html" target="_blank" class="btn_txt link sm">(BFE015521)</a></h3>
+            <div class="chart_wrap shadow">
+                <!-- 220826 수정: 차트 영역 수정 -->
+                <!-- *항목 같이 나올경우 withLst 클래스 추가
+                     *데이터 없을 경우 no-data 클래스 추가 -->
+                <div class="chart withLst">
+                    <div class="graphbox circle"><!-- 도넛 모양일 경우 circle 클래스 추가 -->
+                        <!-- 차트 삽입 -->
+                        <div style="display:flex; align-items: center; justify-content: center; width:100%; height:15rem; background: #ededed; color:#aaa; font-weight:bold; font-size:1.8rem;">도넛차트 영역</div>
+                    </div>
+                    <div class="chart_data">
+                        <ul class="list_data chart">
+                            <li>
+                                <div class="key">
+                                    <i class="legend type02"></i>현금영수증
+                                </div>
+                                <div class="value">
+                                    <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">
+                                    <i class="legend type03"></i>전자세금계산서
+                                </div>
+                                <div class="value">
+                                    <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">
+                                    <i class="legend type04"></i>전자계산서
+                                </div>
+                                <div class="value">
+                                    <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--// 220826 수정: 차트 영역 수정 -->
+                <div class="chart_info center">
+                    <button type="button" class="btn_txt ico_reset sm2">최신업데이트</button>
+                    <span class="sep_txt">
+                        <span class="number">2022.02.26 08:12:00</span> <em class="fc_nega">(오류)</em>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

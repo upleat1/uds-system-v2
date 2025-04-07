@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>수출부도상환</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- 220729 리웍 -->
+    <div id="content">
+		
+        <h1 class="hidden">수출부도상환</h1> 
+        <div class="section">
+
+            <div class="form_group"> 
+                <div class="form_tit">납부구분</div>    
+                <div class="form_row">
+                    <div class="rdoChk_group">
+                        <span class="selection">
+                            <input type="radio" id="radioV1" name="radio_v" checked> <!-- Abs(환급환가료) > 부도이자일 때 : disabled -->
+                            <label for="radioV1" class="label"><em>외화계좌(부도금액) + 원화계좌(부도이자)</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioV2" name="radio_v">
+                            <label for="radioV2" class="label"><em>원화계좌(부도금액 + 부도이자)</em></label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 외화계좌(부도금액) + 원화계좌(부도이자) -->
+            <div class="form_group">
+                <div class="form_tit">외화출금계좌번호</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="외화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <div class="btn_wrap btm">
+                    <a href="#none" class="btn_txt ico_arr"><span>외화잔액조회</span></a>
+                </div>
+            </div>
+
+            <div class="form_group error"><!-- 개발전용 : error , success -->
+                <div class="form_tit">외화출금계좌비밀번호</div>
+                <div class="form_row">        
+                    <div class="input" role="button" aria-label=" 비밀번호 입력" onclick="">            
+                        <input type="password" id="id01" aria-hidden="true" placeholder="" title="외화출금계좌비밀번호" value="" class="bg_white" readonly> <!-- 220816 id 추가 -->
+                    </div>
+                </div>
+                <p class="tip" aria-labelledby="id01">외화출금계좌 비밀번호를 입력해 주세요.</p> <!-- 220816 aria-labelledby 추가 -->
+            </div>
+
+            <div class="form_group intl">
+                <div class="form_tit">외화출금금액</div>
+                <div class="form_row col ele_ul_hor currency_int">
+                    <!-- 221006 키패드 수정 -->
+                    <div class="input" role="button" aria-label="소수점 앞 입력" onclick="">
+                        <div class="row_tit">USD</div>
+                        <input type="tel" class="right bg_white" placeholder="0" title="소수점 앞" value="1,234" readonly>
+                    </div>
+                    <div class="dot"></div>
+                    <div class="input" role="button" aria-label="소수점 뒤 입력" onclick="">
+                        <input type="tel" class="right bg_white" placeholder="00" title="소수점 뒤" value="01" readonly>                            
+                    </div>
+                    <!-- //221006 키패드 수정 -->         
+                </div>
+            </div>
+
+            <ul class="list_data lbt gap_md">
+                <li>
+                    <div class="key"><strong>외화결제금액</strong></div>
+                    <div class="value"><strong>USD <span class="number">148,731.00</span></strong></div>
+                </li>
+                <li>
+                    <div class="key">└ 부도금액</div>
+                    <div class="value">USD <span class="number">148,731.00</span></div>
+                </li>
+            </ul>
+
+            <div class="form_group">
+                <div class="form_tit">원화출금계좌번호</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="원화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <div class="form_btm_wrap right">
+                    <p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>              
+                </div>
+            </div>
+
+            <div class="form_group error"><!-- 개발전용 : error , success -->
+                <div class="form_tit">원화출금계좌비밀번호</div>
+                <div class="form_row">        
+                    <div class="input" role="button" aria-label=" 비밀번호 입력" onclick="">            
+                        <input type="password" id="id01" aria-hidden="true" placeholder="" title="원화출금계좌비밀번호" value="" class="bg_white" readonly> <!-- 220816 id 추가 -->
+                    </div>
+                </div>
+                <p class="tip" aria-labelledby="id01">원화출금계좌 비밀번호를 입력해 주세요.</p> <!-- 220816 aria-labelledby 추가 -->
+            </div>
+
+            <div class="list_data_group">
+                <ul class="list_data lbt gap_md">
+                    <li>
+                        <div class="key"><strong>원화결제금액</strong></div>
+                        <div class="value"><strong><span class="number">10,000</span><span class="num_unit">원</span></strong></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 부도이자</div>
+                        <div class="value"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 환급환가료</div>
+                        <div class="value"><span class="number">-10,000</span><span class="num_unit">원</span></div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //외화계좌(부도금액) + 원화계좌(부도이자) -->
+
+            <!-- 원화계좌(부도금액 + 부도이자) -->
+            <div class="form_group">
+                <div class="form_tit">원화출금계좌번호</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="원화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <div class="form_btm_wrap right">
+                    <p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>              
+                </div>
+            </div>
+
+            <div class="list_data_group gap_md">
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key"><strong>원화결제금액</strong></div>
+                        <div class="value"><strong><span class="number">10,000</span><span class="num_unit">원</span></strong></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 부도금액 원화환산금액</div>
+                        <div class="value"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 부도이자</div>
+                        <div class="value"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 환급환가료</div>
+                        <div class="value"><span class="number">-10,000</span><span class="num_unit">원</span></div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //원화계좌(부도금액 + 부도이자) -->
+
+            <div class="list_data_group">
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">매입번호</div>
+                        <div class="value"><span class="number">N07A22106LS00004</span></div>
+                    </li>
+                    <li>
+                        <div class="key">부도회차</div>
+                        <div class="value"><span class="number">1</span></div>
+                    </li>
+                    <li>
+                        <div class="key">거래지점</div>
+                        <div class="value">[8101] 송파종합금융센터</div>
+                    </li>
+                    <li>
+                        <div class="key">매입일</div>
+                        <div class="value"><span class="number">2022.05.31</span></div>
+                    </li>
+                    <li>
+                        <div class="key">통화</div>
+                        <div class="value">USD</div>
+                    </li>
+                    <li>
+                        <div class="key">매입금액</div>
+                        <div class="value"><span class="number">1,000,000.00</span></div>
+                    </li>
+                    <li>
+                        <div class="key">부도일</div>
+                        <div class="value"><span class="number">2022.05.31</span></div>
+                    </li>
+                    <li>
+                        <div class="key">부도금액</div>
+                        <div class="value"><span class="number">500,000.55</span></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list_data_group">
+                <h2 class="h3">이자상세내역</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">부도이자</div>
+                        <div class="value"><span class="number">172,483,340</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 대상금액</div>
+                        <div class="value">USD <span class="number">148,731.00</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 이자율</div>
+                        <div class="value"><span class="number">4.26475</span><span class="num_unit">%</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 대상기간</div>
+                        <div class="value"><span class="number">2021.04.05~2022.04.05</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 적용일수(일)</div>
+                        <div class="value"><span class="number">15/360</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 적용환율</div>
+                        <div class="value"><span class="number">1,156.20</span></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list_data_group">
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">환급환가료</div>
+                        <div class="value"><span class="number">101,873</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 대상금액</div>
+                        <div class="value">USD <span class="number">148,731.00</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 이자율</div>
+                        <div class="value"><span class="number">1.97857</span><span class="num_unit">%</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 대상기간</div>
+                        <div class="value"><span class="number">2021.04.05~2022.04.15</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 적용일수(일)</div>
+                        <div class="value"><span class="number">15/360</span></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 적용환율</div>
+                        <div class="value"><span class="number">1,132.96</span></div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+                    <li>부도금액은 전액상환만 할 수 있으며 이자는 원화계좌에서만 납부할 수 있습니다.</li>
+                    <li>일부상환을 원하실 경우(1일 1회 제한) 관리점 직원과 사전 상담 후 인터넷뱅킹 > MY외환 > 지급(출금)지시에서 신청할 수 있습니다.</li>	
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+
+	</div>
+    <!-- //220729 리웍 -->
+</div>
+<!-- //wrap -->
+</body>
+</html>

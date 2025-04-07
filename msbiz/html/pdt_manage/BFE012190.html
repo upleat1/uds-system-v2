@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[대출금상환 예상조회]대출금상환 예상조회</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START --> 
+<div id="wrap">
+	<div id="content">
+        <h1 class="hidden">대출금상환 예상조회</h1>
+
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>상환구분을 선택하시고 상환예상 조회하실 대출계좌번호를 선택하십시오.</li>
+                <li>대출금상환 예상금액은 조회일자 기준으로 계산된 금액입니다.</li>
+                <li>1일 대출금 일부상환은 20회까지만 가능합니다.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2 class="hidden">대출금상환예상 조회</h2>
+            <div class="form_group">
+                <div class="form_tit">상환구분</div>
+                <div class="form_row">
+                    <div class="rdoChk_box">
+                        <span class="selection">
+                            <input type="radio" id="radioBox1_1" name="radioBox1" checked>
+                            <label for="radioBox1_1" class="label"><em>일부상환</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioBox1_2" name="radioBox1">
+                            <label for="radioBox1_2" class="label"><em>완제</em></label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">대출계좌번호</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="출금계좌정보 선택">000000-00-000000</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 일부상환에서만 노출-->
+            <div class="form_group">
+                <div class="form_tit">상환금액</div>
+                <div class="form_row">
+                    <p class="hidden">상환금액 단축키로 입력 </p>
+                    <div class="btn_trans_group">
+                        <span><button type="button" class="btn"><em class="number">100</em><em class="num_ubit">만원</em></button></span>
+                        <span><button type="button" class="btn"><em class="number">50</em><em class="num_ubit">만원</em></button></span>
+                        <span><button type="button" class="btn"><em class="number">10</em><em class="num_ubit">만원</em></button></span>
+                        <span><button type="button" class="btn"><em class="number">5</em><em class="num_ubit">만원</em></button></span>
+                        <span><button type="button" class="btn"><em class="number">1</em><em class="num_ubit">만원</em></button></span>
+                    </div>    
+                </div>
+                <div class="form_row">
+                    <div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 상환금액 입력" onclick="">
+                        <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="상환금액" data-unit="원" readonly class="bg_white">
+                    </div>
+                    <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                </div>
+            </div>
+            <!-- //일부상환에서만 노출-->
+
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg" disabled>조회</button></span><!-- 필수입력항목 입력 : disabled 삭제-->
+            </div>
+        </div>
+
+        <hr class="hr_divide">
+
+        <div class="section">
+            <h2 class="h3">예상조회결과</h2>
+            <ul class="list_data lbt">
+                <li>
+                    <div class="key">상환구분</div>
+                    <div class="value">일부상환</div>
+                </li>
+                <li>
+                    <div class="key">대출계좌번호</div>
+                    <div class="value"><span class="number">013916-00-406753</span></div>
+                </li>
+                <li>
+                    <div class="key">대출계좌고객명</div>
+                    <div class="value">문주희(아만김노향)</div>
+                </li>
+                <li>
+                    <div class="key">상환원금</div>
+                    <div class="value"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">약정이자</div>
+                    <div class="value"><span class="number">9</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">연체이자</div>
+                    <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">중도상환수수료</div>
+                    <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">보증료환급(예상)액</div>
+                    <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">담보조사수수료</div>
+                    <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">신용등급평가수수료</div>
+                    <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">임대차조사수수료</div>
+                    <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">기성고확인수수료</div>
+                    <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">기술검토사정수수료</div>
+                    <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">이체금액</div>
+                    <div class="value"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                </li>
+            </ul>
+            <div class="btn_list_btm">
+                <span><a href="#none" class="btn primary lg">대출금상환</a></span>
+            </div>
+        </div>
+
+        <!-- 220929 이용안내 추가 -->
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">이용안내</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+                    <li>유비무환모기지론(이자율 SWAP, 금리상환, 금리상하한)의 이자납부/상환거래는 09:00 ~ 17:00 까지 가능</li>
+                    <li>한국주택금융공사가 관리하는 보증 계좌로 보증잔액이 해지되는 대출금의 완제 및 상환거래는 불가능합니다.</li>
+                    <li>국민카드사 분사로 KB/BC 카드론 관련 대출금 상환 예상금액은 조회되지 않습니다.</li>
+                    <li>국민카드사(1588-1688)로 문의하시길 바랍니다.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //220929 이용안내 추가 -->
+
+	</div><!-- //content -->
+    <!-- //220729 리웍 -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript"></script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

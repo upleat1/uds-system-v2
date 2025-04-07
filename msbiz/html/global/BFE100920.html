@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>중국타행실시간이체 - 결제상세</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="승인/결재" href="/msbiz/app/css/approval.css">
+		<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">결제상세</h1>
+        <!-- 결재할 내역에서 접근시 노출 -->
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>결재하실 내역은 아래와 같습니다.</li>
+                <li>결재는 거래별로 당일 서비스 이용시간 이내까지 가능합니다.</li>
+                <li>오후 11시까지 미결재된 거래는 자동 취소됩니다.</li>
+            </ul>
+        </div>
+        <!-- //결재할 내역에서 접근시 노출 -->
+
+        <div class="section">
+            <h2 class="h2">결재상세정보</h2>
+            <div class="list_data_group">
+                <div class="list_data_group_s">
+                    <h3 class="h3">등록정보</h3>
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">등록자</div>
+                            <div class="value">Wlrdnjs1</div>
+                        </li>
+                        <li>
+                            <div class="key">등록일시</div>
+                            <div class="value"><span class="number">2022.04.19 11:30:15</span></div>
+                        </li>
+                        <li>
+                            <div class="key">등록자메모내용</div>
+                            <div class="value">결재요청</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list_data_group_s">
+                    <h3 class="h3">결재단계</h3>
+                    <!-- 결재선 지정이 되어있는 경우 -->
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">1단계 결재자명 (결재일시)</div>
+                            <div class="value">김국민 / 결재완료<p class="number">(2022.04.19 11.30:45)</p></div>
+                        </li>
+                        <li>
+                            <div class="key">2단계 결재자명 (결재일시)</div>
+                            <div class="value">김사장 / 결재대기</div>
+                        </li>
+                        <li>
+                            <div class="key">3단계 결재자명 (결재일시)</div>
+                            <div class="value"><span class="number">0.00</span></div>
+                        </li>
+                        <li>
+                            <div class="key">4단계 결재자명 (결재일시)</div>
+                            <div class="value"><span class="number">0.00</span></div>
+                        </li>
+                    </ul>
+                    <!-- //결재선 지정이 되어있는 경우 -->
+                    <!-- 단독결재자 및 결재선 미지정의 경우 -->
+                    <ul class="list_data lbt">
+                        <li>
+                            <div class="key">결재자 고객명</div>
+                            <div class="value">김국민 / 결재완료<p class="number">(2022.04.19 11.30:45)</p></div>
+                        </li>
+                        <li>
+                            <div class="key">결재유무/결재시각</div>
+                            <div class="value">결재완료<p class="number">(2022.04.19 11:30:45)</p></div>
+                        </li>
+                    </ul>
+                    <!-- //단독결재자 및 결재선 미지정의 경우 -->
+                </div>
+
+                <div class="list_data_group_s">
+                    <h3 class="h3">결재정보</h3>
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">거래종류</div>
+                            <div class="value">중국타행실시간이체</div>
+                        </li>
+                        <li>
+                            <div class="key">결재구분</div>
+                            <div class="value">미결재</div>
+                        </li>
+                        <li>
+                            <div class="key">처리상태</div>
+                            <div class="value">처리중</div>
+                        </li>
+                        <li>
+                            <div class="key">처리완료일시</div>
+                            <div class="value"><span class="number">2022.04.19 11:30:15</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">결제내역</h2>
+            <div class="list_data_group">
+                <div class="list_data_group_s">
+                    <h3 class="h3">계좌정보 및 송금금액</h3>
+                    <ul class="list_data lbt">
+                        <li>
+                            <div class="key">출금계좌번호</div>
+                            <div class="value"><span class="number">00310104056436</span></div>
+                        </li>
+                        <li>
+                            <div class="key">출금금액</div>
+                            <div class="value"><span class="number">1,000,000</span><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">이체금액</div>
+                            <div class="value"><span class="number">1,000,000</span><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">이체일자</div>
+                            <div class="value"><span class="number">2022.08.04</span></div>
+                        </li>
+                        <li>
+                            <div class="key">출금계좌메모</div>
+                            <div class="value">출금계좌메모</div>
+                        </li>
+                        <li>
+                            <div class="key">입금은행명</div>
+                            <div class="value">국민</div>
+                        </li>
+                        <li>
+                            <div class="key">입금계좌번호</div>
+                            <div class="value"><span class="number">00310104056436</span></div>
+                        </li>
+                        <li>
+                            <div class="key">입금계좌메모</div>
+                            <div class="value">입금계좌메모</div>
+                        </li>
+                        <li>
+                            <div class="key">수수료</div>
+                            <div class="value"><span class="number">1,000</span><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">이체지시참조관리번호</div>
+                            <div class="value"><span class="number">00310104056436</span></div>
+                        </li>
+                        <li>
+                            <div class="key">등록일자</div>
+                            <div class="value"><span class="number">2022.01.01</span></div>
+                        </li>
+                        <li>
+                            <div class="key">수취인명</div>
+                            <div class="value">김국민</div>
+                        </li>
+                        <li>
+                            <div class="key">이체사유</div>
+                            <div class="value">이체사유</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_list_btm">
+                <span><button type="button" class="btn outline sm">반송</button></span>
+            </div>
+        </div>
+
+        
+        <div class="btn_confirm_wrap">
+            <!-- 결재완료 내역 조회에서 접근시에는 목록 버튼만 제공 -->
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">목록</button></span>
+            </div>
+            <!-- 결재할 내역에서 접근시에는 취소, 결재 버튼 노출 -->
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+                <span><button type="button" class="btn primary lg">결재</button></span>
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<script>
+    /* 업무 SCRIPT */
+</script>
+</body>
+</html>

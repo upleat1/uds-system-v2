@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[현금/직불카드]신고계좌선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹관리" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="h1">현금/직불카드 신고</h1>
+        <div class="inform_top_wrap">
+            <!-- 220729 리웍 -->
+            <ul class="depth bul">
+                <li>신고하실 카드의 연결계좌번호를 선택해 주시기 바랍니다.</li>
+                <li>사고신고 해제는 가까운 KB국민은행 영업점 방문 후 서면으로 신청하셔야 합니다.
+                    <ul class="depth dash">
+                        <li>법인: 법인관련서류 지참 (관련서류 문의 02-1599-9499)</li>
+                        <li>개인사업자: 대표자 신분증(주민등록증,운전면허증 등)</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- 220729 리웍 -->
+        </div>
+        
+        <div class="section">
+            <div class="form_group">
+                <div class="form_tit">신고계좌번호</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="신고계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <div class="btn_wrap btm">
+                    <a href="#none" class="btn_txt ico_arr">상세조회</a>
+                </div>
+                <p class="tip_info">KB국민체크카드의 경우 KB국민카드 콜센터(1588-1688), 국민카드 홈페이지, 모바일 앱 등에서 별도로 사고신고를 하셔야합니다.</p><!-- 220729 추가 -->      
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span>
+                    <button type="button" class="btn primary lg" disabled>신고</button>  <!-- 모든 항목이 입력되면 버튼 활성화 disabled 삭제 -->
+                </span>
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-[거래주문관리]완료</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <div id="content">
+
+        <h1 class="hidden">거래주문 관리 완료</h1> <!-- 220823 문구수정 -->
+
+        <!-- 거래구분: 주문변경 일 때 -->
+        <div class="result success">
+            <p class="tit">거래주문 취소 완료되었습니다.</p>
+        </div>
+    
+        <div class="section"><!-- section -->
+            <ul class="list_data">
+                <li>
+                    <div class="key">주문번호</div>
+                    <div class="value"><span class="number">20220703000001</span></div>
+                </li>
+                <li>
+                    <div class="key">주문통화</div>
+                    <div class="value">USD(미국 달러)</div>
+                </li>
+                <li>
+                    <div class="key">주문금액</div>
+                    <div class="value">USD <span class="number">100.00</span><!-- <p> 220823 삭제-->(변경)</div>
+                </li>
+                <li>
+                    <div class="key">매매유형</div>
+                    <div class="value">고객이 사실때(매입)</div>
+                </li>
+                <li>
+                    <div class="key">주문유효기간</div>
+                    <div class="value"><span class="number">2022.07.11</span>(변경)</div>
+                </li>
+                <li>
+                    <div class="key">주문환율</div>
+                    <div class="value"><span class="number">1,920.00</span>(변경)</div>
+                </li>
+                <li>
+                    <div class="key">출금예정금액</div>
+                    <div class="value">KRW<span class="number">100.000.00</span></div>
+                </li>
+                <li>
+                    <div class="key">입금예정금액</div>
+                    <div class="value">USD<span class="number">100.00</span></div>
+                </li>
+            </ul>
+            <p class="depth info gap_sm_2">주문 체결 시 결제에 필요한 출금예정금액(KRW <span class="number">100,000.00</span>)이 출금됩니다. 카드대금 등 자동이체에 필요한 잔액을 확인해주세요.(주문취소 시 출금제한은 바로 해제됨)</p> <!-- 220823 depth 수정 -->
+        </div> <!-- //section -->
+        <!-- //거래구분: 주문변경 일 때 -->
+    
+        <!-- 거래구분: 주문취소 일 때-->
+        <!-- <h1 class="hidden">거래주문 취소시</h1>  220823 삭제 -->
+    
+        <div class="result success">
+            <p class="tit">거래주문이 취소되었습니다.</p>
+        </div>
+        <div class="section"><!-- section -->
+            <ul class="list_data">
+                <li>
+                    <div class="key">주문번호</div>
+                    <div class="value"><span class="number">20220703000001</span></div>
+                </li>
+                <li>
+                    <div class="key">주문통화</div>
+                    <div class="value">USD(미국달러)</div>
+                </li>
+                <li>
+                    <div class="key">주문금액</div>
+                    <div class="value">USD <span class="number">100,00</span>(변경)</div>
+                </li>
+                <li>
+                    <div class="key">매매유형</div>
+                    <div class="value">고객이 사실때(매입)</div>
+                </li>
+                <li>
+                    <div class="key">주문유효기간</div>
+                    <div class="value"><span class="number">1,920.00</span>(변경)</div>
+                </li>
+                <li>
+                    <div class="key">결제예정금액</div>
+                    <div class="value">KRW <span class="number">100.000.00</span></div>
+                </li>
+            </ul>
+        </div><!-- //section -->
+        <!-- //거래구분: 주문취소 일 때 -->
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">확인</button></span>
+            </div>
+        </div>
+
+	</div>
+</div>
+<!-- //wrap -->
+</body>
+</html>

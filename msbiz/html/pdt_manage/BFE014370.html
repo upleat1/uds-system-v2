@@ -1,0 +1,216 @@
+<!doctype html>
+<head lang="ko">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>진행현황조회</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="hidden">진행현황조회</h1>
+
+		<div class="inform_top_wrap">
+			<ul class="depth bul">
+				<li>신청하신 업무의 처리 내역 및 현황을 조회하는 화면 입니다.</li>
+				<li>메모 내용을 확인하시고 서류 보완 또는 등록정보 변경을 진행하여 주시기 바랍니다.</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<div class="form_group">
+				<div class="form_tit">계좌번호</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn" title="계좌번호 선택">선택</button>
+					</div>
+				</div>
+			</div>
+									
+			<div class="form_group">
+				<div class="form_tit">조회기간</div>
+				<div class="form_row">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="period1" name="period">
+							<label for="period1" class="label"><em>당일</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period2" name="period">
+							<label for="period2" class="label"><em>1개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period3" name="period" checked>
+							<label for="period3" class="label"><em>3개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period4" name="period">
+							<label for="period4" class="label"><em>6개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period5" name="period">
+							<label for="period5" class="label"><em>12개월</em></label>
+						</span>
+					</div>
+					<div class="form_date_term">
+						<div class="input date">
+							<input type="tel" title="시작일 입력" maxlength="8" value="2022.03.01"><!-- 210803 접근성수정 -->
+							<button type="button" class="btn_cal" title="시작일 선택"></button>                    
+						</div>
+						<span class="space">~</span>
+						<div class="input date">
+							<input type="tel" title="종료일 입력" maxlength="8" value="2022.03.01"><!-- 210803 접근성수정 --> 
+							<button type="button" class="btn_cal" title="종료일 선택"></button>                              
+						</div>
+					</div>              
+				</div>
+			</div>
+
+			<div class="btn_cnt_wrap">
+				<span><button type="button" class="btn primary lg" disabled>조회</button></span><!-- 필수입력 항목 완료 후 disabled 삭제 -->
+			</div>
+		</div>
+
+		<hr class="hr_divide">
+
+		<div class="section">
+			<div class="list_top_wrap">
+				<div class="col">
+					<div class="sch_period">
+						<div class="hidden">조회기간</div><!-- 220906 접근성 추가 -->
+						<span class="number">2021.04.21~2022.05.04</span>
+					</div>
+				</div>
+				<div class="col">
+					<span class="total_num">총 <em class="number">17</em><span class="num_unit">건</span></span><!-- 22/07/15 수정 -->
+				</div>
+			</div>
+			<h2 class="hidden">간편업무 신청내역</h2>
+			<div class="list_data_group">
+				<div class="list_data_group_s">
+					<ul class="list_data left">
+						<li>
+							<div class="key">신청일시</div>
+							<div class="value"><span class="number">2022.01.02 17:20:21</span></div>
+						</li>
+						<li>
+							<div class="key">매체</div>
+							<div class="value">모바일</div>
+						</li>
+						<li>
+							<div class="key">의뢰업무</div>
+							<div class="value">퇴직급여지급</div>
+						</li>
+						<li>
+							<div class="key">진행현황</div>
+							<div class="value"><span>요청</span></div><!-- fc_nega: 보류, 반송 / fc_posi: 처리완료 -->
+						</li>
+					</ul>
+				</div>
+				<div class="list_data_group_s">
+					<ul class="list_data left">
+						<li>
+							<div class="key">신청일시</div>
+							<div class="value"><span class="number">2022.01.02 17:20:21</span></div>
+						</li>
+						<li>
+							<div class="key">매체</div>
+							<div class="value">모바일</div>
+						</li>
+						<li>
+							<div class="key">의뢰업무</div>
+							<div class="value">퇴직급여지급</div>
+						</li>
+						<li>
+							<div class="key">진행현황</div>
+							<div class="value"><span class="fc_nega">보류</span></div><!-- fc_nega: 보류, 반송 / fc_posi: 처리완료 -->
+						</li>
+					</ul>
+					<div class="btn_list_btm">
+						<span><button type="button" class="btn outline sm">서류보완</button></span>
+						<span><button type="button" class="btn outline sm">정보변경</button></span>
+					</div>
+					<div class="btn_list_btm">
+						<span><button type="button" class="btn outline sm">메모보기</button></span>
+					</div>
+				</div>
+				<div class="list_data_group_s">
+					<ul class="list_data left">
+						<li>
+							<div class="key">신청일시</div>
+							<div class="value"><span class="number">2022.01.02 17:20:21</span></div>
+						</li>
+						<li>
+							<div class="key">매체</div>
+							<div class="value">모바일</div>
+						</li>
+						<li>
+							<div class="key">의뢰업무</div>
+							<div class="value">퇴직급여지급</div>
+						</li>
+						<li>
+							<div class="key">진행현황</div>
+							<div class="value"><span class="fc_nega">반송</span></div><!-- fc_nega: 보류, 반송 / fc_posi: 처리완료 -->
+						</li>
+					</ul>
+					<div class="btn_list_btm">
+						<span><button type="button" class="btn outline sm">메모보기</button></span>
+					</div>
+				</div>
+				<div class="list_data_group_s">
+					<ul class="list_data left">
+						<li>
+							<div class="key">신청일시</div>
+							<div class="value"><span class="number">2022.01.02 17:20:21</span></div>
+						</li>
+						<li>
+							<div class="key">매체</div>
+							<div class="value">인터넷</div>
+						</li>
+						<li>
+							<div class="key">의뢰업무</div>
+							<div class="value">퇴직급여지급</div>
+						</li>
+						<li>
+							<div class="key">진행현황</div>
+							<div class="value"><span class="fc_posi">처리완료</span></div><!-- fc_nega: 보류, 반송 / fc_posi: 처리완료 -->
+						</li>
+					</ul>
+				</div>
+				<div class="btn_list_btm more">
+					<button type="button" class="btn">더보기</button>
+				</div>
+			</div>
+			<div class="result nodata sm">
+				<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

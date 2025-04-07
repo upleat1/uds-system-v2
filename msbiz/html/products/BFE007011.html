@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[예적금계산기]예적금계산기(팝)</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" data-ui="full_pop"><!-- 풀팝업 시 data-ui="full_pop" 추가 -->
+        <h1 class="hidden">예금 메인</h1>
+        <div class="tab_wrap">
+            <div class="tab_list" role="tablist">
+                <div class="scroll_wrap">
+                    <button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">예금</button>
+                    <button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">적금</button>
+                </div>
+            </div>
+            <!-- ##################################################### 예금 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_1">
+                <h2 class="hidden">계산정보 입력</h2>
+                <div class="section">
+                    <!-- 계산정보 입력 -->
+                    <h2 class="h2">계산정보 입력</h2>
+                    <div class="form_group error">
+                        <div class="form_tit">거치금액</div>
+                        <div class="form_row"> 
+                            <div class="input unit js_unit" role="button" aria-label="거치금액 입력" onclick="">
+                                <input type="tel" id="id02" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="거치금액" data-unit="만원" class="bg_white" readonly><!-- 220929 : class="bg_white" readonly 추가 -->
+                                <span class="unit">만원</span>
+                            </div>
+                        </div>
+                        <!-- 221031 : 한글금액표기 추가 -->
+                        <p class="form_hangul" aria-hidden="true">원</p> 
+                        <!-- //221031 : 한글금액표기 추가 -->
+                        <p class="tip" aria-labelledby="id02">거치금액은 1,000만원 이상 입력해주세요.</p><!-- 개발전용 : 거치금액을 1000만원 미만 입력한 경우 validation 결과 메세지 -->
+                        <p class="tip" aria-labelledby="id02">거치금액은 50,000만원(5억)이하로 입력해주세요.</p><!-- 개발전용 : 거치금액을 5억원 초과 입력한 경우 validation 결과 메세지 -->
+                    </div>
+
+                    <div class="form_group">
+                        <div class="form_tit">가입기간</div>
+                        <div class="form_row">
+                            <div class="select"><!-- 6개월, 12개월(Default), 24개월, 36개월 -->
+                                <button type="button" class="select_btn" title="가입기간 선택" value="">12개월</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form_group error">
+                        <div class="form_tit">이자율</div>
+                        <div class="form_row col ele_ul_hor">
+                            <!-- 221021 : input 접근성 수정 -->
+                            <div class="input long" role="button" aria-label="이자율 소수점 앞자리" onclick="">
+                                <input type="tel" id="id02" placeholder="숫자만 입력" title="이자율 소수점 앞자리" value="" aria-hidden="true">
+                            </div>
+                            <div class="dot"></div>
+                            <div class="input unit js_unit" role="button" aria-label="이자율 소수점 뒷자리" onclick="">
+                                <input type="tel" class="right bg_white" placeholder="00" title="이자율 소수점 뒷자리" value="" data-unit="%" aria-hidden="true" readonly>                            
+                            </div>
+                            <!-- //221021 : input 접근성 수정 --> 
+                        </div>
+                        <p class="tip" aria-labelledby="id02">이자율은 10% 이하로 입력해주세요.</p><!-- 개발전용 : 이자율을 10% 초과 입력한 경우 validation 결과 메세지 -->
+                    </div>
+                    <!-- //계산정보 입력 -->
+
+                    <!-- 220929 : onclick 추가 -->
+                    <div class="btn_cnt_wrap">
+                        <span><button type="button" class="btn primary lg" onclick="resultOpen()">계산하기</button></span>
+                    </div>
+                    <!-- //220929 : onclick 추가 -->
+                </div>
+                <div id="result"><!-- 220929 : id="result" 추가 -->
+                    <hr class="hr_divide">
+                    <div class="section">
+                        <!-- 계산결과 -->
+                        <h2 class="h2">계산결과</h2>
+                        <div class="calculation_result">
+                            <p class="calculation_txt">예상 만기수령액</p>
+                            <p class="calculation_num amount"><span class="total_txt">총</span><span class="number">10,100,000</span><strong class="num_unit">원</strong></p>
+                            <p class="calculation_subtxt">
+                                거치금액 10,000,000원(일천만원)을 12개월동안<br>
+                                이율 1%의 단리로 예치하시면,<br>
+                                <span class="bold">총 100,000원</span>(일십만원)의 이자를 받을 수 있습니다.
+                            </p>
+                        </div>
+                        <!-- //계산결과 -->
+
+                        <!-- 과세구분에 따른 만기지급액 -->
+                        <p class="pro_txt">만기지급 예상금액으로 가입시점의 적용금리에 따라 만기지급액은 변경될 수 있습니다.</p>
+                        <h3 class="hidden">과세구분에 따른 만기지급액</h3>
+                        <div class="table pro_calculator">
+                            <table>
+                                <caption>과세구분에 따른 만기지급액</caption>
+                                <colgroup>
+                                    <col style="width:23%">
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">만기지급액</th>
+                                        <th scope="col">세후이자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">일반과세</td>
+                                        <td class="right">
+                                            <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">세금우대</td>
+                                        <td class="right">
+                                            <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">비과세</td>
+                                        <td class="right">
+                                            <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>   
+                        </div>
+                        <!-- //과세구분에 따른 만기지급액 -->
+
+                        <ul class="depth info">
+                            <!-- 221123 : 연체 -> 면제 문구변경 -->
+                            <li>일반과세의 경우는 이자금액의 15.4%가 원천징수되고, 비과세 종합저축의 경우는 이자소득세가 면제됩니다.<br>
+                                (2005.1.1 이후 발생 이자분부터)
+                            </li>
+                            <!-- //221123 : 연체 -> 면제 문구변경 -->
+                            <li>비과세 종합저축(가입대상자에 한해 5천만원 한도) 비과세 생계형 관련세법 변경으로 인한 세율변동의 경우에는 변동된 세율이 적용됩니다. 상기금액은 이율의 변동에 따라 차이가 있을 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ##################################################### 적금 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_2">
+                <h2 class="hidden">적금</h2>
+                <div class="section">
+                    <h2 class="h2">계산정보 입력</h2>
+                    <div class="form_group">
+                        <div class="form_row">
+                            <div class="form_tit">설정구분</div>
+                            <div class="form_row">
+                                <div class="tab_wrap box">
+                                    <div class="tab_radio">
+                                        <div class="rdoChk_box">
+                                            <span class="selection">
+                                                <input type="radio" id="rdo1_1" name="rdo1"checked>
+                                                <label for="rdo1_1" class="label"><em>만기에 지급받는 금액</em></label>
+                                            </span>
+                                            <span class="selection">
+                                                <input type="radio" id="rdo1_2" name="rdo1">
+                                                <label for="rdo1_2" class="label"><em>목표금액을 모으려면</em></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="tab_panel gap_0"><!-- 220929 : 여백 class="gap_0" 추가 -->
+                                        <h3 class="hidden">만기에 지급받는 금액</h3>
+                                        <div class="form_group error">
+                                            <div class="form_tit">월적립액</div>
+                                            <div class="form_row"> 
+                                                <div class="input unit js_unit" role="button" aria-label="거치금액 입력" onclick="">
+                                                    <input type="tel" id="id02" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="거치금액" data-unit="만원">
+                                                    <span class="unit">만원</span>
+                                                </div>
+                                            </div>
+                                            <!-- 221031 : 한글금액표기 추가 -->
+                                            <p class="form_hangul" aria-hidden="true">원</p> 
+                                            <!-- //221031 : 한글금액표기 추가 -->
+                                            <p class="tip" aria-labelledby="id02">월적립액은 1만원(만원) 이상 입력해주세요.</p><!-- 개발전용 : 월적립액을 1만원 미만 입력한 경우 validation 결과 메세지 -->
+                                            <p class="tip" aria-labelledby="id02">월적립액은 1,000만원 이하로 입력해주세요.</p><!-- 개발전용 : 1,000만원 초과 입력한 경우 validation 결과 메세지 -->
+                                        </div>
+                    
+                                        <div class="form_group">
+                                            <div class="form_tit">가입기간</div>
+                                            <div class="form_row">
+                                                <div class="select"><!-- 6개월, 12개월(Default), 24개월, 36개월 -->
+                                                    <button type="button" class="select_btn" title="가입기간 선택" value="">12개월</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 220824 : 이자율 (필수) 추가 -->
+                                        <div class="form_group error">
+                                            <div class="form_tit">이자율</div>
+                                            <div class="form_row col ele_ul_hor">
+                                                <!-- 221021 : input 접근성 수정 -->
+                                                <div class="input long" role="button" aria-label="이자율 소수점 앞자리" onclick="">
+                                                    <input type="tel" id="id02" placeholder="숫자만 입력" title="이자율 소수점 앞자리" value="" aria-hidden="true">
+                                                </div>
+                                                <div class="dot"></div>
+                                                <div class="input unit js_unit" role="button" aria-label="이자율 소수점 뒷자리" onclick="">
+                                                    <input type="tel" class="right bg_white" placeholder="00" title="이자율 소수점 뒷자리" value="" data-unit="%" aria-hidden="true" readonly>                            
+                                                </div>
+                                                <!-- //221021 : input 접근성 수정 -->
+                                            </div>
+                                            <p class="tip" aria-labelledby="id02">이자율은 10% 이하로 입력해주세요.</p><!-- 개발전용 : 이자율을 10% 초과 입력한 경우 validation 결과 메세지 -->
+                                        </div>
+                                        <!-- //220824 : 이자율 (필수) 추가 -->
+                                        <div class="btn_cnt_wrap">
+                                            <span><button type="button" class="btn primary lg" onclick="resultOpen2()">계산하기</button></span>
+                                        </div>
+                                        
+                                        <div id="result2"><!-- 220929 : id="result2" 추가 -->
+                                            <hr class="pro_hr_divide">
+                                            <!-- 계산결과 -->
+                                            <h2 class="h2">계산결과</h2>
+                                            <div class="calculation_result">
+                                                <p class="calculation_txt">예상 만기수령액</p>
+                                                <p class="calculation_num amount"><span class="total_txt">총</span><span class="number">121,690,000</span><strong class="num_unit">원</strong></p>
+                                                <p class="calculation_subtxt">
+                                                    월적금액 10,000,000원(일천만원)을 12개월동안<br>
+                                                    이율 2.6%의 단리로 저축하시면,<br>
+                                                    <span class="bold">총 121,690,000원</span>(일억이천일백육십구만원)의 이자를 받을 수 있습니다.
+                                                </p>
+                                            </div>
+                                            <!-- //계산결과 -->
+
+                                            <!-- 과세구분에 따른 만기지급액 -->
+                                            <p class="pro_txt">만기지급 예상금액으로 가입시점의 적용금리에 따라 만기지급액은 변경될 수 있습니다.</p>
+                                            <h3 class="hidden">과세구분에 따른 만기지급액</h3>
+                                            <div class="table pro_calculator">
+                                                <table>
+                                                    <caption>과세구분에 따른 만기지급액</caption>
+                                                    <colgroup>
+                                                        <col style="width:23%">
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">구분</th>
+                                                            <th scope="col">만기지급액</th>
+                                                            <th scope="col">세후이자</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="center">일반과세</td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="center">세금우대</td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="center">비과세</td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>   
+                                            </div>
+                                            <!-- //과세구분에 따른 만기지급액 -->
+
+                                            <ul class="depth info">
+                                                <!-- 221123 : 연체 -> 면제 문구변경 -->
+                                                <li>일반과세의 경우는 이자금액의 15.4%가 원천징수되고, 비과세 종합저축의 경우는 이자소득세가 면제됩니다.<br>
+                                                    (2005.1.1 이후 발생 이자분부터)
+                                                </li>
+                                                <!-- //221123 : 연체 -> 면제 문구변경 -->
+                                                <li>비과세 종합저축(가입대상자에 한해 5천만원 한도) 비과세 생계형 관련세법 변경으로 인한 세율변동의 경우에는 변동된 세율이 적용됩니다. 상기금액은 이율의 변동에 따라 차이가 있을 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab_panel gap_0"><!-- 220929 : 여백 class="gap_0" 추가 -->
+                                        <h3 class="hidden">목표금액을 모으려면</h3>
+                                        <div class="form_group error">
+                                            <div class="form_tit">목표금액</div>
+                                            <div class="form_row"> 
+                                                <div class="input unit js_unit" role="button" aria-label="거치금액 입력" onclick="">
+                                                    <input type="tel" id="id02" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="거치금액" data-unit="만원">
+                                                    <span class="unit">만원</span>
+                                                </div>
+                                            </div>
+                                            <!-- 221031 : 한글금액표기 추가 -->
+                                            <p class="form_hangul" aria-hidden="true">원</p> 
+                                            <!-- //221031 : 한글금액표기 추가 -->
+                                            <p class="tip" aria-labelledby="id02">목표금액을 1,000만원 (천만원) 이상 입력해주세요.</p><!-- 개발전용 : 목표금액을 1000만원 미만 입력한 경우 validation 결과 메세지 -->
+                                            <p class="tip" aria-labelledby="id02">목표금액을 10,000만원(일억)이하로 입력해주세요.</p><!-- 개발전용 : 1억원 초과 입력한 경우 validation 결과 메세지 -->
+                                        </div>
+                    
+                                        <div class="form_group">
+                                            <div class="form_tit">가입기간</div>
+                                            <div class="form_row">
+                                                <div class="select"><!-- 6개월, 12개월(Default), 24개월, 36개월 -->
+                                                    <button type="button" class="select_btn" title="가입기간 선택" value="">12개월</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 220824 : 이자율 (필수) 추가 -->
+                                        <div class="form_group error">
+                                            <div class="form_tit">이자율</div>
+                                            <div class="form_row col ele_ul_hor">
+                                                <!-- 221021 : input 접근성 수정 -->
+                                                <div class="input long" role="button" aria-label="이자율 소수점 앞자리" onclick="">
+                                                    <input type="tel" id="id02" placeholder="숫자만 입력" title="이자율 소수점 앞자리" value="" aria-hidden="true">
+                                                </div>
+                                                <div class="dot"></div>
+                                                <div class="input unit js_unit" role="button" aria-label="이자율 소수점 뒷자리" onclick="">
+                                                    <input type="tel" class="right bg_white" placeholder="00" title="이자율 소수점 뒷자리" value="" data-unit="%" aria-hidden="true" readonly>                            
+                                                </div>
+                                                <!-- //221021 : input 접근성 수정 -->
+                                            </div>
+                                            <p class="tip" aria-labelledby="id02">이자율은 10% 이하로 입력해주세요.</p><!-- 개발전용 : 이자율을 10% 초과 입력한 경우 validation 결과 메세지 -->
+                                        </div>
+                                        <!-- //220824 : 이자율 (필수) 추가 -->
+                                        <div class="btn_cnt_wrap">
+                                            <span><button type="button" class="btn primary lg" onclick="resultOpen3()">계산하기</button></span>
+                                        </div>
+                                        
+                                        <div id="result3"><!-- 220929 : id="result3" 추가 -->
+                                            <hr class="pro_hr_divide">
+                                            <!-- 계산결과 -->
+                                            <h2 class="h2">계산결과</h2>
+                                            <div class="calculation_result">
+                                                <p class="calculation_txt">예상 만기수령액</p>
+                                                <p class="calculation_num amount"><span class="total_txt">총</span><span class="number">121,690,000</span><strong class="num_unit">원</strong></p>
+                                                <p class="calculation_subtxt">
+                                                    월적금액 10,000,000원(일천만원)을 12개월동안<br>
+                                                    이율 2.6%의 단리로 저축하시면,<br>
+                                                    <span class="bold">총 121,690,000원</span>(일억이천일백육십구만원)의 목돈을 만들 수 있습니다.
+                                                </p>
+                                            </div>
+                                            <!-- //계산결과 -->
+
+                                            <!-- 과세구분에 따른 만기지급액 -->
+                                            <p class="pro_txt">만기지급 예상금액으로 가입시점의 적용금리에 따라 만기지급액은 변경될 수 있습니다.</p>
+                                            <h3 class="hidden">과세구분에 따른 만기지급액</h3>
+                                            <div class="table pro_calculator">
+                                                <table>
+                                                    <caption>과세구분에 따른 만기지급액</caption>
+                                                    <colgroup>
+                                                        <col style="width:23%">
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">구분</th>
+                                                            <th scope="col">만기지급액</th>
+                                                            <th scope="col">세후이자</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="center">일반과세</td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="center">세금우대</td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="center">비과세</td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                            <td class="right">
+                                                                <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>   
+                                            </div>
+                                            <!-- //과세구분에 따른 만기지급액 -->
+
+                                            <ul class="depth info">
+                                                <!-- 221123 : 연체 -> 면제 문구변경 -->
+                                                <li>일반과세의 경우는 이자금액의 15.4%가 원천징수되고, 비과세 종합저축의 경우는 이자소득세가 면제됩니다.<br>
+                                                    (2005.1.1 이후 발생 이자분부터)
+                                                </li>
+                                                <!-- //221123 : 연체 -> 면제 문구변경 -->
+                                                <li>비과세 종합저축(가입대상자에 한해 5천만원 한도) 비과세 생계형 관련세법 변경으로 인한 세율변동의 경우에는 변동된 세율이 적용됩니다. 상기금액은 이율의 변동에 따라 차이가 있을 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+    function resultOpen(){
+        $("#result").show();
+    }
+    function resultOpen2(){
+        $("#result2").show();
+    }
+    function resultOpen3(){
+        $("#result3").show();
+    }
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

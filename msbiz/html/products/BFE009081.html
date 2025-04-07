@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>약정신청</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <!-- 220817 step 수정 -->  
+        <div class="step_wrap js_step">    
+            <div class="step" role="img" aria-label="총 9단계 중 현재 2단계">
+                <span class="current">2</span><span class="mark">/</span><span class="total">9</span>
+            </div>
+            <h1 class="h1">기본정보입력</h1>
+        </div>
+        <!-- //220817 step 수정 -->  
+
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>고객님의 사업자정보를 확인하고 입력하는 화면입니다.</li>
+                <li><strong>대표자 휴대폰 본인인증을 위해 휴대폰번호를 확인해주세요.</strong></li><!-- 220729 리웍 -->
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="h3">마켓정보</h2>
+            <ul class="list_data">
+                <li>
+                    <div class="key">(마켓)사업자번호</div>
+                    <div class="value"><span class="number">220-81-90115</span></div>
+                </li>
+                <li>
+                    <div class="key">(마켓)사업자명</div>
+                    <div class="value">쿠팡 주식회사</div>
+                </li>
+                <li>
+                    <div class="key">약정금리</div>
+                    <div class="value"><span class="number">4.45</span><span class="num_unit">%</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="h3">셀러 사업자 정보</h2>
+            <ul class="list_data">
+                <li>
+                    <div class="key">사업자등록번호</div>
+                    <div class="value"><span class="number">220-81-90115</span></div>
+                </li>
+                <li>
+                    <div class="key">사업자명</div>
+                    <div class="value">㈜마니노세</div>
+                </li>
+                <li>
+                    <div class="key">법인등록번호</div>
+                    <div class="value"><span class="number">123456-7890123</span></div>
+                </li>
+                <li>
+                    <div class="key">법인명</div>
+                    <div class="value">㈜마니노세</div>
+                </li>
+                <li>
+                    <div class="key">사업장연락처</div>
+                    <div class="value"><span class="number">02-1234-1234</span></div>
+                </li>
+                <!-- <li>
+                    <div class="key">사업장연락처</div>
+                    <div class="value"><span class="number">02-1234-1234</span></div>
+                </li> 220729 리웍-->
+                <li>
+                    <div class="key">사업장 주소</div>
+                    <div class="value">
+                        [<span class="number">07241</span>]
+                        서울 영등포구 여의공원로 115
+                    </div>
+                </li>
+                <li>
+                    <div class="key">
+                        <div class="p">설립일자
+                            <div class="tooltip_limited">
+                                <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                    <p class="tooltip_tit">설립일자 변경 안내</p>
+                                    <div class="tooltip_cont"> 
+                                        <ul class="depth bul">
+                                            <li>설립일자를 변경하시려는 경우 영업점에 방문하여 변경해주시기 바랍니다.</li>
+                                            <li>설립일자 확인 서류
+                                                <ul class="depth dash">
+                                                    <li>법인사업자 : 법인등기사항전부증명서 상 법인설립등기일</li> 
+                                                    <li>개인사업자 : 사업자등록증 상 개업년월일</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="value"><span class="number">2017.11.28</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 220804 마켓이용ID 및 판매제품 정보 추가 -->
+        <!-- 220811 수정 -->
+        <div class="section">
+            <h2 class="h2">마켓이용ID 및 판매제품 정보</h2>
+            <!-- 
+            <ul class="depth bul">
+                <li>KB셀러론(선정산서비스)는 옥션,G마켓,G9 구분없이 고객님께서 이용하시는 마켓의 모든 정산채권을 양도받아 이용약정을 하고 있습니다.</li>
+                <li>마켓이용ID에는 옥션,G마켓,G9중 매출이 가장 큰 ID를 입력해주시기 바랍니다.</li>
+            </ul> -->
+            <div class="form_group error">
+                <div class="form_tit">마켓이용ID</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" placeholder="입력" title="타이틀명" value="" id="labelledby01"><!-- 220906 접근성 추가 : id/aria-labelledby 매칭 -->
+                    </div>
+                </div>
+                <p class="tip" aria-labelledby="labelledby01">개발전용 : 오류 텍스트 메시지</p><!-- 220906 접근성 추가 : id/aria-labelledby 매칭 -->
+            </div>
+
+            <!-- Case. 마켓 ‘이베이’ 선택 시 -->
+            <ul class="depth bul">
+                <li>KB셀러론(선정산서비스)는 옥션,G마켓,G9 구분없이 고객님께서 이용하시는 마켓의 모든 정산채권을 양도받아 이용약정을 하고 있습니다.</li>
+                <li>마켓이용ID에는 옥션,G마켓,G9중 매출이 가장 큰 ID를 입력해주시기 바랍니다.</li>
+            </ul>
+            <!-- //Case. 마켓 ‘이베이’ 선택 시 -->
+
+            <!-- Case. 마켓 ‘패션플러스’ 선택 시 -->
+            <ul class="depth bul">
+                <li>마켓이용ID에 “<strong>거래처코드</strong>”를 입력하여 주십시오.<br>(Ex)123456)</li>
+                <li>패션플러스 셀러 전용 홈페이지에서 거래처코드 확인이 가능합니다.
+                    <ul class="depth dash">
+                        <li>경로 : SCM>공지/기본정보>사용자정보</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- //Case. 마켓 ‘패션플러스’ 선택 시 -->
+
+            <!-- Case. 마켓 ‘쿠팡’ 선택 시 -->
+            <ul class="depth bul">
+                <li>마켓이용ID에 “<strong>업체코드</strong>”를 입력하여 주십시오. (Ex)A00001234)</li>
+                <li><strong>쿠팡 WING페이지 우측 상단</strong>에 있는 업체명을 클릭하시면 업체코드를 확인하실 수 있습니다.</li>
+            </ul>
+            <!-- //Case. 마켓 ‘쿠팡’ 선택 시 -->
+
+            <!-- Case. 마켓 ‘SSG’ 선택 시 -->
+            <!-- 220817 수정 -->
+            <ul class="depth bul">
+                <li>㈜SSG닷컴에서는 SSG닷컴(오픈마켓)과 SSG닷컴(매입)을 구분하여 운영하고 있으나, <strong>KB셀러론(선정산서비스)는 SSG닷컴(오픈마켓), SSG닷컴(매입) 구분 없이 고객님께서 이용하시는 모든 정산채권을 양도받아 이용 약정을 하고 있습니다.</strong></li>
+                <li><strong>마켓이용ID에는 SSG닷컴(오픈마켓)과 SSG닷컴(매입) 중 매출이 가장 큰 ID를 입력해 주시면 됩니다.</strong></li>
+            </ul>
+            <!-- //220817 수정 -->
+            <!-- //Case. 마켓 ‘SSG’ 선택 시 -->
+
+            <div class="form_group js_trans">
+                <div class="form_tit">판매제품</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" placeholder="판매제품" title="판매제품" value="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 220811 수정 -->
+        <!-- 220804 마켓이용ID 및 판매제품 정보 추가 -->
+    
+        <!-- 220907 수정 :  신청자 -> 대표자 -->
+        <div class="section">
+            <h2 class="h2">대표자정보</h2>
+
+            <!-- 220907 추가 -->
+            <div class="form_group">
+                <div class="form_tit">대표자 수</div>
+                <div class="form_row">
+                    <div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 대표자 수, 대표자 수 입력" onclick="">
+                        <input type="tel" aria-hidden="true"placeholder="숫자만 입력" title="대표자 수" readonly class="bg_white">
+                    </div>
+                </div>
+            </div>
+            <!-- //220907 추가 -->
+
+            <div class="form_group">
+                <div class="form_tit">대표자명</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" placeholder="대표자명" title="대표자명" value="마신운" readonly><!-- 22084 대표자명 고정값으로 변경 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">대표자 주민등록번호</div><!-- 220729 리웍-->
+                <div class="form_row col jumin">
+                    <div class="input">
+                        <input type="tel" maxlength="6" title="대표자 주민등록번호 앞자리" value="830909" readonly>   <!-- 220729 리웍-->
+                    </div>
+                    <span class="space">-</span>
+                    <div class="input masking2" role="button" aria-label="상단버튼을 클릭할 때 변경되는 대표자 주민등록 뒷자리 입력" onclick=""><!-- 220729 리웍-->
+                        <span class="gender">1</span>
+                        <input type="password" aria-hidden="true" maxlength="6" title="대표자 주민등록 뒷자리" readonly class="bg_white"><!-- 220729 리웍-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">대표자 휴대폰번호</div>
+                <div class="form_row">
+                    <!-- 221020 수정 -->
+                    <div class="input">
+                        <input type="tel" placeholder="대표자 휴대폰번호" title="대표자 휴대폰번호" value="01012345678" readonly><!-- 22084 대표자명 고정값으로 변경 -->
+                    </div>
+                    <!-- //221020 수정 -->
+                </div>
+            </div>
+        </div>
+        <!-- //220907 수정 : 대표자 -> 신청자 -->
+
+        <!-- 220907 수정 : 담당자 -> 신청자 -->
+        <!-- 220923 수정 : 신청자 -> 담당자 -->
+        <div class="section">
+            <h2 class="h2">담당자정보</h2>
+            <!-- 221020 추가 -->
+            <div class="rdoChk_group">
+                <span class="selection chk">
+                    <input type="checkbox" id="checkSize1">
+                    <label for="checkSize1" class="label"><em>대표자와 동일합니다.</em></label>
+                </span>
+            </div>
+            <!-- //221020 추가 -->
+            <div class="form_group">
+                <div class="form_tit">담당자명</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" placeholder="담당자명" title="담당자명" value=""><!-- 220907 readonly 삭제 -->
+                </div>
+                </div>   
+            </div>
+
+            <!-- <div class="form_group tel">
+                <div class="form_tit">담당자 전화번호(사업자 전화번호)</div>
+                <div class="form_row col">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="휴대폰번호 앞자리">010</button>
+                    </div>
+                    <div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 담당자 전화번호(사업자 전화번호) 입력" onclick="">
+                        <input type="tel" aria-hidden="true" maxlength="8" placeholder="숫자만 입력" title="담당자 전화번호(사업자 전화번호)" readonly class="bg_white">
+                    </div>
+                </div>
+            </div> 220907 삭제 -->
+
+            <div class="form_group tel">
+                <div class="form_tit">담당자 휴대폰번호</div>
+                <div class="form_row col">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="휴대폰번호 앞자리">010</button>
+                    </div>
+                    <div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 담당자 휴대폰번호 입력" onclick="">
+                        <input type="tel" aria-hidden="true" maxlength="8" placeholder="숫자만 입력" title="담당자 휴대폰번호" readonly class="bg_white">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <p class="tip_info">입력하신 담당자에게 약정진행 사항에 대해 안내합니다.</p> 220907 삭제 -->
+
+        </div>
+        <!-- //220923 수정 : 신청자 -> 담당자 -->
+        <!-- //220907 수정 : 담당자 -> 신청자 -->
+        
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

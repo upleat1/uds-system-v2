@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[전계좌조회] KB국민은행 계좌목록</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">KB국민은행 전계좌조회</h1>
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="input">
+                            <!-- case 사업장이 하나 -->
+                            <div class="input_txt">국민상사</div>
+                            <!-- //case 사업장이 하나 -->
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+            <div class="tab_wrap account_all all_inquiry">
+                <div class="tab_list">
+                    <div class="scroll_wrap">
+                        <a href="#" class="active">KB국민은행</a>
+                        <a href="#">다른금융</a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <div class="section all_top_link">
+                        <ul class="list_link icon ico_live">
+                            <li>
+                                <a href="#none" class="link">실시간 거래내역을 편리하게 받아보세요!</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="acc_pannel acc_all">
+                        <div class="fold_box">
+                            <!-- 마스터 진입 -->
+                            <div class="acc_wrap">
+                                <div class="acc_txt">
+                                    총 잔액 <div class="tooltip_limited">
+                                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                            <p class="tooltip_tit">총 잔액 합계</p>
+                                            <div class="tooltip_cont"> 
+                                                <ul class="bul">
+                                                    <li>국외펀드 잔액이 제외된 입출금, 예적금, 신탁, 펀드 잔액의 총 합계입니다.</li>
+                                                    <li>일반사용자(Sub)는 총 잔액을 볼 수 없습니다.</li>
+                                                </ul>
+                                            </div>
+                                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                        </div>
+                                    </div>
+                                    <span class="switch">
+                                        <input type="checkbox" id="switch1" checked>
+                                        <label for="switch1"><span class="hidden">총잔액노출</span></label>
+                                    </span>
+                                </div>
+                                <!-- 잔액 노출 -->
+                                <div class="acc_sum_wrap">
+                                    <div class="acc_pay">
+                                        <strong class="number">2,825,120,000</strong><span class="num_unit">원</span>
+                                        <button type="button" class="btn_assets"><span class="hidden">자산현황 보기</span></button>
+                                    </div>
+                                    <div class="acc_sum"><span>자동대출잔액</span> <strong class="number">900,000,000</strong><span class="num_unit">원</span></div>
+                                </div>
+                                <!-- //잔액 노출 -->
+                            </div>
+                            <div class="btn_area">
+                                <span><a href="#none">모으기</a></span>
+                                <span><a href="#none" class="primary">빠른이체</a></span>
+                            </div>
+                            <!-- //마스터 진입 -->
+                            <!-- 서브 진입 -->
+                            <!-- <div class="btn_area">
+                                <span><a href="#none" class="primary">이체</a></span>
+                            </div> -->
+                            <!-- //서브 진입 -->
+                        </div>
+                    </div>
+                    <hr class="hr_divide">
+                    <div class="section_f">
+                        <h3 class="hidden">계좌목록</h3>
+                        <div class="list_top_wrap acc_menu">
+                            <div class="col">
+                                <button type="button" class="btn_add">다른금융등록</button>
+                                <!-- <button type="button" class="btn_add">오픈뱅킹 등록</button> -->
+                            </div>
+                            <div class="col col_r">
+                                <button type="button" class="btn_set">계좌설정</button>
+                            </div>
+                        </div>
+                        <!-- 입출금 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">
+                                        입출금<span class="count">(5)</span>
+                                    </strong>
+                                    <span class="pay"><strong class="number">1,500,000</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //입출금 -->
+                        <!-- 예적금 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">예적금<span class="count">(2)</span></strong>
+                                    <span class="pay"><strong class="number">200,000,500,000</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //예적금 -->
+                        <!-- 대출 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">대출<span class="count">(2)</span></strong>
+                                    <span class="pay"><strong class="number">231,000,500</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <p class="tooltip_tit">외환 도움말</p>
+                                        <div class="tooltip_cont"> 
+                                            <ul class="bul">
+                                                <li>역외외환계좌의 금액은 총 외환평가금액에는 포함되지 않습니다.</li>
+                                                <li>연금저축외환계좌의 금액은 국내투자외환의 외환평가금액에 포함됩니다.</li>
+                                                <li>수익률은 총 투자금액의 수익률로서 이미 출금된 금액에서 실현한 수익도 포함한 단순수익률이며, 2005년 1월 24일 이후 신규한 계좌에만 표시됩니다. ‘KB골든라이프연금저축외환계좌(연금저축외환모계좌)’의 경우 다수의 연금 전용 하위외환을 반영한 평가금액 및 수익률입니다. [하위외환 조회]에서 하위외환별 정보를 확인할 수 있습니다.</li>
+                                                <li>이체(입금)/환매 예약 중인 외환계좌의 예약내역 금액은 전체계좌 조회 시 평가금액에는 반영되어 있지 않으나, 별도로 거래내역을 조회하면 확인할 수 있습니다.</li>
+                                                <li>외환 수익률은 해당 계좌의 총 투자원금에 대한 누적수익률이며, 결산(재투자) 후의 평가금액으로 단순 계산한 수익률과 일치하지 않을 수 있습니다. <br>
+                                                    예) 총 투자원금 1,000만원, 현재 평가금액 1,150만원일 경우
+                                                        (총 수익금 200만원, 결산(재투자)에 따른 세금 50만원이라면)
+                                                         → 외환 수익률은 15%가 아닌 20%임</li>
+                                                <li>투자자 숙려제도 대상인 ELS외환의 경우 승낙기간내 승낙이 완료된 계좌만 최종 신규가 확정되며, 승낙이 완료되지 않은 계좌는 신규가 취소됩니다. (‘승낙 완료’는 승낙을 완료한 경우, ‘승낙 거절’은 승낙을 거절한 경우, ‘승낙 미확인’은 아직 승낙을 하지 않은 경우에 표시됩니다.)</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                    </div>
+                                 </div>
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //대출 -->
+                        <!-- 외환 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle on" role="button" aria-expanded="true">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">외환<span class="count">(2)</span></strong>
+                                    <span class="pay"><strong class="number">1,500,500</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <p class="tooltip_tit">외환 도움말</p>
+                                        <div class="tooltip_cont"> 
+                                            <ul class="bul">
+                                                <li>역외외환계좌의 금액은 총 외환평가금액에는 포함되지 않습니다.</li>
+                                                <li>연금저축외환계좌의 금액은 국내투자외환의 외환평가금액에 포함됩니다.</li>
+                                                <li>수익률은 총 투자금액의 수익률로서 이미 출금된 금액에서 실현한 수익도 포함한 단순수익률이며, 2005년 1월 24일 이후 신규한 계좌에만 표시됩니다. ‘KB골든라이프연금저축외환계좌(연금저축외환모계좌)’의 경우 다수의 연금 전용 하위외환을 반영한 평가금액 및 수익률입니다. [하위외환 조회]에서 하위외환별 정보를 확인할 수 있습니다.</li>
+                                                <li>이체(입금)/환매 예약 중인 외환계좌의 예약내역 금액은 전체계좌 조회 시 평가금액에는 반영되어 있지 않으나, 별도로 거래내역을 조회하면 확인할 수 있습니다.</li>
+                                                <li>외환 수익률은 해당 계좌의 총 투자원금에 대한 누적수익률이며, 결산(재투자) 후의 평가금액으로 단순 계산한 수익률과 일치하지 않을 수 있습니다. <br>
+                                                    예) 총 투자원금 1,000만원, 현재 평가금액 1,150만원일 경우
+                                                        (총 수익금 200만원, 결산(재투자)에 따른 세금 50만원이라면)
+                                                         → 외환 수익률은 15%가 아닌 20%임</li>
+                                                <li>투자자 숙려제도 대상인 ELS외환의 경우 승낙기간내 승낙이 완료된 계좌만 최종 신규가 확정되며, 승낙이 완료되지 않은 계좌는 신규가 취소됩니다. (‘승낙 완료’는 승낙을 완료한 경우, ‘승낙 거절’은 승낙을 거절한 경우, ‘승낙 미확인’은 아직 승낙을 하지 않은 경우에 표시됩니다.)</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                    </div>
+                                 </div>
+                                <div class="hgroup toggle_wrap">
+                                    <div>
+                                       <div>
+                                           <strong>주요 외화 잔액</strong>
+                                           <div class="tooltip_limited">
+                                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                                <p class="tooltip_tit">총 잔액 합계범위</p>
+                                                <div class="tooltip_cont"> 
+                                                    <ul class="bul">
+                                                        <li>대표 외화 3종이 표시되며, 그 외 통화는 각 계좌에서 확인하시기 바랍니다.</li>
+                                                        <li>일반사용자(Sub)는 총 잔액과 계좌수 정보를 볼 수 없습니다.</li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                            </div>
+                                         </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="switch">
+                                            <input type="checkbox" id="switch2" checked="">
+                                            <label for="switch2"><span class="hidden">주요 외화 잔액 노출</span></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 주요 외화 잔액 -->
+                                <div class="acc_wrap exchange_wrap">
+                                    <div class="acc_sum_wrap exchange">
+                                        <div class="acc_pay"><span class="unit">USD</span>
+                                            <strong class="number">104,00.00</strong>
+                                        </div>
+                                        <div class="acc_pay"><span class="unit">EUR</span>
+                                            <strong class="number">5,000.00</strong>
+                                        </div>
+                                        <div class="acc_pay"><span class="unit">JPY</span>
+                                            <strong class="number">10,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //주요 외화 잔액 -->
+                                <div class="acc_list_wrap type_list">
+                                    <div class="acc_pannel">
+                                        <div class="acc_wrap inc_btn">
+                                            <div class="acc_top_info"> 
+                                                <span class="badge pdt1">입출금</span>
+                                            </div>
+                                            <!-- 221007 접근성수정 -->
+                                            <div class="acc_area">
+                                                <a href="#none" id="aria4_1">
+                                                    <div class="acc_num">
+                                                        <span class="number">000000-01-000000</span>
+                                                        <button type="button" class="btn_txt ico_copy" onclick="UICommon.Layer.toast('계좌번호가 복사되었습니다.')"><span class="hidden">100000-01-000000 계좌번호 복사하기</span></button><!-- 221107 버튼 위치 변경 -->
+                                                    </div>
+                                                    <div class="acc_name bold">별명노출</div><!-- 220729 리웍 class="bold" 추가 -->
+                                                    <div class="acc_name">상품명노출</div>
+                                                </a>
+                                            </div>
+                                            <!-- //221007 접근성수정 -->
+                                            <div class="acc_sum_wrap exchange">
+                                                <div class="acc_pay"><span class="unit">USD</span>
+                                                    <strong class="number">104,00.00</strong>
+                                                </div>
+                                                <div class="acc_pay"><span class="unit">EUR</span>
+                                                    <strong class="number">5,000.00</strong>
+                                                </div>
+                                                <div class="acc_pay"><span class="unit">JPY</span>
+                                                    <strong class="number">10,000</strong>
+                                                </div>
+                                            </div>
+                                            <div class="toggle_sm_wrap exchange"> <!-- 외환리스트 : exchange -->
+                                                <div class="toggle_panel" role="region">
+                                                    <div class="acc_sum_wrap exchange">
+                                                        <div class="acc_pay"><span class="unit">AUD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">CAD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">CHF</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">GBP</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">HKD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">NSD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">SGD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 통화더보기 버튼 위치 변경 -->
+                                                <button class="tit js_toggle" aria-expanded="false">통화더보기</button>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn_menu" id="layer_more" aria-describedby="aria4_1"><span class="ico_menu"></span><span class="hidden">메뉴</span></button>
+                                    </div>
+                                    <div class="acc_pannel">
+                                        <div class="acc_wrap inc_btn">
+                                            <div class="acc_top_info"> 
+                                                <span class="badge pdt2">정기예금</span>
+                                            </div>
+                                            <!-- 221007 접근성수정 -->
+                                            <div class="acc_area">
+                                                <a href="#none" id="aria4_2">
+                                                    <div class="acc_num">
+                                                        <span class="number">000000-01-000000</span>
+                                                        <button type="button" class="btn_txt ico_copy" onclick="UICommon.Layer.toast('계좌번호가 복사되었습니다.')"><span class="hidden">100000-01-000000 계좌번호 복사하기</span></button><!-- 221107 버튼 위치 변경 -->
+                                                    </div>
+                                                    <div class="acc_name bold">별명노출</div><!-- 220729 리웍 class="bold" 추가 -->
+                                                    <div class="acc_name">환매조건부매도</div>
+                                                </a>
+                                            </div>
+                                            <!-- //221007 접근성수정 -->
+                                            <div class="acc_sum_wrap exchange">
+                                                <div class="acc_pay"><span class="unit">USD</span>
+                                                    <strong class="number">104,00.00</strong>
+                                                </div>
+                                                <div class="acc_pay"><span class="unit">EUR</span>
+                                                    <strong class="number">5,000.00</strong>
+                                                </div>
+                                                <div class="acc_pay"><span class="unit">JPY</span>
+                                                    <strong class="number">10,000</strong>
+                                                </div>
+                                            </div>
+                                            <div class="toggle_sm_wrap exchange"> <!-- 외환리스트 : exchange -->
+                                                <div class="toggle_panel" role="region">
+                                                    <div class="acc_sum_wrap exchange">
+                                                        <div class="acc_pay"><span class="unit">AUD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">CAD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">CHF</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">GBP</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">HKD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">NSD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                        <div class="acc_pay"><span class="unit">SGD</span>
+                                                            <strong class="number">5,000.00</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 통화더보기 버튼 위치 변경 -->
+                                                <button class="tit js_toggle" aria-expanded="false">통화더보기</button>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn_menu" id="layer_more" aria-describedby="aria4_2"><span class="ico_menu"></span><span class="hidden">메뉴</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //외환 -->
+                        <!-- 펀드 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">펀드<span class="count">(3)</span></strong>
+                                    <span class="pay"><strong class="number">51,500,500</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //펀드 -->
+                        <!-- 신탁 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">신탁<span class="count">(3)</span></strong>
+                                    <span class="pay"><strong class="number">51,500,500</strong><span class="num_unit">원</span></span>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //신탁 -->
+                        <!-- 퇴직연금 -->
+                        <div class="acc_acco_list retire">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">퇴직연금<span class="count">(2)</span></strong>
+                                    <strong class="pay">총 가입자 <span class="number">30</span><span class="num_unit">명</span></strong>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //퇴직연금 -->
+                        <!-- 보험 -->
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">보험<span class="count">(1)</span></strong>
+                                </div>       
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //보험 -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+    
+</body>
+</html>

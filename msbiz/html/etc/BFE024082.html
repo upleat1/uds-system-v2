@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[KB금융그룹조회]KB증권_CMA 거래내역</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="KB증권" href="/msbiz/app/css/etc.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_etc">
+
+            <h1 class="h1">CMA 거래내역</h1>
+            <div class="section">
+                <div class="acc_list_wrap line">
+                    <div class="acc_pannel open">
+                        <div class="acc_wrap">
+                            <div class="acc_name">종합위탁계좌(CMA)</div>
+                            <div class="acc_num gap_xs"><span class="number">400407-01-023569</span></div>
+                            <div class="acc_sum_wrap gap_sm_3">
+                                <div class="acc_pay">
+                                    <span class="unit fc_gray">출금가능금액</span>
+                                    <strong class="number">3,000,000</strong><strong class="num_unit">원</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">조회기간</div>
+                    <div class="form_row">
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="period0" name="period" checked>
+                                <label for="period0" class="label"><em>오늘</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period1" name="period">
+                                <label for="period1" class="label"><em>1주일</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period2" name="period">
+                                <label for="period2" class="label"><em>1개월</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period3" name="period">
+                                <label for="period3" class="label"><em>3개월</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period4" name="period">
+                                <label for="period4" class="label"><em>6개월</em></label>
+                            </span>
+                        </div>
+                        <div class="form_date_term">
+                            <div class="input date">
+                                <input type="tel" title="시작일 입력" maxlength="8" value="2021.03.01" readonly>
+                                <button type="button" class="btn_cal" title="시작일 선택"></button>
+                            </div>
+                            <span class="space">~</span>
+                            <div class="input date">
+                                <input type="tel" title="종료일 입력" maxlength="8" value="2021.03.31" readonly>
+                                <button type="button" class="btn_cal" title="종료일 선택"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_btm_full_wrap">
+                    <span><button type="button" class="btn primary md">조회</button></span>
+                </div>
+            </div>
+
+            <hr class="hr_divide">
+
+            <div class="section">
+                <h2 class="h2">조회결과</h2>
+                <div class="list_top_wrap">
+                    <div class="col">
+                        <div class="sch_period">
+                            <span class="number">2022.04.02</span>
+                            <span class="num_unit">~</span>
+                            <span class="number">2022.05.02</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="total_num">
+                            <span class="num_unit">총</span>
+                            <span class="number">101</span><span>건</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">거래일</div>
+                        <div class="value"><span class="number">2022.08.16</span></div>
+                    </li>
+                    <li>
+                        <div class="key">종목명</div>
+                        <div class="value"></div>
+                    </li>
+                    <li>
+                        <div class="key">적요</div>
+                        <div class="value"></div>
+                    </li>
+                    <li>
+                        <div class="key">거래유형</div>
+                        <div class="value">펀드간매도</div>
+                    </li>
+                    <li>
+                        <div class="key">거래금액</div>
+                        <div class="value">
+                            <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">평가금액</div>
+                        <div class="value">
+                            <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">수량</div>
+                        <div class="value"><span class="number">123,123</span></div>
+                    </li>
+                    <li>
+                        <div class="key">예수금잔고</div>
+                        <div class="value">
+                            <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">대출금액</div>
+                        <div class="value">
+                            <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">수수료</div>
+                        <div class="value">
+                            <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">연체료</div>
+                        <div class="value">
+                            <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">단가</div>
+                        <div class="value">
+                            <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">정산금액</div>
+                        <div class="value">
+                            <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">유가증권잔고수량</div>
+                        <div class="value"><span class="number">123,123</span></div>
+                    </li>
+                    <li>
+                        <div class="key">부점명</div>
+                        <div class="value">여의도</div>
+                    </li>
+                    <li>
+                        <div class="key">세금</div>
+                        <div class="value">
+                            <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">표준종목코드</div>
+                        <div class="value"><span class="number">476826000683</span></div>
+                    </li>
+                </ul>
+
+                <div class="btn_wrap center gap_sm">
+                    <button type="button" class="btn_txt ico_add">더보기 <span class="number">(1/30)</span></button>
+                </div>
+            </div>
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

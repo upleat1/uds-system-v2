@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[결정구분코드]결정구분코드안내(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공과금" href="/msbiz/app/css/utility.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_utility" data-ui="full_pop">
+
+            <div class="section">
+                <h1 class="h3">결정구분코드</h1>
+                <div class="table">
+                    <table summary="구분, 코드내용, 설명">
+                        <caption>결정구분코드 표</caption>
+                        <colgroup>
+                            <col style="width: 3.6rem;">
+                            <col style="width: 3.6rem;">
+                            <col style="width: 6.6rem;">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="2">구분</th>
+                                <th scope="col">코드내용</th>
+                                <th scope="col">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="4">자진납부서에 의한 납부</th>
+                                <th scope="row">1</th>
+                                <th scope="row">확정분자납</th>
+                                <td>
+                                    확정(정기)신고납부기한내에 자진납부하는 경우 (예정신고,중간예납, 수정신고에 의한 자진납부분 제외) -> 신고납부기한이 지난 경우는 "2"번<br><br>
+                                    (예시 : 5월31일까지 납부하는 확정신고분 소득세(종합소득세, 양도소득세, 산림소득세), 확정신고분 부가가치세(1/25, 7/25), 정기신고분 법인세 기타 기한내에 납부하는 상속세, 증여세, 특소세, 증권거래세, 주세, 재평가세)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <th scope="row">수시분자납</th>
+                                <td>
+                                    수정신고납부 신고납부기한이 지난후에 수시로 자진납부하는 경우 (기한후 신고포함) =>"1","3","4"를 제외한 모든 자납<br><br>
+                                    (예시 : 수정신고 또는 기한 후 신고하는 각 세목에 대한 자진납부분 원천분은 제외 등기전 신고납부분 양도세을 종근로소득세, 인지세)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <th scope="row">중간예납 및 예정신고</th>
+                                <td>
+                                    예정신고납부 또는 중간 예납기한이 있는 세금을 기한내에 자진납부하는 경우<br><br>
+                                    (예시 : 부가가치세 예정신고납부(4/25,10/25), 양도소득세 예정신고납부, 법인세 중간예납신고납부)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <th scope="row">원천분자납</th>
+                                <td>
+                                    원천징수하여 신고납부하는 모든 원천세 자진납부분<br><br>
+                                    (예시 : 소득세원천분(이자, 배당, 사업소득, 갑근, 퇴직, 기타), 법인세원천분)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4">고지서에 의한 납부</th>
+                                <th scope="row">5</th>
+                                <th scope="row">정기분고지</th>
+                                <td>
+                                    정기신고납부분 무(과소) 납부에 대한 고지<br><br>
+                                    (예시 : 세무서장이 발부한 고지서상의 코드번호를 그대로 입력)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <th scope="row">수지분고지</th>
+                                <td>
+                                    경정고지, 수지고지분 "5","7","8"을 제외한 모든고지<br><br>
+                                    (예시 : 세무서장이 발부한 고지서상의 코드번호를 그대로 입력)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <th scope="row">중간예납 및 예정시고분 고지</th>
+                                <td>
+                                    법인세 및 종합소득세 중간예납고지 부가가치세 예정고지 "3"의 중간예납 및 예정신고납부분 무(과소)납부에 대한 고지<br><br>
+                                    (예시 : 세무서장이 발부한 고지서상의 코드번호를 그대로 입력)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <th scope="row">원천분고지</th>
+                                <td>
+                                    갑근세 등 모든 원천세에 대한 고지<br><br>
+                                    (예시 : 세무서장이 발부한 고지서상의 코드번호를 그대로 입력)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

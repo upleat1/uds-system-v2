@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[My페이지]알림함_금융정보</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/my.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <div class="section">
+            <div class="myphoto_top_wrap">
+                <button type="button" class="myphoto_img" id="btn_D001266_2" title="프로필 사진 변경(프로필 사진 없음)"> 
+                        <!-- <img src="/msbiz/app/img/common/temp/img_myphoto.jpg" class="img" alt=""> -->  <!-- [개발] 등록된 이미지 노출. 등록된 이미지가 없을 경우 비노출 -->
+                </button>
+                <div class="myphoto_info">
+                    <div class="name"><a href="#none" class="modify" title="내정보 조회/수정로 이동">김국민님</a></div>
+                    <div class="place">
+                        <span class="pc_label">관리지점</span>
+                        <span class="pc_txt">여의도영업부 이승기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_wrap gap_xs_2">
+            <div class="tab_list">
+                <div class="scroll_wrap">
+                    <a href="#">내 정보 관리</a>
+                    <a href="#" class="active">알림함<span class="ico_read"><span class="hidden">신규알림</span></span>
+                    </a>
+                </div>
+            </div>
+            <div class="link_panel">
+                <div class="tab_wrap sub_rbox">
+                    <div class="tab_list" role="tablist">
+                        <div class="scroll_wrap">
+                            <div><button type="button" role="tab" aria-selected="false">입출금</button></div> 
+                            <div><button type="button" role="tab" aria-selected="false">금융정보<span class="ico_read"><span class="hidden">신규알림</span></span></button></div>
+                            <div><button type="button" role="tab" aria-selected="true" aria-controls="mypagePanel3">혜택정보</button></div>
+                        </div>
+                    </div>
+                    <div class="tab_panel bg active" role="tabpanel" id="mypagePanel3">
+                        <h3 class="hidden">혜택정보</h3>
+                        <div class="mypage_alert_wrap">
+                            <div class="mypage_alert_head">
+                                <button type="button" class="period_sel"><strong class="number">1</strong>개월</button>
+                                <button type="button" class="mypage_alert_set">알림설정</button>
+                                <span class="period_info"><span class="hidden">조회기간</span>2022.11.12~2022.12.12</span>
+                            </div>
+                            <div class="mypage_alert_list">
+                                <div class="mypage_alert_item i10">
+                                    <h4>맞춤 혜택 및 이벤트 정보<span class="ico_read"><span class="hidden">신규알림</span></h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">맞춤 혜택 정보</a>
+                                        <p class="p">새로워진 KB스타뱅킹 추천하고 친구하고 같이 경품 받자!</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i10">
+                                    <h4>맞춤 혜택 및 이벤트 정보<span class="ico_read"><span class="hidden">신규알림</span></h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">이벤트 정보</a>
+                                        <p class="p">새로워진 KB스타뱅킹 추천하고 친구하고 같이 경품 받자!</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i10">
+                                    <h4>맞춤 혜택 및 이벤트 정보</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">맞춤 혜택 정보</a>
+                                        <p class="p">새로워진 KB스타뱅킹 추천하고 친구하고 같이 경품 받자!</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i11">
+                                    <h4>자금보고</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">현금흐름 매출 입금확인</a>
+                                        <p class="p">{%현금영수증/전자세금계산서/전자계산서%} 입금확인 내역이 있습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i11">
+                                    <h4>자금보고</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">현금흐름 매입 지급예정</a>
+                                        <p class="p">{%현금영수증/전자세금계산서/전자계산서%} 지급예정 내역이 있습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i11">
+                                    <h4>자금보고</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">월간 매출 현황</a>
+                                        <p class="p">{해당월}월 매출 현황을 확인해보세요!</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i11">
+                                    <h4>자금보고</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">월간 매입 현황</a>
+                                        <p class="p">{해당월}월 매입 현황을 확인해보세요!</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i12">
+                                    <h4>간편 세무장부/HR</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">매월 매출/비용 집계</a>
+                                        <p class="p">이달의 매출/비용 집계가 완료되었습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i12">
+                                    <h4>간편 세무장부/HR</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">예정고지세액</a>
+                                        <p class="p">납부할 예정고지세액이 있어요.</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i12">
+                                    <h4>간편 세무장부/HR</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">원천세 신고</a>
+                                        <p class="p">원천세 신고 기간입니다.</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i12">
+                                    <h4>간편 세무장부/HR</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">부가세 신고</a>
+                                        <p class="p">부가세 신고 기간입니다.</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i12">
+                                    <h4>간편 세무장부/HR</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">종합소득세 신고</a>
+                                        <p class="p">종합소득세 신고 기간입니다.</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i12">
+                                    <h4>간편 세무장부/HR</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">절세를 위한 Tip 안내</a>
+                                        <p class="p">세무 절세 Tip이 도착했어요.</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i12">
+                                    <h4>간편 세무장부/HR</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">개정세법 안내</a>
+                                        <p class="p">개정된 세법을 확인해보세요.</p>
+                                    </div>
+                                </div>
+                                <div class="mypage_alert_item i12">
+                                    <h4>간편 세무장부/HR</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">매일 매출/비용 집계</a>
+                                        <p class="p">전일자 매출/비용 집계가 완료되었습니다.</p>
+                                    </div>
+                                </div>
+                                <!-- 2200916 렌트온 추가 -->
+                                <div class="mypage_alert_item i16">
+                                    <h4>렌트온</h4>
+                                    <span class="alert_time">2021.04.22 10:40</span>
+                                    <div class="mypage_alert_item_box">
+                                        <a href="#" class="item_tit">렌트온</a>
+                                        <p class="p">어제는 임대물 {Push 알림 받는 날 기준 하루 전의 임대료 수납 대상 임대물 건수}개의 월세 받는 날! 지금 렌트온에서 입금 확인해 보세요.</p>
+                                    </div>
+                                </div>
+                                <!-- //2200916 렌트온 추가 -->
+                            </div>
+                            <div class="btn_list_btm more">
+                                <button type="button" class="btn">더보기</button>
+                            </div>
+                            <!-- case : 조회내역이 없을 때 -->
+                            <div class="result nodata sm">
+                                <p class="tit">조회할 내역이 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

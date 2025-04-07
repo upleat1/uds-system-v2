@@ -1,0 +1,1114 @@
+@charset "utf-8"; 
+
+
+/*** pro_lsk.css ***/
+/* 220907 : 상품상세(상품안내/금리이율/유의사항) DB 연동 부분 css */
+#info1 > h3,
+#info2 > h3,
+#info3 > h3{margin:2rem 0 1.2rem;}
+
+/* 221119 : css 추가 */
+#info1 > h3:first-child,
+#info2 > h3:first-child,
+#info3 > h3:first-child{margin-top:0;}
+
+.list-prod > h3{margin:2rem 0 1.2rem;}
+
+table.tablestyle-01{margin:1.6rem 0;border-top:1px solid var(--fc_05, #8c949e);}
+table.tablestyle-01 th,
+table.tablestyle-01 td {padding:1.4rem 1.2rem 1.2rem; border-bottom:1px solid var(--fc_09, #ebeef0); border-left:1px solid var(--fc_09, #ebeef0); border-right:0; font-size:1.4rem; vertical-align: middle;}
+table.tablestyle-01 th:last-child,
+table.tablestyle-01 td:last-child {padding:1.4rem 1.2rem 1.2rem; border-bottom:1px solid var(--fc_09, #ebeef0); border-right:1px solid var(--fc_09, #ebeef0); font-size:1.4rem; vertical-align: middle;}
+table.tablestyle-01 th {background-color:var(--fc_10, #f7f7f8); font-weight:400; color:var(--fc_03, #484b51); text-align:center;}
+table.tablestyle-01 thead th {padding:1.4rem .8rem 1.2rem;}
+table.tablestyle-01 tfoot th {background-color:transparent;}
+table.tablestyle-01 td {color:var(--fc_02, #26282c);}
+table.tablestyle-01 tbody th {text-align: left;}
+table.tablestyle-01 table .number {font-size:1.5rem;}
+table.tablestyle-01 table tfoot th,
+table.tablestyle-01 table tfoot td {border-bottom:1px solid var(--fc_09, #ebeef0); font-weight:700; color:var(--fc_02, #26282c);}
+table.tablestyle-01 table td.element {padding:.8rem 0; text-align:center;}
+table.tablestyle-01 table td.end {border-right:1px solid var(--fc_09, #ebeef0);}
+table.tablestyle-01 table td > .depth:first-child {margin-top:0;}
+
+.tbl_list01 > table{margin:1.6rem 0;border-top:1px solid var(--fc_05, #8c949e);}
+.tbl_list01 > table th,
+.tbl_list01 > table td {padding:1.4rem 1.2rem 1.2rem; border-bottom:1px solid var(--fc_09, #ebeef0); border-left:1px solid var(--fc_09, #ebeef0); border-right:0; font-size:1.4rem; vertical-align: middle;}
+.tbl_list01 > table th:last-child,
+.tbl_list01 > table td:last-child {padding:1.4rem 1.2rem 1.2rem; border-bottom:1px solid var(--fc_09, #ebeef0); border-right:1px solid var(--fc_09, #ebeef0); font-size:1.4rem; vertical-align: middle;}
+.tbl_list01 > table th {background-color:var(--fc_10, #f7f7f8); font-weight:400; color:var(--fc_03, #484b51); text-align:center;}
+.tbl_list01 > table thead th {padding:1.4rem .8rem 1.2rem;}
+.tbl_list01 > table tfoot th {background-color:transparent;}
+.tbl_list01 > table td {color:var(--fc_02, #26282c);}
+.tbl_list01 > table tbody th {text-align: left;}
+.tbl_list01 > table table .number {font-size:1.5rem;}
+.tbl_list01 > table table tfoot th,
+.tbl_list01 > table table tfoot td {border-bottom:1px solid var(--fc_09, #ebeef0); font-weight:700; color:var(--fc_02, #26282c);}
+.tbl_list01 > table table td.element {padding:.8rem 0; text-align:center;}
+.tbl_list01 > table table td.end {border-right:1px solid var(--fc_09, #ebeef0);}
+.tbl_list01 > table table td > .depth:first-child {margin-top:0;}
+.tbl_list01 colgroup{display:none;}
+
+.pro_tel_guide{position: relative; margin:0 2.4rem; padding:1rem 0 0 5.3rem; }
+.pro_tel_guide .txt{font-size:1.6rem; font-weight: 700 !important;}
+.pro_tel_guide .number{font-size:1.7rem; font-weight: 500 !important; }
+.pro_tel_guide .ico_guide{display:block; position: absolute; left:0; top:0; width:3.5rem; height:4rem; background:url(/msbiz/app/img/products/icon_detail_03.png) 0 0 no-repeat; background-size: 3.5rem 4rem;}
+
+/*  예금계좌조회 - 계좌명 & 계좌별명 width 100% 전체 노출 css */
+.acc_pannel .acc_wrap.inc_btn > .pdt_acc_name{padding-right:0;}
+.acc_pannel .acc_wrap.inc_btn > div:first-child{padding-right:0;}
+.acc_pannel .acc_wrap.inc_btn > .pdt_acc_name .pdt_divide::before{content:''; display:inline-block;  width:.1rem; height:1.2rem; margin:.4rem .8rem 0; vertical-align:top; background-color:var(--fc_08, #dde1e4);}
+
+/* 예금전환 - 1단계 상품목록 텍스트길이 padding css */
+.list_link li > .inr.pdt_txt{display:table;width:100%;padding: 2rem 9.2rem 1.8rem 0;} 
+
+/* 권유직원 - 지점 & 권유직원 구분 라인 */
+.list_data > li .value .pdt_divide::before{content:''; display:inline-block;  width:.1rem; height:1.2rem; margin:.4rem .7rem 0 .7rem; vertical-align:top; background-color:var(--fc_08, #dde1e4);} 
+
+/* 풀팝업 상단 타이틀 - 중간 타이틀로 반영되는 예외 css */
+.pdt_pop_h2{margin:0 0 2.0rem;padding:0 2.4rem 1.6rem;font-size:1.8rem}
+
+/* 대출상담신청 - 지점 안내 요청사항 */
+p.pro_tip{position:relative; z-index:1; min-height:2rem; padding:0 0 0 2.4rem; margin-top:.8rem; font-size:1.4rem;color: #ff5858;}
+p.pro_tip::before {content:''; display:inline-block; position:absolute; left:0; top:-.1rem; z-index:2; width:2rem; height:2rem; background:url(/msbiz/app/img/common/spr_ico_20x.png) -12rem -2rem no-repeat; background-size:25rem auto; vertical-align:top; background-position: -10rem 0;}
+
+/* OneStop 서류제출 완료 */
+.pro_doc_complete{margin:0 2.4rem 4rem;padding-top:4.8rem;text-align:center;}
+.pro_doc_complete > img{width:6rem; height:6rem;}
+.pro_doc_complete .tit {margin-top:3.2rem; font-size:2.4rem; color:var(--fc_02, #26282c); font-weight:700;}
+.pro_doc_complete .tit .number {font-size:2.6rem;font-weight:500}
+.pro_doc_complete .txt {margin-top:1.2rem; font-size:1.6rem; color:var(--fc_04, #696e76);}
+
+/* OneStop - 약관 및 상품설명서 */
+.pro_agree .agree_all input[type=checkbox] + .label strong {margin-top:0; padding-top:0; font-size:2rem;} 
+.pro_agree .agree_all {position:relative; padding:1.6rem 0; font-size:1.6rem; color:var(--fc_02, #26282c);}
+.pro_agree .agree_total input[type=checkbox] + .label em {margin-top:0; padding-top:0; font-size:1.6rem;} 
+
+/* OneStop 약관동의 - 마케팅 동의 */
+.pro_agree .agree_txt {padding-bottom: 0; margin-top: 2.8rem;}
+.pro_agree .agree_wrap .agree_choice_wrap {margin-top: 1rem}
+.pro_agree .agree_wrap .agree_choice_wrap .label > em {font-weight: 400;}
+.pro_agree .agree_wrap .agree_choice > .selection {border-bottom: 0; padding-bottom: 0;}
+.pro_agree .agree_wrap .agree_choice {position:relative; padding:0; border-bottom:1px solid var(--fc_08, #dde1e4); font-size:1.6rem; color:var(--fc_02, #26282c);}
+.pro_agree .agree_wrap .agree_total:first-child .btn_link {margin-top: -2.8rem;}
+.pro_agree .agree_wrap .agree_choice .selection {width: 100%;}
+.pro_agree .agree_wrap .agree_choice_wrap .rdoChk_group.inline .selection {width: 49%;}
+.pro_agree .agree_wrap .agree_choice_wrap .rdoChk_group.inline {border-bottom:none;}
+.pro_agree .agree_wrap .agree_choice .selection input[type=checkbox] + .label {padding-right:0;}
+
+/* OneStop - 다른 인증서 선택 바텀시트 */
+p.depth.info.pro_txt {position:relative;margin-bottom:1.4rem;padding-left:2.3rem;font-size:1.4rem;color:var(--fc_04, #696e76)}
+.acc_list .depth.info{position:relative;margin-bottom:1.4rem;padding-left:2.3rem;font-size:1.4rem;color:var(--fc_04, #696e76)}
+.acc_list .depth.info:before {content:''; display:inline-block; position:absolute; top:-.1rem; left:0; width:2rem; height:2rem; background:url(/msbiz/app/img/common/spr_ico_20x.png) no-repeat -22rem -4rem; background-size: 25rem auto;}
+
+/* OneStop 희망거래선택 */
+/* 기업통장 + 기업뱅킹 + 기업체크카드 */
+.list_acco.pro_chk > li{border:none;}
+.list_acco.pro_chk > li.on{box-shadow: 0 0.4rem 0.6rem rgb(0 0 0 / 7%); border-bottom-left-radius:.8rem; border-bottom-right-radius:.8rem;}
+.list_acco > li .pro_rdoChk_group{ margin-top:2rem;box-shadow: 0 0.4rem 0.6rem rgb(0 0 0 / 7%); border-bottom-left-radius:.8rem; border-bottom-right-radius:.8rem;}
+
+/* 220928 : 클래스 none이 들어가는 경우 여백 */
+.list_acco > li .pro_rdoChk_group.none {height:6rem; margin-top:0;}
+.list_acco.pro_chk > li .pro_rdoChk_group:nth-child(2){margin-top:0;}
+
+.pro_rdoChk_group [class^=selection] {display:block; margin:2rem 0;}
+.pro_rdoChk_group .selection input[type=checkbox] + .label { display:inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0; padding:2rem 0 4rem; border:1px solid var(--fc_08, #dde1e4); border-bottom:1px solid var(--fc_08, #dde1e4); border-top-left-radius: .8rem; border-top-right-radius: .8rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; -webkit-border-radius:0; -webkit-border-top-left-radius:.8rem; -webkit-border-top-right-radius:.8rem; background-color:var(--fc_10, #f7f7f8); transition:none; -webkit-transition:none; }
+.pro_rdoChk_group .selection input[type=checkbox] + .label > em{display: inline-block; content:''; position: absolute; left:0; top:0; width:100%; height:6rem; margin:0; padding:2rem 0 2rem 6rem; z-index:2; font-size:1.8rem; font-weight:700; }
+.pro_rdoChk_group .selection input[type=checkbox] + .label:before{ display:none; transition:none; -webkit-transition:none; }
+.pro_rdoChk_group .selection input[type=checkbox] + .label:after { display:inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0; padding:2rem 0 4rem; border:none; border-radius:.8rem; -webkit-border-radius:.8rem; background:url(/msbiz/app/img/products/pro_chk_off.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; background-color:var(--fc_10, #f7f7f8); transition:none; -webkit-transition:none; border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.pro_rdoChk_group .selection input[type=checkbox]:checked + .label:after { display: inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0 0 4rem; padding:2rem 0;  border-radius:.8rem; -webkit-border-radius:.8rem; background:url(/msbiz/app/img/products/pro_chk_on.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; background-color:#ffd338; transition:none; -webkit-transition:none; animation:none; -webkit-animation:none; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+
+.pro_rdoChk_group .selection input[type=checkbox]:disabled + .label > em{display: inline-block; content:''; position: absolute; left:0; top:0; width:100%; height:6rem; margin:0; padding:2rem 0 2rem 6rem; z-index:2; font-size:1.8rem; font-weight:700; }
+.pro_rdoChk_group .selection input[type=checkbox]:disabled + .label{display:inline-block; position:relative; z-index:1; width:100%; min-height:2.4rem; padding-left:3.4rem; }
+.pro_rdoChk_group .selection input[type=checkbox]:disabled + .label:before { display:inline-block; content:''; position:absolute; left:0; top:-.1rem; z-index:1; width:2.4rem; height:2.4rem; background-color:var(--fc_10, #f7f7f8); transition:none; border-radius:.8rem; -webkit-border-radius:.8rem; background:url(/msbiz/app/img/products/pro_chk_disabled.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; border:1px solid var(--fc_08, #dde1e4);}
+.pro_rdoChk_group .selection input[type=checkbox]:disabled + .label:after { display:inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0; padding:2rem 0 4rem; border:none; border-radius:.8rem; -webkit-border-radius:.8rem; background:url(/msbiz/app/img/products/pro_chk_disabled.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; background-color:var(--fc_10, #f7f7f8); transition:none; -webkit-transition:none; }
+
+.pro_rdoChk_group.none .selection input[type=checkbox] + .label { display:inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0; padding:2rem 0 4rem; border:1px solid var(--fc_08, #dde1e4); border-radius: .8rem; -webkit-border-radius: .8rem; background-color:var(--fc_10, #f7f7f8); transition:none; -webkit-transition:none; }
+.pro_rdoChk_group.none .selection input[type=checkbox] + .label:after { display:inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0; padding:2rem 0 4rem; border:none; border-radius:.8rem; -webkit-border-radius:.8rem; background:url(/msbiz/app/img/products/pro_chk_off.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; background-color:var(--fc_10, #f7f7f8); transition:none; -webkit-transition:none; }
+.pro_rdoChk_group.none .selection input[type=checkbox]:checked + .label:after { display: inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0 0 4rem; padding:2rem 0;  border-radius:.8rem; -webkit-border-radius:.8rem; background:url(/msbiz/app/img/products/pro_chk_on.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; background-color:#ffd338; transition:none; -webkit-transition:none;  animation:none; -webkit-animation:none; }
+
+.pro_rdoChk_group [class^=selection] + .pro_result{margin-top:-8.5rem;}
+.pro_result{padding:6rem 0 0;border:1px solid var(--fc_08, #dde1e4); border-radius:.8rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0;  -webkit-border-radius:.8rem; }
+.pro_result .result.nodata .tit {margin-top:0; padding-bottom:0; font-size:1.6rem; color:var(--fc_02, #26282c); font-weight:400;}
+.pro_result .result.nodata .txt {margin-top:0; font-size:1.4rem; color:var(--fc_04, #696e76);}
+
+.pro_rdo{padding:6rem 0 1rem 2.2rem;border:1px solid var(--fc_08, #dde1e4); border-radius:.8rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0;  -webkit-border-radius:.8rem; }
+
+/* 221012 onestop - ONE KB 사업자통장(원화) 선택 불가 문구 추가  */
+.selection input + .label > .rdo_guide{display: block; margin: 0.8rem 2.2rem 0 0; font-size: 1.4rem; color:#696e76;}
+.pro_rdo .selection{margin:2rem 2.2rem 0 0; padding-bottom: 2rem; border-bottom:1px solid var(--fc_08, #dde1e4);}
+.pro_rdo .selection:last-child{border-bottom:none;}
+.pro_rdo .selection input[type=radio] + .label:disabled{border:1px solid red}
+
+.pro_rdo_group [class^=selection] {display:block; margin:0; z-index: 0;}
+.pro_rdo_group .selection input[type=radio] + .label { display:inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0; padding:2rem 0 4rem; border:1px solid var(--fc_08, #dde1e4); border-radius:.8rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; -webkit-border-radius:.8rem; background-color:var(--fc_10, #f7f7f8); transition:none; -webkit-transition:none; }
+.pro_rdo_group .selection input[type=radio] + .label > em{display: inline-block; content:''; position: absolute; left:0; top:0; width:100%; height:6rem; margin:0; padding:2rem 0 2rem 6rem; z-index:2; font-size:1.8rem; font-weight:700; }
+.pro_rdo_group .selection input[type=radio] + .label:before{ display:none; transition:none; -webkit-transition:none; }
+.pro_rdo_group .selection input[type=radio] + .label:after { display:inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0; padding:2rem 0 4rem; border:none; border-radius:.8rem; -webkit-border-radius:.8rem; background:url(/msbiz/app/img/products/pro_rdo_off.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; background-color:var(--fc_10, #f7f7f8); }
+.pro_rdo_group .selection input[type=radio]:checked + .label:after { display: inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0 0 4rem; padding:2rem 0; border-radius:.8rem; -webkit-border-radius:.8rem; background:url(/msbiz/app/img/products/pro_rdo_on.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; background-color:#ffd338; }
+
+/* OneStop 인증서 사전체크 */
+.pro_certification_guide{ position: relative; display:block; width:100%; height:14rem; margin-top:4rem;padding:0 2.4rem; background-color: var(--bg_02, #f7f7f8); border:none; border-radius:.8rem; -webkit-border-radius:.8rem; }
+.pro_certification_guide > span{width:13.2rem; height:13.8rem;}
+.pro_certification_guide > span.ico_time{content: ""; position: absolute; top:0; right:0; background-image: url(/msbiz/app/img/products/ico_time.png); background-size:13.2rem 13.8rem;}
+.pro_certification_guide .txt{ font-weight: 700 !important;}
+.pro_certification_guide .txt > span.sub_tit{display:block; padding:2.4rem 0 .6rem;font-size:1.6rem; color:var(--fc_02, #26282c);}
+.pro_certification_guide .txt > span.sub_tit2{font-size:1.4rem; color:var(--fc_04, #696e76); font-weight: 500 !important;}
+
+.pro_certification .rdoChk_group [class^=selection] {display:block; margin-bottom:0; padding-top:0;}
+.pro_certification [class^="selection"] input + .label,
+.pro_certification [class^="selection"] input + .label > em {display: inline-block; content:''; position: absolute; left:0; top:0; width:100%; height:6rem; margin:0; padding:2rem 0 2rem 6rem; z-index:2; font-size:1.8rem; font-weight:700; }
+
+.pro_certification .selection input[type=radio] + .label > em{ display: inline-block; content:''; position: absolute; left:0; top:0; width:100%; height:6rem; margin:0; padding:2rem 0 2rem 6rem; z-index:2; font-size:1.8rem; font-weight:700; }
+.pro_certification .selection input[type=radio] + .label:before{ display:none; }
+.pro_certification .selection input[type=radio] + .label:after { display:inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0; padding:2rem 0 4rem; border:none; border-radius:.8rem; -webkit-border-radius:.8rem;}
+.pro_certification .selection input[type=radio]:checked + .label:after { display: inline-block; content:''; position:absolute; left:0; top:0; z-index:1; width:100%; height:6rem; margin:0 0 4rem; padding:2rem 0; border-radius:.8rem; -webkit-border-radius:.8rem; background:url(/msbiz/app/img/products/pro_rdo_on.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; background-color:#ffd338; animation:none;}
+
+.pro_certification .selection input[type=radio] + .label {display:inline-block; position:relative; z-index:1; min-height:2.4rem; padding-left:3.9rem; border-top:1px solid var(--fc_08, #dde1e4); background:url(/msbiz/app/img/products/pro_rdo_off.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; background-color:var(--fc_10, #f7f7f8);}
+.pro_certification .selection input[type=radio] + .label:before { content:''; display: inline-block; position:absolute; left:2.2rem; top:1.8rem; z-index:1; width:2.8rem; height:2.8rem; border:2px solid var(--fc_05, #8c949e); border-radius:100%; background:url(/msbiz/app/img/products/pro_rdo_off.png); background-size: 2.8rem; background-position: 2.2rem 1.8rem; background-repeat: no-repeat; transition:none; -webkit-transition:none; -webkit-border-radius:100%; }
+.pro_certification .selection input[type=radio] + .label:after { content:''; display: inline-block; position:absolute; left:.7rem; top:.7rem; z-index:1; width:1.4rem; height:1.4rem; border-radius:50%; background:#ffbc00; }
+.pro_certification .selection input[type=radio]:checked + .label:before {border-color: var(--fc_02, #26282c); background-color: #fff;}
+.pro_certification .selection input[type=radio]:checked + .label:after { animation: radioAni .0s linear forwards; -webkit-animation: radioAni .0s linear forwards; }
+
+.list_acco.pro_certification > li {margin-bottom:2rem; padding:0; border-top:none; border-radius:.8rem; transition:none; -webkit-transition:none; }
+.list_acco.pro_certification > li.on{border-top:none;border-bottom:none;box-shadow: 0 0.4rem 0.6rem rgb(0 0 0 / 7%);}
+.list_acco.pro_certification > li .selection input[type=radio] + .label{ border-bottom-right-radius: .8rem; border-bottom-left-radius: .8rem; }
+.list_acco.pro_certification > li.on .selection input[type=radio] + .label{ border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
+.list_acco.pro_certification > li.on .selection input[type=radio]:checked + .label:after{border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
+.list_acco.pro_certification > li:last-child {border-bottom:none;}
+.list_acco.pro_certification > li > .tit {display:block; position: relative; padding:0; font-size:1.6rem; color:var(--fc_02, #26282c); text-align:left;}
+.list_acco.pro_certification > li.on > .tit:after {border-color:var(--fc_03, #484b51); margin-top:-.2rem; transform: rotate(225deg); -webkit-transform: rotate(225deg);}
+.list_acco.pro_certification > li > .tit:after {display:inline-block;position: absolute;right: 2.4rem; top:50%; content:''; width:.9rem; height:.9rem; margin-top:-.6rem; border:solid var(--fc_05, #8c949e);border-width: 0 1.5px 1.5px 0;transform: rotate(45deg);-webkit-transform: rotate(45deg);}
+.list_acco.pro_certification > li .tit > span.arrow::before, 
+.list_acco.pro_certification > li .tit > span.arrow::after{content:'';position:absolute;top:0.6rem;width: 9px;height:1.5px;background-color:var(--fc_02, #26282c);transition:all 0.2s ease}
+.list_acco.pro_certification li .btn_acco > span.arrow::before, 
+.list_acco.pro_certification li .btn_acco > span.arrow::after{ content:''; position:absolute; top:0.6rem; width: 9px; height:1.5px; background-color:var(--fc_02, #26282c); transition:all 0.2s ease; -webkit-transition:all 0.2s ease; }
+.list_acco.pro_certification li .btn_acco {display:inline-block; position:absolute;top:50%; right:0; width:4rem; height:4rem; z-index: 999; margin-top:-2rem; padding:2rem 3.6rem 2rem .2rem; font-size:1.8rem; color:var(--fc_02, #26282c); text-align:left;}
+.list_acco.pro_certification > li .tit > span.arrow, 
+.list_acco.pro_certification li .btn_acco > span.arrow{position:absolute;top:50%;right: 2.2rem;width:1.5rem;height:1.2rem;margin-top:-.7rem}
+.board_list_wrap .list_acco.pro_certification .tit {padding-top:0; padding-bottom:0; font-size:1.8rem; color:var(--fc_02, #26282c);line-height: 0;}
+
+/* 220919 : 갱신가능 인증서 css */
+.section > .list_comp > li:nth-child(2){padding: 0; border: 1px solid var(--bdc_01, #ebeef0); border-radius: 0.8rem;}
+.section > .list_comp > li:nth-child(2) > .certify_pannel{border:none;padding:2.2rem 1.6rem 1rem 5.8rem;}
+.section > .list_comp > li:nth-child(2) > .btn_list_btm{display: block; height:3.6rem; margin:0 2rem 2rem 10rem;}
+.section > .list_comp > li:nth-child(2) > .btn_list_btm .btn{ border-radius:.2rem; border-color:var(--fc_07, #c6cbd0);width:50%; min-width:4.8rem; height:2.8rem; margin-left:1.6rem; padding:0 .8rem; font-size:1.4rem; line-height:2.8rem; -webkit-border-radius:.2rem;}
+.section > .list_comp > li:nth-child(2) > .certify_icon{ padding:2.2rem 1.6rem 2rem 5.8rem;border:1px solid var(--bdc_01, #ebeef0);border-radius:.8rem}
+.section > .list_comp > li:nth-child(2) > .certify_icon [class^=ico_state_] { position:absolute;left:1.6rem;top:1.6rem;width:3.6rem;height:3.6rem;background:url(/msbiz/app/img/common/spr_ico_40x.png) -10.8rem -3.6rem no-repeat; background-size:22rem auto;}
+.section > .list_comp > li:nth-child(2) > .certify_icon .ico_state_renew {background-position:-7rem -17.6rem}
+
+/* 토글 from toggle.html */
+.list_acco.pro_certification > li.on .toggle_panel { display:none; margin-top:-.1rem; padding:2rem 2.2rem 3.2rem; border-top:0; border:1px solid var(--fc_08, #dde1e4); border-radius: .8rem; border-top-left-radius: 0; border-top-right-radius: 0; -webkit-border-radius: .8rem; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 0;}
+
+/* OneStop 신규 안내 */
+.pro_slogan_wrap .tit {font-size:2.4rem}
+.pro_slogan_wrap .tit + .txt{margin-top:1.2rem;font-size:1.6rem; color:var(--fc_04, #696e76) !important;} 
+.pro_slogan_wrap .txt{margin-bottom:2rem;}
+.pro_slogan_wrap .tit + .sub_txt{margin-top:1.2rem;font-size:1.6rem; color:var(--fc_04, #696e76) !important;} 
+.pro_slogan_wrap .sub_txt{margin-bottom:2rem;}
+
+/* OneStop - 신규계좌개설 */
+.section h2 + h2{margin:-0.9rem 0 1.1rem}
+
+/* OneStop 카드발급상황조회 목록 */
+.list_data_group .pro_list_top_wrap {display:table;width:100%;margin-top:-3.3rem;font-size:1.5rem}
+.list_data_group .pro_list_top_wrap.line{margin-bottom:1.8rem;padding-bottom:1.0rem;border-bottom:1px solid var(--fc_05, #8c949e)}
+.list_data_group .pro_list_top_wrap .col {display:table-cell;text-align:left}
+.list_data_group .pro_list_top_wrap .col:first-child .total_num{display:block;text-align:right;color:var(--fc_03, #484B51)}
+.list_data_group .pro_list_top_wrap .col+.col{text-align:right}
+
+/* OneStop 스탭영역 폰트 */
+.pro_depth.step {counter-reset:list-number 0; margin-top:0;}
+.pro_depth.step > li {position:relative;margin-top:.3rem;padding:1rem 0 1rem 5.6rem}
+.pro_depth.step > li:before {content:'';display:block;position:absolute;left:0;top:.3rem;width:4rem;height:4rem;border-radius:50%;background-color:var(--fc_09, #ebeef0);font-size:1.7rem;font-family:'Roboto';font-weight:500;color:var(--fc_03, #484b51);content:counter(list-number);counter-increment:list-number 1;text-align:center;line-height:4rem}
+.pro_depth.step > li:first-child {margin-top:0;}
+.pro_depth.step > li p.tit {font-size:1.6rem;color:var(--fc_02, #26282c);}
+.pro_depth.step > li p.p {margin:.7rem 0 .5rem; font-size:1.6rem; color:var(--fc_02, #26282c);}
+.pro_depth.step > li .p_sub {margin-top:.7rem; color:var(--fc_03, #484b51);}
+.pro_depth.step > li p:last-child {margin-bottom:0;}
+.pro_depth.step > li > .depth.bul > li {margin-top:.9rem;}
+.pro_depth.step > li > .depth.info {margin-top:.6rem;}
+
+.pro_depth.step.sm > li{padding:0.5rem 0 0 3.2rem;margin-top: 1.5rem;}
+.pro_depth.step.sm > li:first-child{margin-top: 0;}
+.pro_depth.step.sm > li:before{width: 2.4rem;height: 2.4rem;line-height: 2.4rem; font-size: 1.5rem;color:  var(--fc_11, #fff); background-color: var(--fc_05, #8c949e)}
+.pro_depth.step.sm > li .p:first-child{margin-top: 0;}
+
+.btn_wrap.sectors_btm {margin-top:2.4rem; text-align:right;}
+
+/* 개인사업자/법인사업자 _ radioTab */
+.pro_rdoChk_box {display:table;table-layout:fixed;position:relative;width:100%;line-height:normal}
+.pro_rdoChk_box .selection {display:table-cell;position:relative;text-align:center;vertical-align:middle;z-index:1;}
+.pro_rdoChk_box .selection:first-child{padding-right:0.6rem;}
+.pro_rdoChk_box .selection:nth-last-child(1){padding-left:0.6rem;}
+.pro_rdoChk_box .selection:first-child input[type=radio] + .label::after{border-top-left-radius:2px;border-bottom-left-radius:2px;}
+.pro_rdoChk_box .selection:last-child input[type=radio] + .label::after{ border-radius:2px; -webkit-border-radius:2px; }
+.pro_rdoChk_box .selection input[type=radio] + .label{display:table;position:initial;width:100%;padding:2rem 0 1.5rem;font-size:1.6rem;color:var(--fc_03, #484b51);}
+.pro_rdoChk_box .selection input[type=radio] + .label::after{top:0;left:0;right:0;bottom:0;width:auto;height:auto;border:1px solid var(--fc_06, #aab0b8);background:none;border-radius:0;z-index:1}
+.pro_rdoChk_box .selection input[type=radio] + .label{display:table; position:relative; padding:2rem 0 1.5rem; border:1px solid var(--fc_09, #ebeef0); border-radius:.4rem; background:var(--fc_10, #f7f7f8);  background:url(/msbiz/app/img/products/ico_individaual_on.png) center 2rem no-repeat; background-size: 4.8rem 4.8rem; text-align:center; -webkit-border-radius:.4rem;}
+.pro_rdoChk_box .selection input[type=radio] + .label::before{ position:static; width:4.8rem; height:4.8rem; margin:0 auto; border:none; border-radius:0;  background:url(/msbiz/app/img/products/ico_individaual_on.png) no-repeat; background-size: 4.8rem 4.8rem; -webkit-border-radius:0; }
+.pro_rdoChk_box .selection:nth-child(1) input[type=radio] + .label{position:relative; padding:2rem 0 1.5rem; border:1px solid var(--fc_09, #ebeef0); border-radius:.4rem; background:var(--fc_10, #f7f7f8); text-align:center;}
+.pro_rdoChk_box .selection:nth-child(1) input[type=radio] + .label::before{position:static; width:4.8rem; height:4.8rem; margin:0 auto; border:none; border-radius:0;background:url(/msbiz/app/img/products/ico_individaual_off.png) no-repeat; background-size: 4.8rem 4.8rem;}
+.pro_rdoChk_box .selection:nth-child(1) input[type=radio]:checked + .label{position:relative; padding:2rem 0 1.5rem; border-radius:.4rem;background:url(/msbiz/app/img/products/ico_individaual_on.png) center 2rem no-repeat; background-size: 4.8rem 4.8rem;text-align:center;}
+.pro_rdoChk_box .selection:nth-last-child(1) input[type=radio] + .label{position:relative; padding:2rem 0 1.5rem; border:1px solid var(--fc_09, #ebeef0); border-radius:.4rem; background:var(--fc_10, #f7f7f8); text-align:center;}
+.pro_rdoChk_box .selection:nth-last-child(1) input[type=radio] + .label::before{position:static; width:4.8rem; height:4.8rem; margin:0 auto; border:none; border-radius:0;background:url(/msbiz/app/img/products/ico_corporation_off.png) no-repeat; background-size: 4.8rem 4.8rem;}
+.pro_rdoChk_box .selection:nth-last-child(1) input[type=radio]:checked + .label{position:relative; padding:2rem 0 1.5rem; border-radius:.4rem;background:url(/msbiz/app/img/products/ico_corporation_on.png) center 2rem no-repeat; background-size: 4.8rem 4.8rem;text-align:center;}
+.pro_rdoChk_box .selection input[type=radio]:checked + .label{background:transparent; font-weight:700;} 
+.pro_rdoChk_box .selection input[type=radio]:checked + .label::after{left:-1px; right:-1px; top:-1px; bottom:-1px; width:auto; height:auto; border:3px solid #ffcc00; border-radius:.2rem; background:none; box-shadow:4px 6.928px 12px 0px rgba(0, 0, 0, 0.1); }
+.pro_rdoChk_box .selection + .selection input[type=radio]:checked + .label::after{left:-1px}
+.pro_rdoChk_box .selection input + .label em{display:block;}
+.pro_rdoChk_box .selection input[type=radio]:checked + .label:after{ animation:radioAni .0s linear forwards; -webkit-animation:radioAni .0s linear forwards; }
+.pro_rdoChk_box .selection > img{width:4.8rem; height:4.8rem;}
+
+/* 법인사업자 유의사항 */
+.inform_btm_wrap.pro_guide{margin:4.8rem 0 0;}
+
+/* oneStop 추가인증 */
+.h2 + .list_link.add_certification li:first-child > a {padding-top: 2rem;}
+.list_link.add_certification li:first-child > .inr,
+.list_link.add_certification li > .inr{display:table;width:100%;padding: 1.8rem 0 1.8rem 1.6rem;}
+.list_link.add_certification li.link {position:relative; display:flex; align-items: center;}
+.list_link.add_certification li.link:first-child::before{content: ''; display: block; width: 4rem; height: 4rem;  background:url(/msbiz/app/img/products/ico_certification_1.png) center 0 no-repeat; background-size: 4rem 4rem;}
+.list_link.add_certification li.link::before{ content: ''; display: block; width: 4rem; height: 4rem; background:url(/msbiz/app/img/products/ico_certification_2.png) center 0 no-repeat; background-size: 4rem 4rem;}
+
+/* 금융사 & 계좌번호 함께 출력 */
+.pro_bank_result{padding:1rem 1rem 2rem;background-color: var(--fc_10, #f7f7f8);}
+.pro_bank_result .p{padding:2rem 1rem 0;}
+.pro_bank_result .pro_bank_img{width:auto;height:14rem;margin:0 auto;background-color: var(--fc_09, #ebeef0);text-align: center;}
+
+/* 금융거래한도 계좌 안내 */
+.pro_bank_guide{padding:2rem 1.6rem;background-color: var(--fc_10, #f7f7f8);}
+.pro_bank_guide .p{padding-bottom:1.2rem;font-size: 1.5rem;font-weight:700;color: var(--fc_03, #484b51);}
+.pro_bank_guide .p_sub{font-size: 1.5rem;color: var(--fc_03, #484b51);}
+.pro_bank_guide span:last-child{padding-top:.4rem;display:block;font-size:1.4rem;color: var(--fc_04, #696e76);}
+
+/* oneStop - 상품 안내 icon */
+.icon_area {display:flex; justify-content:space-around; margin-top:3.2rem}
+.icon_area .icon_cont {display:flex; flex-direction:column; align-items:center}
+.icon_area .icon_cont .ico_bank {display: inline-block; width:4rem; height:4rem; background:url(/msbiz/app/img/products/ico_spr_onestop.png) no-repeat; background-size: 20rem auto; background-position: 0 0; }
+.icon_area .icon_cont .ico_bank.deposit{ background-position: 0 0;}
+.icon_area .icon_cont .ico_bank.loan{ background-position: -4rem 0;}
+.icon_area .icon_cont .ico_bank.fund{ background-position: -8rem 0;}
+.icon_area .icon_cont .ico_bank.fc_deposit{ background-position: -16rem 0;}
+.icon_area .icon_cont .ico_bank.bond_transfer{ background-position: -12rem 0;}
+.icon_area .icon_cont span {margin-top:1.2rem; text-align:center; font-size:1.4rem}
+
+/* 221021 : scrollbar 고정 css 추가 */
+.toggle_panel .scroll::-webkit-scrollbar{display: block; width:3px;}
+.toggle_panel .scroll::-webkit-scrollbar-thumb{background-color:#bfbfbf;}
+.toggle_panel .scroll::-webkit-scrollbar-track{background-color: transparent;}
+
+/* oneStop - 기업통장 계좌선택 바텀시트 */
+/* image align */
+.bank_image_guide {display:table; position:relative; table-layout:fixed; width:100%;}
+.bank_image_guide [class^=item_] {display:table-cell; width:50%;}
+.bank_image_guide .txt_inner {position:relative; width:12rem; margin:0 auto; text-align:center;}
+.bank_image_guide .txt_inner::before {content:''; display:block;width:4.8rem; height:4.8rem; margin:0 auto;}
+.bank_image_guide .item_l.item01 {background:url(/msbiz/app/img/products/ico_bank_1.png) center center no-repeat; background-size:4.8rem;}
+.bank_image_guide .item_r.item02 {background:url(/msbiz/app/img/products/ico_bank_2.png) center center no-repeat; background-size:4.8rem;}
+.bank_image_guide .item_l.item03 {background:url(/msbiz/app/img/products/ico_bank_3.png) center center no-repeat; background-size:4.8rem;}
+.bank_image_guide .item_r.item04 {background:url(/msbiz/app/img/products/ico_bank_4.png) center center no-repeat; background-size:4.8rem;}
+.bank_image_guide .item_l .txt_inner {margin-top:1.2rem;padding-top:2rem;}
+.bank_image_guide .item_r .txt_inner {margin-top:1.2rem;padding-top:2rem;border:1px}
+
+/* onestop - 기업통장 계좌 개설시 주의사항 css */
+.pro_precautions{margin:2rem 0; padding:2rem 2.2rem; background-color: var(--fc_10, #f7f7f8);}
+.pro_precautions .p{font-size:1.5rem;}
+.pro_precautions .p .bold{font-weight: 700 !important;}
+.pro_precautions .p:nth-of-type(1){position: relative; padding-left:2.4rem; }
+.pro_precautions .p:nth-of-type(1):before {content:''; display:inline-block; position:absolute; top:0; left:0;  width:2rem; height:2rem; background:url(/msbiz/app/img/common/spr_ico_20x.png) no-repeat -22rem -4rem; background-size: 25rem auto;}
+.pro_precautions .p:nth-of-type(2),
+.pro_precautions .p:nth-of-type(3){margin-left:2.4rem;}
+.pro_precautions .p + .p{margin-top:1.2rem;}
+
+/* 예적금계산기 - 금액 단위 여백 수정 */
+.pro_calculator .num_unit {display:inline-block;font-family:'KBText';margin-left: 0;}
+.pro_txt{font-size:1.6rem; color:var(--fc_04, #696e76); margin-top:4rem !important;}
+
+.calculation_result {text-align:center; padding:2.8rem 2rem 2.4rem; margin-bottom:2rem; background-color: #f5f8fc;} 
+.calculation_result .calculation_num {font-size:2.4rem; font-weight:700; color:#287eff; }
+.calculation_result .calculation_num .total_txt{margin-right:.5rem; font-size:1.6rem; font-weight:500; line-height:1.12; font-weight:500; color:var(--fc_04, #696e76);}
+.calculation_result .calculation_num .number {font-weight:500;vertical-align:middle;}
+.calculation_result .calculation_num .num_unit {font-size:2rem; font-weight:700; color:#287eff;line-height:1.12;}
+.calculation_result .calculation_num.amount {padding-bottom:2.4rem; font-size:2.4rem;}
+.calculation_result .calculation_num.loan {padding-bottom:0; font-size:2.4rem;}
+.calculation_result .calculation_txt {margin-top:0; font-size:1.4rem; color:var(--fc_02, #26282c); }
+.calculation_result .calculation_subtxt {padding-top:2.4rem; font-size:1.4rem; color:var(--fc_04, #696e76); border-top:1px solid var(--fc_08, #26282c);}
+
+.calculation_result.loan{padding:2.8rem 2rem;}
+.calculation_result.loan .calculation_num .number.fc_gray3{font-size:1.7rem; font-weight:500; color:var(--fc_02, #26282c) !important; vertical-align:middle;}
+.calculation_result.loan .calculation_num .num_unit {font-size:1.6rem; font-weight:500; color:var(--fc_02, #26282c);line-height:1.12; vertical-align:middle;}
+.calculation_result.loan .calculation_txt {margin-top:0; font-size:1.6rem; font-weight:500; color:var(--fc_02, #26282c);vertical-align:middle; }
+
+/* 221011 : onestop css 추가 */
+.pro_hr_divide {height:1rem;margin:3.2rem 0; border:0; background:#f1f3f5; }
+.pro_hr_divide_fund {height:1rem;margin:2.8rem 0 0; border:0; background:#f1f3f5; }
+.pro_hr_divide_onestop {height:1rem;margin:3.2rem -2.4rem; border:0; background:#f1f3f5; }
+.tab_wrap.box .tab_panel .pro_hr_divide{height:1rem;margin:3.2rem -2.4rem; border:0; background:#f1f3f5; }
+#result, #result2, #result3{display:none;}
+
+/* 상품상세 */
+.pro_info{margin-top: -1.6rem;padding: 2.4rem 2.4rem 2.4rem; background-color: #f5f7fe;}
+.pro_info .row{display: flex; position:relative; height:3.5rem; margin-bottom: 1.6rem;}
+.pro_info .col_l{padding-top:1.2rem;}
+.pro_info .col_r{position: absolute; right:0;}
+.pro_info .col_r .ico_35_share_gray {margin-right:1.2rem; width:3.5rem;height:3.5rem; background:url(/msbiz/app/img/products/ico_share_gray.png) center center no-repeat; background-size:3.5rem;}
+.pro_info .col_r .ico_35_cart_gray {margin-right:0; width:3.5rem;height:3.5rem; background:url(/msbiz/app/img/products/ico_cart_gray.png) center center no-repeat; background-size:3.5rem;}
+.pro_info .hashtag_pro_1 {font-size:1.4rem; color:#017995;margin-right:.7rem;}
+.pro_info .hashtag_pro_2 {font-size:1.4rem; color:#10459b;margin-right:.7rem;}
+.pro_info .hashtag_pro_3 {font-size:1.4rem; color:#825014;}
+.pro_info .tit{display:block; margin-bottom:1.6rem; font-size:2rem;font-weight: 700 !important;}
+.pro_info .p_sub{margin-bottom:1.4rem;font-size:1.6rem; }
+.pro_info .p_sub.foreign_currency{margin-bottom:0;font-size:1.6rem;}
+.pro_smain_pan_pay .unit{padding-right:.6rem; font-size:1.4rem; color:var(--fc_03, #484b51);}
+.pro_smain_pan_pay .number{font-size:3.2rem; color:#5a4f9a;font-weight:500 !important;}
+.pro_smain_pan_pay .num_unit{font-size:2.8rem; color:#5a4f9a;font-weight:400 !important;}
+.pro_smain_pan_pay .pro_unit{padding-left:1.2rem;  color:var(--fc_03, #484b51);font-weight:400 !important; }
+
+.pro_info .list_data {position:relative;border:none;}
+.pro_info .list_data > li {display:table;table-layout:fixed; width:100%; padding:2rem 0 0;} 
+.pro_info .list_data > li .key {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li .key::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.3rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_01.png) 0 0 no-repeat; background-size: 2.3rem 2.4rem;}
+.pro_info .list_data > li:last-child .key {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li:last-child .key::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.3rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_08.png) 0 0 no-repeat; background-size: 2.3rem 2.4rem;}
+
+.pro_info .list_data > li .key_deposit_period {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li .key_deposit_period::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.3rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_01.png) 0 0 no-repeat; background-size: 2.3rem 2.4rem;}
+.pro_info .list_data > li .key_deposit_price {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li .key_deposit_price::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.3rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_08.png) 0 0 no-repeat; background-size: 2.3rem 2.4rem;}
+.pro_info .list_data > li .key_deposit_target {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li .key_deposit_target::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.3rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_06.png) 0 0 no-repeat; background-size: 2.3rem 2.4rem;}
+.pro_info .list_data > li .key_deposit_benefits {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li .key_deposit_benefits::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.3rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_07.png) 0 0 no-repeat; background-size: 2.3rem 2.4rem;}
+
+.pro_info .list_data > li .key_fund {position:relative; width:10.7rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li .key_fund::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.4rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_04.png) 0 0 no-repeat; background-size: 2.4rem 2.4rem;}
+.pro_info .list_data > li:last-child .key_fund { position:relative; width:10.7rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li:last-child .key_fund::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.4rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_05.png) 0 0 no-repeat; background-size: 2.4rem 2.4rem;}
+
+.pro_info .list_data > li:last-child .key_fund,
+.pro_info .list_data > li:last-child .value_fund{margin-bottom:0;padding-bottom:.6rem;border:0px solid }
+
+.pro_info .list_data > li .key_loan {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li .key_loan::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.4rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_02.png) 0 0 no-repeat; background-size: 2.4rem 2.4rem;}
+
+.pro_info .list_data > li:first-child .key_loan {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li:first-child .key_loan::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.4rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_02.png) 0 0 no-repeat; background-size: 2.4rem 2.4rem;}
+.pro_info .list_data > li:nth-child(2) .key_loan {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li:nth-child(2) .key_loan::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.4rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_06.png) 0 0 no-repeat; background-size: 2.4rem 2.4rem;}
+.pro_info .list_data > li:last-child .key_loan {position:relative; width:7.4rem; padding-left:3rem; color:var(--fc_04, #696e76); text-align:left; word-break:break-all; vertical-align: top;} 
+.pro_info .list_data > li:last-child .key_loan::before{content:''; display:inline-block; position:absolute; top:-.3rem; left:0; width:2.4rem; height:2.4rem; background:url(/msbiz/app/img/products/icon_detail_01.png) 0 0 no-repeat; background-size: 2.4rem 2.4rem;}
+
+.pro_info .list_data > li .value {padding-left:1.6rem; color:var(--fc_04, #696e76); font-weight: 600; word-break:break-all; vertical-align: middle;font-size: 1.6rem;} 
+.pro_info .list_data > li .value_fund {padding-left:0; font-size:1.5rem; color:var(--fc_04, #696e76); font-weight: 700 !important; word-break:break-all; vertical-align: middle;} 
+.pro_info .list_data > li .value_fund .value_stxt{font-weight: 400;}
+
+/* 221027 : css 수정 */
+.pro_info .list_data.noline{margin:3.8rem 0 0;border-top:1px solid var(--fc_09, #ebeef0);}
+.pro_info .list_data.noline > li{padding:1.3rem 0 .6rem;}
+.pro_info .list_data.noline > li:not(:first-child){border-top:none;}
+
+.pro_info .list_data.pro_list{padding-top:2.6rem;}
+.pro_info .list_data.pro_list .value{color:var(--fc_02, #26282c); font-weight:500;}
+.pro_info p.tip_info{position:relative;z-index:1;min-height:2rem;margin-top:2.8rem;padding:0 0 0 2.4rem;font-size:1.4rem;color:var(--fc_04, #696e76)}
+
+.pro_btn_wrap{position: relative; margin:2.8rem 2.4rem -1.2rem;}
+.pro_btn_wrap .ico_price{  display:block; position: absolute; left:0; top:0; width:3.1rem; height:3.2rem; background:url(/msbiz/app/img/products/icon_loan_info.png) 0 0 no-repeat; background-size: 3.1rem 3.2rem; }
+.pro_btn_wrap .loan_txt{padding-left:4.4rem; font-size:1.6rem; font-weight:700 !important; color:var(--fc_02, #26282c); text-align:left; line-height: 3rem;}
+.pro_btn_wrap .btn_txt[class*="ico_arr"]{width: 100%;height: 3.2rem;}
+
+.section > .pro_tel_guide{position: relative; margin:0; padding:1rem 0 0 5.3rem; }
+.section > .pro_tel_guide .txt{font-size:1.6rem; font-weight: 700 !important;}
+.section > .pro_tel_guide .number{font-size:1.7rem; font-weight: 500 !important; }
+.section > .pro_tel_guide .ico_guide{display:block; position: absolute; left:0; top:0; width:3.5rem; height:4rem; background:url(/msbiz/app/img/products/icon_detail_03.png) 0 0 no-repeat; background-size: 3.5rem 4rem;}
+
+.pro_depth > li{margin-top:.2rem; line-height:1.4; color:var(--fc_04, #696e76);}
+
+/* 221011 : 상품상세 이미지 */
+.product_img_event img {width:100%;height:auto;vertical-align:top;max-width: 42rem;}
+.product_img_event .new_m_img,
+.product_img_event .old_m_img,
+.product_img_event .w_img,
+.tab_panel table img{text-align:center;}
+
+.section .topimg{text-align:center;}
+.section table td img{text-align:center;}
+
+/* 상품상세 - table td 병합 라인추가 */
+.pro_data.table table th:last-child, 
+.pro_data.table table td:last-child{border-right:0;}
+.pro_data.table table td:nth-child(2){border-right:1px solid var(--fc_09, #ebeef0);}
+
+/* 예금자보호여부 KDIC_LOGO */
+.kdic_logo img{width:6.0rem;height:4.0rem}
+
+/* 펀드상세정보 */
+/* 폰트 크기 14px 우측 정렬 토글 케이스 */
+.pro_info .toggle_sm_wrap {position: relative; padding-bottom:2.8rem;text-align:right;}
+.pro_info .toggle_sm_wrap > .tit, 
+.pro_info .tit.js_toggle{position:absolute; top:0; right:0; padding-right:2.3rem; color:var(--fc_04, #696e76); font-size:1.4rem; line-height:2rem;}
+.pro_info .toggle_sm_wrap > .tit > span.arrow, 
+.pro_info .tit.js_toggle > span.arrow{position:absolute;top:50%;right:.4rem;width:14.5px;height:8px;margin-top:-.8rem;margin-left:1rem;}
+.pro_info .toggle_sm_wrap > .tit > span.arrow::before, 
+.pro_info .toggle_sm_wrap > .tit > span.arrow::after, 
+.pro_info .tit.js_toggle > span.arrow::before, 
+.pro_info .tit.js_toggle > span.arrow::after{content:'';position:absolute;top:0.6rem;width:9px;height:1.5px;background-color:var(--fc_05, #8c949e);transition:all 0.2s ease}
+.pro_info .toggle_sm_wrap > .tit > span.arrow::before, 
+.pro_info .tit.js_toggle > span.arrow::before{left:0;transform:rotate(45deg)}
+.pro_info .toggle_sm_wrap > .tit > span.arrow::after, 
+.pro_info .tit.js_toggle > span.arrow::after{right:0;transform:rotate(-45deg)}
+.pro_info .toggle_sm_wrap.on > .tit > span.arrow::before, 
+.pro_info .tit.js_toggle.on > span.arrow::before{left:0;transform:rotate(-45deg)}
+.pro_info .toggle_sm_wrap.on > .tit > span.arrow::after, 
+.pro_info .tit.js_toggle.on > span.arrow::after{right:0;transform:rotate(45deg)}
+
+.pro_info .toggle_sm_wrap .toggle_panel{text-align:left}
+.pro_info .toggle_sm_wrap.on .toggle_panel{display:block;margin-bottom:0}
+.pro_info .toggle_sm_wrap.on .tit.js_toggle + .toggle_panel{margin-top:1.6rem}
+.pro_info .toggle_sm_wrap.on > .tit::after {right:.45rem; margin-top:-.25rem; transform: rotate(-135deg); -webkit-transform: rotate(-135deg);}
+.pro_info .toggle_sm_wrap .toggle_panel + .tit {margin-top:1.6rem}
+.pro_info .toggle_sm_wrap.pdt_fd_find .toggle_panel{padding:0;}
+.pro_info.fund{border:1px solid;padding: 2.4rem 2.4rem 2.8rem; background-color: #f5f7fe;}
+
+.pro_smain_fund .unit{padding-right:.6rem; font-size:1.4rem; color:var(--fc_03, #484b51); }
+.pro_smain_fund .number{font-size:3.2rem; color:#ff5858;font-weight:500 !important;}
+.pro_smain_fund .num_unit{font-size:2.8rem; color:var(--fc_03, #484b51);font-weight:400 !important;}
+.pro_smain_fund .pro_unit{padding-left:1.2rem; color:var(--fc_03, #484b51);font-weight:400 !important; }
+
+.pro_smain_fund .state_arr::before {display:inline-block; position:absolute; left:0; top:50%; content:''; width:0; height:0; margin-right:.5rem; margin-top:-.4rem; vertical-align: middle;}
+.pro_smain_fund .state_arr.up{margin-left:0; padding-left:2.5rem; color:#ff5858; font-size:3.2rem; font-weight: 500 !important;}
+.pro_smain_fund .state_arr.up + .num_unit{margin-left:0;color:var(--fc_03, #484b51); font-size:3.2rem;}
+.pro_smain_fund .state_arr.up::before {border-left:12px solid transparent; border-right:12px solid transparent; border-bottom:15px solid #ff5858;}
+
+/* 펀드 추가정보 */
+.pro_add .acc_list_wrap.type_list .acc_pannel .acc_wrap {padding:0;}
+.pro_add.acc_pannel .toggle_sm_wrap.exchange .acc_sum_wrap {margin-top:0; text-align:left;}
+.pro_add.acc_pannel { position:relative; margin-top:-2.6rem; background-color:#f5f7fe; border:none; box-shadow: none; border-radius: 0; -webkit-border-radius: 0; }
+.pro_add.acc_pannel .acc_wrap {position:relative;padding:2.4rem 2.4rem 2.8rem; }
+.pro_add.acc_pannel .acc_wrap.b2{padding:2rem 2.4rem 2.8rem}
+.pro_add.acc_pannel .acc_wrap.inc_btn > div:first-child {margin-top:0; padding-right:0;}
+.pro_add.acc_pannel a.acc_wrap {display:block;}
+.pro_add.acc_pannel .acc_bankbook {margin-bottom:.3rem;}
+.pro_add.acc_pannel .acc_wrap .acc_name, 
+.pro_add.acc_pannel .acc_wrap .acc_num,
+.pro_add.acc_pannel .acc_wrap .acc_info_wrap {padding-left:0;}
+.pro_add.acc_pannel .acc_wrap .acc_name { margin-bottom:0.3rem; }
+.pro_add.acc_pannel .acc_wrap .acc_num.number { font-size:1.8rem; }
+.pro_add.acc_pannel .acc_wrap .btn_wrap.btm {padding-right:0;}
+.pro_add.acc_pannel .acc_wrap .acc_bank.md .bk_name,
+.pro_add.acc_pannel .acc_wrap .acc_bank.md .bk_num {display:inline-block;}
+.pro_add.acc_pannel .acc_wrap .select_btn.acc_bank.md .bk_name {display:inline;}
+.pro_add.acc_pannel .tooltip_wrap {left:0; right:0;}
+.pro_add.acc_pannel .acc_wrap .acc_bank:first-child {margin-top:0;}
+.pro_add.acc_pannel .acc_wrap .acc_bank + .acc_name {margin-top:.2rem}
+.pro_add.acc_pannel .acc_wrap .btn_del{position:absolute;top:2.0rem;right:2.0rem;width:2.0rem;height:2.0rem;background-repeat:no-repeat;background-position:center center;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.98954 4.67878C5.69665 4.38588 5.22178 4.38588 4.92888 4.67878C4.63599 4.97167 4.63599 5.44654 4.92888 5.73944L10.9395 11.75L4.92884 17.7606C4.63594 18.0535 4.63594 18.5284 4.92884 18.8213C5.22173 19.1142 5.6966 19.1142 5.9895 18.8213L12.0001 12.8107L18.0104 18.8209C18.3033 19.1138 18.7781 19.1138 19.071 18.8209C19.3639 18.528 19.3639 18.0531 19.071 17.7603L13.0608 11.75L19.071 5.73981C19.3639 5.44692 19.3639 4.97204 19.071 4.67915C18.7781 4.38626 18.3032 4.38626 18.0103 4.67915L12.0001 10.6893L5.98954 4.67878Z' fill='%238c949e'/%3E%3C/svg%3E");background-size:2.0rem 2.0rem}
+.pro_add.acc_pannel .acc_wrap .acc_btn_set{position:absolute;top:1.6rem;right:2.0rem}
+.pro_add.acc_pannel .acc_wrap .acc_btn_set button{vertical-align:middle}
+.pro_add.acc_pannel .acc_wrap .acc_btn_set button+button{margin-left:1.0rem}
+.pro_add.acc_pannel .acc_p_btn{margin:1.6rem 2rem 0 2rem;}
+.pro_add.acc_pannel .acc_p_btn .btn_wrap.btm{margin-top:0;}
+.pro_add.acc_pannel .acc_p_btn .btn_wrap.btm .btn_txt{font-size:1.4rem; color:var(--fc_03, #484b51);}
+.pro_add.acc_pannel .btn_top_area { position:absolute; right:2rem; top:2rem; }
+.pro_add.acc_pannel .btn_top_area button { float:left; }
+.pro_add.acc_pannel .btn_top_area button + button { margin-left:1.4rem; }
+.pro_add.acc_pannel>.h2, .acc_pannel>.h3{margin-top:0}
+.pro_add.acc_pannel.open{border:none;border-radius:0;box-shadow:none}
+.pro_add.acc_pannel.open.btl, .acc_list_wrap.btl{padding-top:1.8rem;border-top:1px solid var(--fc_05, #8c949e)}
+.pro_add.acc_pannel.open + .acc_pannel.open{border-top:1px solid var(--bdc_01, #ebeef0);margin-top:2.0rem;padding-top:1.8rem;}
+.pro_add.acc_pannel.open:last-child{border-bottom: 1px solid var(--bdc_01, #ebeef0);padding-bottom: 1.8rem;}
+.pro_add.acc_pannel.open.single:last-child{border:none;padding-bottom:0}
+.pro_add.acc_pannel.open .acc_wrap{padding:0}
+.pro_add.acc_pannel.open .btn_area{padding:0 0 2.0rem}
+.pro_add.acc_pannel .list_data {margin-top:1.6rem; padding:0; border-top:none; border-bottom:1px solid var(--bdc_01, #ebeef0);}
+.pro_add.acc_pannel .list_data > li:first-child{border-top:1px solid var(--bdc_01, #ebeef0);}
+.pro_add.acc_pannel .list_data > li {display:table;table-layout:fixed;position:relative; width:100%; padding:1.2rem 0 1.2rem} 
+.pro_add.acc_pannel .list_data > li + li {border-top:1px solid var(--bdc_01, #f0f3f4)}
+
+.pro_add .acc_list_wrap.type_list {margin:0 0 1.6rem 2.2rem; padding:0; border-bottom:none; border-radius:0; box-shadow:none; }
+.pro_add .acc_list_wrap.type_list .acc_pannel { border:none; border-bottom:none; border-radius:none; box-shadow:none; -webkit-border-radius:none; }
+
+.pro_add .acc_acco_list {position:relative;margin-top:0; border-bottom-left-radius:none; border-bottom-right-radius:none; border-radius:none; background-color: transparent;}
+.pro_add .acc_acco_list .tit_area {margin-left:2.0rem}
+.pro_add .acc_acco_list .tit_area .tit {display:block; overflow:hidden; width:100%; padding:.5rem 2.4rem .5rem 0; border-bottom:2px solid #ffcc00; text-align:left;}
+.pro_add .acc_acco_list .tit_area .tit .cate {padding-left:1rem; color:var(--fc_02, #26282c); line-height:3.4rem;}
+.pro_add .acc_acco_list .tit_area .tit .cate [class^=icon_bank_]{margin-right:.6rem}
+.pro_add .acc_acco_list .tit_area .tit .pay {display:none; float:right; color:var(--fc_03, #484b51); text-align:right;}
+.pro_add .acc_acco_list .tit_area .tit .pay > .number,
+.pro_add .acc_acco_list .tit_area .tit .pay > .num_unit {line-height:3.2rem;}
+.pro_add .acc_acco_list .tit_area .tit .pay > .number {font-size:1.7rem;}
+.pro_add .acc_acco_list .tit_area .tit .pay .s_pay {display:block; margin-top:-.4rem; font-size:1.4rem;}
+.pro_add .acc_acco_list .tit_area .tit .pay .s_pay .number {font-size:1.5rem;}
+.pro_add .acc_acco_list .tit_area .tit .acc_bank {display:inline-block; height:3.4rem; padding-top:.4rem; padding-left:1rem;}
+.pro_add .acc_acco_list .tit_area .tit .acc_bank .bk_name {margin-left:.5rem; font-weight:700; vertical-align:bottom;}
+.pro_add .acc_acco_list .js_toggle .btn_toggle {display:block; overflow:hidden; position:relative; width:100%; padding:.5rem 2.4rem .5rem 0; border-bottom:2px solid var(--fc_09, #ebeef0); text-align:left;}
+.pro_add .acc_acco_list .js_toggle .btn_toggle:after {content:''; display:inline-block; position:absolute; right:2.4rem; top:1.4rem; width:9px; height:9px; border:solid var(--fc_05, #8c949e); border-width: 0 1px 1px 0; transform:rotate(45deg);}
+.pro_add .acc_acco_list .js_toggle .btn_toggle .cate {position:relative; padding-left:2.2rem; color:var(--fc_02, #26282c); line-height:3.4rem;} 
+.pro_add .acc_acco_list .js_toggle .btn_toggle .cate::before {content:''; display:inline-block; position:absolute; top:50%; left:.2rem; width:1rem; height:1rem; margin-top:-.6rem; background:var(--fc_08, #dde1e4); border-radius:50%;}
+.pro_add .acc_acco_list .js_toggle.on .btn_toggle {display:block; overflow:hidden; width:100%; padding:.5rem 5rem .5rem 0; border-bottom:2px solid #ffcc00; text-align:left;} 
+.pro_add .acc_acco_list .js_toggle.on .btn_toggle .cate::before {background:#ffcc00;}
+.pro_add .acc_acco_list .js_toggle.on .btn_toggle .pay {display:block;}
+.pro_add .acc_acco_list .js_toggle.on .btn_toggle:after {top:1.9rem; transform:rotate(225deg);}
+.pro_add .acc_acco_list > .toggle_panel > .btn_tip {display:inline-block; position:absolute; left:10.6rem; top:.5rem; width:3.4rem; height:3.4rem; vertical-align:middle;}
+.pro_add .acc_acco_list > .toggle_panel > .btn_tip:before {content:''; display:block; width:2rem; height:2rem; margin:0 auto; background-image:url(/msbiz/app/img/common/spr_ico_20x.png); background-size:25rem auto; background-position:-14rem 0;}
+.pro_add .acc_acco_list.fund .toggle_panel > .btn_tip {left:6.1rem;}
+.pro_add .acc_acco_list.irp .toggle_panel > .btn_tip {left:9.1rem;}
+.pro_add .acc_acco_list .tit_area .tit.check{position:relative;}
+.pro_add .acc_acco_list .tit_area .tit.check .selection{position:absolute; top:50%; left:0; margin-top:-1.3rem;}
+.pro_add .acc_acco_list .tit_area .tit.check .acc_bank{padding-left:3.5rem;}
+.pro_add .acc_acco_list .tit_area .tit.check .pay {display:block;}
+
+/* 예금보험공사 - 비보호 ico */
+.kdic_row {display:table; position: relative; table-layout:fixed; padding:1.4rem 2.4rem 0;}
+.kdic_row .col {display:table-cell; }
+.kdic_row .col_l {width:75%;text-align:left;font-size:1.5rem;color:var(--fc_03, #484b51); }
+.kdic_row .col_r {text-align:right;}
+.kdic_row .kdic_logo{position:absolute;top:1.4rem;right:2.4rem}
+.kdic_row .kdic_logo img{width:6.0rem;height:3.9rem;}
+
+/*** pro_lsh.css ***/
+/* 공통 */
+.p_15 {font-size:1.5rem;}
+
+h1.hidden + .section > .h2:first-child{margin-bottom: 2rem;}
+#content> .h2{margin: 0 2.4rem 2rem;}
+#content> div:not([class^="section"]) > .h2,
+.h2.type_first{margin: 3.2rem 2.4rem 4.8rem;}
+
+.h2 + .form_group.address,
+.h3 + .form_group.address{margin-top: -.8rem;}
+.h3 + .btn_list_btm{margin-top: 1.6rem;}
+.list_top_wrap + .h3{margin-top: -.2rem;}
+.list_top_wrap .btn_txt.ico_arrdown{font-size: 1.4rem;padding-right: 2rem;line-height: 1.9rem;}
+.list_top_wrap .btn_txt.ico_arrdown::after{margin-top: -.6rem;right: .4rem;}
+
+.tit_question{margin-bottom: 4.8rem;}
+.tit_question .h2{margin-bottom: 1rem;}
+
+.section [class^=hr_divide] + .depth{margin-top: -.8rem;}
+
+.select.outline+.select.outline{margin-top: .8rem;}
+
+.depth.bul > li > .tit + .p_sub{margin-top: .8rem;}
+
+.list_link li > .inr > .btn_txt.link{position:absolute;right:0;top:50%;display:block;right:0;margin-top: 0;border:0;transform:translateY(-50%);}
+.list_link li:first-child > .inr > .btn_txt.link{top: calc(50% - .9rem);}
+.list_link li > .link .p + .p_sub,
+.list_link li > .inr .p + .p_sub{margin-top: .8rem;}
+
+.rdoChk_group [class^=selection] + .chk_panel{margin-top: -1rem;}
+
+.agree_list.bdt{padding-top: 2rem;border-top: 1px solid var(--fc_08, #dde1e4);}
+.agree_list .selection input[type=checkbox]:not(:last-child) + .label{padding-right: 3.4rem;}
+
+.pop_wrap .depth + .list_data,
+.pop_wrap .depth + .list_data_group_s{margin-top: 2.4rem;}
+
+.depth.step > li p.tit+p.tit{margin-top: 2rem;}
+
+.js_accordion > li.on .toggle_panel .list_data:not(:first-child){border-top: 1px solid var(--fc_05, #8c949e);}
+.js_accordion > li .toggle_panel .list_data.list_data.bdt{border-top: 1px solid var(--fc_05, #8c949e);}
+.list_acco > li .tit > .h2{margin: 0;}
+
+.list_comp_wrap .chk_total + .list_comp{margin-top: 1.2rem;}
+
+.verifi_wrap + .tip_info{margin-top: -.8rem;}
+
+.office_wrap .list_office + .list_office{margin-top: 3.2rem;padding-top: 3.2rem;border-top: 1px solid var(--bdc_01, #ebeef0);}
+
+.board_list > li > a .badge_wrap{margin-bottom: 1rem;}
+.board_list > li > a .badge_wrap > span{margin-right: .2rem;}
+
+.ico_20_new{background-position: -22rem -14rem;}
+
+.pop_section [class^=hr_divide] {height: 0.1rem;margin: 2rem 0 2.8rem;}
+
+.form_group .tab_wrap.box .tab_panel{padding-top: .8rem;}/*BFE011510*/
+
+/* pdt_gray_box */
+.pdt_gray_box{margin: 1.2rem 0 3.2rem;padding: 2rem 1.6rem;background-color: var(--fc_10, #f7f7f8);}
+.pdt_gray_box:last-child{margin-bottom: 0;}
+.p + .pdt_gray_box{margin-top: 2rem;}
+.pdt_gray_box .pdt_lts_1{letter-spacing: -.8px;}
+
+/* BFE009076 / BFE007790 */
+.result_bnr{margin-top: 4.8rem;min-height: 13.8rem;padding:2.4rem 11.2rem 2.4rem 2.4rem;}
+.result_bnr dt{font-weight: 700;margin-bottom: 1.5rem;}
+.result_bnr dd{font-size:1.4rem;color: var(--fc_04, #696e76);word-break: keep-all;letter-spacing: -.5px;}
+.bnr_onestop{background: var(--fc_10, #f7f7f8) url(/msbiz/app/img/products/bg_bnr_onestop.png) no-repeat 100% 50% / 13.2rem 13.8rem;}
+
+/* BFE008290 */
+.pro_salesloan_step img{display: block;margin: 1.2rem auto 2.8rem;text-align: center;max-width: 42rem;}
+.pro_link_outline{margin-top: 2rem;}
+.pro_link_outline > li{ margin-top:1.2rem;border:1px solid var(--bdc_01, #ebeef0);border-radius: .6rem;-webkit-border-radius: .6rem;}
+.pro_link_outline > li:first-child{margin-top: 0;}
+.pro_link_outline > li > a.link,
+.pro_link_outline > li:first-child > a.link{display: flex;align-items: center;min-height:5.8rem;padding: 1rem 1.6rem;font-size: 1.4rem;}
+.pro_link_outline > li:first-child > a.link:after{margin-top: -0.2rem;}
+
+/* BFE008340 */
+.pro_market_scroll{ max-height: 25rem; overflow-y: scroll; margin-top: 1.2rem; padding: 0 1.6rem; border: 1px solid var(--bdc_03, #c6cbd0); border-radius: .8rem; -webkit-border-radius: .8rem; -moz-border-radius: .8rem; -ms-border-radius: .8rem; -o-border-radius: .8rem; }
+.pro_market_scroll .list_comp{border-top: none;}
+.pro_market_scroll .list_comp > li{padding: 1.6rem 0;margin: 0;}
+.pro_market_scroll .list_comp > li:last-child{border-bottom: none;}
+.pro_market_scroll .list_comp > li .tit{font-size: 1.5rem;font-weight: 700;}
+.pro_market_scroll .list_comp > li .dl_cont{display: flex;margin-top: .5rem;padding-left: 3rem;}
+.pro_market_scroll .list_comp > li .dl_cont dt{font-size: 1.4rem;color: var(--fc_04, #696e76);}
+.pro_market_scroll .list_comp > li .dl_cont dd{flex: 1;text-align: right;}
+.pro_market_scroll .list_comp > li .dl_cont dd a{border-bottom: .1rem solid var(--fc_01, #000);}
+.pro_market_scroll .list_comp > li .dl_cont dd a .number{font-size: 1.7rem;}
+.pro_market_scroll .list_comp > li .dl_cont dd .txt{font-size: 1.4rem;color: var(--fc_04, #696e76);margin-top: .4rem;}
+
+/* BFE008350 */
+.form_group .form_row .pro_form_txt{font-size: 1.7rem;padding-left: .2rem;margin-top: 1rem;}
+.form_group .form_row .pro_form_txt .number{font-size: 1.8rem;font-weight: 500;}
+
+/* BFE008420 */
+.result.ico_bulechip_company::before{content: '';display: block;width: 6rem;height: 6rem;margin: 0 auto;background-color: lightblue;}
+
+/* BFE008450 - BFE011920 참고 */
+.step_loan{display: flex;justify-content: space-evenly;font-size: 1.3rem;color: var(--fc_03, #484b51);}
+.step_loan li{flex:1;text-align: center;position: relative;color:var(--fc_03, #484b51)}
+.step_loan li::before{content: "";display: block;width:100%;height: .2rem;position: absolute;top: 1.5rem;left:0;background-color: #ffd338;}
+.step_loan li.active{color: var(--fc_02, #26282c);font-weight: 700;}
+.step_loan li.active::after{content: "";display: block;width:50%;height: .2rem;position: absolute;top: 1.5rem;left:50%;background-color: var(--fc_09, #ebeef0);}
+.step_loan li:first-child:before{width: 50%;left:50%}
+.step_loan li:last-child:before{width: 50%;}
+.step_loan .ico_step{position: relative;display: block;width: 3.2rem;height: 3.2rem;margin: 0 auto 1.2rem;z-index: 1;}
+.step_loan .ico_step::before{content: "";position: absolute;left: 50%;top: 50%;display: block;width: 1.8rem;height: 1.8rem;transform: translate3d(-50%, -50%, 0);background-color: #ffd338;border-radius: 50%;-webkit-border-radius: 50%;}
+.step_loan .ico_step::after{content: "";position: absolute;left: 50%;top: 50%;display: block;width: 1.8rem;height: 1.8rem;transform: translate3d(-50%, -50%, 0);background: url(/msbiz/app/img/common/ico_step.png) no-repeat 0 0 / 12.6rem 1.8rem;border-radius: 50%;-webkit-border-radius: 50%;}
+.step_loan li.active ~ li{color: var(--fc_06, #aab0b8);}
+.step_loan li.active ~ li .ico_step::before{background-color:var(--fc_09, #ebeef0);}
+.step_loan li.active .ico_step::after,
+.step_loan li.active ~ li .ico_step::after{width:1rem;height:1rem;background-color:var(--fc_11, #fff);}
+.step_loan li.active ~ li::before{background-color:var(--fc_09, #ebeef0);}
+.js_accordion > li .toggle_panel .txt_nodata{margin: 2.8rem 0 .8rem;text-align: center;}
+.step_loan li.active .ico_step[class*="seller_"]::before{width: 3.2rem;height: 3.2rem;}
+.step_loan li.active .ico_step[class*="seller_"]::after{ width: 1.8rem; height: 1.8rem; background-color: transparent; border-radius: 0; -webkit-border-radius: 0;}
+.step_loan li.active .seller_stetp01::after{background-position: -1.8rem 0;}
+.step_loan li.active .seller_stetp02::after{background-position: -3.6rem 0;}
+.step_loan li.active .seller_stetp03::after{background-position: -5.4rem 0;}
+.step_loan li.active .seller_stetp04::after{background-position: -7.2rem 0;}
+.step_loan li.active .seller_stetp05::after{background-position: -9rem 0;}
+.step_loan li.active .seller_stetp06::after{background-position: -10.8rem 0;}
+
+
+
+/* BFE008730 */
+.p_sub.bdt{margin-top: 1.6rem;padding-top: 1.6rem;border-top:1px solid var(--bdc_01, #ebeef0);}
+
+/* BFE008880 */
+.pdt_verifi_wrap {text-align:center;padding:0;margin-bottom:2rem;} 
+.pdt_verifi_wrap .verifi_num {font-size:3rem;font-weight:700;color:var(--fc_02, #26282c);line-height:1.12;margin-top:1.4rem;text-align: right;}
+.pdt_verifi_wrap .verifi_num .number {font-size:2.4rem;vertical-align:middle;}
+.pdt_verifi_wrap .verifi_num .num_unit {font-size:2.3rem;color:var(--fc_02, #26282c);}
+.pdt_verifi_wrap .verifi_num.amount {font-size:2.8rem;}
+.pdt_verifi_wrap .verifi_num.major_account {font-size:2.5rem;}
+.pdt_verifi_wrap .verifi_tit {font-size:1.6rem;color:var(--fc_02, #26282c);margin-top:1.8rem;text-align: left;}
+.pdt_verifi_wrap .verifi_txt {font-size:1.4rem;color:var(--fc_04, #696e76);margin-top:1.8rem;text-align: left;}
+.pdt_verifi_wrap .verifi_txt .number {font-size:1.5rem;}
+.pdt_verifi_wrap .verifi_alert{font-size:1.8rem;font-weight:700;color:var(--fc_02, #26282c);line-height:1.12;margin-top:1.0rem}
+
+/* 상품목록 (예금, 대출, 외화예금) */
+.link_panel>.pdt_list_bnr,
+.link_panel>.pdt_list_bnr+.sort_wrap{margin-top: 2.8rem;}
+.link_panel>.pdt_list_bnr a {display: block;margin: 0 2.4rem;}
+.link_panel>.pdt_list_bnr a strong{display: flex;align-items: center;height: 3.2rem;margin: 0;}
+.link_panel>.pdt_list_bnr a strong::before{content: "";width: 3.1rem;height: 3.2rem;display: inline-block;margin-right: 1.4rem;background: url(/msbiz/app/img/products/ico_pdt_list.png) no-repeat 0 50% / 6.4rem auto;}
+.link_panel>.pdt_list_bnr .ico_dep::before{background-position:  0 0;}
+.link_panel>.pdt_list_bnr .ico_loan::before{background-position:  -3.2rem 0;}
+
+/* BFE011410 */
+.list_link li > [class^="link ico_40_"]{padding-left: 5.6rem;position: relative;}
+.list_link li > [class^="link ico_40_"]::before{content: '';display: block;width: 4rem;height: 4rem;position: absolute;left: 0;top: 1rem;background: url(/msbiz/app/img/products/ico_certify.png) no-repeat 0 0 / 8rem 4rem;}
+.list_link li:first-child > [class^="link ico_40_"]::before{top: -1rem;}
+.list_link li > .ico_40_certify_phone::before{background-position: -4rem 0;}
+.pdt_sort_wrap {margin: 3.2rem 0;}
+.pdt_sort_wrap .sort_detail,
+.pdt_sort_wrap .sort_detail .btn_txt{display: block;}
+.pdt_sort_wrap .sort_detail .btn_txt > span {font-size: 1.5rem;font-weight: 700;color: var(--fc_02, #26282c);}
+.pdt_sort_wrap .sort_detail .btn_txt > span:not(:first-child) {margin-left:.8rem;padding-left:.8rem}
+.pdt_sort_wrap .sort_detail .btn_txt > span:not(:first-child):before { top:.3rem; left:0; width:.1rem; height:1.3rem; background-color: var(--fc_08, #dde1e4); border-radius: 0;}
+
+/* .cate_pdt_list .icon_wrap {display:flex;justify-content:space-between;align-items:center;}
+.cate_pdt_list .icon_wrap .ico_40_share {background-position:5rem -121px;}
+.cate_pdt_list .icon_wrap .btn_wrap button:not(:first-child) {margin-left:1.6rem;} */
+
+/* pro_img_add */
+.pro_img_add{margin:1rem 0 3rem 0;padding:12.7rem 0 1.6rem;text-align: center;font-size: 1.4rem;background: var(--bg_02, #f7f7f8) url(/msbiz/app/img/products/img_address.png) no-repeat 50% 1.6rem / 10.8rem 10rem;}
+.depth.num .depth.dash .pro_img_add{margin-left: -3.6rem;}
+.depth.bul .depth.dash .pro_img_add{margin-left: -2.5rem;}
+
+/* BFE007000 - 테마추천 메인 */
+.ico_thema,
+.thema_bnr a::after{background: url(/msbiz/app/img/products/ico_thema.png) no-repeat 0 0 / 26.4rem 25rem;}
+.ico_thema{width:3.2rem;height:3.2rem;margin-right: .8rem;}
+.ico_thema.all_pdt{margin-right: 1.2rem;}
+.ico_thema.dep{background-position: -3.2rem 0;}
+.ico_thema.exchange_dep{background-position: -6.4rem 0;}
+.ico_thema.lon{background-position: -9.6rem 0;}
+.ico_thema.sellerzone{background-position: -12.8rem 0;}
+.ico_thema.fund{background-position: -16rem 0;}
+.ico_thema.onestop{background-position: -19.2rem 0;}
+.ico_thema.cart{background-position: 0 -3.2rem;}
+.ico_thema.search_pdt{background-position: -3.6rem -3.2rem;}
+.ico_thema.acc_smart{background-position: 0 -16.4rem;}
+.ico_thema.acc_loan{background-position: -4rem -16.4rem;}
+.ico_thema.acc_invest{background-position: -8rem -16.4rem;}
+.ico_thema.acc_company{background-position: -12rem -16.4rem;}
+
+.thema_category{margin-top: 1.2rem;margin-bottom:1.8rem;}
+.thema_category .list_acco > li{border: none;}
+.thema_category .list_acco > li .tit{position: relative;display: flex;align-items: center;margin-bottom:1.2rem;padding:.3rem 0;font-size: 2rem;font-weight: 700;}
+.thema_category .list_acco > li .tit .ico_thema{width: 3.0rem;height: 3.2rem;}
+.thema_category .list_acco > li .tit > span.arrow{position: relative;width: 3.6rem;height: 3.6rem;margin: 0;top: 0;background-color: #f6f6f6;border-radius: 50%;-webkit-border-radius: 50%;}
+.thema_category .list_acco > li .tit > span.arrow::before,
+.thema_category .list_acco > li .tit > span.arrow::after{display: none;}
+.thema_category .list_acco > li .tit .open_arrow{position: absolute;right: 0;top: 50%;width: 3.6rem;height: 3.6rem;margin-top: -1.8rem;padding: .5rem .6rem .7rem;background: #f6f6f6;border-radius: 50%;transform: rotate(180deg);}
+.thema_category .list_acco > li .tit:after {display:none;}/* 220901 arrow수정 es */
+.thema_category .list_acco > li.on .tit .open_arrow{ transform: rotate(0);}
+.thema_category .js_accordion > li .toggle_panel{padding:.4rem 2rem;margin-bottom: 2.8rem;border: 1px solid var(--bdc_01, #ebeef0);border-radius: .9rem;-webkit-border-radius: .9rem;}
+.thema_category .list_category::after{content: "";display: block;clear: both;}
+.thema_category .list_category li{float: left;width: 50%;border-top: 1px solid var(--bdc_01, #ebeef0);}
+.thema_category .list_category li:first-child,
+.thema_category .list_category li:nth-child(2){border-top: none;}
+.thema_category .list_category li a{display: block;margin-right: 1rem;padding: 2rem 0;}
+.thema_category .list_category .ico_thema{width: 3.2rem;height: 3.2rem;}
+
+.thema_search{margin-top: 0 !important;}
+.thema_search .search_wrap{margin: 0 2rem 1.6rem;}
+.thema_search .search_wrap .input::after{display: none;}
+.thema_search .search_wrap .inp{height: 4.8rem;line-height: 4.8rem;padding-left: 2rem;font-size: 1.6rem;border: 1px solid #8460f6;box-shadow: .1rem .3rem .5rem rgba(0,0,0,.2);border-radius: 2.4rem;-webkit-border-radius: 2.4rem;}
+.thema_search .search_wrap .inp::-webkit-input-placeholder,
+.thema_search .search_wrap .inp::placeholder{font-size: 1.6rem;}
+.thema_search .scroll_hashtag{position: relative;}
+.thema_search .scroll_hashtag::before,
+.thema_search .scroll_hashtag::after{content: '';display: block;width: 3rem;height: 1.5rem;position: absolute;top: 0;z-index: 1;}
+.thema_search .scroll_hashtag::before{left:0;background: linear-gradient(to right, var(--bg_01, #fff), rgba(255,255,255,0));}
+.thema_search .scroll_hashtag::after{right:0;background: linear-gradient(to left, var(--bg_01, #fff), rgba(255,255,255,0));}
+.thema_search .scroll_hashtag>div{padding: 0 0 1.4rem 0;overflow-x: auto;}
+.thema_search .scroll_hashtag .scroll_wrap{overflow: hidden;padding:0 2rem;box-sizing: border-box;}
+.thema_search .scroll_hashtag .scroll_wrap a{float: left;margin-left: 1.2rem;font-size: 1.4rem;color: var(--fc_04, #696e76);}
+.thema_search .scroll_hashtag .scroll_wrap a:first-child{margin-left: 0;}
+
+.thema_pdt{margin-top: 1.4rem !important;}
+.thema_pdt .link_pdt{padding:0 2rem;margin-left: -1.2rem; margin-top:1rem;}
+.thema_pdt .link_pdt::after{content: "";display: block;clear: both;}
+.thema_pdt .link_pdt>li{float:left;width:50%;padding-left: 1.2rem;margin-top: 1.2rem;}
+.thema_pdt .link_pdt>li a{ position: relative; display: block; width: 100%; height: 10.2rem; padding: 1.5rem; font-weight: 700; border: 1px solid var(--fc_08, #dde1e4); border-radius: 0.8rem; box-shadow:0 .4rem .6rem rgba(0,0,0,.07); -webkit-border-radius: 0.8rem; }
+.thema_pdt .link_pdt>li .number{display: inline-flex;width:2.4rem;height:1.6rem;align-items: center;justify-content: center;margin: .4rem 0 0 .4rem;font-size: 1.4rem;background-color: #ffd338;border-radius: .8rem;vertical-align: top;}
+.thema_pdt .link_pdt>li a .ico_thema{position: absolute;right: 1.2rem;bottom: 1.2rem;width: 3.6rem;height: 3.6rem;margin: 0;}
+
+.thema_best{padding:4.6rem 2rem;background-color:#f6f6f6;}
+.thema_best .h2{margin:0 0 2rem;}
+.thema_best .pdt_list_wrap{margin: 0;}
+.thema_best .pdt_list_wrap.sm .acc_pannel{margin-top: 1.6rem;background-color: var(--bg_01, #fff);border: none;}
+
+.thema_rcm_loan{margin: 0 !important;padding: 4.6rem 2rem 4rem;background-color: #1b4268;}
+.thema_rcm_loan .h2,
+.thema_rcm_loan .btn_txt.sm,
+.thema_rcm_loan .btn_txt[class*="ico_arr"]::after{color: #fff;border-color: #fff;}
+.thema_rcm_loan .pdt_list_wrap{padding: 2.8rem 2rem;margin:2rem 0 0;background-color: var(--bg_01, #fff);border-radius: .8rem;-webkit-border-radius: .8rem;}
+.thema_rcm_loan .pdt_list_wrap .acc_pannel.open:last-child{padding-bottom: 0;border-bottom: none;}
+
+.thema_rcm_dep{margin-top: 0 !important;padding: 4.6rem 0 2.5rem;background-color: #f6f6f6;}
+.thema_rcm_dep .hgroup{padding: 0 2rem;margin-bottom: 2rem;}
+
+/* .swiper_pdt_item .swiper{padding: 0 2rem;}
+.swiper_pdt_item .swiper-slide{width: 25rem;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap{margin: 0;display: flex;width: 100%;height: 21rem;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_pannel{width: 100%;}
+.swiper_pdt_item .swiper-slide:nth-child(2n-1) .acc_list_wrap .acc_pannel{background-color: #4f4875;}
+.swiper_pdt_item .swiper-slide:nth-child(2n) .acc_list_wrap .acc_pannel{background-color: #307f84;height: 100%;width: 100%;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap{height: 100%;display: flex;flex-flow: column;padding:2.8rem 2.4rem 2.4rem;width: 100%;flex: 1;color: #fff;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .acc_hashtag{font-size: 1.3rem;opacity: .8;margin-bottom: 1rem;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .acc_num{font-size: 1.6rem;font-weight: 700;color: #fff;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .bottom_area{margin-top: auto;flex: 0;display: flex;flex-flow: column;justify-content: flex-end;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .box_rate{text-align: right;font-size: 1.4rem;display: flex;flex-wrap: wrap;justify-content: flex-end;align-items: center;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .box_rate span{opacity: .8;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .box_rate .txt{display: block;width: 100%;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .box_rate .unit{margin-top: .6rem;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .box_rate .number{font-size: 2.5rem;color: #f9db63;margin-left: .8rem;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .box_rate .num_unit{font-size: 2.4rem;color: #f9db63;font-weight: 700;opacity: 1;}
+.swiper_pdt_item .swiper-slide .acc_list_wrap .acc_wrap .date{margin-top: .5rem;width: 100%;color: #e2e0ef;text-align: right;font-size: 1.4rem;line-height: 1.25;}
+.swiper_pdt_item .swiper-pagination{text-align: left;} */
+
+.thema_bnr{margin-top: 4.6rem !important;margin-bottom: 1.4rem;}
+.thema_bnr .box_bnr{position: relative;display: block;padding: 2.8rem 10rem 2.8rem 2rem;margin-top: 2rem;font-size:1.5rem;color:#696e76;background-color: #f6f6f6;border-radius: .8rem;-webkit-border-radius: .8rem;}
+.thema_bnr .box_bnr:first-child{margin-top: 0;}
+.thema_bnr .box_bnr::after{content: "";position: absolute;right: 0;top: 50%;width: 12rem;height: 9.6rem;margin-top: -4.8rem;}
+.thema_bnr .box_bnr strong{display: inline-block;font-size: 1.6rem;color: #26282c;margin-top: 1rem;}
+.thema_bnr .box_bnr.service::after{background-position: 0 -6.8rem;}
+.thema_bnr .box_bnr.consulting::after{background-position: -13.6rem -6.8rem;}
+
+/* BFE007003 */
+.list_acco .ico_thema{width: 4rem;height: 4rem;}
+
+/* 상품 swiper */
+.swiper_pdt .pdt_list_wrap{ margin: 0 1.6rem;}
+.swiper_pdt .pdt_pannel {display: flex; height: 32.8rem; flex-flow: column; justify-content: space-between; padding: 2.4rem; background:#5a4f9a; border:0; border-radius: .8rem; overflow: hidden;}
+.swiper_pdt.lg .pdt_pannel{height: 33.4rem;}
+.swiper_pdt.swiper_loan .pdt_pannel .pdt_wrap .pdt_name{word-break: break-all;}
+.swiper_pdt .badge {background-color:#f9db63;color:#26282c;box-sizing: border-box;height: 2.4rem;}
+.swiper_pdt .badge.w_line {background-color: #675da2;border: 1px solid #ada7cd;color: #fff;padding: .3rem .8rem .1rem;}
+.swiper_pdt .pdt_pannel .pdt_wrap {padding: 0;display: flex;flex-flow: column;flex: 1;}
+.swiper_pdt .pdt_pannel .pdt_wrap .bottom_area{margin-top: auto;flex: 0 0 auto;display: flex;flex-flow: column;justify-content: flex-end;}
+.swiper_pdt .pdt_pannel .pdt_wrap .pdt_name {margin-top: 1.2rem;font-size: 2.4rem;font-weight: 700;color: #fff;word-break: keep-all;}
+.swiper_pdt .pdt_pannel .pdt_wrap .pdt_txt {margin: .8rem 0 0 0;font-size: 1.5rem;color:#dedceb;word-break: keep-all;}
+.swiper_pdt .pdt_pannel .pdt_wrap .box_rate{display: flex;flex-wrap: wrap;align-items: center;justify-content: flex-end;margin: auto 0;text-align: right;color: #e2e0ef;flex: 0;}
+.swiper_pdt .pdt_pannel .pdt_wrap .box_rate .txt,
+.swiper_pdt .pdt_pannel .pdt_wrap .box_rate .unit{margin: .5rem 0 0 .5rem;}
+.swiper_pdt .pdt_pannel .pdt_wrap .box_rate .number{font-size: 2.5rem;margin-left: .9rem;color: #f9db63;}
+.swiper_pdt .pdt_pannel .pdt_wrap .box_rate .num_unit{font-size: 2.4rem;color: #f9db63;}
+.swiper_pdt .pdt_pannel .pdt_wrap .date{margin-top: .5rem;width: 100%;color: #e2e0ef;text-align: right;font-size: 1.4rem;}
+.swiper_pdt .pdt_pannel .btn_area {padding: 0;margin:2rem 0 0 0;}
+.swiper_pdt .pdt_pannel .btn_area > span{display: flex;width: 100%;height: 4rem;text-align: center;}
+.swiper_pdt .pdt_pannel .btn_area > span > a {flex: 1;display: flex;justify-content: center;align-items: center;background-color:#453b7a;color:#fff;font-size: 1.5rem;}
+.swiper_pdt .swiper-pagination-wrap {margin-top:1rem;}
+
+.swiper_pdt.sm .swiper{padding: 0 2rem;}
+.swiper_pdt.sm .swiper-slide{width: 25rem;}
+.swiper_pdt.sm .swiper-slide .pdt_list_wrap{margin: 0;display: flex;width: 100%;height: 21rem;}
+.swiper_pdt.sm .swiper-slide .pdt_list_wrap .pdt_pannel{width: 100%;height: 21rem;padding:2.4rem 2.4rem 2rem 2.4rem;}
+.swiper_pdt.sm .swiper-slide:nth-child(2n-1) .pdt_list_wrap .pdt_pannel{background-color: #4f4875;}
+.swiper_pdt.sm .swiper-slide:nth-child(2n) .pdt_list_wrap .pdt_pannel{background-color: #307f84;width: 100%;}
+.swiper_pdt.sm .swiper-slide .pdt_list_wrap .pdt_wrap .hashtag{margin-bottom: .8rem;}
+.swiper_pdt.sm .swiper-slide .pdt_list_wrap .pdt_wrap .hashtag span{color: #fff;font-size: 1.3rem;opacity: .8;margin-right: .8rem;}
+.swiper_pdt.sm .swiper-slide .pdt_list_wrap .pdt_wrap .pdt_name{margin-top:0;font-size: 1.6rem;font-weight: 700;color: #fff;}
+.swiper_pdt.sm .swiper-slide .pdt_list_wrap .pdt_wrap .bottom_area{font-size: 1.4rem;}
+.swiper_pdt.sm .swiper-pagination{text-align: left;margin-top:2.4rem;}
+
+/* 상품 swiper - animation */
+.swiper_pdt:not(.sm) .pdt_pannel .pdt_wrap > *,
+.swiper_pdt:not(.sm) .btn_area{position: relative;left: 3rem;opacity: 0;transition:all .5s ;-webkit-transition:all .5s ;}
+.swiper_pdt:not(.sm) .swiper-slide-active .pdt_wrap > *,
+.swiper_pdt:not(.sm) .swiper-slide-active .btn_area{left: 0;opacity: 1;transition-delay: .2s;}
+.swiper_pdt:not(.sm) .swiper-slide-active .pdt_wrap > *:nth-child(2){transition-delay: .4s;}
+.swiper_pdt:not(.sm) .swiper-slide-active .pdt_wrap > *:nth-child(3){transition-delay: .6s;}
+.swiper_pdt:not(.sm) .swiper-slide-active .pdt_wrap > *:nth-child(4){transition-delay: .8s;}
+.swiper_pdt:not(.sm) .swiper-slide-active .pdt_wrap > *:nth-child(5){transition-delay: 1s;}
+.swiper_pdt:not(.sm) .swiper-slide-active .pdt_wrap > *:nth-child(6){transition-delay: 1.2s;}
+
+/*** pro_lhs.css ***/
+/* 비대면전용대출 */
+/* .section.line {padding:2rem 0; text-align:center; border-top:1px solid #8c949e; border-bottom:1px solid #f0f3f4;}
+.section.line .pay {font-size:2.8rem;} */
+.list_link.bd_top li {border-top:1px solid var(--bdc_01, #ebeef0);}
+.h2 + .list_link.bd_top > li:first-child > .link,
+.h3 + .list_link.bd_top > li:first-child > .link {padding-top:1.8rem;}
+.h2 + .list_link.bd_top > li:first-child > .link:after,
+.h3 + .list_link.bd_top > li:first-child > .link:after{margin-top:-.2rem;}
+
+/* 셀러존 */
+.seller_zone .pro_slogan_wrap {margin:0 2.4rem;}
+.seller_zone .pro_slogan_wrap .p {margin-top:2rem;}
+
+.seller_zone .swiper_pdt {margin-top:2rem;}
+.seller_zone .swiper_pdt .swiper-slide-active .pdt_wrap > * {left:inherit;}
+
+.seller_zone .swiper_pdt .pdt_pannel .pdt_list_wrap {margin:0 2rem;}
+.seller_zone.thema_pdt .swiper_pdt .pdt_pannel {height:17rem; padding-right:1.6rem; padding-bottom:1.6rem;}
+.seller_zone.thema_pdt .swiper_pdt .pdt_pannel .pdt_name {margin-top:0;}
+.seller_zone.thema_pdt .swiper_pdt .pdt_wrap {position:relative;}
+.seller_zone.thema_pdt .swiper_pdt .pdt_wrap .ico_loan {position:absolute; right:0; top:3.5rem; width:12rem; height:11rem; background:url(/msbiz/app/img/products/ico_loan.png) no-repeat 0 0 / 48rem 11rem;}
+.seller_zone.thema_pdt .swiper_pdt .pdt_wrap .ico_loan.plus {background-position:-12rem 0}
+.seller_zone.thema_pdt .swiper_pdt .pdt_wrap .ico_loan.mega {background-position:-24rem 0}
+.seller_zone.thema_pdt .swiper_pdt .pdt_wrap .ico_loan.global {background-position:-36rem 0}
+
+.seller_zone.thema_pdt .link_pdt > li:nth-child(2) ~ li {margin-top:1.2rem;}
+.seller_zone.thema_pdt .link_pdt > li a {padding:2rem 1.5rem;}
+.seller_zone.thema_pdt .link_pdt > li a span {display:block; margin-bottom:.5rem; font-size:1.4rem; color:#666; font-weight:normal;}
+.seller_zone .link_pdt > li a .ico_seller_pdt {position:absolute; right:1.2rem; bottom:1.2rem; width:3.6rem; height:3.6rem;}
+
+.ico_seller_pdt {width:4rem; height:4rem; background:url(/msbiz/app/img/products/ico_seller_pdt.png) no-repeat 0 0 / 24rem 4rem;}
+.ico_seller_pdt.memo {background-position:-4rem 0;}
+.ico_seller_pdt.period {background-position:-8rem 0;}
+.ico_seller_pdt.event {background-position:-12rem 0;}
+.ico_seller_pdt.market {background-position:-16rem 0;}
+.ico_seller_pdt.advice {background-position:-20rem 0;}
+
+.ico_pro_seller {width:6rem; height:6rem; background:url(/msbiz/app/img/products/ico_pro_seller.png) no-repeat 0 0 / 36rem 6rem;}
+.ico_pro_seller.seller {background-position:-6rem 0;}
+.ico_pro_seller.mega {background-position:-12rem 0;}
+.ico_pro_seller.cafe {background-position:-18rem 0;}
+.ico_pro_seller.kcb {background-position:-24rem 0;}
+.ico_pro_seller.untact {background-position:-30rem 0;}
+
+.pro_look_info .form_group + .form_group {margin-top:2.4rem;}
+.pro_look_info .form_tit {font-size:1.6rem;}
+.pro_look_info .form_tit .number {font-size:1.7rem;}
+.pro_look_info .form_tit + .form_row {margin-top:2rem;}
+.pro_look_info .form_row + .info_area {margin-top:1.6rem; padding-top:.4rem; border-top:1px solid var(--fc_09, #ebeef0);}
+.pro_look_info .form_row + .info_area p + .p_sub  {margin-top:1.6rem; padding-left:2.3rem; color:var(--fc_04, #696e76);}
+.pro_look_info .form_row .rdoChk_group {margin-top:0;}
+.pro_look_info .form_row .rdoChk_group .selection:first-child {padding-top:0;}
+
+.fl_type:after {display:block; content:""; clear:both;}
+.fl_type > li {width:48.47%; /*max-width:31.3rem; min-width:15.65rem;*/ text-align:center; box-sizing:border-box; border:1px solid var(--fc_09, #ebeef0);}
+.fl_type > li:nth-child(even) {float:right;}
+.fl_type > li:nth-child(odd),
+.fl_type > li:nth-child(7),
+.fl_type > li:nth-child(9) {float:left;}
+.fl_type > li:nth-child(2) ~ li {margin-top:1rem;}
+
+.sellerloan_wrap .pro_slogan_wrap .tit {font-weight:500;}
+.sellerloan_wrap .img_area {margin-top:2rem;}
+.sellerloan_wrap .fl_type {margin:1.6rem auto 0;}
+.sellerloan_wrap .fl_type + .h2 {margin-top:4rem;}
+.sellerloan_wrap .inr_line {margin-top:1.6rem; padding:.4rem 0 3rem; border-top:1px solid var(--fc_05, #8c949e); border-bottom:1px solid #f0f3f5;}
+.sellerloan_wrap .inr_line .depth.bul {margin-top:1.6rem;}
+.sellerloan_wrap .inr_line + .h2 {margin-top:2rem;}
+
+p.depth.info.fc_posi:before {background:url(/msbiz/app/img/products/ico_bl_star.png) no-repeat .5rem .5rem / 1rem 1rem;}
+
+
+/*** pro_lho.css ***/
+/* 펀드 신규 예약 2단 리스트 */
+.list_data.pr_new_fund_list .value>.list>li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+
+/*** pro_kji.css ***/
+.cate_products .form_group.between input {padding-left:2.8rem; text-align:left}
+.cate_products .form_group.between input::placeholder {text-align:left}
+.cate_products .form_group.between span.row_tit.minus,
+.cate_products .form_group.between span.row_tit.plus {bottom:.3rem}
+.cate_products .form_group.between span.row_tit.minus::before,
+.cate_products .form_group.between span.row_tit.plus::before {content:''; position:absolute; left:.35rem; bottom:1.9rem; display:inline-block; width:1.35rem; height:.2rem; background:#26282c}
+.cate_products .form_group.between span.row_tit.plus::after {content:''; position:absolute; left:.95rem; bottom:1.3rem; display:inline-block; width:.2rem; height:1.35rem; background:#26282c}
+
+.cate_products .section.chk_line .rdoChk_group {padding-top:2.8rem; border-top:.1rem solid #ebeef0}
+.cate_products .selection.agree_arrow::after { content:''; display:inline-block; position:absolute; right:1rem; top:1.5rem; width:.9rem; height:.9rem; margin-top:-.6rem; margin-right:-.6rem; border:solid #8c949e; border-width:0 1px 1px 0; transform:rotate(-45deg); -webkit-transform: rotate(-45deg);}
+
+.cate_products .select_btn[readonly] {background:#f7f7f8; border-color:#dde1e4}
+.cate_products .inform_btm_wrap .tit.bd_tg {padding:2rem 0; font-weight:400; border-top:.1rem solid #ebeef0; border-bottom:.1rem solid #ebeef0}
+.cate_products .inform_btm_wrap .tit.bd_tg::before {display:none}
+.cate_products .inform_btm_wrap .tit.bd_tg + .toggle_panel {margin-top:0; border-top:0}
+
+.cate_products .inform_top_wrap.ico_nopromise {position:relative; padding-right:7.2rem}
+.cate_products .inform_top_wrap.ico_nopromise::after {content:''; position:absolute; top:2.3rem; right:2.4rem; width:4.8rem; height:4.8rem; background:url(/msbiz/app/img/products/ico_nopromise.png) no-repeat; background-size:4.8rem}
+.cate_products .anal_box .p {margin-top:1.6rem; font-size:1.8rem; font-weight:700}
+.cate_products .anal_box .caption {margin-top:1.6rem; font-size:1.5rem; color:#8c949e}
+
+.list_question > li .qut_explain.invest_explain {margin-top:2rem; padding-top:2rem}
+.cate_products .invest_explain .p {margin-bottom:1.2rem; font-size:1.7rem; font-weight:700}
+.cate_products .invest_explain .p_sub {color:#696e76}
+
+.tab_wrap .invest_sec[class^=section]:first-of-type {padding-top:2.8rem}
+.invest_sec .icon_box {padding:2.2rem; border-radius:.8rem; -webkit-border-radius:.8rem;}
+.icon_box .ico_remark {width:3.5rem; height:3.5rem}
+.icon_box .ico_remark::before {width:3.5rem; height:3.5rem; background-size:20rem}
+.icon_box.anal_default .ico_remark::before {background:url(/msbiz/app/img/products/icon_anal_default.png) no-repeat; background-size:3.5rem}
+.icon_box .ico_remark.highest::before {background-position:-.2rem -15.4rem}
+.icon_box .ico_remark.higher::before {background-position:-4rem -15.4rem}
+.icon_box .ico_remark.middle::before {background-position:-11.7rem -15.4rem}
+.icon_box .ico_remark.low::before {background-position:-15.5rem -15.4rem}
+.icon_box .ico_remark.lower::before {background-position:-15.5rem -11.6rem}
+.icon_box.anal_default {background:#fbefc3}
+.icon_box.anal_highest {background:#fcf2f2}
+.icon_box.anal_highest b {color:#eb3272}
+.icon_box.anal_higher {background:#fbf4ec}
+.icon_box.anal_higher b {color:#f6501c}
+.icon_box.anal_middle {background:#eff8f3}
+.icon_box.anal_middle b {color:#00988a}
+.icon_box.anal_low {background:#eef7fa}
+.icon_box.anal_low b {color:#0086bb}
+.icon_box.anal_lower {background:#eef3fb}
+.icon_box.anal_lower b {color:#1772fa}
+.icon_box .icon_txt {display:flex; align-items:center}
+.icon_box .icon_txt .p {margin-left:1.5rem}
+.icon_box .btn_wrap.btm {margin-top:1.0rem}
+.icon_box .btn_wrap.btm .btn_txt {font-size:1.4rem}
+
+.invest_sec .invest_box {display:flex; justify-content:space-between; margin-top:1.2rem}
+.invest_sec .invest_box .invest_cont {padding:2rem; width:50%; background:#f7f7f8; border-radius:.8rem; -webkit-border-radius:.8rem;}
+.invest_sec .invest_box .invest_cont:not(:first-child) {margin-left:1.2rem}
+.invest_sec .invest_box .invest_cont .p {margin-top:1rem; text-align:right}
+
+.fund_search_wrap .search_wrap {margin:0}
+.fund_search_wrap .hashtag_wrap {margin-top:1.2rem}
+.fund_search_wrap .ex_hashtag {margin-left:.8rem; color:#696e76}
+.fund_search_wrap .ex_hashtag:first-child {margin-left:0}
+.fund_search_wrap .btn_cnt_wrap {margin-top:2.4rem}
+
+.list_link li > .link.icon_box {display:flex; justify-content:space-between; align-items:center; padding:2rem 0}
+.list_link li > .link.icon_box .ico_link {width:3.5rem; height:3.5rem}
+.list_link li > .link.icon_box .icon_fund01 {background:url(/msbiz/app/img/products/icon_fund_main_01.png) no-repeat; background-size:3.5rem}
+.list_link li > .link.icon_box .icon_fund02 {background:url(/msbiz/app/img/products/icon_fund_main_02.png) no-repeat; background-size:3.5rem}
+.list_link li > .link.icon_box .icon_fund03 {background:url(/msbiz/app/img/products/icon_fund_main_03.png) no-repeat; background-size:3.5rem}
+.list_link li > .link.icon_box .icon_fund04 {background:url(/msbiz/app/img/products/icon_fund_main_04.png) no-repeat; background-size:3.5rem}
+.list_link li > .link.icon_box .icon_txt .p {margin-left:1rem}
+.list_link li > a.link.icon_box:after {display:none}
+
+.fund_top_wrap {margin-top:-1.6rem; padding:2rem 2.4rem}
+.fund_card_wrap .section .nopro_p {display:flex; justify-content:space-between; align-items:center; margin-top:.4rem}
+.fund_card_wrap .section .nopro_p .icon_nopromise {width:4rem; height:4rem; background:url(/msbiz/app/img/products/ico_nopromise.png) no-repeat; background-size:4rem}
+
+.acc_pannel.fund_pannel .acc_wrap {padding:2rem}
+.acc_pannel.fund_pannel .acc_wrap .acc_top_info.divide {margin-top:1.7rem}
+.acc_pannel.fund_pannel .acc_wrap .acc_top_info.divide span {font-size:1.5rem}
+.acc_pannel.fund_pannel .remark.risk4 {color:#FF5682}
+.acc_pannel.fund_pannel .acc_wrap .acc_pay .unit {font-size:1.5rem; color:#696e76}
+.acc_pannel.fund_pannel .acc_wrap .acc_sum_wrap {margin-top:3.2rem}
+.acc_pannel.fund_pannel .btn_area {margin-top:0; padding:0 2rem 1.6rem 2rem}
+.acc_pannel.fund_pannel .toggle_sm_wrap {margin:0 0 2.4rem 0}
+.acc_pannel.fund_pannel .toggle_sm_wrap.on {margin:0}
+.acc_pannel.fund_pannel + .btn_list_btm {margin-top:3.2rem}
+
+.fund_detail_sec {margin:-1.6rem 0 0 0; padding:2.4rem 2.4rem 2.8rem 2.4rem; background:#f5f7fe}
+.fund_detail_sec .btn_wrap button {width:3.5rem; height:3.5rem; background:#e9ecf6; border-radius:50%; -webkit-border-radius:50%;}
+.fund_detail_sec .btn_wrap button:not(:first-child) {margin-left:1.2rem}
+
+.fund_card_wrap .fund_top_wrap + .section {margin-top:2.4rem}
+.fund_card_wrap .btn_list_btm {margin-top:2.4rem}
+.fund_card_wrap .sort_wrap {margin:3.2rem 0 2.8rem}
+.fund_card_wrap .list_top_wrap {margin:2.8rem 0 2rem 0}
+
+.fund_card_wrap .acc_wrap .acc_top_info.divide {margin-top:1.7rem}
+.fund_card_wrap .acc_wrap .acc_sum_wrap {margin-top:3rem}
+.fund_card_wrap .acc_pannel .btn_area {margin-top:0; padding:0 2rem 2rem 2rem}
+.fund_card_wrap .acc_pannel .toggle_sm_wrap.exchange .js_toggle {margin:0 2rem 2.4rem 0}
+.fund_card_wrap .acc_pannel .toggle_panel > .list_data {margin:0 2.2rem 1.6rem; padding:0}
+.fund_card_wrap .acc_pannel .toggle_panel > .list_data:before {display:none}
+.fund_card_wrap .list_data > li {padding:1.6rem 0}
+.fund_card_wrap .list_data > li:first-child {padding-top:2rem}
+.fund_card_wrap .list_data > li:last-child {padding-bottom:0}
+.fund_card_wrap .list_data > li .key {vertical-align:text-top}
+
+.fund_card_wrap .acc_wrap .acc_pay .number {font-size:1.5rem; font-weight:500}
+.fund_card_wrap .acc_wrap .acc_pay .state_arr {padding-left:0; font-size:1.8rem}
+.fund_card_wrap .acc_wrap .acc_pay .state_arr + .num_unit {margin-left:0; font-weight:700}
+.fund_card_wrap .acc_wrap .acc_pay .state_arr.up,
+.fund_card_wrap .acc_wrap .acc_pay .state_arr.down {margin-left:1.2rem; padding-left:2rem}
+.fund_card_wrap .acc_wrap .acc_pay .state_arr.up::before {top:.9rem; border-left:8px solid transparent; border-right:8px solid transparent; border-bottom:11px solid #ff5858}
+.fund_card_wrap .acc_wrap .acc_pay .state_arr.down::before {top:.9rem; border-left:8px solid transparent; border-right:8px solid transparent; border-top:11px solid #287eff}
+
+.fund_card_wrap .els_list_data .key {width:6.4rem}
+
+.fund_card_wrap .nopro_p {font-size:1.3rem; color:#8c949e}
+.fund_card_wrap .nopro_p .number {font-size:1.4rem}
+
+.fund_card_wrap .level1 {color:#1772fa !important}
+.fund_card_wrap .level2 {color:#0086bb !important}
+.fund_card_wrap .level3 {color:#00988a !important}
+.fund_card_wrap .level4 {color:#f6501c !important}
+.fund_card_wrap .level5 {color:#eb3272 !important}
+
+/* 펀드신규 정보입력 */
+.fund_info_input .h1 {padding-top:2rem}
+.fund_info_input .inform_top_wrap {margin:2rem 0; padding:2rem 2.4rem}
+.fund_info_input .inform_top_wrap .depth > li:not(:first-child) {margin-top:1.6rem}
+.fund_info_input .fund_info_bd {padding-bottom:3.2rem; border-bottom:.1rem solid #f0f3f5}
+.fund_info_input .form_group.between:first-child .form_row {padding-top:2.6rem}
+
+.fund_search_wrap .search_wrap .btn_sch {width:3.9rem}
+
+/* 유의사항 */
+.label-safe5000{display:block; width:6rem; height:4rem; background:url(/msbiz/app/img/common/ico_kdic.png) 0 0 no-repeat; background-size: 6rem 4rem;}
+ .list-prod {margin-top:1.2rem;list-style: none;}
+ .list-prod > li {position: relative; margin-top:.8rem; color:var(--fc_02, #26282c);}
+ .list-prod > li:before {content:''; display:inline-block; position: absolute; left:0; top:.8rem;}
+ .list-prod > li {padding-left:1.1rem;word-break:keep-all; word-wrap:break-word;} 
+ .list-prod > li:before {width:.3rem; height:.3rem; background:var(--fc_03, #484b51);}

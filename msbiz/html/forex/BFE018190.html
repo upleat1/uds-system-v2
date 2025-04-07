@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-[지급(출금)지시]정보입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+
+    <!-- 220729 리웍 -->
+    <div id="content">
+		<h1 class="hidden">지급(출금)지시 정보입력</h1>
+		<div class="section"><!-- section -->
+			<div class="form_group">
+				<div class="form_tit">업무구분</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn" title="선택">선택</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- ///section -->
+		<div class="section"><!-- section -->
+			<div class="form_group">
+				<div class="form_tit">출금계좌선택</div>
+				<div class="form_row">
+					<div class="tab_wrap box"><!-- tab_wrap box -->
+						<div class="tab_radio"><!-- tab_radio -->
+							<div class="rdoChk_box"><!-- rdoChk_box -->
+								<span class="selection">
+									<input type="radio" id="rdo1" name="rdo1" data-show="#radio1" aria-selected="true" aria-controls="radio1" checked>
+									<label for="rdo1" class="label"><em>원화출금계좌</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="rdo2" name="rdo1" data-show="#radio2" aria-selected="false" aria-controls="radio2">
+									<label for="rdo2" class="label"><em>외화출금계좌</em></label>
+								</span>
+							</div><!-- ////// rdoChk_box -->
+						</div><!-- //// tab_radio -->
+						
+						<!-- radioShow1 -->
+						<div class="tab_panel" role="tabpanel" id="radio1">
+							<div class="form_group">
+								<div class="form_tit">원화출금계좌번호</div>
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn" title="선택">선택</button>
+									</div>     
+									<div class="form_btm_wrap right">
+										<p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p> 
+									</div>
+								</div>
+							</div>
+							
+							<div class="form_group error">
+								<div class="form_tit">출금금액</div>
+								<div class="form_row">
+									<div class="form_row"> 
+										<div class="input unit js_unit" role="button" aria-label="출금금액 입력" onclick="">
+											<input type="tel" id="id01" placeholder="숫자만 입력" title="출금금액" data-unit="원" class="bg_white" readonly> <!-- 220816 id 추가 -->
+										</div>
+										<p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+									</div>
+								</div>
+								<p class="tip" aria-labelledby="id01">출금금액을 입력해 주세요.</p> <!-- 220816 aria-labelledby 추가 -->
+							</div>
+						
+						</div>
+						<!-- radioShow1 -->
+						
+						<!-- radioShow2 -->
+						<div class="tab_panel" role="tabpanel" id="radio2">
+							<div class="form_group">
+								<div class="form_tit">외화출금계좌번호</div>
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="선택">선택</button>
+									</div>
+								</div>
+								<div class="btn_wrap btm">
+									<a href="#none" class="btn_txt ico_arr">외화잔액조회</a><!-- 바텀시트 파일 BFE018193 확인 -->
+								</div>
+							</div>
+
+							<h2 class="h2">지급(출금)정보</h2>
+							<div class="form_group">
+								<div class="form_tit">지급(출금)지시 통화</div>
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn" title="선택">선택</button>
+									</div>
+								</div>
+							</div>
+							
+							<div class="form_group error">
+								<div class="form_tit">출금금액</div>
+								<div class="form_row col ele_ul_hor currency_int">
+									<!-- 221006 키패드 수정 -->
+									<div class="input" role="button" aria-label="소수점 앞 입력" onclick="">
+										<input type="tel" id="id02" class="right bg_white" placeholder="0" title="소수점 앞" value="" readonly> <!-- 220816 id 추가 -->
+									</div>
+									<div class="dot"></div>
+									<div class="input" role="button" aria-label="소수점 뒤 입력" onclick="">
+										<input type="tel" class="right bg_white" placeholder="00" title="소수점 뒤" value="" readonly>                            
+									</div>
+									<!-- //221006 키패드 수정 -->
+								</div>
+								<p class="tip" aria-labelledby="id02">출금금액을 입력해 주세요.</p> <!-- 220816 aria-labelledby 추가 -->
+							</div>
+							
+							<div class="form_group error">
+								<div class="form_tit">지급(출금)지시내용</div>
+								<div class="form_row">
+									<div class="textarea">
+										<textarea id="id03" title="지급(출금)지시내용" placeholder="참조번호를 아시는 경우 지급(출금) 지시내용에 포함하여 같이 적어주세요."></textarea> <!-- 220816 id 추가 -->
+										<p class="num_info"><span><em class="curr">0</em> / 160byte</span>(80자)</p>            
+									</div> 
+								</div>
+								<p class="tip_info">‘지급(출금)지시내용’ 입력은 최대 80자 이내로 입력해 주세요.</p>
+								<p class="tip" aria-labelledby="id03">지급(출금)지시 내용을 입력해 주세요.</p> <!-- 220816 aria-labelledby 추가 -->
+							</div>
+							
+							<div class="form_group">
+								<div class="form_tit">출금계좌적요</div>
+								<div class="form_row">
+									<div class="input">
+										<input type="text" placeholder="14자 이내 입력" title="출금계좌적요" value=""> <!-- 221014 타이틀 수정 -->
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- radioShow2 -->
+					</div>
+				</div>
+			</div>
+		</div><!-- ///section -->
+		
+		<!-- 220822 서류송부 지점 선택 추가 -->
+		<div class="section">
+			<h2 class="h2">서류송부 지점 선택
+				<div class="tooltip_limited">
+					<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+					<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+						<p class="tooltip_tit">대기업금융센터 거래 시 유의사항</p>
+						<div class="tooltip_cont"> 
+							대기업금융센터 통합으로 인해 기존 강남/여의도/명동 대기업금융센터를 거래하시던 고객님께서는 "대기업금융1센터"를 선택하시기 바랍니다.
+						</div>
+						<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+					</div>
+				</div>
+			</h2>
+
+			<div class="form_group pdt_0 error">
+				<div class="form_row">
+					<span class="input int_btn">
+						<input type="text" id="id04" title="서류송부 지점 입력" placeholder="지점(지역)명 입력">  <!-- 220822 id 추가 , 검색후 : readonly -->
+						<button type="button" class="btn point sm round">검색</button>
+					</span>
+				</div>
+				<p class="tip" aria-labelledby="id04">지점(지역)명 입력해 주세요.</p> <!-- 220822 aria-labelledby 추가 -->
+				<!-- 220927 초기화 버튼 변경 -->
+				<div class="btn_wrap btm">
+					<button type="button" class="btn_txt ico_reset">검색초기화</button>
+				</div>
+				<!-- //220927 초기화 버튼 변경 -->
+			</div>
+
+			<!-- 검색후 노출 -->
+			<!-- 220927 버튼 변경으로 인한 삭제
+			<div class="btn_list_btm">
+				<span><button type="button" class="btn outline md">검색초기화</button></span> 
+			</div> -->
+			<!-- //검색후 노출 -->
+		</div>
+
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li>외환업무와 관련된 수수료 등을 납부하기 위해 거래지점으로 원화계좌 또는 외화계좌에서 출금하여 지급을 요청하는 거래입니다.</li>
+					<li><span class="fc_nega">지급(출금)지시 거래가능 시간은 평일(은행영업일) 09:00~16:00 입니다.</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="btn_confirm_wrap"><!-- btn_confirm_wrap -->
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">신청</button></span>
+			</div>
+		</div>
+			
+    </div><!-- //content -->
+	<!-- //220729 리웍 -->
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

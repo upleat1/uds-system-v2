@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[One Stop 신규] 신규계좌개설 완료</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">기업통장 신규가입 완료</h1>        
+        <div class="result success">
+            <p class="tit">기업 통장 개설 완료</p><!-- 220811 : 문구 수정 -->
+        </div>
+        
+        <div class="section">
+            <h2 class="h2">기업통장 신규정보</h2>
+            <ul class="list_data">
+                <li>
+                    <div class="key">고객명</div>
+                    <div class="value">김국민</div>
+                </li>
+                <li>
+                    <div class="key">상품명</div>
+                    <div class="value">상품명</div>
+                </li>
+                <li>
+                    <div class="key">계좌번호</div>
+                    <div class="value">
+                        <!-- 220907 : 계좌번호 복사 aria-label 추가 -->
+                        <button type="button" class="btn_txt ico_copy" aria-label="copy" onclick="UICommon.Layer.toast('계좌번호가 복사되었습니다.')"><span class="number">400407-01-023569</span></button>
+                        <!-- //220907 : 계좌번호 복사 aria-label 추가 -->
+                    </div>
+                </li>
+                <li>
+                    <div class="key">신규일</div>
+                    <div class="value">
+                        <span class="number">2022.07.21</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">연계·제휴 서비스</div>
+                    <div class="value">서비스명 해당사항없음</div>
+                </li>
+                <li>
+                    <div class="key">계약체결일시</div>
+                    <div class="value">
+                        <span class="number">2022.07.21 08:30</span>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 개설 계좌가 금융거래한도 계좌일 경우 해당 안내 영역 노출 -->
+            <h2 class="hidden">금융거래한도계좌 개설 안내</h2>
+            <div class="pro_bank_guide gap_lg_0">
+                <p class="p">금융거래한도계좌로 통장이 개설되었습니다.</p>
+                <p class="p_sub">금융거래목적을 확인할 수 있는 금융거래목적확인서 및 객관적 증빙자료(예: 부가가치세과세표준증명서)를 영업점에 제시하는 경우 금융거래 한도제한 해제가 가능합니다.</p>
+            </div>
+            <!-- //개설 계좌가 금융거래한도 계좌일 경우 해당 안내 영역 노출 -->
+
+            <h2 class="hidden">추가 상품 안내</h2>
+            <h2 class="h2 gap_sm">이런 상품은 어떠세요?</h2>
+            <!-- case : 외화계좌 신규일 경우 -->
+            <div class="icon_area">
+                <div class="icon_cont">
+                    <i class="ico_bank fc_deposit"></i>
+                    <span>외화예금</span>
+                </div>
+                <div class="icon_cont">
+                    <i class="ico_bank deposit"></i>
+                    <span>예금</span>
+                </div>
+                <div class="icon_cont">
+                    <i class="ico_bank loan"></i>
+                    <span>대출</span>
+                </div>
+            </div>
+            <!-- //case : 외화계좌 신규일 경우 -->
+
+            <!-- case : 채권양도계좌 신규일 경우 -->
+            <!-- 220811 : 예금 / 대출 / 펀드 문구 수정-->
+            <div class="icon_area">
+                <div class="icon_cont">
+                    <i class="ico_bank deposit"></i>
+                    <span>예금</span>
+                </div>
+                <div class="icon_cont">
+                    <i class="ico_bank loan"></i>
+                    <span>대출</span>
+                </div>
+                <div class="icon_cont">
+                    <i class="ico_bank fund"></i>
+                    <span>펀드</span>
+                </div>
+            </div>
+            <!-- //220811 : 예금 / 대출 / 펀드 문구 수정-->
+            <!-- //case : 채권양도계좌 신규일 경우 -->
+
+            <!-- case : default -->
+            <div class="icon_area">
+                <div class="icon_cont">
+                    <i class="ico_bank deposit"></i>
+                    <span>예금</span>
+                </div>
+                <div class="icon_cont">
+                    <i class="ico_bank loan"></i>
+                    <span>대출</span>
+                </div>
+                <div class="icon_cont">
+                    <i class="ico_bank fund"></i>
+                    <span>펀드</span>
+                </div>
+                <div class="icon_cont">
+                    <i class="ico_bank bond_transfer"></i>
+                    <span>채권양도<br>전용계좌</span>
+                </div>
+            </div>
+            <!-- //case : default -->
+        </div>
+
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">확인</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

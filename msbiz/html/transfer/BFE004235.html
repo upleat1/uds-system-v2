@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[계좌이체]추가이체 입력거래</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <h1 class="hidden">추가이체 입력거래</h1>
+        
+        <!-- 221013 : 마크업수정 -->
+        <div class="tr_top_sum">
+            <span class="acc_bank md">
+                <span class="icon_bank_004"></span>KB국민<strong class="number">432102-01-271831</strong>
+            </span>
+            <span class="total">
+                <span class="bk_total">총 <em class="number">2</em><em class="num_unit">건</em></span>
+                <span class="bk_pay"><em class="number">723,000,000</em><em class="num_unit">원</em></span>
+            </span>
+        </div>
+        <!-- //221013 : 마크업수정 -->
+        <div class="section_f">
+            <div class="acc_list_wrap tr_pay">
+                <!-- 카드리스트영역 -->
+                <div>
+                    <!-- 받는분 1 -->
+                    <div class="acc_pannel">
+                        <div class="acc_wrap">
+                            <h2 class="h3 mgt_0">받는분 정보 1</h2>
+                            <div class="form_group">
+                                <div class="form_row">
+                                    <div class="select">
+                                        <button type="button" class="select_btn active" title="받는분 은행 선택" >KB국민</button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input" role="button" aria-label="{받는분 계좌번호 값}, 받는분 계좌번호 입력" >
+                                        <input type="tel" placeholder="계좌번호" title="받는분 계좌번호" aria-hidden="true" value="432102-01-271831" class="bg_white" readonly >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_wrap btm gap_xs">
+                                <a href="#none" class="btn_txt ico_arr" title="최근∙자주∙내계좌">최근∙자주∙내계좌</a>
+                            </div>
+                            <div class="form_group"> 
+                                <div class="form_tit">보낼금액</div>
+                                <div class="form_row">
+                                    <div class="input unit" role="button" aria-label="{보낼 금액 입력 값}, 보낼금액" >
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="보낼금액" data-unit="원" value="2,000" class="bg_white" readonly >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="toggle_sm_wrap gap_sm"><!-- 220729 : gap_sm 클래스로 수정 -->
+                                <button class="tit js_toggle" aria-expanded="false">추가정보입력</button>
+                                <div class="toggle_panel" role="region">
+                                    <div class="form_group">
+                                        <div class="form_tit">내통장 메모</div>
+                                        <div class="form_row">
+                                            <div class="select">
+                                                <button type="button" class="select_btn" title="내통장 메모" >선택</span></button><!-- 선택값 입력시 클래스 active 추가 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="form_group">
+                                        <div class="form_tit">받는분 통장 메모</div>
+                                        <div class="form_row">
+                                            <div class="select">
+                                                <button type="button" class="select_btn" title="받는분 통장 메모" >선택</span></button><!-- 선택값 입력시 클래스 active 추가 -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form_group">
+                                        <div class="form_tit">CMS코드</div>
+                                        <!-- 220802 : 국민은행 CMS 입력필드/버튼 추가 -->
+                                        <!-- 국민은행 -->
+                                        <div class="form_row">
+                                            <div class="input">
+                                                <input type="text" placeholder="CMS 코드 입력 1" title="CMS 코드 입력 1">
+                                            </div>
+                                        </div>
+                                        <div class="btn_list_btm">
+                                            <span><button type="button" class="btn outline sm">CMS코드 추가</button></span>
+                                        </div>
+                                        <!-- //국민은행 -->
+                                        <!-- //220802 : 국민은행 CMS 입력필드/버튼 추가 -->
+
+                                        <p class="tip_info">이용기관에서 각 송금인에게 부여한 송금일 식별 확인번호입니다. 코드를 모르시는 경우 이용기관에 문의해 주세요.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_menu"><span class="ico_20_x"></span><span class="hidden">닫기</span></button>
+                    </div>
+                    <!-- //받는분 1 -->
+
+                    <!-- 받는분 2 -->
+                    <!-- 입금지정계좌/MASTER 입금계좌 서비스 가입 시 -->
+                    <div class="acc_pannel">
+                        <div class="acc_wrap">
+                            <h2 class="h3 mgt_0">받는분 정보 2</h2>
+                            <div class="form_group">
+                                <div class="form_tit">받는 분</div>
+                                <div class="form_row">
+                                    <div class="btn_list_btm gap_xs">
+                                        <span><button type="button" class="btn outline sm">입금지정계좌</button></span>
+                                        <span><button type="button" class="btn outline sm">내계좌</button></span>
+                                    </div>
+                                </div>
+                                <div class="form_row gap_sm">
+                                    <div class="select">
+                                        <button type="button" class="select_btn active" title="입금은행 선택" disabled >KB국민</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input" role="button" aria-label="{받는분 계좌번호 값}, 받는분 계좌번호 입력" >
+                                        <input type="tel" placeholder="계좌번호" title="받는분 계좌번호" aria-hidden="true" value="432102-01-271831"  readonly >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_group"> 
+                                <div class="form_tit">보낼금액</div>
+                                <div class="form_row">
+                                    <div class="input unit" role="button" aria-label="{보낼 금액 입력 값}, 보낼금액" >
+                                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="보낼금액" data-unit="원" value="2,000" class="bg_white" readonly >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="toggle_sm_wrap gap_sm"><!-- 220729 : gap_sm 클래스로 수정 -->
+                                <button class="tit js_toggle" aria-expanded="false">추가정보입력</button>
+                                <div class="toggle_panel" role="region">
+                                    <div class="form_group">
+                                        <div class="form_tit">내통장 메모</div>
+                                        <div class="form_row">
+                                            <div class="select">
+                                                <button type="button" class="select_btn" title="내통장 메모" >선택</span></button><!-- 선택값 입력시 클래스 active 추가 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="form_group">
+                                        <div class="form_tit">받는분 통장 메모</div>
+                                        <div class="form_row">
+                                            <div class="select">
+                                                <button type="button" class="select_btn" title="받는분 통장 메모" >선택</span></button><!-- 선택값 입력시 클래스 active 추가 -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form_group">
+                                        <div class="form_tit">CMS코드</div>
+                                        <!-- 다른금융 -->
+                                        <div class="form_row">
+                                            <div class="input">
+                                                <input type="text" title="CMS코드" placeholder="32자 이내(영문대문자, 숫자만 입력)">
+                                            </div>
+                                        </div>
+                                        <!-- //다른금융 -->
+                                        <p class="tip_info">이용기관에서 각 송금인에게 부여한 송금일 식별 확인번호입니다. 코드를 모르시는 경우 이용기관에 문의해 주세요.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_menu"><span class="ico_20_x"></span><span class="hidden">닫기</span></button>
+                    </div>
+                    <!-- //입금지정계좌/MASTER 입금계좌 서비스 가입 시 -->
+                    <!-- //받는분 2 -->
+                </div>
+                <!-- //카드리스트영역 -->
+
+                <div class="btn_list_btm gap_md">
+                    <span><button type="button" class="btn outline md">이체추가</button></span>
+                </div>
+            </div>
+
+            <div class="btn_wrap center gap_sm_3">
+                <a href="#none" class="btn_txt link">추가정보 한 번에 입력</a>
+            </div>
+
+        </div>
+
+        <div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">전체이체</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

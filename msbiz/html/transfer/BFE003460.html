@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>관리점등록 - 급여이체</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="hidden">급여이체 관리점 등록</h1>
+		<div class="inform_top_wrap">
+			<ul class="depth bul">
+                <li>급여이체 서비스를 이용하기 위해서는 관리점이<br>반드시 등록되어야 합니다.</li>
+                <li>현재 고객님의 급여이체를 관리하고 있는 영업점을 확인하시어, 희망하는 관리점을 선택하거나, 다른 영업점을 찾아서 등록하실 수 있습니다.</li>
+            </ul>
+		</div>
+        <!-- 220928 수정 -->
+        <div class="section">
+            <h2 class="h2">희망관리점</h2>
+            <!-- 공통태그(공통영역) -->
+            <div class="staff_hope">
+                <div class="staff_hope_sel">
+                    <div class="rdoChk_box"> 
+                        <span class="selection"> 
+                            <input type="radio" id="staff_hope_1" name="staff_hope"> 
+                            <label for="staff_hope_1" class="label"><em>지점명</em></label>
+                        </span> 
+                        <span class="selection"> 
+                            <input type="radio" id="staff_hope_2" name="staff_hope">
+                            <label for="staff_hope_2" class="label"><em>직원이름</em></label> 
+                        </span> 
+                        <span class="selection"> 
+                            <input type="radio" id="staff_hope_3" name="staff_hope"> 
+                            <label for="staff_hope_3" class="label"><em>직원번호</em></label> 
+                        </span> 
+                        <span class="selection"> 
+                            <input type="radio" id="staff_hope_4" name="staff_hope">
+                            <label for="staff_hope_4" class="label"><em>없음</em></label> 
+                        </span> 
+                </div>
+                </div><!-- 지점명 -->
+                <div class="staff_hope_cts" aria-hidden="true">
+                    <div class="form_group">
+                        <div class="form_tit hidden">지점명</div>
+                        <div class="form_row">
+                            <div class="select outline lg"> 
+                                <button type="button" class="select_btn active" title="지점명 선택">지점명</button> <!-- [개발] 버튼에 값이 들어갈 경우 클래스 "active" 추가 -->
+                            </div>
+                        </div>
+                        <div class="form_row"> 
+                            <span class="input int_btn"> 
+                                <input type="text" title="지점명 직접입력" placeholder="지점명" value="동여의도(김국민)" disabled=""> 
+                                <button type="button" class="btn point sm round">검색</button> 
+                            </span> 
+                        </div>
+                        <div class="form_btm_full_wrap"> 
+                            <span>
+                                <button type="button" class="btn outline md">검색초기화</button>
+                            </span> 
+                        </div>
+                    </div>
+                </div><!-- //지점명 -->
+                <!-- 직원이름 -->
+                <div class="staff_hope_cts" aria-hidden="true">
+                    <div class="form_group">
+                        <div class="form_tit hidden">직원이름</div>
+                        <div class="form_row"> 
+                            <span class="input int_btn"> 
+                                <input type="text" title="직원이름 직접입력" placeholder="직원이름"> 
+                                <button type="button" class="btn point sm round">검색</button>
+                            </span> 
+                        </div>
+                    </div>
+                </div><!-- //지점명 -->
+                <!-- 직원번호 -->
+                <div class="staff_hope_cts" aria-hidden="true">
+                    <div class="form_group">
+                        <div class="form_tit hidden">직원번호</div>
+                        <div class="form_row"> 
+                            <span class="input int_btn"> 
+                                <input type="text" title="직원번호 직접입력" placeholder="직원번호"> 
+                                <button type="button" class="btn point sm round">검색</button>
+                            </span> 
+                        </div>
+                    </div>
+                </div><!-- //직원번호 -->
+            </div>
+            <p class="depth info">고객님의 상품을 관리할 전담직원을 선택해 주시기 바랍니다.</p><!-- 220729 리웍 (위치변경)-->
+            <!-- //공통태그(공통영역) -->
+        </div>
+        <!-- //220928 수정 -->
+		<!-- <div class="section">
+            <h2 class="h2">희망관리점</h2>
+            <div class="form_row">
+                <div class="input int_btn">
+                    <input type="text" title="검색어" placeholder="희망관리점을 선택해주세요" value="압구정스타PB센터" readonly>
+                    <button type="button" class="btn point sm round">지점검색</button>
+                </div>
+            </div>
+		</div> -->
+        <hr class="hr_divide"><!-- 220729 리웍 : 디바이더 추가 -->
+        <div class="section">
+            <div class="h2"><h2>추천관리점</h2>
+                <div class="tooltip_limited">
+                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                        <p class="tooltip_tit">추천관리점이란?</p>
+                        <div class="tooltip_cont">3개월 이내 처리한 선일자, 탑라인 관리점 또는 현재 인터넷뱅킹 관리점입니다.</div>
+                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="rdoChk_group">
+                <span class="selection">
+                    <input type="radio" id="radioV1" name="radio_v">
+                    <label for="radioV1" class="label"><em>압구정스타PB센터</em></label>
+                </span>
+                <span class="selection">
+                    <input type="radio" id="radioV2" name="radio_v">
+                    <label for="radioV2" class="label"><em>압구정스타PB센터</em></label>
+                </span>
+            </div>
+            <p class="depth info">추천관리점을 선택하시면 희망관리점으로 등록하실 수 있습니다.</p>
+		</div>
+        <div class="section">
+            <!-- 220921 수정 : 배너 수정 -->
+            <div class="banner_type tr01">
+                <div class="banner_txt">
+                    <strong class="tit">Star CMS</strong>
+                    <p class="txt">Star CMS 이용동의하고<br>타행이체하면 수수료가 무료!</p>
+                </div>
+            </div>
+            <!-- 220921 수정 : 배너 수정 -->
+        </div>
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	!window.SPA ? window.UICommon.init() : console.log('UICommon 실패!');
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

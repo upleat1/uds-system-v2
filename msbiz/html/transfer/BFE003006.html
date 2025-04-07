@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[계좌이체]바텀시트-은행/증권사/국세지방세 선택(당타행)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/transfer.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!-- 은행/증권사/국세지방세 선택 START -->
+    <div id="bottomFinance" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>은행/증권사/국세지방세 선택</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <div class="tab_wrap ly_acc_list">
+                        <div class="tab_list" role="tablist">
+                            <div class="scroll_wrap">
+                                <button type="button" role="tab" aria-selected="true" aria-controls="bankPanel">은행</button>
+                                <button type="button" role="tab" aria-selected="false" aria-controls="stockPanel">증권사</button>
+                                <button type="button" role="tab" aria-selected="false" aria-controls="taxPanel">국세/지방세</button>
+                            </div>
+                        </div>
+                        <div class="tab_panel" role="tabpanel" id="bankPanel">
+                            <h2 class="hidden">은행</h2>
+                            <div class="section">
+                                <ul class="list_item_select bank_list transfer">
+                                    <li><a href="#none"><span class="icon_bank_004 md"></span><strong>KB국민</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_003 md"></span><strong>기업</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_011 md"></span><strong>농협</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_088 md"></span><strong>신한</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_071 md"></span><strong>우체국</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_023 md"></span><strong>SC제일</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_081 md"></span><strong>하나</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_027 md"></span><strong>한국씨티</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_020 md"></span><strong>우리</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_039 md"></span><strong>경남</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_034 md"></span><strong>광주</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_031 md"></span><strong>대구</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_055 md"></span><strong>도이치</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_032 md"></span><strong>부산</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_002 md"></span><strong>산업</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_007 md"></span><strong>수협</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_037 md"></span><strong>전북</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_035 md"></span><strong>제주</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_045 md"></span><strong>새마을금고</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_048 md"></span><strong>신협</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_064 md"></span><strong>산림조합</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_054 md"></span><strong>HSBC</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_050 md"></span><strong>저축은행</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_060 md"></span><strong>뱅크오브아메리카</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_089 md"></span><strong>케이뱅크</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_090 md"></span><strong>카카오뱅크</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_057 md"></span><strong>JP모간체이스</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_061 md"></span><strong>BNP파리바</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_067 md"></span><strong>중국건설은행</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_062 md"></span><strong>중국공상</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_063 md"></span><strong>중국은행</strong></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab_panel" role="tabpanel" id="stockPanel">
+                            <h2 class="hidden">증권사</h2>
+                            <div class="section">
+                                <ul class="list_item_select bank_list transfer">
+                                    <li><a href="#none"><span class="icon_bank_012 md"></span><strong>NH투자증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_209 md"></span><strong>유안타증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_218 md"></span><strong>KB증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_238 md"></span><strong>미래에셋대우</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_240 md"></span><strong>삼성증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_243 md"></span><strong>한국투자증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_261 md"></span><strong>교보증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_262 md"></span><strong>하이투자증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_263 md"></span><strong>현대차증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_261 md"></span><strong>SK증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_266 md"></span><strong>한화투자증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_270 md"></span><strong>하나금융투자</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_278 md"></span><strong>신한금융투자</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_280 md"></span><strong>유진투자증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_287 md"></span><strong>메리츠증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_291 md"></span><strong>신영증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_265 md"></span><strong>이베스트투자증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_292 md"></span><strong>케이프투자증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_290 md"></span><strong>부국증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_264 md"></span><strong>키움증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_267 md"></span><strong>대신증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_279 md"></span><strong>DB금융투자</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_294 md"></span><strong>한국포스증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_227 md"></span><strong>케이티비투자증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_224 md"></span><strong>BNK투자증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_288 md"></span><strong>카카오페이증권</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_225 md"></span><strong>IBK투자증권</strong></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab_panel" role="tabpanel" id="taxPanel">
+                            <h2 class="hidden">국세/지방세</h2>
+                            <div class="section">
+                                <ul class="list_item_select bank_list transfer">
+                                    <li><a href="#none"><span class="icon_bank_301 md"></span><strong>국세</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_302 md"></span><strong>지방세입</strong></a></li>
+                                    <li><a href="#none"><span class="icon_bank_302 md"></span><strong>국고금</strong></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 220729 리웍 삭제
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div> -->
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+    <!--// 은행/증권사/국세지방세 선택 END -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function(){
+        UICommon.Layer.open('#bottomFinance');
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

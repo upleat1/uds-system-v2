@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>상품소개/이용안내</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">상품소개/이용안내</h1>
+
+        <div class="section">
+            <h2 class="h2">선정산서비스(KB셀러론)이란?</h2>
+            <p class="p gap_sm">KB와 제휴되어 있는 온라인마켓의 셀러(판매회원)분들은 은행에서 정산금을 먼저 지급받으시고, 은행이 정산금을 받아 자동으로 대출금을 상환하는 상품으로,</p>
+            <ol class="depth num">
+                <li>판매대금을 조기에 현금화 할 수 있어 자금의 유동성을 확보할 수 있으며,</li>
+                <li>대출신청에서 대출지급까지의 전 과정이 인터넷상에서 이루어지므로 시간, 비용을 절감할 수 있고 신속히 대출금을 지급받을 수 있습니다.</li>
+            </ol>
+        </div>
+
+        <div class="section">            
+            <h2 class="h2">대출대상</h2>
+            <ol class="depth num">
+                <li>당행과 제휴되어 있는 온라인마켓의 판매회원으로 등록하고 재화 등을 판매하고 있고,</li>
+                <li>대표자가 내국인인 개인사업자 및 법인사업자 이며,</li><!-- 220923 수정 -->
+                <li>당행의 심사기준(거래기간, 반품율, 대표자 신용정보)을 통과하는 셀러</li><!-- 220729 리웍 -->
+            </ol>
+        </div>
+
+        <div class="section">
+            <ul class="list_acco js_accordion">
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">
+                        <strong>대출(약정)한도</strong>
+                    </a>
+                    <!-- 220923 전체수정 -->
+                    <div class="toggle_panel" role="region">
+                        <p class="p">KB셀러론은 최근 1년간 마켓으로부터 수령한 정산금의 100%를 한도로 부여하며, 최대 한도는 개인사업자와 법인사업자가 상이합니다.</p><!-- 220729 리웍 -->
+                        <div class="table gap_xs_2">
+                            <table>
+                                <caption>대출(약정)한도정보</caption>
+                                <colgroup>
+                                    <col style="width:25%">
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">법인사업자</th>
+                                        <th scope="col">개인사업자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">마켓별</th>
+                                        <td class="right">최대 <span class="number">20</span>억원</td>
+                                        <td class="right">최대 <span class="number">5</span>억원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">상품별</th>
+                                        <td class="right">최대 <span class="number">20</span>억원</td>
+                                        <td class="right">최대 <span class="number">5</span>억원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="tip_info">단, 패션플러스의 경우 마켓별 최대한도는 개인/법인사업자 1억원임</p>
+                        </div>
+                    </div>
+                    <!-- //220923 전체수정 -->
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">
+                        <strong>대출금리 및 제휴마켓</strong>
+                    </a>
+                    <div class="toggle_panel" role="region">
+                        <p class="p">마켓의 신용도에 따라 당행과 마켓이 약정한 금리를 일괄 적용하며, 2021.6.30 기준 연 금리는 아래와 같음</p><!--220817 날짜 수정 -->
+                        <div class="table gap_xs_2">
+                            <table>
+                                <caption>대출금리 및 제휴마켓</caption>
+                                <colgroup>
+                                    <col style="width:70%">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">마켓</th>
+                                        <th scope="col">금리(연)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>㈜위메프</td>
+                                        <td class="right"><strong class="number">4.45</strong><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜쿠팡</td>
+                                        <td class="right"><strong class="number">4.45</strong><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>지마켓글로벌 유한책임회사(옥션, G마켓)</td>
+                                        <td class="right"><strong class="number">4.45</strong><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜무신사</td>
+                                        <td class="right"><strong class="number">4.45</strong><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜더블유컨셉코리아</td>
+                                        <td class="right"><strong class="number">4.45</strong><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜패션플러스</td>
+                                        <td class="right"><strong class="number">4.45</strong><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜SSG닷컴</td>
+                                        <td class="right"><strong class="number">4.35</strong><span class="num_unit">%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="tip_info"><strong>선정산(대출) 실행 시 선정산 방식이 [자동선정산]인경우 자동선정산우대금리(0.5%)가 추가로 할인 적용됨</strong></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">
+                        <strong>가입절차 및 이용안내</strong>
+                    </a>
+                    <div class="toggle_panel" role="region">
+                        <ol class="depth step">
+                            <li>
+                                <p class="tit">기업인터넷뱅킹 가입 및 통장개설<span class="normal">(필요 시)</span></p><!-- 22/07/14 .normal 추가 -->
+                            </li>
+                            <li>
+                                <p class="tit">대출약정 및 채권양도계약 체결</p>
+                                <!-- <p class="p_sub">
+                                    기업인터넷뱅킹 內 대출약정 화면 경로:<br>기업 > 상품라운지 > 대출 > 선정산서비스(KB셀러론) > 인터넷약정(셀러) 
+                                </p> 220907 삭제 --><!-- 22/07/14 br 추가 -->
+                            </li>
+                            <li>
+                                <p class="tit">마켓의 승인 및 채권양도 승낙</p>
+                            </li>
+                            <li>
+                                <p class="tit">약정완료 안내(신청자 휴대폰 카카오알림톡 또는 LMS)</p><!-- 220907 수정 -->
+                            </li>
+                        </ol>
+                        <p class="tip_info gap_sm">기업인터넷뱅킹 미가입 개인사업자의 경우 간편확인을 통한 KB셀러론 가입가능여부 확인 가능</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">
+                        <strong>서비스 이용가능 시간 안내</strong>
+                    </a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="depth bul">
+                            <li>약정관련거래 : 은행 영업일 06:00~23:00
+                                <!-- <ul class="depth dash">
+                                    <li class="bold">대출약정은 기업인터넷뱅킹에서만 가능</li>
+                                </ul> 220907 삭제-->
+                            </li>
+                            <li>단순 조회거래 및 선정산(대출) 실행가능시간 : 00:00~24:00</li>
+                            <li>
+                                대출금 상환 가능시간<br>
+                                은행 영업일 : 00:00~24:00<br>
+                                주말 및 공휴일 : 06:00~24:00
+                            </li>
+                            <li>정산금 입금시간 : 14:30, 17:20, 20:00, 23:00</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <p class="p bold">선정산서비스(KB셀러론) 이용문의: 1833-6150</p><!-- 220907 수정 -->
+        </div>
+        
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">가능여부조회</button></span><!-- 220907 수정 -->
+                <span><button type="button" class="btn primary lg">약정신청</button></span><!-- 220907 수정 -->
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

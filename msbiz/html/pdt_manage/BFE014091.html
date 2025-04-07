@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[가입자등록]가입자등록계좌 선택</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START --> 
+<div id="wrap">
+	<div id="content" class="cate_pdt_manage">
+        <h1 class="hidden">가입자등록 계좌선택</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>가입자 명부는 한번에 5명까지 등록 가능합니다.</li>
+                <li>DB형 가입자 등록 시 입력한 가입자 성명과 당행에 등록된 가입자의 성명이 일치하지 않을 경우 익영업일 당행에 등록된 이름으로 변경됩니다.</li>
+                <li>DC형 가입자 등록 시 당행에 고객정보가 등록되지 않았거나, (필수)개인정보 수집이용동의를 하지 않은 고객의 경우는 영업점을 통해 가입자 등록을 해주시기 바랍니다.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <div class="form_group">
+                <div class="form_tit">계좌번호</div>
+                <div class="form_row">
+                    <!-- case : 계좌 하나일때 -->
+                    <div class="input">
+                        <div class="input_txt">000000-00-000000 | 확정급여형(DB)</div>
+                    </div>
+                    <!-- case : 다계좌일때 select -->
+                    <div class="select">
+						<button type="button" class="select_btn active" title="계좌 선택">000000-00-000000 | 확정급여형(DB)</button>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">등록</button></span>
+            </div>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript"></script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

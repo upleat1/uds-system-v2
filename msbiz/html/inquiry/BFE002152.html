@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[바텀시트]일반이체수수료 조회_계좌번호 선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>    
+    <div id="wrap">
+        <div id="content">
+            <div class="btn_list_btm">
+                <span><button type="button" class="btn outline md" onclick="UICommon.Layer.open('#BFE002152')">계좌번호 선택</button></span>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <!-- 조회조건 바텀시트 -->
+    <div id="BFE002152" class="popup bottom show" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>계좌번호 선택</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <div class="acc_list_head"><span class="lb">전체</span></div>
+                    <ul class="acc_list acc_type2">
+                        <li>
+                            <a href="#none">
+                                <span class="bk_num">123126501-04-001810</span>
+                                <span class="bk_name bold">KB 기업종합통장-보통예금</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <span class="bk_num">620001-04-386660</span>
+                                <span class="bk_name bold">사업자응원통장-보통예금</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <span class="bk_num">620001-04-386660</span>
+                                <span class="bk_name bold">사업자응원통장-보통예금</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="result nodata sm">
+                        <p class="tit">계좌번호가 없습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <!--  220729 리웍 삭제
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div> -->
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+    <!-- //조회조건 바텀시트 -->
+
+    <script>
+        /* 업무 SCRIPT */
+        UICommon.Layer.open('#BFE027162');
+    </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[통합검색]Index</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="통합검색" href="/msbiz/app/css/search.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">통합검색</h1>
+            <div class="total_search_wrap"><!-- [개발] '자동완성 layer' 열리면 .open 클래스 추가/닫히면 삭제  -->
+                <div class="search_wrap">
+                    <div class="input">
+                        <input type="text" id="sch" name="sch" class="inp" placeholder="질문을 입력해 주세요.">
+                        <button type="submit" class="btn_sch"><span class="hidden">검색</span></button>
+                        <button type="button" class="btn_mic"><span class="hidden">음성으로 검색</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 인기검색어 -->
+            <div class="section">
+                <h2 class="hidden">인기검색어</h2>
+                <ul class="list_acco js_accordion acco_popular_word">
+                    <li>
+                        <a href="#none" role="button" class="tit" aria-expanded="false">인기검색어</a>
+                        <div class="swiper-container popular_slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">1.</span><span class="txt">적금</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">2.</span><span class="txt">체크카드</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">3.</span><span class="txt">자동이체 신청</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">4.</span><span class="txt">고수익 펀드</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">5.</span><span class="txt">잔액확인</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">6.</span><span class="txt">계좌이체</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">7.</span><span class="txt">추천상품</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">8.</span><span class="txt">펀드</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">9.</span><span class="txt">저금리대출</span></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide_area">
+                                        <a href="#none" class="eps"><span class="txt_num number">10.</span><span class="txt">우대대출</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle_panel" role="region">
+                            <div class="list_popular">
+                                <ul>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">1.</span><span class="txt">적금</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">2.</span><span class="txt">체크카드</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">3.</span><span class="txt">자동이체 신청</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">4.</span><span class="txt">고수익 펀드</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">5.</span><span class="txt">잔액확인</span></a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">6.</span><span class="txt">계좌이체</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">7.</span><span class="txt">추천상품</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">8.</span><span class="txt">펀드</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">9.</span><span class="txt">저금리대출</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="eps"><span class="txt_num number">10.</span><span class="txt">우대대출</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //인기검색어 -->
+
+            <!-- 최근검색어 -->
+            <div class="section gap_lg">
+                <h2 class="h3">최근검색어</h2>
+                <div class="sch_recent">
+                    <!-- 최근 검색어가 있을 때 노출 -->
+                    <ul class="list_recent">
+                        <li>
+                            <a href="#none" class="txt">자산관리</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="자산관리"><span class="hidden">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="#none" class="txt">수수료면제수수료면제수수료면제수수료면제수수료면제</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="수수료면제수수료면제수수료면제수수료면제수수료면제"><span class="hidden">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="#none" class="txt">예약이체</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="예약이체"><span class="hidden">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="#none" class="txt">자산관리</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="자산관리"><span class="hidden">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="#none" class="txt">외화펀드</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="자산관리"><span class="hidden">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="#none" class="txt">최근검색어 6열</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="최근검색어 6열"><span class="hidden">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="#none" class="txt">최근검색어 7열</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="최근검색어 7열"><span class="hidden">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="#none" class="txt">최근검색어 8열</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="최근검색어 8열"><span class="hidden">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="#none" class="txt">최근검색어 9열</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="최근검색어 9열"><span class="hidden">삭제</span></button>
+                        </li>
+                        <li>
+                            <a href="#none" class="txt">최근검색어 10열</a>
+                            <strong class="date number">04.17</strong>
+                            <button type="button" class="btn_del" title="최근검색어 10열"><span class="hidden">삭제</span></button>
+                        </li>
+                    </ul>
+                    <!-- //최근 검색어가 있을 때 노출 -->
+                </div>
+            </div>
+            <!-- //최근검색어 -->
+
+            <div class="auto_foot">
+                <div class="hgroup">
+                    <div>
+                        <span class="switch right">
+                            <input type="checkbox" id="auto_save" checked="">
+                            <label for="auto_save"><span>자동저장</span></label>
+                        </span>
+                    </div>
+                    <!-- 최근검색어 있을때만 전체삭제 버튼 노출 -->
+                    <div><button type="button" class="btn_txt btn_all_del">전체삭제</button></div>
+                </div>
+            </div>
+            
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+        $(function(){
+            var popualWrodSwiper = new Swiper('.acco_popular_word .popular_slide', {
+                observer:true,
+                obServeParents:true,
+                loop: true,
+                direction:'vertical',
+                slidesPerView: '1',
+                autoplay:{
+                    delay:2000,
+                    disableOninteraction:false,
+                    waitForTransition:false
+                },
+                speed:300
+            });
+
+            var popualWordMotion = function(){
+                return {
+                    init: function(){
+                        popualWrodSwiper.autoplay.start();
+                        this.popualSwiperMotion();
+                    },
+                    popualSwiperMotion : function(){
+                        $(document).on('click', '.js_accordion a.tit', function(e){
+                            var _this = $(this),
+                            _li = _this.parents('li'),
+                            _slide = _li.find('.popular_slide');
+
+                            if(_li.hasClass('on')){
+                                popualWrodSwiper.autoplay.start();
+                                _slide.attr('aria-hidden', 'false').show();
+
+                            } else {
+                                popualWrodSwiper.autoplay.stop();
+                                _slide.attr('aria-hidden', 'true').hide();
+                            }
+                        });
+                    }
+                }
+            }
+            popualWordMotion().init();
+
+            /* 검수용 start */
+            $('.total_search_wrap .search_wrap .inp')
+                .on('focus', function(e){
+                    $(this).closest('.total_search_wrap').addClass('open');
+                })
+                .on('focusout', function(e){
+                    $(this).closest('.total_search_wrap').removeClass('open');
+                });
+            /* 검수용 end */
+        }); 
+    </script>
+</body>
+
+</html>

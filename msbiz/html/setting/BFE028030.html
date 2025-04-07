@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Push 동의/해지 조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="환경설정" href="/msbiz/app/css/setting.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <h1 class="h1">Push 동의 및 조회</h1>
+            <div class="inform_top_wrap">
+                <!-- 220908 내용수정 // 기획 변경 -->
+                <p class="depth">KB기업스타뱅킹에서 보내 드리는 중요한 거래 정보 및 다양한 금융혜택을 PUSH 알림으로 받으실 수 있습니다.</p>
+            </div>
+            <div class="section set_push">
+                <div class="hgroup h2">
+                    <div>
+                        <h2>Push 동의</h2>
+                    </div>
+                    <div>
+                        <span class="switch">
+                            <input type="checkbox" id="switch_agree" checked>
+                            <label for="switch_agree"><span class="hidden">Push 수신 동의</span></label>
+                        </span>
+                    </div>
+                </div>
+                <ul class="list list_top_bd">
+                    <li>
+                        <!-- 220902 항목 추가 // 기획 변경-->
+                        <div class="hgroup h2">
+                            <div class="h2"><h2>입출금 알림 </h2>
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont"> 개인/법인 사업자 고객 대상으로 실시간 입출금 거래 알림</div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- <a href="#none" class="btn_txt ico_arr">미사용중</a> -->
+                                <a href="#none" class="btn_txt ico_arr"><span class="number">n</span>개 계좌 사용중</a>
+                            </div>
+                        </div>
+                        <!-- 220902 항목 추가 // 기획 변경 -->
+                        <!-- 
+                            <h3 class="p">입출금 알림</h3>
+                        <p class="p_sub">개인/법인 사업자 고객 대상으로 실시간 입출금 거래 알림</p>
+                        <div class="right"> -->
+                            <!-- <a href="#none" class="btn_txt ico_arr">미사용중</a> -->
+                            <!-- <a href="#none" class="btn_txt ico_arr"><span class="number">n</span>개 계좌 사용중</a>
+                        </div> -->
+                        <!-- 입출금 계좌 목록 -->
+                        <ul class="push_account">
+                            <li>
+                                <div class="hgroup">
+                                    <div>
+                                        <p class="p">$계좌별명$</p>
+                                        <div class="acc">KB국민 <strong class="number">371102-04-140099</strong></div>
+                                    </div>
+                                    <div class="top">
+                                        <span class="switch">
+                                            <input type="checkbox" id="switch1_1">
+                                            <label for="switch1_1"><span class="hidden">$계좌별명$ 입출금알림 동의</span></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="btn_list_btm">
+                                    <span><button type="button" class="btn outline sm">계좌추가</button></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- //입출금 계좌 목록 -->
+                    </li>
+                    <li>
+                        <h3 class="p">Sub 입출금 알림 동의 현황</h3>
+                        <p class="p_sub">Sub 사용자의 입출금 알림 동의 및 계좌별 <br>상세 설정 현황 확인</p>
+                        <div class="right">
+                            <a href="#none" class="btn_txt ico_arr">미사용중</a>
+                            <!-- <a href="#none" class="btn_txt ico_arr"><span class="number">n</span>개 계좌 사용중</a> -->
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="p">통장자동대출한도 알림</h3>
+                        <!-- 220908 <br> 태그 추가 -->
+                        <p class="p_sub">자동대출 약정금액의 80% 이상 한도사용<br>(1일 1회)</p>
+                        <div class="right">
+                            <a href="#none" class="btn_txt ico_arr">미사용중</a>
+                            <!-- <a href="#none" class="btn_txt ico_arr"><span class="number">n</span>개 계좌 사용중</a> -->
+                        </div>
+                        <!-- 자동대출계좌 계좌 목록 -->
+                        <ul class="push_account">
+                            <li>
+                                <div class="hgroup">
+                                    <div>
+                                        <p class="p">$계좌별명$</p>
+                                        <div class="acc">KB국민 <strong class="number">371102-04-140099</strong></div>
+                                    </div>
+                                    <div class="top">
+                                        <span class="switch">
+                                            <input type="checkbox" id="switch2_1">
+                                            <label for="switch2_1"><span class="hidden">$계좌별명$ 통장자동대출한도 알림 동의</span></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="btn_list_btm">
+                                    <span><button type="button" class="btn outline sm">계좌추가</button></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- //자동대출계좌 계좌 목록 -->
+                    </li>
+                    <li>
+                        <div class="hgroup">
+                            <div>
+                                <h3 class="p">가상계좌 입금 알림</h3>
+                                <p class="p_sub">가상계좌 보유 고객 실시간 입금 알림</p>
+                            </div>
+                            <div class="top">
+                                <span class="switch">
+                                    <input type="checkbox" id="switch3">
+                                    <label for="switch3"><span class="hidden">가상계좌 입금 알림 동의</span></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="right"><a href="#none" class="btn_txt ico_arr">상세설정</a></div>
+                    </li>
+                    <li>
+                        <div class="hgroup">
+                            <div>
+                                <h3 class="p">예약이체 알림</h3>
+                                <p class="p_sub">이체예약시간 09시~12시 인 경우 08:30, <br>13시~22시 인 경우 12:30에 알림 제공 <br>(07~08시 등록 예약이체는 알림 미제공)</p>
+                            </div>
+                            <div class="top">
+                                <span class="switch">
+                                    <input type="checkbox" id="switch4">
+                                    <label for="switch4"><span class="hidden">예약이체 알림 동의</span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hgroup">
+                            <div>
+                                <h3 class="p">금융캘린더 알림</h3>
+                                <p class="p_sub">금융캘린더 일정</p>
+                            </div>
+                            <div class="top">
+                                <span class="switch">
+                                    <input type="checkbox" id="switch5">
+                                    <label for="switch5"><span class="hidden">금융캘런더 알림 동의</span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hgroup">
+                            <div>
+                                <h3 class="p">결재/권한</h3>
+                                <p class="p_sub">Master, Sub 사용자간 결재 상황</p>
+                            </div>
+                            <div class="top">
+                                <span class="switch">
+                                    <input type="checkbox" id="switch6">
+                                    <label for="switch6"><span class="hidden">결재/권한 알림 동의</span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hgroup">
+                            <div>
+                                <h3 class="p">Sub로그인 알림</h3>
+                                <p class="p_sub">Sub 사용자 로그인 알림</p>
+                            </div>
+                            <div class="top">
+                                <span class="switch">
+                                    <input type="checkbox" id="switch7">
+                                    <label for="switch7"><span class="hidden">Sub로그인 알림 동의</span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hgroup">
+                            <div>
+                                <h3 class="p">뱅킹중요변동사항 알림</h3>
+                                <p class="p_sub">보안매체, 이체한도 등 제신고 거래</p>
+                            </div>
+                            <div class="top">
+                                <span class="switch">
+                                    <input type="checkbox" id="switch8">
+                                    <label for="switch8"><span class="hidden">뱅킹중요변동사항 알림 동의</span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 220915 렌트온 삭제 -->
+                </ul>
+            </div>
+            <div class="section set_push">
+                <h3 class="h2">맞춤 혜택·서비스 알림
+                    <div class="tooltip_limited">
+                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                        <div class="tooltip_cont">맞춤 혜택 및 이벤트 정보, 간편 세무장부/HR, 자금보고 알림</div>
+                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                    </div>
+                </div>
+
+                </h3>
+                <ul class="list list_top_bd">
+                    <li class="hgroup">
+                        <div>
+                            <h4 class="p">맞춤 혜택 및 이벤트 정보</h4>
+                        </div>
+                        <div>
+                            <span class="switch">
+                                <input type="checkbox" id="switch9_1" checked>
+                                <label for="switch9_1"><span class="hidden">맞춤 혜택 및 이벤트 정보 알림 동의</span></label>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="hgroup">
+                        <div>
+                            <h4 class="p">간편 세무장부/HR</h4>
+                        </div>
+                        <div>
+                            <span class="switch">
+                                <input type="checkbox" id="switch9_2" checked>
+                                <label for="switch9_2"><span class="hidden">간편 세무장부/HR 알림 동의</span></label>
+                            </span>
+                        </div>
+                    </li>
+                    <!-- 220915 추가 -->
+                    <li class="hgroup">
+                        <div>
+                            <h4 class="p">부동산 임대관리 렌트온 알림</h4>
+                        </div>
+                        <div>
+                            <span class="switch">
+                                <input type="checkbox" id="switch9_2" checked>
+                                <label for="switch9_2"><span class="hidden">부동산 임대관리 렌트온 알림 동의</span></label>
+                            </span>
+                        </div>
+                    </li>
+                    <!-- //220915 추가 -->
+                    <li class="hgroup">
+                        <div>
+                            <h4 class="p">자금보고</h4>
+                        </div>
+                        <div>
+                            <span class="switch">
+                                <input type="checkbox" id="switch9_3" checked>
+                                <label for="switch9_3"><span class="hidden">자금보고 알림 동의</span></label>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+<script>
+    /* 업무 SCRIPT */
+</script>
+</body>
+</html>

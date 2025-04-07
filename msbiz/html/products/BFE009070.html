@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>사전심사</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <div class="step_wrap js_step">    
+            <div class="step" role="img" aria-label="총 5단계 중 현재 1단계">
+                <span class="current">1</span><span class="mark">/</span><span class="total">5</span>
+            </div>
+            <h1 class="h1">마켓선택</h1>
+        </div>
+
+        <div class="inform_top_wrap">
+            <p class="depth">거래중인 마켓을 선택하시기 바랍니다.</p><!-- 220907 수정 -->
+        </div>
+
+        <div class="section">
+            <div class="form_group">
+                <div class="form_tit">마켓 선택</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="마켓 선택 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <!-- 220817 수정 -->
+                <!-- 220917 수정 -->
+                <p class="tip_info">선택하신 마켓의 경우 <strong>KCB_셀러봇캐시에서 “정보제공기관 회원가입 및 정보제공에 대한 동의”를 사전에 진행하셔야</strong> 매출 및 정산정보 수집을 통한 약정한도 산출이 가능합니다.</p>
+                <p class="tip_info">선택하신 마켓의 경우 <strong>KCB_셀러봇캐시에서 “정보제공기관 회원가입 및 정보제공에 대한 동의”를 사전에 진행하셔야</strong> 매출 및 정산정보 수집을 통한 약정한도 산출이 가능합니다.</p>
+                <!-- 220917 수정 -->
+                <!-- //220817 수정 -->
+            </div>
+            <div class="btn_wrap btm">
+                <a href="#none" class="btn_txt ico_arr">KCB_셀러봇캐시 회원가입</a><!-- 220817 수정 -->
+            </div>
+        </div>
+
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <!-- 220917 수정 -->
+                <p class="depth">
+                    가능여부조회는 기업인터넷뱅킹 로그인 없이 KB셀러론 대출약정가능여부를 판단하기 위해 최소한의 기준을 확인하는 단계로 개인사업자의 경우만 이용할 수 있으며 휴대폰 본인확인을 통해 진행이 가능합니다.
+                </p>
+                <!-- //220917 수정 -->
+            </div>
+        </div>
+        
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg" disabled>다음</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Bottom Scroll</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="">
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <div id="bottom_scroll" class="popup bottom ui_pop_last show" role="dialog" aria-hidden="false" aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
+        <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
+        <div class="pop_scl_wrap">
+            <article class="pop_wrap" style="max-height: 508px;">
+                <div class="pop_head">
+                    <div>
+                        <h1 id="bottomPopup2Label">스크롤</h1>
+                    </div>
+                </div>
+                <div class="pop_body" style="max-height: 252px;">
+                    <div class="pop_section">
+                        <div class="scroll_between_wrap">
+                            <ul class="list">
+                                <!-- 개발:선택된 요소에 sel 클래스 추가 -->
+                                <li><a href="#" role="button" class="sel">전체</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명%</a></li>
+                            </ul>
+                            <ul class="list">
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button" class="sel">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                                <li><a href="#" role="button">%본사/지사명에 해당하는부서명%</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop_foot">
+                    <div>
+                        <div class="btn_area">
+                            <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </div>
+    </div>
+
+    <script>
+        /* 업무 SCRIPT */
+        UICommon.Layer.open('#bottom_scroll');
+        // 20220826: 선택된 목록까지 스크롤 처리 (최초 오픈시 자동 실행됨)
+        // UICommon.Layer.setScrollBetweenTop();
+    </script>
+</body>
+
+</html>

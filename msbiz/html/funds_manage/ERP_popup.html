@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[바로 ERP 실행]처리 완료 내역(TAB)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#bottomLayer1');" >조회 조건 설정 바텀시트</button>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <!-- layer html : default -->
+    <div id="bottomLayer1" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>조회 조건 설정</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <div class="form_group">
+                        <div class="form_tit">조회기간</div><!-- 220729 리웍: 타이틀수정 -->
+                        <div class="form_row">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="period2_1" name="period2" >
+                                    <label for="period2_1" class="label"><em>당일</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="period2_2" name="period2">
+                                    <label for="period2_2" class="label"><em>1주일</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="period2_3" name="period2" checked>
+                                    <label for="period2_3" class="label"><em>1개월</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="period2_4" name="period2">
+                                    <label for="period2_4" class="label"><em>3개월</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="period2_5" name="period2">
+                                    <label for="period2_5" class="label"><em>6개월</em></label>
+                                </span>
+                            </div>
+                            <div class="form_date_term">
+                                <div class="input date">
+                                    <input type="tel" title="시작일 입력" maxlength="8" value ="20210301">
+                                    <button type="button" class="btn_cal" title="시작일 선택"></button>                    
+                                </div>
+                                <span class="space">~</span>
+                                <div class="input date">
+                                    <input type="tel" title="종료일 입력" maxlength="8" value ="20210331"> 
+                                    <button type="button" class="btn_cal" title="종료일 선택"></button>                              
+                                </div>
+                            </div>              
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <div class="form_tit">거래유형</div>
+                        <div class="form_row">
+                            <div class="rdoChk_box line2">
+                                <span class="selection">
+                                    <input type="radio" id="transaction1" name="transaction" checked>
+                                    <label for="transaction1" class="label"><em>전체</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="transaction2" name="transaction">
+                                    <label for="transaction2" class="label"><em>10건이하이체<br>(즉시)</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="transaction3" name="transaction">
+                                    <label for="transaction3" class="label"><em>급여이체</em></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <div class="form_tit">내역정렬</div>
+                        <div class="form_row">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="history1" name="history" checked>
+                                    <label for="history1" class="label"><em>최신순</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="history2" name="history">
+                                    <label for="history2" class="label"><em>과거순</em></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">                        
+                        <span><button type="button" class="btn primary lg ui_pop_close">조회</button></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+    <!-- //layer html : default -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

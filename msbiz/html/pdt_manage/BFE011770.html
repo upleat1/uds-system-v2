@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[대출약정]대출약정목록</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">대출약정목록</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>약정할 대상을 선택 후 [대출약정]을 선택해 주세요.</li>
+                <li>법인사업자인 경우 주사업장의 인증서 로그인을 통해서만 약정 진행이 가능 합니다.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="h2">대출약정대상 조회</h2>
+            <div class="form_group">
+                <div class="form_tit">처리상태</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="처리상태">전체</button><!-- 220729 class 추가 -->
+                    </div>
+                </div>    
+            </div>
+            <div class="form_group">
+                <div class="form_tit">조회기간</div>
+                <div class="form_row">
+                    <div class="rdoChk_box">
+                        <span class="selection">
+                            <input type="radio" id="period11" name="period_2" checked>
+                            <label for="period11" class="label"><em>1개월</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="period22" name="period_2">
+                            <label for="period22" class="label"><em>3개월</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="period33" name="period_2">
+                            <label for="period33" class="label"><em>6개월</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="period44" name="period_2">
+                            <label for="period44" class="label"><em>12개월</em></label><!-- 220729 리웍 -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg">조회</button></span>
+            </div>
+        </div>
+
+        <!-- 대출약정내역 조회결과 리스트 -->
+        <hr class="hr_divide">
+        <div class="section">
+            <div class="list_top_wrap">
+                <div class="col col_l"><span class="total_num">총 <em class="number">2</em><span class="num_unit">건</span></span></div>
+            </div>
+            <div class="list_data_group_s"><!-- 220729 리웍 -->
+                <!-- 220729 리웍 -->
+                <div class="list_top_wrap">
+                    <div class="col">
+                        <span class="badge limit">기한연장</span>
+                        <span class="badge approval">약정서작성</span>
+                    </div>
+                </div>
+                <!-- // 220729 리웍 -->
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">대출신청일</div>
+                        <div class="value"><span class="number">2022.09.30</span></div>
+                    </li>
+                    <li>
+                        <div class="key">상품명</div>
+                        <div class="value">기업일반운전자금대출</div>
+                    </li>
+                    <li>
+                        <div class="key">통화코드</div>
+                        <div class="value">KRW</div>
+                    </li>
+                    <li>
+                        <div class="key">신청금액</div>
+                        <div class="value"><span class="number">5,000,000</span></div>
+                    </li>
+                    <li>
+                        <div class="key">약정가능기한</div>
+                        <div class="value"><span class="number">2022.05.14</span></div>
+                    </li>
+                    <li>
+                        <div class="key">비대면보증대상여부</div>
+                        <div class="value">대상</div>
+                    </li>
+                </ul>
+                <div class="btn_list_btm">
+                    <span><button type="button" class="btn outline sm">대출약정</button></span>
+                </div>
+            </div>
+            <div class="list_data_group_s"><!-- 220729 리웍 -->
+                <!-- 220729 리웍 -->
+                <div class="list_top_wrap">
+                    <div class="col">
+                        <span class="badge limit">신규</span>
+                        <span class="badge refusal">대표자승인대기</span>
+                    </div>
+                </div>
+                <!-- // 220729 리웍 -->
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">대출신청일</div>
+                        <div class="value"><span class="number">2022.09.30</span></div>
+                    </li>
+                    <li>
+                        <div class="key">상품명</div>
+                        <div class="value">기업일반운전자금대출</div>
+                    </li>
+                    <li>
+                        <div class="key">통화코드</div>
+                        <div class="value">KRW</div>
+                    </li>
+                    <li>
+                        <div class="key">신청금액</div>
+                        <div class="value"><span class="number">5,000,000</span></div>
+                    </li>
+                    <li>
+                        <div class="key">약정가능기한</div>
+                        <div class="value"><span class="number">2022.05.14</span></div>
+                    </li>
+                    <li>
+                        <div class="key">비대면보증대상여부</div>
+                        <div class="value">대상</div>
+                    </li>
+                </ul>
+                <div class="btn_list_btm">
+                    <!-- <span><button type="button" class="btn outline sm">메시지 재발송</button></span> 220729 리웍 / 220816 삭제 -->
+                    <span><button type="button" class="btn outline sm">약정서보기</button></span>
+                </div>
+            </div>
+        </div>
+        <!-- //대출약정내역 조회결과 리스트 -->
+        
+    </div>
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,33 @@
+@charset "utf-8"; 
+
+
+/*** setting_hcw.css ***/
+/* 알림설정 */
+/* .set_push .h2 .btn_tooltip{vertical-align: sub;} */
+.set_push .list li {padding: 1.5rem 0;}
+.set_push .list li .p_sub {margin-top: .6rem; color: var(--fc_03, #484b51);}
+.set_push .list li > .right {margin-top: .6rem;}
+.set_push .list .push_account {margin-top: 2rem;}
+.set_push .list .push_account li {padding: 1.8rem 0 1.5rem; border-top: 1px solid var(--bdc_01, #ebeef0);}
+.set_push .list .push_account li:last-child {padding-bottom: 0;}
+.set_push .list .push_account li .acc {margin-top: .5rem;}
+.set_push .list .push_account li .acc .number {font-size: 1.8rem;}
+.set_push .list .push_account li .btn_list_btm {margin: 1.4rem 0 .4rem;}
+.divide_line {position: relative; padding-left: 1.4rem;}
+.divide_line::before {content: '';position: absolute; top:0.3rem; left:0.5rem; width: .1rem; height: 1.3rem; background-color: var(--fc_08, #dde1e4);}
+
+.list_tit {padding-top:.8rem; padding-left:.2rem; font-size:1.5rem; color:#696e76}
+.list_tit + .list_data {margin-top:1.2rem}
+
+/*** 기타 ***/
+/* 캐시/쿠키 삭제 */
+.se_cookie.list_link li:before {background:url(/msbiz/app/img/setting/ico_setting_cookie.png) no-repeat; background-size:12rem auto;}
+.se_cookie.list_link .item1::before {background-position:0 0;}
+.se_cookie.list_link .item2::before {background-position:-4rem 0;}
+.se_cookie.list_link .item3::before {background-position:-8rem 0;}
+.se_cookie.list_link > li > .link {padding-top:2.6rem; padding-bottom:1.7rem; font-size:1.8rem; font-weight:700;}
+.se_cookie.list_link > li:first-child > a.link:after {margin-top:-.1rem;}
+.se_cookie.list_link {margin-top:-2rem;}
+
+/*  */
+.set_push .hgroup.h2 {margin-top: 0;}

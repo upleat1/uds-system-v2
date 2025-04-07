@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[매출/입금내역]카드내역_입금완료</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content"><!-- 220729 리웍: 클래스 삭제 -->
+
+            <h1 class="h1">카드매출내역</h1><!-- 220921 수정: 타이틀 재노출 -->
+            <div class="tab_wrap">
+                <div class="tab_list" role="tablist">
+                    <div class="scroll_wrap">
+                        <a href="#">매출승인</a>
+                        <a href="#">입금예정</a>
+                        <a href="#" class="active">입금완료</a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <div class="section"><!-- 220816 수정: 클래스수정 --><!-- 220729 리웍: 클래스 수정 -->
+
+                        <!-- 220816 수정: '일별/주별'선택 UI 변경 -->
+                        <div class="tab_wrap box outline">
+                            
+                            <!-- 탭메뉴 -->
+                            <!-- 220818 수정: 마크업 수정 -->
+                            <div class="tab_list">
+                                <a href="#" class="active">일별</a>
+                                <a href="#">주별</a>
+                            </div>
+                            <!--// 220818 수정: 마크업 수정 -->
+                            
+                            <!-- 220819 수정: 날짜표기 -->
+                            <div class="tab_list_cal">
+                                <!-- 개발 : 
+                                        이전,다음 버튼 비활성화시 속성 'disabled' 추가
+                                        아래의 일별, 주별 값 변경 시 버튼 텍스트도 함께 변경 필요
+                                        일별 -> 어제, 내일
+                                        주별 -> 지난주, 다음주
+                                -->
+                                <!-- 일별 -->
+                                <div class="cal_month fu_cal_month">
+                                    <button type="button" class="btn btn_ico prev"><span class="hidden">어제</span></button>
+                                    <span class="year_txt"><span class="number">2022.08.11</span></span>
+                                    <button type="button" class="btn btn_ico next"><span class="hidden">내일</span></button>
+                                </div>
+
+                                <!-- 주별 -->
+                                <div class="cal_month fu_cal_month">
+                                    <button type="button" class="btn btn_ico prev"><span class="hidden">어제</span></button>
+                                    <span class="year_txt"><span class="number">2022.05.16 ~ 2022.05.22</span></span>
+                                    <button type="button" class="btn btn_ico next"><span class="hidden">내일</span></button>
+                                </div>
+                            </div>
+                            <!--// 220819 수정: 날짜표기 -->
+
+                            <div class="link_panel"><!-- 220818 수정: 클래스 수정 -->
+                                <!-- * 일별상세: 데이터 있을경우 -->
+                                <h2 class="hidden">일별 상세</h2>
+                                <!-- 요약정보 -->
+                                <div class="section_f">
+                                    <!-- 220729 리웍 -->
+                                    <h2 class="hidden">요약정보</h2>
+                                    <ul class="list_data">
+                                        <li>
+                                            <div class="key">총액</div>
+                                            <div class="value">
+                                                <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="key">총건수</div>
+                                            <div class="value">
+                                                <span class="total_num">총 <em class="number">17</em><span class="num_unit">건</span></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 상세내역 -->
+                                <div class="section_f">
+                                    <h2 class="h3 pdl_0">상세내역</h2>
+                                    <div class="list_data_group">
+                                        <h3 class="hidden">승인일시 %yyyy.mm.dd 00:00%의 %카드사명% 입금완료내역</h3>
+                                        <ul class="list_data">
+                                            <li>
+                                                <div class="key">입금일자</div>
+                                                <div class="value">
+                                                    <span class="number">2022.07.05</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="key">카드사</div>
+                                                <div class="value">KB국민카드</div>
+                                            </li>
+                                            <li>
+                                                <div class="key">매출건수</div>
+                                                <div class="value">
+                                                    <span class="number">10</span><span class="num_unit">건</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="key">매출금액</div>
+                                                <div class="value">
+                                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="key">입금금액</div>
+                                                <div class="value">
+                                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="key">보류금액</div>
+                                                <div class="value">
+                                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="key">기타입금</div>
+                                                <div class="value">
+                                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="key">결제정보</div>
+                                                <div class="value">
+                                                    <span class="number">909096-01-237588</span><br>
+                                                    (KB국민은행)
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn_wrap center gap_md">
+                                        <button type="button" class="btn_txt ico_add">더보기</button>
+                                    </div>
+                                <!--// 220729 리웍 -->
+                                </div>
+                                <!--// * 일별상세: 데이터 있을경우 -->
+
+                                <!-- 구분용 마크업입니다.(개발X) -->
+                                <span class="ui-test-section" style="height: 20px;line-height: 20px;background-color: #333;color: #fff;font-size: 12px;font-weight: bold;text-align: center;display: block;margin:0 -2.4rem;">SAMPLE: 데이터 없을 경우</span>
+
+                                <!-- * 주별상세: 데이터 없을경우 -->
+                                <h2 class="hidden">주별 상세</h2>
+                                <div class="result nodata sm">
+                                    <p class="tit">조회 내역이 없습니다.</p>
+                                </div>
+                                <!--// * 주별상세: 데이터 없을경우 -->
+                            </div>
+                        
+                        </div>
+                        <!--// 220816 수정: '일별/주별'선택 UI 변경 -->
+
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

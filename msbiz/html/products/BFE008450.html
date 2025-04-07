@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[상담진행현황조회]상담진행현황 조회</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <!-- 220729 리웍 -->
+    <div id="content">
+        <h1 class="hidden">상담진행 현황조회</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>대출상담 진행현황입니다.</li>
+                <li>문의내용이 있으신 경우 관리점의 담당자에게 문의해 주시기 바랍니다.</li><!-- 220805 수정 -->
+            </ul>
+        </div>
+        <!-- 상담진행 단계 아이콘 영역 : 디자인 미수급 -->
+        <div class="section">
+            <ol class="step_loan"><!-- 220811 class 수정 -->
+                <li>
+                    <span class="ico_step seller_stetp01"></span>지점<br>접수중<!-- 220811 class 수정 -->
+                </li>
+                <li>
+                    <span class="ico_step seller_stetp02"></span>지점<br>접수완료<!-- 220811 class 수정 -->
+                </li>
+                <li class="active">
+                    <span class="ico_step seller_stetp03"></span>신청<br>완료<!-- 220811 class 수정 -->
+                </li>
+                <li>
+                    <span class="ico_step seller_stetp04"></span>심사중<!-- 220811 class 수정 -->
+                </li>
+                <li>
+                    <span class="ico_step seller_stetp05"></span>심사<br>완료<!-- 220811 class 수정 -->
+                </li>
+                <li>
+                    <span class="ico_step seller_stetp06"></span>실행<br>완료<!-- 220811 class 수정 -->
+                </li>
+            </ol>
+        </div>
+        <!-- //상담진행 단계 아이콘 영역 : 디자인 미수급 -->
+
+        <div class="section">
+            <h2 class="hidden">신청정보</h2>
+            <ul class="list_data">
+                <li>
+                    <div class="key">사업자명</div>
+                    <div class="value">㈜이가자헤어서비스 <br><span class="number">135-07-21486</span></div>
+                </li>
+                <li>
+                    <div class="key">신청상품</div>
+                    <div class="value">KB매출더하기론</div>
+                </li>
+                <li>
+                    <div class="key">신청금액</div>
+                    <div class="value">
+                        <strong class="number">100,000,000</strong><span class="num_unit">원</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">신청점</div>
+                    <div class="value">기업플랫폼금융사업부</div>
+                </li>
+                <li>
+                    <div class="key">처리(진행)상태</div>
+                    <div class="value">지점접수중</div>
+                </li>
+                <li>
+                    <div class="key">승인거절사유</div>
+                    <div class="value">매출금액 부족</div>
+                </li>
+            </ul>
+            <!-- 220802 버튼 수정 -->
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">상담신청취소</button></span>
+                </div>
+            </div>
+            <!-- //220802 버튼 수정 -->
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+    <!-- //220729 리웍 -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

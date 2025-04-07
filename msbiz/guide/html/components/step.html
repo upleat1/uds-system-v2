@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>No.1 기업금융플랫폼</title>
+    <link rel="stylesheet" href="/msbiz/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/msbiz/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+	<link rel="stylesheet" href="/msbiz/app/css/common.css">
+</head>
+<body>
+    <div data-class="contents">
+        <div data-class="component-name"><span>스텝</span></div>
+        <div data-class="box">
+            <div data-class="list disc">
+                <div>Scroll animation</div>
+                <div>정보입력, 약관동의부터 스탭으로 카운트됨</div>
+                <div>완료까지 4단계 이상 되어야만 스탭이 노출됨</div>
+                <div>완료페이지에서는 상단 앱바, 스탭 사라짐</div>
+            </div>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+
+            <div data-class="h2">기본</div>
+            <div data-class="box">
+                <a href="/msbiz/guide/html/sample/step.html" target="_blank" title="새창" data-class="button">Step Sample Code</a>
+            </div>
+            <script type="text/html">
+<div class="step_wrap js_step">    
+    <div class="step" role="img" aria-label="총 5단계 중 현재 1단계">
+        <span class="current">1</span><span class="mark">/</span><span class="total">5</span>
+    </div>
+    <h1 class="h1">타이틀</h1>
+    <p class="step_txt">타이틀 내용입니다.</p>
+    <a href="#none" class="btn_txt ico_arr">바로가기</a>
+</div>
+            </script>
+
+            <div data-class="h2">기본 + 바로가기</div>
+            <script type="text/html">
+<div class="step_wrap js_step">
+    <div class="step" role="img" aria-label="총 5단계 중 현재 1단계">
+        <span class="current">1</span><span class="mark">/</span><span class="total">5</span>
+    </div>
+    <h1 class="h1">타이틀</h1>
+    <p class="step_txt">타이틀 내용입니다.</p>
+    <a href="#none" class="btn_txt ico_arr">바로가기</a>
+</div>
+            </script>
+        </div>
+    </div>`
+    
+    <script src="/msbiz/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/msbiz/guide/assets/js/components.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+</body>
+</html>

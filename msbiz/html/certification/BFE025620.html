@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[금융인증서 발급/재발급]고객세부정보입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="인증센터" href="/msbiz/app/css/certification.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <!-- step -->
+            <div class="step_wrap js_step">    
+                <div class="step" role="img" aria-label="총 6단계 중 현재 5단계">
+                    <span class="current">5</span><span class="mark">/</span><span class="total">6</span>
+                </div>
+                <h1 class="h1">고객 세부정보 입력</h1>
+            </div>
+            <!-- //step -->
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">고객(법인)명</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" placeholder="" title="고객(법인)명" value="" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">영문명</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" placeholder="" title="영문명" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group email">
+                    <div class="form_tit">이메일</div>
+                    <div class="form_row col">
+                        <div class="input">
+                            <input type="text" title="ID" placeholder="아이디" value="">
+                        </div>
+                        <span class="space">@</span>
+                        <div class="select">
+                            <button type="button" class="select_btn" title="도메인 선택">도메인</button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input"><input type="text" value="" title="도메인 직접입력"></div>
+                    </div>
+                    <!-- 220729 리웍 : 삭제 -->
+                    <!-- <div class="form_btm_wrap">
+                        <span class="selection">
+                            <input type="checkbox" id="noEmail">
+                            <label for="noEmail" class="label"><em>이메일 없음</em></label>
+                        </span>
+                    </div> -->
+                    <!-- //220729 리웍 : 삭제 -->
+                </div>
+                <div class="form_group address">
+                    <div class="addr_tit">주소</div>
+                    <!-- 공통태그(공통영역) -->
+                    <div class="addr_sch">
+                        <button type="button" class="btn point sm round">주소검색</button>
+                        <!-- 주소 검색 후 노출 -->
+                        <div class="addr_cts">
+                            <span class="addr_post number">07343</span>
+                            <p>서울특별시 영등포구 국제금융로 108-6(여의도동, 진주아파트)</p>
+                            <p>301동 1507호</p>
+                        </div>
+                        <!-- //주소 검색 후 노출 -->
+                    </div>
+                    <!-- //공통태그(공통영역) -->
+                    <!-- 220729 리웍 : 삭제 -->
+                    <!-- <div class="addr_check_wrap">
+                        <span class="selection">
+                            <input type="checkbox" id="sameAddr2" name="">
+                            <label for="sameAddr2" class="label"><em>자택주소와 동일</em></label>
+                        </span>
+                    </div> -->
+                    <!-- //220729 리웍 : 삭제 -->
+                </div>
+                <div class="form_group tel success">
+                    <!-- 220729 리웍 : 내용 중 '(선택)' 삭제 -->
+                    <!-- 220922 내용수정 -->
+                    <div class="form_tit">전화번호</div>
+                    <div class="form_row col">
+                        <div class="select">
+                            <button type="button" class="select_btn" title="지역번호 선택">02</button>
+                        </div>
+                        <div class="input" role="button">
+                            <!-- 220922 title 수정 -->
+                            <input type="tel" value="" title="전화번호">
+                        </div>
+                    </div>
+                    <p class="tip">정상 텍스트 메시지</p>
+                    <!-- 220729 리웍 : 삭제 -->
+                    <!-- <div class="form_btm_wrap">
+                        <span class="selection">
+                            <input type="checkbox" id="frm_no_tel" name="frm_no_tel">
+                            <label for="frm_no_tel" class="label"><em>자택 전화없음</em></label>
+                        </span>
+                    </div> -->
+                    <!-- //220729 리웍 : 삭제 -->
+                </div>
+                <div class="form_group tel">
+                    <div class="form_tit">휴대폰번호</div>
+                    <div class="form_row col">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="휴대폰번호 앞자리">010</button>
+                        </div>
+                        <div class="input">
+                            <input type="tel" value="" maxlength="8" title="휴대폰번호">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_btm_full_wrap">
+                    <span><button type="button" class="btn outline md">은행정보 다시 불러오기</button></span>
+                </div>
+            </div>
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>인증서 발급에 필요한 정보 입니다.</li>
+                        <li>본 페이지에서 입력한 고객정보는 인증서 발급용으로만 사용됩니다.</li>
+                        <li>은행정보와 실제정보가 다른 경우 수정 가능합니다.</li>
+                        <!-- 220729 리웍 : 태그추가 -->
+                        <li>위 고객정보는 인증서 발급기관인 금융결제원/한국전자인증/코스콤/한국정보인증에 제공되는 정보이며 <strong>KB국민은행 고객정보에는 저장/사용되지 않습니다.</strong></li>
+                        <!-- //220729 리웍 : 태그추가 -->
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg" disabled>다음</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+</html>

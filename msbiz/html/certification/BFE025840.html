@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[금융인증서 폐기] 인증서목록_인증서선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="인증센터" href="/msbiz/app/css/certification.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <!-- step -->
+            <div class="step_wrap js_step">    
+                <div class="step" role="img" aria-label="총 4단계 중 현재 2단계">
+                    <span class="current">2</span><span class="mark">/</span><span class="total">4</span>
+                </div>
+                <h1 class="h1">인증서 선택</h1>
+            </div>
+            <!-- //step -->
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">
+                        사업자번호
+                    </div>
+                    <div class="form_row col business_num">
+                        <span class="input"><input type="tel" maxlength="3" placeholder="3자리" value="000" title="사업자번호 첫번째 3자리" readonly></span>
+                        <span class="space">-</span>
+                        <span class="input"><input type="tel" maxlength="2" placeholder="2자리" value="00" title="사업자번호 중간 2자리" readonly></span>
+                        <span class="space">-</span>
+                        <span class="input"><input type="tel" maxlength="5" placeholder="5자리" value="00000" title="사업자번호 마지막 5자리" readonly></span>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="h3">인증서 목록</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">등록기관</div>
+                        <div class="value">국민은행</div>
+                    </li>
+                    <li>
+                        <div class="key">인증서CN</div>
+                        <div class="value">cn=이러나이런리</div>
+                    </li>
+                    <li>
+                        <div class="key">인증서상태</div>
+                        <div class="value">유효</div>
+                    </li>
+                    <li>
+                        <div class="key">유효기간</div>
+                        <div class="value">2001.00.00~2000.00.00</div>
+                    </li>
+                    <li>
+                        <div class="key">인증기관</div>
+                        <div class="value">코스콤</div>
+                    </li>
+                    <li>
+                        <div class="key">일련번호</div>
+                        <div class="value">00000</div>
+                    </li>
+                    <li>
+                        <div class="key">고객구분</div>
+                        <div class="value">기업</div>
+                    </li>
+                    <li>
+                        <div class="key">인증서종류</div>
+                        <div class="value">기업 금융인증서 1년</div>
+                    </li>
+                </ul>
+                <!-- 220823 버튼 추가 -->
+                <div class="btn_list_btm">
+                    <span><button type="button" class="btn outline sm">인증서 폐기</button></span>
+                </div>
+                <!-- 220823 버튼 추가 -->
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+</html>

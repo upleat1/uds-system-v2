@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[One Stop 신규] 필수정보입력</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">추가정보 입력</h1>
+        
+        <div class="section">            
+            <h2 class="h2">사업자정보 입력</h2>
+
+            <!-- [공통태그]자택주소 -->
+            <div class="form_group address">
+                <div class="addr_tit">자택주소</div>
+                <!-- 공통태그(공통영역) -->
+                <div class="addr_sch">
+                    <button type="button" class="btn point sm round">주소검색</button>
+                    <!-- 주소 검색 후 노출 -->
+                    <div class="addr_cts">
+                        <span class="addr_post number">07343</span>
+                        <p>서울특별시 영등포구 국제금융로 108-6(여의도동, 진주아파트)</p>
+                        <p>301동 1507호</p>
+                    </div>
+                    <!-- //주소 검색 후 노출 -->
+                </div>
+                <!-- //공통태그(공통영역) -->
+                <!-- 220811 : 자택주소와 동일 체크영역 삭제 -->
+            </div>
+            <!-- [공통태그]자택주소 -->
+
+            <!-- [공통태그]사업장주소 -->
+            <div class="form_group address">
+                <div class="addr_tit">사업장주소</div>
+                <!-- 공통태그(공통영역) -->
+                <div class="addr_sch">
+                    <button type="button" class="btn point sm round">주소검색</button>
+                    <!-- 주소 검색 후 노출 -->
+                    <div class="addr_cts">
+                        <span class="addr_post number">07343</span>
+                        <p>서울특별시 영등포구 국제금융로 108-6(여의도동)</p>
+                        <p>301동 1507호</p>
+                    </div>
+                    <!-- //주소 검색 후 노출 -->
+                </div>
+                <!-- //공통태그(공통영역) -->
+                <!-- 220811 : 사업장주소 동일 체크영역 삭제 -->
+                
+                <!-- 221013 : 자택주소 동일사항 체크박스 추가  -->
+                <div class="rdoChk_group inline gap_sm">
+                    <span class="selection">
+                        <input type="checkbox" id="checkSize1">
+                        <label for="checkSize1" class="label"><em>자택주소와 동일합니다.</em></label>
+                    </span>
+                </div>
+                <!-- //221013 : 자택주소 동일사항 체크박스 추가  -->
+
+                <!-- 220928 : 사업장주소 문구 추가 -->
+                <p class="tip_info">사업장주소를 변경하면 KB국민은행 고객정보도 동시에 바뀝니다. </p>
+            </div>
+            <!-- //[공통태그]사업장주소 -->
+
+            <!-- [공통태그]사업장 전화번호 -->
+            <div class="form_group tel">
+				<div class="form_tit">사업장 전화번호</div>
+				<div class="form_row col">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="지역번호 선택">02</button>
+                    </div>
+                    <div class="input" role="button" aria-label="전화번호 입력" onclick=""><!-- 220922 수정 -->
+                        <input type="tel" id="id04" value="" title="전화번호" aria-hidden="true" class="bg_white" readonly><!-- 220922 수정 -->
+                    </div>
+                </div>
+			</div>
+            <!-- //[공통태그]사업장 전화번호 -->
+
+            <!-- 개인사업자 우편물 수령지 선택 -->
+            <div class="form_group">
+                <div class="form_tit">개인사업자 우편물 수령지</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="개인사업자 우편물 수령지 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+            <!-- //개인사업자 우편물 수령지 선택 -->
+
+            <h2 class="h2">사업정보 선택</h2>
+            <!-- 사업정보 선택 % 고위험업종 선택 -->
+            <div class="form_group">
+                <div class="form_tit">업종</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="사업정보 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+            <!-- 221007 가이드 문구 추가 : 정확한 업종명이 선택조건에 없을시 유사 업종명을 선택하세요 -->
+            <p class="tip_info">정확한 업종명이 선택조건에 없을시 유사 업종명을 선택하세요</p>
+            <!-- //221007 가이드 문구 추가 : 정확한 업종명이 선택조건에 없을시 유사 업종명을 선택하세요 -->
+
+            <div class="form_group">
+                <div class="form_tit">고위험업종</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="고위험업종 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+            <!-- //사업정보 선택 % 고위험업종 선택 -->
+        </div>
+
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.alert('고위험업종 사업자는 비대면으로 신규 가입을 할 수 없습니다. 영업점을 방문해 상담하시기 바랍니다.','비대면 가입 제한업종 안내');">확인</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

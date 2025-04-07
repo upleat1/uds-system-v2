@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[가입자등록]정보입력</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START --> 
+<div id="wrap">
+	<div id="content" class="cate_pdt_manage">
+        <h1 class="h1">정보입력</h1>
+        <div class="section">
+            <h2 class="hidden">기본정보</h2>
+            <!-- 221028 수정 -->
+            <h3 class="hidden">계좌 정보</h3>
+            <div class="form_group">
+                <div class="form_tit">계좌번호</div>
+                <div class="form_row">
+                    <p class="form_txt"><strong class="number fs17">000000-00-000000</strong> | 확정급여형(DB)</p><!-- 221123 class : fs17 추가-->
+                </div>
+            </div>
+            <!-- //221028 수정 -->
+        </div>
+        <div class="section">
+            <h2 class="h2">가입자정보</h2>
+            <div class="chk_data_group gap_xs_2">
+                <div class="chk_total">
+                    <span class="selection">
+                        <input type="checkbox" id="checkType1" class="chk_all">
+                        <label for="checkType1" class="label bold">전체선택</label>
+                    </span>
+                </div>
+            </div>
+            <ul class="list_acco js_accordion acco_in_chk">
+                <li class="on"><!-- 항목 닫힐때 class="on" 제거 -->
+                    <div class="tit">
+                        <div class="selection chk">
+                            <input type="checkbox" id="radioH1" name="radio_h">
+                            <label for="radioH1" class="label"><em>가입자 정보 1 (홍길동)</em></label><!-- 221028 추가 : 가입자 이름 -->
+                        </div>
+                        <button type="button" class="btn_acco" aria-expanded="true"><span class="arrow"><span class="hidden">닫기</span></span></button>
+                    </div>
+                    <div class="toggle_panel" role="region"><!-- 항목 닫힐때 style="display:none" -->
+                        <div class="form_group">
+                            <div class="form_tit">이름</div>
+                            <div class="form_row">
+                                <div class="input"><input type="text" id="id01" placeholder="이름 입력" title="이름 입력"></div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">고객번호</div>
+                            <div class="form_row col jumin">
+                                <!-- 220928 커스텀키패스 수정 -->
+                                <div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 주민등록번호 앞자리, 주민등록번호 앞자리 입력" onclick="">
+                                    <input type="tel" aria-hidden="true" maxlength="6" placeholder="숫자만 입력" title="주민등록번호 앞자리" readonly class="bg_white">
+                                </div>
+                                <!-- //220928 커스텀키패스 수정 -->
+                                <span class="space">-</span>
+                                <div class="input" role="button" aria-label="주민등록번호 뒷자리">
+                                    <input type="password" aria-hidden="true" maxlength="7" placeholder="뒷자리 7자리" title="주민등록번호 뒷자리" readonly class="bg_white">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">임직원구분</div>
+                            <div class="form_row">
+                                <div class="select">
+                                    <button type="button" class="select_btn" title="임직원구분 선택">선택</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">입사일</div>
+                            <div class="form_row">
+                                <div class="input date">
+                                    <input type="tel" maxlength="10" title="입사일" placeholder="YYYY.MM.DD" value="2022.08.30">
+                                    <button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">최종중간정산일</div>
+                            <div class="form_row">
+                                <div class="input date">
+                                    <input type="tel" maxlength="10" title="최종중간정산일" placeholder="YYYY.MM.DD">
+                                    <button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">기준급여</div>
+                            <div class="form_row"> 
+                                <div class="input unit js_unit" role="button" aria-label="기준급여 입력">
+                                    <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="기준급여" readonly class="bg_white" data-unit="원">
+                                </div>
+                            </div>
+                            <div class="form_row"> 
+                                <div class="input unit js_unit" role="button" aria-label="기준급여 입력">
+                                    <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="기준급여" readonly class="bg_white" data-unit="원" value="10,000,000">
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">1,000만원</p>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">가입기간산정 기준일</div>
+                            <div class="form_row">
+                                <div class="input"><input type="text" id="id02" title="가입기간산정 기준일" readonly value="2022.01.01"></div>
+                            </div>
+                        </div>
+                        <!-- case : DB -->
+                        <div class="form_group">
+                            <div class="form_tit">퇴직급여추계액</div>
+                            <div class="form_row"> 
+                                <div class="input unit js_unit" role="button" aria-label="퇴직급여추계액 입력">
+                                    <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="퇴직급여추계액" readonly class="bg_white" data-unit="원">
+                                </div>
+                                <!-- <p class="form_hangul" aria-hidden="true">원</p> -->
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">사원번호</div>
+                            <div class="form_row">
+                                <div class="input"><input type="tel" id="id03" maxlength="10" title="사원번호" placeholder="사원번호 입력"></div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">근무처사업장</div>
+                            <div class="form_row">
+                                <div class="input"><input type="text" id="id04" title="근무처사업장" placeholder="근무처사업장 입력"></div>
+                            </div>
+                        </div>
+                        <!-- //case : DB -->
+                        <!-- case : DC -->
+                        <div class="form_group">
+                            <div class="form_tit">사원번호</div>
+                            <div class="form_row">
+                                <div class="input"><input type="tel" id="id05" maxlength="10" title="사원번호" placeholder="사원번호 입력"></div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">근무처사업장</div>
+                            <div class="form_row">
+                                <div class="input"><input type="text" id="id06" title="근무처사업장" placeholder="근무처사업장 입력"></div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">권유직원번호</div>
+                            <div class="form_row">
+                                <div class="input"><input type="tel" id="id07" maxlength="7" title="권유직원번호" placeholder="권유직원번호 입력"></div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">DB제도가입일</div>
+                            <div class="form_row">
+                                <div class="input date">
+                                    <input type="text" id="id08" title="DB제도가입일" placeholder="YYYY.MM.DD">
+                                    <button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //case : DC -->
+                        <!-- case : 기업형IRP -->
+                        <div class="form_group">
+                            <div class="form_tit">사원번호</div>
+                            <div class="form_row">
+                                <div class="input"><input type="tel" id="id09" maxlength="10" title="사원번호" placeholder="사원번호 입력"></div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">근무처사업장</div>
+                            <div class="form_row">
+                                <div class="input"><input type="text" id="id10" title="근무처사업장" placeholder="근무처사업장 입력"></div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">DB제도가입일</div>
+                            <div class="form_row">
+                                <div class="input date">
+                                    <input type="text" id="id11" title="DB제도가입일" placeholder="YYYY.MM.DD">
+                                    <button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //case : 기업형IRP -->
+                    </div>
+                </li>
+                <li>
+                    <div class="tit">
+                        <div class="selection chk">
+                            <input type="checkbox" id="radioH2" name="radio_h">
+                            <label for="radioH2" class="label"><em>가입자 정보 2 (홍길동)</em></label><!-- 221028 추가 : 가입자 이름 -->
+                        </div>
+                        <button type="button" class="btn_acco" aria-expanded="false"><span class="arrow"><span class="hidden">열기</span></span></button>
+                    </div>
+                    <div class="toggle_panel" role="region">가입자 정보 2</div>
+                </li>
+           </ul>
+           <!-- 가입자 정보 5개 항목 추가시 버튼 삭제 -->
+           <div class="btn_list_btm more">
+               <span><button type="button" class="btn outline md">가입자 추가</button></span>
+           </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">삭제</button></span>
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript"></script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

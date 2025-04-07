@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>자동기한연장</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" >
+		<h1 class="hidden">기한연장 조건확인</h1>
+		<div class="inform_top_wrap">
+			<ul class="depth bul">
+				<li>기한연장 동의 후 신용관리대상자 등 신용변동이 발생하는 경우 자동 기한연장이 되지 않습니다.</li>
+				<li>기한연장 등의 영업일 기준으로 기한연장 동의 날짜의 기준금리 및 우대금리를 받을 수 있습니다.</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<h2 class="h2">기한연장 조건확인</h2>
+			<div class="table">
+				<table>
+					<caption>테이블 제목 정보</caption>
+					<colgroup>
+						<col style="width:25%">
+						<col style="width:40%">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">기한연장 전(현재)</th>
+							<th scope="col">기한연장 후</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="center" scope="row">대출일</th>
+							<td class="center"><span class="number">2020.01.01</span></td>
+							<td class="center"><strong class="number">2020.01.01</strong></td>
+						</tr>
+						<tr>
+							<th class="center" scope="row">만기일</th>
+							<td class="center"><span class="number">2020.01.01</span></td>
+							<td class="center"><strong class="number">2020.01.01</strong></td>
+						</tr>
+						<tr>
+							<th class="center" scope="row">대출일</th>
+							<td class="right"><span class="number">1.00</span><span class="num_unit">%</span></td>
+							<td class="right"><strong class="number">1.00</strong><span class="num_unit">%</span></td>
+						</tr>
+					</tbody>
+				</table>    
+			</div>
+		</div>
+
+		<div class="section">
+			<h2 class="h3">고객정보</h2>
+			<ul class="list_data">
+				<li>
+					<div class="key">사업자명</div><!-- 220729 리웍 -->
+					<div class="value">형우천(동남맹미)</div>
+				</li>
+				<li>
+					<div class="key">대표자명</div>
+					<div class="value">형*우</div><!-- 220729 리웍 -->
+				</li>
+				<li>
+					<div class="key">사업자등록번호</div>
+					<div class="value"><span class="number">432-04-44139</span></div>
+				</li>
+				<li>
+					<div class="key">휴대폰번호</div>
+					<div class="value"><span class="number">010-49**-69-**</span></div>
+				</li>
+				<li>
+					<div class="key">우편물수령처</div>
+					<div class="value">자택</div>
+				</li>
+				<li>
+					<div class="key">자택주소</div>
+					<div class="value">
+						<span class="number">30153</span> 세종 대평로 *******************
+					</div>
+				</li>
+				<li>
+					<div class="key">사업장주소</div>
+					<div class="value">
+						<span class="number">30153</span> 세종 대평로 14-4 306계 985제(인송서, 명한글인5우석						
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		
+
+		<!-- 220729 리웍 -->
+		<div class="section">
+			<h2 class="h2">안내방법 선택</h2>
+			<div class="form_group">
+				<div class="form_tit">대출실행안내방법 신청</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn " title="대출실행안내방법 신청">선택</button>
+					</div>
+				</div>
+            </div>
+		</div>
+
+		<div class="section">
+			<h2 class="h3">금리인하 요구권 안내</h2>
+			<ul class="depth bul fs15">
+				<li>고객님의 신용상태가 호전 또는 담보가 보강되었다고 인정되는 경우(회사채 등급상승, 재무상태 개선, 특허권 신규 취득, 담보제공 등)에는 증빙자료와 함께 금리인하를 요구할 수 있습니다. 단 은행의 신용평가 및 심사결과에 따라서 금리인하가 되지 않을 수도 있습니다.</li>
+				<li>은행은 금리인하 요구를 받은 날부터 10영업일 이내(고객에게 자료의 보완을 요구하는 날부터 자료가 제출되는 날까지의 기간은 포함되지 않습니다.)에 금리인하 요구 수용 여부 및 그 사유를 통지합니다.</li>
+				<li>대상여신 : 은행계정 기업여신(단, 정책자금대출, 원화지급보증, 순구매 방식의 외상매출채권전자대출, 제3자(판매업체) 이자부담방식의 구매론, 지정어음, 전액담보부 여신은 제외)</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<div class="btn_cnt_wrap">
+				<span><button type="button" class="btn outline md">고객정보변경하기</button></span>
+			</div>
+			<p class="tip_info">고객정보 변경이 필요한 경우 '고객정보변경하기' 버튼을 선택해주세요.</p>
+		</div>
+
+		<div class="section">
+			<p class="depth bold"><!-- 220915 bold 추가 -->
+				위 기한연장 조건 및 금리인하요구권에 대하여 충분히 이해하였음을 확인하며, 자동기한연장에 동의하시겠습니까?
+			</p>
+		</div>
+		<!-- //220729 리웍 -->
+		
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">미동의</button></span>
+				<span><button type="button" class="btn primary lg" disabled>동의</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

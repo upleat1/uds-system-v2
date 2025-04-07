@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[해지결과/내역조회]예금해지 요구불거래내역조회</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">예금해지계좌 거래내역조회</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth">
+                <!-- 220729 리웍 : 문구 수정 -->
+                <li>해지계좌의 최근 5년간 거래내역을 조회하실 수 있습니다.</li>
+                <!-- //20729 리웍 : 문구 수정 -->
+            </ul>
+        </div>
+
+        <div class="section">
+            <!-- 해지계좌번호 영역 -->
+            <div class="btn_confirm_wrap">
+                <div class="form_group gap_sm_minus"> <!-- 220729 class="gap_sm_minus" 추가 -->
+                    <div class="form_tit">해지계좌번호</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" onclick="" title="해지계좌번호 선택">000000-00-000000</button>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <!-- //해지계좌번호 영역 -->
+        </div>
+
+        <div class="section">
+            <!-- 조회기간입력 & 월별조회 탭영역 -->
+            <!-- 220729 리웍 : tab_radio 태그 수정, class="gap_0" 추가 -->
+            <div class="form_group">
+                <div class="form_tit">조회기간</div>
+                <div class="form_row">
+                    <div class="tab_wrap box">
+                        <div class="tab_radio">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="rdo1_1" name="rdo1"checked>
+                                    <label for="rdo1_1" class="label"><em>조회기간 입력</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="rdo1_2" name="rdo1">
+                                    <label for="rdo1_2" class="label"><em>월별 조회</em></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tab_panel pdt_0">
+                            <h3 class="hidden">조회기간 입력</h3>
+                            <!-- 220913 : 접근성 검수(포커스 이동) 부분 수정  -->
+                            <div class="form_group">
+                                <div class="rdoChk_box">
+                                    <span class="selection">
+                                        <input type="radio" id="radioBox" name="radio_box">
+                                        <label for="radioBox" class="label"><em>당일</em></label>
+                                    </span>
+                                    <span class="selection">
+                                        <input type="radio" id="radioBox_2" name="radio_box">
+                                        <label for="radioBox_2" class="label"><em>3일</em></label>
+                                    </span>
+                                    <span class="selection">
+                                        <input type="radio" id="radioBox_3" name="radio_box">
+                                        <label for="radioBox_3" class="label"><em>1주일</em></label>
+                                    </span>
+                                    <span class="selection">
+                                        <input type="radio" id="radioBox_4" name="radio_box">
+                                        <label for="radioBox_4" class="label"><em>1개월</em></label>
+                                    </span>
+                                    <span class="selection">
+                                        <input type="radio" id="radioBox_5" name="radio_box">
+                                        <label for="radioBox_5" class="label"><em>3개월</em></label>
+                                    </span>
+                                </div>    
+                            </div>
+                            <!-- //220913 : 접근성 검수(포커스 이동) 부분 수정  -->
+                            <div class="form_date_term">
+                                <div class="input date">
+                                    <input type="tel" title="시작일 입력" maxlength="8" value ="2022.04.21">
+                                    <button type="button" class="btn_cal" title="시작일 선택"></button>                    
+                                </div>
+                                <span class="space">~</span>
+                                <div class="input date">
+                                    <input type="tel" title="종료일 입력" maxlength="8" value ="2022.05.21"> 
+                                    <button type="button" class="btn_cal" title="종료일 선택"></button>                              
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="tab_panel">
+                            <h3 class="hidden">월별 조회</h3>
+                            <div class="form_group gap_0">
+                                <div class="select">
+                                    <button type="button" class="select_btn active" title="월별 조회" value="">2022.09</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 상세검색 -->
+            <div class="toggle_sm_wrap">
+                <button class="tit js_toggle" aria-expanded="false">상세검색</button>
+                <div class="toggle_panel" role="region">
+                    <div class="form_group">
+                        <div class="form_tit">거래유형</div>
+                        <div class="form_row">
+                            <div class="rdoChk_group inline">
+                                <span class="selection">
+                                    <input type="radio" id="rdo1" name="timeRdo">
+                                    <label for="rdo1" class="label"><em>전체</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="rdo2" name="timeRdo">
+                                    <label for="rdo2" class="label"><em>입금</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="rdo3" name="timeRdo">
+                                    <label for="rdo3" class="label"><em>출금</em></label>
+                                </span>
+                            </div>
+                        </div>                                    
+                    </div>
+                    <div class="form_group">
+                        <div class="form_tit">조회내역 정렬</div>
+                        <div class="form_row">
+                            <div class="rdoChk_group inline">
+                                <span class="selection">
+                                    <input type="radio" id="rdo4" name="timeRdo">
+                                    <label for="rdo4" class="label"><em>최신순</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="rdo5" name="timeRdo">
+                                    <label for="rdo5" class="label"><em>과거순</em></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //상세검색 -->  
+            <!-- //220729 리웍 : tab_radio 태그 수정, class="gap_sm_minus", class="gap_0" 추가 -->
+            <!-- 조회기간입력 & 월별조회 탭영역 -->
+
+            <!-- 조회 버튼 -->
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg">조회</button></span>
+            </div>
+            <!-- //조회 버튼 -->
+        </div>
+        <hr class="hr_divide" aria-hidden="true">
+        
+        <!-- 조회 버튼 클릭 시 : 결과 내용 하단에 출력 -->
+        <div class="section">
+            <div class="list_top_wrap">
+                <div class="col">
+                    <div class="sch_period">
+                        <span class="number">2022.01.01 ~ 2022.05.30</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="list_data_group">
+                <h2 class="hidden">계좌 거래내역1</h2>
+                <div class="list_data_group_s">
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">일시</div>
+                            <div class="value"><span class="number">2022.01.10 10:01:22</span></div>
+                        </li>
+                        <li>
+                            <div class="key">이체유형</div>
+                            <div class="value">스마트입금</div>
+                        </li>
+                        <li>
+                            <div class="key">의뢰인명</div>
+                            <div class="value">KB가맹점우대적금</div>
+                        </li>
+                        <!-- 220729 리웍 : 금액영역 strong 태그 변경 -->
+                        <li>
+                            <div class="key">입금액</div>
+                            <div class="value"><strong class="number fc_posi">1,300</strong><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">잔액</div>
+                            <div class="value"><strong class="number bold">1,234,456,890</strong><span class="num_unit">원</span></div>
+                        </li>
+                        <!-- //220729 리웍 : 금액영역 strong 태그 변경 -->
+                        <li>
+                            <div class="key">출금계좌메모</div>
+                            <div class="value">메모있음</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list_data_group_s">
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">일시</div>
+                            <div class="value"><span class="number">2022.01.10 10:01:22</span></div>
+                        </li>
+                        <li>
+                            <div class="key">이체유형</div>
+                            <div class="value">인터넷출금이체</div>
+                        </li>
+                        <li>
+                            <div class="key">의뢰인명</div>
+                            <div class="value">카뱅이체</div>
+                        </li>
+                        <!-- 220729 리웍 : 금액영역 strong 태그 변경 -->
+                        <li>
+                            <div class="key">출금액</div>
+                            <div class="value"><strong class="number fc_nega">33,300</strong><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">잔액</div>
+                            <div class="value"><strong class="number bold">1,234,456,890</strong><span class="num_unit">원</span></div>
+                        </li>
+                        <!-- //220729 리웍 : 금액영역 strong 태그 변경 -->
+                        <li>
+                            <div class="key">출금계좌메모</div>
+                            <div class="value">-</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 조회결과없음 -->
+                <div class="result nodata">
+                    <p class="tit">조회하신 내역이 없습니다.</p>
+                </div>
+                <!-- //조회결과없음 -->
+            </div> 
+            
+            <div class="btn_list_btm more">
+                <button type="button" class="btn">더보기</button>
+            </div>  
+        </div>
+        <!-- //조회 버튼 클릭 시 : 결과 내용 하단에 출력 -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

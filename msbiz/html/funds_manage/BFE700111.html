@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>가맹점 결제계좌 등록/변경</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="hidden">가맹점 결제계좌 등록/변경</h1>
+        <div class="section">
+            <div class="agree_total only">
+                <span class="selection">
+                    <input type="checkbox" id="checkTypeOnly1_1">
+                    <!-- 221118 내용수정 -->
+                    <label for="checkTypeOnly1_1" class="label"><em>[필수] [은행] 개인(신용)정보 수집·이용·제공 동의서 (가맹점 등록/결제계좌 변경 신청용(이지샵제휴))</em></label>
+                </span>
+                <button type="button" class="btn btn_link" title="[필수] [은행] 개인(신용)정보 제3자 제공 동의서(가맹점결제계좌 신규변경)"><span class="hidden">바로가기</span></button>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="h2">고객정보 입력</h2>
+            <div class="form_group">
+                <div class="form_tit">상호명</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" placeholder="상호명 입력" title="상호명" value="">
+                    </div>
+                </div>   
+            </div>
+            <div class="form_group">
+                <div class="form_tit">대표자명</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" placeholder="대표자명 입력" title="대표자명" value="">
+                    </div>
+                </div>   
+            </div>
+            <div class="form_group tel">
+                <div class="form_tit">휴대폰</div>
+                <div class="form_row col col3">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="휴대폰번호 앞자리">010</button>
+                    </div>
+                    <div class="input" role="button" aria-label="휴대폰번호 중간자리 입력" onclick="">
+                        <input type="tel" value="" maxlength="4" title="휴대폰번호 중간자리" aria-hidden="true" class="bg_white">
+                    </div>
+                    <div class="input" role="button" aria-label="휴대폰번호 뒷자리 입력" onclick="">
+                        <input type="password" value="" maxlength="4" title="휴대폰번호 뒷자리" aria-hidden="true">
+                    </div>
+                </div>
+            </div>
+            <!-- 221021 추가 -->
+            <div class="form_group tel">
+                <div class="form_tit">사업장 전화번호</div>
+                <div class="form_row col">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="지역번호 선택">02</button>
+                    </div>
+                    <div class="input" role="button" aria-label="자택 전화번호 입력" onclick="">
+                        <input type="tel" id="" value="" title="자택 전화번호" aria-hidden="true" class="bg_white">
+                    </div>
+                </div>
+            </div>
+            <!-- //221021 추가 -->
+            <div class="form_group address">
+                <div class="addr_tit">사업장주소</div>
+                <!-- 공통태그(공통영역) -->
+                <div class="addr_sch">
+                    <button type="button" class="btn point sm round">주소검색</button>
+                    <div class="addr_cts">
+                        <span class="addr_post number">07343</span>
+                        <p>서울특별시 영등포구 국제금융로 108-6(여의도동, 진주아파트)</p>
+                        <p>301동 1507호</p>
+                    </div>
+                </div>
+                <!-- //공통태그(공통영역) -->
+            </div>
+            <ul class="depth bul">
+                <li>해당 내용은 KB고객정보에 등록된 고객정보로 조회된 내용입니다.</li>
+                <li>가맹점 정보 등록/변경의 정확한 업무처리를 위하여 고객정보를 확인 후 수정이 필요할 경우 변경해주세요.</li>
+                <li>변경한 고객정보는 KB고객정보에 수정반영되지 않습니다.<br>고객정보관리(My 페이지 > 고객정보 관리)</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="h2">신청정보 입력</h2>
+            <div class="form_group">
+                <div class="form_tit">신청구분</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="신청구분 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <ul class="depth bul">
+                    <!-- 221118 내용수정 -->
+                    <!-- 221021 내용수정 -->
+                    <li>오픈 예정인 신규 가맹점의 경우 ‘단말/포스 설치’를 선택해주세요.</li>
+                    <li>현재 영업중인 가맹점의 결제계좌를 변경하실 경우 ‘결제계좌변경’을 선택해주세요.</li>
+                    <li>신청구분별로 사업자번호 기준 1회만 신청 가능합니다.</li>
+                    <!-- //221021 내용수정 -->
+                    <!-- //221118 내용수정 -->
+                </ul>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">정산 결제계좌 선택</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="정산 결제계좌 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <!-- 221118 추가 -->
+                <p class="gap_xs fc_nega">입금제한통장은 선택이 불가합니다.</p>
+                <!-- //221118 추가 -->
+            </div>
+            <div class="form_group">
+                <div class="form_tit">카드사 선택</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="카드사 선택" onclick="UICommon.Layer.open('#selectDefalut')">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <!-- 221118 추가 -->
+                <p class="gap_xs fc_nega">KB국민카드만 계좌변경 신청시 본 거래로 신청불가<br>(가까운 영업점에 방문하여 신청하시기 바랍니다.)</p>
+                <!-- //221118 추가 -->
+            </div>
+            <div class="form_group">
+                <div class="form_tit">권유직원 정보입력</div>
+                <!-- 공통태그(공통영역) -->
+                <div class="staff_hope">
+                    <!-- [개발] 방문이력이 있는 경우 노출 -->
+                    <!-- <ul class="list_comp check">
+                        <li>
+                            <span class="selection"><input type="radio" id="rad_staff1" name="rad_staff"><label for="rad_staff1" class="label"><em><span class="staff">김국민</span><span class="office">역삼동 영업점 내점 상담</span><span class="hope_date number">2021.05.23</span></em></label></span>
+                        </li>
+                        <li>
+                            <span class="selection"><input type="radio" id="rad_staff2" name="rad_staff"><label for="rad_staff2" class="label"><em><span class="staff">이국민</span><span class="office">역삼동 영업점 내점 상담</span> <span class="hope_date number">2021.04.23</span></em></label></span>
+                        </li>
+                    </ul> -->
+                    <!-- //[개발] 방문이력이 있는 경우 노출 -->
+                    <!-- <p class="depth info">고객님의 상품 가입에 가장 도움이 된 상담직원 또는 전담직원을 선택해 주시기 바랍니다.</p> -->
+                    <div class="staff_hope_sel">
+                        <div class="rdoChk_box">
+                            <span class="selection"><input type="radio" id="staff_hope_1" name="staff_hope"><label for="staff_hope_1" class="label"><em>지점명</em></label></span><span class="selection"><input type="radio" id="staff_hope_2" name="staff_hope"> <label for="staff_hope_2" class="label"><em>직원이름</em></label></span> <span class="selection"><input type="radio" id="staff_hope_3" name="staff_hope"><label for="staff_hope_3" class="label"><em>직원번호</em></label></span><span class="selection"><input type="radio" id="staff_hope_4" name="staff_hope" checked=""><label for="staff_hope_4" class="label"><em>없음</em></label></span>
+                        </div>
+                    </div>
+                    <!-- 지점명 -->
+                    <div class="staff_hope_cts">
+                        <div class="form_group">
+                            <div class="form_tit hidden">지점명</div>
+                            <div class="form_row">
+                                <div class="select outline lg"> <button type="button" class="select_btn active"
+                                        title="지점명 선택">지점명</button> <!-- [개발] 버튼에 값이 들어갈 경우 클래스 "active" 추가 -->
+                                </div>
+                            </div>
+                            <div class="form_row"> <span class="input int_btn"> <input type="text" title="지점명 직접입력"
+                                        placeholder="지점명" value="동여의도(김국민)" disabled=""> <button type="button"
+                                        class="btn point sm round">검색</button> </span> </div>
+                            <div class="form_btm_full_wrap"> <span><button type="button"
+                                        class="btn outline md">검색초기화</button></span> </div>
+                        </div>
+                    </div>
+                    <!-- //지점명 -->
+                    <!-- 직원이름 -->
+                    <div class="staff_hope_cts">
+                        <div class="form_group">
+                            <div class="form_tit hidden">직원이름</div>
+                            <div class="form_row"> <span class="input int_btn"> <input type="text" title="직원이름 직접입력"
+                                        placeholder="직원이름"> <button type="button" class="btn point sm round">검색</button> </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //지점명 -->
+                    <!-- 직원번호 -->
+                    <div class="staff_hope_cts">
+                        <div class="form_group">
+                            <div class="form_tit hidden">직원번호</div>
+                            <div class="form_row"> <span class="input int_btn"> <input type="text" title="직원번호 직접입력"
+                                        placeholder="직원번호"> <button type="button" class="btn point sm round">검색</button> </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //직원번호 -->
+                </div>
+                <!-- //공통태그(공통영역) -->
+            </div>
+        </div>
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg" onclick="">가맹점 정보 등록</button></span>
+            </div>
+        </div>
+	</div><!-- //content -->
+    <div id="selectDefalut" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>카드사 선택</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <div class="list_total">
+                        <span class="selection">
+                            <input type="checkbox" id="chkAll" aria-hidden="true">
+                            <label for="chkAll" class="label" role="checkbox" aria-checked="false"><em>전체카드 변경</em></label>
+                        </span>
+                    </div>
+                    <ul class="list_data rdoChk">
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chkItem1" aria-hidden="true">
+                                <label for="chkItem1" class="label" role="checkbox" aria-checked="false">
+                                    <em>KB국민카드</em>
+                                </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chkItem2" aria-hidden="true">
+                                <label for="chkItem2" class="label" role="checkbox" aria-checked="false">
+                                    <em>롯데카드</em>
+                                </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chkItem3" aria-hidden="true">
+                                <label for="chkItem3" class="label" role="checkbox" aria-checked="false">
+                                    <em>삼성카드</em>
+                                </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chkItem4" aria-hidden="true">
+                                <label for="chkItem4" class="label" role="checkbox" aria-checked="false">
+                                    <em>신한카드</em>
+                                </label>
+                            </span>
+                        </li>
+                        <!-- 221024 추가 -->
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chkItem5" aria-hidden="true">
+                                <label for="chkItem5" class="label" role="checkbox" aria-checked="false">
+                                    <em>우리카드</em>
+                                </label>
+                            </span>
+                        </li>
+                        <!-- //221024 추가 -->
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chkItem6" aria-hidden="true">
+                                <label for="chkItem6" class="label" role="checkbox" aria-checked="false">
+                                    <em>하나카드</em>
+                                </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chkItem7" aria-hidden="true">
+                                <label for="chkItem7" class="label" role="checkbox" aria-checked="false">
+                                    <em>현대카드</em>
+                                </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chkItem8" aria-hidden="true">
+                                <label for="chkItem8" class="label" role="checkbox" aria-checked="false">
+                                    <em>BC카드</em>
+                                </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chkItem9" aria-hidden="true">
+                                <label for="chkItem9" class="label" role="checkbox" aria-checked="false">
+                                    <em>NH카드</em>
+                                </label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <!-- 221121 추가 -->
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                    <!-- //221121 추가 -->
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

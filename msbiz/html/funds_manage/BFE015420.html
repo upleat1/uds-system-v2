@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[자금보고서]자금보고서_자금일보(탭)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <div class="tab_wrap">
+            <div class="tab_list">
+                <div class="scroll_wrap">
+                    <a href="#" class="active">자금일보</a>
+                    <a href="#">현금흐름</a>
+                    <a href="#">매출</a>
+                    <a href="#">매입</a>
+                </div>
+            </div>
+            <div class="link_panel">
+                <h1 class="hidden">자금일보 상세</h1>
+                <div class="section">
+                    <div class="form_group">
+                        <div class="form_tit">사업자</div>
+                        <div class="form_row">
+                            <div class="select">
+                                <button type="button" class="select_btn" title="사업자 선택">전체</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form_group">
+                        <div class="form_tit">조회일자</div>
+                        <div class="form_row">
+                            <div class="input date">
+                                <input type="tel" maxlength="8" title="생년월일" placeholder="날짜입력">
+                                <button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_cnt_wrap">
+                        <span><button type="button" class="btn primary lg">조회</button></span>
+                    </div>
+                </div>
+                
+                <!-- 조회결과 있음 -->
+                <hr class="hr_divide" aria-hidden="true">
+                <div class="section">
+
+                    <h2 class="h2">운용자금내역</h2>
+
+                    <div class="list_data_group">
+
+                        <!-- 전일자 기준 -->
+                        <div class="list_data_group_s">
+                            <h3 class="h3">2022.05.01(전일)</h3>
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">운용가능액</div>
+                                    <div class="value">
+                                        <span class="number">1,0000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">입금액</div>
+                                    <div class="value">
+                                        <span class="number">1,0000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">출금액</div>
+                                    <div class="value">
+                                        <span class="number">1,0000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_list_btm">
+                                <span><button type="button" class="btn outline sm">자금상세내역</button></span>
+                            </div>
+                        </div>
+
+                        <!-- 조회일 기준 -->
+                        <div class="list_data_group_s">
+                            <h3 class="h3">2022.05.02(조회일)</h3>
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">운용가능액</div>
+                                    <div class="value">
+                                        <span class="number">1,0000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">입금액</div>
+                                    <div class="value">
+                                        <span class="number">1,0000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">출금액</div>
+                                    <div class="value">
+                                        <span class="number">1,0000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">전일잔액</div>
+                                    <div class="value">
+                                        <span class="number">1,0000,000</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_list_btm">
+                                <span><button type="button" class="btn outline sm">자금상세내역</button></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!--// 조회결과 있음 -->
+
+                
+                <!-- 조회결과 없음 -->
+                <div class="result nodata sm">
+                    <p class="tit">조회내역이 없습니다.</p>
+                </div>
+                <!--// 조회결과 없음 -->
+            </div>
+        </div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[승낙확인]승낙대상계좌조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+    <div id="wrap">
+        <div id="content" class="cate_pdt_manage">
+            <h1 class="h1">승낙대상 계좌</h1>
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <li>숙려제도 대상상품에 대한 승낙(상품 가입 의사를 다시 확인하는 절차) 화면 입니다.</li>
+                    <li>본 상품은 예금자보호법에 따라 예금보험공사가 보호하지 않으며, 투자의 결과에 따라 이익 또는 손실이 발생할 수 있으며, 최대 원금전액까지 손실이 발생할 수 있는 투자상품입니다.</li>
+                    <li>신규계약을 확정하고자 하는 고객은 대상상품에 대하여 승낙버튼을 누르시기 바랍니다.</li>
+                    <li>신규 취소를 원하는 고객은 대상상품에 대하여 신규취소 버튼을 누르시기 바랍니다.</li>
+                    <li>승낙종료일까지 승낙하지 않을 경우 신규거래는 자동취소되어 다음 영업일에 연결계좌로 자금이 반환됩니다.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="acc_list_wrap">
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid1_1" name="mid1">
+                                            <label for="mid1_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid1_2" name="mid1">
+                                            <label for="mid1_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid2_1" name="mid2">
+                                            <label for="mid2_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid2_2" name="mid2">
+                                            <label for="mid2_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid3_1" name="mid3">
+                                            <label for="mid3_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid3_2" name="mid3">
+                                            <label for="mid3_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid4_1" name="mid4">
+                                            <label for="mid4_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid4_2" name="mid4">
+                                            <label for="mid4_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid5_1" name="mid5">
+                                            <label for="mid5_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid5_2" name="mid5">
+                                            <label for="mid5_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid6_1" name="mid6">
+                                            <label for="mid6_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid6_2" name="mid6">
+                                            <label for="mid6_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid7_1" name="mid7">
+                                            <label for="mid7_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid7_2" name="mid7">
+                                            <label for="mid7_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid8_1" name="mid8">
+                                            <label for="mid8_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid8_2" name="mid8">
+                                            <label for="mid8_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid9_1" name="mid9">
+                                            <label for="mid9_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid9_2" name="mid9">
+                                            <label for="mid9_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acc_pannel open gap_md">
+                        <div class="acc_wrap inc_btn">
+                            <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                            <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                            <div class="acc_info_wrap gap_sm">
+                                <div class="acc_info">
+                                    <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                                </div>
+                                <div class="acc_info">
+                                    <span class="tit">승낙종료일</span><span class="number">2022.12.30</span>
+                                </div>
+                            </div>
+                            <ul class="rdoChk_ul2 gap_sm_3">
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid10_1" name="mid10">
+                                            <label for="mid10_1" class="label">
+                                                <em>승낙</em>
+                                            </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="selection mid">
+                                            <input type="radio" id="mid10_2" name="mid10">
+                                            <label for="mid10_2" class="label">
+                                                <em>신규 취소</em>
+                                            </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_list_btm more gap_md">
+                    <button type="button" class="btn">더보기<span></span></button>
+                </div>
+                <!-- 조회 내역이 없는 경우 -->
+                <div class="result nodata">
+                    <p class="tit">조회하신 내역이 없습니다.</p>
+                </div>
+                <!-- //조회 내역이 없는 경우 -->
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg" disabled><span class="number">0</span>개 계좌 확인</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+</html>

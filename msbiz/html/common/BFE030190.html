@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[등록 세금계산서 조회]등록세금계산서내역 조회(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content" data-ui="full_pop">
+            <h1 class="hidden">등록 세금계산서 조회</h1>
+            <div class="inform_top_wrap">
+                <p class="p">조회기간은 작성일자(세금계산서 발행일) 기준 입니다.</p>
+            </div>
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">사업자번호</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn" title="사업자번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">조회기간</div>
+                    <div class="form_row">
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="period0" name="period" checked>
+                                <label for="period0" class="label"><em>오늘</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period1" name="period" checked>
+                                <label for="period1" class="label"><em>1주일</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period2" name="period">
+                                <label for="period2" class="label"><em>1개월</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period3" name="period">
+                                <label for="period3" class="label"><em>3개월</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period4" name="period">
+                                <label for="period4" class="label"><em>8개월</em></label>
+                            </span>
+                        </div>
+                        <div class="form_date_term">
+                            <div class="input date">
+                                <input type="tel" title="시작일 입력" maxlength="8" value ="2021.03.01">
+                                <button type="button" class="btn_cal" title="시작일 선택"></button>                    
+                            </div>
+                            <span class="space">~</span>
+                            <div class="input date">
+                                <input type="tel" title="종료일 입력" maxlength="8" value ="2021.03.31"> 
+                                <button type="button" class="btn_cal" title="종료일 선택"></button>                              
+                            </div>
+                        </div>              
+                    </div>
+                </div>
+                <div class="btn_cnt_wrap">
+                    <span><button type="button" class="btn primary lg" onclick="UICommon.scTop.topMove('#resultSection')">조회</button></span>
+                </div>
+            </div>
+            <hr class="hr_divide">
+            <div id="resultSection" class="section">
+                <h2 class="h2">세금계산서 조회내역</h2>
+                <div class="acc_list_wrap line">
+                    <div class="acc_pannel open">
+                        <span class="selection block">
+                            <input type="checkbox" id="taxChk1" checked>
+                            <label for="taxChk1" class="label">
+                                <div class="acc_wrap">
+                                    <div class="acc_info_wrap">
+                                        <div class="acc_info date">
+                                            <span class="number">312-81-30226</span>
+                                        </div>
+                                        <div class="acc_info name">
+                                            <span class="number">312-81-30226</span>
+                                            <span>종이세금계산서</span>
+                                        </div>
+                                        <div class="acc_info">
+                                            <span class="number">312-81-30226</span>
+                                        </div>
+                                        <div class="acc_info">
+                                            <span class="number">124-81-12655</span>
+                                        </div>
+                                    </div>
+                                    <div class="acc_sum_wrap">
+                                        <div class="acc_pay_list">
+                                            <div class="acc_pay_item">
+                                                <span class="unit">세금계산서금액</span>
+                                                <strong class="number">10,000,000</strong><strong class="num_unit">원</strong>
+                                            </div>
+                                            <div class="acc_pay_item s">
+                                                <span class="unit">부가가치세액</span>
+                                                <strong class="number">0</strong><strong class="num_unit">원</strong>
+                                            </div>
+                                            <div class="acc_pay_item s">
+                                                <span class="unit">승인금액</span>
+                                                <strong class="number">0</strong><strong class="num_unit">원</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </span>
+                    </div>
+                    <div class="acc_pannel open">
+                        <span class="selection block">
+                            <input type="checkbox" id="taxChk2">
+                            <label for="taxChk2" class="label">
+                                <div class="acc_wrap">
+                                    <div class="acc_info_wrap">
+                                        <div class="acc_info date">
+                                            <span class="number">312-81-30226</span>
+                                        </div>
+                                        <div class="acc_info name">
+                                            <span class="number">312-81-30226</span>
+                                            <span>종이세금계산서</span>
+                                        </div>
+                                        <div class="acc_info">
+                                            <span class="number">312-81-30226</span>
+                                        </div>
+                                        <div class="acc_info">
+                                            <span class="number">124-81-12655</span>
+                                        </div>
+                                    </div>
+                                    <div class="acc_sum_wrap">
+                                        <div class="acc_pay_list">
+                                            <div class="acc_pay_item">
+                                                <span class="unit">세금계산서금액</span>
+                                                <strong class="number">10,000,000</strong><strong class="num_unit">원</strong>
+                                            </div>
+                                            <div class="acc_pay_item s">
+                                                <span class="unit">부가가치세액</span>
+                                                <strong class="number">0</strong><strong class="num_unit">원</strong>
+                                            </div>
+                                            <div class="acc_pay_item s">
+                                                <span class="unit">승인금액</span>
+                                                <strong class="number">0</strong><strong class="num_unit">원</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <!-- 조회 내역이 없을 경우 START -->
+                <div class="result nodata sm">
+                    <p class="tit">조회하신 내역이 없습니다.</p>
+                </div>
+                <!--// 조회 내역이 없을 경우 END -->
+                <div class="btn_confirm_wrap">
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg">확인</button></span>  
+                    </div>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <!--// 업무 HTML 선언 END -->
+
+
+</body>
+
+</html>

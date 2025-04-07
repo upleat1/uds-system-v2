@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[계좌이체]다른금융이체본거래</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">다른금융이체 본거래</h1>
+            <div class="result finish">
+                <div class="result_ani">
+                    <img src="/msbiz/app/img/common/result_ani.gif" alt="">
+                </div>
+                <p class="tit">
+                    <strong>총 <strong class="number">2</strong>건의</strong><br>
+                    <strong class="number">1,000,000</strong><strong class="num_unit">원</strong><br>
+                    <span class="normal">이체가 정상처리 되었습니다.</span>
+                </p>
+                <!-- 단건(정상) -->
+                <p class="tit">
+                    <strong>{받는분 이름}님께</strong><br>
+                    <strong class="number">{송금금액}</strong><strong class="num_unit">원</strong><br>
+                    <span class="normal">이체가 정상처리 되었습니다.</span>
+                </p>
+                <!-- 다건(정상) -->
+                <p class="tit">
+                    <strong>총 <strong class="number">{N}</strong>건의</strong><br>
+                    <strong class="number">{총 송금금액}</strong><strong class="num_unit">원</strong><br>
+                    <span class="normal">이체가 완료 되었습니다.</span>
+                </p>
+                <!-- 다건(정상+오류) -->
+                <p class="tit">
+                    <strong>총 <strong class="number">{정상건수}</strong>건의</strong><br>
+                    <strong class="number">{총 정상이체금액}</strong><strong class="num_unit">원</strong><br>
+                    <span class="normal">이체가 완료 되었습니다.</span>
+                </p>
+                <!-- 예비거래에서 정상인 1건이 본거래로 넘어가면서 1건이 오류로 판명되는 경우 -->
+                <p class="tit">
+                    <strong>{김국민}님께</strong><br>
+                    <strong class="number">{10,000}</strong><strong class="num_unit">원</strong><br>
+                    <span class="normal">이체가 오류처리 되었습니다.</span>
+                </p>
+                <!-- 예비거래에서 정상인 2건이 본거래로 넘어가면서 2건 모두 오류로 판명되는 경우 -->
+                <p class="tit">
+                    <strong>총 <strong class="number">{2}</strong>건의</strong><br>
+                    <strong class="number">{1,000,000}</strong><strong class="num_unit">원</strong><br>
+                    <span class="normal">이체가 정상처리 되었습니다.</span>
+                </p>
+                <!-- 예비거래에서 정상인 2건이 본거래로 넘어가면서 1건만 오류로 판명되는 경우 -->
+                <p class="tit">
+                    <strong>총 <strong class="number">{1}</strong>건의</strong><br>
+                    <strong class="number">{500,000}</strong><strong class="num_unit">원</strong><br>
+                    <span class="normal">이체가 오류처리 되었습니다.</span>
+                </p>
+
+                <div class="guide">
+                    안내사항
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <div class="tooltip_cont">
+                                타행계좌로 이체 시 입금은행의 사정에 따라 해당 계좌의 입금이 다소 지연될 수 있습니다.
+                            </div>
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 221013 추가 -->
+                <p class="openbank_limit">오픈뱅킹 이체 잔여한도 : <strong class="number">10,000,000,000,000</strong>원</p>
+                <!-- //221013 추가 -->
+            </div>
+
+            <div class="section">
+                <div class="list_data_group">
+                    <h2 class="h3">출금정보</h2>
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">출금계좌번호</div>
+                            <!-- 220812 수정 -->
+                            <div class="value">
+                                <div class="bank_name"><span class="icon_bank_020 md"></span>우리</div>
+                                <div class="account_num"><span class="number">01625323490555</span></div>
+                            </div>
+                            <!-- //220812 수정 -->
+                        </li>
+                        <li>
+                            <div class="key">수수료</div>
+                            <div class="value">
+                                면제
+                                <span class="number">0</span><span class="num_unit">원</span><!-- 수수료 있을 경우 -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section_f">
+                <div class="acc_list_wrap">
+                    <div>
+                        <!-- 카드리스트1 -->
+                        <div class="acc_pannel tr_result">
+                            <div class="acc_wrap inc_btn">
+                                <div class="acc_name">김국민</div>
+                                <div class="acc_bank md">
+                                    <span class="icon_bank_004"></span>
+                                    <span class="bk_name">KB국민</span>
+                                    <span class="bk_num"><em class="number">400407-01-023569</em></span>
+                                </div>
+                                <div class="acc_sum_wrap">
+                                    <div class="acc_pay"><span class="unit hidden">이체금액</span>
+                                        <strong class="number fc_posi">50,000</strong><span class="num_unit">원</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list_data noline right">
+                                <li class="line">
+                                    <div class="key">수수료</div>
+                                    <div class="value">
+                                        면제
+                                        <span class="number">0</span><span class="num_unit">원</span><!-- 수수료 있을 경우 -->
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">받는 분 계좌메모</div>
+                                    <div class="value">명가라</div>
+                                </li>
+                                <li>
+                                    <div class="key">내 계좌메모</div>
+                                    <div class="value">예약이체1</div>
+                                </li>
+                                <li>
+                                    <div class="key">결과</div>
+                                    <div class="value">정상</div>
+                                </li>
+                            </ul>
+                            <div class="btn_top_area">
+                                <button type="button" class="ico_trans_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                <button type="button" class="ico_trans_share"><span class="hidden">공유하기</span></button> 
+                            </div>
+                        </div>
+        
+                        <!-- 카드리스트2 -->
+                        <div class="acc_pannel tr_result">
+                            <div class="acc_wrap inc_btn">
+                                <div class="acc_name">김국민</div>
+                                <div class="acc_bank md">
+                                    <span class="icon_bank_004"></span>
+                                    <span class="bk_name">KB국민</span>
+                                    <span class="bk_num"><em class="number">400407-01-023569</em></span>
+                                </div>
+                                <div class="acc_sum_wrap">
+                                    <div class="acc_pay"><span class="unit hidden">이체금액</span>
+                                        <strong class="number fc_posi">50,000</strong><span class="num_unit">원</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list_data noline right">
+                                <li class="line">
+                                    <div class="key">수수료</div>
+                                    <div class="value">
+                                        면제
+                                        <span class="number">0</span><span class="num_unit">원</span><!-- 수수료 있을 경우 -->
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">받는 분 계좌메모</div>
+                                    <div class="value">명가라</div>
+                                </li>
+                                <li>
+                                    <div class="key">내 계좌메모</div>
+                                    <div class="value">예약이체1</div>
+                                </li>
+                                <li>
+                                    <div class="key">결과</div>
+                                    <div class="value"><button type="button" class="btn outline nega xxs">오류<i class="arrow"></i></button></div><!-- 221012 : 오류버튼 추가 -->
+                                </li>
+                            </ul>
+                            <div class="btn_top_area">
+                                <button type="button" class="ico_trans_favorite toggle active" aria-pressed="true"><span class="hidden">즐겨찾기</span></button>
+                                <button type="button" class="ico_trans_share"><span class="hidden">공유하기</span></button> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //카드리스트 영역 -->
+                </div>
+            </div>
+
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg">이체추가</button></span><!-- 221208 수정 : 버튼명 변경 -->
+                    <span><button type="button" class="btn primary lg">이체결과조회</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+    <!-- 업무 SCRIPT START -->
+    <script>
+    </script>
+    <!--// 업무 SCRIPT END -->
+</body>
+</html>

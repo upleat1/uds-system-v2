@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>스마트창구출금계좌등록</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <h1 class="hidden">스마트창구출금계좌등록 불가 오류 페이지</h1>
+        
+        <!-- No Data -->
+        <div class="result fail">
+            <p class="tit">스마트창구출금등록<br> 가능한 계좌가 없습니다.</p>
+            <p class="txt">서비스 이용대상 및 계좌를 확인하시기 바랍니다.</p>
+        </div>
+        <!-- //No Data -->
+
+		<div class="section">
+            <div class="table">
+                <table>
+                    <caption>스마트창구출금등록 가능계좌 및 불가계좌에 대한 표</caption>
+                    <colgroup>
+                        <col style="width:38%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>KB스타기업뱅킹 스마트창구출금 등록 가능 계좌</td>
+                            <td>입출금이 자유로운 예금(전자통장 포함)</td>
+                        </tr>
+                        <tr>
+                            <td>서비스 이용 불가 계좌</td>
+                            <td>
+                                아래 각 호의 1개라도 해당하는 경우 서비스 이용 불가<br>
+                                (1) 해약계좌<br>
+                                (2) 거래중지 및 잡이익편익계좌<br>
+                                (3) 공동명의계좌<br>
+                                (4) 전자금융거래제한 등록계좌<br>
+                                (5) 가계당좌예금<br>
+                                (6) 인터넷저축예금
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>   
+            </div>
+		</div>
+        <div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	!window.SPA ? window.UICommon.init() : console.log('UICommon 실패!');
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

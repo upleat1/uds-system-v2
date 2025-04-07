@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title></title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+
+    <div class="btn_cnt_wrap">
+		<span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE018441')">환율 상세보기</button></span>
+	</div>
+
+	<!-- layer html : 환율 상세보기 -->
+	<div id="BFE018441" class="popup bottom" role="dialog" aria-hidden="true">
+		<article class="pop_wrap">
+			<div class="pop_head">
+				<div>
+					<h1>환율 상세보기</h1>
+				</div>
+			</div>
+			<div class="pop_body">
+				<div class="pop_section">
+					<div class="fo_ly_exchange_country_info">                
+						<span class="country_flag_im2 sm usd" role="img"></span> <!-- 개발 : 국기 이미지는 통화로 클래스를 넣어주세요. ex)class="country_flag_im sm usd" -->                                
+						<p class="name">USD (미국 달러)</p>                
+						<p class="rate"><span class="r_tit">매매기준율</span><span class="number">1,118.80</span></p>
+					</div>
+					<ul class="list_data">
+						<!-- 220729 리웍 -->
+						<li>
+							<div class="key">USD환산율</div>
+							<div class="value number">8.50</div>
+						</li>
+						<!-- //220729 리웍 -->
+						<li>
+							<div class="key">송금 보내실 때</div>
+							<div class="value number">1,1128.50</div>
+						</li>
+						<li>
+							<div class="key">송금 받으실 때</div>
+							<div class="value number">1,106.90</div>
+						</li>
+						<li>
+							<div class="key">현찰 사실 때</div>
+							<div class="value number">1,137.25</div>
+						</li>
+						<li>
+							<div class="key">현찰 파실 때</div>
+							<div class="value number">1,098.15</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop_foot">
+				<div>
+					<div class="btn_area">
+						<span><button type="button" class="btn primary lg">환율변동추이보기</button></span>
+					</div>
+					
+					<div class="btn_area">
+						<span><button type="button" class="btn primary lg">확인</button></span>
+					</div>
+				</div>
+			</div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+		</article>
+	</div>
+	<!-- //layer html : 환율 상세보기 -->
+
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

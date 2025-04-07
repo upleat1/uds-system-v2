@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[펀드예약취소]펀드예약취소 계좌조회</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START --> 
+<div id="wrap">
+	<div id="content" class="cate_pdt_manage">
+		<h1 class="hidden">보유펀드계좌</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>인터넷뱅킹, KB스타기업뱅킹으로 신규·이체·환매·전환 예약을 취소할 수 있습니다. (지점에서 거래한 것은 취소할 수 없음)</li>
+                <li>취소하시려는 계좌의 거래내역을 조회한 다음 해당 거래의 [취소]를 선택해주세요. (취소 가능시간이 지났거나 거래 단계에서 시간이 초과될 경우 취소가 완료되지 않음)</li>
+                <li>적립식 펀드를 전액환매하는 경우 자동이체 등록내역도 해지됩니다. 전액환매를 취소하시더라도 자동이체 등록내역은 다시 복구되지 않으므로, 펀드계좌이체의 자동이체 등록내역을 확인한 다음 필요 시 다시 등록해주세요.</li>
+            </ul>
+        </div>
+        <div class="section rate_wrap">
+            <!-- 기본 -->
+            <div class="acc_list_wrap">
+                <h2 class="h2">국내투자펀드</h2>
+                <div class="acc_pannel open btl">
+                    <div class="acc_wrap inc_btn">
+                        <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁</div>
+                        <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                        <div class="acc_info_wrap">
+                            <div class="acc_info">
+                                <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                            </div>
+                            <div class="acc_info">
+                                <span class="tit">만기일</span><span class="number">2022.12.30</span>
+                            </div>
+                        </div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay">평가금액
+                                <strong class="number">1,000,000,000,000</strong><strong class="num_unit">원</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm" title="한국투자 월스트리트투자은행 증권투자신탁">상세보기</button></span>
+                    </div>
+                </div>
+                <h2 class="h2">해외투자펀드</h2>
+                <div class="acc_pannel open btl">
+                    <div class="acc_wrap inc_btn">
+                        <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁1호(주식) 한국투자 월스트리트투자은행 증권투자신탁 월스트리트투자은행 증권투자신탁</div>
+                        <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                        <div class="acc_info_wrap">
+                            <div class="acc_info">
+                                <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                            </div>
+                            <div class="acc_info">
+                                <span class="tit">만기일</span><span class="number">2022.12.30</span>
+                            </div>
+                        </div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay">평가금액
+                                <strong class="number">1,000,000,000,000</strong><strong class="num_unit">원</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm" title="한국투자 월스트리트투자은행 증권투자신탁1호(주식) 한국투자 월스트리트투자은행 증권투자신탁 월스트리트투자은행 증권투자신탁">상세보기</button></span>
+                    </div>
+                </div>
+                <div class="acc_pannel open btl">
+                    <div class="acc_wrap inc_btn">
+                        <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁1호(주식) 한국투자 월스트리트투자은행 증권투자신탁 한국투자 월스트리트투자은행 증권투자신탁</div>
+                        <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                        <div class="acc_info_wrap">
+                            <div class="acc_info">
+                                <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                            </div>
+                            <div class="acc_info">
+                                <span class="tit">만기일</span><span class="number">2022.12.30</span>
+                            </div>
+                        </div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay">평가금액
+                                <strong class="number">1,000,000,000,000</strong><strong class="num_unit">원</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm" title="한국투자 월스트리트투자은행 증권투자신탁1호(주식) 한국투자 월스트리트투자은행 증권투자신탁 한국투자 월스트리트투자은행 증권투자신탁">상세보기</button></span>
+                    </div>
+                </div>
+                <h2 class="h2">역외투자펀드</h2>
+                <div class="acc_pannel open btl">
+                    <div class="acc_wrap inc_btn">
+                        <div class="pdt_acc_name">블랙록 BGF 지속가능 에너지 펀드 A-ACC-USD </div>
+                        <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                        <div class="acc_info_wrap">
+                            <div class="acc_info">
+                                <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                            </div>
+                        </div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay">평가금액
+                                <strong class="num_unit">USD</strong><strong class="number">1,000,000,000.34</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm" title="블랙록 BGF 지속가능 에너지 펀드 A-ACC-USD">상세보기</button></span>
+                    </div>
+                </div>
+                <h2 class="h2">역내외화펀드</h2>
+                <div class="acc_pannel open btl">
+                    <div class="acc_wrap inc_btn">
+                        <div class="pdt_acc_name">한화 북미 바이아웃 일반한화 북미 바이아웃 일반 사모증권투자신탁3호(재간접형)(USD) 사모증권투자신탁3호(재간접형)(USD)</div>
+                        <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                        <div class="acc_info_wrap">
+                            <div class="acc_info">
+                                <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                            </div>
+                            <div class="acc_pay">
+                                <span class="unit">수익률</span>
+                                <strong><span class="state_arr fc_nega up" role="text"><em class="hidden">상승</em>1.48</span><span class="num_unit">%</span></strong><!-- 220906 문구수정 -->
+                            </div>
+                        </div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay">평가금액
+                                <strong class="num_unit">USD</strong><strong class="number">1,000,000,000.34</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm" title="한화 북미 바이아웃 일반한화 북미 바이아웃 일반 사모증권투자신탁3호(재간접형)(USD) 사모증권투자신탁3호(재간접형)(USD)">상세보기</button></span>
+                    </div>
+                </div>
+            </div>
+            <!-- //기본 -->
+            <!-- 보유 펀드계좌가 없는 경우 -->
+            <div class="result nodata">
+                <p class="tit">조회하신 내역이 없습니다.</p>
+            </div>
+            <!-- //보유 펀드계좌가 없는 경우 -->
+            <!-- 일부 그룹의 펀드계좌만 있는 경우 -->
+            <div class="acc_list_wrap">
+                <h2 class="h2">해외투자펀드</h2>
+                <div class="acc_pannel open btl">
+                    <div class="acc_wrap inc_btn">
+                        <div class="pdt_acc_name">한국투자 월스트리트투자은행 증권투자신탁1호(주식) 
+                            한국투자 월스트리트투자은행 증권투자신탁 증권투자신탁</div>
+                        <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                        <div class="acc_info_wrap">
+                            <div class="acc_info">
+                                <span class="tit">신규일</span><span class="number">2015.10.15</span>
+                            </div>
+                            <div class="acc_info">
+                                <span class="tit">만기일</span><span class="number">2022.12.30</span>
+                            </div>
+                        </div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay">평가금액
+                                <strong class="number">1,000,000,000,000</strong><strong class="num_unit">원</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm" title="한국투자 월스트리트투자은행 증권투자신탁1호(주식) 한국투자 월스트리트투자은행 증권투자신탁 증권투자신탁">상세보기</button></span>
+                    </div>
+                </div>
+            </div>
+            <!-- //일부 그룹의 펀드계좌만 있는 경우 -->
+        </div>
+
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의 사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+                    <li>타인 계좌로 예약이체한 거래는 취소할 수 없습니다.</li>  
+                    <li>취소는 당일에 인터넷·KB스타기업뱅킹으로 펀드별 취소 가능시간 이내에 완료해야 합니다. (최종 거래 단계에서 시간이 초과될 경우 취소가 완료되지 않음)</li>  
+                    <li>모집식펀드는 모집기간 종료일의 펀드별 마감 기준시간 전까지 취소할 수 있습니다.</li>  
+                </ul>
+                <p class="depth"><strong>신규 취소 가능시간</strong></p>
+                <ul class="depth bul">
+                    <li>국내 레버리지 펀드
+                        <ul class="depth dash">
+                            <li>14:00 이전 거래 : 14:00까지</li>
+                            <li>14:00 경과 후 거래 : 23:30까지</li>
+                        </ul>
+                    </li> 
+                    <li>일본 등 일부 해외투자펀드
+                        <ul class="depth dash">
+                            <li>15:00 이전 거래 : 15:00까지</li>
+                            <li>15:00 경과 후 거래 : 23:30까지</li>
+                        </ul>
+                    </li> 
+                    <li>국내 주식형·주식혼합형펀드, 중국 관련 레버리지 등 일부 해외투자펀드
+                        <ul class="depth dash">
+                            <li>15:30 이전 거래 : 15:30까지</li>
+                            <li>15:30 경과 후 거래 : 23:30까지</li>
+                        </ul>
+                    </li> 
+                    <li>국내 채권혼합형·채권형펀드, MMF, 해외투자펀드
+                        <ul class="depth dash">
+                            <li>17:00 이전 거래 : 17:00까지</li>
+                            <li>17:00 경과 후 거래 : 23:30까지</li>
+                        </ul>
+                    </li> 
+                </ul>
+                <p class="depth"><strong>입금 취소 가능시간</strong></p>
+                <ul class="depth bul">
+                    <li>국내 레버리지 펀드
+                        <ul class="depth dash">
+                            <li>14:00 이전 거래 : 14:00까지</li>
+                            <li>14:00 경과 후 거래 : 23:00까지</li>
+                        </ul>
+                    </li> 
+                    <li>일본 등 일부 해외투자펀드
+                        <ul class="depth dash">
+                            <li>15:00 이전 거래 : 15:00까지</li>
+                            <li>15:00 경과 후 거래 : 23:00까지</li>
+                        </ul>
+                    </li> 
+                    <li>국내 주식형·주식혼합형펀드, 중국 관련 레버리지 등 일부 해외투자펀드
+                        <ul class="depth dash">
+                            <li>15:30 이전 거래 : 15:30까지</li>
+                            <li>15:30 경과 후 거래 : 23:00까지</li>
+                        </ul>
+                    </li> 
+                    <li>국내 채권혼합형·채권형펀드, MMF, 해외투자펀드
+                        <ul class="depth dash">
+                            <li>17:00 이전 거래 : 17:00까지</li>
+                            <li>17:00 경과 후 거래 : 23:00까지</li>
+                        </ul>
+                    </li> 
+                </ul>
+                <ul class="depth info">
+                    <li class="bold">토요일과 공휴일에 거래하는 경우에는 거래 당일 이용시간(00:20~23:00)에만 취소할 수 있습니다.</li>
+                    <li class="bold">일부 펀드의 경우 각 펀드의 집합투자규약에서 정한 바에 따라 거래기준시간이 다를 수 있으니, 반드시 집합투자규약 또는 투자설명서를 확인하시기 바랍니다.</li>
+                </ul>
+                <p class="depth"><strong>해약(환매) 취소가능시간</strong></p>
+                <ul class="depth bul">
+                    <li>국내 레버리지 펀드
+                        <ul class="depth dash">
+                            <li>14:00 이전 거래 : 14:00까지</li>
+                            <li>14:00 경과 후 거래 : 17:00까지</li>
+                        </ul>
+                    </li> 
+                    <li>일본 등 일부 해외투자펀드
+                        <ul class="depth dash">
+                            <li>15:00 이전 거래 : 15:00까지</li>
+                            <li>15:00 경과 후 거래 : 17:00까지</li>
+                        </ul>
+                    </li> 
+                    <li>국내 주식형·주식혼합형펀드, 중국 관련 레버리지 등 일부 해외투자펀드
+                        <ul class="depth dash">
+                            <li>15:30 이전 거래 : 15:30까지</li>
+                            <li>15:30 경과 후 거래 : 17:00까지</li>
+                        </ul>
+                    </li> 
+                    <li>국내 채권혼합형·채권형펀드, MMF, 해외투자펀드
+                        <ul class="depth dash">
+                            <li>모든 거래 : 17:00까지</li>
+                        </ul>
+                    </li> 
+                </ul>
+                <ul class="depth info">
+                    <li class="bold">일부 펀드의 경우 각 펀드의 집합투자규약에서 정한 바에 따라 거래기준시간이 다를 수 있으니, 반드시 집합투자규약 또는 투자설명서를 확인하시기 바랍니다. (단, 순수 개인 MMF는 환매취소를 할 수 없음)</li>
+                </ul>
+            </div>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript"></script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

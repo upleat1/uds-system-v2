@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[외화예금]외화예금상품상세</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">예금 상세 정보</h1>
+        
+        <!-- 상품 기본정보 -->
+        <div class="pro_info">
+            <div class="row">
+                <!-- 뱃지 또는 헤시태그로 반영 -->
+                <div class="col_l">
+                    <span class="hashtag_pro_1">#인터넷</span>
+                    <span class="hashtag_pro_2">#스타기업뱅킹</span>
+                    <span class="hashtag_pro_3">#영업점</span>
+                </div>
+                <!-- //뱃지 또는 헤시태그로 반영 -->
+                <div class="col_r">
+                    <button type="button"><i class="ico_35_share_gray"></i><span class="hidden">대체텍스트</span></button>
+                    <button type="button"><i class="ico_35_cart_gray"></i><span class="hidden">대체텍스트</span></button>
+                </div>
+            </div>
+            <div class="tit">KB WISE 외화정기예금</div>
+            <p class="p_sub foreign_currency">내가 선택한 금리회전주기에 따라 복리로 운용하는 외화예금</p>
+            
+            <!-- list data -->
+            <!-- 220905 : 문구 수정 -->
+            <ul class="list_data noline">
+                <li>
+                    <div class="key">기간</div>
+                    <div class="value">12개월~36개월(월단위)</div>
+                </li>
+                <li>
+                    <div class="key">금액</div>
+                    <div class="value">USD 1,000달러 상당액 이상</div>
+                </li>
+            </ul>
+            <!-- //220905 : 문구 수정 -->
+            <!-- list data -->
+            <p class="tip_info">2022.06.13 기준 . 신용등급 1등급 기준</p>
+        </div>
+        <!-- //상품 기본정보 -->
+
+        <!-- 상품 상세정보 : 상품안내/금리·이율/유의사항 -->
+        <div class="tab_wrap gap_md">
+            <div class="tab_list" role="tablist">
+                <div class="scroll_wrap">
+                    <button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">상품안내</button>
+                    <button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">금리·이율</button>
+                    <button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3">유의사항</button>
+                </div>
+            </div>
+            
+            <!-- ##################################################### 상품안내 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_1">
+                <h2 class="hidden">상품안내</h2>
+                <div class="section">
+                    <h2 class="h2">상품개요</h2>
+                    <p class="p">내가 선택한 금리회전주기에 따라 복리로 운용하는 외화예금</p>
+
+                    <h2 class="h2 gap_lg_0">가입대상</h2>
+                    <p class="p">제한 없음</p>
+					
+                    <h2 class="h2 gap_lg_0">거래가능통화</h2>
+                    <p class="p">10개 통화 (USD,JPY, EUR,GBP,CAD,NZD,AUD,HKD,CHF,SGD)</p>
+
+                    <h2 class="h2 gap_lg_0">가입가능 금액</h2>
+                    <p class="p">USD 1,000달러 상당액 이상</p>
+
+                    <h2 class="h2 gap_lg_0">가입가능 기간</h2>
+                    <p class="p">12 ~ 36개월(월단위)</p>
+
+                    <h2 class="h2 gap_lg_0">가입가능 채널</h2>
+                    <p class="p">지점, 인터넷뱅킹, KB스타뱅킹, KB스타기업뱅킹</p>
+
+                    <h2 class="h2 gap_lg_0">추가입금</h2>
+                    <p class="p">가능</p>
+
+                    <h2 class="h2 gap_lg_0">자동갱신</h2>
+                    <p class="p">불가능</p>
+
+                    <h2 class="h2 gap_lg_0">이자지급방법</h2>
+                    <p class="p">만기일시지급식</p>
+
+                    <h2 class="h2 gap_lg_0">예금자 보험</h2>
+                    <p class="p">대상</p>
+
+                    <h2 class="h2 gap_lg_0">금리회전주기</h2>
+                    <p class="p">1개월, 3개월, 6개월 중 선택 (예금 신규가입시 선택 / 중도 변경은 불가)</p>
+
+                    <h2 class="h2 gap_lg_0">우대서비스</h2>
+                    <p class="p">환율우대서비스</p>
+                    <ul class="depth dash">
+                        <li>원화대가로 예금 신규, 해지시 매매마진율의 50% 우대</li>
+                    </ul>
+
+                    <h2 class="h2 gap_lg_0">일부해지</h2>
+                    <p class="p">입금된 건별로 해지 가능</p>
+                </div>
+            </div>
+            
+            <!-- ##################################################### 금리·이율 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_2">
+                <h2 class="hidden">금리·이율</h2>
+                <div class="section">
+                    <!-- 220826 : 외화예금 금리조회 버튼 추가 -->
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline md">외화예금 금리조회</button></span>
+                    </div>
+                    <!-- //220826 : 외화예금 금리조회 버튼 추가 -->
+
+                    <h2 class="h2">기본이율</h2>
+                    <p class="p">가입일 및 매 금리회전 주기별 지점 및 KB국민은행 홈페이지에 고시되는 예치기간별 외화정기예금 이율 적용</p>
+
+                    <h2 class="h2 gap_lg_0">중도해지이율</h2>
+                    <ul class="depth dash">
+                        <li>회전기간 경과분 : 회전단위 기간별 약정이울 적용</li>
+                        <li>회전기간 미경과분: 예치기간별 중도해지이자율 적용 - 7일 미만: 무이자</li>
+                    </ul>
+                    <ul class="depth num round">
+                        <li>7일 이상 ~ 1월 미만: 가입(추가입금)당시 약정이율의 1/10</li>
+                        <li>1월 이상 ~ 6월 미만: 가입(추가입금)당시 약정이율의 4/10</li>
+                        <li>6개월 이상 : 가입(추가적립)당시 약정 이자율의 5/10</li>
+                    </ul>                    
+                    <ul class="depth info">
+                        <li>다만, 예금주의 사망에 따른 상속사유로 인해 만기일 전에 해지하는 경우에는 가입(회전주기만료일)당시 약정이율을 적용하여 이자를 지급함</li>
+                    </ul>
+
+                    <h2 class="h2 gap_lg_0">특별이자</h2>
+                    <ul class="depth dash">
+                        <li>지급대상 : 예금 신규 가입일로부터 1년 이상 경과하여 해지하는 계좌로 금리 회전주기가 3개월 또는 6개월인 계좌</li>
+                        <li>지급시점 : 예금의 해지(중도해지 포함) 시</li>
+                        <li>지급기준 : 신규 원금에 대하여 예치 경과기간에 따라 차등</li>
+                    </ul>
+                    <ul class="depth num round">
+                        <li>1년 미만 : 특별이자는 지급하지 않음</li>
+                        <li>1년 이상 ~ 2년 미만 : 0.1% (가입원금 X 0.1% X 1년)</li>
+                        <li>2년 이상 ~ 3년 미만 : 0.2% (가입원금 X 0.1% X 2년)</li>
+                        <li>3년 이상 : 0.3% (가입원금 X 0.1% X 3년) </li>
+                    </ul> 
+                    <ul class="depth dash">
+                        <li>예금 신규 가입시 영업점에 고시된 이자율을 초과하는 승인금리를 적용받은 계좌에 대해서는 특별이자를 지급하지 않음</li>
+                    </ul>
+
+                    <h2 class="h2">만기후 이율</h2>
+                    <p class="p">만기일로부터 해지일 전일까지 기간 구분 없이 최종 금리회전기간 적용 이자율의 3/10</p>
+                </div>
+            </div>
+
+            <!-- ##################################################### 유의사항 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_3">
+                <h2 class="hidden">유의사항</h2>
+                <div class="section">
+                    <h2 class="h2">기타안내</h2>
+                    <ul class="depth dash">
+                        <li>이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 KB국민은행에 있는 귀하의 모든 예금보호대상 금융상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원”이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다. </li>
+                        <li>이 예금에서 원화로 출금하는 경우 환율변동으로 인하여 이익 또는 손실이 발생할 수 있으며, 외화현금으로 입출금 하는 경우에는 외화현금수수료가 부과될 수 있습니다. </li>
+                        <li>일반금융소비자는 은행이 계약체결을 권유하는 경우 및 일반금융소비자가 설명을 요청하는 경우에도 중요한 사항을 이해할 수 있도록 설명받을 권리가 있습니다. </li>
+                        <li>상품 가입 전 약관 및 상품설명서를 확인하시기 바랍니다. </li>
+                        <li>비과세종합저축으로의 가입이 불가합니다. </li>
+                        <li>다른 외화예금 상품으로 전환이 불가합니다.</li>
+                    </ul>
+
+                    <p class="p gap_lg_0">
+                        준법감시인 심의필 제2021-2344-2호<br>(2021.09.06)<br>
+                        본 공시내용의 유효기간 : 2021.09.06 ~2023.08.31 까지
+                    </p>
+                </div>
+            </div>
+
+            <!-- 220927 : 하단 라인 & 상담안내 마크업 이동  -->
+			<div class="pro_hr_divide"></div>
+			<!-- 상담안내 -->
+			<div class="pro_tel_guide">
+				<span class="ico_guide"></span> 
+				<span class="txt">상담안내</span> 
+				<!-- 220824 : 상담안내 전화연결 추가 -->
+				<span class="number">
+					<a href="tel:16440360">1644-0360</a>
+				</span>     
+				<!-- //220824 : 상담안내 전화연결 추가 -->
+			</div>
+			<!-- //상담안내 -->
+			<!-- //220927 : 하단 라인 & 상담안내 마크업 이동  -->
+        </div>
+        <!-- //상품 상세정보 : 상품안내/금리·이율/유의사항 -->
+
+        <!-- Case. 스타기업뱅킹 가입 불가한 경우 지점 상담예약 버튼만 노출 -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">지점 상담예약</button></span>
+            </div>
+        </div>
+        <!-- Case. 스타기업뱅킹 가입 불가한 경우 지점 상담예약 버튼만 노출 -->		
+
+		<!-- Case. 가입채널이 영업점인 경우 노출 -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">지점 상담예약</button></span>
+                <!-- 상품종류가 정기예금 중 (고객CRM정보: 국적 "KR" && 거주국가가 "KR“)이 아닐 때 노출 : alert -->
+                <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.alert('국민은행 고객정보상 고객님의 국적과 거주국가가 “대한민국(KR)”인 경우에만 가입이 가능합니다.<br>아닌 경우 영업점에서 가입 가능합니다.','알림');">가입</button></span>
+                <!-- //상품종류가 정기예금 중 (고객CRM정보: 국적 "KR" && 거주국가가 "KR“)이 아닐 때 노출 : alert -->
+            </div>
+        </div>
+        <!-- Case. 가입채널이 영업점인 경우 경우 노출 -->
+    </div>
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

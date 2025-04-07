@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[대출상담신청]대출신청 정보입력</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <!-- 220729 리웍 -->
+    <div id="content">
+        <div class="step_wrap js_step">    
+            <div class="step" role="img" aria-label="총 9단계 중 현재 6단계">
+                <span class="current">6</span><span class="mark">/</span><span class="total">9</span>
+            </div>
+            <h1 class="h1">대출신청 정보입력</h1>
+        </div>        
+        <div class="inform_top_wrap">
+            <ul class="depth">
+                <li>대출신청정보를 입력하십시요.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <!-- 대출상품명 -->
+            <div class="form_group">
+                <div class="form_tit">대출상품명</div>
+                <div class="form_row"> 
+                    <p class="form_txt pro_form_txt">KB메가셀러론</p>
+                </div>
+            </div>            
+
+            <!-- 최대 대출신청 가능한도 -->
+            <div class="form_group">
+                <div class="form_tit">최대 대출신청 가능한도</div>
+                <div class="form_row"> 
+                    <div class="input unit js_unit" role="button" aria-label="최대 대출신청 가능한도 입력" onclick="">
+                        <input type="tel" aria-hidden="true" maxlength="16" placeholder="" value="300,000,000" title="최대 대출신청 가능한도 금액" data-unit="원" readonly>
+                        <span class="unit">원</span>
+                    </div>
+                </div>
+                <p class="form_hangul" aria-hidden="true">3억원</p>     
+                <p class="depth info gap_xxs">대출신청가능한도는 고객님이 이용중인 마켓/PG로부터 수집된 매출금액/정산금액을 근거로 산출되었습니다.</p>
+            </div>
+
+            <!-- 대출 신청금액 -->
+            <div class="form_group error">
+                <div class="form_tit">대출 신청금액</div>
+                <div class="form_row"> 
+                    <div class="input unit js_unit" role="button" aria-label="대출 신청금액 입력" onclick="">
+                        <input type="tel" aria-hidden="true" id="id01" maxlength="16" placeholder="숫자만 입력" title="대출 신청금액" data-unit="원" readonly class="bg_white">
+                        <span class="unit">원</span>
+                    </div>
+                </div>
+                <p class="form_hangul" aria-hidden="true">원</p>
+                <p class="tip" aria-labelledby="id01">대출신청금액을 정확히 입력해주세요.</p><!-- 대출신청금액 미입력시 시 개발전용 : validation 결과 메세지 -->
+                <p class="tip" aria-labelledby="id01">대출신청금액은 최소 10만원 단위로 입력하여 주시기 바랍니다.</p><!-- 대출신청금액 10만원 단위로 입력하지 않은 경우 개발전용 : validation 결과 메세지 -->
+            </div>
+
+            <!-- 대출 종류 -->
+            <div class="form_group"><!-- 220906 error삭제 -->
+                <div class="form_tit">대출 종류</div>
+                <div class="form_row"> 
+                    <div class="rdoChk_group">
+                        <span class="selection">
+                            <input type="radio" id="radioH1" name="radio_h" checked>
+                            <label for="radioH1" class="label">
+                                <em>기업일반운전자금대출(한도거래)</em>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 대출 상환방법 -->
+            <div class="form_group"><!-- 220906 error삭제 -->
+                <div class="form_tit">대출 상환방법</div>
+                <div class="form_row"> 
+                    <div class="rdoChk_group">
+                        <span class="selection">
+                            <input type="radio" id="radioH2" name="radio_h2" checked>
+                            <label for="radioH2" class="label">
+                                <em>만기일시상환</em>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <p class="depth info gap_xxs">정산금 입금 시 만기도래 전이라도 만기가 빠른 건별대출부터 우선상환하며, 만기 전 건별대출 상환 시 환출이자를 자동으로 입금합니다.</p>
+            </div>
+
+            <!-- 대출 기간 -->
+            <div class="form_group">
+                <div class="form_tit">대출 기간</div>
+                <div class="form_row"> 
+                    <p class="form_txt pro_form_txt"><span class="number">12</span><span class="num_unit">개월</span></p>
+                </div>
+            </div>
+            <!-- 금리 변동주기 -->
+            <div class="form_group">
+                <div class="form_tit">금리 변동주기</div>
+                <div class="form_row"> 
+                    <p class="form_txt pro_form_txt"><span class="number">12</span><span class="num_unit">개월</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

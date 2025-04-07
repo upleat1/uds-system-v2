@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>환율조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+	<!-- 220823 global.css 추가 --> 
+	<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    
+    <div id="content">
+        <h1 class="hidden">환율조회</h1>
+        
+        <div class="tab_wrap ">
+            <div class="tab_list">
+                <div class="scroll_wrap">
+					<a href="#">전체통화</a>
+            		<a href="#" class="active" title="선택됨">통화별</a><!-- 221004 title 추가 -->
+                </div>
+            </div>
+
+            <div class="link_panel">
+				<div class="section">
+					<div class="form_group">
+                        <div class="form_tit">통화코드</div>
+                        <div class="form_row">
+                            <div class="select">
+                                <button type="button" class="select_btn active" title="출금계좌정보 선택">USD(미국 달러)</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            </div>
+                        </div>
+                    </div>
+					<div class="form_group">
+                        <div class="form_tit">조회구분</div>
+                        <div class="form_row">
+							<div class="rdoChk_group inline">
+								<span class="selection">
+									<input type="radio" id="radioH1" name="radio_h" checked>
+									<label for="radioH1" class="label"><em>일중변동내역</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="radioH2" name="radio_h">
+									<label for="radioH2" class="label"><em>기간중변동내역</em></label>
+								</span>
+							</div>
+                        </div>
+                    </div>
+					<!-- 통화별 - 일중변동내역 -->
+					<div class="form_group">
+                        <div class="form_tit">정렬순서</div>
+                        <div class="form_row">
+							<div class="rdoChk_group inline">
+								<span class="selection">
+									<input type="radio" id="radioG1" name="radio_g" checked>
+									<label for="radioG1" class="label"><em>최종 → 최초</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="radioG2" name="radio_g">
+									<label for="radioG2" class="label"><em>최초 → 최종</em></label>
+								</span>
+							</div>
+                        </div>
+                    </div>
+					<div class="form_group">
+						<div class="form_row">
+							<div class="rdoChk_box">
+								<span class="selection">
+									<input type="radio" id="day1" name="day" checked>
+									<label for="day1" class="label"><em>오늘</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="day2" name="day">
+									<label for="day2" class="label"><em>전일</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="day3" name="day">
+									<label for="day3" class="label"><em>다음일</em></label>
+								</span>
+							</div>
+							<div class="input date">
+								<input type="tel" title="조회일" maxlength="8" value ="2022.05.31" readonly><!-- 221006 title명 변경 -->
+								<button type="button" class="btn_cal" title="조회일 선택"></button>    
+							</div>              
+						</div>
+					</div>
+					<!-- //통화별 - 일중변동내역 -->
+
+					<!-- 통화별 - 기간중변동내역 -->
+					<div class="form_group">
+                        <div class="form_tit">조회기준</div>
+                        <div class="form_row">
+							<div class="rdoChk_group inline">
+								<span class="selection">
+									<input type="radio" id="radioF1" name="radio_f" checked>
+									<label for="radioF1" class="label"><em>최종환율</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="radioF2" name="radio_f">
+									<label for="radioF2" class="label"><em>최초환율</em></label>
+								</span>
+							</div>
+                        </div>
+                    </div>
+					<div class="form_group">
+						<div class="form_row">
+							<div class="rdoChk_box">
+								<span class="selection">
+									<input type="radio" id="period1" name="period" checked>
+									<label for="period1" class="label"><em>1개월</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period2" name="period">
+									<label for="period2" class="label"><em>3개월</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period3" name="period">
+									<label for="period3" class="label"><em>6개월</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="period4" name="period">
+									<label for="period4" class="label"><em>직접입력</em></label>
+								</span>
+							</div>
+							<div class="form_date_term">
+								<div class="input date">
+									<input type="tel" title="시작일" maxlength="8" value ="2021.03.01" readonly><!-- 221006 title명 변경 -->
+									<button type="button" class="btn_cal" title="시작일 선택"></button>                    
+								</div>
+								<span class="space">~</span>
+								<div class="input date">
+									<input type="tel" title="종료일" maxlength="8" value ="2021.03.31" readonly><!-- 221006 title명 변경 -->
+									<button type="button" class="btn_cal" title="종료일 선택"></button>                              
+								</div>
+							</div>              
+						</div>
+					</div>
+					<!-- //통화별 - 기간중변동내역 -->
+					<div class="btn_cnt_wrap">
+						<span><button type="button" class="btn primary lg">조회</button></span>
+					</div>
+				</div>
+
+				<hr class="hr_divide">
+				<!-- 통화별 - 일중변동내역 -->
+				<div class="section">
+					<h2 class="h2">환율 조회결과</h2>
+					<ul class="depth bul">
+						<li>조회대상일: <span class="number">2022.05.31</span></li> <!-- 220908 number 추가 -->
+						<!-- <li>조회일시: 2022.05.31 23:18:00</li> 220913 삭제 -->
+					</ul>
+					<!-- 220913 조회일시 추가 -->
+					<div class="list_top_wrap gap_sm">
+						<div class="col">
+							<h3 class="hidden">조회일시</h3>
+							<div class="sch_period">
+								<span class="number">2022.05.31 23:18:00</span>
+							</div>
+						</div>
+					</div>
+					<!-- //220913 조회일시 추가 -->
+
+					<div class="toggle_sm_wrap gap_sm">
+						<button class="tit js_toggle" aria-expanded="false">환율차트</button>
+						<div class="toggle_panel gap_xs" role="region">
+							일중 회차별 환율차트
+						</div>
+					</div>
+					<!-- 조회날짜의 고시회차가 마감되지 않았을 때 -->
+					<ul class="list_data gap_md">
+						<li>
+							<div class="key">최초고시</div>
+							<div class="value"><span class="number">1,224.00</span></div>
+						</li>
+						<li>
+							<div class="key">최종고시</div>
+							<div class="value"><span class="number">1,228.50</span></div>
+						</li>
+					</ul>
+					<!-- //조회날짜의 고시회차가 마감되지 않았을 때 -->
+
+					<!-- 조회날짜의 고시회차가 마감되었을 때 -->
+					<ul class="list_data gap_md">
+						<li>
+							<div class="key">최초고시</div>
+							<div class="value"><span class="number">1,224.00</span></div>
+						</li><li>
+							<div class="key">최종고시</div>
+							<div class="value"><span class="number">1,228.50</span></div>
+						</li><li>
+							<div class="key">일최저</div>
+							<div class="value"><span class="number">1,224.00</span></div>
+						</li><li>
+							<div class="key">일최고</div>
+							<div class="value"><span class="number">1,235.00</span></div>
+						</li><li>
+							<div class="key">일최고-일최저</div>
+							<div class="value"><span class="number">11.00</span></div>
+						</li><li>
+							<div class="key">일평균</div>
+							<div class="value"><span class="number">1,233.00</span></div>
+						</li>
+					</ul>
+					<!-- //조회날짜의 고시회차가 마감되었을 때 -->
+				</div>
+
+				<!-- 최종고시환율부터 보기 : 조회 시 정렬순서가 최종 → 최초 일 때 -->
+				<div class="section">
+					<h3 class="h3">최종고시환율부터 보기</h3>
+					<ul class="fo_exchange_list right">
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (128회차)</div>
+									<div class="state">
+										<span class="state_arr down" role="text"><em class="hidden">하락</em>0.19</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (127회차)</div>
+									<div class="state">
+										<span class="state_arr up" role="text"><em class="hidden">상승</em>0.19</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (126회차)</div>
+									<div class="state">
+										<span class="state_arr" role="text"><em class="hidden">변동없음</em>-</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //최종고시환율부터 보기 : 조회 시 정렬순서가 최종 → 최초 일 때 -->
+
+				<!-- 최초고시환율부터 보기 : 조회 시 정렬순서가 최초 → 최종 일 때 -->
+				<div class="section">
+					<h3 class="h3">최초고시환율부터 보기</h3>
+					<ul class="fo_exchange_list right">
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (128회차)</div>
+									<div class="state">
+										<span class="state_arr down" role="text"><em class="hidden">하락</em>0.19</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (127회차)</div>
+									<div class="state">
+										<span class="state_arr up" role="text"><em class="hidden">상승</em>0.19</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (126회차)</div>
+									<div class="state">
+										<span class="state_arr" role="text"><em class="hidden">변동없음</em>-</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //최초고시환율부터 보기 : 조회 시 정렬순서가 최초 → 최종 일 때 -->
+				<!-- //통화별 - 일중변동내역 -->
+
+				<!-- 통화별 - 기간중변동내역 -->
+				<div class="section">
+					<h2 class="h2">환율 조회결과</h2>
+					<ul class="depth bul">
+						<li>조회대상일: <span class="number">2022.05.31</span></li> <!-- 220908 number 추가 -->
+						<!-- <li>조회일시: 2022.05.31 23:18:00</li> 220913 삭제 -->
+					</ul>
+					<!-- 220913 조회일시 추가 -->
+					<div class="list_top_wrap gap_sm">
+						<div class="col">
+							<h3 class="hidden">조회일시</h3>
+							<div class="sch_period">
+								<span class="number">2022.05.31 23:18:00</span>
+							</div>
+						</div>
+					</div>
+					<!-- //220913 조회일시 추가 -->
+					<div class="toggle_sm_wrap gap_sm">
+						<button class="tit js_toggle" aria-expanded="false">환율차트</button>
+						<div class="toggle_panel gap_xs" role="region">
+							일중 회차별 환율차트
+						</div>
+					</div>
+					<ul class="list_data gap_md">
+						<li>
+							<div class="key">기간최저환율</div>
+							<div class="value"><span class="number">1,167.50</span></div>
+						</li>
+						<li>
+							<div class="key">기간최고환율</div>
+							<div class="value"><span class="number">1,242.00</span></div>
+						</li>
+						<li>
+							<div class="key">기간최고-기간최저</div>
+							<div class="value"><span class="number">74.50</span></div>
+						</li>
+						<li>
+							<div class="key">기간평균환율</div>
+							<div class="value"><span class="number">1,196.91</span></div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 최종고시환율 기준 : 조회 시 최종환율 일 때 -->
+				<div class="section">
+					<h3 class="h3">최종고시환율 기준</h3>
+					<ul class="fo_exchange_list right">
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (128회차)</div>
+									<div class="state">
+										<span class="state_arr down" role="text"><em class="hidden">하락</em>0.19</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (127회차)</div>
+									<div class="state">
+										<span class="state_arr up" role="text"><em class="hidden">상승</em>0.19</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (126회차)</div>
+									<div class="state">
+										<span class="state_arr" role="text"><em class="hidden">변동없음</em>-</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //최종고시환율 기준 : 조회 시 최종환율 일 때 -->
+
+				<!-- 최초고시환율 기준 : 조회 시 최초환율 일 때 -->
+				<div class="section">
+					<h3 class="h3">최초고시환율 기준</h3>
+					<ul class="fo_exchange_list right">
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (128회차)</div>
+									<div class="state">
+										<span class="state_arr down" role="text"><em class="hidden">하락</em>0.19</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (127회차)</div>
+									<div class="state">
+										<span class="state_arr up" role="text"><em class="hidden">상승</em>0.19</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="tit">
+								<div class="top">
+									<div class="round number">22:51:43 (126회차)</div>
+									<div class="state">
+										<span class="state_arr" role="text"><em class="hidden">변동없음</em>-</span>
+									</div>
+								</div>
+								<div class="sum number">118,229.50</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //최초고시환율 기준 : 조회 시 최초환율 일 때 -->
+				<!-- //통화별 - 기간중변동내역 -->
+			</div>
+        </div>
+
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-controls="notice_1_1">안내사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li>조회하고자 하는 날짜가 은행 비영업일로 환율이 고시되지 않거나/영업일에 환율고시 전인 경우/미래일자인 경우 가장 최근 은행영업일의 최종 환율고시 정보가 표시됩니다. </li>
+					<li>오늘의 환율을 조회하시는 경우, '최종고시환율'은 오늘 가장 최근 고시된 환율정보를 나타내며 은행의 환율고시가 종료되지 않은 상태일 수 있습니다.</li>
+					<li>중국 위안화(CNY)는 홍콩 외환시장에서 거래되는 위안화 환율정보(CNH)를 고시합니다.</li>
+					<li>외화수표를 은행에 파시는 경우 송금 받으실 때(전신환 매입률) 환율이 적용됩니다.</li>
+					<li>USD 1만 달러 상당 이상 금액*을 거래하며 환율 우대를 받으시는 경우에는 외환시장의 환율변동 상황이 더욱 빠르게 반영되는 '시장연동매매율'이 적용됩니다. 자세한 시장연동매매율 정보는 가까운 지점에 문의해주시기 바랍니다.
+						<p class="depth info">USD, EUR, JPY, GBP, CAD, NZD, AUD, CNY, CHF, HKD, SGD, AED, THB(이외 통화는 USD 5만불 상당액 미만) </p>
+					</li>	
+				</ul>
+			</div>
+		</div>
+
+    </div>
+	
+
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

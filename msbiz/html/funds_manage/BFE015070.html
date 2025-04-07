@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[신규기관등록]기관유형선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="h1">기관유형선택</h1>
+
+        <div class="section">
+            <ul class="fu_linkLst">
+                <!-- 220729 리웍: 클래스 추가 -->
+                <li class="fu_link active"><!-- 활성화시 "active" 클래스 추가 -->
+                    <a href="#">
+                        <span class="fu_link_icon ico_48_fu_bank"></span>
+                        <span>은행</span>
+                    </a>
+                </li>
+                <li class="fu_link">
+                    <a href="#">
+                        <span class="fu_link_icon ico_48_fu_card"></span>
+                        <span>카드</span>
+                    </a>
+                </li>
+                <li class="fu_link">
+                    <a href="#">
+                        <span class="fu_link_icon ico_48_fu_stock"></span>
+                        <span>증권</span>
+                    </a>
+                </li>
+                <li class="fu_link">
+                    <a href="#">
+                        <span class="fu_link_icon ico_48_fu_insurance"></span>
+                        <span>보험</span>
+                    </a>
+                </li>
+                <li class="fu_link">
+                    <a href="#">
+                        <span class="fu_link_icon ico_48_fu_saving"></span>
+                        <span>저축은행</span>
+                    </a>
+                </li>
+                <li class="fu_link">
+                    <a href="#">
+                        <span class="fu_link_icon ico_48_fu_agency"></span>
+                        <span>매출조회기관</span>
+                    </a>
+                </li>
+                <!--// 220729 리웍: 클래스 추가 -->
+
+                <!-- 220905 예제 -->
+                <li class="fu_link">
+                    <a href="#">
+                        <span class="fu_link_icon ico_48_fu_credit"></span>
+                        <span>여신금융협회</span>
+                    </a>
+                </li>
+                <li class="fu_link">
+                    <a href="#">
+                        <span class="fu_link_icon ico_48_fu_tax"></span>
+                        <span>국세청<br>(전자세금계산서)</span>
+                    </a>
+                </li>
+                <li class="fu_link">
+                    <a href="#">
+                        <span class="fu_link_icon ico_48_fu_tax2"></span>
+                        <span>국세청<br>(현금영수증)</span>
+                    </a>
+                </li>
+                <!--// 220905 예제 -->
+            </ul>
+        </div>
+        
+        <!-- [유의사항] -->
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <!-- 220905 수정: 내용수정 -->
+                <ul class="depth bul">
+                    <li>Star CMS 이용동의 후 '자금관리&gt;다른금융 등록/관리'에서 증권사, 카드사 등 여러 금융기관 정보를 추가로 등록하여 이용이 가능합니다.</li>	
+                    <li>국세청은 전자세금계산서와 현금영수증을 등록합니다.</li>
+                    <li>여신금융협회는 ID/PW를 등록하여 가맹점 카드매출 정보를 조회할 수 있습니다.</li>
+                </ul>
+                <!--// 220905 수정: 내용수정 -->
+            </div>
+        </div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

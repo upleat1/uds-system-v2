@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[외화예금조회]조회결과</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">외화예금조회</h1>
+        
+        <div class="section">
+            <div class="list_btm_wrap">
+                <div class="col col_l">
+                    <span class="pdt_name_tit bold">김국민 님</span>
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <p class="tooltip_tit">총 잔액 합계범위</p>
+                            <div class="tooltip_cont"> 
+                                <ul class="bul">
+                                    <li>대표 외화 3종이 표시되며, 그 외 통화는 각 계좌에서 확인하시기 바랍니다.</li>
+                                    <li>일반사용자(Sub)는 총 잔액과 계좌수 정보를 볼 수 없습니다.</li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col_r">
+                    <span class="switch right">    
+                        <input type="checkbox" id="switch1" checked>
+                        <label for="switch1"><span>총 잔액</span></label>
+                    </span>
+                </div>
+            </div>
+            <div class="acc_wrap">
+                <!-- 대표외화 3종(USD, EUR, JPY) 노출 -->
+                <div class="acc_sum_wrap">
+                    <div class="acc_pay"><span class="unit">USD</span>
+                        <strong class="number">104,00.00</strong>
+                    </div>
+                    <div class="acc_pay"><span class="unit">EUR</span>
+                        <strong class="number">5,000.00</strong>
+                    </div>
+                    <div class="acc_pay"><span class="unit">JPY</span>
+                        <strong class="number">10,000</strong>
+                    </div>
+                </div>
+                <!-- //대표외화 3종(USD, EUR, JPY) 노출 -->
+            </div>  
+        </div>
+
+        <hr class="hr_divide">
+        <div class="account_all">
+            <div class="link_panel">                
+                <div class="section_f">
+                    <h3 class="hidden">계좌목록</h3>
+                    <!-- 입출금 계좌 일 때 노출 -->
+                    <div class="acc_acco_list">
+                        <div class="tit_area js_toggle on" role="button" aria-expanded="true">
+                            <div class="tit btn_toggle">
+                                <strong class="cate">
+                                    입출금이 자유로운 예금계좌
+                                    <span class="count">(2)</span>
+                                </strong>
+                            </div>       
+                        </div>
+                        <div class="toggle_panel">
+                            <div class="acc_list_wrap type_list">
+                                <div class="acc_pannel">
+                                    <div class="acc_wrap inc_btn">
+                                        <div class="acc_top_info"> 
+                                            <span class="badge pdt1">입출금</span>
+                                            <!-- 상품별 badge -->
+                                            <span class="badge pdt2">예금적금</span>
+                                            <span class="badge pdt3">대출</span>
+                                            <span class="badge pdt4">펀드</span>
+                                            <span class="badge pdt5">보험공제</span>
+                                            <span class="badge pdt6">퇴직연금</span>
+                                            <span class="badge pdt7">신탁ISA</span>
+                                            <span class="badge pdt8">증권</span>
+                                            <span class="badge pdt9">외화골드</span>
+                                            <!-- //상품별 badge -->
+                                        </div>
+                                        <!-- 221012 : a태그 / button태그 분리 -->
+                                        <!-- 221018 : 접근성수정 -->
+                                        <!-- 221107 : 접근성수정 2차 반영 button태그 위치 이동 -->
+                                        <div class="acc_area">
+                                            <a href="#none" id="aria7_1">
+                                                <div class="acc_num">
+                                                    <span class="number">000000-12345</span>
+                                                    <button type="button" class="btn_txt ico_copy"><span class="hidden">000000-01-000000 계좌번호 복사하기</span></button>
+                                                </div>
+                                                <div class="acc_name">(별명노출)</div>
+                                                <div class="acc_name">상품명노출</div>
+                                            </a>
+                                        </div>
+                                        <!-- //221107 : 접근성수정 2차 반영 button태그 위치 이동 -->
+                                        <!-- //221018 : 접근성수정 -->
+                                        <!-- //221012 : a태그 / button태그 분리 -->
+                                        <div class="acc_sum_wrap exchange">
+                                            <div class="acc_pay"><span class="unit">USD</span>
+                                                <strong class="number">104,00.00</strong>
+                                            </div>
+                                            <div class="acc_pay"><span class="unit">EUR</span>
+                                                <strong class="number">5,000.00</strong>
+                                            </div>
+                                            <div class="acc_pay"><span class="unit">JPY</span>
+                                                <strong class="number">10,000</strong>
+                                            </div>
+                                        </div>
+                                        <!-- 통화더보기 : exchange -->
+                                        <div class="toggle_sm_wrap exchange">
+                                            <div class="toggle_panel" role="region">
+                                                <div class="acc_sum_wrap exchange">
+                                                    <div class="acc_pay"><span class="unit">AUD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">CAD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">CHF</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">CNY</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">GBP</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">HKD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">NSD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">SGD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="tit js_toggle" aria-expanded="false">통화더보기</button>
+                                        </div>
+                                        <!-- //통화더보기 : exchange -->
+                                    </div>
+                                    <button type="button" class="btn_menu" id="layer_more" aria-describedby="aria1_1"><span class="ico_menu"></span><span class="hidden">메뉴</span></button>
+                                </div>
+                                <div class="acc_pannel">
+                                    <div class="acc_wrap inc_btn">
+                                        <div class="acc_top_info"> 
+                                            <span class="badge pdt1">입출금</span>
+                                        </div>
+                                        <!-- 221012 : a태그 / button태그 분리 -->
+                                        <!-- 221018 : 접근성수정 -->
+                                        <!-- 221107 : 접근성수정 2차 반영 button태그 위치 이동 -->
+                                        <div class="acc_area">
+                                            <a href="#none" id="aria7_1">
+                                                <div class="acc_num">
+                                                    <span class="number">000000-01-000000</span>
+                                                    <button type="button" class="btn_txt ico_copy"><span class="hidden">000000-01-000000 계좌번호 복사하기</span></button>
+                                                </div>
+                                                <div class="acc_name">(별명노출)</div>
+                                                <div class="acc_name">상품명노출</div>
+                                            </a>
+                                        </div>
+                                        <!-- //221107 : 접근성수정 2차 반영 button태그 위치 이동 -->
+                                        <!-- //221018 : 접근성수정 -->
+                                        <!-- //221012 : a태그 / button태그 분리 -->
+                                        <div class="acc_sum_wrap exchange">
+                                            <div class="acc_pay"><span class="unit">USD</span>
+                                                <strong class="number">104,00.00</strong>
+                                            </div>
+                                            <div class="acc_pay"><span class="unit">EUR</span>
+                                                <strong class="number">5,000.00</strong>
+                                            </div>
+                                            <div class="acc_pay"><span class="unit">JPY</span>
+                                                <strong class="number">10,000</strong>
+                                            </div>
+                                        </div>
+                                        <div class="toggle_sm_wrap exchange"> <!-- 외환리스트 : exchange -->
+                                            <div class="toggle_panel" role="region">
+                                                <div class="acc_sum_wrap exchange">
+                                                    <div class="acc_pay"><span class="unit">AUD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">CAD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">CHF</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">CNY</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">GBP</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">HKD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">NSD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                    <div class="acc_pay"><span class="unit">SGD</span>
+                                                        <strong class="number">5,000.00</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="tit js_toggle" aria-expanded="false">통화더보기</button>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn_menu" id="layer_more" aria-describedby="aria1_1"><span class="ico_menu"></span><span class="hidden">메뉴</span></button>
+                                </div>
+                                <!-- 입출금이 자유로운 예금계좌 또는 외화정기 예금 계좌가 없을 때 -->
+                                <div class="result nodata">
+                                    <p class="tit">스마트한 환테크도 KB에서!</p>
+                                </div>
+                                <!-- //입출금이 자유로운 예금계좌 또는 외화정기 예금 계좌가 없을 때 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //입출금 계좌 일 때 노출 -->
+                    
+                    <!-- 정기예금 계좌 일 때 노출-->
+                    <div class="acc_acco_list">
+                        <div class="tit_area js_toggle" role="button" aria-expanded="false">
+                            <div class="tit btn_toggle">
+                                <strong class="cate">외화정기 예금 계좌<span class="count">(2)</span></strong>                                
+                            </div>       
+                        </div>
+                        <div class="toggle_panel">
+                            <div class="acc_list_wrap type_list">
+                                <div class="acc_pannel">
+                                    <div class="acc_wrap inc_btn">
+                                        <div class="acc_top_info"> 
+                                            <span class="badge pdt2">정기예금</span>
+                                        </div>
+                                        <!-- 221012 : a태그 / button태그 분리 -->
+                                        <!-- 221018 : 접근성수정 -->
+                                        <!-- 221107 : 접근성수정 2차 반영 button태그 위치 이동 -->
+                                        <div class="acc_area">
+                                            <a href="#none" id="aria7_1">
+                                                <div class="acc_num">
+                                                    <span class="number">000000-01-000000</span>
+                                                    <button type="button" class="btn_txt ico_copy"><span class="hidden">000000-01-000000 계좌번호 복사하기</span></button>
+                                                </div>
+                                                <div class="acc_name">(별명노출)</div>
+                                                <div class="acc_name">상품명노출</div>
+                                            </a>
+                                        </div>
+                                        <!-- //221107 : 접근성수정 2차 반영 button태그 위치 이동 -->
+                                        <!-- //221018 : 접근성수정 -->
+                                        <!-- //221012 : a태그 / button태그 분리 -->
+                                        <div class="acc_info_wrap">
+                                            <div class="acc_info">
+                                                <span class="tit">만기일</span>
+                                                <span class="number">2022.05.20</span>
+                                                <strong class="number fc_gray3">(D+99)</strong>
+                                            </div>
+                                        </div>
+                                        <div class="acc_sum_wrap exchange">
+                                            <div class="acc_pay"><span class="unit">USD</span>
+                                                <strong class="number">104,00.00</strong>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <button type="button" class="btn_menu" id="layer_more" aria-describedby="aria1_1"><span class="ico_menu"></span><span class="hidden">메뉴</span></button>
+                                </div>
+                                <div class="acc_pannel">
+                                    <div class="acc_wrap inc_btn">
+                                        <div class="acc_top_info"> 
+                                            <span class="badge pdt2">정기예금</span>
+                                        </div>
+                                        <!-- 221012 : a태그 / button태그 분리 -->
+                                        <!-- 221018 : 접근성수정 -->
+                                        <!-- 221107 : 접근성수정 2차 반영 button태그 위치 이동 -->
+                                        <div class="acc_area">
+                                            <a href="#none" id="aria7_1">
+                                                <div class="acc_num">
+                                                    <span class="number">000000-01-000000</span>
+                                                    <button type="button" class="btn_txt ico_copy"><span class="hidden">000000-01-000000 계좌번호 복사하기</span></button>
+                                                </div>
+                                                <div class="acc_name">(별명노출)</div>
+                                                <div class="acc_name">상품명노출</div>
+                                            </a>                                            
+                                        </div>
+                                        <!-- //221107 : 접근성수정 2차 반영 button태그 위치 이동 -->
+                                        <!-- //221018 : 접근성수정 -->
+                                        <!-- //221012 : a태그 / button태그 분리 -->
+                                        <div class="acc_info_wrap">
+                                            <div class="acc_info">
+                                                <span class="tit">만기일</span>
+                                                <span class="number">2022.05.20</span>
+                                                <strong class="number fc_gray3">(D+99)</strong>
+                                            </div>
+                                        </div>
+                                        <div class="acc_sum_wrap exchange">
+                                            <div class="acc_pay"><span class="unit">USD</span>
+                                                <strong class="number">104,00.00</strong>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <button type="button" class="btn_menu" id="layer_more" aria-describedby="aria1_1"><span class="ico_menu"></span><span class="hidden">메뉴</span></button>
+                                </div>
+                                <!-- 입출금이 자유로운 예금계좌 또는 외화정기 예금 계좌가 없을 때 -->
+                                <div class="result nodata">
+                                    <p class="tit">스마트한 환테크도 KB에서!</p>
+                                </div>
+                                <!-- //입출금이 자유로운 예금계좌 또는 외화정기 예금 계좌가 없을 때 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //정기예금 계좌 일 때 노출-->               
+                </div>
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

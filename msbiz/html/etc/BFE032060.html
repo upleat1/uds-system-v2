@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[입금계좌 연결] 계좌연결_임대물선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="기타" href="/msbiz/app/css/etc.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">계좌연결 임대물선택</h1>
+        
+        <div class="section">
+            <!-- 220906 : 입금계좌 선택 case -->
+            <h2 class="tit"><span class="bold">임대료 받는 계좌와 연결할</span><br>임대물 선택 후 계좌선택을 해주세요</h2><!-- 220906 : 마침표 삭제 -->
+            <p class="etc_stit">임대료 받는 계좌가 같으면 복수선택도 가능해요.</p>
+            <!-- //220906 : 입금계좌 선택 case -->
+
+            <!-- 220906 : 계좌연결 완료 case -->
+            <h2 class="tit"><span class="bold">계좌 연결이 완료되었어요!</span><br>다른 임대물도 연결해 보세요</h2><!-- 220906 : 마침표 삭제 -->
+            <p class="etc_stit">임대료 받는 계좌가 같으면 복수선택도 가능해요.</p>
+            <!-- //220906 : 계좌연결 완료 case -->
+
+            <ul class="list_data rent">
+                <li>
+                    <div class="form_group">
+                        <div class="form_row">
+                            <div class="rdoChk_group">
+                                <span class="selection">
+                                    <!-- 220906 : checkbox로 변경 -->
+                                    <input type="checkbox" id="checkSize1">
+                                    <label for="checkSize1" class="label">
+                                        <strong class="bk_name">리첸스 618호</strong>
+                                        <span class="label_txt">연결안됨</span>
+                                    </label>
+                                    <!-- //220906 : checkbox로 변경 -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="form_group">
+                        <div class="form_row">
+                            <div class="rdoChk_group">
+                                <span class="selection">
+                                    <!-- 220906 : checkbox로 변경 -->
+                                    <input type="checkbox" id="checkSize2">
+                                    <label for="checkSize2" class="label">
+                                        <strong class="bk_name">현대 1204호</strong>
+                                        <span class="label_txt">연결안됨</span>
+                                    </label>
+                                    <!-- //220906 : checkbox로 변경 -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="form_group">
+                        <div class="form_row">
+                            <div class="rdoChk_group">
+                                <span class="selection">
+                                    <!-- 220906 : checkbox로 변경 -->
+                                    <input type="checkbox" id="checkSize3">
+                                    <label for="checkSize3" class="label">
+                                        <strong class="bk_name">월드메르디앙 503호</strong>
+                                        <span class="label_txt">연결안됨</span>
+                                    </label>
+                                    <!-- //220906 : checkbox로 변경 -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="form_group">
+                        <div class="form_row">
+                            <div class="rdoChk_group">
+                                <span class="selection">
+                                    <!-- 220906 : checkbox로 변경 -->
+                                    <input type="checkbox" id="checkSize4">
+                                    <label for="checkSize4" class="label">
+                                        <strong class="bk_name">대림쇼핑타운 105호</strong>
+                                        <span class="label_txt">연결안됨</span>
+                                    </label>
+                                    <!-- //220906 : checkbox로 변경 -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="form_group">
+                        <div class="form_row">
+                            <div class="rdoChk_group">
+                                <span class="selection">
+                                    <!-- 220906 : checkbox로 변경 -->
+                                    <input type="checkbox" id="checkSize5">
+                                    <label for="checkSize5" class="label">
+                                        <strong class="bk_name">디에이치개포자이 1801호</strong>
+                                        <span class="label_txt">연결안됨</span>
+                                    </label>
+                                    <!-- //220906 : checkbox로 변경 -->
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <p class="tip_info">내 명의(소유)의 KB 계좌만 연결 가능해요.</p>
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg">계좌선택</button></span>
+            </div>            
+        </div>
+        <hr class="hr_divide">
+        <div class="section">
+            <p class="p">
+                <span class="bold">계좌 연결을 최종 저장</span>하려면 완료를 눌러주세요.
+            </p>
+            <!-- 220831 : 리스트형으로 변경 -->
+            <!-- 220913 : 10개의 아이콘 class="icon-build01" ~ class="icon-build10" 클래스명 변경 -->
+            <ul class="rent_list_link">
+                <li>
+                    <div class="inr">
+                        <span class="icon-build01"></span><span class="rent_txt">리첸스 618호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <span class="icon-build02"></span><span class="rent_txt">현대 1204호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <span class="icon-build03"></span><span class="rent_txt">월드메르디앙 503호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <span class="icon-build04"></span><span class="rent_txt">대림쇼핑타운 105호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <span class="icon-build05"></span><span class="rent_txt">드림피아 101호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <span class="icon-build06"></span><span class="rent_txt">롯데캐슬 1602호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <span class="icon-build07"></span><span class="rent_txt">우방 501호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <span class="icon-build08"></span><span class="rent_txt">크라운팰리스 1201호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <span class="icon-build09"></span><span class="rent_txt">한화꿈애그린 602호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <span class="icon-build10"></span><span class="rent_txt">대두 602호</span><span class="bold">(연결됨)</span>
+                    </div>
+                </li>
+            </ul>
+            <!-- //220913 : 10개의 아이콘 class="ico_connect1" 클래스명 변경 -->
+            <p class="tip_info">렌트온 홈에서 임대물을 선택하면 연결된 계좌변경이 가능해요.</p>
+        </div>
+
+        <!-- 220929 : 취소 | 완료 CMD 버튼 변경 -->
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+                <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE032060_modalPopup')">완료</button></span>
+            </div>
+        </div>
+        <!-- page bottom button -->
+        <!-- //220929 : 취소 | 완료 CMD 버튼 변경 -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<div id="BFE032060_modalPopup" class="popup modal" role="dialog" aria-hidden="true">
+    <article class="pop_wrap">
+        <div class="pop_head">
+            <div>
+                <h1>계좌를 등록한 임대물의<br>월세 입금 확인 알림을 받으시겠어요?</h1>
+            </div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_section">
+                확인을 누르면 push 알림으로 이동합니다.<br>
+                렌트온 서비스 알림을 가입해 알림을 받아보세요.
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg" data-action="close">렌트온 홈</button></span>
+                    <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

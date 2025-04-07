@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[약정해지 신청]약정해지신청  완료</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="h1">이용계좌선택</h1>
+
+        <div class="inform_top_wrap">
+            <p class="depth">
+                이용신청등록 시 정산금수령계좌 및 고객이용계좌를 등록하지 않은 경우 해당 계좌를 등록하는 화면입니다.
+            </p>
+        </div>
+
+        <div class="section">
+            <!-- 정산금 수령계좌 선택 -->
+            <div class="form_group error">
+                <div class="form_tit">정산금 수령계좌 선택
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <div class="tooltip_cont"> 
+                                <ul class="bul">
+                                    <li>정산금수령계좌란 고객님께서 이용하시는 마켓 또는 PG로부터 정산받는 금액을 수령하게 되는 계좌로, KB e-Commerce 채권양도전용계좌(통장)만 등록할 수 있습니다.</li>
+                                    <li>KB e-Commerce 채권양도전용계좌(통장)는 고객님과 은행간 채권양도계약을 체결하기 때문에 고객님께서 사적으로 입금/출금을 할 수 없는 계좌입니다.</li>
+                                    <li> KB메가셀러론 약정이 완료되면 마켓 또는 PG로부터 수령받는 정산금을 해당 계좌로 변경해야 하며, 해당 계좌로 정산금이 입금되면 건별대출이 있는 경우 우선 상환하고 남는 금액은 고객이용계좌로 입금됩니다.</li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" id="id01" class="select_btn" title="선택">선택</button>
+                    </div>
+                </div>
+                <div class="form_btm_wrap">
+                    <p class="tip_info">정산금수령계좌계좌는 KB e-Commerce 채권양도전용통장만 선택 가능합니다.</p><!-- 220926 tag 변경 : div -> p -->
+                    <p class="tip_info">타상품에서 이용중인 KB e-Commerce 채권양도전용통장은 선택 불가합니다.</p><!-- 220926 tag 변경 : div -> p -->
+                    <p class="tip" aria-labelledby="id01">정산금 수령계좌를 선택해주세요.</p><!-- 개발전용 : validation 결과 메세지 --><!-- 220926 tag 변경 : div -> p -->
+                </div>
+                 <!-- 220816 수정 -->
+                 <div class="btn_wrap btm">
+                    <a href="#none" class="btn_txt ico_arr">계좌조회</a>
+                </div>
+                <!-- //220816 수정 -->
+            </div>
+            <!-- //정산금 수령계좌 선택 -->
+
+            <!-- 고객 이용계좌 선택 -->
+            <div class="form_group error"><!-- 220816 gap_md 삭제 -->
+                <div class="form_tit">고객 이용계좌 선택
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <div class="tooltip_cont"> 
+                                <ul class="bul">
+                                    <li>고객이용계좌란  KB메가셀러론 약정 후 실행되는 건별대출금을 입금받거나 마켓 또는 PG로부터 수령받는 정산금이 정산금수령계좌로 입금되면 건별대출이 있는 경우 우선 상환하고 남은 금액을 입금받는 계좌입니다.</li>
+                                    <li>고객이용계좌는 KB부가세납부전용통장, KB하도급지킴이통장, KB e-Commerce 채권양도전용계좌 등 특수목적계좌의 경우 이용할 수 없습니다.</li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" id="id01" class="select_btn" title="선택">선택</button>
+                    </div>
+                </div>
+                <div class="form_btm_wrap">
+                    <p class="tip_info">고객이용계좌는 KB부가세납부전용통장 등 특수목적계좌는 선택할 수 없습니다.</p><!-- 220926 tag 변경 : div -> p -->
+                    <p class="tip" aria-labelledby="id01">고객 이용계좌를 선택해주세요.</p><!-- 개발전용 : validation 결과 메세지 --><!-- 220926 tag 변경 : div -> p -->
+                </div>
+                 <!-- 220816 수정 -->
+                 <div class="btn_wrap btm">
+                    <a href="#none" class="btn_txt ico_arr">계좌조회</a>
+                </div>
+                <!-- //220816 수정 -->
+            </div>
+            <!-- //고객 이용계좌 선택 -->
+        </div>
+        
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">확인</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

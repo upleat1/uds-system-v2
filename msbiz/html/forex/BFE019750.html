@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-[거래주문]정보입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <div id="content">
+    <!-- 220803 리웍 -->
+        <!--주문유형: 시장가 일 때 -->
+        <h1 class="h1">입력정보 확인</h1>
+            
+        <div class="inform_top_wrap">
+            <p class="depth">주문내역을 자세히 확인한 후 거래해 주세요.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="h3">주문내역(시장가 주문)</h2>
+            <ul class="list_data">
+                <li>
+                    <div class="key">주문통화</div>
+                    <div class="value"><strong>USD(미국달러)</strong></div>
+                </li>
+                <li>
+                    <div class="key">주문금액</div>
+                    <div class="value"><strong>USD <span class="number">100.00</span></strong></div>
+                </li>
+                <li>
+                    <div class="key">매매유형</div>
+                    <div class="value">고객님이 사실때(매입)</div>
+                </li>
+                <li>
+                    <div class="key">주문유형</div>
+                    <div class="value">시장가</div>
+                </li>
+                <li>
+                    <div class="key">주문환율</div>
+                    <div class="value">
+                        <span class="fc_nega number">1,920.00</span>
+                    </div>
+                </li>
+            </ul>
+            <p class="depth info">해당시간(10초)에 [다음]을 선택하셔야 주문환율로 거래가 완료됩니다. 해당시간이 지나면 주문은 취소됩니다.</p>
+        </div>
+
+        <div class="section">
+            <div class="verifi_wrap pdd3rem">
+                <strong class="number fs24">00:10</strong>
+            </div>
+            <p class="p">[다음]을 선택하시면 인증서 입력절차 없이 바로 거래가 예약됩니다.</p>
+        </div>
+        <!-- //주문유형: 시장가 일 때 -->
+
+        
+        <!--주문유형: 지정가 일 때 -->
+        <h1 class="h1">보안매체입력</h1>
+                
+        <div class="inform_top_wrap">
+            <p class="depth">주문내역을 자세히 확인한 후 거래해 주세요.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="h3">주문내역(지정가 주문)</h2>
+            <ul class="list_data">
+                <li>
+                    <div class="key">주문통화</div>
+                    <div class="value"><strong>USD(미국달러)</strong></div>
+                </li>
+                <li>
+                    <div class="key">주문금액</div>
+                    <div class="value"><strong>USD <span class="number">100.00</span></strong></div>
+                </li>
+                <li>
+                    <div class="key">매매유형</div>
+                    <div class="value">고객님이 파실때(매도)</div>
+                </li>
+                <li>
+                    <div class="key">주문유형</div>
+                    <div class="value">지정가</div>
+                </li>
+                <li>
+                    <div class="key">주문환율</div>
+                    <div class="value">
+                        <span class="fc_nega number">1,920.00</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">주문유효기간</div>
+                    <div class="value"><span class="number">2022.07.13</span></div>
+                </li>
+            </ul>
+
+            <!-- 220823 태그 변경 -->
+            <ul class="depth info">
+                <li>FX시장원가환율이 <strong class="number">1,920.00</strong>과 일치하면 거래가 체결되며, 주문환율 <strong class="number">1,920.00</strong>으로 계산된 원화금액이 지정계좌에서 출금됩니다.</li>
+                <li>지정가 거래의 신규 주문/변경/취소는 주말 및 공휴일 포함 24시간 가능하며, 지정가 거래의 체결 및 결제는 은행 영업일 09:00~19:00로 제한됨을 안내 드립니다.</li>
+            </ul>
+            <!-- 220823 태그 변경 -->
+
+            <p class="p gap_sm">[다음]을 선택하시면 인증서 입력절차 없이 바로 거래가 예약됩니다.</p>
+            
+        </div>
+    
+        <!-- //주문유형: 시장가 일 때 -->
+        
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+
+	</div>
+</div>
+<!-- //wrap -->
+</body>
+</html>

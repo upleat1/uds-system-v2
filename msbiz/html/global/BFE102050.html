@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-[외화송금주소록(해외/국내)]해외송금주소록 결과조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+
+    <div id="content">
+        <h1 class="hidden">외화송금주소록(해외/국내)</h1>
+
+			<!-- tab_wrap -->
+			<div class="tab_wrap">
+				<div class="tab_list">
+					<div class="scroll_wrap">
+						<a href="#" class="active" title="선택됨">해외송금주소록</a><!-- 221004 title 추가 -->
+						<a href="#">국내외화이체주소록</a>
+					</div>
+				</div>
+
+				<!-- tabpanel1_1 -->
+				<div class="link_panel">
+					<div class="inform_top_wrap">
+						<ul class="depth bul">
+							<li>자주 보내는 해외송금 정보를 편리하게 관리하는 해외송금주소록(구. 자주사용하는거래) 입니다.</li>
+							<li>등록하신 송금정보는 '기업전용송금(인터넷신청)의 직접입력', '바로송금', '정기예약송금' 화면에서 불러오기 가능합니다.</li>
+						</ul>
+					</div>
+				
+					<div class="section">
+						<div class="form_group">
+							<div class="form_tit">조회조건</div>
+							<div class="form_row">
+								<div class="tab_wrap box"><!-- tab_wrap box -->
+									<div class="tab_radio"><!-- tab_radio -->
+										<div class="rdoChk_box"><!-- rdoChk_box -->
+											<span class="selection">
+												<input type="radio" id="rdo1" name="rdo1" data-show="#radio1" aria-selected="true" aria-controls="radio1" checked>
+												<label for="rdo1" class="label"><em>송금주소록 전체</em></label>
+											</span>
+											<span class="selection">
+												<input type="radio" id="rdo2" name="rdo1" data-show="#radio2" aria-selected="false" aria-controls="radio2">
+												<label for="rdo2" class="label"><em>송금주소록별명 입력</em></label>
+											</span>
+										</div><!-- ////// rdoChk_box -->
+									</div>
+								
+									<!-- radioShow1 -->
+									<div class="tab_panel pdt_0" role="tabpanel" id="radio1">
+										<div class="btn_cnt_wrap">
+											<span><button type="button" class="btn primary lg">조회</button></span>
+										</div>
+									</div>
+		
+									<!-- reMethodPanel2 -->
+									<div class="tab_panel" role="tabpanel" id="radio2">
+										<div class="form_group error">
+											<div class="form_tit">송금주소록별명</div>
+											<div class="form_row">
+												<div class="input"><input type="text" id="id11" title="송금주소록별명"></div><!-- 221006 title명 변경 --> 
+												<p class="tip_info">검색 정확도를 위해 3자 이상 입력</p>
+												<p class="tip" aria-labelledby="id11">주소록 별명을 3자리 이상 입력하셔야 합니다.</p>
+                                                <p class="tip_info">영어만 입력 가능합니다.</p>
+											</div>
+										</div>
+		
+										<div class="btn_cnt_wrap">
+											<span><button type="button" class="btn primary lg">조회</button></span>
+										</div>
+									</div><!-- //reMethodPanel2 -->
+								</div>
+							</div>
+						</div>
+						
+					</div>
+
+					<hr class="hr_divide">
+					<div class="section">
+						<h2 class="h2">해외송금주소록 조회결과</h2>
+						<!-- 조회값 없을 때 -->
+						<div class="result nodata sm">
+							<p class="tit">등록된 해외송금주소록 정보가 없습니다.</p>
+						</div>
+						<!-- // 조회값 없을 때 -->
+
+						<div class="list_data_group">
+							<ul class="list_data">
+								<li>
+									<div class="key">등록일</div>
+									<div class="value"><span class="number">2022.05.31</span></div>
+								</li>
+								<li>
+									<div class="key">주소록별명</div>
+									<div class="value">토트넘 홋퍼스 송금2</div>
+								</li>
+								<li>
+									<div class="key">받는분(영문)</div>
+									<div class="value"><strong>HEUNGMIN SON</strong></div>
+								</li>
+								<li>
+									<div class="key">등록자ID</div>
+									<div class="value">ACCOUNT ID</div>
+								</li>
+							</ul>
+							<div class="btn_list_btm">
+								<span><button type="button" class="btn outline sm">삭제</button></span>
+								<span><button type="button" class="btn outline sm">상세보기/정보변경</button></span>
+							</div>
+						</div>
+
+						<div class="list_data_group">
+							<ul class="list_data">
+								<li>
+									<div class="key">등록일</div>
+									<div class="value"><span class="number">2022.05.31</span></div>
+								</li>
+								<li>
+									<div class="key">주소록별명</div>
+									<div class="value">토트넘 홋퍼스 송금2</div>
+								</li>
+								<li>
+									<div class="key">받는분(영문)</div>
+									<div class="value"><strong>HEUNGMIN SON</strong></div>
+								</li>
+								<li>
+									<div class="key">등록자ID</div>
+									<div class="value">ACCOUNT ID</div>
+								</li>
+							</ul>
+
+							<div class="btn_list_btm">
+								<span><button type="button" class="btn outline sm">삭제</button></span>
+								<span><button type="button" class="btn outline sm">상세보기/정보변경</button></span>
+							</div>
+						</div>
+
+						<!-- 더보기 -->
+						<div class="btn_list_btm more">
+							<span><button type="button" class="btn">더보기<span class="number">(1/30)</span></button></span>
+						</div>
+						<!-- //더보기 -->
+					</div>
+
+					<div class="btn_confirm_wrap">
+						<div class="btn_area">
+						<span><button type="button" class="btn primary lg">등록</button></span>
+						</div>
+					</div>
+				
+				</div>
+				
+			</div><!-- tab_wrap -->
+
+    </div><!-- //content -->
+</div>
+
+</body>
+</html>

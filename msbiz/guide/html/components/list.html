@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>No.1 기업금융플랫폼</title>
+    <link rel="stylesheet" href="/msbiz/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/msbiz/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/msbiz/app/css/common.css">
+</head>
+<body>
+    <div data-class="contents">
+        <div data-class="component-name"><span>리스트</span></div>
+
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+            <div data-class="h2">일반형</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>font size : 16px</div>
+                    <div>기본 : 상단 border 없음<br>
+                        상단 border 있을 시 .list에 list_top_bd 클래스 추가</div>
+                    <div>첫번째 li는 상단 여백 삭제</div>
+                </div>
+            </div>
+<script type="text/html">
+    <ul class="list">
+        <li>
+            텍스트
+        </li>
+        <li>
+            텍스트
+        </li>
+    </ul>
+    <br><br>
+    <ul class="list list_top_bd">
+        <li>
+            텍스트
+        </li>
+        <li>
+            텍스트
+        </li>
+    </ul>
+</script>
+        </div>
+            
+        <div data-class="section">
+            <div data-class="h2">Link형</div>   
+            <div data-class="h3">클릭영역 : 타이틀 전체</div>
+<script type="text/html">
+    <ul class="list_link">
+        <li>
+            <a href="#none" class="link">텍스트</a>
+        </li>
+        <li>
+            <a href="#none" class="link">텍스트</a>
+        </li>
+        <li>
+            <a href="#none" class="link">
+                <p class="p_sub fc_gray2">휴대폰</p>
+                <p class="gap_xxs"><strong class="number">010-28**-37**</strong></p>
+            </a>
+        </li>
+    </ul>
+</script>  
+
+
+            <div data-class="h3">클릭영역 : '>' 버튼</div>
+<script type="text/html">
+    <ul class="list_link">
+        <li>
+            <div class="inr">
+                텍스트
+                <button type="button" class="btn_link" title=""><span class="hidden">바로가기</span></button>
+            </div>
+        </li>
+        <li>
+            <div class="inr">
+                텍스트
+                <button type="button" class="btn_link" title=""><span class="hidden">바로가기</span></button>
+            </div>
+        </li>
+    </ul>  
+</script> 
+
+            <div data-class="h3">클릭영역 : '상세정보 >' 버튼</div>
+<script type="text/html">
+    <ul class="list_link">
+        <li>
+            <div class="inr">
+                텍스트
+                <a href="#" class="btn_link" title=""><span class="txt">상세정보</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="inr">
+                텍스트
+                <a href="#" class="btn_link" title=""><span class="txt">상세정보</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="inr">
+                <p class="p_sub fc_gray2">확정급여형(DB)</p>
+                <p class="gap_xxs"><strong class="number">000000-00-000000</strong></p>
+                <a href="#" class="btn_link" title=""><span class="txt">상세정보</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="inr">
+                <p class="p_sub fc_gray2">확정급여형(DB)</p>
+                <p class="gap_xxs"><strong class="number">000000-00-000000</strong></p>
+                <a href="#" class="btn_link" title=""><span class="txt">상세정보</span></a>
+            </div>
+        </li>
+    </ul>  
+</script> 
+
+        <div data-class="h3">상단라인 있는 경우</div>
+<script type="text/html">
+    <ul class="list_link btl">
+        <li>
+            <div class="inr">
+                텍스트
+                <a href="#" class="btn_link" title=""><span class="txt">상세정보</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="inr">
+                텍스트
+                <a href="#" class="btn_link" title=""><span class="txt">상세정보</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="inr">
+                <p class="p_sub fc_gray2">확정급여형(DB)</p>
+                <p class="gap_xxs"><strong class="number">000000-00-000000</strong></p>
+                <a href="#" class="btn_link" title=""><span class="txt">상세정보</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="inr">
+                <p class="p_sub fc_gray2">확정급여형(DB)</p>
+                <p class="gap_xxs"><strong class="number">000000-00-000000</strong></p>
+                <a href="#" class="btn_link" title=""><span class="txt">상세정보</span></a>
+            </div>
+        </li>
+    </ul>  
+</script> 
+        </div>
+
+
+        <div data-class="section">
+            <div data-class="h2">데이터형</div>
+            <div data-class="h3">타이틀이 있는 경우</div>
+<script type="text/html">
+    <h3 class="h3">타이틀</h3>
+    <ul class="list_data">
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용<br>내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+    </ul>
+</script>
+            <div data-class="h3">숫자 + 문자(특수문자) 조합형</div>
+<script type="text/html">
+<h3 class="h3">타이틀</h3>
+<ul class="list_data">
+<li>
+    <div class="key">금액</div>
+    <div class="value">
+        <span class="number">98,123</span><span class="num_unit">원</span>
+    </div>
+</li>
+<li>
+    <div class="key">건수</div>
+    <div class="value">
+        <span class="total_num">총 <em class="number">17</em><span class="num_unit">건</span></span>
+    </div>
+</li>
+<li>
+    <div class="key">환율</div>
+    <div class="value">
+        <span class="number">85</span><span class="num_unit">%</span>
+    </div>
+</li>
+<li>
+    <div class="key">날짜</div>
+    <div class="value"><span class="number">2022.02.02</span></div>
+</li>
+<li>
+    <div class="key">통화</div>
+    <div class="value">
+        <span class="num_unit">USD</span><span class="number">1,106.00</span>
+    </div>
+</li>
+</ul>
+</script>
+
+<div data-class="h3">반복 타입</div>
+<script type="text/html">
+    <div class="list_data_group">
+        <h3 class="h3">타이틀</h3>
+        <ul class="list_data">
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용<br>내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+        </ul>
+        <div class="btn_list_btm">
+            <span><button type="button" class="btn outline sm">채권취소</button></span>
+            <span><button type="button" class="btn outline sm">채권변경</button></span>
+        </div>
+    </div>
+    <div class="list_data_group">
+        <h3 class="h3">타이틀</h3>
+        <ul class="list_data">
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용<br>내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+        </ul>
+        <div class="btn_list_btm">
+            <span><button type="button" class="btn outline sm">채권취소</button></span>
+            <span><button type="button" class="btn outline sm">채권변경</button></span>
+        </div>
+    </div>
+    <div class="list_data_group">
+        <h3 class="h3">타이틀</h3>
+        <div class="list_data_group_s">
+            <ul class="list_data">
+                <li>
+                    <div class="key">타이틀</div>
+                    <div class="value">내용</div>
+                </li>
+                <li>
+                    <div class="key">타이틀</div>
+                    <div class="value">내용<br>내용</div>
+                </li>
+                <li>
+                    <div class="key">타이틀</div>
+                    <div class="value">내용</div>
+                </li>
+            </ul>
+            <div class="btn_list_btm">
+                <span><button type="button" class="btn outline sm">상세보기</button></span>
+            </div>
+        </div>
+        <div class="list_data_group_s">
+            <ul class="list_data">
+                <li>
+                    <div class="key">타이틀</div>
+                    <div class="value">내용</div>
+                </li>
+                <li>
+                    <div class="key">타이틀</div>
+                    <div class="value">내용<br>내용</div>
+                </li>
+                <li>
+                    <div class="key">타이틀</div>
+                    <div class="value">내용</div>
+                </li>
+            </ul>
+            <div class="btn_list_btm">
+                <span><button type="button" class="btn outline sm">상세보기</button></span>
+            </div>
+        </div>
+    </div>
+</script>
+            <div data-class="h3">타이틀이 없는 경우</div>
+<script type="text/html">
+    <ul class="list_data">
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value"><a href="#none" class="btn_txt ico_arr sm">버튼</a></div>
+        </li>
+    </ul>
+</script>
+
+            <div data-class="h3">타이틀이 9글자 이상인 경우</div>
+<script type="text/html">
+    <ul class="list_data lbt">
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value"><a href="#none" class="btn_txt ico_arr sm">버튼</a></div>
+        </li>
+    </ul>
+</script>
+            
+            <div data-class="h3">noline</div>
+<script type="text/html">
+    <ul class="list_data noline">
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value"><a href="#none" class="btn_txt ico_arr sm">버튼</a></div>
+        </li>
+    </ul>
+</script>
+
+            <div data-class="h3">list 아래 종속형이 있는 경우</div>
+<script type="text/html">
+    <ul class="list_data noline">
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li class="sub">
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li class="sub">
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+    </ul>
+</script>
+
+<div data-class="h3">box</div>
+<script type="text/html">
+    <ul class="list_data box">
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value"><a href="#none" class="btn_txt ico_arr sm">버튼</a></div>
+        </li>
+    </ul>
+</script>
+
+            <div data-class="h3">우측 정렬</div>
+            <div data-class="h4">기본</div>
+<script type="text/html">
+    <ul class="list_data right">
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value">내용</div>
+        </li>
+        <li>
+            <div class="key">타이틀</div>
+            <div class="value"><a href="#none" class="btn_txt ico_arr sm">버튼</a></div>
+        </li>
+    </ul>
+</script>
+            
+        </div>
+
+        <div data-class="section">
+            <div data-class="h2">순서변경</div>
+<script type="text/html">
+    <ul class="list_drag type_drag"><!-- 0830 드래그변경 : id삭제, drag-> type_drag로 class변경 -->
+        <li class="li">
+            <div class="cnt">
+                내용이 오는 곳1
+            </div>
+            <!-- 0830 드래그변경 : 이동버튼으로 변경 -->
+            <div class="move_area">
+                <button type="button" class="btn_up"><span class="hidden">순서위로</span></button>
+                <button type="button" class="btn_down"><span class="hidden">순서아래로</span></button>
+            </div>
+            <!--// 0830 드래그변경 : 이동버튼으로 변경 -->
+        </li> 
+        <li class="li">
+            <div class="cnt">
+                내용이 오는 곳1
+            </div>
+            <!-- 0830 드래그변경 : 이동버튼으로 변경 -->
+            <div class="move_area">
+                <button type="button" class="btn_up"><span class="hidden">순서위로</span></button>
+                <button type="button" class="btn_down"><span class="hidden">순서아래로</span></button>
+            </div>
+            <!--// 0830 드래그변경 : 이동버튼으로 변경 -->
+        </li> 
+        <li class="li">
+            <div class="cnt">
+                내용이 오는 곳3
+            </div>
+            <!-- 0830 드래그변경 : 이동버튼으로 변경 -->
+            <div class="move_area">
+                <button type="button" class="btn_up"><span class="hidden">순서위로</span></button>
+                <button type="button" class="btn_down"><span class="hidden">순서아래로</span></button>
+            </div>
+            <!--// 0830 드래그변경 : 이동버튼으로 변경 -->
+        </li>                                    
+    </ul>
+</script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h2">체크박스 데이타 리스트</div>
+<script type="text/html">
+    <div class="chk_data_list">
+        <div class="chk_head">
+            <span class="selection">
+                <input type="radio" id="chkData1" name="chkData" checked="">
+                <label for="chkData1" class="label"><strong>항목1</strong></label>
+            </span>
+        </div>
+        <ul class="list_data noline">
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용<br>내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+        </ul>
+    </div>
+    <div class="chk_data_list">
+        <div class="chk_head">
+            <span class="selection">
+                <input type="radio" id="chkData1" name="chkData" checked="">
+                <label for="chkData1" class="label"><strong>항목1</strong></label>
+            </span>
+        </div>
+        <ul class="list_data noline">
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용<br>내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+        </ul>
+    </div>
+</script>
+            <div data-class="h3">전체선택</div>
+<script type="text/html">
+    <div class="chk_data_group">
+        <div class="chk_total">
+            <span class="selection">
+                <input type="checkbox" id="checkType1" class="chk_all">
+                <label for="checkType1" class="label bold">전체선택</label>
+            </span>
+        </div>
+        <div class="chk_data_list_group">
+            <div class="chk_data_list">
+                <div class="chk_head">
+                    <span class="selection chk">
+                        <input type="checkbox" id="checkCHK1" checked>
+                        <label for="checkCHK1" class="label"><em>홍길동(000000-1******)</em></label>
+                    </span>
+                </div>
+                <ul class="list_data noline">
+                    <li>
+                        <div class="key">가입자명</div>
+                        <div class="value">홍길동</div>
+                    </li>
+                    <li>
+                        <div class="key">고객번호</div>
+                        <div class="value"><em class="number">000000-1******</em></div>
+                    </li>
+                    <li>
+                        <div class="key">사용자부담금</div>
+                        <div class="value">
+                            <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">가입자부담금</div>
+                        <div class="value">
+                            <span class="number">0</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn_list_btm">
+                    <span><button type="button" class="btn outline sm">버튼</button></span>
+                </div>
+            </div>
+            <div class="chk_data_list">
+                <div class="chk_head">
+                    <span class="selection chk">
+                        <input type="checkbox" id="checkCHK2">
+                        <label for="checkCHK2" class="label"><em>홍길순(000000-2******)</em></label>
+                    </span>
+                </div>
+                <ul class="list_data noline">
+                    <li>
+                        <div class="key">가입자명</div>
+                        <div class="value">홍길순</div>
+                    </li>
+                    <li>
+                        <div class="key">고객번호</div>
+                        <div class="value"><em class="number">000000-1******</em></div>
+                    </li>
+                    <li>
+                        <div class="key">사용자부담금</div>
+                        <div class="value">
+                            <span class="number">1,000,000,000</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">가입자부담금</div>
+                        <div class="value">
+                            <span class="number">0</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn_list_btm more">
+            <button type="button" class="btn">더보기</button>
+        </div>
+    </div>
+</script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">정렬</div>
+            <div data-class="h2">상단영역</div>
+            <div data-class="h3">리스트 상단에 요소가 위치하는 경우 사용.</div>
+<script type="text/html">
+    <div class="list_top_wrap">
+        <div class="col col_l"><span class="total_num">전체 <em class="number">17</em><span class="num_unit">건</span></span></div>
+    </div>
+</script>
+
+<script type="text/html">
+    <div class="list_top_wrap">
+        <div class="key">한줄일때</div>
+        <div class="value">2020.10.08 23:23:23</div>
+    </div>
+</script>
+
+<script type="text/html">
+    <ul class="list_top_wrap">
+        <li class="row">
+            <div class="key">두줄이상일때</div>
+            <div class="value">2021.01.01(금)~2021.01.31(일)</div>
+        </li>
+        <li class="row">
+            <div class="key">조회일시</div>
+            <div class="value">2020.10.08 23:23:23</div>
+        </li>
+    </ul>
+</script>
+<script type="text/html">
+    <div class="list_top_wrap">
+        <div class="col">
+            <div class="sch_period">
+                <span class="number">2022.04.21~2022.05.21</span>
+            </div>
+        </div>
+        <div class="col">
+            <span class="total_num">전체 <em class="number">101</em><span class="num_unit">건</span></span>
+        </div>
+    </div>
+</script>
+<script type="text/html">
+    <div class="list_top_wrap line">
+        <div class="col">
+            <div class="sch_period">
+                <span class="number">2022.04.21~2022.05.21</span>
+            </div>
+        </div>
+        <div class="col">
+            <span class="total_num">전체 <em class="number">101</em><span class="num_unit">건</span></span>
+        </div>
+    </div>
+</script>
+
+            <div data-class="h2">하단영역</div>
+            <div data-class="h3">리스트 하단에 요소가 위치하는 경우 사용.</div>
+<script type="text/html">
+    <div class="list_btm_wrap">
+        <div class="col col_l">왼쪽 영역</div>
+        <div class="col col_r">오른쪽 영역</div>
+    </div>
+</script> 
+
+        </div>
+
+        <div data-class="section">   
+            <div data-class="h1">카드형에서 변형</div>
+            <div data-class="h2">기본</div>
+            <script type="text/html">
+<div class="acc_list_wrap">
+    <div class="acc_pannel open">
+        <div class="acc_wrap">
+            <div class="acc_name">KB 금융전문인 우대대출</div>
+            <div class="acc_num"><span class="number">400407-01-023569</span></div>
+            <div class="acc_info_wrap">
+                <div class="acc_info">
+                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
+                </div>
+                <div class="acc_info">
+                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
+                </div>
+            </div>
+            <div class="acc_sum_wrap">
+                <div class="acc_pay"><span class="unit">대출잔액</span>
+                    <strong class="number">3,000,000</strong><span class="num_unit">원</span>
+                </div>
+                <div class="acc_pay"><span class="unit">대출원금</span>
+                    <strong class="number">5,000,000</strong><span class="num_unit">원</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn_list_btm">
+            <span><button type="button" class="btn outline sm">신청</button></span>
+        </div>
+    </div>
+    <div class="acc_pannel open">
+        <div class="acc_wrap">
+            <div class="acc_name">KB 금융전문인 우대대출</div>
+            <div class="acc_num"><span class="number">400407-01-023569</span></div>
+            <div class="acc_info_wrap">
+                <div class="acc_info">
+                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
+                </div>
+                <div class="acc_info">
+                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
+                </div>
+            </div>
+            <div class="acc_sum_wrap">
+                <div class="acc_pay"><span class="unit">대출잔액</span>
+                    <strong class="number">3,000,000</strong><span class="num_unit">원</span>
+                </div>
+                <div class="acc_pay"><span class="unit">대출원금</span>
+                    <strong class="number">5,000,000</strong><span class="num_unit">원</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn_list_btm">
+            <span><button type="button" class="btn outline sm">변경</button></span>
+            <span><button type="button" class="btn outline sm">신청</button></span>
+        </div>
+    </div>
+</div>
+        </script>
+        <div data-class="h2">상단 라인 추가</div>
+            <script type="text/html">
+<div class="acc_list_wrap">
+    <div class="acc_pannel open btl">
+        <div class="acc_wrap">
+            <div class="acc_name">KB 금융전문인 우대대출</div>
+            <div class="acc_num"><span class="number">400407-01-023569</span></div>
+            <div class="acc_info_wrap">
+                <div class="acc_info">
+                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
+                </div>
+                <div class="acc_info">
+                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
+                </div>
+            </div>
+            <div class="acc_sum_wrap">
+                <div class="acc_pay"><span class="unit">대출잔액</span>
+                    <strong class="number">3,000,000</strong><span class="num_unit">원</span>
+                </div>
+                <div class="acc_pay"><span class="unit">대출원금</span>
+                    <strong class="number">5,000,000</strong><span class="num_unit">원</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn_list_btm">
+            <span><button type="button" class="btn outline sm">신청</button></span>
+        </div>
+    </div>
+    <div class="acc_pannel open">
+        <div class="acc_wrap">
+            <div class="acc_name">KB 금융전문인 우대대출</div>
+            <div class="acc_num"><span class="number">400407-01-023569</span></div>
+            <div class="acc_info_wrap">
+                <div class="acc_info">
+                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
+                </div>
+                <div class="acc_info">
+                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
+                </div>
+            </div>
+            <div class="acc_sum_wrap">
+                <div class="acc_pay"><span class="unit">대출잔액</span>
+                    <strong class="number">3,000,000</strong><span class="num_unit">원</span>
+                </div>
+                <div class="acc_pay"><span class="unit">대출원금</span>
+                    <strong class="number">5,000,000</strong><span class="num_unit">원</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn_list_btm">
+            <span><button type="button" class="btn outline sm">변경</button></span>
+            <span><button type="button" class="btn outline sm">신청</button></span>
+        </div>
+    </div>
+</div>
+        </script>
+        </div>
+    </div>
+    
+    <script src="/msbiz/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/msbiz/guide/assets/js/components.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+</body>
+</html>

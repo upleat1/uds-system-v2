@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[One Stop 신규]사업자선택</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">사업자선택</h1>        
+        
+        <div class="section">
+            <h2 class="h2">사업자를 선택해주세요.</h2>
+            <div class="tab_wrap box">
+                <div class="tab_radio">
+                    <div class="pro_rdoChk_box">
+                        <span class="selection">
+                            <input type="radio" id="rdo1_1" name="rdo1">
+                            <label for="rdo1_1" class="label"><em>개인사업자</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="rdo1_2" name="rdo1">
+                            <label for="rdo1_2" class="label"><em>법인사업자</em></label>
+                        </span>
+                    </div>
+                </div>
+                <!-- 개인사업자 -->
+                <div class="tab_panel">
+                    <h2 class="hidden">개인사업자</h2>
+                    <div class="form_group">
+                        <h2 class="h2">가입 대상</h2>    
+                        <p class="p">개인사업자(공동사업자 제외)</p>
+
+                        <h2 class="h2">준비물</h2>    
+                        <ol class="pro_depth step sm">
+                            <li>
+                                <p class="tit">대표자 명의 휴대폰</p>
+                            </li>
+                            <li>
+                                <p class="tit">대표자 주민등록증 또는 운전면허증</p>
+                            </li>
+                            <li>
+                                <p class="tit">개인 또는 개인사업자의 인증서</p>
+                            </li>
+                        </ol>
+                        <ul class="depth info">
+                            <li>신규가입 진행 중 다른 금융기관에서 발급한 OTP를 등록하거나 모바일OTP를 발급받을 수 있습니다.</li>
+                            <li><span class="bold">신규 진행 중 임시 저장은 당일에만 유효</span>합니다.</li>
+                            <li>일부 업종은 비대면 신규 가입이 제한됩니다.<br>
+                                <span class="bold">(가상통화, 가상자산, 전자화폐 등)</span><!-- 220811 : <span>태그 bold 처리 -->
+                            </li>
+                        </ul>
+                        <!-- 제한업종 보기 -->
+                        <div class="btn_wrap sectors_btm">
+                            <a href="#none" id="" class="btn_txt ico_arr" onclick="">제한업종 보기</a>
+                        </div>
+                        <!-- //제한업종 보기 -->
+                        
+                        <h2 class="h2">가입 가능 시간</h2>    
+                        <p class="p">24시간 365일 언제나 가능</p>
+
+                        <div class="pro_certification_guide">
+                            <!-- 220921 : 배너 디자인 적용 -->
+                            <div class="txt">
+                                <span class="sub_tit">
+                                    KB스타기업뱅킹<br>고객이라면,
+                                </span>
+                                <span class="sub_tit2">
+                                    <span class="bold">로그인</span>하여 기본정보 입력없이<br>
+                                    One Stop 서비스를 이용하세요.
+                                </span>
+                            </div>
+                            <span class="ico_time"></span><!-- 220921 : 배너 이미지 -->
+                            <!-- //220921 : 배너 디자인 적용 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //개인사업자 -->
+                <!-- 법인사업자 -->
+                <div class="tab_panel">
+                    <h2 class="hidden">법인사업자</h2>
+                    <div class="form_group">
+                        <h2 class="h2">가입 대상</h2>    
+                        <ul class="depth bul">
+                            <li>정상 영업 중인 주식회사</li>
+                            <li>단독 대표이사(공동대표 사업자 제외)</li>
+                            <li>최대주주가 개인(대표이사)인 경우</li>
+                        </ul>
+
+                        <h2 class="h2">준비물</h2> 
+                        <div class="table">
+                            <table>
+                                <caption>테이블 제목 정보</caption>
+                                <colgroup>
+                                    <col style="width:40%">
+                                    <col style="width:60%">
+                                </colgroup>                                
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">기본 준비물</th>
+                                        <td>
+                                            <ul class="depth bul">
+                                                <li>대표자 명의 휴대폰</li>
+                                                <li>대표자 주민등록증 또는 운전면허증</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">법인신규관련서류</th>
+                                        <td>
+                                            <ul class="depth bul">
+                                                <li>사업자등록증명원</li>
+                                                <li>법인등기사항전부증명서</li>
+                                                <li>주식등변동상황명세서 또는 주주명부</li>
+                                                <li>부가가치세증명원 또는 표준재무제표증명서</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>   
+                        </div>
+
+                        <ul class="depth info">
+                            <li><span class="bold">신청일로부터 90일 이내 발급받은 서류</span>만 제출할 수 있습니다.</li>
+                            <li>다른 금융기관에서 발급받은 사업자 입출금 계좌로 추가 인증이 필요합니다.</li>
+                            <li>신청일 다음 영업일 밤 12시까지 신규가입 절차를 이어서 진행할 수 있습니다. </li>
+                            <li>일부 업종은 비대면 신규 가입이 제한됩니다.<br>
+                                <span class="bold">(가상통화, 가상자산, 전자화폐 등)</span>
+                            </li>
+                        </ul>
+                        <!-- 제한업종 보기 -->
+                        <div class="btn_wrap sectors_btm">
+                            <a href="#none" id="" class="btn_txt ico_arr" onclick="">제한업종 보기</a>
+                        </div>
+                        <!-- //제한업종 보기 -->
+
+                        <h2 class="h2">가입 가능 시간</h2>    
+                        <p class="p">24시간 365일 언제나 가능</p>
+
+                        <div class="pro_certification_guide">
+                            <!-- 220921 : 배너 디자인 적용 -->
+                            <div class="txt">
+                                <span class="sub_tit">
+                                    KB스타기업뱅킹<br>고객이라면,
+                                </span>
+                                <span class="sub_tit2">
+                                    <span class="bold">로그인</span>하여 기본정보 입력없이<br>
+                                    One Stop 서비스를 이용하세요.
+                                </span>
+                            </div>
+                            <span class="ico_time"></span><!-- 220921 : 배너 이미지 -->
+                            <!-- //220921 : 배너 디자인 적용 -->
+                        </div>
+                    </div>
+                    <!-- 유의사항 -->
+                    <div class="inform_btm_wrap pro_guide">
+                        <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+                        <div class="toggle_panel" role="region" id="notice_1_1">
+                            <ul class="depth bul">
+                                <li>신규가입 서류 점검은 평일 9시~17시에 진행됩니다.</li>
+                                <li>17시 이후나 토/일/공휴일 신청 시 다음 영업일에 서류 점검이 완료되므로 문자를 받으신 후 가입을 진행해주세요. </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //유의사항 -->
+                </div>
+                <!-- //법인사업자 -->
+            </div>
+        </div>
+
+        <!-- 220921 : 개인사업자 CMD  버튼 -->
+        <!-- case. 스타뱅킹 개인고객 가입 시 출력-->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">신규고객</button></span>
+            </div>
+        </div>
+        <!-- //case. 스타뱅킹 개인고객 가입 시 출력 -->
+        <!-- case. 일반 기업뱅킹 개인고객 가입 시 (basic) -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">기존 고객 로그인</button></span>
+                <span><button type="button" class="btn primary lg">신규고객</button></span>
+            </div>
+        </div>
+        <!-- //case. 일반 기업뱅킹 개인고객 가입 시 (basic) -->
+        <!-- //220921 : 개인사업자 CMD  버튼 -->
+
+        <!-- 220921 : 법인사업자 CMD  버튼 -->
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">기존 고객 로그인</button></span>
+                <span><button type="button" class="btn primary lg">신규고객</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+        <!-- //220921 : 법인사업자 CMD  버튼 -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

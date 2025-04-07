@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>No.1 기업금융플랫폼</title>
+    <link rel="stylesheet" href="/msbiz/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/msbiz/guide/assets/css/docs.css">
+    <link rel="stylesheet" href="/msbiz/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/msbiz/app/css/common.css">
+    
+    <style>
+        #wrap {
+            height: auto;
+        }
+        [data-class="demo"] .popup {
+            display: block;
+            position: relative
+        }
+        [data-class="demo"] .pop_bg_close {
+            position: absolute
+        }
+        [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap {
+            position: absolute
+        }
+        @media (min-width: 1024px) {
+            [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap{left: 0; margin-left: 0}
+        }
+        .note_txt {margin-left:.5rem; font-size:1.5rem; color:#777;}
+        .p-tit {font-size: 18px; font-weight: bold; margin-bottom: 5px;}
+        .p-tit2 {color:#1733bf; font-weight: bold;}
+        .p-list li{position: relative; font-size:1.5rem; color:#666; line-height: 1.8; padding-left:10px;}
+        .p-list li::before{content: '-'; position: absolute; left: 0; top:0;}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <div data-class="component-name"><span>현황판</span></div>
+        <div data-class="section">
+            <div data-class="h1">각 서비스별 json파일</div>
+            <div data-class="box">
+                <div class="directory">
+                    <ul>
+                        <li>
+                            msbiz
+                            <ul>
+                                <li>
+                                    guide
+                                    <ul>
+                                        <li>
+                                            json
+                                            <ul>
+                                                <li>common.json <span>- 공통, MY메뉴, 통합검색</span></li>
+                                                <li>main.json <span>- 메인</span></li>
+                                                <li>log.json <span>- 로그인, 로그아웃</span></li>
+                                                <li>mypage.json <span>- My 페이지</span></li>
+                                                <li>inquiry.json <span>- 조회</span></li>
+                                                <li>transfer.json <span>- 이체</span></li>
+                                                <li>utility.json <span>- 공과금</span></li>
+                                                <li>funds_manage.json <span>- 자금관리</span></li>
+                                                <li>forex.json <span>- 외환</span></li>
+                                                <li>products.json <span>- 상품가입</span></li>
+                                                <li>pdt_manage.json <span>- 상품관리</span></li>
+                                                <li>banking_manage.json <span>- 뱅킹관리</span></li>
+                                                <li>certification.json <span>- 인증센터</span></li>
+                                                <li>customer.json <span>- 고객센터</span></li>
+                                                <li>setting.json <span>- 환경설정</span></li>
+                                                <li>approval.json <span></span>- 승인결제</span></li>
+                                                <li>etc.json <span></span>- 비즈니스인사이트, 혜택, KB금융그룹 메인, KB국민카드, KB증권, KB손해보험, KB저축은행, KB캐피탈</span></li>
+                                                <li>global.json <span></span>- 다국어 서비스 전부</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- section : 팝업 설명 -->
+        <div data-class="section">
+            <div data-class="h1">json 사용법</div>
+            <!-- 레이어 호출 설명 영역 -->
+            <div data-class="box">
+                아래와 같이 json 데이터 기입(마지막 데이터에는 반그시 ',' 삭제해 주세요!)
+            </div>
+
+            <script type="text/html" data-type="script">
+{
+    "state": "hold", /*보류인 경우 삽입*/
+    "state": "del", /*삭제인 경우 삽입*/
+    "id": "BFE000180", /*화면 아이디*/
+    "type": null, /*화면 타입(풀, 바텀, 팝업)*/
+    "depth1": "로그인", 
+    "depth2": "공동인증서",
+    "depth3": "",
+    "depth4": "",
+    "name": "[]공동인증서 로그인(인증서 없는 경우)",
+    "worker": "홍길동", /*작업자명*/
+    "workdate": "2022-06-01", /*작업시작일*/
+    "change": "2022-06-05", /*수정일*/
+    "complete": "완료", /*기획확인후 완료 삽입*/
+    "etc": ["비고사항1","비고사항2"] /*비고사항 있을경우 삽입*/
+},
+{
+    "id": "BFE000200",
+    "type": null,
+    "depth1": "로그인",
+    "depth2": "공동인증서",
+    "depth3": "",
+    "depth4": "",
+    "name": "[]공동인증서 로그인(Ohlee 인증서 등록 고객(iOS 사용자만))",
+    "worker": null,
+    "workdate": null,
+    "change": null,
+    "complete": null,
+    "etc": ["디자인확인:가이드확인","기획확인:문구확인"] /*비고란에 디자인 및 기획에서 꼭 확인해야 하는 사항이 있을 경우 ["디자인확인:가이드확인","기획확인:문구확인"] 양식으로 기입 */
+}
+            </script>
+        </div>
+    </div>
+    
+    <script src="/msbiz/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/msbiz/guide/assets/js/components.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    
+    <!-- Loading Custom Script -->
+    <script src="/msbiz/app/js/common_ui.js"></script>
+
+    <!-- common ui init -->
+    <script>
+        $(function(){
+            $('[data-class="fold"]').eq(0).trigger('click');
+
+        });
+    </script>
+</body>
+</html>

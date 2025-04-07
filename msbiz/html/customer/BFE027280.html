@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[KB뉴스] 스타테이블 주간정보</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="고객센터" href="/msbiz/app/css/customer.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">KB뉴스</h1>
+            <div class="tab_wrap">
+                <div class="tab_list">
+                    <div class="scroll_wrap">
+                        <a href="#">스타테이블 일간정보</a>
+                        <a href="#" class="active">스타테이블 주간정보</a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <div class="section">
+                        <h2 class="h1 pdt_0 gap_xxs">스타테이블 주간정보</h2><!-- 220808 class 추가-->
+
+                        <!-- 게시물 있을때 -->
+                        <div class="board_list_wrap">
+                            <div class="list_top_wrap">
+                                <div class="col col_l"><span class="total_num">전체 <em class="number">105</em><em class="num_unit">건</em></span></div>
+                            </div>
+                            <ul class="board_list">
+                                <li>
+                                    <a href="#none">
+                                        <p class="tit">일일 금융시장 동향(<span class="number">2022.05.02</span>)</p>
+                                        <p class="info"><span class="number">2022.05.02</span><span><em>조회수</em><em class="number">152</em></span></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <p class="tit">일일 금융시장 동향(<span class="number">2022.05.02</span>)</p>
+                                        <p class="info"><span class="number">2022.05.02</span><span><em>조회수</em><em class="number">152</em></span></p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="btn_list_btm more">
+                                <button type="button" class="btn">더보기(<span class="number">1/10</span>)</button>
+                            </div>
+                        </div>
+
+                        <!-- 게시물 없을때 -->
+                        <div class="board_list_wrap">
+                            <div class="list_top_wrap">
+                                <div class="col col_l"><span class="total_num">전체 <em class="number">0</em><em class="num_unit">건</em></span></div>
+                            </div>
+                            <div class="result nodata">
+                                <p class="tit">KB뉴스 정보가 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+        $(function () {
+            UICommon.tabMenu.init();
+        });
+    </script>
+</body>
+
+</html>

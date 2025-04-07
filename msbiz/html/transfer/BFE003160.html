@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[계좌이체]다른금융계좌이체 입력거래</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">다른금융이체 입력거래</h1>
+            <div class="tr_sel_acc_area">
+                <div class="tr_sel_acc_panel">
+                    <button type="button" class="acc" title="출금계좌 선택">
+                        <strong class="bk_name ico"><!-- 2022-07-15 수정 -->
+                            <span class="bank"><span class="icon_bank_004 xs"></span>KB국민</span>
+                            <strong class="bk_num number">574498-90-009768</strong>
+                        </strong>
+                        <span class="nick">계좌별명계좌별명계좌별명계좌별명계좌별명</span><!-- 2022-07-15 수정 -->
+                        <span class="bk_pay">출금가능금액 <em class="number">100,000</em><em class="num_unit">원</em></span><!-- 221208 수정 : 텍스트 변경 -->
+                    </button>
+                </div>
+            </div>
+            <div class="section">
+                <div class="hgroup">
+                    <div class="p_sub fc_gray">한도안내 <!-- 220729 : class 추가 -->
+                        <div class="tooltip_limited">
+                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                <div class="tooltip_cont"> 
+                                    오픈뱅킹의 출금한도는 전 금융기관 합산 1일 일천만원으로, KB국민은행의 전자금융 이체한도와는 별도입니다.
+                                </div>
+                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p_sub fc_gray4">수수료 면제</div><!-- 220729 : class 추가 -->
+                </div>
+                
+                <!-- 220729 : 리웍-->
+                <!-- MASTER 입금계좌일 경우 -->
+                <div class="form_group">
+                    <div class="form_tit">받는 분</div>
+                    <div class="form_row">
+                        <div class="btn_list_btm gap_xs">
+                            <span><button type="button" class="btn outline sm">입금지정계좌</button></span>
+                            <span><button type="button" class="btn outline sm">내계좌</button></span>
+                        </div>
+                    </div>
+                    <div class="form_row gap_sm">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="입금은행 선택">KB국민</span></button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="{계좌번호 값}, 계좌번호 입력" >
+                            <input type="tel" aria-hidden="true" placeholder="계좌번호" title="계좌번호" readonly class="bg_white" >
+                        </div>
+                    </div>
+                    <p class="tip_info">MASTER 입금계좌 서비스 가입고객은 받는분을 직접 입력할 수 없으며, 입금지정계좌 버튼 또는 내계좌 버튼을 선택해 입력해 주세요.</p>
+                    <div class="form_btm_full_wrap">
+                        <span><button type="button" class="btn outline md">이체추가</button></span>
+                    </div>
+                </div>
+                <!-- //MASTER 입금계좌일 경우 -->
+
+                <!-- 다른근융이체입력거래일 경우 -->
+                <div class="form_group">
+                    <div class="form_tit">받는 분</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="입금은행 선택" disabled >KB국민</span></button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="{계좌번호 값}, 계좌번호 입력" >
+                            <input type="tel" aria-hidden="true" placeholder="계좌번호" title="계좌번호" readonly value="11111-11111-11111" >
+                        </div>
+                    </div>
+                    <div class="btn_wrap btm gap_xs">
+                        <a href="#none" class="btn_txt ico_arr" title="최근∙자주∙내계좌">최근∙자주∙내계좌</a>
+                    </div>
+                </div>
+                <!-- //다른근융이체입력거래일 경우 -->
+
+                <!-- //220729 : 리웍 -->
+
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

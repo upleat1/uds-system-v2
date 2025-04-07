@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[ID조회]ID조회_사업자정보입력(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="인증센터" href="/msbiz/app/css/certification.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <!-- 220729 리웍 : strong 태그 추가 -->
+                    <li>고객구분을 선택하신 후, <strong>개인사업자는 생년월일을, 법인고객은 사업자등록번호를 입력하여 조회하시기 바랍니다.</strong></li>
+                    <!-- //220729 리웍 : strong 태그 추가 -->
+                    <li>고객명은 인터넷뱅킹 출금계좌(통장)의 고객명 그대로 입력하시기 바랍니다. <br> EX)김국민(국민상회), 국민은행㈜ 등</li>
+                </ul>
+            </div>
+            <div class="section">
+                <!-- 220729 리웍 : form_group, form_tit, form_row 태그 추가 -->
+                <div class="form_group">
+                    <div class="form_tit">조회구분</div>
+                    <div class="form_row">
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="radioBox1" name="radio_box1" checked="">
+                                <label for="radioBox1" class="label"><em>법인사업자</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="radioBox2" name="radio_box1">
+                                <label for="radioBox2" class="label"><em>개인사업자</em></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //220729 리웍 : form_group, form_tit 태그 추가 -->
+                <div class="form_group">
+                    <div class="form_tit">고객명</div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" placeholder="출금계좌(통장)의 고객명" title="고객명" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">사업자등록번호(납세번호/고유번호)</div>
+                    <div class="form_row col business_num">
+                        <!-- 220729 리웍 : 수정 -->
+                        <span class="input" role="button" aria-label="사업자번호 첫번째 3자리">
+                            <input type="tel" aria-hidden="true" maxlength="3" placeholder="3자리" title="사업자번호 첫번째 3자리" readonly class="bg_white">
+                        </span>
+                        <span class="space">-</span>
+                        <span class="input" role="button" aria-label="사업자번호 중간 2자리">
+                            <input type="tel" aria-hidden="true" maxlength="2" placeholder="2자리" title="사업자번호 중간 2자리" readonly class="bg_white">
+                        </span>
+                        <span class="space">-</span>
+                        <!-- 220729 type="password" 수정 -->
+                        <span class="input" role="button" aria-label="사업자번호 마지막 5자리">
+                            <input type="password" aria-hidden="true" maxlength="5" placeholder="5자리" title="사업자번호 마지막 5자리" readonly class="bg_white">
+                        </span>
+                        <!-- //220729 리웍 : 수정 -->
+                    </div>
+                </div>
+                <div class="btn_cnt_wrap">
+                    <!-- 모든 값 채워지면 버튼 활성화 -->
+                    <span><button type="button" class="btn primary lg" disabled>확인</button></span>
+                </div>
+            </div>
+
+            <!-- 인터넷뱅킹 이용 고객으로 확인 된 경우 노출-->
+            <hr class="hr_divide">
+            <div class="section">
+                <h2 class="h2">결과안내</h2>
+                <ul class="depth">
+                    <li>인터넷뱅킹 이용 고객으로 확인되었습니다. 본인  확인을 위해 출금 계좌번호와 출금 계좌비밀번호를 입력하십시오.</li>
+                </ul>
+                <div class="form_group">
+                    <div class="form_tit">출금 계좌번호</div>
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="출금 계좌번호 입력" onclick="">
+                            <!-- 220729 readonly 추가 -->
+                            <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="출금 계좌번호" value="" readonly class="bg_white">
+                        </div>
+                    </div>    
+                </div>
+                <div class="btn_cnt_wrap">
+                    <span><button type="button" class="btn primary lg">다음</button></span>
+                </div>
+            </div>
+            <!-- //인터넷뱅킹 이용 고객으로 확인 된 경우 노출 -->
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+</html>

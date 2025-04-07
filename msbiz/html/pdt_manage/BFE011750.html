@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>자동기한연장</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" >
+		<div class="step_wrap js_step">    
+			<!-- 220729 리웍 -->
+			<div class="step" role="img" aria-label="총 5단계 중 현재 4단계">
+				<span class="current">4</span><span class="mark">/</span><span class="total">5</span>
+			</div>
+			<!-- // 220729 리웍 -->
+			<h1 class="h1">서류제출</h1>
+		</div>
+
+		<!-- 22/07/14 수정 -->
+		<!-- 220902 SR 수정 -->
+		<div class="inform_top_wrap">
+			<ul class="depth bul">
+				<li>자동 서류제출은 별도 인증 절차 없이 공공 마이데이터 서비스를 통해 서류제출을 진행합니다. 자동 서류제출이 완료되면 별도의 신청완료 절차 없이 기한연장 상담절차가 종료됩니다.</li>
+				<li><strong>자동 서류제출이 불가능한 경우 생략 가능</strong>하지만 정확한 심사 진행을 위해 영업점 직원이 별도 서류 제출을 요청할 수 있습니다.</li>
+			</ul>
+		</div>
+		<!-- //220902 SR 수정 -->
+		<!-- // 22/07/14 수정 -->
+
+		<!-- <div class="section">
+			<h2 class="h2">서류 제출<span class="normal">(파일 업로드)</span>[선택] </h2><!-- 22/07/14 수정 -->
+			<!-- 22/07/14 수정 
+			<ul class="addfile_list">
+				<li>
+					<div class="tit">
+						<span class="badge refusal">미제출</span>
+						<p class="p">사업자등록증명원</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button" class="btn point xs round">파일첨부</button><!-- 220729 리웍 
+					</div>
+				</li>
+				<li>
+					<div class="tit">
+						<span class="badge line_blue">제출완료</span>
+						<p class="p">부가가치세과세표준증명</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button" class="btn point xs round">파일첨부</button><!-- 220729 리웍 
+					</div>
+				</li>
+				<li>
+					<div class="tit">
+						<span class="badge refusal">미제출</span>
+						<p class="p">개인(사업자) 소득금액증명</p>
+					</div>
+					<div class="btn_wrap">
+						<button type="button" class="btn point xs round">파일첨부</button><!-- 220729 리웍 
+					</div>
+				</li>
+			</ul>
+			<!-- // 22/07/14 수정 
+		</div> 220902 SR 삭제 -->
+
+		<div class="section">
+			<!-- <h2 class="h2 line">[필수] 자동 서류 제출</h2><!-- 22/07/14 수정 
+			<p class="depth">자동 서류제출이 불가능한 경우 생략 가능합니다. 다만, 정확한 심사 진행을 위해 영업점 직원이 별도 서류 제출을 요청할 수 있습니다.</p> 220902 SR 삭제 -->
+			<h3 class="h3 gap_sm">제출대상서류</h3>
+			<!-- 22/07/14 수정 -->
+			<ul class="depth bul">
+				<li>사업자등록증명원</li>
+				<li>소득금액증명원</li>
+				<li>부가가치세과세표준증명원</li>
+			</ul>
+			<!-- // 22/07/14 수정 -->
+			<!-- <div class="btn_list_btm">
+				<span><button type="button" class="btn outline md ">자동서류제출</button></span>
+			</div> 220902 SR 삭제 -->
+		</div>
+
+		<!-- <div class="section">
+			<p class="p bold">기한연장 조건에 대하여 이해하였으며 기한연장을 신청하시겠습니까?</p><!-- 220729 class 추가
+		</div> 220902 SR 삭제 -->
+		
+		<!-- 220902 SR 수정 -->
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg"  onclick="UICommon.Layer.open('#BFE011750_01')">서류제출생략</button></span>
+				<span><button type="button" class="btn primary lg"  onclick="UICommon.Layer.open('#BFE011750_02')">서류제출</button></span>
+			</div>
+		</div>
+		<!-- //220902 SR 수정 -->
+	</div><!-- //content -->
+
+	<!-- 220902 SR 추가 -->
+	<div id="BFE011750_01" class="popup modal" role="dialog" aria-hidden="true">
+		<article class="pop_wrap">
+			<div class="pop_head">
+				<div>
+					<h1>서류제출 안내</h1>
+				</div>
+			</div>
+			<div class="pop_body">
+				<div class="pop_section">
+					<ul class="depth bul gap_0">
+						<li>공공 마이데이터 서비스 연동 중 오류가 발생하였습니다.</li>
+						<li>오류내용 : <span>$에러 예시 문구입니다.$</span></li>
+						<li>공공 마이데이터 연동으로 계속 진행하시려면 [재시도]를 선택해주세요. [서류제출생략]을 선택하시면 자동서류제출 없이 기한연장신청이 완료되지만 정확한 심사진행을 위해 영업점 직원이 별도 서류제출을 요청할 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop_foot">
+				<div class="btn_area">
+					<span><button type="button" class="btn secondary lg" data-action="close">서류제출생략</button></span>
+					<span><button type="button" class="btn primary lg ui_pop_close">재시도</button></span>
+				</div>
+			</div>
+			<button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+		</article>
+	</div>
+
+	<div id="BFE011750_02" class="popup modal" role="dialog" aria-hidden="true">
+		<article class="pop_wrap">
+			<div class="pop_head">
+				<div>
+					<h1>서류제출생략 안내</h1>
+				</div>
+			</div>
+			<div class="pop_body">
+				<div class="pop_section">
+					<ul class="depth bul gap_0">
+						<li>서류제출생략을 선택하셨습니다.</li>
+						<li>서류제출을 생략하셔도 기한연장신청은 완료되며 정확한 심사진행을 위해 영업점 직원이 별도 서류제출을 요청할 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop_foot">
+				<div class="btn_area">
+					<span><button type="button" class="btn secondary lg" data-action="close">취소</button></span>
+					<span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+				</div>
+			</div>
+			<button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+		</article>
+	</div>
+	<!-- //220902 SR 추가 -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>예비거래 - 급여이체</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="hidden">급여이체 거래 전 확인 페이지</h1>
+        <div class="result check many">
+            <div class="result_ico"></div>
+            <!-- 220818 em 추가 -->
+            <p class="txt_trans"><strong><em>총 </em><span><em class="number">2</em><em>명 님께 </em><span>즉시이체</span><em>로</em><br><span class="number">100,000,000</span> <span class="num_unit">원</span></strong><em>의<br> 급여이체를 하시겠습니까?</em></p>
+            <!-- //220818 em 추가 -->
+        </div>
+		<div class="section">
+            <h2 class="hidden">급여이체 관련 출금계좌번호, 총 수수료, 예약이체일시, 받는 분 통자 표시, 내 통장 표시 정보 안내</h2>
+            
+            <ul class="list_data lbt">
+                <li>
+                    <div class="key">출금계좌번호</div>
+                    <div class="value"><span class="number">841501-04-203236</span></div>
+                </li>
+                <li>
+                    <div class="key">총 수수료</div>
+                    <div class="value"><span class="number">2,000</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">예약이체일시</div>
+                    <!-- 220818 em 추가 -->
+                    <div class="value"><span class="number">2022.05.30</span><em> / </em><span class="number">19</span><em>시</em></div>
+                    <!-- //220818 em 추가 -->
+                </li>
+                <li>
+                    <div class="key">받는 분 통장 표시</div>
+                    <div class="value">정기급여</div>
+                </li>
+                <li>
+                    <div class="key">내 통장 표시</div>
+                    <!-- 220818 em 추가 -->
+                    <div class="value"><em>급여 </em><span class="number">5</span><em>월</em></div>
+                    <!-- //220818 em 추가 -->
+                </li>
+            </ul>
+		</div>
+        <div class="section">
+            <h2 class="hidden">급여이체 대상 건수 상세 노출 영역</h2>
+            <div class="acc_list_wrap tr_acc">
+                <div class="acc_pannel">
+                    <div class="acc_wrap">
+                        <div class="badge_wrap"><span class="badge line_blue">정상</span></div>
+                        <div class="acc_name">$예금주명$</div>
+                        <div class="acc_num"><span class="acc_bank">KB국민</span><span class="number">400407-01-023569</span></div>
+                    </div>
+                    <ul class="list_data noline right">
+                        <li>
+                            <div class="key">이체금액</div>
+                            <div class="value"><span class="number fc_nega">1,000,000</span><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">수수료</div>
+                            <div class="value"><span class="number">1,000</span><span class="num_unit">원</span></div>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn_menu"><span class="ico_20_x"></span><span class="hidden">삭제</span></button>
+                </div>
+                <div class="acc_pannel">
+                    <div class="acc_wrap">
+                        <div class="badge_wrap">
+                            <!-- 220818 em 추가 -->
+                            <button type="button" class="btn outline nega xxs"><em>오류</em><i class="arrow"></i></button>
+                            <button type="button" class="btn outline xxs"><em>확인필요</em><i class="arrow"></i></button>
+                            <!-- //220818 em 추가 -->
+                        </div>
+                        <div class="acc_name">$예금주명$</div>
+                        <div class="acc_num"><span class="acc_bank">우리</span><span class="number">1212-227654</span></div>
+                    </div>
+                    <ul class="list_data noline right">
+                        <!-- 221123 케이스 추가 -->
+                        <li>
+                            <div class="key">조회된 예금주명</div>
+                            <div class="value">홍길동</div>
+                        </li>
+                        <!-- //221123 케이스 추가 -->
+                        <li>
+                            <div class="key">이체금액</div>
+                            <div class="value"><span class="number fc_nega">1,000,000</span><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">수수료</div>
+                            <div class="value"><span class="number">1,000</span><span class="num_unit">원</span></div>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn_menu"><span class="ico_20_x"></span><span class="hidden">삭제</span></button>
+                </div>
+            </div>
+            <div class="btn_list_btm">
+                <span><button type="button" class="btn outline md">수정</button></span>
+            </div>
+        </div>
+        <!-- [결재상신 공통태그] sub 사용자 노출 -->
+        <div class="section">
+            <h2 class="h2">결재요청</h2>
+            <div class="table">
+                <table>
+                    <caption>결재요청 안내 양식(표) 입니다.</caption>
+                    <colgroup>
+                        <col style="width:40%">
+                        <col style="width:60%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">단계</th>
+                            <th scope="col">결재자</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1단계</td>
+                            <td>김국민</td>
+                        </tr>
+                        <tr>
+                            <td>2단계</td>
+                            <td>이국민</td>
+                        </tr>
+                    </tbody>
+                </table>   
+            </div>
+            <div class="form_group">
+                <div class="form_tit">결재메모</div>
+                <div class="form_row">
+                    <div class="textarea">
+                        <!-- 220907 타이틀 변경 -->
+                        <textarea  id="ariaId3" title="결재메모 입력"></textarea>
+                        <!-- //220907 타이틀 변경 -->        
+                        <p class="num_info"><span><em class="curr">0</em> / 5,000</span></p>            
+                    </div> 
+					<p class="tip_info" aria-labelledby="ariaId3" >영어만 입력가능합니다.</p>
+                </div>
+               <!--  <p class="tip_info">내용을 입력해주세요.</p>220831 다국어 삭제 placeholder="내용을 입력해주세요." -->
+            </div>
+        </div>
+        <!-- //[결재상신 공통태그] sub 사용자 노출 -->
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span>
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	!window.SPA ? window.UICommon.init() : console.log('UICommon 실패!');
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

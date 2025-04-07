@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[공통]날짜선택_캘린더</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+        <script>
+            
+        </script>
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+
+<!--// 업무 HTML 선언 END -->
+<!-- Component lable 팝업 -->
+<div id="chkDatePop" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop_wrap">
+        <div class="pop_head">
+            <div>
+                <h1>Component lable</h1>
+            </div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_section">
+                <div class="ly_calendar">
+                    <div class="cal_month">                    
+                        <button type="button" class="btn btn_ico first" disabled=""><span class="hidden">전년도</span></button>
+                        <button type="button" class="btn btn_ico prev" disabled=""><span class="hidden">이전달</span></button>   
+                        <span class="year_txt"><span class="number">2022.07</span></span>    
+                        <button type="button" class="btn btn_ico next"><span class="hidden">다음달</span></button>
+                        <button type="button" class="btn btn_ico end"><span class="hidden">다음년도</span></button>
+                        <button type="button" class="btn today">오늘<span class="hidden">선택</span></button>                    
+                    </div>
+                    <table class="cal_tbl">
+                        <caption>달력-일,월,화,수,목,금,토 항목으로 구성</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="sunday">일</th>
+                                <th scope="col">월</th>
+                                <th scope="col">화</th>
+                                <th scope="col">수</th>
+                                <th scope="col">목</th>
+                                <th scope="col">금</th>
+                                <th scope="col" class="saturday">토</th>
+                            </tr>
+                        </thead>
+                        <tbody>                 
+                            <tr>
+                                <td class="sunday"></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button">1</button></td>
+                                <td><button type="button">2</button></td>
+                                <td><button type="button">3</button></td>
+                                <td class="saturday"><button type="button">4</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sunday"><button type="button">5</button></td>
+                                <td><button type="button" class="on" title="선택 됨">6</button></td><!-- 선택 됨 -->
+                                <td><button type="button" class="today" title="오늘 날짜">7</button></td> <!-- 오늘 날짜 표시 -->
+                                <td><button type="button">8</button></td>
+                                <td><button type="button" class="today on" title="오늘 날짜, 선택 됨">9</button></td><!-- 오늘 날짜 + 선택 -->
+                                <td><button type="button">10</button></td>
+                                <td class="saturday"><button type="button">11</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sunday"><button type="button">12</button></td>
+                                <td><button type="button">13</button></td>
+                                <td><button type="button">14</button></td>
+                                <td><button type="button" class="selectable">15</button></td>
+                                <td><button type="button">16</button></td>
+                                <td><button type="button">17</button></td>
+                                <td class="saturday"><button type="button">18</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sunday"><button type="button">19</button></td>
+                                <td><button type="button">20</button></td>
+                                <td><button type="button">21</button></td>
+                                <td><button type="button">22</button></td>
+                                <td><button type="button">23</button></td>
+                                <td><button type="button">24</button></td>
+                                <td class="saturday"><button type="button">25</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sunday"><button type="button">26</button></td>
+                                <td><button type="button">27</button></td>
+                                <td><button type="button">28</button></td>
+                                <td><button type="button">29</button></td>
+                                <td><button type="button">30</button></td>
+                                <td><button type="button">31</button></td>
+                                <td class="saturday"></td>
+                            </tr>                 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </article>
+</div>
+<!-- //Component lable 팝업 -->
+
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function(){
+        UICommon.Layer.open('#chkDatePop');
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

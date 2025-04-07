@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>타이틀</title>
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/main.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <style>
+        .drag_wrap{position:relative;width:100%;height:6.0rem;background-color:#fff}
+        .drag_pop_wrap{position:fixed;top:0;right:0;width:6.0rem;height:6.0rem;background-color:#f1f1f1;text-align:center;border-radius:0 0 3.0rem 3.0rem;z-index:10}
+        .drag_pop_wrap::before, .drag_pop_wrap::after{content:'';position:absolute;top:0;left:-3.0rem;width:3.0rem;height:3.0rem;background-color:#f1f1f1}
+        .drag_pop_wrap::after{background-color:#fff;border-radius:0 1.5rem 0 0;transition:.4s ease-out}
+        .drag_pop_wrap.on, .drag_pop_wrap.full{width:100%;border-radius:0}
+        .drag_pop_wrap.on::after, .drag_pop_wrap.full::after{border-radius:0}
+        .drag_pop_wrap.full{background-color:#333}
+        .drag_trigger{position:absolute;top:50%;left:50%;width:3.6rem;height:3.6rem;background-color:#555;border:2px solid #000;border-radius:100%;transform:translateX(-50%) translateY(-50%) scale(1);transition:.4s ease-out}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="drag_wrap">
+            <div class="drag_pop_wrap">
+                <button type="button" class="drag_trigger"></button>
+            </div>
+        </div>
+        <div style="padding:2.0rem">
+            <img src="/msbiz/app/img/main/renew_guide1.png" alt="" aria-hidden="true">
+            <img src="/msbiz/app/img/main/renew_guide2.png" alt="" aria-hidden="true">
+        </div>
+    </div>
+    <!-- KB 금융비서 팝업 -->
+    <div id="kbDrag" class="popup full kb_sec" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="kb_sec_morphing">
+                <div class="kb_sec_head">
+                    <h2>KB 금융비서</h2>
+                </div>
+                <div class="kb_sec_content">
+                    <div class="kb_sec_total">
+                        총 <strong class="number">101</strong>건
+                    </div>
+                    <div class="kb_sec_list">
+                        <div class="kb_sec_item">
+                            <span class="tag">신용정보제공동의<span class="new"><span class="hidden">NEW</span></span></span>
+                            <p>대출심사를 위해 신용정보제공동의가 필요합니다.<br> 신용정보제공동의를 진행해주세요.</p>
+                            <span class="etc">염창지점 홍*동 <span class="number">2022.05.30</span></span>
+                        </div>
+                        <div class="kb_sec_item">
+                            <span class="tag">서류제출</span>
+                            <p>법인 등기부 등본 추가 서류가 필요합니다.</p>
+                            <span class="etc">염창지점 홍*동 <span class="number">2022.05.30</span></span>
+                        </div>
+                        <div class="kb_sec_item">
+                            <span class="tag">안내</span>
+                            <p>KB스타기업뱅킹 리뉴얼안내</p>
+                            <span class="etc"><span class="number">2022.05.30</span></span>
+                        </div>
+                        <div class="kb_sec_item">
+                            <span class="tag">안내</span>
+                            <p>모바일 OTP가 배정되었습니다.<br> 모바일 OTP사용을 위한 PIN번호를 입력해주세요.</p>
+                            <span class="etc"><span class="number">2022.05.30</span></span>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="pop_close" onclick="dragPopClose('#kbDrag')" aria-label="팝업창 닫기"></button>
+            </div>
+        </article>
+    </div>
+    <!-- //KB 금융비서 팝업 -->
+</body>
+<script>
+    const $dragWrap = $('.drag_wrap');
+    const $dragPopWrap = $('.drag_pop_wrap');
+    const $dragBurron = $dragPopWrap.find('.drag_trigger');
+    const $trigger = $(document);
+
+    let isMove = false;
+    const $animateSpeed = 300;
+    let $startH = 0;
+    let $startY = 0;
+    let $distanceY = 0;
+    let $directionX = false;
+    let $directionY = false;
+
+    $trigger.on('touchstart mousedown', function (e) {
+        isMove = true;
+        const $this = $(this);
+        const $clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+        $startY = $clientY;
+        $startH = $dragPopWrap.outerHeight();
+        $directionY = false;
+        if ($this.data('first-height') === undefined) $this.data('first-height', $startH);
+    });
+
+    $trigger.on('touchmove mousemove', function (e) {
+        if (!isMove || $dragPopWrap.hasClass('full')) return false;
+        
+        const $clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+        $distanceY = $clientY - $startY;
+        if ($distanceY !== 0) $directionY = $distanceY > 0 ? 'down' : 'up';
+        //if ($(window).scrollTop() === 0) {
+            const $minHeight = Math.max($startH, $startH + Math.round($distanceY/5));
+            
+            ($distanceY > 50) ? $dragPopWrap.addClass('on') : $dragPopWrap.removeClass('on');
+            let $minScale = Math.max(1, 1 + ($distanceY/800));
+            ($minScale >= 1.4) ? $minScale = 1.4 : $minScale;
+            $dragWrap.css('height', $minHeight);
+            $dragPopWrap.css({
+                'height': $minHeight,
+                'transition': 'width .4s ease-out, border-radius .4s ease-out, background-color .4s ease-out'
+            });
+            $dragBurron.css('transform', 'translateX(-50%) translateY(-50%) scale(' + $minScale + ')');
+            ($directionY === 'up') ? $trigger.css('overflow', 'hidden') : $trigger.css('overflow', 'auto');
+        //}
+    });
+
+    $trigger.on('touchend mouseup mouseleave', function (e) {
+        if (!isMove) return false;
+        const $clientY = e.type === 'touchend' ? e.changedTouches[0].clientY : e.clientY;
+        $distanceY = $clientY - $startY;
+        if ($distanceY !== 0) $directionY = $distanceY > 0 ? 'down' : 'up';
+        if ($directionY === 'down') {
+            if ($distanceY > 200) {
+                $dragPopWrap.addClass('full').css({
+                    'height': '100%',
+                    'transition': 'width .4s ease-out, height .4s ease-out, border-radius .4s ease-out, background-color .4s ease-out'
+                });
+                $dragBurron.css('transform', 'translateX(-50%) translateY(-50%) scale(0)');
+                UICommon.Layer.open('#kbDrag');
+            } else {
+                $dragWrap.css('height', $startH);
+                $dragPopWrap.css({
+                    'height': $startH,
+                    'transition': 'width .4s ease-out, height .4s ease-out, border-radius .4s ease-out, background-color .4s ease-out'
+                });
+                $dragPopWrap.removeClass('on').css('height', $startH);
+                $dragBurron.css('transform', 'translateX(-50%) translateY(-50%) scale(1)');
+            }
+        }
+        $('body').removeAttr('style');
+    });
+
+    var dragPopClose = function(tar){
+        UICommon.Layer.close(tar);
+        setTimeout(function(){
+            $dragWrap.css('height', $trigger.data('first-height'));
+            $dragPopWrap.removeClass('on full').css('height', $trigger.data('first-height'));
+            $dragBurron.css('transform', 'translateX(-50%) translateY(-50%) scale(1)');
+        }, 300);
+    };
+</script>
+</html>

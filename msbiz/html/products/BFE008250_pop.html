@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[대출신청]심사결과 및 금리산출</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+		<div class="section">
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE008250_01')">제출 사진 안내 : case1</button></span>
+            </div>
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE008250_02')">제출 사진 안내 : case2</button></span>
+            </div>
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE008250_03')">제출 사진 안내 : case3</button></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="BFE008250_01" class="popup modal" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>제출 사진 안내</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <p>사업장 외부(간판 포함) 사진 제출이 가능한 경우 다음의 사진을 준비하여 제출해주세요.</p>
+                    <ul class="depth num round">
+                        <li>
+                            사업장 외부 사진 (1장)
+                            <ul class="depth dash">
+                                <li>간판 전면부 포함한 외부 사진</li>
+                            </ul>
+                        </li>
+                        <li>
+                            사업장 내부 사진 (2장)
+                            <ul class="depth dash">
+                                <li>내부전경, 기계설비, 원자재, 제품 등</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+
+    <div id="BFE008250_02" class="popup modal" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>제출 사진 안내</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <p>업종이 건설장비 운영업·운수업·운송업·택배업인 경우 다음의 사진을 준비하여 제출해주세요.</p>
+                    <ul class="depth num round">
+                        <li>건설기계/자동차 등록원부 (1장)</li>
+                        <li>
+                            건설기계/자동차 사진 (2장)
+                            <ul class="depth dash">
+                                <li>전면부(기종 및 등록번호 식별 가능) 사진 1장</li>
+                                <li>측면부 전체 사진 1장</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+
+    <div id="BFE008250_03" class="popup modal" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>제출 사진 안내</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <p>사업장 외부(간판 포함) 사진 제출이 불가능한 경우 다음의 사진을 준비하여 제출해주세요.</p>
+                    <ul class="depth num round">
+                        <li>
+                            사업장 외부 사진 (1장)
+                            <ul class="depth dash">
+                                <li>
+                                    도로명주소판 촬영 사진
+                                    <div class="pro_img_add">도로명주소판 예시</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            사업장 내부 사진 2장
+                            <ul class="depth dash">
+                                <li>내부전경, 기계설비, 원자재, 제품 등</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr class="hr_divide">
+                    <p class="depth info">
+                        <span>사업장 내부 사진 제출이 어려운 사업자(온라인 사입자 등) 인 경우 다음의 사진을 대체 제출하실 수 있습니다.</span>
+                    </p>
+                    <ul class="depth num round sm">
+                        <li>통신판매업신고증</li>
+                        <li>온라인사이트(모바일 앱) 출력 화면</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

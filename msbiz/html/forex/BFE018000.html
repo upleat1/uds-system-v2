@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[신청내역처리현황조회]조회결과</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+	<!-- 220729 리웍 -->
+    <div id="content">
+        <h1 class="hidden">신청내역처리현황조회</h1>
+
+		<!-- 221020 안내사항 위치변경 -->
+		<div class="inform_top_wrap">
+			<ul class="depth bul">
+				<li>인터넷뱅킹(스타기업뱅킹)으로 신청하신 외환 업무의 거래지점 처리 현황이 조회됩니다.</li>
+				<li>신청 취소는 지점의 거래 처리 전 상태(신청 또는 지점접수)에서만 할 수 있습니다.</li>
+				<li>일반사용자(Sub)의 경우 관리자(Master)가 결재 완료한 내역만 조회할 수 있으며, 그 전에는 <a href="#none" class="btn_txt link">뱅킹관리 > 승인/결재 > 등록한 내역</a>에서 상세 내용을 확인하시기 바랍니다.</li>
+			</ul>
+		</div>
+		<!-- //221020 안내사항 위치변경 -->
+
+        <div class="section">
+			<div class="form_group">
+				<div class="form_tit">업무구분</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn active" title="업무구분 선택">수입(KB PAYMENT USANCE 포함)</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+					</div>
+				</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn active" title="상세분류 선택">전체</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+					</div>
+				</div>
+			</div>
+			<!-- 업무구분항목 이 전체일때 -->
+			<div class="form_group">
+				<div class="form_tit">조회기간</div>
+				<div class="form_row">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="period1" name="period" checked>
+							<label for="period1" class="label"><em>오늘</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period2" name="period">
+							<label for="period2" class="label"><em>전일</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="period3" name="period">
+							<label for="period3" class="label"><em>전전일</em></label>
+						</span>
+					</div>
+
+					<!-- 220927 하나일 경우 케이스
+					<div class="input date">
+						<input type="tel" maxlength="8" title="조회일자" value="2022.09.27">
+						<button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+					</div>   
+					-->
+
+					<div class="form_date_term"> <!-- 221006 하나일경우 _term 제거 -->
+						<div class="input date">
+							<input type="tel" title="시작일" maxlength="8" value ="2021.03.01"> <!-- 221014 타이틀 수정 -->
+							<button type="button" class="btn_cal" title="시작일 선택"></button>                    
+						</div>
+						<span class="space">~</span>
+						<div class="input date">
+							<input type="tel" title="종료일" maxlength="8" value ="2021.03.31"> <!-- 221014 타이틀 수정 -->
+							<button type="button" class="btn_cal" title="종료일 선택"></button>                              
+						</div>
+					</div> 
+				</div>
+			</div>
+			<!-- //업무구분항목 이 전체일때 -->
+
+			<!-- 업무구분항목 이 전체가 아닐때 -->
+			<div class="form_group">
+				<div class="form_tit">조회기간</div>
+				<div class="form_row">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="periods1" name="periods" checked>
+							<label for="periods1" class="label"><em>오늘</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="periods2" name="periods">
+							<label for="periods2" class="label"><em>3일</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="periods3" name="periods">
+							<label for="periods3" class="label"><em>1주일</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="periods4" name="periods">
+							<label for="periods4" class="label"><em>1개월</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="periods5" name="periods">
+							<label for="periods5" class="label"><em>3개월</em></label>
+						</span>
+					</div>
+					<div class="form_date_term">
+						<div class="input date">
+							<input type="tel" title="시작일" maxlength="8" value ="2021.03.01" readonly> <!-- 221014 타이틀 수정 -->
+							<button type="button" class="btn_cal" title="시작일 선택"></button>                    
+						</div>
+						<span class="space">~</span>
+						<div class="input date">
+							<input type="tel" title="종료일" maxlength="8" value ="2021.03.31" readonly>  <!-- 221014 타이틀 수정 -->
+							<button type="button" class="btn_cal" title="종료일 선택"></button>                              
+						</div>
+					</div>  
+				</div>
+			</div>
+			<!-- //업무구분항목 이 전체가 아닐때 -->
+
+			<div class="btn_cnt_wrap">
+				<span><button type="button" class="btn primary lg">조회</button></span>
+			</div>
+		</div>
+
+		<hr class="hr_divide">
+        <div class="section">
+			<h2 class="h2">신청내역처리현황 조회결과</h2> <!-- class="h2"로 수정 -->
+
+			<!-- 조회결과 없을 때 -->
+			<div class="result nodata sm"> <!-- class="sm" 추가  -->
+				<p class="tit">조회하신 내역이 없습니다.</p>
+			</div>
+			<!-- //조회결과 없을 때 -->
+
+			<!-- 220822 리스트 추가 -->
+			<div class="list_data_group">
+				<ul class="list_data">
+					<li>
+						<div class="key">신청일</div>
+						<div class="value"><span class="number">2022.05.31</span></div>
+					</li>
+					<li>
+						<div class="key">업무구분</div>
+						<div class="value">수출환어음매입(추심)신청</div>
+					</li>
+					<li>
+						<div class="key">신청번호</div>
+						<div class="value"><span class="number">DI40332009015334</span></div>
+					</li>
+					<li>
+						<div class="key">참조번호</div>
+						<div class="value"><span class="number">M10072010SS00192</span></div>
+					</li>
+					<li>
+						<div class="key">통화</div>
+						<div class="value"><strong>USD</strong></div>
+					</li>
+					<li>
+						<div class="key">금액</div>
+						<div class="value"><strong class="number">1,123,456,789,123,450.00</strong></div>
+					</li>
+					<li>
+						<div class="key">거래상대방</div>
+						<div class="value">BENEFICIARY</div>
+					</li>
+					<li>
+						<div class="key">지점명</div>
+						<div class="value">서염창지점</div>
+					</li>
+					<li>
+						<div class="key">상태구분</div>
+						<div class="value">신청</div>
+					</li>
+				</ul>
+				<div class="btn_wrap btm mg_sm">
+					<span><button type="button" class="btn outline sm">상세보기</button></span>
+					<span><button type="button" class="btn outline sm" disable="disable">신청취소</button></span>
+				</div>
+			</div>
+			<!-- //220822 리스트 추가 -->
+			<div class="list_data_group">
+				<ul class="list_data">
+					<li>
+						<div class="key">신청일</div>
+						<div class="value"><span class="number">2022.05.31</span></div>
+					</li>
+					<li>
+						<div class="key">업무구분</div>
+						<div class="value">수출환어음매입(추심)신청</div>
+					</li>
+					<li>
+						<div class="key">신청번호</div>
+						<div class="value"><span class="number">DI40332009015334</span></div>
+					</li>
+					<li>
+						<div class="key">참조번호</div>
+						<div class="value"><span class="number">M10072010SS00192</span></div>
+					</li>
+					<li>
+						<div class="key">통화</div>
+						<div class="value"><strong>USD</strong></div>
+					</li>
+					<li>
+						<div class="key">금액</div>
+						<div class="value"><strong class="number">1,123,456,789,123,450.00</strong></div>
+					</li>
+					<li>
+						<div class="key">거래상대방</div>
+						<div class="value">BENEFICIARY</div>
+					</li>
+					<li>
+						<div class="key">지점명</div>
+						<div class="value">서염창지점</div>
+					</li>
+					<li>
+						<div class="key">상태구분</div>
+						<div class="value"><a href="#none" class="btn_txt link">지점반송</a></div>
+					</li>
+				</ul>
+				<div class="btn_wrap btm mg_sm">
+					<span><button type="button" class="btn outline sm">상세보기</button></span>
+					<span><button type="button" class="btn outline sm" disable="disable">신청취소</button></span>
+				</div>
+			</div>
+			<!-- 220822 리스트 추가 -->
+			<div class="list_data_group">
+				<ul class="list_data">
+					<li>
+						<div class="key">신청일</div>
+						<div class="value"><span class="number">2022.05.31</span></div>
+					</li>
+					<li>
+						<div class="key">업무구분</div>
+						<div class="value">수출환어음매입(추심)신청</div>
+					</li>
+					<li>
+						<div class="key">신청번호</div>
+						<div class="value"><span class="number">DI40332009015334</span></div>
+					</li>
+					<li>
+						<div class="key">참조번호</div>
+						<div class="value"><span class="number">M10072010SS00192</span></div>
+					</li>
+					<li>
+						<div class="key">통화</div>
+						<div class="value"><strong>USD</strong></div>
+					</li>
+					<li>
+						<div class="key">금액</div>
+						<div class="value"><strong class="number">1,123,456,789,123,450.00</strong></div>
+					</li>
+					<li>
+						<div class="key">거래상대방</div>
+						<div class="value">BENEFICIARY</div>
+					</li>
+					<li>
+						<div class="key">지점명</div>
+						<div class="value">서염창지점</div>
+					</li>
+					<li>
+						<div class="key">상태구분</div>
+						<div class="value">처리완료</div>
+					</li>
+				</ul>
+				<div class="btn_wrap btm mg_sm">
+					<span><button type="button" class="btn outline sm">상세보기</button></span>
+					<span><button type="button" class="btn outline sm" disable="disable">신청취소</button></span>
+				</div>
+			</div>
+			<!-- //220822 리스트 추가 -->
+
+			<!-- 더보기 -->
+			<div class="btn_list_btm more">
+				<span><button type="button" class="btn">더보기<span class="number">(1/30)</span></button></span>
+			</div>
+			<!-- //더보기 -->
+
+		</div>		
+		
+		<!-- 안내사항 221020 삭제
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-controls="notice_1_1">안내사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li>인터넷뱅킹(스타기업뱅킹)으로 신청하신 외환 업무의 거래지점 처리 현황이 조회됩니다.</li>
+					<li>신청 취소는 지점의 거래 처리 전 상태(신청 또는 지점접수)에서만 할 수 있습니다.</li>
+					<li>일반사용자(Sub)의 경우 관리자(Master)가 결재 완료한 내역만 조회할 수 있으며, 그 전에는 <a href="#none" class="btn_txt link">뱅킹관리 > 승인/결재 > 등록한 내역</a>에서 상세 내용을 확인하시기 바랍니다.</li>  220928 문구 수정
+				</ul>
+			</div>
+		</div>
+		 //안내사항 -->
+
+    </div><!-- //content -->
+	<!-- //220729 리웍 -->
+</div>
+<!-- //wrap -->
+
+
+</body>
+</html>

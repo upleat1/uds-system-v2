@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[자금모으기 예약 변경/해지]자금모으기 예약 변경_금액 지정하기</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	
+	<div id="content">
+        <h1 class="h1">자금모으기 예약 변경</h1>
+                
+        <div class="section">
+            <div class="form_group">
+                <div class="form_tit">모으기 방식</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" title="모으기 방식" value="금액 지정하기" readonly >
+                    </div>
+                </div>   
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">예약 주기</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="예약 주기 선택">선택</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">예약 시간</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="예약 시간 선택">설정안함</button>
+                    </div>
+                </div>
+                <p class="tip_info">거래량이 증가하는 경우 예약시간보다 늦어질 수 있습니다.</p>
+            </div>
+
+            <!-- 220729 : 삭제 -->
+            <!-- <div class="form_group">
+                <div class="rdoChk_group">
+                    <span class="selection">
+                        <input type="checkbox" id="checkSize1" checked>
+                        <label for="checkSize1" class="label"><em>종료일 설정안함</em></label>
+                    </span>
+                </div>
+            </div> -->
+            <!-- //220729 : 삭제 -->
+
+            <div class="form_group gap_sm_3"><!-- 220729 : gap_sm_3 클래스로 변경 -->
+                <!-- 220729 : 변경 -->
+                <div class="hgroup pdl_0 pdr_0">
+                    <div>
+                        <div class="form_tit pdt_0">예약 기간</div>
+                    </div>
+                    <div>
+                        <span class="switch right">    
+                            <input type="checkbox" id="switch2">
+                            <label for="switch2"><span>종료일 설정 안함</span></label>
+                        </span>
+                    </div>
+                </div>
+                <!-- //220729 : 변경 -->
+
+                <div class="form_row">
+                    <div class="rdoChk_box gap_xs"><!-- 220729 : gap_xs 클래스 추가 -->
+                        <span class="selection">
+                            <input type="radio" id="period1" name="period" checked>
+                            <label for="period1" class="label"><em>6개월</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="period2" name="period">
+                            <label for="period2" class="label"><em>1년</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="period3" name="period">
+                            <label for="period3" class="label"><em>2년</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="period4" name="period">
+                            <label for="period4" class="label"><em>3년</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="period5" name="period">
+                            <label for="period5" class="label"><em>5년</em></label>
+                        </span>
+                    </div>                                
+                </div>
+                <div class="form_row">
+                    <div class="ele_ul_hor">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="시작일 선택">2022.05</button>
+                        </div>
+                        <div class="space number">~</div>
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="종료일 선택">해지 시까지</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="tip_info">설정하기 않는 경우 예약기간은 시스템 운영시간에 따르며 예약기간은 서비스 해지 시까지입니다.</p>
+            </div>
+        </div>
+
+        <hr class="hr_divide">
+
+        <div class="section_f">
+            <div class="hgroup">
+                <div>
+                    <h2 class="h2">출금계좌</h2>
+                </div>
+                <div>
+                    <span class="switch right">    
+                        <input type="checkbox" id="switch1">
+                        <label for="switch1"><span>전액모으기</span></label>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 출금계좌영역 -->
+            <div class="acc_list_wrap gap_xs_2">
+                <div class="acc_pannel">
+                    <div class="acc_wrap b2">
+                        <div class="acc_bank md gap_0">
+                            <span class="icon_bank_004"></span>
+                            <span class="bk_name">KB국민</span>
+                        </div>
+                        <div class="bk_num gap_xxxxs"><strong class="number fs18">972473-11-132301</strong></div><!-- 220729 class="gap_xxxxs" 수정 / fs18 클래스 추가 -->
+                        <div class="nick gap_xxxxs">계좌별명 또는 상품명</div>
+                        <div class="acc_info_wrap gap_xxxxs">
+                            <div class="acc_info">
+                                <span class="tit">출금가능금액 :</span>
+                                <span class="number">80,153,870</span><span class="num_unit">원</span>
+                            </div>
+                        </div>
+                        <div class="form_group gap_sm_3">
+                            <div class="form_tit">출금금액</div>
+                            <div class="form_row"> 
+                                <div class="input unit" role="button" aria-label="{출금금액 입력값}, 출금금액 입력">
+                                    <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="출금금액" data-unit="원" value="5,000,000" readonly class="bg_white" >
+                                </div>
+                            </div>
+                            <p class="form_hangul"><span class="number">1,000</span><span class="num_unit">만원</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="acc_pannel">
+                    <div class="acc_wrap b2">
+                        <div class="acc_bank md gap_0">
+                            <span class="icon_bank_004"></span>
+                            <span class="bk_name">KB국민</span>
+                        </div>
+                        <div class="bk_num gap_xxxxs"><strong class="number fs18">972473-11-132301</strong></div><!-- 220729 class="gap_xxxxs" 수정 / fs18 클래스 추가 -->
+                        <div class="nick gap_xxxxs">계좌별명 또는 상품명</div>
+                        <div class="acc_info_wrap gap_xxxxs">
+                            <div class="acc_info">
+                                <span class="tit">출금가능금액 :</span>
+                                <span class="number">80,153,870</span><span class="num_unit">원</span>
+                            </div>
+                        </div>
+                        <div class="form_group gap_sm_3 error"><!-- 에러시 error 클래스 추가 -->
+                            <div class="form_tit">출금금액</div>
+                            <div class="form_row"> 
+                                <div class="input unit" role="button" aria-label="{출금금액 입력값}, 출금금액 입력">
+                                    <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="출금금액" data-unit="원" value="0" readonly class="bg_white" >
+                                </div>
+                            </div>
+                            <p class="form_hangul"><span class="number">0</span><span class="num_unit">원</span></p>
+                            <p class="tip">자금모으기 금액은 1원 이상 가능합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="acc_pannel">
+                    <div class="acc_wrap b2">
+                        <button type="button" class="btn_del"><span class="hidden">삭제하기</span></button>
+                        <div class="acc_bank md gap_0">
+                            <span class="icon_bank_004"></span>
+                            <span class="bk_name">KB국민</span>
+                        </div>
+                        <div class="bk_num gap_xxxxs"><strong class="number fs18">972473-11-132301</strong></div><!-- 220729 class="gap_xxxxs" 수정 / fs18 클래스 추가 -->
+                        <div class="nick gap_xxxxs">계좌별명 또는 상품명</div>
+                        <div class="acc_info_wrap gap_xxxxs">
+                            <div class="acc_info">
+                                <span class="tit">출금가능금액 :</span>
+                                <span class="number">80,153,870</span><span class="num_unit">원</span>
+                            </div>
+                        </div>
+                        <div class="form_group gap_sm_3">
+                            <div class="form_tit">출금금액</div>
+                            <div class="form_row"> 
+                                <!-- 전액모으기 체크시 -->
+                                <div class="input">
+                                    <input type="text" title="출금금액" value="전액모으기" readonly >
+                                </div>
+                                <!-- //전액모으기 체크시 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //출금계좌영역 -->
+        </div>
+
+        <hr class="hr_divide">
+
+        <div class="section">
+            <div class="list_data_group">
+                <h2 class="h2">입금계좌</h2>
+                <ul class="acc_list acc_type2 bdt_bdc_01">
+                    <li>
+                        <div class="acc_bank md">
+                            <span class="icon_bank_004"></span>
+                            <span class="acc_bank_num">
+                                <span class="bk_name inline">KB국민</span>
+                                <span class="bk_num number inline mgt_0">574498-90-009768</span>
+                            </span>
+                            <span class="bk_pay balance">잔액 : <em class="number">100,000</em><em class="num_unit">원</em></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice1_1">안내사항</button>
+            <div class="toggle_panel" role="region" id="notice1_1">
+                <ul class="depth bul">
+                    <li>거래량이 증가하는 경우 예약시간보다 늦어질 수 있습니다.</li>
+                    <li>예약시간 및 기간을 설정할 수 있습니다. 설정하지 않는 경우 예약시간은 시스템 운영시간에 따르며 예약기간은 서비스 해지 시까지입니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+                <span><button type="button" class="btn primary lg">변경</button></span>
+            </div>    
+        </div>
+
+    </div><!-- //content -->
+
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

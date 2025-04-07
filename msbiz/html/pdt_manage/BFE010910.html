@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[외화예금추가입금]외화정기예금_입력정보확인</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <!-- 220902 : 상품명 + 정보입력 Step 표시 -->
+		<div class="step_wrap js_step">    
+			<div class="step" role="img" aria-label="총 4단계 중 현재 3단계">
+				<span class="current">3</span><span class="mark">/</span><span class="total">4</span>
+			</div>
+			<h1 class="h1">외화정기예금 입력정보확인</h1><!-- 220804 : 타이틀 수정 및 추가 -->
+		</div>
+        <!-- //220902 : 상품명 + 정보입력 Step 표시 -->
+        
+        <div class="inform_top_wrap">
+			<ul class="depth bul">
+				<li>고객님의 입력 정보를 다시 한 번 확인한 후 거래를 진행하시기 바랍니다.</li>
+				<li>아래의 적용환율은 현재 고시된 환율이며, 실제 거래시점의 적용환율은 변동될 수 있습니다.</li>
+			</ul>
+		</div>
+        <div class="section">
+            <!-- 220915 : 외화정기예금 정보 마크업 변경 -->
+            <ul class="list_data lbt">
+                <li>
+                    <div class="key">상품명</div>
+                    <div class="value fc_posi">외화정기예금</div>
+                </li>
+                <li>
+                    <div class="key">가입기간</div>
+                    <div class="value">
+                        <span class="number fc_posi">12개월(2022.12.30)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">가입금액</div>
+                    <div class="value">
+                        <strong class="number fc_posi">USD 3,000.00</strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">적용금리</div>
+                    <div class="value fc_posi">
+                        <span class="number">2.39755</span><span class="num_unit">%</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">적용과세</div>
+                    <div class="value">일반</div>
+                </li>
+                <!-- 은행CI 아이콘 (국민은행 필수O/타행 필요X) -->
+                <li>
+                    <div class="key">출금계좌번호</div>
+                    <div class="value">
+                        <div class="bank_name"><span class="icon_bank_004 md"></span>KB국민</div>
+                        <div class="account_num"><span class="number">432102-01-271831</span></div>
+                    </div>
+                </li>
+                <!-- //은행CI 아이콘 (국민은행 필수O/타행 필요X) -->
+                <li>
+                    <div class="key">출금금액</div>
+                    <div class="value">
+                        <strong class="number">492,210</strong><span class="num_unit">원</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">출금적용환율</div>
+                    <div class="value">
+                        <span class="number">1,290.20</span><span class="num_unit fc_posi">(우대율70%)</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">자동연장기간</div>
+                    <div class="value">M개월 or D일 or 미신청</div>
+                </li>
+                <li>
+                    <div class="key">연계 · 제휴서비스</div>
+                    <div class="value">해당사항 없음</div>
+                </li>
+            </ul>    
+            <ul class="depth info">
+                <li class="fc_nega">위 상품정보 요약은 이용자의 상품에 대한 이해를 제고하기 위해 안내하며, 자세한 내용은 해당 상품의 상품설명서를 참고해주시기 바랍니다.</li>
+                <li class="fc_nega">가입 전 : ‘약관동의‘ 화면에서 상품설명서 확인 가능</li>
+                <li class="fc_nega">가입 후 : ‘계약서류 관리’ 거래를 통해 상품설명서 확인 가능</li>
+            </ul>
+
+            <!-- 계약서류 받을방법 & 권유직원 마크업 추가 -->
+            <ul class="list_data lbt gap_sm">
+                <li>
+                    <div class="key">계약서류 받을방법</div>
+                    <div class="value">카카오톡 or 이메일</div>
+                </li>
+                <li>
+                    <div class="key">권유직원</div>
+                    <div class="value">구월동종합금융센터 <span class="pdt_divide"></span> 김국민 or 없음</div>
+                </li>
+            </ul>
+            <!-- 계약서류 받을방법 & 권유직원 마크업 추가 -->
+            <!-- //220915 : 외화정기예금 정보 마크업 변경 -->              
+        </div>
+        
+        <!-- 220915 : 구속성 유의사항 -->
+        <div class="section">
+            <h2 class="h2">은행상품 구속행위 규제제도 관련 안내</h2>
+            <ul class="depth bul">
+                <p class="p">고객님께서 가입목적에 맞게 가입기간, 가입금액 등을 자발적으로 결정하신 경우라하더라도 중소기업(개인사업자 포함) 및 그 대표자이거나 신용등급 7등급 이하 개인인 경우 은행법(제52조의2) 상 구속행위 여부판정에 따라 다음의 거래가 제한될 수 있습니다.</p>
+                <li>수신상품 신규</li>
+                <li>수신상품 신규일 이후 1개월 이내 본인명의 대출 거래</li>
+                <li>중소기업의 대표자이신 경우, 대표자로 재직중이신 중소기업의 대출거래</li>
+            </ul>
+
+            <h2 class="hidden">대출거래 관련 질의 및 가입 확인</h2>
+            <h2 class="h3">다음 질문을 읽으신 후 해당하는 답변을 선택하여 주시기 바랍니다.</h2>
+            <div class="form_group">
+                <div class="form_tit">1개월 이내 국민은행과 <span class="fc_nega">본인(또는 대표자로 계시는 중소기업 포함)의 여신거래 계획</span>이 있으십니까?</div>
+                <div class="form_row">
+                    <ul class="rdoChk_ul2">
+                        <li>
+                            <span class="selection mid">
+                                <input type="radio" id="mid1" name="mid">
+                                <label for="mid1" class="label">
+                                    <em>예</em>
+                                </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection mid">
+                                <input type="radio" id="mid2" name="mid">
+                                <label for="mid2" class="label">
+                                    <em>아니요</em>
+                                </label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">위 유의사항을 확인하였으며, 여신거래와 관련하여 <span class="fc_nega">금융상품 가입을 강요받은 사실 없이 자발적 의사</span>에 의하여 본 상품을 가입하시겠습니까?</div>
+                <div class="form_row">
+                    <ul class="rdoChk_ul2">
+                        <li>
+                            <span class="selection mid">
+                                <input type="radio" id="mid3" name="mid">
+                                <label for="mid3" class="label">
+                                    <em>예</em>
+                                </label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection mid">
+                                <input type="radio" id="mid4" name="mid">
+                                <label for="mid4" class="label">
+                                    <em>아니요</em>
+                                </label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 220915 : 구속성 유의사항 -->
+
+        <!-- [공통태그] 결재요청 -->
+        <div class="section">
+            <h2 class="h2">결재요청</h2>
+            <div class="table">
+                <table class="center">
+                    <caption>결재요청</caption>
+                    <colgroup>
+                        <col style="width:50%">
+                        <col style="width:50%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">제목</th>
+                            <th scope="col">제목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1단계</td>
+                            <td>김국민</td>
+                        </tr>
+                        <tr>
+                            <td>2단계</td>
+                            <td>이국민</td>
+                        </tr>                        
+                    </tbody>
+                </table>    
+            </div>
+            <div class="form_group">
+                <div class="form_tit">결재메모</div>
+                <div class="form_row">
+                    <div class="textarea">
+                        <textarea title="타이틀명" placeholder="내용을 입력해주세요."></textarea>        
+                        <p class="num_info">
+                            <span><em class="curr">0</em> / 1000byte</span>
+                            <span>(한글 500자)</span>
+                        </p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!-- //[공통태그] 결재요청 -->
+
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg" onclick="UICommon.Layer.confirm('예금추가입금을 취소하시겠습니까?<br>작성된 내용은 초기화됩니다.','알림');">취소</button></span>
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+
+        <!-- 220915 : 상품가입확인이 ‘예’ 일 때 -->
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.alert('1개월 이내 여신거래가 있으신 경우 신규가입이 불가합니다.');">상품가입확인이 ‘예’ 일 때</button></span>
+        </div>
+        <!-- //220915 : 상품가입확인이 ‘예’ 일 때 -->
+
+        <!-- 220915 : 상품가입확인2이 ‘아니요’ 일 때 -->
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.alert('자발적 의사에 의하지 않는 경우 신규가입이 불가합니다.');">상품가입확인2이 ‘아니요’ 일 때</button></span>
+        </div>
+        <!-- //220915 : 상품가입확인2이 ‘아니요’ 일 때 -->
+
+        <!-- 220915 : 모두 false 일 때 -->
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.alert('은행상품 구속행위 규제제도 관련 유의사항 안내 확인 및 여신거래 계획 여부와 본인의 자발적 의사 가입여부에 답변을 선택해주시기 바랍니다.');">모두 false 일 때</button></span>
+        </div>
+        <!-- //220915 : 모두 false 일 때 -->
+
+        <!-- 220915 : 상품가입확인1 값이 false 일 때 -->
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.alert('은행상품 구속행위 규제제도 관련 유의사항 안내 확인 및 여신거래 계획 여부에 &quot;예&quot;, &quot;아니요&quot;로 답변하여 주시기 바랍니다.');">상품가입확인1 값이 false 일 때</button></span>
+        </div>
+        <!-- //220915 : 상품가입확인1 값이 false 일 때 -->
+
+        <!-- 220915 : 상품가입확인2 값이 false 일 때 -->
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.alert('은행상품 구속행위 규제제도 관련 유의사항 안내 확인 및 본인의 자발적 의사 가입여부에 &quot;예&quot;, &quot;아니요&quot;로 답변하여 주시기 바랍니다.');">상품가입확인2 값이 false 일 때</button></span>
+        </div>
+        <!-- //220915 : 상품가입확인2 값이 false 일 때 -->
+
+        <!-- 220915 : 상품가입확인1 != undefined&&1b. 상품가입확인2 != undefinded가 아닐 때 -->
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.alert('은행상품 구속행위 규제제도 관련 유의사항 안내 확인 및 여신거래 계획 여부와 본인의 자발적 의사 가입여부에 답변을 선택해주시기 바랍니다.');">상품가입확인1 != undefined&&1b. 상품가입확인2 != undefinded가 아닐 때</button></span>
+        </div>
+        <!-- //220915 : 상품가입확인1 != undefined&&1b. 상품가입확인2 != undefinded가 아닐 때 -->
+
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

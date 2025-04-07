@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[공통]주소검색_상세주소입력(도로명주소)(팝)_결과없음</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content" data-ui="full_pop">
+            <div class="tab_wrap">
+                <div class="tab_list" role="tablist">
+                    <div class="scroll_wrap">
+                        <a href="#">통합검색</a>
+                        <a href="#">도로명주소</a>
+                        <a href="#" class="active">지번주소</a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <h2 class="hidden">지번주소</h2>
+                    <div class="inform_top_wrap">
+                        <ul class="depth bul">
+                            <li>상세주소를 입력하시고 확인 버튼을 누르세요.</li>
+                            <li>KB국민은행은 고객님의 정확한 주소 정보 관리를 위해 주소 정보 표준화 시스템을 운영하고 있습니다. 이로 인하여 상세 주소의 일부가 변경되어 표시될 수 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <div class="fieldset">
+                            <div class="form_group">
+                                <div class="form_tit">
+                                    기본주소
+                                </div>
+                                <div class="form_row">
+                                    <!-- 220729 리웍 -->
+                                    <div class="input">
+                                        <input type="text" title="기본주소 입력" value="[254-48]강원 강릉시 성산면" readonly>
+                                    </div>
+                                    <!-- //220729 리웍 -->
+                                </div>
+                            </div> 
+                            <div class="form_group js_trans">
+                                <div class="form_tit">
+                                    상세주소
+                                </div>
+                                <div class="form_row">
+                                    <span class="input"><input type="text" title="상세주소" value="관음리"></span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_confirm_wrap">
+                    <div class="btn_area">
+                        <span><button type="button" class="btn secondary lg">다시검색</button></span>  
+                        <span><button type="button" class="btn primary lg">확인</button></span>  
+                    </div>    
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <!--// 업무 HTML 선언 END -->
+
+
+</body>
+
+</html>

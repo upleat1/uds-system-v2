@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-[외환 증빙서류제출]제출</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+
+    <!-- 220729 리웍 -->
+    <div id="content">
+		<h1 class="hidden">외환 증빙서류제출</h1>
+
+		<div class="tab_wrap">
+			<div class="tab_list">
+				<div class="scroll_wrap">
+					<a href="#" class="active" title="선택됨">제출</a> <!-- 221014 타이틀 수정 -->
+					<a href="#">제출내역조회</a>
+				</div>
+			</div>
+			<div class="link_panel">
+				<div class="section">
+					<div class="form_group">
+						<div class="form_tit">제출대상 업무구분</div>
+						<div class="form_row">
+							<div class="select">
+								<button type="button" class="select_btn" title="제출대상 업무구분 선택">선택</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- 제출대상 업무구분: 기타증빙서류제출이 아닐때 -->
+					<div class="form_group">
+						<div class="form_tit">조회구분</div>
+						<div class="form_row">
+							<div class="rdoChk_group inline">
+								<span class="selection">
+									<input type="radio" id="radioA1" name="radio_a" checked>
+									<label for="radioA1" class="label"><em>전체</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="radioA2" name="radio_a">
+									<label for="radioA2" class="label"><em>제출</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="radioA3" name="radio_a">
+									<label for="radioA3" class="label"><em>미제출</em></label>
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="btn_cnt_wrap">
+						<span><button type="button" class="btn primary lg">조회</button></span>
+					</div>
+					<!-- //제출대상 업무구분: 기타증빙서류제출이 아닐때 -->
+				</div>
+				
+				<!-- 제출대상 업무구분: 기타증빙서류제출이 아닐때 -->
+				<hr class="hr_divide">	
+				<div class="section">
+					<h2 class="h2">증빙서류 제출 대상 조회</h2>
+
+					<!-- 조회값 없을 때 -->
+					<div class="result nodata sm">
+						<p class="tit">조회하신 내역이 없습니다.</p>
+					</div>
+					<!-- //조회값 없을 때 -->
+
+					<div class="list_data_group">
+						<ul class="list_data">
+							<li>
+								<div class="key">신청일</div>
+								<div class="value"><span class="number">2022.05.30</span></div>
+							</li>
+							<li>
+								<div class="key">제출상태</div>
+								<div class="value"><strong>미제출</strong></div>
+							</li>
+							<li>
+								<div class="key">업무구분</div>
+								<div class="value"><span>기업전용송금(인터넷신청분) </span></div>
+							</li>
+							<li>
+								<div class="key">신청번호</div>
+								<div class="value"><span class="number">20210714004</span></div>
+							</li>
+							<li>
+								<div class="key">참조번호</div>
+								<div class="value"><span class="number">OT07A222000</span></div>
+							</li>
+							<li>
+								<div class="key">금액</div>
+								<div class="value">USD <span class="number">40,000</span></div>
+							</li>
+							<li>\
+								<div class="key">거래상대방</div>
+								<div class="value"><span>HEUNGMIN SON</span></div>
+							</li>
+							<li>
+								<div class="key">지점명</div>
+								<div class="value"><span>강남중앙</span></div>
+							</li>
+						</ul>
+						
+						<div class="btn_list_btm">
+							<span><button type="button" class="btn outline sm">이미지 등록</button></span>
+						</div>
+					</div>
+
+					<div class="list_data_group">
+						<ul class="list_data">
+							<li>
+								<div class="key">신청일</div>
+								<div class="value"><span class="number">2022.05.30</span></div>
+							</li>
+							<li>
+								<div class="key">제출상태</div>
+								<div class="value"><strong>제출</strong></div>
+								<!-- 220824 텍스트 변경 -->
+							</li>
+							<li>
+								<div class="key">업무구분</div>
+								<div class="value"><span>기업전용송금(인터넷신청분) </span></div>
+							</li>
+							<li>
+								<div class="key">신청번호</div>
+								<div class="value"><span class="number">20210714004</span></div>
+							</li>
+							<li>
+								<div class="key">참조번호</div>
+								<div class="value"><span class="number">OT07A222000</span></div>
+							</li>
+							<li>
+								<div class="key">금액</div>
+								<div class="value">USD <span class="number">40,000</span></div>
+							</li>
+							<li>
+								<div class="key">거래상대방</div>
+								<div class="value"><span>HEUNGMIN SON</span></div>
+							</li>
+							<li>
+								<div class="key">지점명</div>
+								<div class="value"><span>강남중앙</span></div>
+							</li>
+						</ul>
+						
+						<div class="btn_list_btm">
+							<span><button type="button" class="btn outline sm">이미지 등록</button></span>
+						</div>
+					</div>
+
+					<div class="btn_list_btm more">
+						<button type="button" class="btn">더보기<span class="number">(1/30)</span></button>
+					</div>
+				</div>
+				<!-- //제출대상 업무구분: 기타증빙서류제출이 아닐때-->
+
+				<!-- 제출대상 업무구분: 기타증빙서류제출일 때 -->
+				<div class="section">
+
+					<!-- 220822 서류송부 지점 선택 추가-->
+					<h2 class="h2">서류송부 지점 선택
+						<div class="tooltip_limited">
+							<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+							<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+								<p class="tooltip_tit">대기업금융센터 거래 시 유의사항</p>
+								<div class="tooltip_cont"> 
+									대기업금융센터 통합으로 인해 기존 강남/여의도/명동 대기업금융센터를 거래하시던 고객님께서는 "대기업금융1센터"를 선택하시기 바랍니다.
+								</div>
+								<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+							</div>
+						</div>
+					</h2>
+					
+					<div class="form_group error">
+						<div class="form_row">
+							<span class="input int_btn">
+								<input type="text" id="id01" title="서류송부 지점 입력" placeholder="지점(지역)명"> <!-- 검색후 : readonly --> <!-- 221014 타이틀 수정 -->
+								<button type="button" class="btn point sm round">검색</button>
+							</span>
+						</div>
+						<p class="tip" aria-labelledby="id01">지점(지역)명 입력해 주세요.</p>
+						<!-- 220927 초기화 버튼 변경 -->
+						<div class="btn_wrap btm">
+							<button type="button" class="btn_txt ico_reset">검색초기화</button>
+						</div>
+						<!-- //220927 초기화 버튼 변경 -->
+					</div>
+					
+					<!-- 검색후 노출 -->
+					<!-- 220927 버튼 변경으로 인한 삭제
+					<div class="form_btm_full_wrap">
+						<span><button type="button" class="btn outline md">검색초기화</button></span> 
+					</div>
+					-->
+					<!-- //검색후 노출 -->
+					<!-- //220822 서류송부 지점 선택 추가-->
+				
+
+					<div class="form_group error">
+						<div class="form_tit">지점 전달사항</div>
+						<div class="form_row">
+							<div class="textarea">
+								<textarea id="id02" title="지점 전달사항" placeholder="제출하시는 증빙서류에 대한 전달사항을 입력해 주세요."></textarea> <!-- 220822 id 추가 -->
+								<p class="num_info"><span><em class="curr">0</em> / 160byte</span> (한글 80자)</p>            
+							</div> 
+						</div>
+						<p class="tip" aria-labelledby="id02">내용을 입력해 주세요.</p> <!-- 220822 aria-labelledby 추가 -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- 안내사항 -->
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-controls="notice_1_1">안내사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li><strong>증빙서류 제출 가능 시간은 평일(은행영업일) 09:00~18:00 입니다.</strong></li>
+					<li>증빙서류를 제출할 대상 거래를 선택하거나 [기타증빙서류제출]을 선택하고 제출할 파일을 업로드하시기 바랍니다.</li>
+					<li>당일을 포함하여 3영업일 내에 신청한 거래내역이 조회되며, 이미 지점처리가 완료되거나 취소된 내역은 조회되지 않습니다.</li>
+					<li>제출된 서류는 원본으로 인정되지 않으며, 원본을 제출해야하는 경우 별도로 제출해야합니다.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">다음</button></span>
+			</div>
+		</div>
+
+	</div><!-- //content -->
+	<!-- //220729 리웍 -->
+</div>
+<!-- //wrap -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[대출신청]대출신청정보입력</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" >
+		<div class="step_wrap js_step">    
+            <div class="step" role="img" aria-label="총 4단계 중 현재 4단계">
+                <span class="current">4</span><span class="mark">/</span><span class="total">4</span>
+            </div>
+            <h1 class="h1">대출정보 입력</h1>
+        </div>
+
+        <div class="inform_top_wrap">
+            <!-- 220916 수정 -->
+            <ul class="depth bul">
+                <li>대출신청정보를 입력하시면 진행사항 저장 및 보증신청이 가능합니다.</li>
+                <li>대출 신청 시 대출진행조회를 통해 신용평가 및 대출심사 진행현황을 알려드립니다.</li>
+            </ul>
+            <!-- 220916 수정 -->
+        </div>
+
+		<div class="section">
+            <div class="form_group">
+                <div class="form_tit">대출상환방법</div>
+                <div class="form_row">
+                    <ul class="rdoChk_ul2">
+                        <li>
+                            <span class="selection mid">
+                                    <input type="radio" id="mid1" name="mid" checked>
+                                    <label for="mid1" class="label"><em>일반운전자금</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection mid">
+                                    <input type="radio" id="mid2" name="mid">
+                                    <label for="mid2" class="label"><em>협약운전자금</em></label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>    
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">대출상환방법
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <div class="tooltip_cont"> 
+                                <ul class="depth bul">
+                                    <li>일시상환방식
+                                        <ul class="depth dash">
+                                            <li>대출기간 동안 이자만 매달 납부하다가 만기에 대출원금을 모두 갚는 방식입니다.</li>
+                                        </ul>
+                                    </li>
+                                    <li>원금균등분할상환방식
+                                        <ul class="depth dash">
+                                            <li>대출기간 동안 원금과 이자를 매달 납부하는 방식입니다. 대출기간으로 나눈 일정한 할부 상환금에 월별 이자를 합하여 상환합니다. 단, 거치기간 동안은 월별 이자만 납부합니다.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn readonly" title="대출상환방법">원금균등 분할상환방식</button>
+                    </div>
+                </div>    
+            </div>
+            
+            <div class="form_group">
+                <div class="form_tit">대출금리변동주기<button type="button" class="btn_ico_34"><i class="ico_20_question"></i><span class="hidden">대출금리변동주기 안내 팝업</span></button></div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn readonly" title="대출금리변동주기">12개월 변동주기</button>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">대출기간</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn readonly" title="대출기간 선택">60개월 (5년)</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">거치기간</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn readonly" title="거치기간 선택">12개월 (1년)</button><!-- 선택할수 없을시 클래스 "readonly" 입력 -->
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="form_group error"><!-- 에러메세지 비노출시 클래스 "error"삭제 -->
+                <div class="form_tit">대출신청금액</div>
+                <!-- 220729 리웍 -->
+                <div class="form_row">
+                    <div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 대출신청금액 입력" onclick="">
+                        <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="대출신청금액" data-unit="원" readonly class="bg_white" id="labelledby01"><!-- 220906 접근성 추가 : id/aria-labelledby 매칭 -->
+                    </div>
+                    <p class="form_hangul" aria-hidden="true">원</p>
+                </div>
+                <!-- //220729 리웍 -->                
+                <p class="tip_info">500~7,000만원 범위내 대출신청이 가능합니다. 실제 대출금액은 지역신용보증재단의 보증금액 및 보증비율에 따라 결정됩니다.</p>
+                <!-- 에러메세지 -->
+                <p class="tip" aria-labelledby="labelledby01">대출한도를 초과한 금액입니다. 다시 입력해주세요.</p><!-- 220906 접근성 추가 : id/aria-labelledby 매칭 -->
+                <!-- //에러메세지 -->
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">관리점</div>
+                <div class="form_row">
+                    <div class="input int_btn">
+                        <input type="text" title="관리점 입력" placeholder="" value="KB국민은행 서염창지점" readonly>
+                        <button type="button" class="btn point sm round">지점 위치 확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+				<div class="form_tit">지점 및 권유직원 선택</div>
+				<div class="form_row">
+					<div class="form_txt">상품 가입을 사전 논의한 상담직원 또는 전담직원이 있습니까?</div>
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="reMethod1" name="reMethod" aria-expanded="false" aria-controls="reMethodPanel1">
+							<label for="reMethod1" class="label"><em>예</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="reMethod2" name="reMethod" >
+							<label for="reMethod2" class="label"><em>아니요</em></label>
+						</span>
+					</div>
+					<div class="rdo_panel" role="region" id="reMethodPanel1">
+						<div class="select outline lg">
+							<button type="button" class="select_btn" title="지점명으로 검색">지점명으로 검색</button>
+						</div>
+						<div class="select outline lg">
+							<button type="button" class="select_btn" title="지점명">지점명</button>
+						</div>
+						<div class="input int_btn gap_xs_2">
+							<input type="text" title="지점명 입력" placeholder="지점명 입력">
+							<button type="button" class="btn point sm round">검색</button>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth">
+                    <li>다음 버튼 선택 시 대출신청정보가 저장되며 30~60초가 소요 될 수 있습니다.</li>	
+                </ul>
+            </div>
+        </div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span>
+				<span><button type="button" class="btn primary lg" disabled>다음</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[CDD/EDD등록]고객확인제도 안내</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" >
+		<h1 class="hidden">CDD/EDD 등록</h1>
+
+		<div class="section">
+			<h2 class="h2">고객확인제도(CDD/EDD)란?</h2>
+			<p class="p">
+				은행에서 제공하는 금융거래 및 서비스가 자금세탁 등의 불법행위에 이용되지 않도록 고객에 대하여 거래목적을 확인 하는 등 합당한 주의를 기울이는 제도로서 특정금융거래정보의 보고 및 이용 등에 관한 법률 제5조의 2(금융회사 등의 고객확인의무), 동법 시행령 제10조의 4(고객의 신원에 관한 사항) 및 제10조의 5(실제소유자에 대한 확인)에 따라 금융회사는 고객 정보, 문서, 자료 등을 수집하며, 고객님께서 금융회사의 고객확인을 위한 정보를 제공하지 아니하거나 검증이 불가능한 경우에는 관련법에 따라 금융거래가 거절 또는 종료됩니다.
+			</p>
+			<div class="pdt_cdd_edd_txt">
+				<p>CDD : Customer Due Diligence (<strong>고객확인</strong>)</p><!-- 220920 strong tag 추가 -->
+				<p>EDD : Enhanced Due Diligence (<strong>강화된 고객확인</strong>)</p><!-- 220920 strong tag 추가 -->
+			</div>
+		</div>
+
+		<div class="section">
+			<h2 class="h2">필요한 서류를 사전에 확인해주세요.</h2><!-- 220920 class 수정 -->
+			<ul class="pdt_list_needfile">
+				<li>
+					<!--<i class="ico_60_phone"></i> 220920 삭제 -->
+					<span>본인명의 휴대폰</span>
+				</li>
+				<li>
+					<!--<i class="ico_60_idcard"></i> 220920 삭제 -->
+					<span>신분증<br>(<em class="inline">주민등록증</em>/<em class="inline">운전면허증</em>)</span>
+				</li>
+				<li>
+					<!-- <i class="ico_60_acc"></i> 220920 삭제 -->
+					<span>본인명의 입출금계좌<br>(모든 은행)</span>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 법인 -->
+		<div class="section">
+			<h2 class="h2">CDD/EDD 등록 진행 순서 안내</h2>
+			<ol class="depth step sm">
+				<li>
+					<p class="p">법인사업자 정보 확인 및 수정</p>
+				</li>
+				<li>
+					<p class="p">거래 목적 및 원천정보 확인</p>
+				</li>
+				<li>
+					<p class="p">계좌검증 (법인사업자 명의 계좌)</p>
+				</li>
+				<li>
+					<p class="p">필수서류 제출 (파일 업로드)</p>
+				</li>
+				<li>
+					<p class="p">대표자 신분증 촬영 (모바일웹에서 진행)</p>
+				</li>
+				<li>
+					<p class="p">지점 담당자 확인 및 등록</p>
+				</li>
+			</ol>
+		</div>
+
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-expanded="true" aria-controls="notice_1_1">유의사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li>실제소유자 확인을 위해 필수서류 외에 추가로 요청할 수 있습니다.</li>
+					<li><strong>법인사업자 공동대표인 경우 비대면 고객확인의무 등록이 제한됩니다. 가까운 지점을 방문하여 등록해 주시기 바랍니다.</strong></li><!-- 221017 추가 -->
+					<li><strong>비영리재단법인, 비영리 사단법인, 비법인 단체, 외국법인 (사업자등록구분 번호 80, 82, 84, 89) 고객과 비대면 거래 불가 업종고객은 지점을 방문하여 등록해 주시기 바랍니다.</strong></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //법인 -->
+		
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">다음</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>급여명세서 만들기</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="기타" href="/msbiz/app/css/etc.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 네이티브영역 -->
+        <header id="header">
+            <!-- script src="../../guide/assets/js/publish.js"></script -->
+        </header>
+        <!-- //네이티브영역 -->
+        <div id="content">
+            <div class="step_wrap js_step">
+                <div class="step" role="img" aria-label="총 4단계 중 현재 3단계">
+                    <span class="current">3</span><span class="mark">/</span><span class="total">4</span>
+                </div>
+                <h1 class="h1">지급내역</h1>
+            </div>
+
+            <div class="inform_top_wrap">
+                <p class="depth">급여 지급내역을 입력해주세요.</p><!-- 221007 수정 -->
+            </div>
+
+            <!-- 기본급 -->
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">기본급</div>
+                    <div class="form_row">
+                        <div class="input unit js_unit" role="button" aria-label="기본급 입력" onclick="">
+                            <!-- 220825 접근성수정 -->
+                            <input type="tel" maxlength="16" placeholder="숫자만 입력" title="기본급" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                        </div>
+                        <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                    </div>
+                </div>
+                <!-- 항목 추가시 노출 -->
+                <div class="card_wrap">
+
+                    <!-- 연장근로수당 -->
+                    <div class="card_pay">
+                        <h3 class="h3">연장근로수당</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="연장근로수당 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="연장근로수당 수당" data-unit="원" aria-hidden="true" class="bg_white" value="1,000,000">
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">연장근로수당 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            근로일/시간 등에 따라 바뀌는 금액이라면 산출방법을 입력해주세요.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5" title="연장근로수당 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_card_close">연장근로수당 카드 닫기</button>
+                    </div>
+
+                    <!-- 야간근로수당 -->
+                    <div class="card_pay">
+                        <h3 class="h3">야간근로수당</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="야간근로수당 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="야간근로수당 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">야간근로수당 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            매월 고정금액으로 지급되는 수당은 필수 입력 아님<!-- 221020 수정 -->
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5" title="야간근로수당 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_card_close">야간근로수당 카드 닫기</button>
+                    </div>
+
+                    <!-- 휴일근로수당 -->
+                    <div class="card_pay">
+                        <h3 class="h3">휴일근로수당</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="휴일근로수당 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="휴일근로수당 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">휴일근로수당 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            휴일수당은 <span class="bold">하루 8시간을 기준</span>으로 가산율을 다르게 입력해주세요.<br><br>
+                                            예1) 직원의 시급이 10,000원에 휴일 근로시간 8시간일 경우 휴일근로수당 120,000원 = '<span
+                                                class="bold">8시간 × 10,000원 × 1.5</span>' 기재<br>
+                                            예2) 직원의 시급이 10,000원에 휴일 근로시간 10시간일 경우 휴일근로수당 160,000원 = '<span
+                                                class="bold">(8시간 × 10,000원 × 1.5) + (2시간 × 10,000원 × 2)</span>' 기재
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5" title="휴일근로수당 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_card_close">휴일근로수당 카드 닫기</button>
+                    </div>
+
+                    <!-- 연차휴가수당 -->
+                    <div class="card_pay">
+                        <h3 class="h3">연차휴가수당</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="연차휴가수당 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="연차휴가수당 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <!-- 221020 라디오선택영역 삭제 -->
+                        <!-- 일/시간당 선택시 노출 -->
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">연차휴가수당 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            근로일/시간 등에 따라 바뀌는 금액이라면 산출방법을 입력해주세요.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5" title="연차휴가수당 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //일/시간당 선택시 노출 -->
+                        <button type="button" class="btn_card_close">연차휴가수당 카드 닫기</button>
+                    </div>
+
+                    <!-- 주휴수당 -->
+                    <div class="card_pay">
+                        <h3 class="h3">주휴수당</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="주휴수당 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="주휴수당 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <!-- 221020 라디오선택영역 삭제 -->
+                        <!-- 일/시간당 선택시 노출 -->
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">주휴수당 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            근로일/시간 등에 따라 바뀌는 금액이라면 산출방법을 입력해주세요.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5" title="주휴수당 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //일/시간당 선택시 노출 -->
+                        <button type="button" class="btn_card_close">주휴수당 카드 닫기</button>
+                    </div>
+
+                    <!-- 식대(비과세) -->
+                    <div class="card_pay">
+                        <h3 class="h3">식대(비과세)</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="식대(비과세) 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="식대(비과세) 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="radioBox5_1" name="radioBox5">
+                                <label for="radioBox5_1" class="label"><em>고정지급액<br>(계산필요없음)</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="radioBox5_2" name="radioBox5" checked>
+                                <label for="radioBox5_2" class="label"><em>일/시간당<br>(계산필요)</em></label>
+                            </span>
+                        </div>
+                        <!-- 일/시간당 선택시 노출 -->
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">식대(비과세) 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            근로일/시간 등에 따라 바뀌는 금액이라면 산출방법을 입력해주세요.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5"
+                                            title="식대(비과세) 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //일/시간당 선택시 노출 -->
+                        <button type="button" class="btn_card_close">식대(비과세) 카드 닫기</button>
+                    </div>
+
+                    <!-- 직책수당 -->
+                    <div class="card_pay">
+                        <h3 class="h3">직책수당</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="직책수당 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="직책수당 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="radioBox6_1" name="radioBox6">
+                                <label for="radioBox6_1" class="label"><em>고정지급액<br>(계산필요없음)</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="radioBox6_2" name="radioBox6" checked>
+                                <label for="radioBox6_2" class="label"><em>일/시간당<br>(계산필요)</em></label>
+                            </span>
+                        </div>
+                        <!-- 일/시간당 선택시 노출 -->
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">직책수당 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            근로일/시간 등에 따라 바뀌는 금액이라면 산출방법을 입력해주세요.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5" title="직책수당 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //일/시간당 선택시 노출 -->
+                        <button type="button" class="btn_card_close">직책수당 카드 닫기</button>
+                    </div>
+
+                    <!-- 가족수당 -->
+                    <div class="card_pay">
+                        <h3 class="h3">가족수당</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="가족수당 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="가족수당 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="radioBox7_1" name="radioBox7">
+                                <label for="radioBox7_1" class="label"><em>고정지급액<br>(계산필요없음)</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="radioBox7_2" name="radioBox7" checked>
+                                <label for="radioBox7_2" class="label"><em>일/시간당<br>(계산필요)</em></label>
+                            </span>
+                        </div>
+                        <!-- 일/시간당 선택시 노출 -->
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">가족수당 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            근로일/시간 등에 따라 바뀌는 금액이라면 산출방법을 입력해주세요.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5" title="가족수당 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //일/시간당 선택시 노출 -->
+                        <button type="button" class="btn_card_close">가족수당 카드 닫기</button>
+                    </div>
+
+                    <!-- 육아보육수당(비과세) -->
+                    <div class="card_pay">
+                        <h3 class="h3">육아보육수당(비과세)</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="육아보육수당(비과세) 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="육아보육수당(비과세) 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="radioBox8_1" name="radioBox8">
+                                <label for="radioBox8_1" class="label"><em>고정지급액<br>(계산필요없음)</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="radioBox8_2" name="radioBox8" checked>
+                                <label for="radioBox8_2" class="label"><em>일/시간당<br>(계산필요)</em></label>
+                            </span>
+                        </div>
+                        <!-- 일/시간당 선택시 노출 -->
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">육아보육수당(비과세) 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            근로일/시간 등에 따라 바뀌는 금액이라면 산출방법을 입력해주세요.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5"
+                                            title="육아보육수당(비과세) 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //일/시간당 선택시 노출 -->
+                        <button type="button" class="btn_card_close">육아보육수당(비과세) 카드 닫기</button>
+                    </div>
+
+                    <!-- 자가운전보조(비과세) -->
+                    <div class="card_pay">
+                        <h3 class="h3">자가운전보조(비과세)</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="자가운전보조(비과세) 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="자가운전보조(비과세) 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="radioBox9_1" name="radioBox9">
+                                <label for="radioBox9_1" class="label"><em>고정지급액<br>(계산필요없음)</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="radioBox9_2" name="radioBox9" checked>
+                                <label for="radioBox9_2" class="label"><em>일/시간당<br>(계산필요)</em></label>
+                            </span>
+                        </div>
+                        <!-- 일/시간당 선택시 노출 -->
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">자가운전보조(비과세) 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            근로일/시간 등에 따라 바뀌는 금액이라면 산출방법을 입력해주세요.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5"
+                                            title="자가운전보조(비과세) 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //일/시간당 선택시 노출 -->
+                        <button type="button" class="btn_card_close">자가운전보조(비과세) 카드 닫기</button>
+                    </div>
+
+                    <!-- 그 외 수당(직접입력) -->
+                    <div class="card_pay">
+                        <h3 class="h3">그 외 수당(직접입력)</h3>
+                        <div class="form_group">
+                            <div class="form_tit">수당</div>
+                            <div class="form_row">
+                                <div class="input unit js_unit" role="button" aria-label="그 외 수당(직접입력) 수당 입력" onclick="">
+                                    <!-- 220825 접근성수정 -->
+                                    <input type="tel" maxlength="16" placeholder="숫자만 입력" title="그 외 수당(직접입력) 수당" data-unit="원" aria-hidden="true" class="bg_white" readonly>
+                                </div>
+                                <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                            </div>
+                        </div>
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="radioBox10_1" name="radioBox10">
+                                <label for="radioBox10_1" class="label"><em>고정지급액<br>(계산필요없음)</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="radioBox10_2" name="radioBox10" checked>
+                                <label for="radioBox10_2" class="label"><em>일/시간당<br>(계산필요)</em></label>
+                            </span>
+                        </div>
+                        <!-- 일/시간당 선택시 노출 -->
+                        <div class="form_group">
+                            <div class="form_tit">산출방법
+                                <div class="tooltip_limited">
+                                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                                class="hidden">그 외 수당(직접입력) 산출방법 자세히보기</span></button></p>
+                                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip_cont">
+                                            근로일/시간 등에 따라 바뀌는 금액이라면 산출방법을 입력해주세요.
+                                        </div>
+                                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말
+                                                닫기</span></button>
+                                    </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="예) 10시간(근로시간) x 통상시급 x 1.5"
+                                            title="그 외 수당(직접입력) 산출방법">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //일/시간당 선택시 노출 -->
+                        <button type="button" class="btn_card_close">그 외 수당(직접입력) 카드 닫기</button>
+                    </div>
+                </div>
+                <!-- //항목 추가시 노출 -->
+
+                <div class="btn_cnt_wrap">
+                    <span><button type="button" class="btn outline md">초기화</button></span>
+                    <span><button type="button" class="btn primary md" onclick="UICommon.Layer.open('#adItem')">수당항목추가</button></span><!-- 221007 수정 -->
+                </div>
+            </div>
+            <!-- //기본급 -->
+
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg">이전</button></span>
+                    <span><button type="button" class="btn primary lg">다음</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <!-- 체크박스형 START -->
+    <div id="adItem" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>항목추가</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <ul class="list_data rdoChk">
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem1" name="chkItem" checked>
+                                <label for="chkItem1" class="label"><em>연장근로수당</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem2" name="chkItem">
+                                <label for="chkItem2" class="label"><em>야간근로수당</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem3" name="chkItem">
+                                <label for="chkItem3" class="label"><em>휴일근로수당</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem4" name="chkItem">
+                                <label for="chkItem4" class="label"><em>연차휴가수당</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem5" name="chkItem">
+                                <label for="chkItem5" class="label"><em>주휴수당</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem6" name="chkItem">
+                                <label for="chkItem6" class="label"><em>식대(비과세)</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem7" name="chkItem">
+                                <label for="chkItem7" class="label"><em>직책수당</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem11" name="chkItem">
+                                <label for="chkItem11" class="label"><em>가족수당</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem8" name="chkItem">
+                                <label for="chkItem8" class="label"><em>육아보육수당(비과세)</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem9" name="chkItem">
+                                <label for="chkItem9" class="label"><em>자가운전보조(비과세)</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="checkbox" id="chkItem10" name="chkItem">
+                                <label for="chkItem10" class="label"><em>그 외 수당(직접입력)</em></label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+    <!--// 체크박스형 END -->
+
+    <script>
+    </script>
+</body>
+
+</html>

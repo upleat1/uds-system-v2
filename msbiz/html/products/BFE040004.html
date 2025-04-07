@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[대출신청]고객정보확인</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" >
+		<div class="step_wrap js_step">    
+            <div class="step" role="img" aria-label="총 6단계 중 현재 4단계">
+                <span class="current">4</span><span class="mark">/</span><span class="total">6</span>
+            </div>
+            <h1 class="h1">대환계좌정보 입력</h1>
+        </div>
+		<div class="inform_top_wrap">            
+            <ul class="depth bul">
+                <!-- 221026 문구수정 -->
+                <li>대환대상계좌는 기존 대출을 받으신 금융기관이 2영업일 전 기준으로 신용정보원에 집중한 대환대상계좌 정보입니다.</li>
+                <li>대환대상계좌 선택 후 대환신청금액, 기존 대출을 받으신 금융기관의 담당자명, 직통 전화번호를 입력하셔야 대출 신청이 가능합니다.</li>
+                <!-- //221026 문구수정 -->
+            </ul>
+		</div>
+        
+        <div class="section">
+            <ul class="list_acco js_accordion">
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">KB국민은행</a>
+                    <div class="toggle_panel" role="region">
+                        <div class="chk_data_group">
+                            <div class="chk_data_list_group">
+                                <div class="chk_data_list">
+                                    <div class="chk_head">
+                                        <span class="selection">
+                                            <input type="checkbox" id="checkCHK1" checked>
+                                            <label for="checkCHK1" class="label"><strong class="number">01391600699001</strong></label>
+                                        </span>
+                                    </div>
+                                    <ul class="list_data noline bdb_0">
+                                        <li>
+                                            <div class="key">계좌일련번호</div>
+                                            <div class="value"><span class="number">00000000000000000000</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="key">대출잔액</div>
+                                            <div class="value"><span class="number">16,000,000</span><span class="num_unit">원</span></div>
+                                        </li>
+                                    </ul>
+                                    <div class="form_group">
+                                        <div class="form_tit">대환신청금액</div>
+                                        <div class="form_row"> 
+                                            <div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 대환신청금액 입력" onclick="">
+                                                <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="대환신청금액" data-unit="원" class="bg_white" readonly>
+                                            </div>
+                                        </div>
+                                        <p class="form_hangul" aria-hidden="true"><span>원</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="chk_data_list">
+                                    <div class="chk_head">
+                                        <span class="selection">
+                                            <input type="checkbox" id="checkCHK2">
+                                            <label for="checkCHK2" class="label"><strong class="number">01391600699001</strong></label>
+                                        </span>
+                                    </div>
+                                    <ul class="list_data noline bdb_0">
+                                        <li>
+                                            <div class="key">계좌일련번호</div>
+                                            <div class="value"><span class="number">00000000000000000000</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="key">대출잔액</div>
+                                            <div class="value"><span class="number">16,000,000</span><span class="num_unit">원</span></div>
+                                        </li>
+                                    </ul>
+                                    <div class="form_group">
+                                        <div class="form_tit">대환신청금액</div>
+                                        <div class="form_row"> 
+                                            <div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 대환신청금액 입력" onclick="">
+                                                <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="대환신청금액" data-unit="원" readonly><!-- disable 처럼 보이게 할 경우 : class="bg_white" 삭제 -->
+                                            </div>
+                                        </div>
+                                        <p class="form_hangul" aria-hidden="true"><span>원</span></p>
+                                    </div>
+                                </div>
+                                
+                                <!-- 계좌없을 경우 -->
+                                <div class="result nodata sm">
+                                    <p class="tit normal">KB국민은행에 대환대상계좌가<br>존재하지 않습니다.</p>
+                                </div>
+                                <!-- // 계좌없을 경우 -->
+                            </div>
+                        </div>
+
+                        <ul class="list_result only_sum gap_lg_0">
+                            <li class="sum sm">
+                                <div class="key">총 건수</div>
+                                <div class="value"><strong class="number">1</strong><span class="num_unit">건</span></div>
+                            </li>
+                            <li class="sum sm">
+                                <div class="key">총 금액</div>
+                                <div class="value"><strong class="number">64,000,000</strong><span class="num_unit">원</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">다른 금융기관</a><!-- 221026 문구수정 -->
+                    <div class="toggle_panel" role="region">
+                        <div class="chk_data_group">
+                            <div class="chk_data_list_group">
+                                <div class="chk_data_list">
+                                    <div class="chk_head">
+                                        <span class="selection">
+                                            <input type="checkbox" id="checkCHK3" checked>
+                                            <label for="checkCHK3" class="label"><strong class="number">01391600699001</strong></label>
+                                        </span>
+                                    </div>
+                                    <ul class="list_data noline bdb_0">
+                                        <li>
+                                            <div class="key">금융기관명</div>
+                                            <div class="value">하나은행</div>
+                                        </li>
+                                        <li>
+                                            <div class="key">계좌일련번호</div>
+                                            <div class="value"><span class="number">00000000000000000000</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="key">대출잔액</div>
+                                            <div class="value"><span class="number">16,000,000</span><span class="num_unit">원</span></div>
+                                        </li>
+                                    </ul>
+                                    <div class="form_group">
+                                        <div class="form_tit">대환신청금액</div>
+                                        <div class="form_row"> 
+                                            <div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 대환신청금액 입력" onclick="">
+                                                <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="대환신청금액" data-unit="원" class="bg_white" readonly>
+                                            </div>
+                                        </div>
+                                        <p class="form_hangul" aria-hidden="true"><span>원</span></p>
+                                    </div>
+
+                                    <div class="form_group"> 
+                                        <div class="form_tit">담당자</div>    
+                                        <div class="form_row">
+                                            <div class="input">
+                                                <input type="text" placeholder="담당자 이름" title="담당자">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form_group tel">
+                                        <div class="form_tit">직통 전화번호</div>
+                                        <div class="form_row col">
+                                            <div class="select">
+                                                <button type="button" class="select_btn active" title="직통 전화번호 앞자리">02</button>
+                                            </div>
+                                            <div class="input" role="button" aria-label="직통 전화번호 입력" onclick="">
+                                                <input type="tel" value="" maxlength="8" title="직통 전화번호" aria-hidden="true" class="bg_white" readonly><!-- disable 처럼 보이게 할 경우 : class="bg_white" 삭제 -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form_group tel">
+                                        <div class="form_tit">FAX번호</div>
+                                        <div class="form_row">
+                                            <div class="input" role="button" aria-label="FAX번호 입력" onclick="">
+                                                <input type="tel" value="" maxlength="11" title="FAX번호" aria-hidden="true" class="bg_white" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="chk_data_list">
+                                    <div class="chk_head">
+                                        <span class="selection">
+                                            <input type="checkbox" id="checkCHK4">
+                                            <label for="checkCHK4" class="label"><strong class="number">01391600699001</strong></label>
+                                        </span>
+                                    </div>
+                                    <ul class="list_data noline bdb_0">
+                                        <li>
+                                            <div class="key">금융기관명</div>
+                                            <div class="value">하나은행</div>
+                                        </li>
+                                        <li>
+                                            <div class="key">계좌일련번호</div>
+                                            <div class="value"><span class="number">00000000000000000000</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="key">대출잔액</div>
+                                            <div class="value"><span class="number">16,000,000</span><span class="num_unit">원</span></div>
+                                        </li>
+                                    </ul>
+                                    <div class="form_group">
+                                        <div class="form_tit">대환신청금액</div>
+                                        <div class="form_row"> 
+                                            <div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 대환신청금액 입력" onclick="">
+                                                <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="대환신청금액" data-unit="원" readonly><!-- disable 처럼 보이게 할 경우 : class="bg_white" 삭제 -->
+                                            </div>
+                                        </div>
+                                        <p class="form_hangul" aria-hidden="true"><span>원</span></p>
+                                    </div>
+
+                                    <div class="form_group"> 
+                                        <div class="form_tit">담당자</div>    
+                                        <div class="form_row">
+                                            <div class="input">
+                                                <input type="text" placeholder="담당자 이름" title="담당자" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form_group tel">
+                                        <div class="form_tit">직통 전화번호</div>
+                                        <div class="form_row col">
+                                            <div class="select">
+                                                <button type="button" class="select_btn readonly" title="직통 전화번호 앞자리">02</button>
+                                            </div>
+                                            <div class="input" role="button" aria-label="직통 전화번호 입력" onclick="">
+                                                <input type="tel" value="" maxlength="8" title="직통 전화번호" aria-hidden="true" readonly><!-- disable 처럼 보이게 할 경우 : class="bg_white" 삭제 -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form_group tel">
+                                        <div class="form_tit">FAX번호</div>
+                                        <div class="form_row col">
+                                            <div class="select">
+                                                <button type="button" class="select_btn readonly" title="FAX번호 앞자리">02</button>
+                                            </div>
+                                            <div class="input" role="button" aria-label="FAX번호 입력" onclick="">
+                                                <input type="tel" value="" maxlength="8" title="FAX번호" aria-hidden="true" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 계좌없을 경우 -->
+                                <div class="result nodata sm">
+                                    <p class="tit normal"> 다른 금융기관에 대환대상계좌가<br>존재하지 않습니다.</p>
+                                </div>
+                                <!-- // 계좌없을 경우 -->
+                            </div>
+                        </div>
+
+                        <ul class="list_result only_sum gap_lg_0">
+                            <li class="sum sm">
+                                <div class="key">총 건수</div>
+                                <div class="value"><strong class="number">1</strong><span class="num_unit">건</span></div>
+                            </li>
+                            <li class="sum sm">
+                                <div class="key">총 금액</div>
+                                <div class="value"><strong class="number">64,000,000</strong><span class="num_unit">원</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <hr class="hr_divide">
+
+        <div class="section">
+            <ul class="list_data total">
+                <li>
+                    <div class="key">전체 건수</div>
+                    <div class="value right"><strong class="number">{1}</strong><span class="num_unit">건</span></div>
+                </li>
+                <li>
+                    <div class="key">총 금액</div>
+                    <div class="value right"><strong class="number">{20,000,000}</strong><span class="num_unit">원</span></div>
+                </li>
+            </ul>
+            <!-- <div class="btn_list_btm">
+                <span class="right"><a href="#none" class="btn_txt ico_arr">신용보증기금의 보증취급제한 대상계좌 확인</a></span>
+            </div> 221026 삭제-->
+        </div>
+
+        <!-- show : 보증취급제한 대상계좌 보유 고객일 경우 화면 221026 추가 -->
+        <h1 class="hidden">대환계좌정보 입력</h1>
+        <h2 class="h2">신용보증기금의 보증취급제한<br>대상계좌 확인</h2>
+        <div class="inform_top_wrap">
+            <p class="p">신용정보원 집중정보의 대환대상계좌가 신보가 정한 보증취급제한 대상에 해당됩니다.</p>
+        </div>
+
+        <div class="section">
+            <div class="list_data_group_s">
+                <h3 class="h3 number bold">01391600699001</h3>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">금융기관명</div>
+                        <div class="value">하나은행</div>
+                    </li>
+                    <li>
+                        <div class="key">연체 여부</div>
+                        <div class="value">부</div>
+                    </li>
+                    <li>
+                        <div class="key">최근 3개월이내<br>10일 이상 연체 여부</div>
+                        <div class="value">여</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group_s">
+                <h3 class="h3 number bold">01391600699001</h3>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">금융기관명</div>
+                        <div class="value">하나은행</div>
+                    </li>
+                    <li>
+                        <div class="key">연체 여부</div>
+                        <div class="value">부</div>
+                    </li>
+                    <li>
+                        <div class="key">최근 3개월이내<br>10일 이상 연체 여부</div>
+                        <div class="value">여</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //show : 보증취급제한 대상계좌 보유 고객일 경우 화면 221026 추가 -->
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span>
+				<span><button type="button" class="btn primary lg" disabled>다음</button></span><!-- 220729 스크래핑 -->
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

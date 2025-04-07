@@ -1,0 +1,192 @@
+<!doctype html>
+<head lang="ko">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>[CDD/EDD 등록]개인사업자 CDD/EDD 등록 완료</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="h1">법인사업자 정보입력</h1>
+        
+		<div class="inform_top_wrap">
+			<p class="depth">CDD/EDD 등록 확인을 위한 정확한 법인사업자 정보를 입력해 주세요.</p>
+		</div>
+
+        <div class="section">
+			<h2 class="hidden">기본정보</h2>
+			<ul class="list_data">
+				<li>
+					<div class="key">사업자등록번호</div>
+					<div class="value"><span class="number">432-04-44139</span></div>
+				</li>
+				<li>
+					<div class="key">법인등록번호</div>
+					<div class="value"><span class="number">110725-1403816</span></div>
+				</li>
+				<li>
+					<div class="key">업체명</div>
+					<div class="value">국민기업</div>
+				</li>
+				<!-- 221014 삭제
+				<li>
+					<div class="key">대표자명</div>
+					<div class="value">김가*</div>
+				</li> -->
+			</ul>
+		</div>
+
+		<div class="section">
+			<div class="form_group">
+				<div class="form_tit">상장여부</div>
+				<div class="form_row">
+					<ul class="rdoChk_ul2">
+						<li>
+							<div class="selection">
+								<input type="radio" id="radioul1_1" name="radioul1">
+								<label for="radioul1_1" class="label">
+									<em>상장</em>                
+								</label>
+							</div>
+						</li>
+						<li>
+							<div class="selection">
+								<input type="radio" id="radioul1_2" name="radioul1">
+								<label for="radioul1_2" class="label">
+									<em>비상장</em>                
+								</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="form_group">
+				<div class="form_tit">고위험업종구분</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn" title="고위험업종구분 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+					</div>
+				</div>
+			</div>
+
+			<div class="form_group">
+				<div class="form_tit">사업업종</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn" title="사업업종 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+					</div>
+				</div>
+			</div>
+
+			<div class="form_group address">
+				<div class="addr_tit">사업장주소</div>
+				<div class="addr_sch">
+					<button type="button" class="btn point sm round">주소검색</button>
+					<!-- 주소 검색 후 노출 -->
+					<div class="addr_cts">
+						<span class="addr_post number">07343</span>
+						<p>서울특별시 영등포구 국제금융로 108-6(여의도동, 진주아파트)</p>
+						<p>301동 1507호</p>
+					</div>
+					<!-- //주소 검색 후 노출 -->
+				</div>
+			</div>
+
+			<div class="form_group tel error">
+				<div class="form_tit">사업장전화번호</div>
+				<div class="form_row col">
+					<div class="select">
+						<button type="button" class="select_btn active" title="지역번호 선택">02</button>
+					</div>
+					<div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 이체금액 입력" onclick="">
+						<input type="tel" aria-hidden="true" id="id04" maxlength="8" placeholder="" title="사업장전화번호" readonly class="bg_white">
+					</div>
+				</div>
+				<p class="tip" aria-labelledby="id04">에러 텍스트 메시지</p>
+			</div>
+
+			<!-- 221014 수정 -->
+			<div class="form_group"> 
+				<div class="form_tit">대표자명</div> 
+				<div class="form_row">
+					<div class="form_txt fs17">김가*</div>
+				</div>
+			</div>
+			<!-- //221014 수정 -->
+
+			<div class="form_group">
+				<div class="form_tit">생년월일</div>
+				<div class="form_row">
+					<div class="input date">
+						<input type="tel" maxlength="6" title="생년월일" placeholder="숫자만 입력" value="1966.04.21">
+						<button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 기업관리점有 (살아있는 여신이 있는 경우) -->
+			<div class="form_group">
+				<div class="form_tit">관리점</div>
+				<div class="form_row">
+					<div class="input int_btn office_location">
+						<input type="text" placeholder="" title="관리점" value="KB국민은행 서염창지점" readonly>
+						<button type="button" class="btn point sm round">지점위치확인</button>
+					</div>
+				</div>
+			</div>
+			<!-- //기업관리점有 (살아있는 여신이 있는 경우) -->
+
+			<!-- 기업관리점無 + KB직원과 사전 논의無 -->
+			<div class="form_group">
+				<div class="form_tit">지점 선택</div>
+				<div class="form_row">
+					<div class="btn_trans_group">
+						<div class="select outline lg">
+							<button type="button" class="select_btn active" title="법인주소 근처지점">법인주소 근처지점</button>
+						</div>
+						<div class="select outline lg">
+							<button type="button" class="select_btn" title="사업장주소 근처지점">선택</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //기업관리점無 + KB직원과 사전 논의無 -->
+
+		</div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg" disabled>다음</button></span>  
+            </div>
+        </div>       
+        
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

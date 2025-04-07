@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[계좌상세정보]계좌상세조회 신탁_정기예금(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content" data-ui="full_pop"><!-- 풀팝업일 경우 추가 : data-ui="full_pop"-->
+        <h1 class="hidden">계좌상세정보</h1>
+        <div class="section">
+            <h2 class="hidden">계좌정보</h2><!-- 220729 리웍 -->
+            <div class="acc_pannel open btl">
+                <div class="acc_wrap detail"><!-- 220729 class="detail" 추가 -->
+                    <!-- 220729 리웍 -->
+                    <span class="kdic_logo">
+                        <img src="/msbiz/app/img/common/ico_kdic.png" alt="예금보험공사 보호금융상품 1인당 최고 5천만원" /> <!-- 보호 -->
+                        <!-- <img src="/msbiz/app/img/common/ico_kdic_x.png" alt="예금보험공사 비보호" /> 비보호 -->
+                    </span>
+                    <!-- //220729 리웍 -->
+                    <span class="badge refusal">승낙 미확인</span><!-- 220729 리웍 -->
+                    <div class="acc_name">상품명노출</div>
+                    <div class="acc_num"><span class="number">000000-00-000000</span></div>
+                    <div class="acc_info_wrap">
+                        <div class="acc_info">
+                            <span class="tit">예금주</span>
+                            <span class="tit">김국민</span>
+                        </div>
+                    </div>
+                    <div class="acc_sum_wrap">
+                        <div class="acc_pay">
+                            <span class="unit">신탁금액</span><strong class="number">1,000,000,000,000</strong><strong class="num_unit">원</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+
+        <div class="section">
+            <div class="list_data_group">
+                <h2 class="h3">계좌상세</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">신규일</div>
+                        <div class="value">
+                            <span class="number">2019.04.24</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">만기일</div>
+                        <div class="value">
+                            <span class="number">2024.03.24</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">조기상환결정일</div>
+                        <div class="value">
+                            <span class="number">-</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">계좌상태</div>
+                        <div class="value">정상</div>
+                    </li>
+                    <li>
+                        <div class="key">이자계산최종일</div>
+                        <div class="value">
+                            <span class="number">0000.00.00</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">관리지점</div>
+                        <div class="value">방배PB센터</div>
+                    </li>
+                    <li>
+                        <div class="key">입출금 가능여부</div>
+                        <div class="value">입출금 가능</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">평가정보</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">기준일</div>
+                        <div class="value">
+                            <span class="number">2022.05.24</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">가입기간(일수)</div>
+                        <div class="value">
+                            <span class="number">3,759</span><span class="num_unit">일</span><!-- 220729 리웍 -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">신탁평균잔액</div>
+                        <div class="value">
+                            <strong class="number">0</strong><span class="num_unit">원</span><!-- 220729 리웍 -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">총세전신탁이익</div>
+                        <div class="value">
+                            <strong class="number">205,453,792</strong><span class="num_unit">원</span><!-- 220729 리웍 -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">수익률(연환산)</div>
+                        <div class="value">
+                            <span class="number">0.91</span><span class="num_unit">%</span><!-- 220729 리웍 -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">단순수익률</div>
+                        <div class="value">
+                            <span class="number">0.00</span><span class="num_unit">%</span><!-- 220729 리웍 -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 유의사항 -->
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+                    <!-- ETF 거치식 상품인 경우, 해당 유의사항 미노출 -->
+                    <li>위 내역은 전전영업일기준 보유자산입니다.<br>
+                        (추격매매 방지를 위해 2영업일 전 보유종목만 열람 가능하도록 하고 있습니다.)</li>
+                    <!-- //ETF 거치식 상품인 경우, 해당 유의사항 미노출 -->
+                    <li>기준일 종가로 평가된 정보로써 실제 해지시 변동될 수 있으며, 자세한 내용은 해당 영업점 또는 콜센터로 문의하시기 바랍니다. ☎1588-9999</li>
+                </ul>
+                <p class="depth_tit">투자자 숙려제도 관련 안내</p>
+                <ul class="depth bul">
+                    <li>투자자 숙려제도 대상인 경우 승낙기간 내 승낙이 완료된 계좌만 최종 신규가 확정되며, 승낙이 완료되지 않은 계좌는 신규가 취소됩니다. (‘승낙 완료’는 승낙을 완료한 경우, ‘승낙 거절’은 승낙을 거절한 경우, ‘승낙 미확인’은 아직 승낙을 하지 않은 경우에 표시됩니다.)</li>
+                    <li>ARS 1833-3938로 직접 연결하여 승낙 가능</li>
+                </ul>
+                <p class="depth_tit">용어설명</p>
+                <ul class="depth bul">
+                    <li>신탁평균잔액 : 가입기간의 일별신탁금액 총합계 ÷ 가입기간</li>
+                    <li>총세전신탁이익 : 기지급 신탁이익을 포함한 가입기간 동안의 누적 세전신탁이익</li>
+                    <li>수익률(연환산) : 총세전신탁이익 ÷ 신탁평균잔액 × 365 ÷ 가입기간<br>단, 적립식 신탁의 경우 신탁잔액기준</li>
+                    <li>단순수익률 : 해당신탁이익 ÷ 신탁평균잔액<br>단, 적립식 신탁의 경우 신탁잔액기준</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //유의사항 -->
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">확인</button></span>
+            </div>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

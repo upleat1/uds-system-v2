@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[대출신청안내]대출신청안내</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">대출신청안내</h1>
+        <div class="section">
+            <h2 class="h2">대출 대상</h2>
+            <ul class="depth num">
+                <li>사업자등록증 상의 사업장 소재지가 경기도인 고객</li>
+                <li>사업영위기간이 3개월 이상이며 최근 3개월 간의 매출 정보 확인이 가능한 고객</li>
+                <li>NICE신용평점 879점 이하 고객</li>
+                <li>신청 사업장 관련 사진 제출이 가능한 고객</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="h2">대출 진행 과정</h2>
+            <ol class="depth step">
+                <li>
+                    <p class="tit">한도 및 금리 알아보기(대출신청)</p>
+                </li>
+                <li>
+                    <p class="tit">보증서 발급 신청</p>
+                </li>
+                <li>
+                    <p class="tit">대출실행</p>
+                </li>
+            </ol>
+        </div>
+        <div class="section">
+            <h2 class="h2">대출가능시간</h2>
+            <ul class="depth bul">
+                <li>대출 신청 : 오전 9시부터 오후 9시까지</li>
+                <li>대출 실행 : 오전 9시부터 오후 4시까지</li>
+            </ul>
+            <p class="depth info">단, 은행영업일에 한함</p>
+        </div>
+        <!-- 220729 리웍 -->
+        <div class="section">
+            <ul class="list_acco js_accordion">
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">신청 전 유의사항 및 준비서류</a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="depth bul">
+                            <li>대출의 자금용도는 기업자금용도에 한합니다.</li>
+                            <li>본인명의 휴대폰이 필요합니다.</li>
+                            <li class="bold">대출서류 자동제출을 위해 사전에 국세청 홈택스와 정부24, 여신금융협회 가입이 필요합니다.
+                                <ul class="depth dash">
+                                    <li>개인용 공동인증서 또는 개인금융인증서 이용고객님은 국세청 홈텍스와 정부24에 인증서를 등록해 주시고, KB기업스타뱅킹에도 해당 인증서를 저장하셔야 합니다.</li>
+                                    <li>KB국민인증서 이용 고객님은 별도 등록절차 없이 이용 가능합니다.</li>
+                                </ul>
+                            </li>
+                            <li>자택/사업장이 임차인 경우 서류제출을 위해 임대차계약서를 준비해주세요.</li>
+                            <li>신청 사업장 관련 사진을 준비해주세요.</li>
+                            <li>고객대출가능여부 및 대출가능금액은 고객님께서 입력하신 정보를 근거로 산정되므로 입력하신 내용과 당행의 확인 내용이 다른 경우 대출가능금액이 변동되거나 대출이 거절될 수 있습니다.</li>
+                        </ul>
+                        <div class="btn_list_btm">
+                            <span><button type="button" class="btn outline mm">사업장 사진 제출 준비사항 확인</button></span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">보증신청 전 안내사항</a>
+                    <div class="toggle_panel" role="region">
+                        <h3 class="h3 gap_0">준비물</h3>
+                        <ol class="depth step sm">
+                            <li>개인공동/금융인증서, KB국민인증서<br>(아래기관 회원가입시 사용된 인증서)</li>
+                            <li>서류자동제출을 위한 아래 기관(3곳) 회원가입<br>(이미 가입된 경우 생략가능)</li>
+                            <li>사업장 및 주민등록등본상 또는 실거주지가 임차인 경우 임대차계약서 (최대 3곳)</li>
+                        </ol>
+                        <h3 class="h3 gap_lg_0">서류자동제출을 위한 회원가입이 필요한 외부기관</h3>
+                        <ul class="depth bul">
+                            <li>국세청(홈텍스) 회원가입  및 개인공동/금융인증서 등록<br><strong>(주민등록번호로 회원가입)</strong>
+                            </li>
+                            <li>정부24 회원가입 및 개인공동/금융인증서 등록<br><strong>(내국인-개인 이름/주민등록번호로 회원가입)</strong></li>
+                            <li>여신금융협회 가맹점 매출거래정보 통합조회서비스 회원가입<br><strong>가입 후 ID와 비밀번호를 잘 기억해 주세요.</strong></li>
+                        </ul>
+                        <p class="tip_info">위 외부기관에 회원가입을 하지 않거나 개인공동/금융인증서가 등록되어있지 않을 경우 대출 및 보증서 심사시 거절될 수 있음을 인지하시기 바랍니다.</p>
+                        <div class="btn_list_btm right">
+                            <span><a href="#none" class="btn_txt ico_arr">개인공동/금융인증서 등록 경로</a></span>
+                        </div>
+                        <h3 class="h3 gap_lg_0">보증제한 대상</h3>
+                        <ul class="depth bul">
+                            <li>휴폐업 중인 기업</li>
+                            <li>법인 또는 공동대표가 등재된 개인기업</li>
+                            <li>연체대출금 보유 또는 국세·지방세 체납기업</li>
+                            <li>보증제한업종을 영위하는 기업 (도박,유흥,오락,점술 등)</li>
+                            <li>기타 신용상태가 불량하다고 판단되는 기업</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">보증신청 전 유의사항</a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="depth bul">
+                            <li>본 보증상품은 서류제출·보증심사 등 전 과정을 모바일 앱을 통해 진행하는 비대면 보증으로 보증대상, 보증심사 방법에 있어서 영업점 창구를 통한 대면보증과 다소 차이가 있습니다.</li>
+                            <li>고객님께서는 재단이 보증을 하는 경우에는 보증료를 납부하셔야 합니다.</li>
+                            <li>본 보증 지원요건에 부합하지 않는 경우(보증거절)에도 대면보증을 통해 보증지원이 가능할 수 있으므로 재단방문 또는 전화로 상담하여 주시기 바랍니다.</li>
+                            <li>해당 상품은 경기도 및 경기신용보증재단 협약 『고금리 대환 및 저금리 운영자금(신용UP) 특례보증』으로 진행되는 대출상품입니다.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- //220729 리웍 -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">대출 신청</button></span>
+            </div>
+        </div>
+    </div>
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

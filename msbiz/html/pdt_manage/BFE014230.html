@@ -1,0 +1,254 @@
+<!doctype html>
+<head lang="ko">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>적립금평가조회</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content" data-ui="full_pop">
+		<h1 class="h1">보유자산운용현황 상세</h1>
+		<div class="section">
+			<ul class="list_data left lbt">
+				<li>
+					<div class="key">상품명</div>
+					<div class="value">KB퇴직연금정기예금</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<h2 class="h3">운용자산 상세내역</h2>
+			<div class="list_data_group_s">
+				<ul class="list_data left lbt">
+					<li>
+						<div class="key">정기예금계좌번호</div>
+						<div class="value"><span class="number">000000-00-000000</span></div>
+					</li>
+					<li>
+						<div class="key">신규일</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">만기일</div>
+						<div class="value"><span class="number">2002.12.31</span></div>
+					</li>
+					<li>
+						<div class="key">신규금액</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">상품잔액</div>
+						<div class="value"><strong class="number">100,000,000,000</strong><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">만기이율</div>
+						<div class="value"><span class="number">2.22</span><span class="num_unit">%</span></div>
+					</li>
+					<li>
+						<div class="key">평가금액</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">인출횟수</div>
+						<div class="value"><span class="number">1,000</span><span class="num_unit">회</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="list_data_group_s">
+				<ul class="list_data left lbt">
+					<li>
+						<div class="key">계좌번호</div>
+						<div class="value"><span class="number">000000-00-000000</span></div>
+					</li>
+					<li>
+						<div class="key">매입일</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">매입좌수</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">좌</span></div>
+					</li>
+					<li>
+						<div class="key">잔존좌수</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">좌</span></div>
+					</li>
+					<li>
+						<div class="key">보유상품잔액</div>
+						<div class="value"><strong class="number">100,000,000,000</strong><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">평가금액</div>
+						<div class="value"><span class="number">1,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">기준가(매입일)</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">기준가(평가일)</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">수정가(매입일)</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">수정가(평가일)</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="list_data_group_s">
+				<ul class="list_data left lbt">
+					<li>
+						<div class="key">발행일</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">매입일</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">만기일</div>
+						<div class="value"><span class="number">2022.12.31</span></div>
+					</li>
+					<li>
+						<div class="key">상품잔액</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">평가금액</div>
+						<div class="value"><span class="number">100,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">매수단가</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">매입회차</div>
+						<div class="value"><span class="number">999</span><span class="num_unit">회</span></div>
+					</li>
+					<li>
+						<div class="key">잔존기간</div>
+						<div class="value"><span class="number"></span><span class="num_unit">데이터 확인 필요</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="list_data_group_s">
+				<ul class="list_data left lbt">
+					<li>
+						<div class="key">매입일</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">만기일</div>
+						<div class="value"><span class="number">2022.12.31</span></div>
+					</li>
+					<li>
+						<div class="key">상품판매회사관리번호</div>
+						<div class="value"><span class="number">00000000</span></div>
+					</li>
+					<li>
+						<div class="key">명세일</div>
+						<div class="value"><span class="number">2005.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">매입금액</div>
+						<div class="value"><span class="number">100,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">상품잔액</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">만기이율</div>
+						<div class="value"><span class="number">22.2</span><span class="num_unit">%</span></div>
+					</li>
+					<li>
+						<div class="key">평가금액</div>
+						<div class="value"><span class="number">1,000,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="list_data_group_s">
+				<ul class="list_data left lbt">
+					<li>
+						<div class="key">매입일</div>
+						<div class="value"><span class="number">2002.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">만기일</div>
+						<div class="value"><span class="number">2022.12.31</span></div>
+					</li>
+					<li>
+						<div class="key">상품판매회사관리번호</div>
+						<div class="value"><span class="number">00000000</span></div>
+					</li>
+					<li>
+						<div class="key">명세일</div>
+						<div class="value"><span class="number">2005.01.01</span></div>
+					</li>
+					<li>
+						<div class="key">매입좌수</div>
+						<div class="value"><span class="number">100,000,000,000</span><span class="num_unit">좌</span></div>
+					</li>
+					<li>
+						<div class="key">잔고수량</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">좌</span></div>
+					</li>
+					<li>
+						<div class="key">상품잔액</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">평가기준금액</div>
+						<div class="value"><span class="number">1,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+					<li>
+						<div class="key">만기수익률</div>
+						<div class="value"><span class="number">22.2</span><span class="num_unit">%</span></div>
+					</li>
+					<li>
+						<div class="key">평가금액</div>
+						<div class="value"><span class="number">1,000,000,000,000</span><span class="num_unit">원</span></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

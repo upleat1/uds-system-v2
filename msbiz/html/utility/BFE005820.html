@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[환경개선부담금 납부]통합 환경개선 고지내역 간략조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공과금" href="/msbiz/app/css/utility.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_utility">
+
+            <h1 class="h1">환경개선부담금 고지내역 간략조회</h1>
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <li>지자체 선택 및 고지내역 조회 후 납부해 주세요.</li>
+                    <li>서울시 환경개선부담금은 세외수입 메뉴를 이용해 주세요.</li>
+                    <li>납부 가능시간 : <strong>00:30~23:30</strong>(토요일/공휴일 가능)</li>
+                    <!-- 221020 문구수정 -->
+                    <li>본인에게 부과된 내역은 주민(사업자/법인)등록번호 또는 전자납부번호로 조회하여 납부 할 수 있으며, 타인에게 부과된 내역은 전자납부번호로 조회하여 납부 할 수 있습니다.</li>
+                    <li><strong>금융결제원 시스템 점검시간인 매월 두번째 토요일 23:30~익일 07:00까지 거래 불가합니다.</strong></li>
+                </ul>
+            </div>
+            <div class="section">
+                <!-- 220729 타이틀 변경 -->
+                <h2 class="h3">조회조건</h2>
+                <!-- 221017 gap_0 클래스 추가 -->
+                <div class="form_group error gap_0">
+                    <!-- 220729 타이틀 변경 -->
+                    <div class="form_tit">지방자치단체 선택</div>
+                    <div class="form_row">
+                        <div class="ele_ul_hor">
+                            <div class="select">
+                                <button type="button" class="select_btn" title="시, 도 선택">전국</button>
+                            </div>
+                            <div class="space">-</div>
+                            <div class="select">
+                                <button type="button" class="select_btn" title="지방자치단체 선택">전체</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tip">내용</p>
+                    <div class="btn_wrap btm">
+                        <a href="#none" class="btn_txt ico_arr">납부가능 지자체 조회</a>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">조회방법 선택</div>
+                    <div class="form_row">
+                        <!-- 221017 gap_sm 클래스 제거 -->
+                        <div class="rdoChk_group">
+                            <span class="selection">
+                                <input type="radio" id="radioV1" name="radio_v" checked>
+                                <label for="radioV1" class="label"><em>선택/전체납부</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="radioV2" name="radio_v">
+                                <label for="radioV2" class="label"><em>전자납부번호</em></label>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 선택/전체납부, 220729 form_group 추가 -->
+                    <div class="form_group error">
+                        <div class="form_row">
+                            <div class="select">
+                                <!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                <button type="button" class="select_btn" title="주민등록번호 또는 법인/사업자등록번호 선택">780101-1*****</button>
+                            </div>
+                            <!-- 221007 클래스 값 변경 -->
+                            <p class="tip_info">납부의무자 주민등록번호(법인/사업자등록번호)로 조회 및 납부 가능합니다.</p>
+                            <p class="tip">주민등록번호 또는 법인/사업자등록번호를 선택해 주세요.</p>
+                        </div>
+                    </div>
+                    <!-- //선택/전체납부, 220729 form_group 추가 -->
+                    <!-- 전자납부번호, 220729 form_group 추가 -->
+                    <div class="form_group error">
+                        <div class="form_row">
+                            <div class="input" role="button" aria-label="" onclick="">
+                                <input type="tel" class="bg_white" placeholder="숫자만 입력" title="전자납부번호 입력" readonly="readonly" aria-hidden="true">
+                            </div>
+                            <!-- 221007 클래스 값 변경 -->
+                            <p class="tip_info">단건납부를 원하실 경우 납부고지서 상의 전자납부번호로 조회 및 납부 가능합니다.</p>
+                            <p class="tip">전자납부번호를 입력해 주세요.</p>
+                        </div>
+                    </div>
+                    <!-- //전자납부번호, 220729 form_group 추가 -->
+                </div>
+
+                <div class="form_btm_full_wrap">
+                    <span><button type="button" class="btn primary md ">조회</button></span>
+                </div>
+            </div>
+            <hr class="hr_divide">
+            <div class="section">
+                <h2 class="h3">통합환경개선고지내역 조회 결과</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">총 고지건수</div>
+                        <div class="value">
+                            <!-- 221017 strong 태그로 변경, 한줄로변경 -->
+                            <strong class="number">123,456</strong><span class="num_unit">건</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">총 금액</div>
+                        <div class="value">
+                            <!-- 221017 strong 태그로 변경, 한줄로변경 -->
+                            <strong class="number">123,123,123,123</strong><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 220729 section 추가 -->
+            </div>
+            <div class="section">
+                <!-- //220729 section 추가 -->
+
+                <!-- 220729 수정 -->
+                <div class="chk_data_group">
+                    <div class="chk_total">
+                        <span class="selection">
+                            <input type="checkbox" id="checkType1" class="chk_all">
+                            <label for="checkType1" class="label bold">전체선택</label>
+                        </span>
+                    </div>
+                    <div class="chk_data_list_group">
+                        <div class="chk_data_list">
+                            <div class="chk_head">
+                                <span class="selection chk">
+                                    <input type="checkbox" id="checkCHK1">
+                                    <label for="checkCHK1" class="label">
+                                        <strong>제주특별자치도</strong>
+                                        <!-- 221017 fc_gray 추가 -->
+                                        <span class="normal fc_gray">지자체</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">세목</div>
+                                    <div class="value">지방세 이름</div>
+                                </li>
+                                <li>
+                                    <div class="key">납부기한</div>
+                                    <div class="value"><span class="number">2022.06.27</span></div>
+                                </li>
+                                <li>
+                                    <div class="key">납기구분</div>
+                                    <div class="value">자동차세</div>
+                                </li>
+                                <li>
+                                    <div class="key">청구금액</div>
+                                    <div class="value">
+                                        <!-- 221017 한줄로변경 -->
+                                        <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="key">고지번호</div>
+                                    <div class="value"><span class="number">12345-45456-54654354</span></div>
+                                </li>
+                            </ul>
+                            <div class="btn_list_btm">
+                                <span><button type="button" class="btn outline sm">상세보기</button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_list_btm more">
+                        <button type="button" class="btn">더보기</button>
+                    </div>
+                </div>
+                <!-- //220729 수정 -->
+
+            </div>
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>지점에서 이미 납부한 환경개선부담금은 이중납부 될 수 있으므로 반드시 납부여부를 확인해 주세요. (이중 납부된 경우 해당 지방자치단체로 환급신청해 주세요.)</li>
+                        <li>환경개선부담금은 시세, 구세 등이 별도로 부과되므로, 시 부과분 혹은 구 부과분 등을 정확하게 확인하여 지자체를 선택해 주세요.</li>
+                        <!-- <li>타인에게 부과된 환경개선부담금도 장표번호로 납부가 가능합니다. (단, 납부고지된 고객만 납부된 내역을 조회할 수 있습니다.)</li> -->
+                        <li>‘전체납부’ 선택 시 통장적요란에는 세부항목이 표시되지 않습니다.</li>
+                        <li>‘전체납부’ 선택 시 고지된 모든 내역을 한번에 납부할 수 있습니다. (서울시 불가)</li>
+                        <li>‘선택납부’ 선택 시 1회에 최대 15건까지 선택하여 납부할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg">선택납부</button></span>
+                    <span><button type="button" class="btn primary lg">전체납부</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

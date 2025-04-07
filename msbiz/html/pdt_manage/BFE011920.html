@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[진행현황조회]대출진행현황상세</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+		<h1 class="hidden">대출진행현황 정보</h1>
+
+        <div class="section">
+            <ol class="step_loan">
+                <li>
+                    <span class="ico_step"></span>접수중
+                </li>
+                <li>
+                    <span class="ico_step"></span>심사중
+                </li>
+                <li class="active">
+                    <span class="hidden">현재단계</span><!-- 220907 접근성 추가 -->
+                    <span class="ico_step"></span>심사<br>완료
+                </li>
+                <li>
+                    <span class="ico_step"></span>약정서<br>작성
+                </li>
+                <li>
+                    <span class="ico_step"></span>실행<br>준비
+                </li>
+                <li>
+                    <span class="ico_step"></span>실행<br>완료
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <ul class="list_acco js_accordion">
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">
+                        <h2 class="h2">기본정보</h2>
+                    </a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="list_data lbt bdt">
+                            <li>
+                                <div class="key">사업자명</div>
+                                <div class="value">턱쥰란</div>
+                            </li>
+                            <li>
+                                <div class="key">대표자명</div>
+                                <div class="value">이*훈</div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">
+                        <h2 class="h2">대출정보</h2>
+                    </a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="list_data lbt">
+                            <li>
+                                <div class="key">접수일자</div>
+                                <div class="value"><span class="number">2022.04.13</span></div>
+                            </li>
+                            <li>
+                                <div class="key">대출금액</div>
+                                <div class="value">
+                                    <strong>
+                                        KRW <span class="number">5,000,000</span><br>(<span class="number">5</span>백만)
+                                    </strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">계좌번호</div>
+                                <div class="value"><span class="number">013916-12-123***</span></div>
+                            </li>
+                            <li>
+                                <div class="key">대출기간</div>
+                                <div class="value"><span class="number">12</span><span class="num_unit">개월</span></div>
+                            </li>
+                            <li>
+                                <div class="key">대출상환방법</div>
+                                <div class="value">일시상환</div>
+                            </li>
+                            <li>
+                                <div class="key">상품명</div>
+                                <div class="value">KB 희망플러스 신용 이차보전 협약대출(비대면신청분)</div>
+                            </li>
+                            <li>
+                                <div class="key">대출종류</div>
+                                <div class="value">운전자금</div>
+                            </li>
+                            <li>
+                                <div class="key">이자율(예정금리)</div>
+                                <div class="value"><strong class="number">3.5</strong><span class="num_unit">%</span></div>
+                            </li>
+                            <li>
+                                <div class="key">
+                                    대출금리변동주기 <button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button>
+                                </div>
+                                <div class="value"><span class="number">6</span>개월변동주기</div>
+                            </li>
+                            <li>
+                                <div class="key">
+                                    고객부담인지세 <button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button>
+                                </div>
+                                <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                            </li>
+                            <li>
+                                <div class="key">연관상담신청정보</div>
+                                <div class="value">
+                                    <span class="number">9000001375536</span>
+                                    <div class="gap_xxs">
+                                        <button type="button" class="btn outline xxs">상담내역보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="tip_info">
+                            <li><strong>이자율은 대출실행 시 기준금리에 따라 변동될 수 있습니다.</strong></li>
+                            <li>건별 취급 시 거래기간으로 이자율이 차등 적용되는 상품은 미표시(대출상환방법, 이자율, 대출금리변동주기). 상세한 내용은 거래 약정서 참조 또는 영업점 문의.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">
+                        <h2 class="h2">약정정보</h2>
+                    </a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="list_data lbt bdt">
+                            <li>
+                                <div class="key">대출금입금은행</div>
+                                <div class="value">국민은행</div>
+                            </li>
+                            <li>
+                                <div class="key">대출금입금계좌</div>
+                                <div class="value"><span class="number">123456-12-123***</span></div>
+                            </li>
+                            <li>
+                                <div class="key">자동이체등록계좌</div>
+                                <div class="value"><span class="number">123456-12-123***</span></div>
+                            </li>
+                            <li>
+                                <div class="key">자동이체일</div>
+                                <div class="value"><span class="number">25</span><span class="num_unit">일</span></div>
+                            </li>
+                            <li>
+                                <div class="key">대출실행결과 안내</div>
+                                <div class="value">문자메시지</div>
+                            </li>
+                            <li>
+                                <div class="key">약관 변경내용 안내</div>
+                                <div class="value">이메일</div>
+                            </li>
+                            <li>
+                                <div class="key">대출만기도래 안내</div>
+                                <div class="value">이메일</div>
+                            </li>
+                            <li>
+                                <div class="key">이자/금리변경내역 안내</div>
+                                <div class="value">신청안함</div>
+                            </li>
+                            <li>
+                                <div class="key">이자납입지체통지여부</div>
+                                <div class="value">신청함</div>
+                            </li>
+                            <li>
+                                <div class="key">약정서 사본 교부방법</div>
+                                <div class="value">문자메시지</div>
+                            </li>
+                            <li>
+                                <div class="key">이메일 주소</div>
+                                <div class="value">Koooo***@naver.com</div>
+                            </li>
+                        </ul>
+                        <!-- 약정서 작성 전 출력 -->
+                        <p class="txt_nodata">약정서 작성 완료 이후부터<br>조회 가능합니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">
+                        <h2 class="h2">약정서류목록</h2>
+                    </a>
+                    <div class="toggle_panel" role="region">
+                        <h3 class="h3">채무자</h3>
+                        <div class="table">
+                            <table>
+                                <caption>채무자 서류정보</caption>
+                                <colgroup>
+                                    <col >
+                                    <col style="width:30%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">서류명</th>
+                                        <th scope="col">완료 서류보기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>여신거래신청서</td>
+                                        <td class="center">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>근질권설정계약서</td>
+                                        <td class="center">미완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>여신거래약정서</td>
+                                        <td class="center"><button type="button" class="btn outline xs">보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>기업여신상품설명서</td>
+                                        <td class="center"><button type="button" class="btn outline xs">보기</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                        </div>
+
+                        <h3 class="h3 gap_lg_0">채무관계인(연대보증인)</h3>
+                        <div class="table">
+                            <table>
+                                <caption>채무관계인(연대보증인) 서류정보</caption>
+                                <colgroup>
+                                    <col >
+                                    <col style="width:25%">
+                                    <col style="width:30%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">서류명</th>
+                                        <th scope="col">이름</th>
+                                        <th scope="col">완료 서류보기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>여신거래신청서</td>
+                                        <td class="center">이*민</td>
+                                        <td class="center">완료</td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                        </div>
+
+                        <h3 class="h3 gap_lg_0">채무관계인 (담보제공자)</h3>
+                        <div class="table">
+                            <table>
+                                <caption>채무관계인 (담보제공자) 서류정보</caption>
+                                <colgroup>
+                                    <col >
+                                    <col style="width:25%">
+                                    <col style="width:30%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">서류명</th>
+                                        <th scope="col">이름</th>
+                                        <th scope="col">완료 서류보기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>근저당권설정계약서</td>
+                                        <td class="center">이*민</td>
+                                        <td class="center"><button type="button" class="btn outline xs">보기</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                        </div>
+                        <!-- 약정서 작성 전 출력 -->
+                        <p class="txt_nodata">약정서 작성 완료 이후부터<br>조회 가능합니다.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">대출약정</button></span>
+            </div>
+        </div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

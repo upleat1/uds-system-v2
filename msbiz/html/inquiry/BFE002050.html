@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>증권 내역조회(타행) - 거래내역 조회</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <h1 class="hidden">증권 내역조회</h1>
+        <div class="section">
+            <div class="acc_pannel_wrap in_acc_detail">
+                <h2 class="hidden">사업장 선택</h2>
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="사업장 선택">국민상사</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="hidden">계좌정보</h2>
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn acc_bank md active" title="출금계좌정보 선택">
+                                <span class="icon_bank_243"></span>한국투자 12345678901234
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acc_pannel top">
+                    <div class="acc_wrap">
+                        <div class="acc_nick"> 
+                            <span>(계좌별명)</span>
+                            <!-- 221128 계좌별명 버튼 삭제 -->
+                        </div>
+                        <div class="acc_name">한국투자기업증권</div>
+                        <!-- <div class="acc_tip">인증서 만료 20일 전입니다.</div> -->
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay">
+                                <span class="unit">총 잔액</span><!-- 221102 수정 : class 'hidden' 에서 'unit' 으로 수정 -->
+                                <strong class="number">4,000,101</strong><span class="num_unit">원</span>
+                            </div>
+                        </div>
+
+                        <!-- 220922 수정 : CMS 계좌 case 추가 -->
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay">
+                                <span class="unit">원금</span>
+                                <strong class="number">4,000,101</strong><span class="num_unit">원</span>
+                            </div>
+                            <div class="acc_sum">평가금액
+                                <span class="number">20,000,101</span><span class="num_unit">원</span>
+                            </div>
+                        </div>
+                        <!-- //220922 수정 : CMS 계좌 case 추가 -->
+
+                        <!-- CMS 계좌만 노출 -->
+                        <div class="acc_sum_wrap only_cms">
+                            <button type="button" class="btn_txt ico_reset sm sm2">업데이트</button>
+                            <div class="txt_box">
+                                <p class="p_sub">잔액 : <span class="number">202206.07 17:00:32</span></p>
+                                <!-- <p class="p_sub"><a href="#none" class="btn_txt link sm fc_nega">잔액 오류</a></p> -->
+                                
+                                <p class="p_sub">거래내역 : <span class="number">202206.07 17:00:32</span></p>
+                                <!-- <p class="p_sub"><a href="#none" class="btn_txt link sm fc_nega">거래내역 오류</a></p> -->
+                                <!-- <p class="p_sub">거래내역 : 업데이트 필요</p> -->
+                            </div>
+                        </div>
+                        <!-- //CMS 계좌만 노출 -->
+                        <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button><!-- CMS 계좌만 노출 -->
+                    </div>
+                    <div class="btn_area">
+                        <span><a href="#" class="btn primary mm">이체</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort_wrap">
+            <h2 class="hidden">조회조건</h2>
+            <div class="sort_detail">
+                <button class="btn_txt ico_arrdown" title="조회기간설정">
+                    <span><em class="number">3</em>개월<span class="hidden">선택됨</span></span>
+                    <span>전체</span>
+                    <span>최신순</span>
+                </button>
+            </div>       
+        </div>
+
+        <div class="section">
+            <h2 class="hidden">내역조회</h2>
+            <section class="in_trade_detail">
+                <div class="list_top_wrap">
+                    <div class="col">
+                        <div class="sch_period">
+                            <span class="number">2022.04.21 ~ 2022.05.21</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <span class="switch right">    
+                            <input type="checkbox" id="switch1" checked>
+                            <label for="switch1"><span>잔액표기</span></label>
+                        </span>
+                    </div>
+                </div>
+                <div class="list_data_group">
+                    <div class="list_data_group_s">
+                        <h3 class="hidden">내역조회1</h3>
+                        <div class="list_top_wrap type1">
+                            <div class="col col_l number">2022.11.12 16:03:21</div>
+                        </div>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">받는분</div>
+                                <div class="value">김국민(적요)</div>
+                            </li>
+                            <li>
+                                <div class="key">출금금액</div>
+                                <div class="value">
+                                    <span class="number fc_nega">2,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">잔액</div>
+                                <div class="value">
+                                    <span class="number">2,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list_data_group_s">
+                        <h3 class="hidden">내역조회2</h3>
+                        <div class="list_top_wrap type1">
+                            <div class="col col_l number">2022.11.12 16:03:21</div>
+                        </div>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">보낸분</div>
+                                <div class="value">김국민(적요)</div>
+                            </li>
+                            <li>
+                                <div class="key">출금금액</div>
+                                <div class="value">
+                                    <span class="number fc_posi">2,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">잔액</div>
+                                <div class="value">
+                                    <span class="number">2,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                
+                <div class="btn_list_btm more">
+                    <button type="button" class="btn">더보기</button>
+                </div>
+            </section>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

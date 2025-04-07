@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[지사/ID 건별이체]결과상세보기</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹" href="/msbiz/app/css/transfer.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">지사/ID 건별이체 결과상세보기 화면</h1>
+            <div class="section">
+                <h2 class="h1">결과상세보기</h2>
+                <div class="list_data_group">
+                    <!-- 처리중 : 예약취소 가능 -->
+                    <div class="list_data_group_s">
+                        <div class="h3 grid tr_tit_row">
+                            <div class="col"><h3>이체결과내역</h3></div>
+                            <div class="col append">
+                                <span class="badge line2">처리중</span>
+                            </div>
+                        </div>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">거래종류</div>
+                                <div class="value">{Star 건별이체}</div>
+                            </li>
+                            <li>
+                                <div class="key">이체지정일</div>
+                                <div class="value"><span class="number">2022.12.06 14:00</span></div>
+                            </li>
+                            <li>
+                                <div class="key">처리상태</div>
+                                <div class="value">처리중</div>
+                            </li>
+                            <li>
+                                <div class="key">결재구분</div>
+                                <div class="value">결재</div>
+                            </li>
+                            <li>
+                                <div class="key">입금기관</div>
+                                <div class="value">KB국민</div>
+                            </li>
+                            <li>
+                                <div class="key">입금계좌번호</div>
+                                <div class="value">
+                                    <span class="number">383601-04-076998</span>
+                                    /<br><span class="sep_name">{계좌별명}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">이체금액</div>
+                                <div class="value"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                            </li>
+                            <li>
+                                <div class="key">수수료</div>
+                                <div class="value"><span class="number">1,000</span><span class="num_unit">원</span></div>
+                            </li>
+                            <li>
+                                <div class="key">입금계좌메모</div>
+                                <div class="value">부ID계정</div>
+                            </li>
+                            <li>
+                                <div class="key">등록일시</div>
+                                <div class="value"><span class="number">2022.12.06 17:51:02</span></div>
+                            </li>
+                            <li>
+                                <div class="key">처리일시</div>
+                                <div class="value"><span class="number"></span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 정상 : 예약취소 불가 -->
+                    <div class="list_data_group_s">
+                        <div class="h3 grid tr_tit_row">
+                            <div class="col"><h3>이체결과내역</h3></div>
+                            <div class="col append">
+                                <span class="badge approval">정상</span>
+                            </div>
+                        </div>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">거래종류</div>
+                                <div class="value">{Star 건별이체}</div>
+                            </li>
+                            <li>
+                                <div class="key">이체지정일시</div>
+                                <div class="value"><span class="number">2022.12.06 14:00</span></div>
+                            </li>
+                            <li>
+                                <div class="key">처리상태</div>
+                                <div class="value">정상</div>
+                            </li>
+                            <li>
+                                <div class="key">결재구분</div>
+                                <div class="value">결재</div>
+                            </li>
+                            <li>
+                                <div class="key">입금기관</div>
+                                <div class="value">KB국민</div>
+                            </li>
+                            <li>
+                                <div class="key">입금계좌번호</div>
+                                <div class="value">
+                                    <span class="number">383601-04-076998</span>
+                                    /<br><span class="sep_name">{계좌별명}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">이체금액</div>
+                                <div class="value"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                            </li>
+                            <li>
+                                <div class="key">수수료</div>
+                                <div class="value"><span class="number">1,000</span><span class="num_unit">원</span></div>
+                            </li>
+                            <li>
+                                <div class="key">입금계좌메모</div>
+                                <div class="value">부ID계정</div>
+                            </li>
+                            <li>
+                                <div class="key">등록일시</div>
+                                <div class="value"><span class="number">2022.12.06 17:51:02</span></div>
+                            </li>
+                            <li>
+                                <div class="key">처리일시</div>
+                                <div class="value"><span class="number">2022.12.06 17:51:02</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 취소 : 예약취소 불가 -->
+                    <div class="list_data_group_s">
+                        <div class="h3 grid tr_tit_row">
+                            <div class="col"><h3>이체결과내역</h3></div>
+                            <div class="col append">
+                                <span class="badge line2">취소</span>
+                            </div>
+                        </div>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">거래종류</div>
+                                <div class="value">{Star 건별이체}</div>
+                            </li>
+                            <li>
+                                <div class="key">이체지정일시</div>
+                                <div class="value"><span class="number">2022.12.06 14:00</span></div>
+                            </li>
+                            <li>
+                                <div class="key">처리상태</div>
+                                <div class="value">취소</div>
+                            </li>
+                            <li>
+                                <div class="key">결재구분</div>
+                                <div class="value">결재</div>
+                            </li>
+                            <li>
+                                <div class="key">입금기관</div>
+                                <div class="value">KB국민</div>
+                            </li>
+                            <li>
+                                <div class="key">입금계좌번호</div>
+                                <div class="value">
+                                    <span class="number">383601-04-076998</span>
+                                    /<br><span class="sep_name">{계좌별명}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">이체금액</div>
+                                <div class="value"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                            </li>
+                            <li>
+                                <div class="key">수수료</div>
+                                <div class="value"><span class="number">1,000</span><span class="num_unit">원</span></div>
+                            </li>
+                            <li>
+                                <div class="key">입금계좌메모</div>
+                                <div class="value">부ID계정</div>
+                            </li>
+                            <li>
+                                <div class="key">등록일시</div>
+                                <div class="value"><span class="number">2022.12.06 17:51:02</span></div>
+                            </li>
+                            <li>
+                                <div class="key">처리일시</div>
+                                <div class="value"><span class="number">2022.12.07 10:01</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 오류 : 예약취소 불가 -->
+                    <div class="list_data_group_s">
+                        <div class="h3 grid tr_tit_row">
+                            <div class="col"><h3>이체결과내역</h3></div>
+                            <div class="col append">
+                                <button type="button" class="btn outline nega xxs">오류<i class="arrow"></i></button>
+                            </div>
+                        </div>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">거래종류</div>
+                                <div class="value">{Star 건별이체}</div>
+                            </li>
+                            <li>
+                                <div class="key">이체지정일시</div>
+                                <div class="value"><span class="number">2022.12.06 14:00</span></div>
+                            </li>
+                            <li>
+                                <div class="key">처리상태</div>
+                                <div class="value"><span class="fc_nega">오류</span></div>
+                            </li>
+                            <li>
+                                <div class="key">결재구분</div>
+                                <div class="value">결재</div>
+                            </li>
+                            <li>
+                                <div class="key">입금기관</div>
+                                <div class="value">KB국민</div>
+                            </li>
+                            <li>
+                                <div class="key">입금계좌번호</div>
+                                <div class="value">
+                                    <span class="number">383601-04-076998</span>
+                                    /<br><span class="sep_name">{계좌별명}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">이체금액</div>
+                                <div class="value"><span class="number">10,000</span><span class="num_unit">원</span></div>
+                            </li>
+                            <li>
+                                <div class="key">수수료</div>
+                                <div class="value"><span class="number">1,000</span><span class="num_unit">원</span></div>
+                            </li>
+                            <li>
+                                <div class="key">입금계좌메모</div>
+                                <div class="value">부ID계정</div>
+                            </li>
+                            <li>
+                                <div class="key">등록일시</div>
+                                <div class="value"><span class="number">2022.12.06 17:51:02</span></div>
+                            </li>
+                            <li>
+                                <div class="key">처리일시</div>
+                                <div class="value"><span class="number">2022.12.07 10:01</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="list_data_group">
+                    <div class="list_data_group_s">
+                        <h3 class="h3">출금계좌정보</h3>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">출금계좌번호</div>
+                                <div class="value"><span class="number">067-01-0516771</span></div>
+                            </li>
+                            <li>
+                                <div class="key">예금주</div>
+                                <div class="value">김국민</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항<span class="arrow"></span></button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>예약취소는 이체지정일 1시간 전까지 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 예약취소 불가 시  -->
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">확인</button></span>  
+                </div>    
+            </div>
+            <!-- //예약취소 불가 시  -->
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg">목록</button></span>  
+                    <span><button type="button" class="btn primary lg">예약취소</button></span>  
+                </div>    
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

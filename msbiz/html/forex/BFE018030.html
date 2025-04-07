@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-수입신용장 개설신청</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+
+    <!-- 220729 리웍 -->
+    <div id="content">
+        <h1 class="h1">수입신용장 개설신청</h1>
+		<div class="section"><!-- section -->
+            <div class="list_data_group">
+                <h2 class="h3">기본정보(APPLICANT)</h2> 
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">개설신청일</div>
+                        <div class="value"><span class="number">2022.05.31</span></div>
+                    </li>
+                    <li>
+                        <div class="key">거래지점</div>
+                        <div class="value"><span>판교종합금융센터</span></div>
+                    </li>
+                    <li>
+                        <div class="key">출금계좌번호</div>
+                        <div class="value"><span class="number">093637-04-000084</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">기본조건(BASIC CONTENTS OF 신용장)</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">통지은행 BIC<br>(ADVISING BANK)</div>
+                        <div class="value"><span>ZOEOOZ12A</span></div>
+                    </li>
+                    <li>
+                        <div class="key">유효기일<br>(DATE OF EXPIRY)</div>
+                        <div class="value"><span class="number">2022.05.31</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수익자<br>(BENEFICIARY)</div>
+                        <div class="value">
+                            <div class="descrip"><!-- 내용 감싼 영역-->
+                                <p>HANGZHOU PUYIN INDUSTRIAL CO.,</p><!-- 타이틀 영역-->
+                                <div><!-- 내용 영역-->
+                                    <span>LTD. ROOM 1301, BUILDING 1,</span><br/>
+                                    <span>BEIGAN STREET,</span><br/>
+                                    <span>XIAOSHAN DISTRICT,</span><br/>
+                                    <span>HANGZHOU, ZHEJIANG, CHINA</span><br/>
+                                </div><!-- /// 내용 영역-->
+                            </div><!-- 내용 감싼 영역-->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">통화 및 신청금액<br>(Currency Code, AMOUNT)</div>
+                        <div class="value">USD <span class="number">11,555,555.55</span></div>
+                    </li>
+                    <li>
+                        <div class="key">과부족조건<br>(PERCENTAGE CREDIT AMOUNT TOLERANCE)</div>
+                        <div class="value"><span>NOT EXCEEDING</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">결제관련(RELATED TO DRAFT)</h2> 
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">결제방법<br>(DRAFTS AT)</div>
+                        <div class="value"><span>USANCE</span></div>
+                    </li>
+                    <li>
+                        <div class="key">자금결제방식<br>(TRANSFER METHOD)</div>
+                        <div class="value"><span>상환방식</span></div>
+                    </li>
+                    <li>
+                        <div class="key">USANCE 종류<br>(SECURITY GRANTED BY)</div>
+                        <div class="value"><span>BANKERS(해외은행)</span></div>
+                    </li>
+                    <li>
+                        <div class="key">결제조건<br>(CONDITIONS OF PAYMENT)</div>
+                        <div class="value"><span>AFTER SIGHT</span></div>
+                    </li>
+                    <li>
+                        <div class="key">USANCE 결제기간<br>(TENOR OF DRAFT)</div>
+                        <div class="value"><span class="number">30</span><span class="num_unit">일</span></div>
+                    </li>
+                    <li>
+                        <div class="key">확정만기일<br>(EXPIRY DATE)</div>
+                        <div class="value"><span class="number">2022.05.31</span></div>
+                    </li>
+                    <li>
+                        <div class="key">분할선적<br>(PARTIAL SHIPMENT)</div>
+                        <div class="value"><span>ALLOWED</span></div>
+                    </li>
+                    <li>
+                        <div class="key">환적<br>(TRANSHIPMENT)</div>
+                        <div class="value"><span>ALLOWED</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">운송정보(INFORMATION OF TRANSPORT)</h2> 
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">운송방법<br>(TRANSPORT METHOD)</div>
+                        <div class="value"><span>선박</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수탁지<br>(PLACE OF TAKING IN CHARGE)</div>
+                        <div class="value"><span>-</span></div>
+                    </li>
+                    <li>
+                        <div class="key">선적항<br>(PORT OF LOADING<br>/AIRPORT OF DEPARTURE)</div>
+                        <div class="value"><span>BUSAN PORT</span></div>
+                    </li>
+                    <li>
+                        <div class="key">양륙항<br>(PORT OF DISCHARGE<br>/AIRPORT OF DESTINATION)</div>
+                        <div class="value"><span>SANGHI PORT</span></div>
+                    </li>
+                    <li>
+                        <div class="key">최종도착지<br>(PLACE OF FINAL DESTINATION)</div>
+                        <div class="value"><span>BEIJING</span></div>
+                    </li>
+                    <li>
+                        <div class="key">선적일<br>(LATEST DATE OF SHIPMENT)</div>
+                        <div class="value"><span class="number">2022.05.31</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">상품정보(DESCRIPTIONS OF GOODS AND/OR SERVICES)</h2> 
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">가격조건<br>(TERMS OF PRICE)</div>
+                        <div class="value"><span>FOB: 본선인도조건</span></div>
+                    </li>
+                    <li>
+                        <div class="key">가격조건관련장소<br>(PLACE RELATED TO PRICE)</div>
+                        <div class="value"><span>PYEONGTAEK, KOREA</span></div>
+                    </li>
+                    <li>
+                        <div class="key">원산지<br>(COUTRY OF ORIGIN)</div>
+                        <div class="value"><span>CHINA</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수입상대국가<br>(COUNTRY OF IMPORT)</div>
+                        <div class="value"><span>JAPAN</span></div>
+                    </li>
+                    <li>
+                        <div class="key">상품분류번호<br>(HS CODE)</div>
+                        <div class="value"><span class="number">6204-62-1000</span></div>
+                    </li>
+                    <li>
+                        <div class="key">기타 상품명세<br>(Extra information of goods/services)</div>
+                        <div class="value">
+                            
+                            <div class="descrip"><!-- 내용 감싼 영역-->
+                                <div><!-- 내용 영역-->
+                                    <span>PREPAINTED GALVANIZED STEEL COILS 1</span><br/>
+                                    <span>PREPAINTED GALVANIZED STEEL COILS 2</span><br/>
+                                    <span>PREPAINTED GALVANIZED STEEL COILS 3</span>
+                                </div><!-- /// 내용 영역-->
+                            </div><!-- 내용 감싼 영역-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">서류조건(DOCUMENTS REQUIRED)</h2> 
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">상업송장 수량<br>(SIGNED COMMERCIAL INVOICE IN)</div>
+                        <div class="value"><span class="number">3</span></div>
+                    </li>
+                    <li>
+                        <div class="key">포장명세서 수량<br>(SIGNED PACKING LIST IN)</div>
+                        <div class="value"><span class="number">3</span></div>
+                    </li>
+                    <li>
+                        <div class="key">원산지증명서 수량<br>(CERTIFICATE OF ORIGINAL IN)</div>
+                        <div class="value"><span class="number">1</span></div>
+                    </li>
+                    <li>
+                        <div class="key">증명서 발행처<br>(CERTIFICATE ISSUED BY)</div>
+                        <div class="value"><span>KOOKMIN BANK, KOREA</span></div>
+                    </li>
+                    <li>
+                        <div class="key">보험조건<br>(CONDITIONS OF INSURANCE)</div>
+                        <div class="value"><span>I.C.C(A)</span></div>
+                    </li>
+                    <li>
+                        <div class="key">기타 서류조건<br>(Extra documents required)</div>
+                        <div class="value"><span>data</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">추가조건(ADDITIONAL CONDITIONS)</h2> 
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">이자부담구분<br>(INSTEREST PAID BY)</div>
+                        <div class="value"><span>SHIPPERS(수출상)</span></div>
+                    </li>
+                    <li>
+                        <div class="key">T/T REIM 여부<br>(T/T REIMBURSEMENT)</div>
+                        <div class="value"><span>ALLOWED</span></div>
+                    </li>
+                    <li>
+                        <div class="key">항공운송장<br>(HOUSE AIRWAY BILL)</div>
+                        <div class="value"><span>PROHIBITED</span></div>
+                    </li>
+                    <li>
+                        <div class="key">양도여부<br>(TRANSFERABLE)</div>
+                        <div class="value"><span>ALLOWED</span></div>
+                    </li>
+                    <li>
+                        <div class="key">제시기간경과<br>(LATE PRESENTATION)</div>
+                        <div class="value"><span>PROHIBITED</span></div>
+                    </li>
+                    <li>
+                        <div class="key">기타 추가조건<br>(Extra additional conditions)</div>
+                        <div class="value"><span>data</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">수수료 관련(RELATED TO CHARGES)</h2> 
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">A&D CHARGE 부담<br>(A&D CHARGE PAID BY)</div>
+                        <div class="value"><span>APPLICANT(수입상)</span></div>
+                    </li>
+                    <li>
+                        <div class="key">A&D CHARGE 징수<br>(A&D CHARGE METHOD)</div>
+                        <div class="value"><span>COLLECT(후취)</span></div>
+                    </li>
+                    <li>
+                        <div class="key">REIM CHARGE 부담구분<br>(REIM CHARGE PAID BY)</div>
+                        <div class="value"><span>BENEFICIARY(수출상)</span></div>
+                    </li>
+                    <li>
+                        <div class="key">해외수수료부담<br>(EXCHANGE COMMISSION PAID BY)</div>
+                        <div class="value"><span>BENEFICIARY(수출상)</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">확인지시문언 등(CONFIMATION INSTRUTIONS etc)</h2> 
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">서류제시일<br>(PERIOD FOR PRESENTATION IN DAYS)</div>
+                        <div class="value"><span class="number">21</span><span class="num_unit">일(DAYS)</span></div>
+                    </li>
+                    <li>
+                        <div class="key">확인지시문언<br>(CONFIMATION INSTRUTIONS)</div>
+                        <div class="value"><span>MAY ADD</span></div>
+                    </li>
+                    <li>
+                        <div class="key">확인수수료부담<br>(CONFIRMING FEE PAID BY)</div>
+                        <div class="value"><span>APPLICANT(수입상)</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">보증금적립 정보</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">보증금적립 금액</div>
+                        <div class="value"><span class="number">29,914,907.00</span></div>
+                    </li>
+                    <li>
+                        <div class="key">출금계좌번호</div>
+                        <div class="value">외화계좌, <span class="number">006-42-0055-684</span></div>
+                    </li>
+                </ul>
+            </div>
+		</div><!-- ////section -->
+
+    </div><!-- //content -->
+    <!-- //220729 리웍 -->
+</div>
+<!-- //wrap -->
+
+
+</body>
+</html>

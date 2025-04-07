@@ -1,0 +1,164 @@
+@charset "utf-8"; 
+
+/*** ban_lhs.css ***/
+/* 자주쓰는 계좌 */
+.acc_often .list_drag.list_link li .cnt.inr {padding:0;}
+.acc_often .list_drag.list_link li .cnt.inr .btn_link {margin-top:0;}
+
+.acc_often .new_list_drag > li.basics .btn_link,
+.acc_often .new_list_drag > li.basics .btn_link .btn_move_del,
+.acc_often .js_drag_set.on .new_list_drag > li.basics .btn_move_del,
+.js_drag_set.on .new_list_drag .btn_link {display:none;}
+.acc_often .js_drag_set.on .new_list_drag > li.basics {padding-left:.7rem;}
+.acc_often .js_drag_set.on .new_list_drag > li.basics.chosen,
+.acc_often .js_drag_set.on .new_list_drag > li.basics.sortable-chosen {padding-left:3.1rem;}
+.acc_often .section_f .inner + .inner, /* 개발에서 inner 사용 퍼블에는 없음 */ 
+.acc_group_wrap.js_drag_set + .acc_group_wrap.js_drag_set {margin-top:4rem;}
+
+/* 자주쓰는 자금 모으기 */
+.acc_money_col h2.h4 + .list_comp {margin-top:2rem;}
+.acc_money_col .list_comp.check {border-top: 1px solid var(--bdc_01, #ebeef0);}
+.acc_money_col .section + .section_wrap {margin-top:4rem;} /* 개발에서 section_wrap 사용 퍼블에는 없음 */
+
+/* 계좌별명 */
+.tit_acc_data {margin-bottom:1.2rem;}
+.tit_acc_data > * {display:inline-block; vertical-align:middle;}
+.tit_acc_data .bk_name {padding-right:0;}
+.tit_acc_data .bk_num {font-family:'roboto'; font-size:1.7rem;}
+
+/* 계좌뷰 설정 */
+.list_link.del .inr .btn_ico_34 {position:absolute; right:0; top:50%; margin-top:-1.6rem;} 
+.acc_view .list_link .inr .bk_num {font-size:1.8rem;}
+.acc_view .section.info .depth {margin-top:0;}
+
+/* 대표계좌 설정/관리 */
+.acc_repre .list_data.right > li {padding:2rem 0 2rem;}
+.acc_repre .list_data.right > li > div.key {width:70%;}
+.acc_repre .list_data.right > li > div.value {width:30%;}
+.acc_repre .list_data.right .key > strong {font-size:1.8rem; color:var(--fc_02, #26282c);}
+
+.acc_repre .new_list_drag.drag .li.not .set {text-align:center;}
+.acc_repre .new_list_drag.drag .li.not .set p {margin-bottom:1rem;}
+.acc_repre .new_list_drag.drag .li.not .set .link:after {display:none;}
+.acc_repre .new_list_drag.drag .li .cnt .acc_wrap {padding-right:3rem;}
+
+/* 숨긴계좌관리 */
+.acc_inventory + .acc_inventory {margin-top:1.5rem;}
+.acc_inventory .tit {margin-right:-2.4rem; padding:1.3rem 0 1.3rem 2rem; border-bottom-left-radius:6px; border-top-left-radius:6px; background-color:#f0f4fa;}
+.acc_inventory .tit .cate {font-size:1.4rem; color:var(--fc_02, #26282c);}
+.acc_inventory .list_comp > li {padding-left:2rem;}
+
+.acc_hide .list_comp {border-top:1px solid var(--bdc_01, #ebeef0);}
+.acc_hide .list_comp .badge + .acc_name {margin-top:1rem;}
+.acc_hide .acc_inventory .list_comp {border-top:0;}
+
+.acc_hide .selection.chk {width:100%;}
+.acc_hide .selection.chk .acc_num .date {position:absolute; right:0; bottom:0;}
+
+/* 계약서류관리 */
+.ban_pdf.file_attach {margin-top:0; padding:1.6rem 0; border-bottom:1px solid var(--bdc_01, #f0f3f4);}
+.ban_portfolio_wrap {padding:0 2rem; background-color:var(--fc_10, #f7f7f8);}
+.ban_portfolio_list {padding-top:1.4rem;}
+.ban_portfolio_list .list_data {border:none;}
+.ban_portfolio_list .list_data > li .key {width:10rem;}
+.ban_portfolio_list .list_data > li .value {padding-left:0;}
+.ban_portfolio_list .file_attach {padding-top:0; padding-bottom:2rem; border-bottom:1px solid var(--fc_07, #c6cbd0);}
+
+/* 제신고/재등록_진행현황조회 */
+.list_data .line > li > * {display:inline-block; vertical-align:middle;}
+.list_data .line > li + li {margin-top:1.2rem; padding-top:1.2rem; border-top:1px solid var(--bdc_01, #ebeef0);}
+
+/* 계좌비밀번호 관리 */
+.list_btn_type.line > li + li {margin-top:2rem; padding-top:2rem; border-top:1px solid var(--bdc_01, #ebeef0);}
+.list_btn_type.line > li + li .h2 {margin-top:0;}
+
+/* OTP관리 */
+.ban_otp_chk_list.chk_data_list .list_data li {padding:1rem 0;}
+.ban_certify_list .certify_pannel .certify_info .tit {width:8rem;}
+.list_comp.type_button .p {margin-top: 1.4rem;}
+.list_comp.type_button .p + .btn_list_btm{margin-top:1.6rem; padding-bottom:.2rem;}
+.list_comp.ban_type_button > li:last-child,
+.list_comp.ban_type_button > li.noline {border-bottom:none;} /* noline 개발에서 사용 */
+
+.list_comp.noline.type_button > li .depth.bul > li {padding-top:0;}
+.agree_wrap .agree_top {padding-bottom:1.2rem; border-bottom:1px solid var(--fc_08, #dde1e4);}
+.circle_txt {display:inline-block; width:2rem; height:2rem; color:var(--fc_11, #fff); font-size:1.5rem; text-align:center; background-color:var(--fc_10, #484b51); border-radius:50%;}
+.be_not {margin:0 -2.4rem;}
+
+.depth.step.ban > li > strong {font-size:1.8rem;}
+.depth.step.ban > li .sub_list,
+.depth.step.ban > li .sub_txt {margin-top:1rem;}
+.depth.step.ban > li .sub_list {color:var(--fc_03, #484b51);}
+.depth.step.ban > li .depth.info {margin-left:-.5rem;}
+
+/* OTP관리 - 금융거래한도 계좌 안내 */
+.pro_bank_guide {padding:2rem 1.6rem; background-color:var(--fc_10, #f7f7f8);}
+.pro_bank_guide .p {padding-bottom:1.2rem; font-size:1.5rem; font-weight:700; color:var(--fc_03, #484b51);}
+.pro_bank_guide .p_sub {font-size:1.5rem; color: var(--fc_03, #484b51);}
+
+/* oneStop - 상품 안내 icon */
+.icon_area {display:flex; justify-content:space-around; margin-top:3.2rem;}
+.icon_area .icon_cont {display:flex; flex-direction:column; align-items:center;}
+.icon_area .icon_cont .ico_bank {display:inline-block; width:4rem; height:4rem; background:url(/msbiz/app/img/products/ico_spr_onestop.png) no-repeat; background-size:20rem auto; background-position:0 0;}
+.icon_area .icon_cont .ico_bank.deposit {background-position:0 0;}
+.icon_area .icon_cont .ico_bank.loan {background-position:-4rem 0;}
+.icon_area .icon_cont .ico_bank.fund {background-position:-8rem 0;}
+.icon_area .icon_cont span {margin-top:1.2rem; text-align:center; font-size:1.4rem;}
+
+/* 백그라운드 이미지 */
+.ban_visual .ban_motp_regi {background:url(/msbiz/app/img/banking_manage/visual_ban_motp_regi.png) no-repeat;}
+.ban_visual .ban_motp_info {background:url(/msbiz/app/img/banking_manage/visual_ban_motp_info.png) no-repeat;}
+.ban_visual .ban_motp_sn {background:url(/msbiz/app/img/banking_manage/visual_ban_motp_sn.png) no-repeat;}
+.ban_visual .pop_ban_motp_sn {background:url(/msbiz/app/img/banking_manage/visual_pop_ban_motp_sn.png) no-repeat;}
+.ban_visual .ban_cheque {background:url(/msbiz/app/img/banking_manage/visual_ban_cheque.png) no-repeat;}
+.ban_visual .ban_unlike_motp {background:url(/msbiz/app/img/banking_manage/visual_ban_unlike_motp.jpg) no-repeat;}
+
+.img_area.ban_visual > * {margin:0 auto; width:26.5rem; height:13.6rem; background-size:100%;}
+.img_area.ban_visual + p {margin-top:2rem;}
+
+.img_area.ban_visual .ban_motp_sn {height:18rem;}
+.img_area.ban_visual .ban_cheque {width:32.7rem; height:15.4rem;}
+.img_area.ban_visual .ban_unlike_motp {height:10.6rem;}
+
+/* 계좌번호 선택 바텀시트 */
+.acc_choice.pop_body .acc_list .bk_name + .bk_num,
+.acc_choice.pop_body .acc_list .bk_num + .bk_pay {margin-top:.4rem;}
+.acc_choice.pop_body .acc_list .bk_name,
+.acc_choice.pop_body .acc_list .bk_pay {color:var(--fc_04, #696e76);}
+
+/* 대표계좌 추가/삭제 바텀시트 */
+.acc_repre.pop_body .mymn_set_acco li.dep1 > .tit {padding:1.4rem 2.4rem 1.4rem 1.6rem;}
+.acc_repre.pop_body .acc_list_wrap.type_list .acc_pannel {padding-left:1.6rem; padding-bottom:.4rem;}
+.acc_repre.pop_body .acc_list_wrap.type_list .btn_favorite {right:1.4rem;}
+.acc_repre.pop_body .tab_panel .result.nodata {margin-right:4.8rem;}
+.acc_repre.pop_body .tab_panel .btn_list_btm {padding-right:2.4rem;}
+
+
+/*** ban_pjh.css ***/
+.list_link.ba_chk .inr {padding:2rem 10.5rem 2rem 0;}
+.list_link.ba_chk .inr .acc_wrap .acc_bank {margin-top:0; padding-top:0;}
+.list_link.ba_chk .rdoChk_group {position:absolute; top:50%; right:0; margin-top:-1.2rem;}
+
+
+/*** ban_lsh.css ***/
+/* BFE022411 - 공통 */
+.list_comp_wrap .chk_total + .list_comp {margin-top:1.2rem;}
+
+
+/*** ban_hcw.css ***/
+/* 빠른이체관리 */
+.img_area + .img_btm_txt {margin-top:2rem;}
+.quick_tr_list .list_comp.check.has_tit{margin-top:1.6rem;}
+.quick_tr_list .list_comp.check.has_tit > li > .selection {margin-bottom:0;}
+.quick_tr_list .selection input[type=checkbox] + .label {display:block;}
+
+/* 은행에 서류제출 */
+.agree_wrap.agree_top_bd {padding-top:.3rem; border-top:1px solid var(--bdc_04, #484b51);}
+
+
+/*** 기타 ***/
+/* 승인/결제>결제상세 */
+.list.icon.noline.prepare li::before {content:''; display:block; width:4rem; height:4rem; background:url(/msbiz/app/img/banking_manage/spr_ico_prepare.png) no-repeat; background-size:25rem auto;}
+.list.icon.noline.prepare li:nth-child(1)::before {background-position:0 0;}
+.list.icon.noline.prepare li:nth-child(2)::before {background-position:-4.5rem 0;}
+.list.icon.noline.prepare li:nth-child(3)::before {background-position:-9rem 0;}

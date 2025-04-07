@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[결재상세] 일반해외은행송금</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="승인/결재" href="/msbiz/app/css/approval.css">
+	<!-- 220823 global.css 추가 -->
+	<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">일반해외은행송금 결재상세</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>결재하실 내역은 아래와 같습니다.</li>
+                <li>결재는 거래별로 당일 서비스 이용시간 이내까지 가능합니다.</li>
+                <li>오후 11시까지 미결재된 거래는 자동 취소됩니다.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2 class="h2">결재상세정보</h2>
+            <div class="list_data_group_s">
+                <h2 class="h3">등록정보</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">등록자</div>
+                        <div class="value">김국민</div>
+                    </li>
+                    <li>
+                        <div class="key">등록일시</div>
+                        <div class="value"><span class="number">2022.04.19 11:30:15</span></div>
+                    </li>
+                    <li>
+                        <div class="key">등록자메모내용</div>
+                        <div class="value">결재요청</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list_data_group_s">
+                <h2 class="h3">결재단계</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">1단계 결재자명<br>(결재일시)</div>
+                        <div class="value">김국민/결재완료<br><span class="number">(2022.04.19 11:30:45)</span></div>
+                    </li>
+                    <li>
+                        <div class="key">2단계 결재자명<br>(결재일시)</div>
+                        <div class="value">김사장/결재대기</div>
+                    </li>
+                    <li>
+                        <div class="key">3단계 결재자명<br>(결재일시)</div>
+                        <div class="value"><span class="number">0.00</span></div>
+                    </li>
+                    <li>
+                        <div class="key">4단계 결재자명<br>(결재일시)</div>
+                        <div class="value"><span class="number">0.00</span></div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="list_data_group_s">
+                <h2 class="h3">결재정보</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">거래종류</div>
+                        <div class="value">일반해외은행송금</div>
+                    </li>
+                    <li>
+                        <div class="key">결재구분</div>
+                        <div class="value">미결재</div>
+                    </li>
+                    <li>
+                        <div class="key">처리상태</div>
+                        <div class="value">처리완료</div>
+                    </li>
+                    <li>
+                        <div class="key">처리완료일시</div>
+                        <div class="value"><span class="number">2022.04.19 11:30:15</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">결재내역</h2>
+            <!-- 일반해외은행공금 결재내역 case1 -->
+            <div class="list_data_group_s">
+                <h2 class="h3">송금정보</h2>
+                <ul class="list_data">
+                    <!-- 220906 항목값 추가 -->
+                    <li>
+                        <div class="key">공동송금이벤트식별자</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <!-- //220906 항목값 추가 -->
+                    <li>
+                        <div class="key">송금종류</div>
+                        <div class="value">소액송금</div>
+                    </li>
+                </ul>
+            </div> 
+
+            <div class="list_data_group_s">
+                <h2 class="h3">계좌정보 및 송금금액</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">송금통화종류</div>
+                        <div class="value">USD(미국 달러)</div>
+                    </li>
+                    <li>
+                        <div class="key">총송금액</div>
+                        <div class="value"><span class="number">10.00</span></div>
+                    </li>
+                    <li>
+                        <div class="key">외화출금액</div>
+                        <div class="value"><span class="number">0.00</span></div>
+                    </li>
+                    <li>
+                        <div class="key">원화출금외화금액</div>
+                        <div class="value"><span class="number">10.00</span></div>
+                    </li>
+                    <!-- 220906 항목값 추가 -->
+                    <li>
+                        <div class="key">환율우대율</div>
+                        <div class="value"><span class="number"></span><span class="num_unit">%</span></div>
+                    </li>
+                    <!-- //220906 항목값 추가 -->
+                    <li>
+                        <div class="key">적용환율</div>
+                        <div class="value"><span class="number">1,271.94</span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금수수료</div>
+                        <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">전신료</div>
+                        <div class="value"><span class="number">5,000</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">중계수수료부담구분명</div>
+                        <div class="value">송금인(원화)</div>
+                    </li>
+                    <!-- 220906 항목값 추가 -->
+                    <li>
+                        <div class="key">중계수수료</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <!-- //220906 항목값 추가 -->
+                    <li>
+                        <div class="key">원화출금계좌번호</div>
+                        <div class="value"><span class="number">810101-04-222280</span></div>
+                    </li>
+                    <li>
+                        <div class="key">원화계좌총인출금액</div>
+                        <div class="value"><span class="number">53,332</span></div>
+                    </li>
+                    <!-- 220906 항목값 추가 -->
+                    <li>
+                        <div class="key">외화출금계좌번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">외화계좌총인출금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <!-- //220906 항목값 추가 -->
+                </ul>
+            </div>
+
+            <div class="list_data_group_s">
+                <h2 class="h3">송금인/수취인 정보</h2>
+                <ul class="list_data lbt">
+                    <!-- 220906 항목값 추가 -->
+                    <li>
+                        <div class="key">지정고객여권번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">지정주민번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <!-- //220906 항목값 추가 -->
+                    <li>
+                        <div class="key">수취인성명</div>
+                        <div class="value"><span class="number">C0 IJEHY AE(PHQZ LUQAT)</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취인주소</div>
+                        <div class="value"><span class="number">CUQTQ-LJVPLXT,H.GGFAIDEVUA 23/75,DH CKI4998 CBFYFBB,7476 SNZUUX,NRKGIN</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취은행소재국가</div>
+                        <div class="value">미국</div>
+                    </li>
+                    <!-- 220906 항목값 추가 -->
+                    <li>
+                        <div class="key">송금목적코드</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <!-- //220906 항목값 추가 -->
+                    <li>
+                        <div class="key">수취인계좌번호</div>
+                        <div class="value"><span class="number">NO2312-50-0562771</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취은행BIC코드</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취은행명</div>
+                        <div class="value"><span class="number">RECEIVING BANK NAME</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취은행주소</div>
+                        <div class="value"><span class="number">RECEIVING BANK ADDRESS</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취은행코드</div>
+                        <div class="value"><span class="number">012345678</span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금의뢰인성명</div>
+                        <div class="value"><span class="number">ATQDBO BU.,JDV</span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금의뢰인전화번호</div>
+                        <div class="value"><span class="number">00001111****</span></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list_data_group_s">
+                <h2 class="h3">선택사항</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">수취인전화번호</div>
+                        <div class="value"><span class="number">CON00****</span></div>
+                    </li>
+                    <li>
+                        <div class="key">중계은행BIC코드</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">중계은행명</div>
+                        <div class="value"><span class="number">INTERMEDIARU BANK NAME</span></div>
+                    </li>
+                    <li>
+                        <div class="key">출금계좌메모</div>
+                        <div class="value">메모</div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //일반해외은행공금 결재내역 case1 -->
+
+            <!-- 220906 일반해외은행송금 결재내역 case2 -->
+            <div class="list_data_group_s">
+                <h2 class="h3">계좌정보 및 송금금액</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">이체번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">이체통화종류</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">총이체금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">외화출금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">원화출금외화금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">적용환율</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금수수료</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">원화출금계좌번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">출금통장적요(원화)</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">원화계좌총인출금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">외화출금계좌번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">출금통장적요(외화)</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">외화계좌인출금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list_data_group_s">
+                <h2 class="h3">송금인/수취인 정보</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">수취인성명</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취인계좌번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취은행명</div>
+                        <div class="value"></div>
+                    </li>
+                    <li>
+                        <div class="key">지점명</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금의뢰인성명</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금의뢰인전화번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list_data_group_s">
+                <h2 class="h3">선택사항</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">출금계좌메모</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //220906 일반해외은행송금 결재내역 case2 -->
+
+            <!-- 220906 일반해외은행송금 결재내역 case3 -->
+            <div class="list_data_group_s">
+                <h2 class="h3">계좌정보 및 송금금액</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">이체번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">이체통화종류</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">총이체금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">외화출금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">원화출금외화금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">적용환율</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금수수료</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">원화출금계좌번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">출금통장적요(원화)</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">원화계좌총인출금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">외화출금계좌번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">출금통장적요(외화)</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">외화계좌인출금액</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list_data_group_s">
+                <h2 class="h3">송금인/수취인 정보</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">수취인성명</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취인계좌번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">수취은행명</div>
+                        <div class="value"></div>
+                    </li>
+                    <li>
+                        <div class="key">송금의뢰인성명</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금의뢰인전화번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                </ul>
+            </div>           
+            <!-- //220906 일반해외은행송금 결재내역 case3 -->
+
+            <div class="list_data_group_s">
+                <h2 class="h3">해외유학생 해외체재자(국외연수포함) 입증 서류 제출기일 안내</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">서류제출기일</div>
+                        <div class="value"><span class="number">2022.05.05</span></div>
+                    </li>
+                </ul>
+                <p class="tip_info">유학사실 입증서류를 년 월말까지 지정 거래 영업점에 제출하여 주시기 바랍니다. 해당 기한내에 서류를 제출하셔야만 유학경비를 계속 송금하실 수 있습니다.</p>
+                <p class="tip_info">체재비 지급유효기일은 년 월말까지 입니다. 해외체재 기간이 연장된 입증서류를 해당 기한내에 제출하셔야만 체재비를 계속하여 송금하실 수 있습니다.</p>
+            </div>
+
+            <div class="btn_list_btm">
+                <span><button type="button" class="btn outline sm">반송</button></span>
+            </div>
+        </div>
+        
+        <!-- 결재완료 내역조회에서 접근시 노출 -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">목록</button></span>
+            </div>
+        </div>
+        <!-- //결재완료 내역조회에서 접근시 노출 -->
+
+        <!-- 결재할 내역에서 접근시 노출 -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+                <span><button type="button" class="btn primary lg">결재</button></span>
+            </div>
+        </div>
+        <!-- //결재할 내역에서 접근시 노출 -->
+        
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<script>
+    /* 업무 SCRIPT */
+</script>
+</body>
+</html>

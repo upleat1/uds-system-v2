@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[신규기관등록]스크래핑완료</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="hidden">스크래핑완료</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>계좌연결 버튼을 누르시면 선택된 계좌가 등록됩니다.</li>
+                <li>연동을 원하지 않는 계좌는 해제해주시기 바랍니다.</li>          
+            </ul>
+		</div>
+
+        <!-- 연동 가능 기관 -->
+        <div class="section_f"><!-- 220713 클래스 수정 -->
+            <h2 class="h2">연동 가능 기관(5)</h2>
+
+            <!-- 220713 마크업 전면수정 -->
+            <!-- 은행 -->
+            <div class="folder">
+                <div class="tit active"><!-- *아코디언 펼침 active 추가 -->
+
+                    <div class="selection">
+                        <input type="checkbox" id="check11">
+
+                        <!-- 220713 label 구조 변경 -->
+                        <label for="check11" class="label">
+                            <span class="icon_bank_020 md"></span><strong class="cate">우리은행<span class="count">(5)</span></strong>
+                        </label>
+                    </div>
+
+                    <button type="button" class="js_toggler" aria-expanded="true" aria-controls="folder1"><span class="hidden">상세보기</span></button><!-- *아코디언 펼침 aria-expanded="true" | 닫힘 aria-expanded="false" -->
+                </div>
+
+                <div role="region" id="folder1" class="panel active"><!-- *아코디언 펼침일때 active 추가 --><!-- aria-controls == id -->
+
+                    <div class="acc_list_wrap type_list">
+
+                        <div class="acc_pannel check bedge"><!-- bedge -->
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder1_1" name="account1">
+
+                                <!-- 220713 label 구조변경 -->
+                                <label for="folder1_1" class="label">
+                                    <div class="acc_wrap">
+                                        <div class="acc_top_info">
+                                            <!-- 상품 flag
+                                                <span class="badge pdt1">입출금</span>
+                                                <span class="badge pdt2">예금적금</span>
+                                                <span class="badge pdt3">대출</span>
+                                                <span class="badge pdt4">펀드</span>
+                                                <span class="badge pdt5">보험공제</span>
+                                                <span class="badge pdt6">퇴직연금</span>
+                                                <span class="badge pdt7">신탁ISA</span>
+                                                <span class="badge pdt8">증권</span>
+                                                <span class="badge pdt9">외화골드</span>
+                                            -->
+                                            <span class="badge pdt1">[%과목%]</span>
+                                        </div>
+                                        <div class="acc_name">%상품명111%</div>
+                                        <div class="acc_num"><span class="number">400407-01-023569</span></div>
+                                        <div class="acc_sum_wrap">
+                                            <div class="acc_pay"><span class="unit">잔액</span>
+                                                <strong class="number">3,000,000</strong><span class="num_unit">원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+
+                            </div><!--// selection -->
+                        </div><!--// acc_pannel -->
+
+                        
+                        <div class="acc_pannel check bedge"><!-- bedge -->
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder1_2" name="account1" disabled><!-- 221014 수정: 케이스추가 [비활성화] -->
+
+                                <!-- 220713 label 구조변경 -->
+                                <label for="folder1_2" class="label">
+                                    <div class="acc_wrap">
+                                        <div class="acc_top_info">
+                                            <span class="badge pdt3">대출</span>
+                                        </div>
+                                        <div class="acc_name">%상품명%</div>
+                                        <div class="acc_num"><span class="number">400407-01-023569</span></div>
+                                        <div class="acc_sum_wrap">
+                                            <div class="acc_pay"><span class="unit">대출잔액</span>
+                                                <strong class="number">3,000,000</strong><span class="num_unit">원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div><!--// selection -->
+                        </div><!--// acc_pannel -->
+                        
+                        <div class="acc_pannel check bedge"><!-- bedge -->
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder1_3" name="account1" checked disabled><!-- 221014 수정: 케이스추가 [비활성화] -->
+                                
+                                <!-- 220713 label 구조변경 -->
+                                <label for="folder1_3" class="label">
+                                    <div class="acc_wrap">
+                                        <div class="acc_top_info">
+                                            <span class="badge pdt9">외화</span>
+                                        </div>
+                                        <div class="acc_name">%상품명%</div>
+                                        <div class="acc_num"><span class="number">400407-01-023569</span></div>
+                                        <div class="acc_sum_wrap">
+                                            <div class="acc_pay"><span class="unit">USD</span>
+                                                <strong class="number">3,000,000</strong><span class="num_unit">원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div><!--// selection -->
+                        </div><!--// acc_pannel -->
+                    </div><!--// acc_list_wrap -->
+                </div>
+            </div><!--// folder -->
+
+            <!-- 카드 -->
+            <div class="folder">
+                <div class="tit active">
+                    <div class="selection">
+                        <input type="checkbox" id="check22">
+                        
+                        <!-- 220713 label 구조 변경 -->
+                        <label for="check22" class="label">
+                            <span class="icon_bank_368 md"></span><strong class="cate">롯데카드<span class="count">(3)</span></strong>
+                        </label>
+                    </div>
+
+                    <button type="button" class="js_toggler" aria-expanded="true" aria-controls="folder2"><span class="hidden">상세보기</span></button>
+                </div>
+
+                <div role="region" id="folder2" class="panel active"><!-- aria-controls == id -->
+                    <div class="acc_list_wrap type_list">
+
+                        <div class="acc_pannel check slct"><!-- slct -->
+
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder2_1" name="account2" aria-describedby="acc2_1" disabled><!-- 221014 수정: 케이스추가 [비활성화] -->
+                                <label for="folder2_1" class="label"><em>[법인] %카드번000365974153%</em></label><!-- 220713 hidden클래스 삭제 -->
+                            </div>
+                            <div class="acc_wrap" id="acc2_1"><!-- aria-describedby == id -->
+                                <div class="form_group">
+                                    <!-- 220713 form_tit 삭제 -->
+                                    <div class="form_row">
+                                        <div class="select">
+                                            <button type="button" class="select_btn" title="[법인] %카드번호% 선택" disabled>부서 선택</button><!-- 221014 수정: 케이스추가 [비활성화] -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--// acc_pannel -->
+
+                        <div class="acc_pannel check slct"><!-- slct -->
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder2_2" name="account2" aria-describedby="acc2_2">
+                                <label for="folder2_2" class="label"><em>[개인개별] %카드번호00036597%</em></label><!-- 220713 hidden클래스 삭제 -->
+                            </div>
+                            <div class="acc_wrap" id="acc2_2"><!-- aria-describedby == id -->
+                                <div class="form_group">
+                                    <!-- 220713 form_tit 삭제 -->
+                                    <div class="form_row">
+                                        <div class="select">
+                                            <button type="button" class="select_btn" title="[개인개별] %카드번호00036597% 선택">부서 선택</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--// acc_pannel -->
+                        
+                        <div class="acc_pannel check slct"><!-- slct -->
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder2_3" name="account2" aria-describedby="acc2_3">
+                                <label for="folder2_3" class="label"><em>[법인관리자] %카드번호00036597%</em></label><!-- 220713 hidden클래스 삭제 -->
+                            </div>
+                            <div class="acc_wrap" id="acc2_3"><!-- aria-describedby == id -->
+                                <div class="form_group">
+                                    <!-- 220713 form_tit 삭제 -->
+                                    <div class="form_row">
+                                        <div class="select">
+                                            <button type="button" class="select_btn" title="[법인관리자] %카드번호00036597% 선택">영업부 선택</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--// acc_pannel -->
+                    </div><!--// acc_list_wrap -->
+                </div>
+            </div><!--// folder -->
+
+            <!-- 증권 -->
+            <div class="folder">
+                <!-- folder: title -->
+                <div class="tit active">
+                    <div class="selection">
+                        <input type="checkbox" id="check33">
+                        
+                        <!-- 220713 label 구조 변경 -->
+                        <label for="check33" class="label">
+                            <span class="icon_bank_f06 md"></span><strong class="cate">토스증권<span class="count">(1)</span></strong>
+                        </label>
+                    </div>
+                    <button type="button" class="js_toggler" aria-expanded="true" aria-controls="folder3"><span class="hidden">상세보기</span></button>
+                </div>
+
+                <!-- folder: panel -->
+                <div role="region" id="folder3" class="panel active"><!-- aria-controls == id -->
+                    <div class="acc_list_wrap type_list">
+
+                        <div class="acc_pannel check">
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder3_1" name="account3" disabled>
+                                
+                                <!-- 220713 label 구조변경 -->
+                                <label for="folder3_1" class="label">
+                                    <div class="acc_wrap">
+                                        <div class="acc_name">증권상품명</div>
+                                        <div class="acc_num"><span class="number">400407-01-023569</span></div>
+                                        <div class="acc_sum_wrap">
+                                            <div class="acc_pay"><span class="unit">잔액</span>
+                                                <strong class="number">3,000,000</strong><span class="num_unit">원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div><!--// acc_pannel -->
+
+                    </div><!--// acc_list_wrap -->
+                </div>
+            </div><!--// folder -->
+            
+            <!-- 보험 -->
+            <div class="folder">
+                <div class="tit active">
+                    <div class="selection">
+                        <input type="checkbox" id="check44">
+                        
+                        <!-- 220713 label 구조 변경 -->
+                        <label for="check44" class="label">
+                            <span class="icon_bank_004 md"></span><strong class="cate">KB손해보험<span class="count">(2)</span></strong>
+                        </label>
+                    </div>
+                    <button type="button" class="js_toggler" aria-expanded="true" aria-controls="folder4"><span class="hidden">상세보기</span></button>
+                </div>
+
+                <div role="region" id="folder4" class="panel active"><!-- aria-controls == id -->
+                    <div class="acc_list_wrap type_list">
+
+                        <div class="acc_pannel check">
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder4_1" name="account4">
+                                
+                                <!-- 220713 label 구조변경 -->
+                                <label for="folder4_1" class="label">
+                                    <div class="acc_wrap">
+                                        <div class="acc_name">보험상품명</div>
+                                        <div class="acc_num"><span class="number">400407-01-023569</span></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div><!--// acc_pannel -->
+
+                    </div><!--// acc_list_wrap -->
+                </div>
+            </div><!--// folder -->
+            
+            <!-- 220729 리웍: 추가 -->
+            <!-- 농협 -->
+            <div class="folder">
+                <div class="tit active">
+                    <div class="selection">
+                        <input type="checkbox" id="check44">
+                        
+                        <!-- 220713 label 구조 변경 -->
+                        <label for="check44" class="label">
+                            <span class="icon_bank_004 md"></span><strong class="cate">농협<span class="count">(2)</span></strong>
+                        </label>
+                    </div>
+                    <button type="button" class="js_toggler" aria-expanded="true" aria-controls="folder5"><span class="hidden">상세보기</span></button>
+                </div>
+
+                <div role="region" id="folder5" class="panel active"><!-- aria-controls == id -->
+                    <div class="acc_list_wrap type_list">
+                        <div class="acc_pannel check">
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder5_1" name="account5">
+                                
+                                <!-- 220713 label 구조변경 -->
+                                <label for="folder5_1" class="label">
+                                    <div class="acc_wrap">
+                                        <div class="acc_name">퇴직연금 고배당주 증권자 투자신탁1호</div>
+                                        <div class="acc_num"><span class="number">40040701023569</span></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="tip_info">‘농협’ 퇴직연금 계좌조회는 ‘원하는 기관 선택
+                                하여, 공동인증서로 연결’하기에서 가능합니다.
+                                <span class="tip_inner dash">퇴직연금 담당자의 개인 인증서 필요</span>  
+                            </p>
+                        </div><!--// acc_pannel -->
+
+                        <div class="acc_pannel check">
+                            <div class="selection chk">
+                                <input type="checkbox" id="folder5_2" name="account5">
+                                
+                                <!-- 220713 label 구조변경 -->
+                                <label for="folder5_2" class="label">
+                                    <div class="acc_wrap">
+                                        <div class="acc_name">퇴직연금 장기채쳥 증권자 투자신탁1호</div>
+                                        <div class="acc_num"><span class="number">40040701023569</span></div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div><!--// acc_pannel -->
+                    </div><!--// acc_list_wrap -->
+                </div>
+            </div><!--// folder -->
+            <!--// 220729 리웍: 추가 -->
+
+            <!-- 국세청(전자세금계산서) -->
+            <div class="folder">
+                <div class="tit">
+                    <div class="selection">
+                        <input type="checkbox" id="account5">
+                        
+                        <!-- 220713 label 구조 변경 -->
+                        <label for="account5" class="label">
+                            <span class="icon_bank_302 md"></span><strong class="cate">국세청(전자세금계산서)</strong>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 국세청(현금영수증) -->
+            <div class="folder">
+                <div class="tit">
+                    <div class="selection">
+                        <input type="checkbox" id="account6">
+                        
+                        <!-- 220713 label 구조 변경 -->
+                        <label for="account6" class="label">
+                            <span class="icon_bank_302 md"></span><strong class="cate">국세청(현금영수증)</strong>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!--// 220713 마크업 전면수정 -->
+        </div>
+
+        <!-- 연동 불가 기관 -->
+        <div class="section">
+            <h2 class="h2">연동 불가 기관(2)</h2>
+
+            <!-- 연동 불가 기관 목록 -->
+            <ul class="list_comp">
+                <li>
+                    <div class="inr grid">
+                        <div class="col">
+                            <div class="acc_bank md">
+                                <span class="icon_bank_367"></span>
+                                <span class="bk_name">현대카드</span>
+                            </div>
+                        </div>
+                        <div class="col append">
+                            <button type="button" class="btn outline nega xxs">오류<i class="arrow"></i></button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr grid">
+                        <div class="col">
+                            <div class="acc_bank md">
+                                <span class="icon_bank_374"></span>
+                                <span class="bk_name">하나카드</span>
+                            </div>
+                        </div>
+                        <div class="col append">
+                            <button type="button" class="btn outline nega xxs">오류<i class="arrow"></i></button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">계좌연결</button></span>
+            </div>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

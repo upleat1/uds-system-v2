@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[KB금융그룹조회] KB증권_목록</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="기타" href="/msbiz/app/css/etc.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_etc">
+
+            <div class="tab_wrap">
+                <div class="tab_list" role="tablist">
+                    <div class="scroll_wrap">
+                        <a href="#">KB국민카드</a>
+                        <a href="#" class="active">KB증권</a>
+                        <a href="#">KB손해보험</a>
+                        <a href="#">KB저축은행</a>
+                        <a href="#">KB캐피탈</a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <!-- 220824 h1 이동 -->
+                    <h1 class="hidden">KB증권</h1>
+
+                    <!-- 221021 목록 없음 변경 -->
+                    <div class="result nodata">
+                        <p class="tit">고객정보가 없습니다.</p>
+                    </div>
+                    <!-- <div class="result no_product">
+                        <p class="tit">KB증권 상품가입하기</p>
+                        <p class="txt">소중한 자산을 믿음직한 KB증권과 함께 하세요.</p>
+                    </div> -->
+                    <!-- //221021 목록 없음 변경 -->
+
+                    <!-- 220824 h2 추가 -->
+                    <h2 class="hidden">보유상품목록</h2>
+                    <div class="section account_all type2">
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle on" role="button" aria-expanded="true">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">CMA상품</strong>
+                                </div>
+                                <span class="arrow"><span class="hidden">열기</span></span>
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                    <div class="acc_pannel">
+                                        <div class="acc_wrap">
+                                            <div class="acc_name">종합위탁계좌(CMA)</div>
+                                            <div class="acc_num">
+                                                <span class="number">000000-00-000000</span>
+                                            </div>
+                                            <div class="acc_sum_wrap">
+                                                <div class="acc_pay">
+                                                    <span class="unit">출금가능금액</span>
+                                                    <strong class="number">100,000,000</strong><span class="num_unit fs18">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_list_btm">
+                                            <!-- 220824 종목상세 삭제 -->
+                                            <span><button type="button" class="btn outline sm">CMA 거래내역</button></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acc_acco_list">
+                            <div class="tit_area js_toggle on" role="button" aria-expanded="true">
+                                <div class="tit btn_toggle">
+                                    <strong class="cate">일반상품</strong>
+                                </div>
+                                <span class="arrow"><span class="hidden">열기</span></span>
+                            </div>
+                            <div class="toggle_panel">
+                                <div class="acc_list_wrap type_list">
+                                    <div class="acc_pannel">
+                                        <div class="acc_wrap">
+                                            <div class="acc_name">종합계좌</div>
+                                            <div class="acc_num">
+                                                <span class="number">000000-00-000000</span>
+                                            </div>
+                                            <div class="acc_sum_wrap">
+                                                <div class="acc_pay">
+                                                    <span class="unit">출금가능금액</span>
+                                                    <strong class="number">100,000,000</strong><span class="num_unit fs18">원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_list_btm">
+                                            <span><button type="button" class="btn outline sm">종목상세</button></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="hr_divide">
+
+                    <div class="section pdt_0">
+                        <h3 class="h2">KB증권 주식 서비스</h3>
+                        <div class="tab_wrap box">
+                            <div class="tab_list" role="tablist">
+                                <button type="button" role="tab" aria-selected="true" aria-controls="tab2panel_1">국내</button>
+                                <button type="button" role="tab" aria-selected="false" aria-controls="tab2panel_2">해외</button>
+                            </div>
+                            <div class="tab_panel" role="tabpanel" id="tab2panel_1">
+                                <h2 class="hidden">국내</h2>
+                                <div class="et_icon_list">
+                                    <!-- 220920 아이콘 클래스 추가 -->
+                                    <a href="#" class="ico_1">주식주문</a>
+                                    <a href="#" class="ico_2">테마별순위</a>
+                                    <a href="#" class="ico_3">종목별랭킹</a>
+                                    <a href="#" class="ico_5">시장동향</a>
+                                    <!-- //220920 아이콘 클래스 추가 -->
+                                </div>
+                            </div>
+                            <div class="tab_panel" role="tabpanel" id="tab2panel_2">
+                                <h2 class="hidden">해외</h2>
+                                <div class="et_icon_list">
+                                    <!-- 220920 아이콘 클래스 추가 -->
+                                    <a href="#" class="ico_1">주식주문</a>
+                                    <a href="#" class="ico_4">소수점매매</a>
+                                    <a href="#" class="ico_2">테마별순위</a>
+                                    <a href="#" class="ico_3">종목별랭킹</a>
+                                    <!-- //220920 아이콘 클래스 추가 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_icon_list hor">
+                            <a href="#">자산평가</a>
+                            <a href="#">주문내역</a>
+                            <a href="#">관심종목</a>
+                        </div>
+                    </div>
+                    <!-- 220818 divide 삭제 및 gap_xl 클래스 추가 -->
+                    <div class="section gap_xl">
+                        <a href="#" class="et_banner et_ico_logo logo1">KB증권 앱(M-able)으로 이동</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth">
+                        <li>그룹사별 연동서비스 이용시 주의사항 문구 수급후 추가 필요합니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

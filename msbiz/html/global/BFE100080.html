@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[결재할 내역]결재할내역다중상세보기</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="승인/결재" href="/msbiz/app/css/approval.css">
+	<!-- 220823 global.css 추가 -->
+	<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">결재할 내역</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>결재하실 내역은 아래와 같습니다.</li>
+                <li>결재는 거래별로 당일 서비스 이용시간 이내까지 가능합니다.</li>
+                <li>오후 11시까지 미결재된 거래는 자동 취소됩니다.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="h2">결재상세정보</h2>
+            <h3 class="h3">결재내역 요약정보</h3>
+            <ul class="list_data">
+                <li>
+                    <div class="key">결재대상건수</div>
+                    <div class="value"><span class="number">2</span><span class="num_unit">건</span></div>
+                </li>
+                <li>
+                    <div class="key">총원화금액</div>
+                    <div class="value"><span class="number">2,000,000</span><span class="num_unit">원</span></div>
+                </li>
+                <li>
+                    <div class="key">USD(달러)</div>
+                    <div class="value"><span class="number">0.00</span></div>
+                </li>
+                <li>
+                    <div class="key">EUR(유로화)</div>
+                    <div class="value"><span class="number">0.00</span></div>
+                </li>
+                <li>
+                    <div class="key">JPY(엔화)</div>
+                    <div class="value"><span class="number">0</span></div>
+                </li>
+                <li>
+                    <div class="key">CNY(위안화)</div>
+                    <div class="value"><span class="number">0</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="h2">결재내역</h2>
+            <div class="list_data_group">
+                <div class="list_data_group_s">
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">등록일</div>
+                            <div class="value"><span class="number">2022.04.19</span></div>
+                        </li>
+                        <li>
+                            <div class="key">거래종류</div>
+                            <div class="value">계좌이체(즉시)</div>
+                        </li>
+                        <li>
+                            <div class="key">금액</div>
+                            <div class="value"><strong class="number">800,000</strong><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">입금계좌번호</div>
+                            <div class="value"><span class="number">111111-11-111111</span></div>
+                        </li>
+                        <li>
+                            <div class="key">예금주</div>
+                            <div class="value">허병만</div>
+                        </li>
+                        <li>
+                            <div class="key">출금계좌번호</div>
+                            <div class="value"><span class="number">111111-11-111111</span></div>
+                        </li>
+                        <li>
+                            <div class="key">등록자</div>
+                            <div class="value">김직원</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list_data_group_s">
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">등록일</div>
+                            <div class="value"><span class="number">2022.04.19</span></div>
+                        </li>
+                        <li>
+                            <div class="key">거래종류</div>
+                            <div class="value">계좌이체(즉시)</div>
+                        </li>
+                        <li>
+                            <div class="key">금액</div>
+                            <div class="value"><strong class="number">800,000</strong><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">입금계좌번호</div>
+                            <div class="value"><span class="number">111111-11-111111</span></div>
+                        </li>
+                        <li>
+                            <div class="key">예금주</div>
+                            <div class="value">허병만</div>
+                        </li>
+                        <li>
+                            <div class="key">출금계좌번호</div>
+                            <div class="value"><span class="number">111111-11-111111</span></div>
+                        </li>
+                        <li>
+                            <div class="key">등록자</div>
+                            <div class="value">김직원</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list_data_group_s">
+                    <ul class="list_data">
+                        <li>
+                            <div class="key">등록일</div>
+                            <div class="value"><span class="number">2022.04.19</span></div>
+                        </li>
+                        <li>
+                            <div class="key">거래종류</div>
+                            <div class="value">계좌이체(즉시)</div>
+                        </li>
+                        <li>
+                            <div class="key">금액</div>
+                            <div class="value"><strong class="number">800,000</strong><span class="num_unit">원</span></div>
+                        </li>
+                        <li>
+                            <div class="key">입금계좌번호</div>
+                            <div class="value"><span class="number">111111-11-111111</span>(국민)</div>
+                        </li>
+                        <li>
+                            <div class="key">예금주</div>
+                            <div class="value">허병만</div>
+                        </li>
+                        <li>
+                            <div class="key">출금계좌번호</div>
+                            <div class="value"><span class="number">111111-11-111111</span></div>
+                        </li>
+                        <li>
+                            <div class="key">등록자</div>
+                            <div class="value">김직원</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+                <span><button type="button" class="btn primary lg">testtesttesttesttesttesttestte</button></span>
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<script>
+    /* 업무 SCRIPT */
+</script>
+</body>
+</html>

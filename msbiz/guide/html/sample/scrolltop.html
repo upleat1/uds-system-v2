@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>BFE003210_[이체상황확인]이체상황조회</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <h2 class="h1">판매자 거래내역조회</h2>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>「KB에스크로 이체」 서비스를 위한 판매자 거래내역 화면입니다.</li>
+                <li>6개월이전 거래는 환불처리 불가 합니다. 담당부서로 문의 하시기 바랍니다.</li>          
+            </ul>
+            <div class="btn_wrap btm">
+                <a href="#none" class="btn_txt ico_arr">SMS수신방법 변경</a>
+            </div>
+		</div>
+        <div class="section">
+            <div class="fieldset">
+                <div class="form_group">
+                    <div class="form_tit">판매기업 사업자번호</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="판매기업 사업자번호 선택">선택</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group js_trans">
+                    <div class="form_tit">조회조건</div>    
+                    <div class="form_row">
+                        <ul class="rdoChk_ul2">
+                            <li>
+                                <div class="selection">
+                                    <input type="radio" id="inquiryRdo1" name="inquiryRdo">
+                                    <label for="inquiryRdo1" class="label">
+                                        <em>전체조회</em>                
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="selection">
+                                    <input type="radio" id="inquiryRdo2" name="inquiryRdo">
+                                    <label for="inquiryRdo2" class="label">
+                                        <em>임금대기</em>                
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="selection">
+                                    <input type="radio" id="inquiryRdo3" name="inquiryRdo">
+                                    <label for="inquiryRdo3" class="label">
+                                        <em>미확인</em>                
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="selection">
+                                    <input type="radio" id="inquiryRdo4" name="inquiryRdo">
+                                    <label for="inquiryRdo4" class="label">
+                                        <em>진행중</em>                
+                                    </label>
+                                </div>
+                            </li><li>
+                                <div class="selection">
+                                    <input type="radio" id="inquiryRdo5" name="inquiryRdo">
+                                    <label for="inquiryRdo5" class="label">
+                                        <em>환불요청</em>                
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">조회기간</div>
+                    <div class="form_row">
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="period1" name="period" checked="">
+                                <label for="period1" class="label"><em>3일</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period2" name="period">
+                                <label for="period2" class="label"><em>1주일</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period3" name="period">
+                                <label for="period3" class="label"><em>1개월</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="period4" name="period">
+                                <label for="period4" class="label"><em>3개월</em></label>
+                            </span>
+                        </div>
+                        <div class="form_date_term">
+                            <div class="input date">
+                                <input type="tel" title="시작일 입력" maxlength="8" value="2022.04.21">
+                                <button type="button" class="btn_cal" title="시작일 선택"></button>                    
+                            </div>
+                            <span class="space">~</span>
+                            <div class="input date">
+                                <input type="tel" title="종료일 입력" maxlength="8" value="20220421">
+                                <button type="button" class="btn_cal" title="종료일 선택"></button>                              
+                            </div>
+                        </div>              
+                    </div>
+                </div>
+            </div>
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg" onclick="UICommon.scTop.topMove('#inquiryResult')">조회</button></span>
+                <!-- 조회결과영역 상단으로 스크롤이동이 필요하면 "UICommon.scTop.topMove('조회결과영역 ID')" 호출 -->
+            </div>
+        </div>
+        <div id="inquiryResult" class="section">
+            <!-- @데이터가 없을 때 노출 --> 
+            <div class="result nodata">
+                <p class="tit">조회내역이 없습니다.</p>
+            </div>
+            <!-- // -->
+            <h2 class="h2">판매자 거래내역 조회</h2>
+            <div class="list_top_wrap sm">
+                <div class="col col_l">조회기간: <span class="number">2022.04.21~2022.05.21</span></div>
+                <div class="col col_l col_r">총 101건</div>
+            </div>
+            <!-- 미확인 : 시작 --> 
+            <ul class="list_data">
+                <li>
+                    <div class="key">거래일</div>
+                    <div class="value"><span class="number"></span>2022.04.21</span></div>
+                </li>
+                <li>
+                    <div class="key">상태</div>
+                    <div class="value">
+                        <div class="p_sub">미확인
+                            <div class="tooltip_limited">
+                                <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                    <p class="tooltip_tit">미확인</p>
+                                    <div class="tooltip_cont"> 
+                                        거래내역을 판매자가 미확인한 상태, 판매자는 반드시 “거래시작” 후 물건을 배송하여야 하며 미확인 상태에서는 구매자가 거래를 취소할 수 있음에 유의하십시오.
+                                    </div>
+                                    <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">보낸분</div>
+                    <div class="value">김국민</div>
+                </li>
+                <li>
+                    <div class="key">지급예정일</div>
+                    <div class="value"><span class="number"></span>2014.10.06</span></div>
+                </li>
+                <li>
+                    <div class="key">지급예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+                <li>
+                    <div class="key">환불예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+            </ul>
+            <!-- 미확인 : 끝 -->
+            <!-- 진행중 : 시작 --> 
+            <ul class="list_data">
+                <li>
+                    <div class="key">거래일</div>
+                    <div class="value"><span class="number"></span>2022.04.21</span></div>
+                </li>
+                <li>
+                    <div class="key">상태</div>
+                    <div class="value">
+                        <div class="p_sub">진행중
+                            <div class="tooltip_limited">
+                                <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                    <p class="tooltip_tit">진행중</p>
+                                    <div class="tooltip_cont"> 
+                                        구매자의 “구매승인” 후 판매자 계좌로 대금이 입금 완료된 상태
+                                    </div>
+                                    <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">보낸분</div>
+                    <div class="value">김국민</div>
+                </li>
+                <li>
+                    <div class="key">지급예정일</div>
+                    <div class="value"><span class="number"></span>2014.10.06</span></div>
+                </li>
+                <li>
+                    <div class="key">지급예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+                <li>
+                    <div class="key">환불예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+            </ul>
+            <!-- 진행중 : 끝 -->
+            <!-- 입금완료 : 시작 --> 
+            <ul class="list_data">
+                <li>
+                    <div class="key">거래일</div>
+                    <div class="value"><span class="number"></span>2022.04.21</span></div>
+                </li>
+                <li>
+                    <div class="key">상태</div>
+                    <div class="value">
+                        <div class="p_sub">입금완료
+                            <div class="tooltip_limited">
+                                <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                    <p class="tooltip_tit">입금완료</p>
+                                    <div class="tooltip_cont"> 
+                                        구매자의 “구매승인” 후 판매자 계좌로 대금이 입금 완료된 상태
+                                    </div>
+                                    <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">보낸분</div>
+                    <div class="value">김국민</div>
+                </li>
+                <li>
+                    <div class="key">지급예정일</div>
+                    <div class="value"><span class="number"></span>2014.10.06</span></div>
+                </li>
+                <li>
+                    <div class="key">지급예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+                <li>
+                    <div class="key">환불예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+            </ul>
+            <!-- 입금완료 : 끝 -->
+            <!-- 환불요청 : 시작 --> 
+            <ul class="list_data">
+                <li>
+                    <div class="key">거래일</div>
+                    <div class="value"><span class="number"></span>2022.04.21</span></div>
+                </li>
+                <li>
+                    <div class="key">상태</div>
+                    <div class="value">
+                        <div class="p_sub">환불요청
+                            <div class="tooltip_limited">
+                                <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                    <p class="tooltip_tit">환불요청</p>
+                                    <div class="tooltip_cont"> 
+                                        구매자가 “구매거절” 후 은행 예치금액을 환불요청한 상태(판매자의 "환불승인" 필요)
+                                    </div>
+                                    <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">보낸분</div>
+                    <div class="value">김국민</div>
+                </li>
+                <li>
+                    <div class="key">지급예정일</div>
+                    <div class="value"><span class="number"></span>2014.10.06</span></div>
+                </li>
+                <li>
+                    <div class="key">지급예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+                <li>
+                    <div class="key">환불예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+            </ul>
+            <!-- 환불요청 : 끝 -->
+            <!-- 환불완료 : 시작 --> 
+            <ul class="list_data">
+                <li>
+                    <div class="key">거래일</div>
+                    <div class="value"><span class="number"></span>2022.04.21</span></div>
+                </li>
+                <li>
+                    <div class="key">상태</div>
+                    <div class="value">
+                        <div class="p_sub">환불완료
+                            <div class="tooltip_limited">
+                                <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                                <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                    <p class="tooltip_tit">환불완료</p>
+                                    <div class="tooltip_cont"> 
+                                        판매자의 환불승인으로 대금이 구매자계좌로 환불완료된 상태
+                                    </div>
+                                    <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">보낸분</div>
+                    <div class="value">김국민</div>
+                </li>
+                <li>
+                    <div class="key">지급예정일</div>
+                    <div class="value"><span class="number"></span>2014.10.06</span></div>
+                </li>
+                <li>
+                    <div class="key">지급예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+                <li>
+                    <div class="key">환불예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+            </ul>
+            <!-- 환불완료 : 끝 -->
+            <!-- 입금대기 : 시작 --> 
+            <ul class="list_data">
+                <li>
+                    <div class="key">거래일</div>
+                    <div class="value"><span class="number"></span>2022.04.21</span></div>
+                </li>
+                <li>
+                    <div class="key">상태</div>
+                    <div class="value">입금대기</div>
+                </li>
+                <li>
+                    <div class="key">보낸분</div>
+                    <div class="value">김국민</div>
+                </li>
+                <li>
+                    <div class="key">지급예정일</div>
+                    <div class="value"><span class="number"></span>2014.10.06</span></div>
+                </li>
+                <li>
+                    <div class="key">지급예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+                <li>
+                    <div class="key">환불예정금액</div>
+                    <div class="value"><span class="number"></span>23,000,000 원</span></div>
+                </li>
+            </ul>
+            <!-- 입금대기 : 끝 -->
+            <div class="btn_list_btm more">
+                <button type="button" class="btn">더보기</button>
+            </div>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+
+</body>
+</html>

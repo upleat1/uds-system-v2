@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>[특정금전신탁조회]특정금전신탁 조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">특정금전신탁 조회</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>고객님께서 보유하고 계신 특정금전신탁 계좌입니다.</li>
+                <li>조회를 선택하시면 해당 계좌의 거래내역 및 상세조회를 하실 수 있습니다. (입 · 출금 가능여부, 상품명, ELS신탁의 조기상환 예정일 등)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="h3">특정금전신탁</h2>
+            <div class="acc_list_wrap">
+                <div class="acc_pannel open btl">
+                    <div class="acc_wrap">
+                        <div class="acc_top_info">
+                            <span class="badge refusal">승낙 미확인</span>
+                        </div>
+                        <!-- 신탁명/신탁계좌번호 선택 시, BFE001050 화면 이동 -->
+                        <a href="#none">
+                            <div class="acc_name">(ELS 22-300호 원금비보장형)</div>
+                            <div class="acc_num"><span class="number">400407-01-023569</span></div>
+                        </a>
+                        <!-- //신탁명/신탁계좌번호 선택 시, BFE001050 화면 이동 -->
+                        <div class="acc_info_wrap">
+                            <div class="acc_info">
+                                <span class="tit">신규일</span><span class="number">2015.06.16</span>
+                            </div>
+                            <div class="acc_info">
+                                <span class="tit">만기일</span><span class="number">2025.06.16</span>
+                            </div>
+                        </div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay"><span class="unit">평가금액</span>
+                                <strong class="number">1,000,000,000,000</strong><span class="num_unit">원</span>
+                            </div>
+                            <div class="acc_pay"><span class="unit">잔액</span>
+                                <strong class="number">1,000,000,000,000</strong><span class="num_unit">원</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="acc_pannel open">
+                    <div class="acc_wrap">
+                        <div class="acc_top_info">
+                            <span class="badge approval">승낙 완료</span>
+                        </div>
+                        <!-- 신탁명/신탁계좌번호 선택 시, BFE001050 화면 이동 -->
+                        <a href="#none">
+                            <div class="acc_name">(ELS 22-300호 원금비보장형)</div>
+                            <div class="acc_num"><span class="number">658149-71-055303</span></div>
+                        </a>
+                        <!-- //신탁명/신탁계좌번호 선택 시, BFE001050 화면 이동 -->
+                        <div class="acc_info_wrap">
+                            <div class="acc_info">
+                                <span class="tit">신규일</span><span class="number">2015.06.16</span>
+                            </div>
+                            <div class="acc_info">
+                                <span class="tit">만기일</span><span class="number">2025.06.16</span>
+                            </div>
+                        </div>
+                        <div class="acc_sum_wrap">
+                            <div class="acc_pay"><span class="unit">평가금액</span>
+                                <strong class="number">1,000,000,000,000</strong><span class="num_unit">원</span>
+                            </div>
+                            <div class="acc_pay"><span class="unit">잔액</span>
+                                <strong class="number">1,000,000,000,000</strong><span class="num_unit">원</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 조회결과없음 : 특정금전신탁 계좌가 없는 경우 노출 -->
+        <div class="result nodata">
+            <p class="tit">특정금전신탁 계좌가 없습니다.</p>
+        </div>
+        <!-- 조회결과없음 : //특정금전신탁 계좌가 없는 경우 노출 -->
+        <!-- 조회결과없음 : 예금계좌가 없는 경우 노출  -->
+        <div class="result nodata">
+            <p class="tit">예금계좌가 없습니다.</p>
+        </div>
+        <!-- //조회결과없음 : 예금계좌가 없는 경우 노출  -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript"></script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

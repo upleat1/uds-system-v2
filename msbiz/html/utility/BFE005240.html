@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[상하수도요금 납부]상하수도고지내역조회결과(멀티고지)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공과금 전용 스타일" href="/msbiz/app/css/utility.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_utility">
+            <h1 class="h1">상하수도고지내역 조회결과</h1>
+
+            <div class="section">
+                <h2 class="h3">조회내역 합계</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">총 고지건수</div>
+                        <div class="value">
+                            <!-- 221017 한줄로변경 -->
+                            <span class="number">10</span><span class="num_unit">건</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">총 금액</div>
+                        <div class="value">
+                            <!-- 221017 한줄로변경 -->
+                            <span class="number">1,234,123</span><span class="num_unit">원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+
+                <!-- 220729 수정 -->
+                <div class="chk_data_group">
+                    <div class="chk_total">
+                        <span class="selection">
+                            <input type="checkbox" id="checkType1" class="chk_all">
+                            <label for="checkType1" class="label bold">전체선택</label>
+                        </span>
+                    </div>
+                    <div class="chk_data_list_group">
+                        <div class="chk_data_list">
+                            <div class="chk_head">
+                                <span class="selection chk">
+                                    <input type="checkbox" id="checkCHK1">
+                                    <label for="checkCHK1" class="label">
+                                        <strong>부산광역시</strong>
+                                        <span class="sep_txt">상∙하수도사용료</span>
+                                        <span class="sep_txt">납기내</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <ul class="list_data">
+                                <li>
+                                    <div class="key">납부기한</div>
+                                    <div class="value"><span class="number">2025.04.30</span></div>
+                                </li>
+                                <li>
+                                    <div class="key">고지번호</div>
+                                    <div class="value"><span class="number">213987912837918237</span></div>
+                                </li>
+                                <li>
+                                    <div class="key">청구금액</div>
+                                    <div class="value">
+                                        <!-- 221017 strong 태그로 변경, 한줄로변경 -->
+                                        <strong class="number">98,123</strong><span class="num_unit">원</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_list_btm">
+                                <span><button type="button" class="btn outline sm">상세보기</button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_list_btm more">
+                        <button type="button" class="btn">더보기</button>
+                    </div>
+                </div>
+                <!-- //220729 수정 -->
+
+
+                <p class="depth info gap_sm">'선택납부'는 1회에 최대 15건까지 선택하여 납부할 수 있습니다.</p>
+
+                <div class="btn_confirm_wrap">
+                    <div class="btn_area">
+                        <span>
+                            <button type="button" class="btn primary lg">납부하기</button>
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+
+    <!-- layer html : 시도 선택 -->
+    <div id="BFE005230_01" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>시도 선택</h1>
+                    <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <ul class="list_item_select">
+                        <li>
+                            <span class="selection">
+                                <input type="radio" id="radioType1_1" name="radio_sm" checked>
+                                <label for="radioType1_1" class="label"><em>전국</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="radio" id="radioType1_2" name="radio_sm">
+                                <label for="radioType1_2" class="label"><em>서울특별시</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="radio" id="radioType1_3" name="radio_sm">
+                                <label for="radioType1_3" class="label"><em>부산광역시</em></label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <!-- //layer html : 시도 선택 -->
+
+
+    <!-- layer html : 지방자치단체 선택 -->
+    <div id="BFE005230_02" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>지방자치단체 선택</h1>
+                    <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <ul class="list_item_select">
+                        <li>
+                            <span class="selection">
+                                <input type="radio" id="radioType2_1" name="radio_sm" checked>
+                                <label for="radioType2_1" class="label"><em>전체</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="radio" id="radioType2_2" name="radio_sm">
+                                <label for="radioType2_2" class="label"><em>지역 1</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="radio" id="radioType2_3" name="radio_sm">
+                                <label for="radioType2_3" class="label"><em>지역 2</em></label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <!-- //layer html : 지방자치단체 선택 -->
+
+    <!-- layer html : 조회구분 선택 -->
+    <div id="BFE005230_03" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>조회구분 선택</h1>
+                    <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <ul class="list_item_select">
+                        <li>
+                            <span class="selection">
+                                <input type="radio" id="radioType3_1" name="radio_sm" checked>
+                                <label for="radioType3_1" class="label"><em>전자납부번호</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="radio" id="radioType3_2" name="radio_sm">
+                                <label for="radioType3_2" class="label"><em>전자수용가번호</em></label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="selection">
+                                <input type="radio" id="radioType3_3" name="radio_sm">
+                                <label for="radioType3_3" class="label"><em>고객번호</em></label>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <!-- //layer html : 조회구분 선택 -->
+
+    <!-- layer html : 납부가능지방자치단체안내 팝업 -->
+    <div id="BFE005230_04" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>납부가능지방자치단체</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <div class="table">
+                        <table summary="시도, 지방자치단체">
+                            <caption>납부가능 지방자치단체 안내 테이블</caption>
+                            <colgroup>
+                                <col style="width:30%">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">시도</th>
+                                    <th scope="col">지방자치단체</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">강원도</td>
+                                    <td class="center">강릉시</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">강원도</td>
+                                    <td class="center">고성군</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </div>
+    <!-- //layer html : 납부가능지방자치단체안내 팝업 -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

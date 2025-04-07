@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>약정해지 및 변경</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">약정마켓정보 확인</h1>
+
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <li>약정해지 및 변경 거래를 위한 조회화면입니다.</li>
+                    <li><strong>마켓의 정책에 따라 해지 또는 변경 거래가 제한될 수 있습니다.</strong></li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2 class="h3">약정정보</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">마켓명</div>
+                        <div class="value">쿠팡 주식회사</div>
+                    </li>
+                    <!-- <li>
+                        <div class="key">마켓사업자번호</div>
+                        <div class="value"><span class="number">123-45-56870</span></div>
+                    </li> 220907 삭제 -->
+                    <li>
+                        <div class="key">약정금액</div>
+                        <div class="value"><span class="number">50,000,000</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">선정산(대출)잔액</div>
+                        <div class="value"><span class="number">50,000,000</span><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">약정일자</div>
+                        <div class="value"><span class="number">2022.02.21</span></div>
+                    </li>
+                    <li>
+                        <div class="key">약정만기일자</div>
+                        <div class="value"><span class="number">2022.02.21</span></div>
+                    </li>
+                    <li>
+                        <div class="key">고객이용계좌</div>
+                        <div class="value"><span class="number">123401-04-123456</span></div>
+                    </li>
+                    <li>
+                        <div class="key">정산금수령계좌</div>
+                        <div class="value"><span class="number">123401-04-123456</span></div>
+                    </li>
+                    <li>
+                        <div class="key">선정산방식</div>
+                        <div class="value">자동 선정산</div><!-- 220907 수정 -->
+                    </li>
+                    <li>
+                        <div class="key">담당자명</div>
+                        <div class="value">지우학</div>
+                    </li>
+                    <li>
+                        <div class="key">담당자휴대폰번호</div>
+                        <div class="value"><span class="number">010-1234-1234</span></div>
+                    </li>
+                    <li>
+                        <div class="key">대출계약철회 대상</div>
+                        <div class="value">비대상</div>
+                    </li>
+                    <li>
+                        <div class="key">관리점</div>
+                        <div class="value">강남파이낸스</div>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="hr_divide">
+
+            <div class="section">
+                <h2 class="h2">
+                    정보 변경
+                    <!-- 220907 추가 -->
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <p class="tooltip_tit">정보변경 가능 항목 안내</p>
+                            <div class="tooltip_cont"> 
+                                <ul class="depth bul">
+                                    <li><strong>고객이용계좌</strong> : 건별대출금을 입금받거나 최종적으로 정산이 마무리 된 정산금이 입금되는 계좌</li><!-- 220811 고객이용계좌로 변경 -->
+                                    <li><strong>담당자정보</strong> : 선정산서비스(KB셀러론) 관련 안내 메시지를 받을 담당자 정보<strong>(담당자는 마켓별로 다르게 지정할 수 없음)</strong></li>
+                                    <li><strong>선정산방식</strong> : 선정산(대출)을 실행하는 방식(자동/개별)</li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                    <!-- //220907 추가 -->
+                </h2>
+                <ul class="depth bul p_15">
+                    <li><strong>고객이용계좌 / 담당자정보 / 선정산방식</strong></li><!-- 220907 수정 -->
+                </ul>
+                <div class="btn_list_btm">
+                    <span><button type="button" class="btn outline sm">정보변경</button></span>
+                </div>
+
+                <h2 class="h2 bdt">
+                    약정해지(철회) 신청
+                    <!-- 220907 추가 -->
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <p class="tooltip_tit">약정해지(철회) 신청 가능 항목 안내</p>
+                            <div class="tooltip_cont"> 
+                                <ul class="depth bul">
+                                    <li><strong>약정해지(철회) 신청 </strong> : 이용하고 계신 선정산서비스(KB셀러론) 약정을 해지 신청하는 거래이며 KB셀러론 대출 잔액이 남아있는 경우 약정해지가 제한</li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                    <!-- //220907 추가 -->
+                </h2>
+                <!-- <p class="p_15"><strong>약정해지(철회) 신청 </strong> : 이용하고 계신 선정산서비스(KB셀러론) 약정을 해지 신청하는 거래이며 KB셀러론 대출 잔액이 남아있는 경우 약정해지가 제한</p> 220907 삭제 -->
+                <div class="btn_list_btm">
+                    <span><button type="button" class="btn outline sm">약정해지(철회) 신청 </button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

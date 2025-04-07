@@ -1,0 +1,440 @@
+@charset "utf-8"; 
+
+body{word-break:keep-all !important;word-wrap: break-word !important;}
+
+/* 금융사선택 */
+.list_item_select.bank_list.transfer li > a{display: flex;}
+.list_item_select.bank_list.transfer li a [class^=icon_bank_]{width: 2.4rem;height: 2.4rem;}
+.list_item_select.bank_list.transfer li a strong{flex: 1;}
+
+/* 일본어 장음 표현이 KBtext에서 노출되지 않음 */
+body,button,dd,dl,dt,fieldset,form,input,legend,li,ol,p,select,table,td,textarea,th,ul,h1,h2,h3,h4,h5,h6,a {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial,'NotoSans','Roboto','Droid Sans','Sans-serif','돋음','dotum' !important;}
+::-webkit-input-placeholder {font-family:'Roboto' !important;}
+::placeholder {font-family:'Roboto' !important;}
+.input input[type=tel]::-webkit-input-placeholder {font-family:'Roboto' !important;} 
+.input input[type=tel]::placeholder {font-family:'Roboto' !important;} 
+.num_unit{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial,'NotoSans','Roboto','Droid Sans','Sans-serif','돋음','dotum' !important;}
+textarea::-webkit-input-placeholder, textarea::placeholder{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial,'NotoSans','Roboto','Droid Sans','Sans-serif','돋음','dotum' !important;}
+.select_btn.number{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial,'NotoSans','Roboto','Droid Sans','Sans-serif','돋음','dotum' !important;}
+
+/*** global_hcw.css ***/
+/* 로그인 후 메인 */
+.g_main .main_welcome_txt{padding: 1.4rem 2.4rem 3rem;}
+.g_main .main_welcome_txt .tit{margin-bottom:1rem;font-size:2.8rem; font-weight: 300;letter-spacing: -0.1rem;}/* 1006 타이틀 폰트 크기 디자인쪽 요청으로 사이즈 줄임 */
+.g_main .main_welcome_txt .txt{font-weight: 400;font-size: 1.4rem;}
+
+.g_main .my_account_wrap{position: relative;padding: 1.4rem 0 0;}
+.g_main .my_account_wrap::before{content: '';position:absolute;left:0;top:0;width: 100%;height: 22rem;background: #23405c;}
+.g_main .my_account_wrap .approval{position: relative; padding: 0 2rem; margin-top: .2rem;}
+.g_main .my_account_wrap .approval .tit{margin-bottom:1rem;color: var(--fc_11, #fff);font-size: 1.4rem;font-weight: 300;}
+.g_main .my_account_wrap .approval .app_count{display: flex; background: #314d6a; border-radius: 1rem;text-align: center;}
+.g_main .my_account_wrap .approval .app_count dl{position: relative;padding: 2rem 0 1.8rem; width: calc(100% / 3);}
+.g_main .my_account_wrap .approval .app_count dl:not(:first-child):before{content: '';position: absolute;left: 0;top: 2rem;bottom: 2.1rem;width:1px;background: #23405c;}
+.g_main .my_account_wrap .approval .app_count dl dt{margin-bottom: .5rem; color: var(--fc_11, #fff);font-size: 1.4rem;}
+.g_main .my_account_wrap .approval .app_count dl dd{color: #ffd338;font-size: 1.6rem;}
+.g_main .my_account_wrap .approval .app_count dl dd a{display: block; font-weight:500}
+.g_main .my_account_wrap .ui_swiper{margin-top: 2rem;}
+.g_main .my_account_wrap .ui_swiper .swiper-slide{ padding: 0 2rem .8rem; overflow: hidden;}
+.g_main .my_account_wrap .account_panel{position: relative;box-shadow: 0 0.2rem 0.8rem rgba(0,0,0,.12);border-radius: 1rem;background: var(--bg_01, #fff);border: 1px solid var(--bdc_01, #ebeef0);}
+.g_main .my_account_wrap .account_panel .my_account_info a {display:block;}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_name{font-size: 1.4rem;}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_num{margin-top: .3rem;display: block;}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_num .number{font-size: 1.7rem;}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_num i{vertical-align: sub;}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_sum{margin-bottom:1.5rem;text-align: center;font-weight: 600;}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_sum.kor .number{font-size: 2.4rem; font-weight:500}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_sum.kor .num_unit{margin-left: 0;font-size: 2rem}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_sum.global p + p{margin-top: .2rem;}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_sum.global p .unit{font-size: 1.5rem;font-weight: 300;}
+.g_main .my_account_wrap .account_panel .my_account_info .acc_sum.global p .number{display: inline-block;margin-left:.3rem;font-size: 2rem; font-weight:500}
+.g_main .my_account_wrap .account_panel .my_account_info .btn_trans{display:block;padding:.5rem 1.7rem; min-width: 8.4rem; min-height:3.6rem; font-size: 1.5rem; border-radius: 5rem;}
+
+/* BFE100060 메인 상단 계좌번호 링크 값 수정 */
+/* .main_account_info {display:block;position:absolute;top:0;left:0;width:100%;height:20.5rem;padding:2.0rem 1.5rem;z-index:1}
+.my_account_info {min-height:20rem;padding:1.6rem 2rem 1.3rem; }
+.my_account_info .acc_sum.kor{margin-top:4rem;}
+.my_account_info .acc_sum.global{margin-top:2rem;}
+.my_account_info .btn_trans {margin:0 auto;text-align:center;z-index:3}
+.my_account_info .acc_num_copy{position:absolute;top:4.8rem;left:15rem;width:1.1rem;height:1.1rem;margin-left:6.5rem;border:.1rem solid #90969f;border-radius:.2rem;z-index:3}
+.my_account_info .acc_num_copy::before{content:'';position:absolute;top:-.3rem;left:-.3rem;width:.9rem;height:.9rem;;border-width:.1rem 0 0 .1rem;border-style:solid;border-color:#90969f;border-radius:.2rem} */
+
+.g_main .recent_tranfer.toggle_sm_wrap{text-align: inherit;margin-top: 0;border-top: .1rem solid var(--bdc_01, #ebeef0);}
+.g_main .recent_tranfer .toggle_panel + .tit{display:block;margin-top: 0; padding-right:0; width:100%;height:4.5rem;font-size: 1.4rem;color: var(--fc_03, #484b51);text-align: center;}
+.g_main .recent_tranfer.toggle_sm_wrap.on .tit.js_toggle{border-top: 1px solid var(--bdc_01, #ebeef0);}
+.g_main .recent_tranfer .toggle_panel + .tit > span.arrow{display:inline-block;position:relative;top:inherit;left:inherit;bottom:inherit;right:inherit;margin:-.5rem 0 0 .5rem;vertical-align:middle;}
+.g_main .recent_tranfer .toggle_panel + .tit > span.arrow::before, .g_main .recent_tranfer .toggle_panel + .tit > span.arrow::after{height:1px}
+.g_main .recent_tranfer .recent_list{padding: 0 1.6rem;background-color: #fafafa;}
+.g_main .recent_tranfer .recent_list li{display:flex;align-items: center;padding: 1.3rem 0;}
+.g_main .recent_tranfer .recent_list li + li{border-top: 1px solid var(--bdc_01, #ebeef0);}
+.g_main .recent_tranfer .recent_list li .label{width: 46%;padding-right: 1rem;}
+.g_main .recent_tranfer .recent_list li .label .name{overflow: hidden;margin-top: .4rem;text-overflow: ellipsis;white-space: nowrap;font-size: 1.4rem;}
+.g_main .recent_tranfer .recent_list li .label .date{display:block;color: var(--fc_05, #8c949e);font-size: 1.4rem;}
+.g_main .recent_tranfer .recent_list li .value{width: 54%;text-align: right;}
+.g_main .recent_tranfer .recent_list li .value .number{font-size: 1.5rem;}
+.g_main .recent_tranfer .recent_list li .value .num_unit{font-size: 1.4rem;}
+.g_main .recent_tranfer .result.nodata{margin: 0;padding: 4.8rem 2.4rem;background-color: #fafafa;}
+.g_main .ui_swiper .swiper-pagination-bullet-active{background-color:#23405c}
+
+.g_main .works_link{padding: 3.5rem 2.4rem 0;position: relative; background:var(--bg_01, #fff);}
+.g_main .works_link ul{border-top: 1px solid var(--bdc_01, #ebeef0);}
+.g_main .works_link li{border-bottom: 1px solid var(--bdc_01, #ebeef0);}
+.g_main .works_link li .link{padding:3rem 3.5rem 2rem 5.6rem; min-height:8rem;position: relative;font-size: 1.6rem;font-weight: 600;}
+.g_main .works_link li:first-child .link{padding-top:3rem; padding-bottom:2rem;}
+.g_main .works_link li:first-child .link:after {margin-top:0;}
+.g_main .works_link li .link::before{content: '';position: absolute;left:0;top:2rem;width:4rem;height:4rem;background: url(/msbiz/app/img/global/spr_main_link.png) no-repeat;background-size: 25rem;}
+.g_main .works_link li:nth-child(1) .link::before{background-position: 0 0;}
+.g_main .works_link li:nth-child(2) .link::before{background-position: -4rem 0;}
+.g_main .works_link li:nth-child(3) .link::before{background-position: -8rem 0;}
+.g_main .works_link li:nth-child(4) .link::before{background-position: -12rem 0;}
+.g_main .works_link li:nth-child(5) .link::before{background-position: -16rem 0;}
+
+.g_main .exchange_info{margin: 3.7rem 2.4rem 0;}
+.g_main .exchange_info .tit{font-size: 1.8rem;}
+.g_main .exchange_info .ex_time{margin: 1.1rem 0 1.7rem;display: flex;justify-content: space-between;}
+.g_main .exchange_info .ex_time span{color: var(--fc_04, #696e76);font-weight: 300;font-size: 1.3rem;}
+.g_main .exchange_info .table{margin: 2.8rem -.4rem 0;overflow: hidden; border-radius: .6rem;}
+.g_main .exchange_info .table table{border-top: 0;text-align: center;}
+.g_main .exchange_info .table table thead th{padding:1.1rem .8rem 1rem;background:#e6ded1;border:0;font-size: 1.6rem;}
+.g_main .exchange_info .table table tbody td{padding:1.1rem .8rem 1rem;background: #f8f6f3;border-right:0;border-bottom:1px solid #eae7e2;font-size: 1.6rem;}
+.g_main .exchange_info .table table tbody tr:last-child td{border-bottom: 0;}
+.g_main .exchange_info .table table td .country_flag_im.sm{vertical-align: sub;}
+.g_main .exchange_info .btn_list_btm .btn{font-size: 1.4rem;}
+
+.g_main .customer_center{position:relative;margin:4.8rem 2.4rem 0;padding:1.6rem 1.6rem 1.3rem 6.8rem;border-radius:2px;color: var(--fc_03, #484b51); background:var(--bdc_01, #f7f7f8);}
+.g_main .customer_center::before{content: '';position:absolute;left:1.6rem;top:1.6rem;width:4rem;height:4rem; background: url('/msbiz/app/img/global/spr_main_link.png') no-repeat 0 -4rem;background-size:25rem auto;}
+.g_main .customer_center .center_num{display:block;font-size: 1.5rem; font-weight:500}
+.g_main .customer_center .operating_time{font-size: 1.3rem;}
+
+
+/*** global_kji.css ***/
+.main_account_head{display:block;position:relative;top:0;left:0;right:6.0rem;width:100%;padding:0 0 0 4.0rem;text-align:left;z-index:5}
+.main_account_head [class^=icon_bank_]{position:absolute;top:-.1rem;left:0}
+.main_account_head .acc_name{display:block;font-size:1.4rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;-moz-binding:url(ellipsis.xml#ellipsis)}
+.main_account_head .acc_num{display:block;margin-top:.3rem;font-size:1.7rem}
+.main_account_head .copy{display:inline-block;position:relative;width:1.1rem;height:1.1rem;margin-left:.9rem;border:.1rem solid #90969f;border-radius:.2rem}
+.main_account_head .copy::before{content:'';position:absolute;top:-.3rem;left:-.3rem;width:.9rem;height:.9rem;;border-width:.1rem 0 0 .1rem;border-style:solid;border-color:#90969f;border-radius:.2rem}
+
+#global_header {width:100%; height:4.8rem; z-index:100}
+#global_header .inner {display:flex; justify-content:space-between; align-items:flex-end; position:relative; height:100%; margin:0 2.4rem; padding-bottom:1.2rem}
+#global_header .page_logo {width:17.5rem; height:1.9rem; background:url(/msbiz/app/img/common/sp_header.png) no-repeat  -0.7rem -4.95rem; background-size:37rem auto}
+#global_header button.btn_all_menu {position:absolute; right:-1rem; bottom:.4rem; width:4.2rem; height:3.8rem}
+#global_header button.btn_all_menu:before {content:''; display:block; width:2.2rem; height:1.8rem; margin:auto; background:url(/msbiz/app/img/common/spr_ico_24x.png) no-repeat -2.05rem -.15rem; background-size: 22rem auto}
+
+.global_menu .log_btn {text-align:right}
+.global_menu .log_btn .underline {text-decoration:none; border:.1rem solid #dde1e4; border-radius:12.5rem; -webkit-border-radius:12.5rem; -moz-border-radius:12.5rem; -ms-border-radius:12.5rem; -o-border-radius:12.5rem; padding:.2rem 1rem .3rem; font-size:1.3rem}
+.global_menu p.h2 {font-family:'roboto' !important; font-weight:300}
+.global_menu p.h2>span {display:block}
+.global_menu p.h2>span>em {font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial,'NotoSans','Roboto','Droid Sans','Sans-serif','돋음','dotum' !important}
+.global_menu p.h2 b {font-weight:500}
+.global_menu .icon_link_sec {display:flex; justify-content:space-between; align-items:center; margin-top:3.2rem}
+.global_menu .icon_link_sec a {font-family:'roboto' !important;}
+.global_menu .icon_link_sec .icon_link {width:10.5rem; height:9.2rem; border:.1rem solid #dde1e4; border-radius:.4rem; -webkit-border-radius:.4rem; -moz-border-radius:.4rem; -ms-border-radius:.4rem; -o-border-radius:.4rem}
+.global_menu .icon_link_sec .icon_link a {display:flex; flex-direction:column; align-items:center; padding:2rem 0; width:100%; height:100%}
+.global_menu .icon_link_sec .icon_link .icon_lang {display:inline-block; width:2.4rem; height:2.5rem; background:url(/msbiz/app/img/common/spr_ico_20x.png) no-repeat;     background-size:27rem; background-position:-19.34rem -13rem}
+.global_menu .icon_link_sec .icon_link .p {margin-top:.7rem}
+.global_menu .icon_link_sec .list_link {flex:1; margin-left:2rem}
+.global_menu .icon_link_sec .list_link li:first-child {border-top:1px solid #ebeef0}
+.global_menu .icon_link_sec .list_link li > .link {padding:1.1rem 0}
+.global_menu .icon_link_sec .list_link li:first-child > a.link:after {margin-top:0}
+
+.global_menu .tree {margin-right:-2.4rem}
+.global_menu .f_tit {margin-top:1.2rem}
+.global_menu .list_acco.tree > li,
+.global_menu .list_acco.tree > li:last-child,
+.global_menu .js_accordion.tree > li.on > .toggle_panel {border-top:.2rem solid #ffcc00}
+.global_menu .list_acco.tree > li:last-child {border-bottom:.2rem solid #ffcc00}
+.global_menu .list_acco.tree > li:first-child {border-top:0}
+.global_menu .list_acco.tree > li.on {border-bottom:0}
+.global_menu .list_acco.tree > li.on + li {border-top:0}
+.global_menu .list_acco .list_link.squarebul li {border-bottom:.1rem solid #ebeef0}
+.global_menu .list_acco .list_link.squarebul li:last-child {border-bottom:0}
+.global_menu .list_acco.tree .toggle_panel .list_acco > li.on {border-top:.1rem solid #ebeef0}
+.global_menu .list_acco .list_link.squarebul li > .link::before {left:1.6rem}
+.global_menu .list_acco > li .tit:after,
+.global_menu .list_acco.tree .toggle_panel .list_acco .tit.link:after,
+.global_menu .list_acco .list_link.squarebul li > .link::after {right:2.6rem}
+.global_menu .list_acco > li > .tit.link:after,
+.global_menu .list_acco .list_link.squarebul li:first-child > .link:after {margin-top:-.2rem}
+.global_menu .list_acco > li .tit.link > span.arrow {right:1.7rem}
+
+.global_menu .list_acco > li > .tit {padding:1.6rem 3.2rem 1.6rem 0}
+
+.list_acco.tree .toggle_panel .list_acco > li > .toggle_panel {padding:0}
+.list_acco .list_link.squarebul li > .link {padding:1.6rem 3.5rem 1.6rem 2.7rem; font-size:1.6rem}
+
+
+/*** 기타 ***/
+/* 조회 - [전계좌조회]KB국민은행 계좌목록 - 아코디언 제목이 길어지면 툴팁 가리는 현상 방지  */
+.account_all.all_inquiry .foreign .toggle_panel > .tooltip_limited{left:18.2rem !important;}
+.account_all.all_inquiry .toggle_panel > .tooltip_limited{left:10.7rem !important;}
+
+@media screen and (max-width:300px) {
+    .account_all.all_inquiry .pay{max-width: 9.5rem !important;}
+}
+
+/* 조회 - [계좌 순서변경]계좌 순서변경_KB국민은행(팝) - 탭 삭제로 인한 마진 변경 */
+.account_all.global .acc_acco_list .tit_area{margin-left: 0;}
+.account_all.global .acc_list_wrap.type_list{margin-left: 0;}
+
+/* 조회 - BFE101180 그래프 관련 클래스 추가 */
+.acc_graph_wrap .graph_current.graph_g{width: 100%;}
+
+/* 메인-언어선택 */
+.global .country_list{margin-top: 2.8rem;}
+.global .country_list li a span{margin-right: 1.2rem; vertical-align: middle;}
+.global .list_link.country_list li a{font-weight: 700;}
+.global .list_link.country_list li > .link{padding: 1.6rem 3.5rem 1.6rem 0 !important;}
+.global .list_link.country_list li:first-child > .link{padding:1.6rem 3.5rem 1.6rem 0 !important;}
+.global .lang_txt{line-height: 2.1rem; margin-top: .4rem; font-size: 1.5rem;}
+
+/* 테이블 보더 */
+.global .bdr_1{border-right:0;}
+
+/* 글로벌고객서비스센터 */
+.cs_call_guide {display:table; width:100%; padding:2rem 0; background-color:#eef1fa;}
+.cs_call_guide .cs_call {display:table-cell; position:relative; text-align:center;}
+.cs_call_guide .number {color:#26282c; font-size:2rem;}
+.cs_call_guide .txt {margin-top:.6rem; color:#696e76; font-size:1.2rem;}
+.cs_call_guide .cs_call:nth-of-type(1) {padding:0 1.5rem;}
+.cs_call_guide .cs_call:nth-of-type(2) {padding:0 1.5rem 0 1.6rem;}
+.cs_call_guide .cs_call:nth-of-type(2)::after {content:''; position:absolute; left:0; top:.4rem; bottom:.4rem; width:1px; background-color:#bec3cc;}
+
+/* em관련 */
+.txt.fc_posi em{color: #287eff !important;}
+.txt.fc_nega em{color: #ff5858 !important;}
+.txt.fc_gray2 em{color: var(--fc_03, #484b51) !important;}
+
+/* 이체확인증에 하단 영문로고  */
+.logo_inner_en { width:20.5rem; height:3.4rem; margin:0 auto; background:url(/msbiz/app/img/global/img_irp_kbseal_en.png) no-repeat; background-size:100% auto; }
+/* 통장사본조회 영문로고 */
+.in_acc_copy_wrap .acc_seal_en {min-height:2.9rem; margin-top:2rem; background:url(/msbiz/app/img/global/img_irp_kbseal_en.png) no-repeat center right; background-size:auto 2.9rem;}
+
+/* 탭변경 클래스 추가 */
+.tab_wrap.g_m0 .tab_list{margin: 0 !important; padding: 0 !important;}
+
+/* 영문 라디오 탭버튼 flex 처리 */
+.rdoChk_box {display:flex !important;}
+.rdoChk_box .selection {display:flex !important; align-items: center !important; width:100% !important;}
+.rdoChk_box .selection input[type=radio] + label.label {word-wrap:break-word !important;word-break:keep-all !important; }
+
+/* 외환 BFE101860 버튼 틀어짐 관련 css 추가 */
+.btn_trans_group{display: flex !important;}
+.btn_trans_group > span{flex: 3 !important; min-height: 3.4rem !important; height: auto !important;}
+.btn_trans_group .btn{padding: .5rem !important;}
+
+/* 조회 BFE101180 입출금 텍스트 관련 css 추가 */
+.acc_graph_wrap .list_data > li .tit{padding-left: initial !important;}
+.acc_graph_wrap .list_data > li .tit:before{left:-1.5rem !important;}
+.acc_graph_wrap .list_data > li > div.key{padding-left: 1.5rem !important;}
+.acc_graph_wrap .list_data > li > div.key .tit{display: block !important;}
+
+/* E011131 편집시 화면 깨짐 처리 */
+.memo_list .wdh30 {width:72%; word-break:keep-all; font-size:1.6rem; margin-right:0px;}
+.memo_list .btn_modify_area {width:26%; text-align:right; top:0rem; }
+.memo_list .btn_txt.link {width:8rem; text-align:right;}
+.memo_list .list_item_box.modi .item_area button {height:4rem !important;}
+.step_wrap.on .h1 {width:80%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; word-break: break-all;}
+
+/* BFE102430 개행 관련 */
+.list_data > li > div{word-break: keep-all !important;}
+
+/* BFE100170 버튼 개행 관련 */
+.grid .append{white-space: initial !important;}
+
+/* 221014 이래영님 요청으로 상단 영역 수정 */
+.tr_top_sum{position:sticky;top:0;margin-top:-1.6rem;margin-bottom:3.2rem;padding:2.0rem 2.4rem;background-color:#f7f7f8;border-top:.1rem solid #ebeef0;box-shadow:0 0.4rem 0.6rem rgba(0,0,0,.07);z-index:10}
+.tr_top_sum .acc_bank{display:block;position:relative;padding-left:3.2rem;font-size:1.6rem}
+.tr_top_sum .acc_bank [class^=icon_bank_]{position:absolute;top:.4rem;left:0}
+.tr_top_sum .acc_bank .number{padding-left:.4rem;font-size:1.7rem}
+.tr_top_sum .total{display:block;position:relative;margin-top:2.4rem}
+.tr_top_sum .total .bk_total{font-size:1.5rem;color:#696e76}
+.tr_top_sum .total .bk_pay{position:absolute;top:0;right:0;font-size:1.7rem;font-weight:700}
+.tr_top_sum .total .bk_pay .number{font-size:1.9rem;font-weight:500}
+
+/* 221017 메모 간격 가로 세로 수정*/
+.list_item_box > li {height:auto;word-break:break-all;float:left;}
+.list_item_box .item_area button { padding:.4rem 1rem .4rem 1rem; height:auto; text-align:left; display:inline-block;}
+.list_item_box .item_area.item_add button {padding-right:4rem; display:inline-block;}
+.list_item_box .item_area .ico_item_del {top:.5rem; display:block;}
+.list_item_box.modi .item_area button { padding:.4rem 1rem .4rem 1rem; height:auto; text-align:left; display:inline-block;} /* 편집시*/
+
+/* 계좌이체 추가이체입력거래 인풋 박스 */
+.acc_wrap .input.unit input[readonly], .input.unit input:disabled {padding-right:4.5rem !important;}
+.acc_wrap .input input, .c_global .input .input_txt {height:4.8rem}
+
+/* BFE101930 하단 버튼 개행 */
+.btn_confirm_wrap .btn_area{align-items: stretch !important;}
+.btn_confirm_wrap .btn{height: 100% !important;}
+
+/* BFE101181 리스트 버튼 개행 */
+.btn_list_btm{align-items: stretch !important;}
+.btn.outline.sm {height: 100% !important; min-height:3.6rem !important; line-height: initial !important; padding:.5rem 1rem !important;}
+.btn.outline.md {height: 100% !important; min-height:4.4rem !important; line-height: initial !important; padding:.5rem .5rem !important;}
+.btn.outline.lg {height: 100% !important; min-height:4.4rem !important; line-height: initial !important; padding:.5rem .5rem !important;}
+
+/* 자주쓰는 통장 메모 선택 */
+.list_item_box {margin-top:.6rem; width:100%; margin-left:-.8rem;}
+.list_item_box > li,
+.list_item_box > div {overflow:hidden; position:relative; float:left; height:4rem; margin:1rem 0 0 .8rem; border-radius:2rem;}
+.list_item_box .item_area button { display:block; height:4rem; padding:0 3rem; border:1px solid var(--fc_07, #c6cbd0); border-radius:2rem; -webkit-border-radius:2rem; -moz-border-radius:2rem; -ms-border-radius:2rem; -o-border-radius:2rem; }
+.list_item_box .item_area.active button {border-color:#ffd338; background-color:#ffd338; color:#26282c; font-weight:700;}
+.list_item_box .item_area.active button[disabled], 
+.list_item_box .item_area button[disabled] {border-color:#696e76; background-color:var(--fc_10, #f7f7f8); color:#8c949e;}
+
+.list_item_box .btn_add {position:relative; float:left; border:none; padding:0; border-radius:0;}
+.list_item_box .btn_add button {position:relative; width:4rem; height:4rem; border:1px solid var(--fc_07, #c6cbd0); border-radius:100%; background:var(--fc_10, #f7f7f8); text-align:center;}
+.list_item_box .btn_add button:before {display:inline-block; content:''; width: 2rem; height: 2rem; margin-top:.4rem; background-image: url(/msbiz/app/img/common/spr_ico_20x.png); background-size: 25rem auto; background-position:-6rem -16rem;}
+
+.list_item_box.modi .item_area.active button {border-color:var(--fc_07, #c6cbd0); background-color:var(--fc_11, #fff); font-weight:400;}
+.list_item_box.modi .item_area.item_add button {padding:0 4.2rem 0 2.2rem;}
+.list_item_box.modi .item_area.item_add .ico_item_del {display:block;}
+.list_item_box.modi .btn_add {display:none;}
+.list_item_box .item_area .ico_item_del {display:none; position:absolute; right:0; top:0; width:4rem; height:4rem; padding:0 !important; border:none; border-radius:0;}
+.list_item_box .item_area .ico_item_del:before {right:1.4rem; background-position:-4rem -16rem; transform:translateY(-50%);}
+.list_item_box.modi .item_area .ico_item_del {background-color:transparent !important;}
+.list_item_box:after { content:""; display:block; clear:both; }
+.btn_modify_area {position:absolute; right:0; top:.2rem;}
+
+/* 예비거래 상단 텍스트 */
+.result.finish .txt_trans{font-size: 2rem;}
+
+/* 1024 은행증권국세 컬럼 리스트 다국어만 한줄로 변경 */
+.list_item_select.bank_list.transfer li {float:none; width:100%;}
+.list_item_select.bank_list.transfer li:nth-child(2) {margin-top:1.7rem;}
+.list_item_select.bank_list.transfer li:nth-child(even) {padding-left:0px;}
+
+/* BFE102320 아이콘 세로 정렬 */
+.my_fund.g_my_fund .title .time .number{display: block;}
+.my_fund.g_my_fund .m_cash_flow_chart.assets .chart_legend .label::before{ top:50%; transform:translateY(-50%) ; -webkit-transform:translateY(-50%) ; -moz-transform:translateY(-50%) ; -ms-transform:translateY(-50%) ; -o-transform:translateY(-50%) ; }
+
+.fund_graph_wrap .graph_label.g_label{display: block; justify-content:initial; margin-left: 3.6rem; text-align: left;}
+.fund_graph_wrap .graph_label.g_label .label{display: block; width: auto; margin: 0; margin-bottom: 1.6rem; padding-top: initial; padding-left: 2.2rem;}
+.fund_graph_wrap .graph_label.g_label .label::before{top:50%; transform:translateY(-50%) ; left:0; -webkit-transform:translateY(-50%) ; -moz-transform:translateY(-50%) ; -ms-transform:translateY(-50%) ; -o-transform:translateY(-50%) ; margin-left: 0;}
+
+/* 아코디언 안에 상하 간격 */
+.list_acco.tree.fo_toggle > li > .toggle_panel {padding:2rem 0 !important;}
+
+/* 처리중 오른쪽 정렬 */
+.list_data_group_s .h3.right {display:block !important;}
+
+/* BFE101200 기획쪽 요청으로 계좌번호 줄바꿈 acc_box 클래스 추가 */
+.section_f.acc_box .acc_list_wrap .acc_pannel .acc_num .number {display:block;}
+
+/* BFE101419 버튼 */
+.tag_btn .btn{height: auto !important; line-height: initial !important; padding: .5rem 1.2rem !important;}
+
+/* 221031 */
+.main_account_section .swiper-slide{padding:0 2.0rem}
+.main_account_section .ui_swiper .swiper-pagination{margin-top:2.0rem}
+.main_account{position:relative;padding-top:20.5rem;border:1px solid #ebeef0;background-color:#fff;border-radius:.8rem;box-shadow:0 0.4rem 0.6rem rgba(0,0,0,.07)}
+.main_account_info{display:block;position:absolute;top:0;left:0;width:100%;height:20.5rem;padding:2.0rem 1.5rem;z-index:1}
+.main_account.ht2{padding-top:22.7rem}
+.main_account.ht2 .main_account_info{height:22.7rem}
+/* .main_account.ht2{padding-top:24.6rem}
+.main_account.ht2 .main_account_info{height:24.6rem} 221031*/
+.main_account_info .main_account_set{display:block;position:relative;margin-top:4.3rem;text-align:center}
+.main_account_info .main_account_set::before{content:'';display:block;width:4.8rem;height:4.8rem;margin:0 auto 3.0rem;width:4.8rem;height:4.8rem;background:url(/msbiz/app/img/main/spr_login_main.png) -15.0rem 0 no-repeat;background-size:25.0rem 64.9rem}
+.main_account_head{display:block;position:relative;padding:0 0 0 4.0rem;text-align:left}
+.main_account_head [class^=icon_bank_]{position:absolute;top:-.1rem;left:0}
+.main_account_head .acc_name{display:block;font-size:1.4rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;-moz-binding:url(ellipsis.xml#ellipsis)}
+.main_account_head .acc_num{display:inline-block;margin-top:.3rem;font-size:1.7rem}
+.main_account_alert_set{position:absolute;top:1.9rem;right:1.5rem;width:3.0rem;height:3.0rem;border-radius:3.0rem;border:.1rem solid #dde1e4}
+.main_account_alert_set.focus{border-color:#8c949e}
+.main_account_alert_set input[type=checkbox] + label{position:absolute;top:50%;left:50%;width:2.6rem;height:2.6rem;margin:-1.4rem 0 0 -1.3rem}
+.main_account_alert_set input[type=checkbox] + label::before, 
+.main_account_alert_set input[type=checkbox] + label::after{content:'';position:absolute;top:0;left:0;width:2.6rem;height:2.6rem;background:#fff url(/msbiz/app/img/main/spr_login_main.png) 0 0 no-repeat;background-size:25.0rem 64.9rem;border-radius:100%;transition:.5s}
+.main_account_alert_set input[type=checkbox] + label::before{background-position:-10.4rem 0;transform:rotateY(0deg) scale(1);z-index:2;opacity:1}
+.main_account_alert_set input[type=checkbox] + label::after{background-position:-7.8rem 0;transform:rotateY(180deg) scale(.7);z-index:0;opacity:0}
+.main_account_alert_set input[type=checkbox]:checked + label::before{transform:rotateY(180deg) scale(.7);z-index:0;opacity:0}
+.main_account_alert_set input[type=checkbox]:checked + label::after{transform:rotateY(0deg) scale(1);z-index:2;opacity:1}
+.main_account_amount{margin-top:3.5rem;text-align:center}
+.main_account_amount.multi{margin-top:2.4rem}
+.main_account_amount.multi2{margin-top:1.3rem}
+/* .main_account_amount.multi2{margin-top:.7rem} 221031*/
+.main_account_amount.sg{margin:3.3rem 0 5.8rem}
+.main_account_amount .num, .main_account_amount .lb, .main_account_amount .number, .main_account_amount .unit, .main_account_amount .btn_hide{display:inline-block;vertical-align:middle}
+.main_account_amount .lb{display:inline-block;margin-top:.2rem;padding-right:.8rem;font-size:1.4rem;font-weight:400}
+.main_account_amount .number{font-size:2.4rem}
+.main_account_amount .num.forex .number{font-size:2.0rem}
+.main_account_amount.hide .num, .main_account.hide .num{display:none}
+.main_account_amount .g_txt{display:none;margin-right:4.5rem;font-size:2.0rem;color:#c6cbd0}
+.main_account_amount.hide .g_txt, .main_account.hide .g_txt{display:inline}
+.main_account_amount .unit{font-size:2.0rem; font-weight:600}
+/* .main_account_amount .num{margin-right:4.5rem} */
+.main_account.no_hide .main_account_amount .num{margin-right:0}
+.main_account_amount .mdl_section{display:table;width:100%;height:8.1rem}
+.main_account_amount .mdl_section .mdl_cell{display:table-cell;vertical-align:middle}
+.main_account_amount .num .num_item{display:block}
+.main_account_amount .num .num_item + .num_item{margin-top:-.3rem}
+.main_account_amount .num.s{padding-top:.3rem}
+.main_account_amount .num.s .number{font-size:2.0rem}
+.main_account_amount .num.s .unit{font-size:1.7rem}
+.main_account_amount .num.s .sub_account_amount{display:block;margin-right:-2.9rem}
+.main_account_amount .num.s .sub_account_amount + .sub_account_amount{margin-top:.1rem}
+.main_account_amount .num.s .sub_account_amount .number{font-size:1.7rem}
+.main_account_amount .num.s .sub_account_amount .unit{font-size:1.5rem}
+.main_account_amount .num.s ~ .btn_hide{margin-top:.2rem;vertical-align:top}
+.main_account_amount .update{display:block;margin-top:.5rem;font-size:1.4rem;color:#8c949e;font-weight:400!important}
+.main_account_amount .update .number{font-size:1.5rem!important;font-weight:400!important;vertical-align:baseline}
+.main_account .acc_num_copy{position:absolute;top:4.8rem;left:0;width:1.1rem;height:1.1rem;margin-left:6.5rem;border:.1rem solid #90969f;border-radius:.2rem;z-index:3}
+.main_account .acc_num_copy::before{content:'';position:absolute;top:-.3rem;left:-.3rem;width:.9rem;height:.9rem;;border-width:.1rem 0 0 .1rem;border-style:solid;border-color:#90969f;border-radius:.2rem}
+.main_account .btn_balance_hide{position:absolute;top:0;left:50%;height:2.5rem;line-height:2.3rem;margin-top:.4rem;padding:0 1.0rem;border:.1rem solid #dde1e4;font-size:1.3rem;color:#484b51;border-radius:2.5rem;z-index:3}
+.main_account .btn_balance_hide.gt{margin-top:0}
+.main_account .acc_num_copy{visibility:visible; margin-left:0; top:2.8rem; left:18.8rem}
+.main_account .btn_set{position:absolute;top:15.1rem;left:0;right:0;text-align:center;z-index:3}
+.main_account.ht2 .btn_set{top:17.2rem}
+.main_account .btn_set button{min-width:8.4rem;height:3.6rem;line-height:3.4rem;padding:0 1.6rem;font-size:1.5rem;border:.1rem solid #dde1e4;border-radius:3.6rem}
+.main_account .btn_set button.primary{background-color:#ffd338;border:none}
+.main_account .btn_set button+button{margin-left:.4rem}
+.main_account .toggle_sm_wrap .toggle_panel + .tit{margin-top:0}
+.main_account .toggle_sm_wrap{margin-top:0;border-top:.1rem solid #ebeef0;text-align:center}
+.main_account .toggle_sm_wrap > .tit{color:#484b51;width:100%;height:4.5rem;padding:0}
+.main_account .toggle_sm_wrap > .tit > span.arrow{display:inline-block;position:relative;top:inherit;left:inherit;bottom:inherit;right:inherit;margin:-.5rem 0 0 .5rem;vertical-align:middle}
+.main_account .toggle_sm_wrap > .tit > span.arrow::before, .main_account .toggle_sm_wrap > .tit > span.arrow::after{height:1px}
+.main_account .toggle_sm_wrap .toggle_panel{padding:0 1.6rem;border-bottom:.1rem solid #ebeef0;background-color:#fafafa}
+.main_account .toggle_sm_wrap .toggle_panel .result.nodata.sm{margin:0 2.4rem;padding:4.8rem 0}
+.main_account .account_g{display:block;min-height:1.9rem;margin-top:4.5rem;padding:0 0 0 4.0rem;font-size:1.4rem}
+.main_account .btn_update_error{position:absolute;top:14.2rem;left:0;right:0;text-align:center}
+.main_account.other .main_account_amount{margin-top:2.0rem}
+.main_account.other .main_account_amount.multi{margin-top:3.7rem}
+.main_account.other .main_account_amount.multi2{margin-top:1.6rem}
+/* .main_account.other .main_account_amount.multi{margin-top:.7rem} 221031*/
+.main_account.other .main_account_amount.sg{margin-top:3.9rem}
+.main_account .account_g{margin-top:.2rem}
+.main_account .account_g + .main_account_amount.error{margin-top:2.8rem}
+.main_account .main_account_amount.error{margin-top:4.1rem}
+.main_account .main_account_amount.error .num{color:#c6cbd0}
+.main_account .main_account_amount .false{display:block;padding-top:2.0rem;font-size:2.0rem;color:#c6cbd0}
+.m_my_trans_history>li{display:flex;padding:1.5rem 0 1.4rem;font-size:1.4rem}
+.m_my_trans_history>li + li{border-top:.1rem solid #ebeef0}
+.m_my_trans_history>li .lb, .m_my_trans_history>li .val{display:block;width:50%}
+.m_my_trans_history>li .lb{padding-right:2.0rem}
+.m_my_trans_history>li .val{text-align:right;padding-top:1.0rem}
+.m_my_trans_history>li .val .number{font-size:1.5rem}
+.m_my_trans_history>li .name{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;-moz-binding:url(ellipsis.xml#ellipsis)}
+.m_my_trans_history>li .time{display:block;margin-top:.4rem;color:#8c949e}
+
+.m_my_trans_history>li.empty_name {align-items:center}
+.m_my_trans_history>li.empty_name .time {margin-top:0}
+.m_my_trans_history>li.empty_name .val {padding-top:0}
+
+/* 테이블 common first*/
+.table table tr td.first {border-left:1px solid var(--fc_09, #ebeef0);}
+
+/* BFE102100 단어길이 조정 */
+.certify_pannel .certify_info .tit{width: 10rem !important;}
+.certify_info_wrap p{margin-left: 10rem !important;}
+
+/* placeholder 볼드 -> 노멀*/
+.input input[type=tel]::placeholder {font-weight:normal}
+::-webkit-input-placeholder {font-weight:normal;}
+::placeholder {font-weight:normal;}
+
+/* 221103 은행 계좌명과 계좌번호 인라인블럭처리 위해 클래스 추가 */
+.tr_acc.acc_list_wrap .acc_num .acc_bank1 {display:inline-block; margin-right:.3rem}
+.tr_acc.acc_list_wrap .acc_num .number1 {font-size:1.8rem;font-weight:500;}
+
+/* 거래내역 조회 - 조회기간과 잔액표기 정렬 */
+.in_trade_detail .list_top_wrap.type2{display: flex;}
+.in_trade_detail .list_top_wrap.type2 .col{display: block;}
+.in_trade_detail .list_top_wrap.type2 .col:first-child{flex: 1;}

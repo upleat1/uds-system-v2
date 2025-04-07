@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>대출</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" >
+		<h1 class="h1">정보입력</h1><!-- 220729 class 수정 -->
+
+		<div class="inform_top_wrap">
+			<ul class="depth bul">
+				<li>예상한도 및 예상금리 조회를 위해 필요한 정보입니다.</li>
+				<li>입력 정보는 사전한도 조회외의 목적으로 활용되지 않습니다.</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<div class="form_group">
+				<div class="form_tit">업종</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn" title="업종 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+					</div>
+				</div>
+				<!-- <p class="tip_info">안내 메세지</p> 22/07/14 삭제 -->
+			</div>
+
+			<div class="form_group">
+				<div class="form_tit">사업자등록년월</div>
+				<div class="form_row">
+					<!-- 220729 리웍 -->
+					<div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 사업자등록년월, 사업자등록년월 입력" onclick="">
+						<input type="tel" aria-hidden="true" maxlength="6" placeholder="YYYYMM" title="사업자등록년월" readonly class="bg_white">
+					</div>
+					<!-- //220729 리웍 -->
+				</div>
+			</div>
+
+			<div class="form_group error"><!-- 개발 : error -->
+				<div class="form_tit">전년도 사업소득액</div>
+				<div class="form_row">
+					<!-- 220729 리웍 -->
+					<div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 전년도 사업소득액 입력" onclick="">
+						<input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="전년도 사업소득액" data-unit="원" readonly class="bg_white" id="labelledby01"><!-- 220906 접근성 추가 : id/aria-labelledby 매칭 -->
+						<span class="unit">원</span>
+					</div>
+					<!-- //220729 리웍 -->
+				</div>
+				<p class="form_hangul" aria-hidden="true">원</p>   
+				<p class="tip" aria-labelledby="labelledby01">개발전용 : 오류 텍스트 메시지</p><!-- 220906 접근성 추가 : id/aria-labelledby 매칭 -->
+				<p class="tip_info">사업소득은 ‘홈택스에 신고한 소득금액 기준’으로 입력하시기 바랍니다.</p>
+				<p class="tip_info">‘간편예상한도조회’이므로 입력하신 금액기준으로 예상 대출한도가 보여집니다. 실제 대출한도는 대출신청시 실제자료로 산정됩니다.</p>
+			</div>
+
+			<div class="form_group">
+				<div class="form_tit">자택 소유여부</div>
+				<div class="form_row">
+					<!-- 220729 리웍 -->
+					<ul class="rdoChk_ul2">
+						<li>
+							<span class="selection">
+								<input type="radio" id="radio_01_1" name="radio_01" checked>
+								<label for="radio_01_1" class="label"><em>여</em></label>
+							</span>
+						</li>
+						<li>
+							<span class="selection">
+								<input type="radio" id="radio_01_2" name="radio_01">
+								<label for="radio_01_2" class="label"><em>부</em></label>
+							</span>
+						</li>
+					</ul>
+					<!-- //220729 리웍 -->
+				</div>
+			</div>
+
+			<div class="form_group">
+				<div class="form_tit">사업장 소유여부</div>
+				<div class="form_row">
+					<!-- 220729 리웍 -->
+					<ul class="rdoChk_ul2">
+						<li>
+							<span class="selection">
+								<input type="radio" id="radio_02_1" name="radio_02" checked>
+								<label for="radio_02_1" class="label"><em>여</em></label>
+							</span>
+						</li>
+						<li>
+							<span class="selection">
+								<input type="radio" id="radio_01_2" name="radio_01">
+								<label for="radio_01_2" class="label"><em>부</em></label>
+							</span>
+						</li>
+					</ul>
+					<!-- //220729 리웍 -->
+				</div>
+			</div>
+
+		</div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span>
+				<span><button type="button" class="btn primary lg" disabled>다음</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

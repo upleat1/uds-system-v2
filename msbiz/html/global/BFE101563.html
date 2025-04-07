@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[환율계산기]바텀시트_통화선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+	<!-- 221013 다국어 global.css 추가 --> 
+    <link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+
+	<div class="btn_cnt_wrap">
+		<span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE101563')">통화 선택</button></span>
+	</div>
+
+
+	<!-- layer html : 통화 선택 -->
+	<div id="BFE101563" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div>
+                    <h1>통화 선택</h1>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section">
+                    <ul class="fo_select_country_list">
+                        <li>
+                            <a href="#none">
+                                <span class="im country_flag_im2 sm usd" role="img"></span><!-- 개발 : 국기 이미지는 통화로 클래스를 넣어주세요. ex)class="country_flag_im2 sm usd" -->
+                                미국 USD
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <span class="im country_flag_im2 sm jpy" role="img"></span>
+                                일본 JPY
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <span class="im country_flag_im2 sm eur" role="img"></span>
+                                유럽연합 EUR
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <span class="im country_flag_im2 sm gbp" role="img"></span>
+                                영국 GBP
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+	</div>
+	<!-- //layer html : 통화 선택 -->
+
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

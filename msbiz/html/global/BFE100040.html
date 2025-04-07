@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[메인] 다국어 전체메뉴</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="승인/결재" href="/msbiz/app/css/approval.css">
+	<!-- 220823 global.css 추가 -->
+	<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap">
+    <div id="content" class="global_menu">
+        <!-- 221024 클래스 gap_md -> gap_xxs 변경 -->
+        <div class="section gap_xxs">
+
+            <!-- 221021 div 태그추가 -->
+            <div class="log_btn">
+                <!-- 로그인 전인 경우 -->
+                <a href="#"><p class="underline">Login</p></a>
+                <!-- //로그인 전인 경우 -->
+
+                <!-- 220829 로그인 후인 경우 추가 -->
+                <a href="#"><p class="underline">Logout</p></a>
+                <!-- //220829 로그인 후인 경우 추가 -->
+            </div>
+            <!-- 221021 div 태그추가 -->
+
+            <!-- 221012 class="h1 pdt_0" 삭제 및 class="h2" 추가 -->
+            <p class="h2 gap_sm_3">
+                <!-- 221027 em태그 추가 및 변경, br태그 삭제 -->
+                <!-- 221017 내용수정 및 태그추가 -->
+                <!-- 220829 로그인 후 사용자 이름 노출 추가  -->
+                <span><em>Dear </em><em>홍길동</em></span>
+                <!-- //220829 로그인 후 사용자 이름 노출 추가 -->
+                <!-- //221017 내용수정 및 태그추가 -->
+                <!-- 221012 br태그삭제 -->
+                <em>Welcome to </em><em><b>KB Star Coperation Banking</b></em>
+                <!-- //221027 em태그 추가 및 변경, br태그 삭제 -->
+            </p>
+        </div>
+        <div class="section icon_link_sec">
+            <div class="icon_link">
+                <a href="#">
+                    <span class="icon_lang"></span>
+                    <span class="p">Language</span>
+                </a>
+            </div>
+            <ul class="list_link">
+                <li>
+                    <a href="#none" class="link">FX Rates Inquery</a>
+                </li>
+                <li>
+                    <a href="#none" class="link">Certificate Center</a>
+                </li>
+            </ul>
+        </div>
+        <div class="section gap_sm_3">
+            <ul class="list_acco js_accordion tree">
+                <li>
+                    <a href="#none" role="button" class="tit f_tit" aria-expanded="true">조회</a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="list_acco js_accordion">
+                            <li><a href="#none" role="button" class="tit link">전계좌조회</a></li>
+                            <li><a href="#none" role="button" class="tit link">거래내역 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit f_tit" aria-expanded="true">이체</a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="list_acco js_accordion">
+                            <li><a href="#none" role="button" class="tit link">계좌이체</a></li>
+                            <li><a href="#none" role="button" class="tit link">이체결과확인</a></li>
+                            <li>
+                                <a href="#none" role="button" class="tit" aria-expanded="false">급여이체</a>
+                                <div class="toggle_panel" role="region">
+                                    <ul class="list_link squarebul">
+                                        <li><a href="#none" class="link">급여이체</a></li>
+                                        <li><a href="#none" class="link">급여결과 확인</a></li>
+                                        <li><a href="#none" class="link">급여명부 등록/관리</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit f_tit" aria-expanded="true">외환</a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="list_acco js_accordion">
+                            <li><a href="#none" role="button" class="tit link">환율조회</a></li>
+                            <li><a href="#none" role="button" class="tit link">환율계산기</a></li>
+                            <li>
+                                <a href="#none" role="button" class="tit" aria-expanded="false">해외송금</a>
+                                <div class="toggle_panel" role="region">
+                                    <ul class="list_link squarebul">
+                                        <li><a href="#none" class="link">바로송금</a></li>
+                                        <li><a href="#none" class="link">기업전용송금(이메일/팩스신청)</a></li>
+                                        <li><a href="#none" class="link">보낸송금내용변경/반환신청</a></li>
+                                        <li><a href="#none" class="link">보낸송금내역조회</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#none" role="button" class="tit" aria-expanded="false">국내외화이체</a>
+                                <div class="toggle_panel" role="region">
+                                    <ul class="list_link squarebul">
+                                        <li><a href="#none" class="link">외화이체</a></li>
+                                        <li><a href="#none" class="link">외화이체 내역조회</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#none" role="button" class="tit link">영문정보조회(주소 등)</a></li>
+                            <li>
+                                <a href="#none" role="button" class="tit" aria-expanded="false">송금주소록</a>
+                                <div class="toggle_panel" role="region">
+                                    <ul class="list_link squarebul">
+                                        <li><a href="#none" class="link">해외송금주소록</a></li>
+                                        <li><a href="#none" class="link">국내외화이체주소록</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit f_tit" aria-expanded="true">뱅킹관리</a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="list_acco js_accordion">
+                            <li><a href="#none" role="button" class="tit link">자주쓰는 계좌관리</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit f_tit" aria-expanded="true">승인/결재</a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="list_acco js_accordion">
+                            <li><a href="#none" role="button" class="tit link">결재할 내역</a></li>
+                            <li><a href="#none" role="button" class="tit link">등록한 내역</a></li>
+                            <li><a href="#none" role="button" class="tit link">중간결재 내역</a></li>
+                            <li><a href="#none" role="button" class="tit link">결재완료 내역</a></li>
+                            <!-- 221007 위치변경 -->
+                            <!-- 220907 추가 -->
+                            <li><a href="#none" role="button" class="tit link">사용자별 거래내역 조회</a></li>
+                            <!-- //220907 추가 -->
+                            <!-- //221007 위치변경 -->
+                            <li>
+                                <a href="#none" role="button" class="tit" aria-expanded="false">권한설정 승인</a>
+                                <div class="toggle_panel" role="region">
+                                    <ul class="list_link squarebul">
+                                        <li><a href="#none" class="link">승인할 내역</a></li>
+                                        <li><a href="#none" class="link">승인요청/완료내역</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit f_tit" aria-expanded="true">서비스 가이드</a>
+                    <div class="toggle_panel" role="region">
+                        <ul class="list_acco js_accordion">
+                            <li><a href="#none" role="button" class="tit link">글로벌 고객 서비스 센터</a></li>
+                            <li><a href="#none" role="button" class="tit link">서비스 시간 안내</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<script>
+    /* 업무 SCRIPT */
+</script>
+</body>
+</html>

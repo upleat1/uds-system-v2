@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-[기타정보신청]기타정보전송 정보입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!-- 220823 global.css 추가 -->
+	<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap"><!-- wrap -->
+    
+    <div id="content">
+
+        <h1 class="h1">대상송금정보</h1>
+        
+        <div class="section">
+            <ul class="list_data">
+                <li>
+                    <div class="key">송금관리번호</div>
+                    <div class="value"><span class="number">OT07562204000044</span></div>
+                </li>
+                <li>
+                    <div class="key">송금일</div>
+                    <div class="value"><span class="number">2022.05.31</span></div>
+                </li>
+                <li>
+                    <div class="key">송금액</div>
+                    <div class="value">USD <span class="number">14.00</span></div>
+                </li>
+                <li>
+                    <div class="key">미화환산액(USD)</div>
+                    <div class="value">USD <span class="number">10.00</span></div>
+                </li>
+                <li>
+                    <div class="key">받는분</div>
+                    <div class="value"><span>HEUNGMIN SON</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="form_group error">
+                <div class="form_tit">기타전송정보</div><!-- 221101 h2 -> form_tit로 변경 -->
+                <div class="form_row">
+                    <div class="textarea">
+                        <!-- 220907 타이틀 변경 -->
+                        <textarea id="tast" title="기타전송정보 입력"></textarea>
+                        <!-- //220907 타이틀 변경 -->     
+                        <p class="num_info"><span><em class="curr">3</em> / 50</span></p>            
+                    </div> 
+                </div>
+                <p class="tip_info">영문, 숫자, 특수기호 /-?().,+ 로 50자 및 8줄 이내 입력</p><!-- 220829 다국어 placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 및 8줄 이내 입력" -->
+                <p class="tip" aria-labelledby="tast">내용을 입력해 주세요.</p>
+            </div>
+
+            <div class="form_group tel">
+                <div class="form_tit">보내는분연락처</div>
+                <div class="form_row col">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="지역번호 선택">02</button>
+                    </div>
+                    <!-- 221004 접근성 관련 수정 -->
+                    <div class="input" role="button" aria-label="{개발:입력값}, 보내는분연락처" onclick="">
+                        <input type="tel" aria-hidden="true" value="" title="보내는분연락처" class="bg_white" readonly><!-- 220922 다국어 자택 단어 삭제 -->
+                    </div>
+                    <!-- //221004 접근성 관련 수정 -->
+                </div>
+            </div>
+        </div>
+
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+                    <li>기존 보내신 해외송금에 대해 해외은행에 기타 정보를 전송하는 화면입니다.</li>
+                    <li>해외은행에서 요청한 추가 정보가 있거나 고객님께서 추가로 전달하실 내용이 있는 경우 이용하시기 바랍니다.</li>
+                    <li>기타 정보를 전송하시는 경우에는 별도의 수수료가 청구되지 않습니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+            <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+
+    </div>
+</div><!-- //wrap -->
+
+
+
+</body>
+</html>

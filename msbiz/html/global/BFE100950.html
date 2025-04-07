@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[승인할 내역]승인할내역조회-상세</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="승인/결재" href="/msbiz/app/css/approval.css">
+		<link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">상세내역</h1><!-- 결재후 -->
+        <h1 class="h1">상세내역</h1><!-- 결재전 -->
+        <div class="inform_top_wrap">
+            <p class="depth">사용자(Master)가 권한설정을 변경한 내역을 조회할 수 있는 화면입니다.</p>
+        </div>
+        <div class="section">
+            <div class="list_data_group">
+                <h2 class="h3">등록정보</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">등록자</div>
+                        <div class="value">마스터</div>
+                    </li>
+                    <li>
+                        <div class="key">등록시각</div>
+                        <div class="value"><span class="number">2022.04.21 14:10:25</span></div>
+                    </li>
+                    <li>
+                        <div class="key">등록자메모내용</div>
+                        <div class="value">권한 변경 승인 요청</div>
+                    </li>
+                    <li>
+                        <div class="key">권한설정내역</div>
+                        <div class="value">계좌권한관리>입금계좌권한 등록</div>
+                    </li>
+                    <li>
+                        <div class="key">처리상태</div>
+                        <div class="value"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">결재정보</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">결재자명</div>
+                        <div class="value">김서브</div>
+                    </li>
+                    <li>
+                        <div class="key">결재여부</div>
+                        <div class="value">결재대기</div>
+                    </li>
+                    <li>
+                        <div class="key">결재시각</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">반송사유</div>
+                        <div class="value"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 현재와 변경될 권한 정보가 노출되는 Case -->
+            <div class="list_data_group">
+                <h2 class="h3">현재권한</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">사용자명</div>
+                        <div class="value">김사원</div>
+                    </li>
+                    <li>
+                        <div class="key">입금계좌번호</div>
+                        <div class="value"><span class="number"></span></div>
+                    </li>
+                    <li>
+                        <div class="key">입금계좌명</div>
+                        <div class="value">계좌명</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">변경권한</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">사용자명</div>
+                        <div class="value">김사원</div>
+                    </li>
+                    <li>
+                        <div class="key">입금계좌번호</div>
+                        <div class="value"><span class="number">22222222222222</span></div>
+                    </li>
+                    <li>
+                        <div class="key">입금계좌명</div>
+                        <div class="value">계좌명</div>
+                    </li>
+                </ul>
+                <div class="btn_list_btm">
+                    <span><button type="button" class="btn outline sm">반송</button></span>
+                </div>
+            </div>
+            <!-- //현재와 변경될 권한 정보가 노출되는 Case -->
+            
+            <!-- 현재와 변경될 권한 정보가 노출 안되는 Case -->
+            <div class="list_data_group">
+                <h2 class="h3">현재권한</h3>
+                <ul class="list_data">
+                    <li class="li_in_nodata">
+                        <div class="result nodata sm">
+                            <p class="tit">상세내용 확인은 웹페이지를 이용해 주세요.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_data_group">
+                <h2 class="h3">변경권한</h2>
+                <ul class="list_data">
+                    <li class="li_in_nodata">
+                        <div class="result nodata sm">
+                            <p class="tit">상세내용 확인은 웹페이지를 이용해 주세요.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 현재와 변경될 권한 정보가 노출 안되는 Case -->
+        
+        </div>
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <!-- 결재 전 버튼 -->
+                <span><button type="button" class="btn secondary lg">목록</button></span>
+                <span><button type="button" class="btn primary lg">결재</button></span>
+
+                <!-- 결재 후 버튼 -->
+                <!-- <span><button type="button" class="btn primary lg">목록</button></span>  -->
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<script>
+    /* 업무 SCRIPT */
+</script>
+</body>
+</html>

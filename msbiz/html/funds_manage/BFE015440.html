@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[자금보고서]자금보고서_현금흐름(탭)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content" class="full_gray">
+        <div class="tab_wrap">
+            <div class="tab_list">
+                <div class="scroll_wrap">
+                    <a href="#">자금일보</a>
+                    <a href="#" class="active">현금흐름</a>
+                    <a href="#">매출</a>
+                    <a href="#">매입</a>
+                </div>
+            </div>
+
+            <div class="link_panel">
+                <h1 class="hidden">현금흐름 상세</h1>
+                <div class="section">
+                    <div class="form_group">
+                        <div class="form_row">
+                            <div class="select">
+                                <button type="button" class="select_btn active" title="사업자 선택">전체 사업자</button><!-- 221123 수정: 문구수정 -->
+                                <!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form_group">
+                        <div class="form_row">
+                            <div class="select">
+                                <button type="button" class="select_btn active" title="계좌 선택">전체 계좌</button><!-- 221123 수정: 문구수정 -->
+                                <!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section gap_md">
+                    <div class="tab_wrap box type_sm">
+                        
+                        <!-- 220818 수정: 마크업 수정 -->
+                        <div class="tab_list">
+                            <a href="#" class="active">일별</a>
+                            <a href="#">주별</a>
+                        </div>
+                        <!--// 220818 수정: 마크업 수정 -->
+
+                        <!-- 220819 수정: 날짜표기 -->
+                        <div class="tab_list_cal">
+                            <!-- 개발 : 
+                                    이전,다음 버튼 비활성화시 속성 'disabled' 추가
+                                    아래의 일별, 주별 값 변경 시 버튼 텍스트도 함께 변경 필요
+                                    일별 -> 어제, 내일
+                                    주별 -> 지난주, 다음주
+                            -->
+                            <!-- 일별 -->
+                            <div class="cal_month fu_cal_month">
+                                <button type="button" class="btn btn_ico prev"><span class="hidden">어제</span></button>
+                                <span class="year_txt"><span class="number">2022.08.11</span></span>
+                                <button type="button" class="btn btn_ico next"><span class="hidden">내일</span></button>
+                            </div>
+
+                            <!-- 주별 -->
+                            <div class="cal_month fu_cal_month">
+                                <button type="button" class="btn btn_ico prev"><span class="hidden">어제</span></button>
+                                <span class="year_txt"><span class="number">2022.05.16 ~ 2022.05.22</span></span>
+                                <button type="button" class="btn btn_ico next"><span class="hidden">내일</span></button>
+                            </div>
+                        </div>
+                        <!--// 220819 수정: 날짜표기 -->
+
+                        <div class="link_panel"><!-- 220818 수정: 클래스 수정 -->
+                            <!-- * 일별상세: 데이터 있을 경우 -->
+                            <h2 class="hidden">일별 상세</h2>
+                            
+                            <!-- 잔액 관련 메세지 -->
+                            <div class="sec_inner">
+                                <div class="fu_card">
+                                    <!-- 늘었을때 -->
+                                    <div class="fu_card_pannel">
+                                        <p>전일대비 현금이</p>
+                                        <p>
+                                            <strong class="fu_card_price fc_posi">
+                                                <span class="number">10,000,000</span><span class="num_unit">원</span>
+                                            </strong> <span>늘었어요</span>
+                                        </p>
+                                    </div>
+
+                                    <!-- 줄었을때 -->
+                                    <div class="fu_card_pannel">
+                                        <p>전일대비 현금이</p>
+                                        <p>
+                                            <strong class="fu_card_price fc_nega">
+                                                <span class="number">10,000,000</span><span class="num_unit">원</span>
+                                            </strong> <span>줄었어요</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 상세내역 그래프 -->
+                            <div class="sec_inner">
+                                
+                                <h3 class="h2">입출금 상세내역</h3>
+                                <div class="chart_wrap shadow">
+
+                                    <!-- 220826 수정: 차트 영역 수정 -->
+                                    <!-- *항목 같이 나올경우 withLst 클래스 추가
+                                         *데이터 없을 경우 no-data 클래스 추가 -->
+                                    <div class="chart withLst"><!-- 221107 접근성 대응: 속성삭제 -->
+                                        <div class="graphbox">
+                                            <!-- 차트 삽입 -->
+                                            <div style="display:flex; align-items: center; justify-content: center; width:100%; height:20rem; background: #ededed; color:#aaa; font-weight:bold; font-size:1.8rem;">차트 영역</div>
+                                        </div>
+                                        <div class="chart_data">
+                                            <ul class="list_data chart">
+                                                <li>
+                                                    <div class="key">
+                                                        <i class="legend type06"></i>입금
+                                                    </div>
+                                                    <div class="value">
+                                                        <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="key">
+                                                        <i class="legend type07"></i>출금
+                                                    </div>
+                                                    <div class="value">
+                                                        <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--// 220826 수정: 차트 영역 수정 -->
+                                    <div class="chart_info center">
+                                        <button type="button" class="btn_txt ico_reset sm2">최신업데이트</button>
+                                        <span class="sep_txt">
+                                            <span class="number">2022.02.26 08:12:00</span> <em class="fc_nega">(오류)</em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// * 일별상세: 데이터 있을 경우 -->
+
+                            <!-- 구분용 마크업입니다.(개발X) -->
+                            <span class="ui-test-section" style="height: 20px;line-height: 20px;background-color: #333;color: #fff;font-size: 12px;font-weight: bold;text-align: center;display: block;">SAMPLE: 데이터 없을 경우</span>
+
+                            <!-- * 주별: 데이터 없을경우  -->
+                            <h2 class="hidden">주별 상세</h2>
+                            <!-- 잔액 관련 메세지 -->
+                            <div class="sec_inner">
+                                <div class="fu_card">
+                                    <!-- 데이터 없음 -->
+                                    <div class="fu_card_pannel">
+                                        <p>전주대비 현금 변동사항이 없습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 상세내역 그래프 -->
+                            <div class="sec_inner">
+                                <h3 class="h2">입출금 상세내역</h3>
+                                <div class="chart_wrap shadow">
+                                    <!-- 220826 수정: 차트 영역 수정 -->
+                                    <!-- *항목 같이 나올경우 withLst 클래스 추가
+                                         *데이터 없을 경우 no-data 클래스 추가 -->
+                                    <div class="chart withLst no-data"><!-- 221107 접근성 대응: 속성삭제 -->
+                                        <div class="graphbox">
+                                            <!-- 차트 삽입 -->
+                                            <div style="display:flex; align-items: center; justify-content: center; width:100%; height:20rem; background: #ededed; color:#aaa; font-weight:bold; font-size:1.8rem;">차트 영역</div>
+                                        </div>
+                                        <div class="chart_data">
+                                            <ul class="list_data chart">
+                                                <li>
+                                                    <div class="key">
+                                                        <i class="legend type06"></i>입금
+                                                    </div>
+                                                    <div class="value">
+                                                        <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="key">
+                                                        <i class="legend type07"></i>출금
+                                                    </div>
+                                                    <div class="value">
+                                                        <span class="number">100,000,000,000</span><span class="num_unit">원</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--// 220826 수정: 차트 영역 수정 -->
+                                    <div class="chart_info center">
+                                        <button type="button" class="btn_txt ico_reset sm2">최신업데이트</button>
+                                        <span class="sep_txt">
+                                            <span class="number">2022.02.26 08:12:00</span> <em class="fc_nega">(오류)</em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// * 주별: 데이터 없을경우 -->
+                        </div>
+
+                    </div><!--// tab_wrap box end -->
+                </div>
+            </div><!--// link_panel end -->
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">신규기관등록</button></span>  
+            </div>
+        </div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

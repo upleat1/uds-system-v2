@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[계좌직접등록]계좌직접등록(팝)</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	
+	<div id="content" data-ui="full_pop">
+        <h1 class="hidden">계좌직접등록</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>은행을 선택하고 계좌번호를 입력 후 추가 버튼을 선택하여 주십시오.</li>
+                <li>계좌추가 후 선택하신 은행에서 이용 중인 인증서 전자서명이 필요합니다.</li>
+            </ul>
+        </div> 
+		<div class="section">
+            <div class="form_group">
+                <div class="form_tit">은행선택</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="등록할 은행선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">계좌번호 입력</div>
+                <div class="form_row">
+                    <div class="input" role="button" aria-label="{계좌번호 입력값}, 계좌번호 입력" >
+                        <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="계좌번호" readonly class="bg_white">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">추가</button></span>
+            </div>    
+        </div>
+
+    </div><!-- //content -->
+
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

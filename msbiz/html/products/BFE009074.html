@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>약정신청</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+         <!-- 220817 step 수정 -->
+         <div class="step_wrap js_step">    
+            <div class="step" role="img" aria-label="총 9단계 중 현재 4단계">
+                <span class="current">4</span><span class="mark">/</span><span class="total">9</span>
+            </div>
+            <h1 class="h1">적합성·적정성 확인</h1><!-- 220729 리웍 -->
+        </div>
+        <!-- //220817 step 수정 -->
+
+        <div class="inform_top_wrap">
+            <p class="depth">
+                「금융소비자 보호에 관한 법률」제 17조 및 제18조에 따라 내용을 확인, 입력값을 체크한 후 상담이 가능합니다.<!-- 221018 문구수정 -->
+            </p>
+        </div>
+
+        <div class="section">
+            <ul class="list_data lbt">
+                <li>
+                    <div class="key">
+                        금융소비자구분
+                        <div class="tooltip_limited">
+                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                <p class="tooltip_tit">금융소비자구분</p>
+                                <div class="tooltip_cont"> 
+                                    <ul class="depth bul">
+                                        <li>
+                                            <strong>일반금융소비자</strong><br>
+                                            개인사업자 , 4인 이하 법인(상시근로자수 확인 서류 불가 포함)
+                                        </li>
+                                        <li>
+                                            <strong>전문금융소비자</strong><br>
+                                            국가, 한국은행 , 금융회사(은행 포함), 상시근로자수 5인이상 법인, 조합 ,단체 등
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="value">일반금융소비자</div>
+                </li>
+                <li>
+                    <div class="key">업력</div>
+                    <div class="value"><span class="number">XXX</span>년</div>
+                </li>
+                <li>
+                    <div class="key">상시근로자수</div>
+                    <div class="value">상시근로자수 확인서류 제출불가</div>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="section">
+
+            <div class="form_group">
+                <div class="form_tit">대출용도</div><!-- 220811 수정 -->
+                <div class="form_row">
+                    <div class="rdoChk_group inline">
+                        <span class="selection">
+                            <input type="radio" id="check01" checked><!-- 220811 수정 -->
+                            <label for="check01" class="label"><em>운전자금</em></label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">총자산</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="총자산 선택">선택</button><!-- 220729 class number 추가 --><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">매출액</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="매출액 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">
+                    고정지출
+                    <!-- 220811 추가 -->
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <p class="tooltip_tit">고정지출</p>
+                            <div class="tooltip_cont"> 
+                                (예시) 인건비(임금), 사업장 임차료, 관리비, 보험료 등
+                            </div>
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                    <!-- //220811 추가 -->
+                </div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="고정지출 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">부채</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="부채 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">신용</div>
+                <div class="form_row">
+                    <div class="rdoChk_group inline">
+                        <span class="selection">
+                            <input type="radio" id="check02" checked><!-- 220811 수정 -->
+                            <label for="check02" class="label"><em>은행을 통한 신용정보조회 동의</em></label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 220729 리웍 -->
+            <!-- 법인 -->
+            <div class="form_group">
+                <div class="form_tit">변제방법(*중복선택 가능)</div>
+                <div class="form_row">
+                    <div class="rdoChk_group">
+                        <span class="selection">
+                            <input type="checkbox" id="chkToggle2_01">
+                            <label for="chkToggle2_01" class="label"><em>사업수익</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="checkbox" id="chkToggle2_02" aria-expanded="false">
+                            <label for="chkToggle2_02" class="label"><em>임대수익</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="checkbox" id="chkToggle2_03" aria-expanded="false">
+                            <label for="chkToggle2_03" class="label"><em>금융수익</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="checkbox" id="chkToggle2_04" aria-expanded="false" aria-controls="chkPanel2_02">
+                            <label for="chkToggle2_04" class="label"><em>기타</em></label>
+                        </span>
+                        <div class="chk_panel" role="region" id="chkPanel2_02">
+                            <div class="input">
+                                <input type="text" maxlength="10" placeholder="최대 10글자까지 입력" title="기타 내용입력" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //법인 -->
+            <!-- //220729 리웍 -->
+
+            <div class="form_group email">
+                <div class="form_tit">이메일</div>
+                <div class="form_row col">
+                    <div class="input">
+                        <input type="text" title="ID" placeholder="아이디" value="">
+                    </div>
+                    <span class="space">@</span>
+                    <div class="select">
+                        <button type="button" class="select_btn" title="도메인 선택">도메인</button>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="input"><input type="text" value="" title="도메인 직접입력"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 220729 리웍 -->
+		<div class="section">
+            <p class="p bold">본인은 KB국민은행에 제공한 적합성·적정성 관련 정보와 관련하여 다음과 같은 사항을 확인합니다.</p>
+            <ol class="depth num">
+                <li>본인이 제공한 정보가 정확하지 않거나 정보에 변경사항이 발생한 경우에는 적합성, 적정성 판단이 달라질수 있음을 설명받았습니다.</li>
+                <li>대출성 상품이 적정하지 않다고 판단되는 경우 고객님에게 적정성 판단보고서(LMS)를 제공합니다.</li>
+                <li>상기 목적을 위해 본인의 개인 정보를 수집, 이용, 제공하는 것에 동의 합니다.</li>
+            </ol>
+            <div class="rdoChk_box gap_sm_3">
+                <span class="selection">
+                    <input type="radio" id="radioBox1_1" name="radio_box1" checked="">
+                    <label for="radioBox1_1" class="label"><em>동의함</em></label>
+                </span>
+                <span class="selection">
+                    <input type="radio" id="radioBox1_2" name="radio_box1">
+                    <label for="radioBox1_2" class="label"><em>동의하지 않음</em></label>
+                </span>
+            </div>
+		</div>
+        <!-- //220729 리웍 -->
+
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

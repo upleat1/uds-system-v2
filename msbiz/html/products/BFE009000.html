@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[이용신청 정보변경]이용신청 등록정보 변경</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">이용신청 등록정보 변경</h1>
+
+        <div class="inform_top_wrap">
+            <p class="depth">변경하실 정보를 수정하십시요.</p>
+        </div>
+
+        <div class="section">
+            <div class="form_group">
+                <div class="form_tit">
+                    고객 이용계좌 변경
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <div class="tooltip_cont"> 
+                                <ul class="depth bul">
+                                    <li>고객이용계좌란 KB메가셀러론 약정 후 실행되는 건별대출금을 입금받거나 마켓 또는 PG로부터 수령받는 정산금이 정산금수령계좌로 입금되면 건별대출이 있는 경우 우선 상환하고 남은 금액을 입금받는 계좌입니다.</li>
+                                    <li>고객이용계좌는 KB부가세납부전용통장, KB하도급지킴이통장, KB e-Commerce 채권양도전용계좌 등 특수목적계좌의 경우 이용할 수 없습니다.</li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="출금계좌정보 선택">421737-04-027679</button>
+                    </div>
+                </div>
+                <p class="tip_info">고객이용계좌는 KB부가세납부전용통장 등 특수목적계좌는 선택할 수 없습니다.</p>
+                 <!-- 220816 수정 -->
+                 <div class="btn_wrap btm">
+                    <a href="#none" class="btn_txt ico_arr">계좌조회</a>
+                </div>
+                <!-- //220816 수정 -->
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">담당자명</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" placeholder="입력내용" title="담당자명" value="변경후">
+                    </div>
+                </div>   
+                <p class="tip">담당자명을 입력해주세요</p>
+            </div>
+
+            <div class="form_group tel">
+                <div class="form_tit">담당자 전화번호(사업장 전화번호)</div>
+                <div class="form_row col">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="지역번호 선택">02</button>
+                    </div>
+                    <div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 전화번호, 담당자 전화번호(사업장 전화번호) 입력" onclick="">
+                        <input type="tel" aria-hidden="true" maxlength="8" placeholder="숫자만 입력" id="id01" title="담당자 전화번호(사업장 전화번호)" readonly class="bg_white">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form_group tel error">
+                <div class="form_tit">담당자 휴대폰번호</div>
+                <div class="form_row col">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="휴대폰번호 앞자리">010</button>
+                    </div>
+                    <div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 휴대폰번호, 휴대폰번호 앞자리 입력" onclick="">
+                        <input type="tel" aria-hidden="true" maxlength="8" placeholder="숫자만 입력" id="id02" title="담당자 휴대폰번호" readonly class="bg_white">
+                    </div>
+                </div>
+                <p class="tip_info">입력하신 담당자에게 대출진행 사항에 대해 안내합니다.</p>
+            </div>
+        </div>
+        
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">이전</button></span>
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div><!-- //content -->
+
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

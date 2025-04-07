@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[펀드]펀드 메인</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" class="cate_products">
+        <h1 class="hidden">펀드 메인</h1>
+        <div class="tab_wrap">
+            <div class="tab_list">
+                <div class="scroll_wrap">
+                    <a href="#">예금</a>
+                    <a href="#">대출</a>
+                    <a href="#">외화예금</a>
+                    <a href="#" class="active">펀드</a>
+                    <a href="#">One Stop 신규</a>
+                </div>
+            </div>
+            <div class="link_panel">
+                <div class="section invest_sec">
+
+                    <!-- 투자성향분석 전인 경우 -->
+                    <div class="icon_box anal_default">
+                        <div class="icon_txt">
+                            <span class="ico_remark"></span>
+                            <p class="p"><b>투자성향분석</b>을 진행해주세요</p>
+                        </div>
+                        <div class="btn_wrap btm">
+                            <!-- 1일 1회 분석 완료인경우 : 투자성향분석결과, 1일 1회 분석 미완료인경우 : 투자성향분석 -->
+                            <a href="#none" class="btn_txt ico_arr">투자성향분석</a>
+                        </div>
+                    </div>
+                    <!-- //투자성향분석 전인 경우 -->
+                    
+                    <!-- 투자성향분석이 공격투자형인 경우 -->
+                    <div class="icon_box anal_highest">
+                        <div class="icon_txt">
+                            <span class="ico_remark highest"><span class="hidden">매우높은위험</span></span>
+                            <p class="p">김국민님의 투자성향 <b>공격투자형</b></p>
+                        </div>
+                        <div class="btn_wrap btm">
+                            <!-- 1일 1회 분석 완료인경우 : 투자성향분석결과, 1일 1회 분석 미완료인경우 : 투자성향분석 -->
+                            <!-- 220825 투자성향분석 -> 투자성향분석 결과 내용수정 -->
+                            <a href="#none" class="btn_txt ico_arr">투자성향분석 결과</a>
+                        </div>
+                    </div>
+                    <!-- //투자성향분석이 공격투자형인 경우 -->
+
+                    <!-- 투자성향분석이 적극투자형인 경우 -->
+                    <div class="icon_box anal_higher">
+                        <div class="icon_txt">
+                            <span class="ico_remark higher"><span class="hidden">높은위험</span></span>
+                            <p class="p">김국민님의 투자성향 <b>적극투자형</b></p>
+                        </div>
+                        <div class="btn_wrap btm">
+                            <!-- 1일 1회 분석 완료인경우 : 투자성향분석결과, 1일 1회 분석 미완료인경우 : 투자성향분석 -->
+                            <!-- 220825 투자성향분석 -> 투자성향분석 결과 내용수정 -->
+                            <a href="#none" class="btn_txt ico_arr">투자성향분석 결과</a>
+                        </div>
+                    </div>
+                    <!-- //투자성향분석이 적극투자형인 경우 -->
+
+                    <!-- 투자성향분석이 위험중립형인 경우 -->
+                    <div class="icon_box anal_middle">
+                        <div class="icon_txt">
+                            <span class="ico_remark middle"><span class="hidden">보통위험</span></span>
+                            <p class="p">김국민님의 투자성향 <b>위험중립형</b></p>
+                        </div>
+                        <div class="btn_wrap btm">
+                            <!-- 1일 1회 분석 완료인경우 : 투자성향분석결과, 1일 1회 분석 미완료인경우 : 투자성향분석 -->
+                            <!-- 220825 투자성향분석 -> 투자성향분석 결과 내용수정 -->
+                            <a href="#none" class="btn_txt ico_arr">투자성향분석 결과</a>
+                        </div>
+                    </div>
+                    <!-- //투자성향분석이 위험중립형인 경우 -->
+
+                    <!-- 투자성향분석이 안전추구형인 경우 -->
+                    <div class="icon_box anal_low">
+                        <div class="icon_txt">
+                            <span class="ico_remark low"><span class="hidden">낮은위험</span></span>
+                            <!-- 220825 안전추구형 -> 안정추구형 내용수정 -->
+                            <p class="p">김국민님의 투자성향 <b>안정추구형</b></p>
+                        </div>
+                        <div class="btn_wrap btm">
+                            <!-- 1일 1회 분석 완료인경우 : 투자성향분석결과, 1일 1회 분석 미완료인경우 : 투자성향분석 -->
+                            <!-- 220825 투자성향분석 -> 투자성향분석 결과 내용수정 -->
+                            <a href="#none" class="btn_txt ico_arr">투자성향분석 결과</a>
+                        </div>
+                    </div>
+                    <!-- //투자성향분석이 안전추구형인 경우 -->
+
+                    <!-- 투자성향분석이 안정형인 경우 -->
+                    <div class="icon_box anal_lower">
+                        <div class="icon_txt">
+                            <span class="ico_remark lower"><span class="hidden">매우낮은위험</span></span>
+                            <p class="p">김국민님의 투자성향 <b>안정형</b></p>
+                        </div>
+                        <div class="btn_wrap btm">
+                            <!-- 1일 1회 분석 완료인경우 : 투자성향분석결과, 1일 1회 분석 미완료인경우 : 투자성향분석 -->
+                            <!-- 220825 투자성향분석 -> 투자성향분석 결과 내용수정 -->
+                            <a href="#none" class="btn_txt ico_arr">투자성향분석 결과</a>
+                        </div>
+                    </div>
+                    <!-- //투자성향분석이 안정형인 경우 -->
+
+                    <div class="invest_box">
+                        <div class="invest_cont">
+                            <p class="p_sub">펀드계좌</p>
+                            <p class="p"><span class="underline"><strong class="number">9</strong>건</span></p>
+                        </div>
+                        <div class="invest_cont">
+                            <p class="p_sub">관심펀드</p>
+                            <p class="p"><span class="underline"><strong class="number">5</strong>건</span></p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr_divide gap_lg_0">
+                <div class="section fund_search_wrap">
+                    <div class="search_wrap">
+                        <h2 class="h3">찾으시는 펀드상품이 있으신가요?</h2>
+                        <div class="input">
+                            <input type="text" class="inp" title="검색어" placeholder="펀드 상품명 입력">
+                            <button type="submit" class="btn_sch"><span class="hidden">검색</span></button>
+                        </div>
+                    </div>
+                    <div class="wrap_hashtag gap_xs">
+                        <span class="fc_gray">국내에 투자</span>
+                        <span class="fc_gray">해외에 투자</span>
+                        <span class="fc_gray">외화에 투자</span>
+                    </div>
+                    <div class="btn_cnt_wrap">
+                        <span><button type="button" class="btn primary lg">펀드 간편검색</button></span>
+                    </div>
+                </div>
+                <div class="section gap_lg">
+                    <h2 class="h3 mgb_0">원하는 상품별로 골라보기</h2>
+                    <ul class="list_link">
+                        <li>
+                            <a href="#none" class="link icon_box">
+                                <div class="icon_txt">
+                                    <span class="ico_link icon_fund01"></span>
+                                    <p class="p"><b>전체펀드</b></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link icon_box">
+                                <div class="icon_txt">
+                                    <span class="ico_link icon_fund02"></span>
+                                    <p class="p"><b>이달의 추천펀드</b></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link icon_box">
+                                <div class="icon_txt">
+                                    <span class="ico_link icon_fund03"></span>
+                                    <p class="p"><b>수익률 BEST 펀드</b></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link icon_box">
+                                <div class="icon_txt">
+                                    <span class="ico_link icon_fund04"></span>
+                                    <p class="p"><b>이번주 유망 ELS펀드</b></p>
+                                </div>
+                                <button type="button" class="btn outline posi xxs">모집중</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

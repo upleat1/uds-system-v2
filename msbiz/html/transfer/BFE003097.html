@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[연락처 이체]바텀시트-금융사기∙보이스피싱 예방</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE003097')">금융사기∙보이스피싱 예방(바텀)</button></span>
+        </div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+
+<!-- layer html : default -->
+<div id="BFE003097" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop_wrap">
+        <div class="pop_head">
+            <div>
+                <h1>금융사기 보이스피싱 예방</h1>
+            </div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_section">
+                <div class="stave_off">
+                    <h2 class="h2 normal"><strong>금융사기・보이스피싱</strong>이 의심되는<br>이체 요청을 받았습니까?</h2>
+                </div>
+    
+                <div class="txt_line_info">
+                    <ul class="depth bul">
+                        <li>신용등급 향상・저금리 대출 목적 이체</li>
+                        <li>검찰・경찰의 범죄수사 관련 이체 요청</li>
+                        <li>문자메신저 등을 통한 가족, 지인의 이체 부탁</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg" data-action="close">예</button></span>
+                    <span><button type="button" class="btn primary lg ui_pop_close">아니오(거래계속)</button></span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </article>
+</div>
+<!-- //layer html : default -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[국세납부]국세고지내역간략조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공과금" href="/msbiz/app/css/utility.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_utility">
+
+            <h1 class="h1">국세고지내역간략조회</h1>
+            <div class="tab_wrap">
+                <div class="tab_list" role="tablist">
+                    <div class="scroll_wrap">
+                        <a href="#" class="active">조회납부</a>
+                        <a href="#">자진납부</a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <div class="inform_top_wrap">
+                        <ul class="depth bul">
+                            <li>조회납부는 2003년 고지분부터 납부하실 수 있습니다.</li>
+                            <li>결정구분이 1~4일 경우, 자진납부를 이용하여 주시기 바랍니다.</li>
+                            <li>국세 조회납부 서비스는 대납이 안됩니다. (단, 고용/산재/특허/임금채권 납부의 경우 가능)</li>
+                            <li>개인사업자 부가세납부의 경우, 자진납부에서 거래하시기 바랍니다.</li>
+                            <li>납부 후 납부취소가 불가능하오니 납부 확인 전 다시 한번 확인해 주십시오. </li>
+                            <li>납부 가능시간 : 07:00 ~ 23:30 (토요일/공휴일 가능)</li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <div class="form_group">
+                            <div class="form_tit">조회방법</div>
+                            <div class="form_row">
+                                <!-- 220729 클래스 추가 -->
+                                <div class="rdoChk_group gap_xs">
+                                    <span class="selection">
+                                        <input type="radio" id="radioH1" name="radio_h" checked>
+                                        <label for="radioH1" class="label"><em>주민(사업자)등록번호로 조회</em></label>
+                                    </span>
+                                    <!-- Case : 개인사업자 -->
+                                    <span class="selection">
+                                        <input type="radio" id="radioH2" name="radio_h">
+                                        <label for="radioH2" class="label"><em>개인사업자번호로 조회</em></label>
+                                    </span>
+                                    <!-- //Case : 개인사업자 -->
+                                    <span class="selection">
+                                        <input type="radio" id="radioH3" name="radio_h">
+                                        <label for="radioH3" class="label"><em>전자납부번호로 조회</em></label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group error">
+                            <div class="form_row col jumin">
+                                <div class="input" style="width: 34%">
+                                    <input type="tel" maxlength="4" placeholder="4자리" title="전자납부번호 앞자리">
+                                </div>
+                                <span class="space">-</span>
+                                <div class="input" style="width: 60%;">
+                                    <input type="tel" maxlength="15" title="전자납부번호 뒷자리" placeholder="납부번호 15자리">
+                                </div>
+                            </div>
+                            <p class="tip">납부번호 앞 {4자리}를 입력해 주세요</p>
+                        </div>
+                        <div class=" form_btm_full_wrap">
+                            <span><button type="button" class="btn primary md">조회</button></span>
+                        </div>
+                    </div>
+                    <!-- 조회 목록 -->
+                    <hr class="hr_divide">
+                    <div class="section">
+                        <h2 class="h2">고지내역 목록</h2>
+                        <div>
+                            <!-- loop -->
+                            <div class="list_data_group">
+                                <!-- 221017 gap_0 클래스 추가 -->
+                                <h3 class="h3 gap_0">
+                                    <strong>부가가치세</strong>
+                                    <span class="sep_txt normal">국세청 부산지방국세</span>
+                                </h3>
+                                <ul class="list_data">
+                                    <li>
+                                        <div class="key">전자납부번호</div>
+                                        <div class="value"><span class="number">954433749299</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="key">납부기한</div>
+                                        <div class="value"><span class="number">2022.07.27</span></div>
+                                    </li>
+                                    <li>
+                                        <!-- 221017 텍스트 수정 -->
+                                        <div class="key">납부금액</div>
+                                        <div class="value">
+                                            <!-- 221017 strong 태그로 변경, 한줄로변경 -->
+                                            <strong class="number">123,123,123,123</strong><span class="num_unit">원</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="btn_list_btm">
+                                    <span><button type="button" class="btn outline sm">납부하기</button></span>
+                                </div>
+                            </div>
+                            <!-- //loop -->
+                        </div>
+                    </div>
+                    <!-- //조회 목록 -->
+                </div>
+            </div>
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

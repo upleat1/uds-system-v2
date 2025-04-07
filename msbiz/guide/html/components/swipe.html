@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>No.1 기업금융플랫폼</title>
+    <link rel="stylesheet" href="/msbiz/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/msbiz/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" href="/msbiz/app/css/library/swiper.min.css">
+    <style>
+        .p-tit {font-size: 18px; font-weight: bold; margin-bottom: 5px;}
+        .p-tit2 {color:#1733bf; font-weight: bold;}
+        .p-list li{position: relative; font-size:1.5rem; color:#666; line-height: 1.8; padding-left:10px;}
+        .p-list li.dh::before{content: '-'; position: absolute; left: 0; top:0;}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <div data-class="component-name"><span>Swiper</span></div>
+
+        <div data-class="box">
+            <div data-class="p">
+                <p class="p-tit">1. 기본사용법</p>
+                <ul class="p-list">
+                    <li class="dh">기본 swiper 마크업에 클래스추가 또는 data 타입 선언으로 swiper option 적용</li>
+                </ul>                
+            </div>
+            <div data-class="p">
+                <p class="p-tit">2. swiper update</p>
+                <ul class="p-list">
+                    <li class="dh"><strong class="p-tit2">UICommon.uiSwiper.update('셀렉터')</li>
+                    <li><button type="button" data-class="button" onclick="demoSwipeUpdate();">swiper update</button>
+                    <button type="button" data-class="button" onclick="demoSwipeUpdate2();">첫번째 swiper update</button></li>
+                </ul>
+                <script>
+                    var demoSwipeUpdate = function(){
+                        $('.swiper-wrapper').append('<div class="swiper-slide"><div style="width:100%;height:200px;background-color:#ff0000"></div></div>');
+                        UICommon.uiSwiper.update('.ui_swiper');
+                    }
+                    var demoSwipeUpdate2 = function(){
+                        $('#testSwiper .swiper-wrapper').append('<div class="swiper-slide"><div style="width:100%;height:200px;background-color:#ff0000"></div></div>');
+                        UICommon.uiSwiper.update('#testSwiper');
+                    }
+                </script>            
+            </div>
+            <div data-class="p">
+                <p class="p-tit">3. swiper destroy</p>
+                <ul class="p-list">
+                    <li class="dh"><strong class="p-tit2">UICommon.uiSwiper.destroy('셀렉터')</li>
+                    <li><button type="button" data-class="button" onclick="UICommon.uiSwiper.destroy('.ui_swiper');">swiper destroy</button>
+                    <button type="button" data-class="button" onclick="UICommon.uiSwiper.destroy('#testSwiper');">첫번째 swiper destroy</button></li>
+                </ul>                
+            </div>
+            <div data-class="p">
+                <p class="p-tit">4. swiper create</p>
+                <ul class="p-list">
+                    <li class="dh"><strong class="p-tit2">UICommon.uiSwiper.init('셀렉터'), 셀렉터 없을 경우 전체 create</li>
+                    <li><button type="button" data-class="button" onclick="UICommon.uiSwiper.init();">swiper create</button>
+                    <button type="button" data-class="button" onclick="UICommon.uiSwiper.init('#testSwiper');">첫번째 swiper create</button></li>
+                </ul>                
+            </div>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper Defalut</div>
+            <div data-class="box">
+                Swiper 기본타입
+            </div>
+            <script type="text/html">
+<div id="testSwiper" class="ui_swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper Full</div>
+            <div data-class="box">
+                <p class="p-tit">Swiper 꽉찬 타입</p>
+                아래 CODE와 같이 'full' 클래스 추가
+            </div>
+            <script type="text/html">
+<div class="ui_swiper full">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper per view</div>
+            <div data-class="box">
+                <p class="p-tit">Swiper defalut view 갯수</p> 
+                아래 CODE와 같이 'data-view'에 기본으로 보여줄 갯수를 삽입
+            </div>
+            <script type="text/html">
+<div class="ui_swiper" data-view="2">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper space between</div>
+            <div data-class="box">
+                <p class="p-tit">Swiper view 간격 수치</p> 
+                아래 CODE와 같이 'data-space'에 간격 수치(px기준) 삽입
+            </div>
+            <script type="text/html">
+<div class="ui_swiper swiper_items" data-space="10">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<div class="ui_swiper swiper_items" data-space="20">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="width:20rem;">
+            <div style="width:100%;height:100px;background-color:#e2dfda"></div>
+        </div>
+        <div class="swiper-slide" style="width:20rem;">
+            <div style="width:100%;height:100px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide" style="width:20rem;">
+            <div style="width:100%;height:100px;background-color:#fed03a"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper Centered</div>
+            <div data-class="box">
+                <p class="p-tit">Swiper view 중앙에서 시작</p> 
+                아래 CODE와 같이 '_center' 클래스 추가
+            </div>
+            <script type="text/html">
+<div class="ui_swiper _center swiper_items" data-space="20">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="width:15rem;">
+            <div style="width:100%;height:100px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide" style="width:15rem;">
+            <div style="width:100%;height:100px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide" style="width:15rem;">
+            <div style="width:100%;height:100px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper Auto Height</div>
+            <div data-class="box">
+                <p class="p-tit">Swiper view Height 자동변경</p> 
+                아래 CODE와 같이 '_autoHeight' 클래스 추가
+            </div>
+            <script type="text/html">
+<div class="ui_swiper _autoHeight">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:100px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:300px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper Loop</div>
+            <div data-class="box">
+                <p class="p-tit">Swiper 무한반복</p> 
+                아래 CODE와 같이 '_loop' 클래스 추가
+            </div>
+            <script type="text/html">
+<div class="ui_swiper _loop">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper Navigation</div>
+            <div data-class="box">
+                <p class="p-tit">Swiper 좌/우 이동 버튼</p> 
+                아래 CODE와 같이 '_loop' 클래스 추가
+            </div>
+            <script type="text/html">
+<div class="ui_swiper _nav">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper Pagination Fraction</div>
+            <div data-class="box">
+                <p class="p-tit">Swiper 페이지 매김 분수로 표현</p> 
+                아래 CODE와 같이 '_fraction' 클래스 추가
+            </div>
+            <script type="text/html">
+<div class="ui_swiper _fraction">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Swiper Auto Play</div>
+            <div data-class="box">
+                <p class="p-tit">Swiper 자동재생 및 재생/정지 버튼</p> 
+                아래 CODE와 같이 'data-auto' 속성에 delay 시간 적용
+            </div>
+            <script type="text/html">
+<div class="ui_swiper" data-auto="5000">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#384d84"></div>
+        </div>
+        <div class="swiper-slide">
+            <div style="width:100%;height:200px;background-color:#e2dfda"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+            </script>
+        </div>
+    
+    <script src="/msbiz/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/swiper.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/msbiz/guide/assets/js/components.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+</body>
+</html>

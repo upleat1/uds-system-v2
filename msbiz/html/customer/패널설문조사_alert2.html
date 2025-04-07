@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>동의하지 않음 선택 시 알림</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="../../app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="../../app/css/style.css">
+    <script src="../../app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="../../app/js/library/jquery-ui.min.js"></script>
+    <script src="../../app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.alert('개인(신용)정보 수집·이용에 동의하지않으시면 웰컴 기프트가 발송 되지 않습니다.','noTitle');">동의하지 않음 선택 시 알림</button></span>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,163 @@
+@charset "utf-8"; 
+
+
+/*** certification_kji.css ***/
+/* 안내 상단 이미지 */
+.cate_certification .img_wrap {padding-top:1.6rem}
+.cate_certification .section.img_wrap .h1 {margin-bottom:0}
+.cate_certification .section.img_wrap .img_area {margin-top:2rem}
+.cate_certification .section.img_wrap + .section {margin-top:3.2rem}
+.cate_certification .tab_wrap .section.img_wrap + .section {margin-top:4.0rem}
+.cate_certification .tab_wrap .section.img_wrap h1 {padding-top:0}
+
+.img_wrap p {margin-top:2rem}
+.img_cont {margin:0 auto; width:32.7rem; height:13.6rem}
+.img_cont.certificate_id {background:url(/msbiz/app/img/certification/visual_certificate_id.jpg) no-repeat; background-size:100%}
+.img_cont.certificate_mobile {background:url(/msbiz/app/img/certification/visual_certificate_mobile.jpg) no-repeat; background-size:100%}
+.img_cont.certificate_comp {background:url(/msbiz/app/img/certification/visual_certificate_comp.jpg) no-repeat; background-size:100%}
+.img_cont.certificate_num {background:url(/msbiz/app/img/certification/visual_certificate_comp.jpg) no-repeat; background-size:100%}
+.img_cont.certificate_qr {background:url(/msbiz/app/img/certification/visual_certificate_comp.jpg) no-repeat; background-size:100%}
+.img_cont.certificate_fig {background:url(/msbiz/app/img/certification/visual_certificate_fingerprint.jpg) no-repeat; background-size:100%}
+.img_cont.certificate_pctophone {background:url(/msbiz/app/img/certification/visual_certificate_pctophone_bl.jpg) no-repeat; background-size:100%}
+.img_cont.certificate_renew {background:url(/msbiz/app/img/certification/visual_certificate_renew.jpg) no-repeat; background-size:100%}
+.img_cont.certificate_share {background:url(/msbiz/app/img/certification/visual_certificate_share.jpg) no-repeat; background-size:100%}
+.img_cont.certificate_manage {background:url(/msbiz/app/img/certification/visual_certificate_manage.jpg) no-repeat; background-size:100%}
+
+.sns_list li .btn_share:before {background-image:url(/msbiz/app/img/certification/ico_heart_bag.jpg) no-repeat; background-size:100%}
+
+.icon_area {display:flex; justify-content:space-around; margin-top:3.2rem}
+.icon_area .icon_cont {display:flex; flex-direction:column; align-items:center}
+.icon_area .icon_cont .ico_heart {width:4.8rem; height:4.8rem; background:url(/msbiz/app/img/certification/icon_certi_comp.png) no-repeat; background-size:14.4rem}
+.icon_area .icon_cont:nth-child(2) .ico_heart {background-position:-4.8rem 0}
+.icon_area .icon_cont:last-child .ico_heart {background-position:-9.6rem 0}
+.icon_area .icon_cont span {margin-top:1.2rem; text-align:center; font-size:1.4rem}
+
+/* font-weight */
+.cate_certification b.number {font-weight:700}
+
+/* radio-box */
+.cate_certification .rdoChk_item li {float:inherit; width:100%}
+.cate_certification .rdoChk_item li:nth-child(odd), .cate_certification .rdoChk_item li:nth-child(even) {padding:0}
+.cate_certification .rdoChk_item li button.selection {width:100%}
+.cate_certification .rdoChk_item li .selection .label {padding:0 0 0 5rem; background:inherit; border-radius:.8rem; border-color:#c6c8d0; -webkit-border-radius:.8rem; -moz-border-radius:.8rem; -ms-border-radius:.8rem; -o-border-radius:.8rem; text-align:left}
+.cate_certification .selection input[type=radio]:checked + .label:after {animation:none; -webkit-animation:none}
+.cate_certification .rdoChk_item li .selection .label .radio_item_txt {display:flex; flex-direction:column; margin:2.4rem .8rem}
+.cate_certification .rdoChk_item li .selection input[type=radio]:checked + .label {border:2px solid #ffcc00; font-weight:inherit}
+.cate_certification .rdoChk_item li .selection input[type=radio]:checked + .label b {color:#287eff}
+.cate_certification .rdoChk_item li .selection .label:before {position:absolute; top:1.4rem; left:1.4rem; width:3.6rem; height:3.6rem; transition:0s; -webkit-transition:0s; -moz-transition:0s; -ms-transition:0s; -o-transition:0s}
+
+.cate_certification .rdoChk_item li.item1 .selection .label:before {background:url(/msbiz/app/img/certification/icon_certi_list.png) no-repeat 0 bottom; background-size:13.5rem}
+.cate_certification .rdoChk_item li.item2 .selection .label:before {background:url(/msbiz/app/img/certification/icon_certi_list.png) no-repeat -3.3rem 0; background-size:13.5rem}
+.cate_certification .rdoChk_item li.item2 .selection input[type=radio]:checked + .label:before {background:url(/msbiz/app/img/certification/icon_certi_list.png) no-repeat -3.3rem bottom; background-size:13.5rem}
+.cate_certification .rdoChk_item li.item3 .selection .label:before {background:url(/msbiz/app/img/certification/icon_certi_list.png) no-repeat -6.6rem 0; background-size:13.5rem}
+.cate_certification .rdoChk_item li.item3 .selection input[type=radio]:checked + .label:before {background:url(/msbiz/app/img/certification/icon_certi_list.png) no-repeat -6.6rem bottom; background-size:13.5rem}
+.cate_certification .rdoChk_item li.item4 .selection .label:before {background:url(/msbiz/app/img/certification/icon_certi_list.png) no-repeat -9.9rem 0; background-size:13.5rem}
+.cate_certification .rdoChk_item li.item4 .selection input[type=radio]:checked + .label:before {background:url(/msbiz/app/img/certification/icon_certi_list.png) no-repeat -9.9rem bottom; background-size:13.5rem}
+
+.cate_certification .rdoChk_item li .selection .label .p_sub {margin-top:1.2rem; color:#696e76}
+.cate_certification .rdoChk_item li .selection .label .fs15 {margin-top:1.6rem}
+
+.cate_certification .rdoChk_group .selection input[type=radio]:checked + .label:after { animation: radioAni .3s linear forwards; -webkit-animation: radioAni .3s linear forwards}
+
+.rdoChk_group.certi_rdoH [class^=selection] {margin-bottom:0}
+.rdoChk_group.certi_rdoH {display:flex; flex-wrap:wrap}
+.rdoChk_group.certi_rdoH .selection {width:50%}
+.rdoChk_group.certi_rdoH .selection:nth-child(odd) {padding-right:1rem}
+.rdoChk_group.certi_rdoH .selection:nth-child(even) {padding-left:1rem}
+.rdoChk_group.certi_rdoH .selection .label > span {display:block}
+
+/* 이미지 */
+.ce_img {margin-top:3.2rem;}
+.ce_img span {display:inline-block; width:15rem; height:2.5rem; background:url(/msbiz/app/img/common/sp_header.png); background-size:25rem auto;}
+.ce_img span em {display:none;}
+
+
+/* 아이콘 리스트 */
+.ce_icon_list li {padding:2rem 0;}
+.ce_icon_list .ce_icon {padding:0 0 1rem 5.6rem; position:relative;}
+.ce_icon_list .ce_icon::before {content:''; position:absolute; left:1rem;}
+.ce_icon_list .ce_icon.item01::before {top:-0.6rem; width:2.7rem; height:3.4rem; background:url('/msbiz/app/img/certification/ico_certification01.png') left top / 100% no-repeat;}
+.ce_icon_list .ce_icon.item02::before {top:-0.3rem; width:3.1rem; height:3rem; background:url('/msbiz/app/img/certification/ico_certification02.png') left top / 100% no-repeat;}
+.ce_icon_list .ce_icon .tit {font-size:1.8rem; font-weight:700;}
+.ce_icon_list .ce_icon .txt {font-size:1.4rem; color:var(--fc_04, #696e76); margin-top:1.2rem;}
+
+.list.icon.manage_icon_list > li.item01:before {background:url(/msbiz/app/img/certification/icon_certi_manage.png) no-repeat; background-size:16rem}
+.list.icon.manage_icon_list > li.item02:before {background:url(/msbiz/app/img/certification/icon_certi_manage.png) no-repeat -4rem 0; background-size:16rem}
+.list.icon.manage_icon_list > li.item03:before {background:url(/msbiz/app/img/certification/icon_certi_manage.png) no-repeat -8rem 0; background-size:16rem}
+.list.icon.manage_icon_list > li.item04:before {background:url(/msbiz/app/img/certification/icon_certi_manage.png) no-repeat -12rem 0; background-size:16rem}
+
+.certify_info_wrap p,
+.certify_info_wrap + div {display:inline-block; margin-left:5.8rem}
+.list_comp .certify_info_wrap p span.number {font-size:1.4rem}
+.certify_info_wrap + div button {border-radius:.2rem; -webkit-border-radius:.2rem; -moz-border-radius:.2rem; -ms-border-radius:.2rem; -o-border-radius:.2rem}
+
+.certify_icon .certify_pannel [class^=ico_state_] {background-size:25rem auto}
+.certify_icon .certify_pannel .ico_state_def {background-position:-4.1rem -20.2rem}
+.certify_icon .certify_pannel .ico_state_renew {background-position:-8.1rem -20.2rem}
+.certify_icon .certify_pannel .ico_state_expir {background-position:-12.1rem -20.2rem}
+
+/*** certification_hcw.css ***/
+/* 공동인증서 */
+.form_group .form_row.col.certify_num .input{width:29%;}
+.form_group .form_row.col.certify_num .input:last-child{width:33%;}
+.depth.step.certify_step > li p.p {margin-top: .2rem;}
+.certify_qr_code {width: 12rem; height: 12rem; margin: 0 auto;}
+
+/* 타행/타기관 인증서 등록/해제 */
+.h2 h1.h1 {padding-top: 0; margin-right: 0;}
+.img_area + .img_btm_txt {margin-top: 2rem;}
+
+/* 지문인증서 */
+.check_bdt {margin-top: 2rem;padding-top: 2.8rem; border-top:1px solid var(--bdc_01, #ebeef0);}
+.add_fingerprint {padding-top: 2.5rem; text-align: center;}
+.add_fingerprint button {display: block;margin: 0 auto;}
+.add_fingerprint .nodata {width: 32.7rem; height: 10rem; margin-top: 2.8rem; background: url(/msbiz/app/img/certification/btn_add_fingerprint.png) no-repeat left top; background-size: 32.7rem;}
+.add_fingerprint .add {width: 9.2rem; height: 9.2rem; margin-top: 3.8rem; background: url(/msbiz/app/img/certification/btn_fingerprint.png) no-repeat left top; background-size: 9.2rem;}
+.add_fingerprint .text {margin-top: 3rem;}
+.add_fingerprint .text .tit {margin-bottom: .1rem; font-size: 1.8rem; font-weight: 700;}
+.add_fingerprint .text .txt {font-size: 1.8rem;}
+.add_fingerprint .text .p_sub {padding: 0 20%; margin-top: 1rem;}
+.info_fingerprint {position: relative; margin-bottom: 1.3rem; padding: 2rem 2rem 1.5rem 6.3rem; border-radius: 0.8rem; border: 1px solid #ebeef0;}
+.info_fingerprint::before{ content: ''; position: absolute; left: 1.6rem; top: 1.6rem; width: 3.6rem; height: 3.6rem; background: url(/msbiz/app/img/certification/ico_fingerprint.png) no-repeat left top; background-size: 3.6rem; background-color: #f7f7f8; border-radius: 50%;}
+.info_fingerprint .name {margin-bottom: 1rem; font-weight: 700;}
+.info_fingerprint .details dl {display: flex;margin-bottom: .2rem;color: var(--fc_04, #696e76);}
+.info_fingerprint .details dl dt {width: 6.5rem; font-size: 1.4rem; }
+.info_fingerprint .details dl dd {width: calc(100% - 6.5rem); font-size: 1.5rem;}
+
+
+
+/*** 기타 ***/
+/* 인증서 이용안내 */
+.visual_wrap {margin:3.2rem 2.4rem 4rem; text-align:center;}
+.visual_wrap > img {width:32.7rem; height:auto;}
+/* 인증서 선택 리스트 화살표 */
+ul.kb_certify1 li > a {width:100%; height:100%; display:block;}
+ul.kb_certify1 li > a:after {content:''; display:block; position:absolute; right:.9rem; top:50%; width:1rem; height:1rem; margin-top:-.2rem; border:solid var(--fc_05, #9ca3ab); border-width: 0 1px 1px 0; transform: rotate(-45deg) translateY(-50%); -webkit-transform: rotate(-45deg) translateY(-50%);}
+ul.kb_certify1.list .txt_sub {margin-top:1.2rem;}
+
+ul.kb_certify1.list.icon > li {padding:0;}
+ul.kb_certify1.list.icon > li > a {position:relative; padding:2.8rem 3.5rem 2.8rem 5.6rem; font-size:1.8rem; font-weight:700;}
+ul.kb_certify1.list.icon > li::before,
+ul.kb_certify1.list_link.icon > li::before {content:''; display:inline-block; position:absolute; top:2rem; left:0; width:4rem; height:4rem; background:url(/msbiz/app/img/common/spr_ico_40x.png) no-repeat; background-size:25rem auto;}
+/* ul.kb_certify1.list_link.icon > li > .link {display:block;position:relative;width:100%;padding:2.5rem 3.5rem 2.6rem 5.6rem} */
+ul.kb_certify1.list_link.icon > li:first-child::before {top:1.9rem}
+ul.kb_certify1.list.icon.list_top_bd > li:first-child::before {top:2rem;}
+ul.kb_certify1.list_link.icon.list_top_bd > li:first-child::before {top:2rem}
+
+ul.kb_certify1.list.icon > li.item1::before{background-position:-3.2rem -16rem; margin-top:.5rem;}
+ul.kb_certify1.list.icon > li.item2::before{background-position:-6.2rem -16rem; margin-top:.5rem;}
+ul.kb_certify1.list.icon > li.item3::before{background-position:-10.2rem -16rem; margin-top:.5rem;}
+ul.kb_certify1.list.icon > li.item4::before{background-position:-14.2rem -16rem; margin-top:.8rem;}
+
+.certi_banner {display:flex; justify-content:space-between; align-items:center; padding-left:2.4rem; background:#f7f7f8}
+.certi_banner .p {font-weight:500}
+.certi_banner .img_banner {width:13.2rem; height:9.6rem; background:url(/msbiz/app/img/certification/img_certi_banner.png) no-repeat; background-size:100%}
+
+.certi_pop li {position:relative}
+.certi_pop li::before {content:''; display:inline-block; width:3.6rem; height:3.6rem; background:url(/msbiz/app/img/common/spr_ico_40x.png) no-repeat; background-size:25rem auto}
+.certi_pop li.item1::before{position:absolute; top:2.2rem; left:1.2rem; background-position:-6.2rem -16rem}
+.certi_pop li.item2::before{position:absolute; top:2rem; left:1.1rem; background-position:-10.5rem -16.03rem}
+.certi_pop li.item3::before{position:absolute; top:1.7rem; left:.8rem; background-position:-2.7rem -15.98rem}
+.certi_pop li.item4::before{position:absolute;top:2rem; left:1.3rem; background-position:-14.7rem -15.98rem}
+.cate_certification .rdoChk_item.certi_pop li .selection .label .radio_item_txt {margin:2.4rem 1.6rem 2.4rem .8rem}
+.cate_certification .rdoChk_item.certi_pop li .selection .label .p_sub {margin-top:.5rem}

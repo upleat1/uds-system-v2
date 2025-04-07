@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[납부내역 상세]지방세선택/단건납부내역상세(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공과금" href="/msbiz/app/css/utility.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_utility">
+
+            <h1 class="h1">지방세 납부내역 상세</h1>
+            <!-- 220729 section 영역 재지정, list_data_group 제거, CMD 버튼 section 밖으로 이동 -->
+            <div class="section">
+                <!-- 220729 타이틀 수정 -->
+                <h2 class="h3">
+                    <!-- 221017 fc_gray 추가, 텍스트 수정 -->
+                    <span class="normal fc_gray">납부일</span>
+                    <strong class="number">2022.06.11</strong>
+                </h2>
+                <!-- //220729 타이틀 수정 -->
+                <ul class="list_data">
+                    <li>
+                        <div class="key">납부기관</div>
+                        <div class="value">국민은행</div>
+                    </li>
+                    <li>
+                        <div class="key">출금계좌번호</div>
+                        <div class="value"><span class="number">010-1234-5678123</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2 class="h3">납부내역 상세</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">전자납부번호</div>
+                        <div class="value"><span class="number">215498-65436521-564654</span></div>
+                    </li>
+                    <li>
+                        <div class="key">납세자명</div>
+                        <div class="value">김납세</div>
+                    </li>
+                    <li>
+                        <div class="key">과세대상</div>
+                        <div class="value">서울12가3456 (과세시간 : 2022.01.01 ~ 2022.01.31)</div>
+                    </li>
+                    <li>
+                        <div class="key">납기내</div>
+                        <div class="value"><span class="number">2015.02.31</span></div>
+                    </li>
+                    <li>
+                        <div class="key">납기후</div>
+                        <div class="value"><span class="number">2015.02.31</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2 class="h3">세목</h2>
+                <div class="table">
+                    <table summary="납기내 금액, 납기후 금액">
+                        <caption>세목 테이블</caption>
+                        <colgroup>
+                            <!-- 220729 가로 값 33%로 변경 -->
+                            <col style="width:33%">
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">구분</th>
+                                <th scope="col">납기내 금액</th>
+                                <th scope="col">납기후 금액</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>본세</th>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>도시계획세</th>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>공동시설세/지역자원시설세</th>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>지방교육세</th>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>농어촌특별세</th>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">123,123,123,123</span><span class="num_unit">원</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>합계금액</th>
+                                <!-- 221017 한줄로변경 -->
+                                <td class="right"><span class="number">8,920</span><span class="num_unit">원</span></td>
+                                <!-- 221017 한줄로변경 -->
+                                <td class="right"><span class="number">8,920</span><span class="num_unit">원</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="h3">부과내역(과표)</h2>
+                <div class="table">
+                    <table summary="부과내역(과표), 비고">
+                        <caption>부과내역(과표) 테이블</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">부과내역(과표)</th>
+                                <th scope="col">비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="right">
+                                    <!-- 221017 한줄로변경 -->
+                                    <span class="number">0</span><span class="num_unit">원</span>
+                                </td>
+                                <td class="right"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span>
+                        <button type="button" class="btn primary lg">확인</button>
+                    </span>
+                </div>
+            </div>
+            <!-- //220729 section 영역 재지정, list_data_group 제거, CMD 버튼 section 밖으로 이동 -->
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

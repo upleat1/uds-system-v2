@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[전계좌조회]다른금융 계좌목록_nodata</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">전계좌조회</h1>
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_row">
+                        <div class="input">
+                            <!-- case 사업장이 하나 -->
+                            <!-- <div class="input_txt">국민상사</div> -->
+                            <!-- //case 사업장이 하나 -->
+                            <!-- case 사업장이 여러개 -->
+                            <div class="select">
+                                <button type="button" class="select_btn fs17 active" title="사업장 선택">국민상사</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            </div>
+                            <!-- //case 사업장이 여러개 -->
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+            <div class="tab_wrap account_all all_inquiry">
+                <div class="tab_list">
+                    <div class="scroll_wrap">
+                        <a href="#">KB국민은행</a>
+                        <a href="#" class="active">다른금융</a>
+                    </div>
+                </div>
+                <!-- 법인사업자의 경우 -->
+                <div class="link_panel">
+                    <div class="section_f openbanking in_tutorial service"><!-- 클래스추가 220919 -->
+                        <div class="ui_swiper" data-title="Star CMS 서비스" data-auto="5000"><!-- 221006 접근성수정 data-title="Star CMS 서비스" 추가 -->
+                            <ol class="swiper-wrapper depth">
+                                <li class="swiper-slide">
+                                    <div class="in_banner tutorial">
+                                        <h2 class="tit">Star CMS 서비스</h2>
+                                        <p class="txt">모든 금융기간을 한 번에 연결해서<br>편리하게 이용하세요.</p>
+                                        <div class="banner_img gap_xxs_minus"><!-- 수정 220919 -->
+                                            <img src="/msbiz/app/img/inquiry/img_corpo_svc1.png" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="in_banner tutorial">
+                                        <h2 class="tit">Star CMS 서비스</h2>
+                                        <p class="txt">다른기관에 분산된 금융계좌를<br>집중하여 조회하는 서비스</p>
+                                        <div class="banner_img gap_xxs_minus"><!-- 수정 220919 -->
+                                            <img src="/msbiz/app/img/inquiry/img_corpo_svc2.png" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="in_banner tutorial">
+                                        <h2 class="tit">Star CMS 서비스</h2>
+                                        <p class="txt center">KB국민은행 및 다른은행 계좌잔액을<br>KB국민은행 계좌로 모으는 <strong>자금모으기</strong>!</p>
+                                        <div class="banner_img gap_xxs_minus"><!-- 수정 220919 -->
+                                            <img src="/msbiz/app/img/inquiry/img_corpo_svc3.png" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="in_banner tutorial">
+                                        <h2 class="tit">Star CMS 서비스</h2>
+                                        <p class="txt center">이체는 물론<br>모든 계좌 이체 수수료까지 <strong><span class="number">0</span><span class="num_unit">원</span></strong>!</p>
+                                        <div class="banner_img gap_xxs_minus"><!-- 수정 220919 -->
+                                            <img src="/msbiz/app/img/inquiry/img_corpo_svc4.png" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="section gap_lg">
+                        <div class="btn_list_btm">
+                            <span><button type="button" class="btn outline md">이용동의</button></span><!-- 221109 버튼명 변경 -->
+                        </div>
+                        <div class="center gap_md">
+                            <button type="button" class="btn_txt ico_help">Star CMS 이용안내</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //법인사업자의 경우 -->
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+    
+</body>
+</html>

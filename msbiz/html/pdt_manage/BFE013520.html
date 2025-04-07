@@ -1,0 +1,170 @@
+<!doctype html>
+<head lang="ko">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>금액, 물품명 입력</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+		<div class="step_wrap js_step">    
+			<div class="step" role="img" aria-label="총 7단계 중 현재 2단계">
+				<span class="current">2</span><span class="mark">/</span><span class="total">7</span>
+			</div>
+			<h1 class="h1">금액, 물품명 입력</h1>
+		</div>
+		<div class="inform_top_wrap">
+			<ul class="depth bul">
+				<li>외상매출채권에 대해서 할인신청을 하실 수 있는 서비스입니다.</li>
+				<li>할인신청금액과 거래물품명을 입력하시고 [확인]버튼을 클릭하세요.</li>
+				<li>거래물품명 입력시 업종과 관련이 없는 물품명을 입력할 경우 한국은행 심사에 따라 대출금리 등에 있어서 불이익을 받을 수 있습니다.</li>
+				<li>[컴퓨터 제조업종의 경우 거래물품명 예시]
+					<div class="tooltip_limited">
+						<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+						<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+							<div class="tooltip_cont"> 
+								<ul class="bul">
+									<li>컴퓨터(O) : 업종 관련 물품명</li>
+									<li>모니터(O) : 업종 관련 물품명</li>
+									<li>식대(X) : 사업목적에 부합하지 않는 물품명</li>
+									<li>물품대(X) : 포괄적인 범위의 물품명</li>
+								</ul>
+							</div>
+							<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<h2 class="hidden">채권정보</h2>
+			<ul class="list_data left lbt">
+				<li>
+					<div class="key">채권번호</div>
+					<div class="value"><span class="number">2203210122</span></div>
+				</li>
+				<li>
+					<div class="key">사업자등록번호</div>
+					<div class="value"><span class="number">214-81-21390</span></div>
+				</li>
+				<li>
+					<div class="key">구매기업명</div>
+					<div class="value">(한)엄사뜸송상담</div>
+				</li>
+				<li>
+					<div class="key">만기일</div>
+					<div class="value"><span class="number">2022-06-17</span></div>
+				</li>
+				<li>
+					<div class="key">채권금액</div>
+					<div class="value"><span class="number">564,300,000</span><span class="num_unit">원</span></div>
+				</li>
+				<li>
+					<div class="key">할인신청가능금액</div>
+					<div class="value"><span class="number">564,300,000</span><span class="num_unit">원</span></div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="section">
+			<div class="form_group">
+				<div class="form_tit">금액구분</div>
+				<div class="form_row">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="radio01_01" name="radio01" checked>
+							<label for="radio01_01" class="label"><em>전액할인</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="radio01_02" name="radio01">
+							<label for="radio01_02" class="label"><em>일부할인</em></label>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- 전액할인 선택시 -->
+			<div class="form_group">
+				<div class="form_tit">할인신청금액</div>
+				<div class="form_row"> 
+					<div class="input unit js_unit">
+						<input type="tel" maxlength="16" placeholder="숫자만 입력" title="할인신청금액" value="564,300,000" readonly data-unit="원">
+					</div>
+					<p class="form_hangul" aria-hidden="true">5억 6,430만원</p>
+				</div>
+			</div>
+			<!-- //전액할인 선택시 -->
+			<!-- 일부할인 선택시 -->
+			<div class="form_group">
+				<div class="form_tit">할인신청금액</div>
+				<div class="form_row">
+					<!-- 220729 리웍 -->
+					<div class="input unit js_unit" role="button" aria-label="상단버튼을 클릭할 때 변경되는 금액, 할인신청금액 입력" onclick="">
+						<input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="할인신청금액" data-unit="원" readonly class="bg_white">
+					</div>
+					<!-- //220729 리웍 -->
+					<p class="form_hangul" aria-hidden="true">원</p>
+				</div>
+			</div>
+			<!-- //일부할인 선택시 -->
+			<div class="form_group">
+				<div class="form_tit">거래물품명</div>
+				<div class="form_row"> 
+					<div class="input">
+						<input type="text" placeholder="업종 관련 물품명 입력" title="거래물품명" >
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<hr class="hr_divide">
+			<div class="agree_check">
+				<span class="selection">
+					<input type="checkbox" id="checkType1_1">
+					<label for="checkType1_1" class="label normal"><strong>위 승인내역 정보는 본인과 판매기업간의 정상적인 상거래 에대한 내용임을 확인합니다.</strong></label>
+				</span>
+			</div>
+			<div class="agree_check">
+				<span class="selection">
+					<input type="checkbox" id="checkType1_2">
+					<label for="checkType1_2" class="label normal"><strong>세금계산서등의 허위 작성 및 불법자금유통으로 인하여 발생하는 법적책임은 본인의 책임하에 있음을 확인합니다.</strong></label>
+				</span>
+			</div>
+		</div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span>
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

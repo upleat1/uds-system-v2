@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>[이자/월부금입금]이자/월부금입금 정보입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <!-- 220729  리웍-->
+        <div id="content">
+            <h1 class="h1">정보입력</h1>
+
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <li>일단위계산 대출계좌는 원하시는 입금예정일자를 선택하시고, 월단위계산 대출계좌는 1회분 납입에 체크해 주시기 바랍니다.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">출금계좌번호</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="출금계좌번호 선택">681101-01-490356:문주희(아만김노향)</button>
+                        </div>
+                    </div>
+                    <div class="form_btm_wrap right">
+                        <p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>
+                        <p class="sum_hint">1일 이체잔여한도 : <span class="number fc_nega">21,787,888,000</span><span class="num_unit">원</span></p>                
+                    </div>
+                    <p class="tip_info">본인명의의 대출 입금/상환금액은 이체한도에 포함되지 않습니다.</p>         
+                    <div class="btn_wrap btm">
+                        <a href="#none" class="btn_txt ico_arr">부족한금액 충전</a>
+                    </div>  
+                </div>
+
+                <!-- 221013 대출계좌번호 항목 asis에 따름 -->
+                <!-- Case. 입금계좌미지정 -->
+                <div class="form_group">
+                    <div class="form_tit">대출계좌번호</div>
+                    <div class="form_row">
+                        <div class="rdoChk_box">
+                            <span class="selection">
+                                <input type="radio" id="reMethod1" name="reMethod" aria-expanded="false" aria-controls="reMethodPanel1" checked>
+                                <label for="reMethod1" class="label"><em>내계좌</em></label>
+                            </span>
+                            <span class="selection">
+                                <input type="radio" id="reMethod2" name="reMethod" aria-expanded="false" aria-controls="reMethodPanel2">
+                                <label for="reMethod2" class="label"><em>직접 입력</em></label>
+                            </span>
+                        </div>
+                        <div class="rdo_panel" role="region" id="reMethodPanel1">
+                            <div class="select">
+                                <button type="button" class="select_btn" title="대출계좌번호 내계좌 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                            </div>
+                        </div>
+                        <div class="rdo_panel" role="region" id="reMethodPanel2">
+                            <div class="input" role="button" aria-label="상단버튼을 클릭할 때 변경되는 계좌번호, 계좌번호 입력" onclick="">
+                                <input type="tel" aria-hidden="true" placeholder="숫자만 입력" title="계좌번호" readonly class="bg_white">
+                            </div>
+                        </div>
+                        <div class="btn_list_btm">
+                            <button class="btn outline sm">자주쓰는 입금계좌</button>
+                        </div>     
+                    </div>
+                </div>
+                <!-- //Case. 입금계좌미지정 -->
+                 <!-- Case. 입금계좌지정 -->
+                 <div class="form_group">
+                    <div class="form_tit">대출계좌번호</div>
+                    <div class="form_row">
+                        <div class="btn_list_btm gap_xs">
+                            <span><button type="button" class="btn outline sm">입금지정계좌</button></span>
+                            <span><button type="button" class="btn outline sm">내계좌</button></span>
+                        </div>
+                    </div>
+                    <div class="form_row gap_sm">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="입금은행 선택" disabled >KB국민</span></button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="{받는분 계좌번호 값}, 받는분 계좌번호 입력" >
+                            <input type="tel" placeholder="계좌번호" title="받는분 계좌번호" aria-hidden="true" readonly >
+                        </div>
+                    </div>
+                </div>
+                <!-- //Case. 입금계좌지정 -->
+                <!-- 221013 대출계좌번호 항목 asis에 따름 -->
+
+                <div class="form_group js_trans">
+                    <div class="form_tit">입금예정일</div>
+                    <div class="form_row">
+                        <div class="input date">
+                            <input type="tel" maxlength="6" title="입금예정일" placeholder="2022.04.21">
+                            <button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- readonly -->
+                <div class="form_group js_trans">
+                    <div class="form_tit">입금예정일</div>
+                    <div class="form_row">
+                        <div class="input date">
+                            <input type="tel" maxlength="6" title="입금예정일" value="2022.04.21" readonly>
+                            <button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //readonly -->
+
+                <div class="form_group">
+                    <div class="form_tit">월단위계산 대출계좌</div>
+                    <div class="form_row">
+                        <div class="rdoChk_group inline">
+                            <span class="selection">
+                                <input type="checkbox" id="chk">
+                                <label for="chk" class="label"><em>1회분 납입</em></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 안내사항 -->
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>유비무환모기지론(스왑/금리상한/금리상하한)의 이자납부/상환거래는 09:00 ~ 17:00 시까지 가능</li>	
+                        <li>국민카드사 분사로 KB/BC 카드론 관련 대출이자 납부는 KB국민카드 사이트에서 처리 가능합니다.</li>	
+                    </ul>
+                </div>
+            </div>
+            <!-- //안내사항 -->
+            
+        </div><!-- //content -->
+        <!-- //220729  리웍-->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+    <!-- 업무 SCRIPT START -->
+    <script type="text/javascript"></script>
+    <!--// 업무 SCRIPT END -->
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>영수증 조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="인증센터" href="/msbiz/app/css/certification.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <h1 class="h1">사용자 정보 입력</h1>
+
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <li>기업용 유료 공동인증서 발급 수수료에 대한 영수증 조회/발급이 가능합니다.</li>
+                    <li>인증서 폐기 후 수수료 환급을 받으신 경우에는 영수증 조회/발급이 불가합니다.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="form_group js_trans">
+                    <div class="form_tit">사용자ID
+                        <div class="tooltip_limited">
+                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span
+                                        class="hidden">사용자ID 자세히보기</span></button></p>
+                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                <p class="tooltip_tit">사용자ID</p>
+                                <div class="tooltip_cont">
+                                    본인확인을 위해 인터넷뱅킹(사용자) ID 및 사업자등록번호를 입력해 주세요.<br>ID를 잃어버리신 분은 ID찾기를 통해 찾을 수 있습니다.
+                                </div>
+                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input int_btn crt_num">
+                            <input type="text" value="" placeholder="사용자ID" title="사용자ID">
+                            <button type="button" class="btn point sm round aaa">ID찾기</button>
+                        </div>
+                    </div>
+                    <p class="tip_info">영문,숫자,영문숫자조합(6~12자리)</p>
+                </div>
+                <div class="form_group js_trans">
+                    <div class="form_tit">사업자등록번호(납세번호/고유번호)</div>
+                    <div class="form_row col business_num">
+                        <span class="input"><input type="tel" maxlength="3" placeholder="3자리"
+                                title="사업자번호 첫번째 3자리"></span>
+                        <span class="space">-</span>
+                        <span class="input"><input type="tel" maxlength="2" placeholder="2자리"
+                                title="사업자번호 중간 2자리"></span>
+                        <span class="space">-</span>
+                        <span class="input"><input type="tel" maxlength="5" placeholder="5자리"
+                                title="사업자번호 마지막 5자리"></span>
+                    </div>
+                </div>
+                <div class="form_group js_trans">
+                    <div class="form_tit">주민등록번호 (개인사업자만 입력)</div>
+                    <div class="form_row col jumin">
+                        <div class="input">
+                            <input type="tel" maxlength="6" placeholder="앞자리 6자리" title="주민등록번호 앞자리">
+                        </div>
+                        <span class="space">-</span>
+                        <div class="input">
+                            <input type="password" maxlength="7" placeholder="뒷자리 7자리" title="주민등록번호 뒷자리">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">다음</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+
+</html>

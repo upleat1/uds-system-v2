@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[다른금융 등록관리]바텀시트_은행사 선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content"><!-- 220729 리웍: 클래스 삭제 -->
+
+            <!-- layer html : 은행사 선택 -->
+            <div id="bottomFinance" class="popup bottom" role="dialog" aria-hidden="true">
+                <article class="pop_wrap">
+                    <div class="pop_head">
+                        <div>
+                            <h1>은행사 선택</h1>
+                        </div>
+                    </div>
+                    <div class="pop_body">
+                        <div class="pop_section">
+                            <ul class="list_item_select bank_list transfer">
+                                <li><a href="#none"><span class="icon_bank_004 md"></span><strong>KB국민</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_003 md"></span><strong>기업</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_011 md"></span><strong>농협</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_088 md"></span><strong>신한</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_071 md"></span><strong>우체국</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_023 md"></span><strong>SC제일</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_081 md"></span><strong>하나</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_027 md"></span><strong>한국씨티</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_020 md"></span><strong>우리</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_039 md"></span><strong>경남</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_034 md"></span><strong>광주</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_031 md"></span><strong>대구</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_055 md"></span><strong>도이치</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_032 md"></span><strong>부산</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_002 md"></span><strong>산업</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_007 md"></span><strong>수협</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_037 md"></span><strong>전북</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_035 md"></span><strong>제주</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_045 md"></span><strong>새마을금고</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_048 md"></span><strong>신협</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_064 md"></span><strong>산림조합</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_054 md"></span><strong>HSBC</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_050 md"></span><strong>저축은행</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_060 md"></span><strong>뱅크오브아메리카</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_089 md"></span><strong>케이뱅크</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_090 md"></span><strong>카카오뱅크</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_057 md"></span><strong>JP모간체이스</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_061 md"></span><strong>BNP파리바</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_067 md"></span><strong>중국건설은행</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_062 md"></span><strong>중국공상</strong></a></li>
+                                <li><a href="#none"><span class="icon_bank_063 md"></span><strong>중국은행</strong></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 220729 리웍: 하단버튼 삭제
+                    <div class="pop_foot">
+                        <div>
+                            <div class="btn_area">
+                                <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                            </div>
+                        </div>
+                    </div> 
+                    -->
+                    <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+                </article>
+            </div>
+            <!-- //layer html : default -->
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+        UICommon.Layer.open('#bottomFinance');
+    </script>
+</body>
+
+</html>

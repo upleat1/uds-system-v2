@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-[외화송금주소록(해외국내)]국내외화이체주소록 등록</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+
+    <div id="content">
+		<!-- 국내외화이체주소록 : 국민은행 신규등록 -->
+		<h1 class="h1">국민은행계좌 등록</h1>
+		<div class="section">
+			<div class="form_group error">
+				<div class="form_tit">주소록별명</div>
+				<div class="form_row">
+					<div class="input">
+						<input type="text" id="id01" title="주소록별명 "><!-- 221006 title명 변경 -->
+					</div>
+				</div>
+                <p class="tip_info">영문30자 이내 입력.</p>
+				<p class="tip_info">최초 등록 이후, 변경이 불가합니다.</p>
+                <!-- 220920 내용 중복으로 '영어만 입력 가능합니다' 삭제 -->
+				<p class="tip" aria-labelledby="id01"><strong>주소록 별명을 입력해 주세요.</strong></p>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2 class="h2">입금계좌정보</h2>
+			
+			<div class="form_group error"> <!-- 개발 : error , success -->
+				<div class="form_tit">입금계좌번호</div>
+				<div class="form_row">
+					<div class="input" role="button" aria-label="{개발:입력값}, 입금계좌번호" onclick=""><!-- 221006 aria-label명 변경 -->            
+						<input type="tel" id="id02" aria-hidden="true" title="입금계좌번호" class="bg_white" readonly>
+					</div>
+				</div>
+				<p class="tip" aria-labelledby="id02">예금주 : 홍길동</p>
+				<p class="tip" aria-labelledby="id02">입금계좌번호를 입력해 주세요.</p> 
+				<p class="tip" aria-labelledby="id02">예금주조회를 선택해 주세요.</p> 
+			</div>
+
+			<div class="btn_cnt_wrap">
+				<span><button type="button" class="btn outline lg">예금주조회</button></span> 
+			</div>
+		</div>
+	
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-controls="notice_1_1">안내사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li>외화계좌 출금하여 원화계좌로 이체하는 경우에는 <strong>자주쓰는입금계좌</strong> 메뉴에서 국민은행 원화계좌번호를 등록 바랍니다.</li>
+					<li>등록하시는 외화계좌가 대외계정인 경우에는 입금이 제한됩니다.(지점 방문하여 관련 증빙서류 제출 시 거래 가능)</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //국내외화이체주소록 : 국민은행 신규등록 -->
+
+		<!-- 국내외화이체주소록 : 다른은행 신규등록 -->
+		<h1 class="h1">다른은행계좌 등록</h1>
+
+		<div class="section">
+			<div class="form_group error">
+				<div class="form_tit">주소록별명</div>
+				<div class="form_row">
+					<div class="input">
+						<input type="text" id="id03" title="주소록별명"><!-- 221006 title명 변경 -->
+					</div>
+				</div>
+                <p class="tip_info">영문30자 이내 입력</p>
+				<p class="tip_info">최초 등록 이후, 변경이 불가합니다.</p>
+                <!-- 220920 내용 중복으로 '영어만 입력 가능합니다' 삭제 -->
+				<p class="tip" aria-labelledby="id03"><strong>주소록 별명을 입력해 주세요.</strong></p>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2 class="h2">입금계좌정보(Receiving Bank Information)</h2>
+
+			<div class="form_group">
+				<div class="form_tit">입금은행</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn" title="입금은행선택">선택</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="form_group error">
+				<div class="form_tit">입금계좌번호</div>
+				<div class="form_row">
+					<!-- 해외계좌 수정 -->
+					<div class="input"><!-- 221006 aria-label명 변경 -->             
+						<input type="text" id="id04" title="입금계좌번호">
+					</div>
+					<!-- //해외계좌 수정 -->
+				</div>
+				<p class="tip" aria-labelledby="id04">입금계좌번호를 입력해 주세요.</p>
+			</div>
+
+			<div class="form_group error">
+				<div class="form_tit">받는분(영문)</div>
+				<div class="form_row">
+					<div class="input">
+						<input type="text" id="id05" title="받는분(영문)"><!-- 221006 title명 변경 --> 
+					</div>
+				</div>
+                <p class="tip_info">영문35자 이내 입력</p>
+				<p class="tip" aria-labelledby="id05">받는분(영문)을 입력해 주세요.</p> 
+			</div>
+		</div>
+
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-controls="notice_1_2">안내사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_2">
+				<ul class="depth bul">
+					<li>즉시이체(금융결제원방식) 이용 시 외화계좌로 이체만 가능하며 SWIFT방식의 경우, 원화/외화계좌로 이체가 모두 가능합니다.</li>
+					<li>등록하시는 외화계좌가 대외계정인 경우에는 입금이 제한됩니다. (지점 방문하여 관련 증빙서류 제출 시 거래 가능)</li>
+					<li>입력하신 정보는 별도의 유효성 검증 없이 등록되므로 송금 시, 불러오기 하신 송금정보의 수정 등이 필요할 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //국내외화이체주소록 : 다른은행 신규등록 -->
+			
+		<div class="btn_confirm_wrap"><!-- btn_confirm_wrap -->
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+
+    </div><!-- //content -->
+</div>
+<!-- //wrap -->
+
+
+
+</body>
+</html>

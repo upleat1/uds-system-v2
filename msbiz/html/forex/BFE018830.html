@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>외화이체/예금입출금</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- 220729 리웍 -->
+    <div id="content">
+		<h1 class="h1">이체구분 및 은행선택</h1>
+        <div class="section">
+            <div class="form_group">
+                <div class="form_tit">이체구분</div>
+                <div class="form_row">
+                    <div class="tab_wrap box">
+                        <div class="tab_radio">
+                            <div class="rdoChk_box">
+                                <span class="selection">
+                                    <input type="radio" id="rdo1" name="rdo1" checked>
+                                    <label for="rdo1" class="label"><em>국민은행</em></label>
+                                </span>
+                                <span class="selection">
+                                    <input type="radio" id="rdo2" name="rdo1">
+                                    <label for="rdo2" class="label"><em>다른은행</em></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tab_panel">
+                            <h2 class="hidden">국민은행</h2> <!-- 220831 추가 -->
+                            <div class="form_group">
+                                <div class="form_tit">이체방식</div>
+                                <div class="form_row">
+                                    <div class="rdoChk_group">
+                                        <span class="selection">
+                                            <input type="radio" id="radioV1" name="radio_v" checked>
+                                            <label for="radioV1" class="label"><em>원화계좌 → 외화계좌(환전)</em></label>
+                                        </span>
+                                        <span class="selection">
+                                            <input type="radio" id="radioV2" name="radio_v">
+                                            <label for="radioV2" class="label"><em>외화계좌 → 원화계좌(환전)</em></label>
+                                        </span>
+                                        <span class="selection">
+                                            <input type="radio" id="radioV3" name="radio_v">
+                                            <label for="radioV3" class="label"><em>외화계좌 → 외화계좌</em></label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 이체구분 : 국민은행, 이체방식 : 원화 → 외화 -->
+                            <div class="form_group"> <!-- 220831 간격 클래스 gap_sm 필요시 넣어주세요 -->
+                                <div class="form_tit">원화출금계좌번호</div>
+                                <div class="form_row">
+                                    <div class="select">
+                                        <button type="button" class="select_btn" title="원화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                    </div>
+                                </div>
+                                <div class="form_btm_wrap right">
+                                    <p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>           
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <div class="form_tit">내통장메모(원화계좌)</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="13자 이내, 통장에는 6자까지 표시" title="내통장메모">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //이체구분 : 국민은행, 이체방식 : 원화 → 외화 -->
+
+                            <!-- 이체구분 : 국민은행, 이체방식 : 외화 → 원화  || 외화 → 외화 -->
+                            <div class="form_group">
+                                <div class="form_tit">외화출금계좌번호</div>
+                                <div class="form_row">
+                                    <div class="select">
+                                        <button type="button" class="select_btn" title="원화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                    </div>
+                                </div>
+                                <div class="btn_wrap btm">
+                                    <a href="#none" class="btn_txt ico_arr">외화잔액조회</a>
+                                </div>
+                            </div>
+                            <div class="form_group error">
+                                <div class="form_tit">내통장메모(외화계좌)</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" id="id11" placeholder="13자 이내, 통장에는 6자까지 표시" title="내통장메모"> <!-- 220824 id 추가 -->
+                                    </div>
+                                </div>
+                                <p class="tip" aria-labelledby="id11">외화가상계좌로 입금하시는 경우, 보내는 분 이름을 영문으로 입력해 주세요.</p> <!-- 220824 aria-labelledby 추가 -->
+                            </div>
+                            <!-- //이체구분 : 국민은행, 이체방식 : 외화 → 원화  || 외화 → 외화 -->
+
+                            <h2 class="h2">입금계좌 정보</h2>
+                            
+                            <div class="form_group error">
+                                <!-- 이체구분 : 국민은행, 이체방식 : 원화 → 외화  || 외화 → 외화 -->
+                                <div class="form_tit">외화입금계좌번호</div>
+                                <!-- 220908 수정 -->
+                                <div class="form_row">
+                                    <div class="btn_trans_group">
+                                        <!-- 221007 onclick 추가 -->
+                                        <span><button type="button" class="btn" onclick="UICommon.Layer.open('#tabPopup')">자주쓰는</button></span>
+                                        <span><button type="button" class="btn">이체주소록</button></span>
+                                        <span><button type="button" class="btn">내계좌</button></span>
+                                    </div> 
+                                </div>
+                                <div class="form_row">
+                                    <div class="input" role="button" aria-label="외화입금계좌번호 입력" onclick="">            
+                                        <input type="tel" id="id12" aria-hidden="true" placeholder="숫자만 입력" title="외화입금계좌번호" value="" class="bg_white" readonly> <!-- 220824 id 추가 -->
+                                    </div>
+                                    <!-- 220831 자주쓰는입금계좌를 통해 값이 적용되었을때 -->
+                                    <div class="input int_btn">            
+                                        <input type="tel" title="외화입금계좌번호" value="111-11-111111" readonly> <!-- 220824 id 추가 -->
+                                        <button type="button" class="btn point sm round">선택취소</button>
+                                    </div>
+                                    <!-- //220831 자주쓰는입금계좌를 통해 값이 적용되었을때 -->
+                                </div>
+                                <!-- //220908 수정 -->
+                                <!-- //이체구분 : 국민은행, 이체방식 : 원화 → 외화  || 외화 → 외화 -->
+
+                                <!-- 이체구분 : 국민은행, 이체방식 : 외화 → 원화 -->
+                                <div class="form_tit">원화입금계좌번호</div>
+                                <!-- 220908 수정 -->
+                                <div class="form_row">
+                                    <div class="btn_trans_group">
+                                        <span><button type="button" class="btn">자주쓰는</button></span>
+                                        <span><button type="button" class="btn">내계좌</button></span>
+                                    </div> 
+                                </div>
+                                <div class="form_row">
+                                    <div class="input" role="button" aria-label="원화입금계좌번호 입력" onclick="">            
+                                        <input type="tel" id="id13" aria-hidden="true" placeholder="숫자만 입력" title="원화입금계좌번호" value="" class="bg_white" readonly> <!-- 220824 id 추가 -->
+                                    </div>
+                                    <!-- 220831 자주쓰는입금계좌를 통해 값이 적용되었을때 -->
+                                    <div class="input int_btn">            
+                                        <input type="tel" title="원화입금계좌번호" value="111-11-111111" readonly> <!-- 220824 id 추가 -->
+                                        <button type="button" class="btn point sm round">선택취소</button>
+                                    </div>
+                                    <!-- //220831 자주쓰는입금계좌를 통해 값이 적용되었을때 -->
+                                </div>
+                                <!-- //220908 수정 -->
+                                <!-- //이체구분 : 국민은행, 이체방식 : 외화 → 원화 -->
+                                <div class="form_btm_full_wrap">
+                                    <span><button type="button" class="btn primary lg">예금주조회</button></span>
+                                </div>
+                                <p class="tip_info">예금주조회 후 수취인명 성명이 자동입력됩니다.</p>
+                                <p class="tip" aria-labelledby="id12">외화입금계좌번호를 입력해 주세요.</p><!-- 이체구분 : 국민은행, 이체방식 : 원화 → 외화  || 외화 → 외화 --> <!-- 220824 aria-labelledby 추가 -->
+                                <p class="tip" aria-labelledby="id13">원화입금계좌번호를 입력해 주세요.</p><!-- 이체구분 : 국민은행, 이체방식 : 외화 → 원화 --> <!-- 220824 aria-labelledby 추가 -->
+                                <p class="tip" aria-labelledby="id12">예금주조회를 하신 후 거래해 주세요.</p> <!-- 220824 aria-labelledby 추가 -->
+                                <p class="tip" aria-labelledby="id12">계좌번호 입력 오류입니다. 계좌번호 확인 후 거래해 주세요.(에러코드: ex.UKJI1620)</p> <!-- 220824 aria-labelledby 추가 -->
+                            </div>
+                            
+                            <div class="form_group">
+                                <div class="form_tit">수취인명</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" title="수취인명" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_group">
+                                <div class="form_tit">입금통장메모</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="10자 이내, 입력하지 않으면 예금주명" title="입금통장메모">
+                                    </div>
+                                </div>
+                                <p class="tip_info">외화가상계좌로 입금하시는 경우, 보내는 분 이름을 영문으로 입력해주시기 바랍니다.</p> 
+                            </div>
+
+                            <h2 class="h2">이체관련 정보</h2>
+                            <div class="form_group">
+                                <div class="form_tit">통화</div>
+                                <div class="form_row">
+                                    <div class="select">
+                                        <button type="button" class="select_btn" title="통화 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <div class="form_tit">이체금액</div>
+                                <div class="form_row col ele_ul_hor currency_int">
+                                    <!-- 221006 키패드 수정 -->
+                                    <div class="input" role="button" aria-label="소수점 앞 입력" onclick="">
+                                        <input type="tel" class="right bg_white" placeholder="숫자만 입력" title="소수점 앞" value="" readonly>
+                                    </div>
+                                    <div class="dot"></div>
+                                    <div class="input" role="button" aria-label="소수점 뒤 입력" onclick="">
+                                        <input type="tel" class="right bg_white" placeholder="00" title="소수점 뒤" value="" readonly>                            
+                                    </div>    
+                                    <!-- //221006 키패드 수정 -->        
+                                </div>
+                            </div>
+                            <!-- 220831 한줄 케이스 -->
+                            <div class="form_group">
+                                <div class="form_tit">이체금액</div>
+                                <div class="form_row col ele_ul_hor currency_int">
+                                    <!-- 221006 키패드 수정 -->
+                                    <div class="input" role="button" aria-label="소수점 앞 입력" onclick="">
+                                        <input type="tel" class="right bg_white" placeholder="숫자만 입력" title="소수점 앞" value="" readonly>
+                                    </div>  
+                                    <!-- //221006 키패드 수정 -->      
+                                </div>
+                            </div>
+                            <!-- //220831 한줄 케이스 -->
+                            <div class="form_group error">
+                                <div class="form_tit">환율예약번호</div>
+                                <div class="form_row">
+                                    <div class="input" role="button" aria-label="환율예약번호 입력" onclick="">            
+                                        <input type="tel" id="id14" aria-hidden="true" placeholder="숫자 6자리 입력" title="환율예약번호" value="" class="bg_white" readonly> <!-- 220824 id 추가 -->
+                                    </div>
+                                </div>
+                                <p class="tip_info">은행과 사전협의한 환율예약번호가 있는 경우 안내받으신 환율예약번호를  입력해주세요.</p>
+                                <p class="tip" aria-labelledby="id14">환율예약번호를 정확히 입력해 주세요.(에러코드: ex.UKEE1335)</p> <!-- 220824 aria-labelledby 추가 -->
+                            </div>
+                        </div>
+
+                        <div class="tab_panel">
+                            <h2 class="hidden">다른은행</h2>
+                            <div class="form_group">
+                                <div class="form_tit">입금은행 선택</div>
+                                <div class="form_row">
+                                    <div class="btn_trans_group">
+                                        <span><button type="button" class="btn">이체주소록</button></span>
+                                    </div> 
+                                    <div class="select">
+                                        <button type="button" class="select_btn" title="입금은행 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h2">이체방식/송금정보 입력</h3>
+                            <div class="form_group"> 
+                                <div class="form_tit">이체방식</div>
+                                <div class="form_row">
+                                    <div class="rdoChk_group">
+                                        <span class="selection">
+                                            <input type="radio" id="radioH1" name="radio_h" checked> <!-- 특정은행(이전페이지 기술) 또는 영업시간 09:00~16:00가 아닐경우 즉시이체(금융결제원방식) 비활성화 -->
+                                            <label for="radioH1" class="label"><em>즉시이체(금융결제원방식)</em></label>
+                                        </span>
+                                        <span class="selection">
+                                            <input type="radio" id="radioH2" name="radio_h">
+                                            <label for="radioH2" class="label"><em>SWIFT방식</em></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="btn_wrap btm">
+                                    <a href="#none" class="btn_txt ico_arr">이체방식안내</a>
+                                </div>
+                            </div>
+                            <div class="form_group error"> <!-- 220824 error 추가 -->
+                                <div class="form_tit">송금인명(영문)</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" id="id15" placeholder="" title="송금인명(영문)" value="TOTTENHAM HOTSPUR FOOTBALL CLUB"> <!-- 220824 id 추가 --> <!-- 221014 타이틀 수정 -->
+                                    </div>
+                                </div>
+                                <p class="tip" aria-labelledby="id15">보내는 분을 입력해 주세요.</p> <!-- 220824 aria-labelledby 추가 -->
+                            </div>
+                            <div class="form_group tel">
+                                <div class="form_tit">송금인 연락처</div>
+                                <div class="form_row col">
+                                    <div class="select">
+                                        <button type="button" class="select_btn" title="연락처 앞자리">02</button> <!-- 220922 타이틀 수정 -->
+                                    </div>
+                                    <div class="input" role="button">
+                                        <input type="tel" id="id04" value="" title="전화번호"> <!-- 220922 타이틀 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h2">출금계좌 정보</h3>
+                            <div class="form_group">
+                                <div class="form_tit">출금계좌구분</div>
+                                <div class="form_row">
+                                    <div class="tab_wrap box">
+                                        <div class="tab_radio">
+                                            <div class="rdoChk_box">
+                                                <span class="selection">
+                                                    <input type="radio" id="rdo2_1" name="rdo2" checked>
+                                                    <label for="rdo2_1" class="label"><em>원화계좌</em></label>
+                                                </span>
+                                                <span class="selection">
+                                                    <input type="radio" id="rdo2_2" name="rdo2">
+                                                    <label for="rdo2_2" class="label"><em>외화계좌+원화계좌</em></label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tab_panel">
+                                            <h4 class="hidden">원화계좌</h4> <!-- 220919 대체텍스트 -->
+                                            <div class="form_group">
+                                                <div class="form_tit">통화</div>
+                                                <div class="form_row">
+                                                    <div class="select">
+                                                        <button type="button" class="select_btn active" title="통화 선택">미국(USD)</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="form_tit">이체금액</div>
+                                                <div class="form_row col ele_ul_hor currency_int">
+                                                    <!-- 221006 키패드 수정 -->
+                                                    <div class="input" role="button" aria-label="소수점 앞 입력" onclick="">
+                                                        <input type="tel" class="right bg_white" placeholder="숫자만 입력" title="소수점 앞" value="" readonly>
+                                                    </div>
+                                                    <!-- 통화코드 셀렉값이 JPY, VND, IDR 인 경우 미노출 처리 -->
+                                                    <div class="dot"></div>
+                                                    <div class="input" role="button" aria-label="소수점 뒤 입력" onclick="">
+                                                        <input type="tel" class="right bg_white" placeholder="00" title="소수점 뒤" value="" readonly>                            
+                                                    </div>      
+                                                    <!-- //통화코드 셀렉값이 JPY, VND, IDR 인 경우 미노출 처리 -->   
+                                                    <!-- //221006 키패드 수정 -->       
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="form_tit">원화출금계좌번호</div>
+                                                <div class="form_row">
+                                                    <div class="select">
+                                                        <button type="button" class="select_btn" title="원화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                                    </div>
+                                                </div>
+                                                <div class="form_btm_wrap right">
+                                                    <p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="form_tit">내통장메모(원화계좌)</div>
+                                                <div class="form_row">
+                                                    <div class="input">
+                                                        <input type="text" placeholder="13자 이내, 통장에는 6자까지 표시" title="내통장메모(원화계좌)" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab_panel">
+                                            <h4 class="hidden">외화계좌+원화계좌</h4>
+                                            <div class="form_group">
+                                                <div class="form_tit">통화</div>
+                                                <div class="form_row">
+                                                    <div class="select">
+                                                        <button type="button" class="select_btn active" title="통화 선택">미국(USD)</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="form_tit">이체금액</div>
+                                                <div class="form_row col ele_ul_hor currency_int">
+                                                    <!-- 221006 키패드 수정 -->
+                                                    <div class="input" role="button" aria-label="소수점 앞 입력" onclick="">
+                                                        <input type="tel" class="right bg_white" placeholder="숫자만 입력" title="소수점 앞" value="" readonly>
+                                                    </div>
+                                                    <!-- 통화코드 셀렉값이 JPY, VND, IDR 인 경우 미노출 처리 -->
+                                                    <div class="dot"></div>
+                                                    <div class="input" role="button" aria-label="소수점 뒤 입력" onclick="">
+                                                        <input type="tel" class="right bg_white" placeholder="00" title="소수점 뒤" value="" readonly>                            
+                                                    </div>      
+                                                    <!-- //통화코드 셀렉값이 JPY, VND, IDR 인 경우 미노출 처리 -->   
+                                                    <!-- //221006 키패드 수정 -->         
+                                                </div>
+                                            </div>
+
+                                            <p class="tip_info gap_sm">외화출금이체금액을 입력하시면 원화출금이체금액은 자동 입력됩니다.</p>
+                                            <div class="form_group intl error gap_0">
+                                                <div class="form_tit">외화출금송금액</div>
+                                                <div class="form_row col ele_ul_hor currency_int">
+                                                    <!-- 221006 키패드 수정 -->
+                                                    <div class="input" role="button" aria-label="소수점 앞 입력" onclick="">
+                                                        <div class="row_tit">USD</div>
+                                                        <input type="tel" id="id16" class="right bg_white" placeholder="숫자만 입력" title="소수점 앞" value="" readonly> <!-- 220824 id 추가 -->
+                                                    </div>
+                                                    <div class="dot"></div>
+                                                    <div class="input" role="button" aria-label="소수점 뒤 입력" onclick="">
+                                                        <input type="tel" class="right bg_white" placeholder="00" title="소수점 뒤" value="" readonly>                            
+                                                    </div>
+                                                    <!-- //221006 키패드 수정 -->     
+                                                </div>
+                                                <p class="tip" aria-labelledby="id16">송금액을 입력해 주세요.</p> <!-- 220824 aria-labelledby 추가 -->
+                                                <p class="tip" aria-labelledby="id16">외화출금송금액은 송금액보다 작거나 같아야합니다.</p> <!-- 220824 aria-labelledby 추가 -->
+                                            </div>
+                                            
+                                            <div class="form_group intl">
+                                                <div class="form_tit">원화출금송금액</div>
+                                                <div class="form_row col ele_ul_hor currency_int">
+                                                    <!-- 221006 키패드 수정 -->
+                                                    <div class="input" role="button" aria-label="소수점 앞 입력" onclick="">
+                                                        <div class="row_tit">USD</div>
+                                                        <input type="tel" class="right bg_white" placeholder="0" title="소수점 앞" value="1,234" readonly>
+                                                    </div>
+                                                    <div class="dot"></div>
+                                                    <div class="input" role="button" aria-label="소수점 뒤 입력" onclick="">
+                                                        <input type="tel" class="right bg_white" placeholder="00" title="소수점 뒤" value="01" readonly>                            
+                                                    </div>
+                                                    <!-- //221006 키패드 수정 -->    
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form_group">
+                                                <div class="form_tit">외화출금계좌번호</div>
+                                                <div class="form_row">
+                                                    <div class="select">
+                                                        <button type="button" class="select_btn" title="외화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                                    </div>     
+                                                </div>
+                                                <div class="btn_wrap btm">
+                                                    <a href="#none" class="btn_txt ico_arr">외화잔액조회</a>
+                                                </div>       
+                                            </div> 
+                                            <div class="form_group error">
+                                                <div class="form_tit">외화출금계좌비밀번호</div>
+                                                <div class="form_row">        
+                                                    <div class="input" role="button" aria-label="외화출금계좌비밀번호 입력" onclick="">            
+                                                        <input type="password" id="id17" aria-hidden="true" placeholder="" title="외화출금계좌비밀번호" value="" class="bg_white" readonly> <!-- 220824 id 추가 -->
+                                                    </div>
+                                                </div>    
+                                                <p class="tip" aria-labelledby="id17">외화출금계좌 비밀번호를 입력해 주세요.</p> <!-- 220824 aria-labelledby 추가 -->
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="form_tit">내통장메모(외화계좌)</div>
+                                                <div class="form_row">
+                                                    <div class="input">
+                                                        <input type="text" placeholder="한글13자, 영문26자 이내 입력" title="내통장메모(외화계좌)" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="form_tit">원화출금계좌번호</div>
+                                                <div class="form_row">
+                                                    <div class="select">
+                                                        <button type="button" class="select_btn" title="원화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                                                    </div>     
+                                                </div>
+                                                <div class="form_btm_wrap right">
+                                                    <p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>
+                                                </div>      
+                                            </div>
+                                            <div class="form_group error">
+                                                <div class="form_tit">원화출금계좌비밀번호</div>
+                                                <div class="form_row">        
+                                                    <div class="input" role="button" aria-label="원화출금계좌비밀번호 입력" onclick="">            
+                                                        <input type="password" id="18" aria-hidden="true" placeholder="" title="원화출금계좌비밀번호" value="" class="bg_white" readonly><!-- 220824 id 추가 -->
+                                                    </div>
+                                                </div>   
+                                                <p class="tip" aria-labelledby="id18">원화출금계좌 비밀번호를 입력해 주세요.</p>  <!-- 220824 aria-labelledby 추가 -->
+                                            </div>
+                                            <div class="form_group">
+                                                <div class="form_tit">내통장메모(원화계좌)</div>
+                                                <div class="form_row">
+                                                    <div class="input">
+                                                        <input type="text" placeholder="한글13자, 영문26자 이내, 통장에 6자까지 표시" title="내통장메모(원화계좌)" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h2 class="h2">입금계좌 정보</h3>
+                            <div class="form_group error">
+                                <div class="form_tit">입금계좌번호</div>
+                                <div class="form_row">
+                                    <!-- 221024 키패드 마크업 변경 -->
+                                    <div class="input">            
+                                        <input type="text" id="id19" title="입금계좌번호"> <!-- 220824 id 추가 -->
+                                    </div>
+                                    <!-- //221024 키패드 마크업 변경 -->
+                                </div>
+                                <div class="form_btm_full_wrap">
+                                    <span><button type="button" class="btn primary lg">예금주조회</button></span>
+                                </div>
+                                <p class="tip_info">즉시이체의 경우, [예금주조회]는 필수입니다.</p><!-- 이체방식이 즉시이체(금융결제원방식) 일 때 -->
+                                <p class="tip_info">SWIFT방식 이체 시, [예금주조회]는 필수가 아니며 조회결과는 단순 참고용으로 이용바랍니다.</p><!-- 이체방식이 SWIFT방식 일 때 -->
+                                <p class="tip" aria-labelledby="id19">입금계좌번호를 입력해 주세요.</p> <!-- 220824 aria-labelledby 추가 -->
+                                <p class="tip" aria-labelledby="id19">예금주조회를 하신 후 거래해 주세요.</p> <!-- 220824 aria-labelledby 추가 -->
+                                <p class="tip" aria-labelledby="id19">계좌번호 입력 오류입니다. 계좌번호 확인 후 거래해 주세요.(에러코드: ex.UKJI1620)</p> <!-- 220824 aria-labelledby 추가 -->
+                            </div>
+                            
+                            <div class="form_group error">
+                                <div class="form_tit">수취인명(영문)</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" id="id20" placeholder="" title="수취인명(영문)" value=""> <!-- 220824 id 추가 --> <!-- 221014 타이틀 수정 -->
+                                    </div>
+                                </div>
+                                <p class="tip" aria-labelledby="id20">수취인명을 입력해 주세요.</p> <!-- 220824 aria-labelledby 추가 -->
+                            </div>
+                            <div class="form_group">
+                                <div class="form_tit">추가전달정보(영문)</div>
+                                <div class="form_row">
+                                    <div class="input">
+                                        <input type="text" placeholder="영문 140자 이내 입력" title="추가전달정보(영문)" value=""> <!-- 221014 타이틀 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 권유직원 선택/관리희망직원 선택 -->
+        <div class="section">
+            <h3 class="h2">권유직원 선택</h3> <!-- 퍼블 : 타이틀은 단위설계서에 정의된 대로 작성 -->
+            <!-- 공통태그(공통영역) -->
+            <div class="staff_hope">
+                <!-- [개발] 방문이력이 있는 경우 노출 -->
+                <ul class="list_comp check">
+                    <li> 
+                        <span class="selection"> 
+                            <input type="radio" id="rad_staff1" name="rad_staff" aria-hidden="true"> 
+                            <label for="rad_staff1" class="label" role="radio" aria-checked="false"> 
+                                <em> 
+                                    <span class="staff">김국민</span> 
+                                    <span class="hope_date number">2021.05.23</span> 
+                                    <span class="office">역삼동 영업점 내점 상담</span> 
+                                </em> 
+                            </label> 
+                        </span> 
+                    </li>
+                    <li> 
+                        <span class="selection"> 
+                            <input type="radio" id="rad_staff2" name="rad_staff" aria-hidden="true"> 
+                            <label for="rad_staff2" class="label" role="radio" aria-checked="false"> 
+                                <em> 
+                                    <span class="staff">이국민</span> 
+                                    <span class="hope_date number">2021.05.23</span> 
+                                    <span class="office">역삼동 영업점 내점 상담</span> 
+                                </em> 
+                            </label> 
+                        </span> 
+                    </li>
+                </ul><!-- //[개발] 방문이력이 있는 경우 노출 -->
+                <div class="staff_hope_sel">
+                    <div class="rdoChk_box"> 
+                        <span class="selection"> 
+                            <input type="radio" id="staff_hope_1" name="staff_hope" aria-hidden="true"> 
+                            <label for="staff_hope_1" class="label" role="radio" aria-checked="false"><em>지점명</em></label>
+                        </span> 
+                        <span class="selection"> 
+                            <input type="radio" id="staff_hope_2" name="staff_hope" aria-hidden="true">
+                            <label for="staff_hope_2" class="label" role="radio" aria-checked="false"><em>직원이름</em></label> 
+                        </span> 
+                        <span class="selection"> 
+                            <input type="radio" id="staff_hope_3" name="staff_hope" aria-hidden="true"> 
+                            <label for="staff_hope_3" class="label" role="radio" aria-checked="false"><em>직원번호</em></label> 
+                        </span> 
+                        <span class="selection"> 
+                            <input type="radio" id="staff_hope_4" name="staff_hope" aria-hidden="true">
+                            <label for="staff_hope_4" class="label" role="radio" aria-checked="false"><em>없음</em></label> 
+                        </span> 
+                </div>
+                </div><!-- 지점명 -->
+                <div class="staff_hope_cts" aria-hidden="true">
+                    <div class="form_group">
+                        <div class="form_tit hidden">지점명</div>
+                        <div class="form_row">
+                            <div class="select outline lg"> 
+                                <button type="button" class="select_btn active" title="지점명 선택">지점명</button> <!-- [개발] 버튼에 값이 들어갈 경우 클래스 "active" 추가 -->
+                            </div>
+                        </div>
+                        <div class="form_row"> 
+                            <span class="input int_btn"> 
+                                <input type="text" title="지점명" placeholder="지점명" value="동여의도(김국민)" disabled=""> <!-- 221014 타이틀 수정 -->
+                                <button type="button" class="btn point sm round">검색</button> 
+                            </span> 
+                        </div>
+                        <div class="btn_wrap btm">
+                            <button type="button" class="btn_txt ico_reset">검색초기화</button>
+                        </div>
+                    </div>
+                </div><!-- //지점명 -->
+                <!-- 직원이름 -->
+                <div class="staff_hope_cts" aria-hidden="true">
+                    <div class="form_group">
+                        <div class="form_tit hidden">직원이름</div>
+                        <div class="form_row"> 
+                            <span class="input int_btn"> 
+                                <input type="text" title="직원이름" placeholder="직원이름"> <!-- 221014 타이틀 수정 -->
+                                <button type="button" class="btn point sm round">검색</button>
+                            </span> 
+                        </div>
+                    </div>
+                </div><!-- //지점명 -->
+                <!-- 직원번호 -->
+                <div class="staff_hope_cts" aria-hidden="true">
+                    <div class="form_group">
+                        <div class="form_tit hidden">직원번호</div>
+                        <div class="form_row"> 
+                            <span class="input int_btn"> 
+                                <input type="text" title="직원번호" placeholder="직원번호">  <!-- 221014 타이틀 수정 -->
+                                <button type="button" class="btn point sm round">검색</button>
+                            </span> 
+                        </div>
+                    </div>
+                </div><!-- //직원번호 -->
+            </div>
+            <p class="depth info">고객님의 상품 가입에 가장 도움이 된 상담직원 또는 전담직원을 선택해 주시기 바랍니다.</p><!-- 220729 리웍 (위치변경)-->
+            <!-- //공통태그(공통영역) -->
+        </div>
+        <!-- //권유직원 선택/관리희망직원 선택 -->
+
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+                    <li>국민은행 계좌 또는 국내 다른 은행으로 외화를 이체하는 화면입니다.</li>
+                    <li>국민은행으로 이체: 국민은행 계좌로 외화를 이체하는 경우 선택하세요. 24시간 365일 이체할 수 있습니다. (온라인 영업일자 전환시간(00:00~00:05) 동안 서비스가 제한되며, 매월 셋째주 일요일 00:00~07:00은 시스템 조정작업으로 인해 서비스가 제한됩니다.)</li>
+                    <li>다른 은행으로 이체: 즉시송금(금융결제원방식)과 SWIFT방식 등 2가지 서비스를 제공합니다. 자세한 내용은 화면 내 이체방식안내 를 참조하세요.
+                        <ul class="depth dash">
+                            <li class="fc_nega">즉시송금: 미국달러(USD)이체는 은행영업일 09:00~16:00 중 가능(15:00 이후 비대면 이체 누적금액 USD 2백만달러까지 가능)<br>유로(EUR)이체는 은행영업일에 09:00~15:30 중 가능(1회 최대 이체 가능액 EUR 10만 유로 미만)</li>
+                            <li class="fc_nega">SWIFT방식: 24시간 365일 이용 가능하며 다양한 통화를 송금할 수 있습니다. 단, 은행 영업시간(09:00~16:00) 이후 또는 토, 일, 공휴일에 신청하신 이체는 다음 은행 영업일에 처리됩니다. (온라인 영업일자 전환시간(00:00~00:05) 동안 서비스가 제한되며, 매월 셋째주 일요일 00:00~07:00은 시스템 조정작업으로 인해 서비스가 제한됩니다.)</li>
+                        </ul>
+                    </li>
+                    <li>다른은행 이체 시 영문, 숫자 그리고 일부 특수문자( / - ? ( ) . , + )만 입력이 가능합니다. *'내통장메모'는 한글입력 가능</li>
+                    <li>외화이체 시 환전이 발생하는 경우, 기본 30%의 환율우대를 제공하며 거래 기여도 등에 따라 추가 환율우대가 적용될 수 있습니다.</li>
+                    <li>원화/외화계좌에서 출금된 금액은 인터넷뱅킹 1회, 1일 이체한도에 포함됩니다.(외화계좌 출금액은 원화로 환산)</li>
+                    <li>외화 출금계좌/입금계좌가 대외계정(외국인 및 비거주자 등이 개설한 외화계좌)인 경우 비대면 거래가 제한됩니다.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">이체신청</button></span>
+            </div>
+        </div>
+
+	</div>
+    <!-- //220729 리웍 -->
+
+    <!-- 221007 추가 -->
+    <div id="tabPopup" class="popup bottom" role="dialog" aria-hidden="true">
+        <article class="pop_wrap">
+            <div class="pop_head">
+                <div></div>
+            </div>
+            <div class="pop_body">
+                <div class="pop_section tr_deposit">
+                    <div class="tab_wrap">
+                        <div class="tab_list" role="tablist">
+                            <div class="scroll_wrap">
+                                <button role="tab" aria-selected="true" aria-controls="tabpanel4_1">자주쓰는</button>
+                                <button role="tab" aria-selected="false" aria-controls="tabpanel4_2">내계좌</button>
+                            </div>
+                            <div class="btn_area">
+                                <button type="button" class="btn_ico_search"><span class="hidden">계좌검색</span></button> <!-- 클릭시 active 클래스 추가, 다른탭메뉴 aria-selected="false" 로 변경해주세요 -->
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab_panel" id="tabpanel4_1">
+                            <div class="section">
+                                <!-- 상세검색 -->
+                                <ul class="acc_group_wrap js_accordion">
+                                    <li>
+                                        <a href="#none" role="button" class="tit" aria-expanded="false">상세검색</a>
+                                        <div class="toggle_panel" role="region">
+                                            <div class="form_group">
+                                                <div class="form_tit fs15">조회조건</div>
+                                                <div class="form_row">
+                                                    <div class="tab_wrap box">
+                                                        <div class="tab_radio">
+                                                            <div class="rdoChk_box">
+                                                                <span class="selection">
+                                                                    <input type="radio" id="rdo1" name="rdo1" checked>
+                                                                    <label for="rdo1" class="label"><em>이체일</em></label>
+                                                                </span>
+                                                                <span class="selection">
+                                                                    <input type="radio" id="rdo2" name="rdo1">
+                                                                    <label for="rdo2" class="label"><em>예금주</em></label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab_panel">
+                                                            <h3 class="hidden">이체일</h3>
+                                                            <div class="form_date_term">
+                                                                <div class="input date">
+                                                                    <input type="tel" title="시작일" maxlength="8" value ="2021.03.01"> <!-- 221014 타이틀 수정 -->
+                                                                    <button type="button" class="btn_cal" title="시작일 선택"></button>                    
+                                                                </div>
+                                                                <span class="space">~</span>
+                                                                <div class="input date">
+                                                                    <input type="tel" title="종료일" maxlength="8" value ="2021.03.31"> <!-- 221014 타이틀 수정 -->
+                                                                    <button type="button" class="btn_cal" title="종료일 선택"></button>                              
+                                                                </div>
+                                                            </div>  
+                                                        </div>
+                                                        <div class="tab_panel">
+                                                            <h3 class="hidden">예금주</h3>
+                                                            <div class="input gap_xs" role="button">
+                                                                <input type="text" placeholder="예금주 입력" title="예금주" >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn_cnt_wrap">
+                                                <span><button type="button" class="btn primary lg">조회</button></span>
+                                            </div>
+                                            <hr class="hr_divide full">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- //상세검색 -->
+                            </div>
+                            <div class="section inner">
+                                <ul class="acc_list favorite transfer">
+                                    <li>
+                                        <a href="#" class="acc_bank">
+                                            <span class="icon_bank_004 md"></span>
+                                            <span class="bk_user">
+                                                <strong class="user">김국민</strong> 
+                                                <em class="number date">2021.01.30</em>
+                                            </span>
+                                            <span class="bk_name">KB국민</span>
+                                            <span class="bk_num number">574498-90-009768</span>
+                                        </a>
+                                        <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="acc_bank">
+                                            <span class="icon_bank_050 md"></span>
+                                            <span class="bk_user">
+                                                <strong class="user">김국민</strong>
+                                                <em class="number date">2021.01.30</em>
+                                            </span>
+                                            <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                            <span class="bk_num number">574498-90-009768</strong>
+                                        </a>
+                                        <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="acc_bank">
+                                            <span class="icon_bank_050 md"></span>
+                                            <span class="bk_user">
+                                                <strong class="user">김국민</strong>
+                                                <em class="number date">2021.01.30</em>
+                                            </span>
+                                            <span class="bk_name">저축은행중앙회상회저축은행</span>
+                                            <span class="bk_num number">574498-90-009768</span>
+                                        </a>
+                                        <button type="button" class="btn_favorite toggle" aria-pressed="false"><span class="hidden">즐겨찾기</span></button>
+                                    </li>
+                                </ul>
+
+                                <!-- 등록계좌없음 -->
+                                <div class="result nodata sm gap_lg">
+                                    <p class="tit">등록된 자주쓰는계좌가 없습니다.<br>등록하시겠습니까?</p>
+                                    <div class="list_btm_wrap">
+                                        <button type="button" class="btn outline sm">자주쓰는 계좌 등록</button>
+                                    </div>
+                                </div>
+                                <!-- //등록계좌없음 -->
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab_panel" id="tabpanel4_2">
+                            <div class="section">
+                                <!-- 상세검색 -->
+                                <ul class="acc_group_wrap js_accordion">
+                                    <li>
+                                        <a href="#none" role="button" class="tit" aria-expanded="false">상세검색</a>
+                                        <div class="toggle_panel" role="region">
+                                            <div class="form_group">
+                                                <div class="form_tit fs15">조회조건</div>
+                                                <div class="form_row">
+                                                    <div class="tab_wrap box">
+                                                        <div class="tab_radio">
+                                                            <div class="rdoChk_box">
+                                                                <span class="selection">
+                                                                    <input type="radio" id="rdo1" name="rdo1" checked>
+                                                                    <label for="rdo1" class="label"><em>이체일</em></label>
+                                                                </span>
+                                                                <span class="selection">
+                                                                    <input type="radio" id="rdo2" name="rdo1">
+                                                                    <label for="rdo2" class="label"><em>예금주</em></label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab_panel">
+                                                            <h3 class="hidden">이체일</h3>
+                                                            <div class="form_date_term">
+                                                                <div class="input date">
+                                                                    <input type="tel" title="시작일" maxlength="8" value ="2021.03.01"> <!-- 221014 타이틀 수정 -->
+                                                                    <button type="button" class="btn_cal" title="시작일 선택"></button>                    
+                                                                </div>
+                                                                <span class="space">~</span>
+                                                                <div class="input date">
+                                                                    <input type="tel" title="종료일" maxlength="8" value ="2021.03.31"> <!-- 221014 타이틀 수정 -->
+                                                                    <button type="button" class="btn_cal" title="종료일 선택"></button>                              
+                                                                </div>
+                                                            </div>  
+                                                        </div>
+                                                        <div class="tab_panel">
+                                                            <h3 class="hidden">예금주</h3>
+                                                            <div class="input gap_xs" role="button">
+                                                                <input type="text" placeholder="예금주 입력" title="예금주" >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn_cnt_wrap">
+                                                <span><button type="button" class="btn primary lg">조회</button></span>
+                                            </div>
+                                            <hr class="hr_divide full">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- //상세검색 -->
+                            </div>
+                            <!-- 법인사업자 접속시 노출-->
+                            <div class="section inner">
+                                <p class="depth info gap_xs_2">내 계좌로는 계좌비밀번호, 보안매체, 추가인증 없이 이체할 수 있습니다.</p>
+                                <div class="form_group">
+                                    <div class="form_row">
+                                        <button type="button" class="select_btn active" title="본/지사 계정선택">MASTER</button>
+                                    </div>
+                                </div>
+                                <ul class="acc_list transfer my gap_md">
+                                    <li>
+                                        <a href="#none" class="acc_bank">
+                                            <span class="icon_bank_004 md"></span>
+                                            <span class="bk_user">KB국민ONE통장-보통예금</span>
+                                            <span class="bk_name">KB국민</span>
+                                            <span class="bk_num number">574498-90-009768</span>
+                                            <span class="bk_nick">계좌별명계좌별명계좌</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" class="acc_bank">
+                                            <span class="icon_bank_004 md"></span>
+                                            <span class="bk_user">KB국민ONE통장-보통예금</span>
+                                            <span class="bk_name">KB국민</span>
+                                            <span class="bk_num number">574498-90-009768</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- 내역없음 -->
+                                <div class="result nodata sm gap_lg">
+                                    <p class="tit">조회하신 내역이 없습니다.</p>
+                                </div>
+                                <!-- //내역없음 -->
+                            </div>
+                            <!-- //법인사업자 접속시 노출-->
+
+                            <!-- 개인사업자 접속시 노출 -->
+                            <div class="section inner">
+                                <!-- sub-tab -->
+                                <div class="tab_wrap box tab_list_sub gap_sm_3">
+                                    <div class="tab_list" role="tablist">
+                                        <button type="button" role="tab" aria-selected="true" aria-controls="subtabpanel2_1">국민은행</button>
+                                        <button type="button" role="tab" aria-selected="false" aria-controls="subtabpanel2_2">다른금융</button>
+                                    </div>
+        
+                                    <div class="tab_panel pdt_0" role="tabpanel" id="subtabpanel2_1">
+                                        <div class="section">
+                                            <h4 class="hidden">국민은행</h4>
+                                            <p class="depth info gap_xs_2">내 계좌로는 계좌비밀번호, 보안매체, 추가인증 없이 이체할 수 있습니다.</p>
+                                            <div class="form_group">
+                                                <div class="form_row">
+                                                    <button type="button" class="select_btn" title="본/지사 계정선택">LALABIZ</button>
+                                                </div>
+                                            </div>
+                                            <ul class="acc_list transfer my gap_md">
+                                                <li>
+                                                    <a href="#none" class="acc_bank">
+                                                        <span class="icon_bank_004 md"></span>
+                                                        <span class="bk_user">KB국민ONE통장-보통예금</span>
+                                                        <span class="bk_name">KB국민</span>
+                                                        <span class="bk_num number">574498-90-009768</span>
+                                                        <span class="bk_nick">계좌별명계좌별명계좌</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#none" class="acc_bank">
+                                                        <span class="icon_bank_004 md"></span>
+                                                        <span class="bk_user">KB국민ONE통장-보통예금</span>
+                                                        <span class="bk_name">KB국민</span>
+                                                        <span class="bk_num number">574498-90-009768</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                            <!-- 내역없음 -->
+                                            <div class="result nodata sm gap_lg">
+                                                <p class="tit">조회하신 내역이 없습니다.</p>
+                                            </div>
+                                            <!-- //내역없음 -->
+                                        </div>
+                                    </div>
+                                    <div class="tab_panel pdt_0" role="tabpanel" id="subtabpanel2_2">
+                                        <div class="section">
+                                            <h4 class="hidden">다른금융</h4>
+                                            <p class="depth info gap_xs_2">다른금융 계좌로는 보안매체, 추가인증 후 이체할 수 있습니다.</p>									
+                                            <ul class="acc_list transfer my gap_xs_2">									
+                                                <li>
+                                                    <a href="#none" class="acc_bank">
+                                                        <span class="icon_bank_011 md"></span>
+                                                        <span class="bk_user">저축예금</span>
+                                                        <span class="bk_name">농협</span>
+                                                        <span class="bk_num number">574498-90-009768</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#none" class="acc_bank">
+                                                        <span class="icon_bank_045 md"></span>
+                                                        <span class="bk_user">저축예금</span>
+                                                        <span class="bk_name">우리</span>
+                                                        <span class="bk_num number">574498-90-009768</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                            <!-- 내역없음 -->
+                                            <div class="result nodata sm gap_lg">
+                                                <p class="tit">조회하신 내역이 없습니다.</p>
+                                            </div>
+                                            <!-- //내역없음 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // sub-tab -->
+                            </div>
+                            <!-- //개인사업자 접속시 노출 -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+    <!-- //221007 추가 -->
+
+</div>
+<!-- //wrap -->
+</body>
+</html>

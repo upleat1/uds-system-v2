@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[계좌이체]지방세입납부예비거래</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/transfer.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content">
+            <h1 class="hidden">지방세입납부 예비거래</h1>
+            <h2 class="hidden">이체정보</h2>
+            <div class="head_data">
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">출금계좌</div>
+                        <div class="value"><span class="bank">KB국민</span><br><span class="number">400407-01-023569</span></div>
+                    </li>
+                    <li>
+                        <div class="key">요청건수(계좌상태)</div>
+                        <div class="value">1건(정상<strong class="number fc_posi">1</strong>건/오류<strong class="number fc_nega">0</strong>건)</div>
+                    </li>
+                    <li>
+                        <div class="key">총 이체금액</div>
+                        <div class="value"><strong class="number fc_posi">1,000,000</strong><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">총수수료</div>
+                        <div class="value"><strong class="number">0</strong><span class="num_unit">원</span></div>
+                    </li>
+                    <li>
+                        <div class="key">합계</div>
+                        <div class="value"><strong class="number fc_posi">800,000</strong><span class="num_unit">원</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section gap_md">
+                <p class="tip_info">결과가 ‘오류’인 경우 이체실행이 되지 않으며, ‘오류‘ 클릭 시, 상세 오류내역을 확인하실 수 있습니다.</p>
+                <div class="hgroup">
+                    <div>
+                        <h3 class="h3 gap_sm_3">홍길동</h3><!-- 220729 리웍 -->
+                    </div>
+                    <div>
+                        <span class="badge line_blue">정상</span>
+                    </div>
+                </div>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">납부기관</div>
+                        <div class="value">지방세입 (대전광역시)</div>
+                    </li>
+                    <li>
+                        <div class="key">납부계좌번호</div>
+                        <div class="value">3014011021102089092</div>
+                    </li>
+                    <li>
+                        <div class="key">징수과목<br>(납세의무자)</div>
+                        <div class="value">재산세(건축물)(테스트7*)</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>거래량이 많은 경우 이체완료시까지 일정 시간이 소요될 수 있습니다.</li>
+                        <li>출금계좌가 이체수수료 면제횟수가 있는 상품일 경우, 잔여 면제횟수 내에서 면제되며, 이체는 입력순서가 아닌 상대 금융기관과 접속 우선 순으로 처리됩니다.</li>
+                        <li>이체수수료 면제횟수가 있는 상품가입 고객인 경우, 면제가능횟수가 초과된 이체수수료는 상기 수수료표시와 관계없이 면제되지 않습니다.</li>	
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg" onclick="UICommon.Layer.alert('진행중인 이체를 정말 취소하시겠습니까?<br>입력하신 정보는 초기화됩니다.');">취소</button></span>  
+                    <span><button type="button" class="btn primary lg">확인</button></span>  
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function(){
+        
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

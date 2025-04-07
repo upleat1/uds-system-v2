@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[PIN(비밀번호)관리] PIN변경안내</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹관리" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+</div><!-- //wrap -->
+<div id="uiLayerAlert" class="popup modal alert ui_pop_alert" role="dialog" aria-hidden="false">
+    <div class="pop_scl_wrap">
+        <article class="pop_wrap">
+            <h1 class="hidden">[PIN(비밀번호)관리] PIN변경안내</h1>
+            <div class="pop_head">
+                <div>
+                    <div class="result s success">
+                        <p class="tit">PIN 번호 변경 안내</p>
+                        <p class="txt">PIN번호가  정상적으로 변경되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_body">
+                <div class="section">
+                    <div class="message">
+                        <div role="alert" aria-live="assertive">[확인] 모바일OTP 등록/관리  인덱스 페이지로 이동합니다.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div class="btn_area"><span><button type="button" id="uiLayerAlert0ActionBtn" class="btn primary lg">확인</button></span></div>
+            </div>
+        </article>
+    </div>
+</div>
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function () {
+        UICommon.Layer.open('#uiLayerAlert');
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

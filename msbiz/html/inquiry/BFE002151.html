@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>이체수수료 확인증</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content" data-ui="full_pop">
+        <h1 class="h1">이체수수료 확인증</h1><!-- 220729 class="h1" 변경 -->
+        <div class="section">
+            <!-- 220729 리웍 -->
+            <ul class="list_data">
+                <li>
+                    <div class="key">출금일자</div>
+                    <div class="value"><span class="number">2022.07.11 12:11:52</span></div>
+                </li>
+                <li>
+                    <div class="key">이체종류</div>
+                    <div class="value"><span class="number">10</span>건이하이체(즉시)</div>
+                </li>
+                <li>
+                    <div class="key">계좌번호</div>
+                    <div class="value"><span class="number">123456-78-901234</span></div>
+                </li>
+                <li>
+                    <div class="key">수수료</div>
+                    <div class="value">
+                        <span class="number fc_nega">1,000</span><span class="num_unit">원</span>(<span class="number">1</span>건)
+                    </div>
+                </li>
+            </ul>
+            <!-- //220729 리웍 -->
+            <div class="in_confirm_tr">
+                <ul class="depth bul">
+                    <li>위의 내용이 정상적으로 처리되었음을 확인합니다.</li>
+                    <li>이체확인증은 고객 편의를 위하여 제공되는 것으로 <strong>거래의 참고용으로만 사용될 수 있습니다.</strong></li>
+                    <li>본 확인증 내용을 임의로 위변조하여 행사할 경우 형법(제231조 및 234조)에 따라 처벌받을 수 있습니다.</li>
+                </ul>
+                <div class="acc_seal_trans"><span class="hidden">발행처 : 국민은행</span></div>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">공유</button></span>  
+                <span><button type="button" class="btn primary lg" onclick="UICommon.Layer.toast('이체수수료 확인증이 앨범에 저장되었습니다.')">저장</button></span>  
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[금융거래정보제공동의]업체 추가 정보 입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+
+        <div id="content">
+            <h1 class="h1">업체추가 정보입력</h1><!-- 220729 리웍: 위치이동 -->
+            <div class="section">
+                <div class="agree_wrap">
+                    <div class="agree_total">
+                        <span class="selection">
+                            <input type="checkbox" id="chkAll_1" name="chkAll_1" class="chk_all">
+                            <label for="chkAll_1" class="label" title="새 창 열림"><em>약관 전체동의</em></label><!-- 221028 접근성 대응: label에 title추가 -->
+                        </span>
+                        <button type="button" class="btn btn_link" title="약관 전체동의"><span class="hidden">바로가기</span></button>
+                    </div>
+                    <ul class="agree_list">
+                        <!-- 220729 리웍 -->
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chk1_1" name="chk1">
+                                <label for="chk1_1" class="label" title="새 창 열림"><em>[필수] [바로 ERP] 금융거래정보제공 [요청/동의]서</em></label><!-- 221028 접근성 대응: label에 title추가 -->
+                            </span>
+                            <button type="button" class="btn btn_link" title="[필수] [바로 ERP] 금융거래정보제공[요청/동의]서"><span class="hidden">바로가기</span></button>
+                        </li>
+                        <li>
+                            <span class="selection chk">
+                                <input type="checkbox" id="chk1_2" name="chk1">
+                                <label for="chk1_2" class="label" title="새 창 열림"><em>[필수] [바로 ERP] 금융거래정보제공 및 일괄 통보에 대한 동의</em></label><!-- 221028 접근성 대응: label에 title추가 -->
+                            </span>
+                            <button type="button" class="btn btn_link" title="[필수] [바로 ERP] 금융거래정보제공 및 일괄 통보에 대한 동의"><span class="hidden">바로가기</span></button>
+                        </li>
+                        <!--// 220729 리웍 -->
+                    </ul>                    
+                </div>
+            </div>
+
+            <div class="section">
+                <!-- 220729 리웍 -->
+                <div class="form_group">
+                    <div class="form_tit">서비스 제공자</div>
+                    <div class="form_row">
+                        <div class="select type_sch">
+                            <button type="button" class="select_btn" title="서비스제공자 선택">서비스 제공자 선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                        </div>
+                    </div>
+                </div>
+                <!--// 220729 리웍 -->
+
+                <!-- 이메일 공통 태그 노출 -->
+                <div class="form_group email">
+                    <div class="form_tit">이메일</div>
+                    <div class="form_row col">
+                        <div class="input">
+                            <input type="text" title="ID" placeholder="아이디" value="">
+                        </div>
+                        <span class="space">@</span>
+                        <div class="select">
+                            <button type="button" class="select_btn" title="도메인 선택">직접입력</button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input"><input type="text" placeholder="도메인주소" title="도메인 직접입력"></div>
+                    </div>
+                </div>
+                <!-- // 이메일 공통 태그 노출 -->
+            </div>
+
+            <div class="section">
+                <div class="agree_check">
+                    <span class="selection">
+                        <input type="checkbox" id="agree1" name="agree1">
+                        <label for="agree1" class="label"><em>상기 내용을 확인했으며, 업체추가를 신청합니다.</em></label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg">취소</button></span>  
+                    <span><button type="button" class="btn primary lg" disabled >확인</button></span>  
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

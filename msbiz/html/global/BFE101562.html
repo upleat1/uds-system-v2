@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>환율계산기</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <link rel="stylesheet" data-description="다국어" href="/msbiz/app/css/global.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    
+    <div id="content" data-ui="full_pop">
+		<h1 class="hidden">환율계산기</h1>
+		<div class="section">
+			<div class="form_group">
+				<div class="form_tit">환율종류 선택</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn active" title="환율종류 선택">송금보내실때</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+					</div>
+				</div>
+			</div>
+			<div class="fo_exchange_calc_box">
+				<div class="calc_wrap row row_up">
+					<div class="col col_l">
+						<div class="select currency_sel">
+							<button type="button" class="select_btn active" title="외화 선택"><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가, 선택전이면 클래스 "active" 삭제 : ex) class="select_btn active" -->
+								<span class="country_flag_im sm usd"></span><!-- 개발 : 국기 이미지는 통화로 클래스를 넣어주세요. ex)class="country_flag_im sm usd" -->
+								<span class="country_name">USD</span>
+							</button>
+						</div>
+						<p class="txt">미국</p>
+					</div>
+					<div class="col col_r">
+						<div class=""><!-- 221006 role 제거 -->
+							<input type="tel" value="1" title="외화 금액" placeholder="금액">
+						</div>
+						<p class="txt"><span class="number">1</span><span class="num_unit">달러</span></p>
+					</div>									
+				</div>
+				<div class="calc_sum_mark" role="img" aria-label="등호"><span class="hidden">등호</span></div>
+				<div class="calc_wrap row row_btm">
+					<div class="col col_l">
+						<div class="col_flag_wrap">
+							<span class="country_flag_im sm krw"></span><!-- 개발 : 국기 이미지는 통화로 클래스를 넣어주세요. ex)class="country_flag_im sm usd" -->
+							<span class="country_name">KRW</span>
+						</div>
+						<p class="txt">대한민국</p>
+					</div>
+					<div class="col col_r">
+						<div class=""><!-- 221006 role 제거 -->
+							<input type="tel" value="1,234,859.00" title="원화 금액">
+						</div>
+						<p class="txt"><span class="number">1,234,859</span><span class="num_unit">원</span></p>
+					</div>
+				</div>
+				<!-- <div class="calc_info">고시정보 : <span class="fc_posi">96회차 17:03:34 / 1,125.00</span></div> 220913 다국어 수정 개발값과 같게 통일 -->
+				<div class="calc_info">(<span class="fc_posi">YYYY.MM.DD HH:MM:SS 기준</span>)</div>
+			</div>
+			<!-- 220818 직접입력 추가 -->
+			<div class="form_group">
+				<div class="form_tit">
+					<label>환율우대율(%)</label>
+				</div>
+				<div class="form_row">
+					<div class="tab_wrap box">
+						<div class="tab_radio">
+							<div class="rdoChk_box">
+								<span class="selection">
+									<input type="radio" id="rdo1_1" name="rdo1"checked>
+									<label for="rdo1_1" class="label"><em>우대율 선택</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="rdo1_2" name="rdo1">
+									<label for="rdo1_2" class="label"><em>우대율 직접입력</em></label>
+								</span>
+							</div>
+						</div>
+
+						<div class="tab_panel">
+							<div class="form_group gap_xxs">
+								<div class="form_row">
+									<div class="select">
+										<button type="button" class="select_btn active" title="환율우대율(%) 선택">40</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+									</div>
+								</div>
+								<div class="form_row">
+									<div class="slider_select">
+										<div class="slider" data-min="0" data-max="100" data-step="10" data-value="1" data-drainage="5" aria-hidden="true"></div>
+										<div class="list" title="환율우대율(%)을 선택해주세요" data-unit="%"></div>
+										<input type="hidden" title="선택한 환율우대율">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab_panel">
+							<div class="form_group gap_xxs error"><!-- 개발 : error -->
+								<div class="form_row">
+									<div class="input" role="button" aria-label="{개발:입력값}, 환율우대율(%)" onclick=""><!-- 221006 aria-label명 변경 -->          
+										<input type="tel" id="id01" aria-hidden="true" title="환율우대율(%)" value="" class="bg_white" readonly>
+									</div>
+								</div>
+								<p class="tip_info">숫자만 입력</p><!-- 220914 다국어  placeholder="숫자만 입력"-->
+								<p class="tip" aria-labelledby="id01">환율우대율을 입력해 주세요.</p>
+								<p class="tip" aria-labelledby="id01">환율우대율을 0~100 이내로 입력해 주세요.</p>
+							</div>
+
+							<div class="btn_cnt_wrap">
+								<span><button type="button" class="btn primary lg">조회</button></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //220818 직접입력 추가 -->
+		</div>
+		<div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+					<li>환율계산기는 단순 참고용으로 위 계산결과는 환율변동 또는 우대율 적용에 따라 실제 거래 시 적용되는 환율과 다를 수 있습니다.</li>
+					<li>현재 고시된 환율은 미달러 기준 1만 달러 상당액 미만 시 적용되는 환율입니다.(단, USD, EUR, JPY, GBP, CAD, NZD, AUD, CNY, CHF, HKD, SGD, AED, THB를 제외한 기타 통화는 미달러 기준 5만 달러 상당액 미만)</li>
+				</ul>
+            </div>
+        </div>
+		
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">닫기</button></span>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

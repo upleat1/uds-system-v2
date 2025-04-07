@@ -1,0 +1,215 @@
+@charset "utf-8"; 
+
+
+/*** forex_n.css ***/
+/* 환율 리스트 */
+.fo_exchange_info .country_flag_im.sm {position:absolute; left:0; top:2.2rem; }
+
+.list.fo_exchange_info {border-top:1px solid var(--bdc_01, #ebeef0);}
+.list.fo_exchange_info > li {padding:0;}
+.list.fo_exchange_info > li:first-child {border-top-color:var(--fc_11, #fff);}
+.list.fo_exchange_info > li > .tit {display:block; position:relative; line-height: 1.4 !important; padding:2rem 0 2rem 4.3rem !important;}
+/* .list.fo_exchange_info > li > .tit .im {display:inline-block; position:absolute; left:.2rem; top:50%; z-index:1; width:4rem; height:4rem; margin-top:-2rem; border-radius: 10rem; background-image: url(/msbiz/app/img/common/country_flag.png); background-size: 25rem auto;} */ /* 220919 삭제 */
+.list.fo_exchange_info > li > .tit .name {font-size: 1.8rem; color:var(--fc_02, #26282c);}
+.list.fo_exchange_info > li > .tit .rate {margin-top:.8rem; color:var(--fc_03, #484b51);}
+.list.fo_exchange_info > li > .tit .rate .r_tit {margin-right:.5rem; font-size:1.6rem; color:var(--fc_04, #696e76);}
+.list.fo_exchange_info > li > .tit .rate .number {font-size:1.7rem; color:#287eff;}
+.list.fo_exchange_info > li > .tit .num {position:absolute; top:50%; margin-top:-1rem; right:2.1rem;}
+.list.fo_exchange_info > li > .tit::after  { display:inline-block; position: absolute; right:1rem; top:50%; content:''; width:0.9rem; height:0.9rem; margin-top:-.45rem; border:solid var(--fc_05, #8c949e); border-width: 0 1px 1px 0; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); }
+
+
+/* 바텀시트 환율 리스트 */
+.fo_ly_exchange_country_info {position: relative; width:100%; padding-left:4.3rem; margin-bottom:1.3rem;}
+.fo_ly_exchange_country_info .country_flag_im2 {position: absolute; left: 0; top: 50%; margin-top:-1.8rem;}
+.fo_ly_exchange_country_info .name {font-size: 1.7rem; color:var(--fc_02, #26282c);}
+.fo_ly_exchange_country_info .rate {font-size: 1.5rem; color:var(--fc_03, #484b51);}
+.fo_ly_exchange_country_info .rate .r_tit {margin-right: .5rem; color:var(--fc_04, #696e76);}
+.fo_ly_exchange_country_info .rate .number {font-size: 1.7rem; color: #287eff;}
+
+/* 환율계산기 */ /* 220823 common.css로 이동 */
+/* .fo_exchange_calc_box {margin:3.2rem 0;}
+.fo_exchange_calc_box .calc_wrap {border:1px solid var(--fc_09, #ebeef0); border-radius:.5rem; overflow:hidden; background:var(--fc_11, #fff);}
+.fo_exchange_calc_box .calc_wrap .txt {margin-top:.5rem; font-size:1.4rem; color:var(--fc_04, #696e76); line-height:1.1;}
+.fo_exchange_calc_box .calc_wrap .col {padding-top:2rem; padding-bottom:2rem; vertical-align: top;}
+.fo_exchange_calc_box .calc_wrap .col_l {padding-left:1.5rem; padding-right: 1.5rem;}
+.fo_exchange_calc_box .calc_wrap .col_r {padding-right:1.5rem;}
+.fo_exchange_calc_box .calc_wrap .col_r .txt {font-size:1.5rem;}
+.fo_exchange_calc_box .calc_wrap .select_btn {height:3rem; padding-left: 4.5rem; border:0; background:transparent; font-size: 1.9rem;}
+.fo_exchange_calc_box .calc_wrap.row_up .col_l {border-right:1px solid var(--fc_09, #ebeef0); background:var(--fc_10, #f7f7f8);}
+.fo_exchange_calc_box .calc_wrap.row_btm .col_l {width:34%;}
+.fo_exchange_calc_box .calc_wrap input {width:100%; height:3rem; font-size: 2rem; font-weight:700; text-align:right; background-color:transparent; color:var(--fc_02, #26282c);}
+.fo_exchange_calc_box .calc_wrap input::placeholder {text-align: right;}
+.fo_exchange_calc_box .calc_wrap .col_flag_wrap {position: relative; padding-left:4.5rem; line-height: 3rem;}
+.fo_exchange_calc_box .calc_wrap .col_flag_wrap .country_flag_im {position:absolute; left:0; top:50%; margin-top: -1rem;}
+.fo_exchange_calc_box .calc_wrap .col_flag_wrap .country_name {font-size: 1.9rem; font-weight: 700; color:var(--fc_02, #26282c);}
+
+.fo_exchange_calc_box .calc_sum_mark {margin:2rem 0;}
+.fo_exchange_calc_box .calc_sum_mark:before,
+.fo_exchange_calc_box .calc_sum_mark:after {display:block; content:''; width:2.4rem; height:.2rem; margin:0 auto; border-radius: 3px; background-color:var(--fc_05, #8c949e);}
+.fo_exchange_calc_box .calc_sum_mark:after {margin-top:.5rem;}
+
+.fo_exchange_calc_box .calc_info {margin-top:1.2rem; text-align:right; font-size:1.4rem; color:var(--fc_04, #696e76);} */
+
+
+/* 국가, 통화 선택 */
+/* .fo_select_country_list > li {padding:0; border-bottom: 1px solid var(--bdc_01, #ebeef0); line-height:3.2rem;}
+.fo_select_country_list li > a {display:block; position:relative; padding:2rem 0 2rem 4rem; min-height:7.2rem}
+.fo_select_country_list li > a.link {padding:2rem 3.5rem 2rem 4rem; }
+.fo_select_country_list li > a.link:after {display: block; position: absolute; right: .9rem; top: 50%; width: .9rem; height: .9rem; content: ''; margin-top:-.1rem; border: solid var(--fc_05, #8c949e); border-width: 0 1.5px 1.5px 0; transform: rotate(-45deg) translateY(-50%); -webkit-transform: rotate(-45deg) translateY(-50%);}
+.fo_select_country_list > li:first-child {padding:0; border-top:1px solid var(--bdc_01, #ebeef0);}
+.fo_select_country_list > li:first-child a.link {padding-top:2rem;}
+.fo_select_country_list > li:first-child .link:after {margin-top:-.1rem;}
+.fo_select_country_list .im {display:block; position: absolute; left:0; top:50%; width:3.2rem; height:3.2rem; margin-top:-1.7rem; border-radius: 10rem; background-color:var(--fc_09, #ebeef0);} */
+
+
+/* 환율 조회 리스트 */
+.fo_exchange_list {border-top:1px solid var(--fc_05, #8c949e); border-bottom:1px solid var(--bdc_01, #ebeef0);}
+.fo_exchange_list li {position:relative;}
+.fo_exchange_list li + li {border-top:1px solid var(--bdc_01, #ebeef0)}
+.fo_exchange_list li a {display:block; width:100%; padding:2rem 2rem 2rem 0}
+.fo_exchange_list li a .top {display:table; table-layout:fixed; padding-right:2rem; width:100%;}
+.fo_exchange_list li a .top .round {display:table-cell; vertical-align:text-top; width:13rem; color:var(--fc_04, #484b51); font-size:1.4rem; text-align:left; font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;}
+.fo_exchange_list li a .top .state {display:table-cell; vertical-align:text-top; font-size:1.5rem;}
+.fo_exchange_list li a .sum {display:block; font-size:1.7rem; font-weight:500; margin-top:0.5rem; color:var(--fc_02, #26282c); padding-right:2rem; font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;}
+.fo_exchange_list li::after {display:inline-block; position: absolute; right:1rem; top:50%; content:''; width:0.9rem; height:0.9rem; margin-top:-.45rem; border:solid var(--fc_05, #8c949e); border-width: 0 1px 1px 0; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); }
+
+
+/* 아코디언 안에 토글 */
+.list_acco.tree.fo_toggle > li > .toggle_panel {padding:2rem 0 !important;}
+.list_acco.fo_toggle > li > .toggle_panel .form_btm_full_wrap {margin-top:1.6rem;}
+.list_acco.fo_toggle > li .toggle_sm_wrap .toggle_panel {padding:0 0 .8rem; border-top:0;}
+.list_acco.fo_toggle > li .toggle_sm_wrap .toggle_panel .form_btm_wrap {margin-top:0;}
+.list_acco.fo_toggle > li .toggle_sm_wrap .toggle_panel .form_btm_wrap span {color:var(--fc_02, #26282c);}
+.list_acco.fo_toggle > li .toggle_sm_wrap > .tit, .list_acco.fo_toggle .tit.js_toggle {color:var(--fc_03, #484b51); font-weight:400;}
+.list_acco.fo_toggle > li .toggle_sm_wrap > .tit::before { content:''; position:absolute; top:0.8rem; width:9px; height:1.5px; background-color:var(--fc_05, #8c949e); transition:all 0.2s ease; -webkit-transition:all 0.2s ease; -moz-transition:all 0.2s ease; -ms-transition:all 0.2s ease; -o-transition:all 0.2s ease; } 
+.list_acco.fo_toggle > li .toggle_sm_wrap > .tit::after { content:''; position:absolute; top:0.8rem; width:9px; height:1.5px; background-color:var(--fc_05, #8c949e); transition:all 0.2s ease; -webkit-transition:all 0.2s ease; -moz-transition:all 0.2s ease; -ms-transition:all 0.2s ease; -o-transition:all 0.2s ease; }
+.list_acco.fo_toggle > li .toggle_sm_wrap > .tit::before {right:.4rem; transform:rotate(45deg)}
+.list_acco.fo_toggle > li .toggle_sm_wrap > .tit::after {right:.9rem; transform:rotate(-45deg)}
+.list_acco.fo_toggle > li .toggle_sm_wrap.on > .tit::before {right:.4rem; transform:rotate(-45deg)}
+.list_acco.fo_toggle > li .toggle_sm_wrap.on > .tit::after {right:1rem; top:1rem; transform:rotate(45deg)}
+
+
+/* 폼 타이틀 좌우 */
+.form_tit.fo_flex {display:table;}
+.fo_flex .col {display:table-cell;}
+.fo_flex .col + .col {text-align:right;}
+
+
+/* 매매 라디오 */
+.fo_trading .selection input[type=radio] + .label {text-align:left; padding:2rem;}
+.fo_trading .selection input[type=radio] + .label p {display:table-row; text-align:right; font-size:1.9rem; font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif; vertical-align: .02rem;}
+.fo_trading .selection input[type=radio] + .label p span {display:table-cell; padding-top:1rem;}
+.fo_trading .selection input[type=radio] + .label > em {display:table-row;}
+
+/* 라디오 추가정보 토글 */
+.fo_addinfo .rdoChk_group [class^=selection] {margin-bottom:2rem;}
+.fo_addinfo .toggle_sm_wrap {margin-top:1.6rem;}
+.fo_addinfo .toggle_sm_wrap .toggle_panel {padding:0 0 2rem 3.4rem; border-bottom:1px solid var(--bdc_01, #ebeef0);}
+
+
+/* 환전안내 */
+.fo_exchange_info_top .tit {font-size:2.4rem; color:#26282c; font-weight:700; padding:1.4rem 0 1.3rem;}
+.fo_exchange_info_top .img {text-align:center; margin-top:2rem;}
+.fo_exchange_info_top .txt {margin-top:1.2rem;}
+
+.fo_exchange_info .info_tit {margin-top:1.5rem; font-size:1.5rem; color:var(--fc_04, #696e76); font-weight:700;}
+.fo_exchange_info .info_tit:first-child {margin-top:0;}
+.fo_exchange_info .info_row {margin-top:0.6rem;}
+.fo_exchange_info .info_row .depth .cur {margin-top:0.6rem; padding-left:1.7rem;}
+.fo_exchange_info .info_row .depth:first-child {margin-top:0;}
+.fo_exchange_info .info_row .depth .depth.dash li {margin-top:0.5rem;}
+.fo_exchange_info .info_row .table div + div {margin-top:0.8rem;}
+.fo_exchange_info .info_row .table div p {font-size:1.3rem; color:var(--fc_04, #696e76); padding-left:2.7rem;}
+.fo_exchange_info .info_row .table .depth li {margin-top:0.5rem;}
+
+
+/* 차트영역 */
+.fo_chart {height:23rem;}
+
+/* 폼데이트 하나일경우 */
+.form_date {margin-top:.8rem;}
+
+/* 리스트 반복 하단 버튼 예외처리 */
+.list_data .btn_list_btm {margin-top:0; padding-top:2rem; border-top:1px solid #f0f3f4;}
+
+
+
+
+/*** forex_psj.css ***/
+.reltiv .btn_txt.ico_arr {position: relative; right:0; top:0; }
+.retish {position:relative; padding-left:25px;}
+.retish:before {position:absolute; left:0px; top:5%;content:''; display:inline-block; background-size:2rem 2rem;background-position:left top;background-image:url(/msbiz/app/img/event/pling.png); background-repeat: no-repeat; width:20px; height:20px;} 
+/* BFE019830 margin-top 간격 조정 필요 */
+.inform_top_wrap {margin:1.5rem 0 3.2rem; }
+/* == BFE019830 margin-top 간격 조정 필요 */
+.inform_top_wrap.stepwrap {margin:1.8rem -3.2rem; padding:1.8rem 3.5rem 1.6rem}
+.inform_btm_wrap .tit.js_toggle.none_icon {padding-left:0;}
+.inform_btm_wrap .tit.js_toggle.none_icon:before {background:none;}
+.toggle_banking {text-align:left;}
+.toggle_banking .tit.js_toggle {position:relative;padding-right:2.3rem;color:var(--fc_04, #696e76);font-size:1.4rem;display: block;line-height:2rem;width: 100%;text-align: left;font-weight: 600;font-size: 1.6rem;}
+.ele_ul_hor > div.usd_tit {padding:13px 0px 0px 0px; width:4rem;}
+.form_row.col.ele_ul_hor.currency_int .dot + .input.short.last {width:27%}
+.gap_pdb_2 {padding-bottom:2.4rem !important}
+.money_red {background-color:#ffeeee !important; width:100%; height:100%; display:flex; align-items:center; justify-content:flex-end; padding-right:8%; color:#f33f40; position:absolute; top:0px; left:0px;}
+.money_blue {background-color:#e9f2ff !important; width:100%; height:100%; display:flex; align-items:center; justify-content:flex-end; padding-right:8%; color:#297eff; position:absolute; top:0px; left:0px;}
+.forex_img1  {position:relative;}
+.forex_img1 img {display:block; margin:2rem auto 0;}
+span.depth.info:before {content:''; display:inline-block; position:absolute; top:-.2rem; left:0; width:2rem; height:2rem; background:url(/msbiz/app/img/common/spr_ico_20x.png) no-repeat -22rem -4rem; background-size: 25rem auto;}
+.tab_list .scroll_wrap.tabsit > span {position:relative; margin:0; padding:.8rem 0.2rem 1.2rem; overflow:visible; color:#8c949e; font-size:1.6rem; text-align:center; letter-spacing:-.05rem; font-weight:700;}
+.tab_wrap .tab_list .scroll_wrap.tabsit > span {display:block;position:relative;height:4rem; line-height:4rem; padding:0 .2rem; text-align:center;}
+.tab_wrap .tab_list .scroll_wrap.tabsit > span.active{border-radius:0; outline:0; color:#26282c; background-color:#fff;font-weight:700}
+.tab_wrap .tab_list .scroll_wrap.tabsit > span.active::after {left:0; width:100%; -webkit-transition:.2s; transition:.2s;}
+.tab_wrap .tab_list .scroll_wrap.tabsit > span::after {content:''; position:absolute; z-index:3; bottom:0; left:50%; width:0; height:0.4rem; background:#2d2f34; box-shadow:none;}
+.tab_wrap .tab_list .scroll_wrap.tabsit > span + span {margin-left:2.8rem;}
+.tab_list .scroll_wrap.tabsit > span {position:relative; margin:0; padding:.8rem 0.2rem 1.2rem; overflow:visible; color:#8c949e; font-size:1.6rem; text-align:center; letter-spacing:-.05rem; font-weight:700;}
+.rdoChk_box .selection input[type=radio] + .label.rfn_num > em {display:block; text-align:center;}
+.table table td {position:relative;}
+.fn16fw7 {font-weight:700; font-size:1.6rem; position: relative; padding-left:3rem; margin-bottom:1rem;}
+.fs3rem {font-size:3rem;}
+.mb1rem {margin-bottom:1rem;}
+.mb0rem {margin-bottom:0rem;}
+.dpbock {display:block; position:relative; padding-left:2rem;}
+.dpb {display:block;}
+ul.titgrays li strong {font-weight:400 !important; color:#696e76;}
+ul.titgrays li {margin-bottom:2.5rem;}
+.tfn320 {letter-spacing: -1px;}
+p.fn_black{color:var(--fc_02, #484b51); margin-top:1.2rem; font-size:1.4rem;}
+.pdd3rem {padding:3rem 0rem}
+.magaauto {margin:2.8rem 0 0 0}
+.list_data.fnclor23 > li {padding-top:0px; padding-bottom:0px;}
+.list_data.fnclor23 > li .key {color:#484b51; font-weight:normal !important; background:#f7f7f8;}
+.list_data.fnclor23 > li .value {color:#696e76; font-weight:normal !important;padding-top:12px; padding-bottom:12px;}
+.list_data.fnclor23 > li .value strong {font-weight:normal !important; }
+.agree_list_last {border-top:1px solid var(--fc_08, #dde1e4); padding-top:2.8rem; margin-top:2rem;}
+.chklist span {margin-top:.8rem;}
+.rdoChk_group.inline.sm_mb5 .selection {margin-bottom:1rem;}
+
+/* 팝업 */
+.tr_deposit.pop_section {padding:0 0 4.0rem}
+.tr_deposit.pop_section > .tab_wrap > .tab_list {padding-left:2.4rem}
+.tr_deposit.pop_section .tab_list .btn_area {position:absolute; right:2.5rem; top:-.3rem; width:5rem; background:var(--fc_11, #fff); z-index:30;}
+.tr_deposit.pop_section .btn_ico_search {display:block; position:relative; width:4rem; height:4rem;}
+.tr_deposit.pop_section .btn_ico_search:before{content:''; display:block; width:2rem; height:2rem; margin:0 auto; background-image:url(/msbiz/app/img/common/spr_ico_20x.png); background-size:25rem auto; background-position:-18rem 0;}
+.tr_deposit.pop_section > .tab_wrap .tab_panel {padding:0}
+.tr_deposit.pop_section .acc_group_wrap.js_accordion > li a:not(.btn_select) {    padding: 1.4rem 2.4rem 1.2rem;
+    background: var(--fc_09, #ebeef0);
+    color: var(--fc_04, #696e76);}
+.tr_deposit.pop_section .acc_group_wrap.js_accordion > li .toggle_panel {padding:2rem 2.4rem 0}
+.tr_deposit.pop_section > .tab_wrap .tab_panel .section.inner {margin-top:3.2rem; padding:0 2.4rem}
+
+/* 시장정보 iframe */
+.forex_news_iframe iframe{min-height:calc(100vh - 9.2rem);}
+
+/* 수출수수료 테이블 반복시 */
+.h3 .table.gap_xs_2{margin: 0;}
+
+/* table 클래스 추가 */
+.table.table_type2 table td:first-child{border-left: 1px solid var(--fc_09, #ebeef0);}
+
+/* BFE018670 상하 간격 폰트 굵기 조정 */
+.form_group.fr_txit .form_tit {font-weight:normal; line-height:3rem; margin-top:0px; margin-bottom:0px;}
+.form_group.fr_txit .form_row + .form_row {margin-top:0px;}
+.form_group.fr_txit .form_txt {font-weight:normal; margin-top:0px; margin-bottom:0px;}
+
+/* BFE019830 리스트 간격 조정 */
+.value dl.gap_sm:first-child{margin-top: 0 !important;}

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[외화예금신규]KB WISE 외화정기예금_정보입력</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+		<!-- 220902 : 상품명 + 정보입력 Step 표시 -->
+		<div class="step_wrap js_step">    
+			<div class="step" role="img" aria-label="총 4단계 중 현재 2단계">
+				<span class="current">2</span><span class="mark">/</span><span class="total">4</span>
+			</div>
+			<h1 class="h1">KB WISE 외화정기예금 정보입력</h1>
+		</div>
+        <!-- //220902 : 상품명 + 정보입력 Step 표시 -->
+        
+        <div class="section">
+			<div class="form_group">
+				<div class="form_tit">출금계좌선택</div>
+				<div class="form_row">        
+					<div class="tab_wrap box">
+						<div class="tab_radio">
+							<div class="rdoChk_box">
+								<span class="selection">
+									<input type="radio" id="rdo1_1" name="rdo1_1" checked>
+									<label for="rdo1_1" class="label"><em>원화출금계좌</em></label>
+								</span>
+								<span class="selection">
+									<input type="radio" id="rdo1_2" name="rdo1_1">
+									<label for="rdo1_2" class="label"><em>외화출금계좌</em></label>
+								</span>
+							</div>
+						</div>
+						<div class="tab_panel">
+							<h3 class="hidden">원화출금계좌</h3>
+							<div class="form_group gap_0">
+								<div class="form_group">
+									<div class="form_tit">원화출금계좌번호</div>
+									<div class="form_row">
+										<div class="select">
+											<!-- 221024 : class="active" 삭제 -->
+											<button type="button" class="select_btn" title="원화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+										</div>
+										<div class="form_btm_wrap right">
+											<p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,234,567,890,123,456</span><span class="num_unit">원</span></p>
+										</div>										
+									</div>
+								</div>
+								<div class="form_group error">
+									<div class="form_tit">원화출금계좌비밀번호</div>
+									<div class="form_row">        
+										<div class="input" role="button" aria-label="4자리 입력됨, 비밀번호 입력" onclick="">            
+											<input type="password" id="id02" maxlength="4" aria-hidden="true" placeholder="" title="비밀번호" value="" class="bg_white">
+										</div>
+									</div>  
+									<p class="tip" aria-labelledby="id02">원화출금계좌 비밀번호를 입력해 주세요.</p><!-- 개발전용 : validation 결과 메세지 --> 									
+								</div>
+							</div>
+						</div>
+						<div class="tab_panel">
+							<h3 class="hidden">외화출금계좌</h3>
+							<div class="form_group gap_0">
+								<div class="form_group">
+									<div class="form_tit">외화출금계좌번호</div>
+									<div class="form_row">
+										<div class="select">
+											<!-- 221024 : class="active" 삭제 -->
+											<button type="button" class="select_btn" title="외화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+										</div>
+										<div class="btn_wrap btm">
+											<a href="#none" class="btn_txt ico_arr" onclick="UICommon.Layer.open('#BFE010580_bottom')">외화잔액조회</a>
+										</div>										
+									</div>
+								</div>
+								<div class="form_group error">
+									<div class="form_tit">외화출금계좌비밀번호</div>
+									<div class="form_row">        
+										<div class="input" role="button" aria-label="4자리 입력됨, 비밀번호 입력" onclick="">            
+											<input type="password" id="id02" maxlength="4" aria-hidden="true" placeholder="" title="비밀번호" value="" class="bg_white">
+										</div>
+									</div>  
+									<p class="tip" aria-labelledby="id02">외화출금계좌 비밀번호를 입력해 주세요.</p><!-- 개발전용 : validation 결과 메세지 --> 									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>    
+			</div>        
+        </div>
+
+		<div class="section">
+			<h2 class="h2">신규통화종류</h2>
+			<!-- Default: USD(미국 달러) -->
+			<div class="form_group">
+				<div class="form_tit">통화</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn active" title="통화 선택" onclick="UICommon.Layer.open('#BFE010580_bottom2')">USD(미국 달러)</button>
+					</div>          
+				</div>
+			</div>
+			<div class="form_group error">
+				<div class="form_tit">신규금액
+					<div class="tooltip_limited">
+						<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+						<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+							<p class="tooltip_tit"></p>
+							<div class="tooltip_cont"> 
+								<ul class="bul">
+									<li>원화예금 출금시<br>
+										<div>
+											<ul>
+												<li>- USD통화 : 2백만달러 미만</li>
+												<li>- 그 외 통화 : USD 1백만달러 상당액 미만</li>
+											</ul>
+										</div>
+									</li>									
+								</ul>
+								<ul class="bul">
+									<li>외화예금 출금시 : 제한없음</li>
+								</ul>
+							</div>
+							<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="form_row col ele_ul_hor currency_int">
+					<!-- 221020 : input 접근성 수정 -->
+					<div class="input long" role="button" aria-label="신규금액 소수점 앞자리" onclick="">
+						<input type="tel" id="id02" placeholder="USD 1,000달러 상당액 이상" title="신규금액 소수점 앞자리" value="" aria-hidden="true">
+					</div>
+					<div class="dot"></div>
+					<div class="input short last" role="button" aria-label="신규금액 소수점 뒷자리" onclick="">
+						<input type="tel" class="right bg_white" placeholder="00" title="신규금액 소수점 뒷자리" value="" aria-hidden="true" readonly>                            
+					</div>
+					<!-- //221020 : input 접근성 수정 --> 
+				</div>
+				<p class="tip_info">소수점 이하 두자리까지</p>
+				<p class="tip" aria-labelledby="id02">신규금액을 입력해 주세요.</p><!-- 개발전용 : validation 결과 메세지 --> 									
+			</div>
+			<!-- //Default: USD(미국 달러) -->
+
+			<!-- 통화가 JPY,ITL,ESP,IDR,KRW 일때 - 소수점 뒷자리 비활성화 또는 미노출, 그외 통화일 때 노출 -->
+			<div class="form_group">
+				<div class="form_tit">통화</div>
+				<div class="form_row">
+					<div class="select">
+						<button type="button" class="select_btn active" title="통화 선택" onclick="UICommon.Layer.open('#BFE010580_bottom2')">JPY(일본 엔)</button>
+					</div>          
+				</div>
+			</div>
+			<div class="form_group error">
+				<div class="form_tit">신규금액
+					<div class="tooltip_limited">
+						<p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+						<div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+							<p class="tooltip_tit"></p>
+							<div class="tooltip_cont"> 
+								<ul class="bul">
+									<li>원화예금 출금시<br>
+										<div>
+											<ul>
+												<li>- USD통화 : 2백만달러 미만</li>
+												<li>- 그 외 통화 : USD 1백만달러 상당액 미만</li>
+											</ul>
+										</div>
+									</li>									
+								</ul>
+								<ul class="bul">
+									<li>외화예금 출금시 : 제한없음</li>
+								</ul>
+							</div>
+							<button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="form_row col ele_ul_hor currency_int">
+					<!-- 221020 : input 접근성 수정 -->
+					<div class="input long" role="button" aria-label="신규금액 소수점 앞자리" onclick="">
+						<input type="tel" id="id02" placeholder="USD 1,000달러 상당액 이상" title="신규금액 소수점 앞자리" value="" aria-hidden="true">
+					</div>
+					<div class="dot"></div>
+					<div class="input short last" role="button" aria-label="신규금액 소수점 뒷자리" onclick="">
+						<input type="tel" class="right bg_white" placeholder="00" title="신규금액 소수점 뒷자리" value="" aria-hidden="true" readonly>                            
+					</div>
+					<!-- //221020 : input 접근성 수정 --> 
+				</div>
+				<p class="tip_info">소수점 이하 두자리까지</p>
+				<p class="tip" aria-labelledby="id02">신규금액을 입력해 주세요.</p><!-- 개발전용 : validation 결과 메세지 --> 									
+			</div>
+			<!-- //통화가 JPY,ITL,ESP,IDR,KRW 일때 - 소수점 뒷자리 비활성화 또는 미노출, 그외 통화일 때 노출 -->
+		
+            <!-- 가입월수, 금리회전주기  -->
+			<div class="form_group">
+				<div class="form_tit">가입월수</div>
+				<div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="가입월수 선택">12</button>
+                    </div> 
+                    <p class="tip_info">12개월 이상 36개월 이내 월 단위로만 선택 가능합니다.</p>
+				</div>
+			</div>
+            <div class="form_group">
+				<div class="form_tit">금리회전주기</div>
+				<div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="금리회전주기 선택">1</button>
+                    </div> 
+                    <p class="tip_info">1개월, 3개월, 6개월중에서 선택 가능합니다.</p>
+				</div>
+			</div>	
+            <!-- //가입월수, 금리회전주기  -->		
+		
+			<!-- 220902 : 정기예금비밀번호 마크업 수정 -->
+			<h2 class="h2">정기예금비밀번호</h2>
+			<div class="tab_wrap box gap_sm">
+				<div class="tab_radio">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="rdo2_1" name="rdo_chk" checked>
+							<label for="rdo2_1" class="label"><em>출금계좌와<br>동일하게 설정</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="rdo2_2" name="rdo_chk">
+							<label for="rdo2_2" class="label"><em>신규 설정</em></label>
+						</span>
+					</div>
+				</div>
+				<div class="tab_panel">
+					<h3 class="hidden">출금계좌와<br>동일하게 설정</h3>
+				</div>
+				<div class="tab_panel">
+					<h3 class="hidden">신규 설정</h3>
+					<div class="form_group error">
+						<div class="form_row">        
+							<div class="input" role="button" aria-label="정기예금비밀번호" onclick="">            
+								<input type="password" id="id02"  maxlength="4" aria-hidden="true" placeholder="숫자 4자리" title="정기예금비밀번호 숫자 4자리 입력" value="" class="bg_white">
+							</div>
+							<p class="tip" aria-labelledby="id02">정기예금비밀번호 4자리 숫자를 입력해 주세요.</p><!-- 개발전용 : validation 결과 메세지 -->
+						</div>    
+					</div>
+					<div class="form_group error">
+						<div class="form_row">        
+							<div class="input" role="button" aria-label="정기예금비밀번호" onclick="">            
+								<input type="password" id="id02"  maxlength="4" aria-hidden="true" placeholder="정기예금비밀번호 확인, 숫자 4자리" title="정기예금비밀번호 확인, 숫자 4자리" value="" class="bg_white">
+							</div>
+							<p class="tip" aria-labelledby="id02">정기예금비밀번호와 동일하게 입력해 주세요.</p><!-- 개발전용 : validation 결과 메세지 -->
+						</div>    
+					</div>
+				</div>
+			</div>
+			<!-- //220902 : 정기예금비밀번호 마크업 수정 -->
+		</div>
+
+		<!-- 220902 : 문구 수정 -->
+		<div class="section">
+			<h2 class="h2">예금상품 계약서, 약관(특약), 상품설명서 제공</h2>
+			<p class="p">고객님이 희망하는 이메일주소 또는 문자메시지(LMS) 및 카카오톡 알림톡으로 예금상품 계약서류를 발송해드립니다.</p>
+
+			<div class="tab_wrap box gap_sm">
+				<div class="tab_radio">
+					<div class="rdoChk_box">
+						<span class="selection">
+							<input type="radio" id="rdo1_8" name="rdo" checked>
+							<label for="rdo1_8" class="label"><em>이메일주소로 받기</em></label>
+						</span>
+						<span class="selection">
+							<input type="radio" id="rdo1_9" name="rdo">
+							<label for="rdo1_9" class="label"><em>카카오톡으로 받기</em></label>
+						</span>
+					</div>
+				</div>
+				<div class="tab_panel">
+					<h3 class="hidden">이메일주소로 받기</h3>
+					<div class="form_group email error gap_sm">
+						<div class="form_tit">이메일주소</div>
+						<div class="form_row col">
+							<div class="input">
+								<input type="text" title="ID" placeholder="아이디" value="">
+							</div>
+							<span class="space">@</span>
+							<div class="select">
+								<button type="button" class="select_btn" title="도메인 선택">도메인</button>
+							</div>
+						</div>
+						<div class="form_row">
+							<div class="input"><input type="text" value="" title="도메인 직접입력"></div>
+						</div>
+						<p class="tip_info">수령하실 이메일 주소를 입력해 주세요.</p>
+						<p class="tip" aria-labelledby="emailUrl">이메일을 입력하세요.</p><!-- 개발전용 : validation 결과 메세지 -->
+						<p class="tip" aria-labelledby="emailUrl">이메일 주소가 올바르지 않습니다.</p><!-- 개발전용 : validation 결과 메세지 -->
+						<p class="depth info">『금융소비자보호법』에 따라 이메일, 문자메시지(LMS) 및 카카오톡 알림톡 수신 거절 여부와 관계없이 발송됩니다.</p>
+					</div>
+				</div>
+				<div class="tab_panel">
+					<h3 class="hidden">문자메시지(LMS)로 받기</h3>
+					<div class="form_group tel gap_sm">
+						<div class="form_tit">휴대폰</div>
+						<div class="form_row col">
+							<div class="select">
+								<button type="button" class="select_btn active" title="휴대폰번호 앞자리" disabled>010</button>
+							</div>
+							<div class="input">
+								<input type="tel" value="90326312" maxlength="8" title="휴대폰번호" disabled>
+							</div>
+						</div>
+						<p class="depth info">카카오톡 알림톡 발송은 가입시점의 고객정보에 등록된 휴대폰번호로 발송됩니다.</p>
+						<p class="depth info">『금융소비자보호법』에 따라 이메일 및 문자메시지(LMS) 수신 거절 여부와 관계없이 발송됩니다.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //220902 : 문구 수정 -->
+
+		<!-- 220902 : 권유직원 선택/관리희망직원 선택 공통 마크업 수정 -->
+		<div class="section">
+			<h3 class="h2">권유직원 선택</h3> <!-- 퍼블 : 타이틀은 단위설계서에 정의된 대로 작성 -->
+			<!-- 공통태그(공통영역) -->
+			<div class="staff_hope">
+				<!-- [개발] 방문이력이 있는 경우 노출 -->
+				<ul class="list_comp check">
+					<li> 
+						<span class="selection"> 
+							<input type="radio" id="rad_staff1" name="rad_staff"> 
+							<label for="rad_staff1" class="label"> 
+								<em> 
+									<span class="staff">김국민</span> 
+									<span class="hope_date number">2021.05.23</span> 
+									<span class="office">역삼동 영업점 내점 상담</span> 
+								</em> 
+							</label> 
+						</span> 
+					</li>
+					<li> 
+						<span class="selection"> 
+							<input type="radio" id="rad_staff2" name="rad_staff"> 
+							<label for="rad_staff2" class="label"> 
+								<em> 
+									<span class="staff">이국민</span> 
+									<span class="hope_date number">2021.05.23</span> 
+									<span class="office">역삼동 영업점 내점 상담</span> 
+								</em> 
+							</label> 
+						</span> 
+					</li>
+				</ul><!-- //[개발] 방문이력이 있는 경우 노출 -->
+				<div class="staff_hope_sel">
+					<div class="rdoChk_box"> 
+						<span class="selection"> 
+							<input type="radio" id="staff_hope_1" name="staff_hope"> 
+							<label for="staff_hope_1" class="label"><em>지점명</em></label>
+						</span> 
+						<span class="selection"> 
+							<input type="radio" id="staff_hope_2" name="staff_hope">
+							<label for="staff_hope_2" class="label"><em>직원이름</em></label> 
+						</span> 
+						<span class="selection"> 
+							<input type="radio" id="staff_hope_3" name="staff_hope"> 
+							<label for="staff_hope_3" class="label"><em>직원번호</em></label> 
+						</span> 
+						<span class="selection"> 
+							<input type="radio" id="staff_hope_4" name="staff_hope">
+							<label for="staff_hope_4" class="label"><em>없음</em></label> 
+						</span> 
+				</div>
+				</div><!-- 지점명 -->
+				<div class="staff_hope_cts" aria-hidden="true">
+					<div class="form_group">
+						<div class="form_tit hidden">지점명</div>
+						<div class="form_row">
+							<div class="select outline lg"> 
+								<button type="button" class="select_btn active" title="지점명 선택">지점명</button> <!-- [개발] 버튼에 값이 들어갈 경우 클래스 "active" 추가 -->
+							</div>
+						</div>
+						<div class="form_row"> 
+							<span class="input int_btn"> 
+								<input type="text" title="지점명 직접입력" placeholder="지점명" value="동여의도(김국민)" disabled=""> 
+								<button type="button" class="btn point sm round">검색</button> 
+							</span> 
+						</div>
+						<div class="form_btm_full_wrap"> 
+							<span>
+								<button type="button" class="btn outline md">검색초기화</button>
+							</span> 
+						</div>
+					</div>
+				</div><!-- //지점명 -->
+				<!-- 직원이름 -->
+				<div class="staff_hope_cts" aria-hidden="true">
+					<div class="form_group">
+						<div class="form_tit hidden">직원이름</div>
+						<div class="form_row"> 
+							<span class="input int_btn"> 
+								<input type="text" title="직원이름 직접입력" placeholder="직원이름"> 
+								<button type="button" class="btn point sm round">검색</button>
+							</span> 
+						</div>
+					</div>
+				</div><!-- //지점명 -->
+				<!-- 직원번호 -->
+				<div class="staff_hope_cts" aria-hidden="true">
+					<div class="form_group">
+						<div class="form_tit hidden">직원번호</div>
+						<div class="form_row"> 
+							<span class="input int_btn"> 
+								<input type="text" title="직원번호 직접입력" placeholder="직원번호"> 
+								<button type="button" class="btn point sm round">검색</button>
+							</span> 
+						</div>
+					</div>
+				</div><!-- //직원번호 -->
+			</div>
+			<p class="depth info">고객님의 상품 가입에 가장 도움이 된 상담직원 또는 전담직원을 선택해 주시기 바랍니다.</p>
+			<!-- //공통태그(공통영역) -->
+		</div>
+		<!-- //220902 : 권유직원 선택/관리희망직원 선택 공통 마크업 수정 -->
+
+		<!-- 안내사항 -->
+		<div class="inform_btm_wrap">
+			<button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+			<div class="toggle_panel" role="region" id="notice_1_1">
+				<ul class="depth bul">
+					<li>신규가입가능 시간 : 은행영업일 09:00 ~ 23:00</li>
+					<li>외화출금계좌가 대외계정인 경우, 외화정기예금 신규는 불가합니다.</li>
+					<li>원화로 입금한 외화예금을 영업점에서 외화현금으로 인출하고자 할 때에는 별도의 수수료가 발생합니다. (USD,JPY,EUR : 매매기준율의 1.5%,기타통화 : 매매기준율의 3%)</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //안내사항 -->
+
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">다음</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+		<!-- [필수] 값이 모두 유효하지 않을 때 Alert 노출 -->
+		<div class="btn_cnt_wrap">
+            <span><button type="button" class="btn secondary lg" onclick="UICommon.Layer.alert('원화출금계좌번호를 선택해 주세요.','알림');">출금계좌선택이 원화출금계좌이고, 원화출금계좌 선택값이 없을 때</button></span>
+        </div>
+
+		<div class="btn_cnt_wrap">
+            <span><button type="button" class="btn secondary lg" onclick="UICommon.Layer.alert('외화출금계좌번호를 선택해 주세요.','알림');">출금계좌선택이 외화출금계좌이고, 외화출금계좌 선택값이 없을 때</button></span>
+        </div>
+
+		<div class="btn_cnt_wrap">
+            <span><button type="button" class="btn secondary lg" onclick="UICommon.Layer.alert('이메일주소를 정확히 입력해 주세요. 또는 [공통태그]이메일주소 내 error 처리에 대한 alert 내용을 노출','알림');">예금상품 계약서, 약관(특약), 상품설명서 제공 이메일주소로 받기이고, 값이 없거나 유효하지 않을때</button></span>
+        </div>
+		<!-- //[필수] 값이 모두 유효하지 않을 때 Alert 노출 -->
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<!-- layer html : 외화잔액조회 -->
+<div id="BFE010580_bottom" class="popup bottom" role="dialog" aria-hidden="true">
+	<article class="pop_wrap">
+		<div class="pop_head">
+			<div>
+				<h1>외화잔액조회</h1>
+			</div>
+		</div>
+		<div class="pop_body">
+			<div class="pop_section">
+				<p class="tip_info star">아래의 금액은 실제계좌잔액이 아닌 출금가능잔액입니다.</p>
+				<ul class="list_data gap_xs">
+					<li>
+						<div class="key">USD</div>
+						<div class="value">13,026.00</div>
+					</li>
+					<li>
+						<div class="key">JPY</div>
+						<div class="value">1,624.00</div>
+					</li>
+					<li>
+						<div class="key">AUD</div>
+						<div class="value">1,575.94</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="pop_foot">
+			<div>
+				<div class="btn_area">
+					<span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+	</article>
+</div>
+<!-- //layer html : 외화잔액조회 -->
+
+<!-- layer html : 통화 선택 10개(노출되는 통화종류가 다름) -->
+<div id="BFE010580_bottom2" class="popup bottom" role="dialog" aria-hidden="true">
+	<article class="pop_wrap">
+		<div class="pop_head">
+			<div>
+				<h1>통화 선택</h1>
+			</div>
+		</div>
+		<div class="pop_body">
+			<div class="pop_section">
+				<ul class="fo_select_country_list">
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm usd" role="img"></span><!-- 개발 : 국기 이미지는 통화로 클래스를 넣어주세요. ex)class="country_flag_im2 sm usd" -->
+							USD(미국 달러) 
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm jpy" role="img"></span>
+							JPY(일본 엔) 
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm eur" role="img"></span>
+							EUR(유럽연합 유로)
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm gbp" role="img"></span>
+							GBP(영국 파운드)
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm cad" role="img"></span>
+							CAD(캐나다 달러) 
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm chf" role="img"></span>
+							CHF (스위스 프랑)
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm hkd" role="img"></span>
+							HKD(홍콩 달러) 
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm aud" role="img"></span>
+							AUD(호주 달러)
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm nzd" role="img"></span>
+							NZD(뉴질랜드 달러)
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<span class="im country_flag_im2 sm sgd" role="img"></span>
+							SGD(싱가포르 달러)
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+	</article>
+</div>
+<!-- //layer html : 통화 선택 10개(노출되는 통화종류가 다름) -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

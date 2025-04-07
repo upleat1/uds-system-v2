@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>계좌별명</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content" class="acc_nick">
+            <h1 class="hidden">계좌별명</h1>
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <li>계좌별로 계좌별명을 등록/변경/삭제하실 수 있습니다.</li>
+                    <li>등록을 원하시면, 등록할 계좌별명을 입력 후 [등록]버튼을 선택하여 주시고, 변경을 원하실 경우 변경할 계좌의 계좌별명 수정 후 [변경]버튼을 선택하시기 바랍니다.</li>
+                    <li>[삭제]버튼을 선택하시면, 등록된 계좌별명이 삭제됩니다.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">계좌 선택</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="계좌 선택">입출금이 자유로운 계좌</button><!-- 220729 class="active" 추가 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 220729 리웍 -->
+            <!-- 계좌별명 없을 경우 -->
+            <div class="section"> 
+                <div class="tit_acc_data">
+                    <span class="icon_bank_004 md"></span>
+                    <span class="bk_name">KB국민</span>
+                    <span class="bk_num">362-3700-0222</span>
+                </div>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">계좌명</div>
+                        <div class="value">일반보통예금</div>
+                    </li>
+                </ul>
+                <div class="form_group">
+                    <div class="form_tit">계좌별명</div>
+                    <div class="form_row"> 
+                        <div class="input">
+                            <input type="text" placeholder="한글 15자, 영문/숫자 30자 이내" title="계좌별명 입력" value="" readonly class="bg_white">
+                        </div>
+                    </div>
+                    <div class="form_btm_full_wrap gap_sm">
+                        <span><button type="button" class="btn outline sm">등록</button></span>
+                    </div>
+                </div>
+            </div>
+            <!-- //계좌별명 없을 경우 -->
+
+            <!-- 계좌별명 있을 경우 -->
+            <div class="section">
+                <div class="tit_acc_data">
+                    <span class="icon_bank_004 md"></span>
+                    <span class="bk_name">KB국민</span>
+                    <span class="bk_num">362-3700-0222</span>
+                </div>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">계좌별명</div>
+                        <div class="value">급여이체전용계좌</div>
+                    </li>
+                    <li>
+                        <div class="key">계좌명</div>
+                        <div class="value">일반보통예금</div>
+                    </li>
+                </ul>
+                <div class="form_group">
+                    <div class="form_tit">계좌별명</div>
+                    <div class="form_row"> 
+                        <div class="input">
+                            <input type="text" placeholder="한글 15자, 영문/숫자 30자 이내" value="" title="계좌별명 입력" readonly class="bg_white">
+                        </div>
+                    </div>
+                    <div class="form_btm_full_wrap gap_sm">
+                        <span><button type="button" class="btn outline sm">수정</button></span>
+                        <span><button type="button" class="btn outline sm">별명 삭제</button></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="tit_acc_data">
+                    <span class="icon_bank_004 md"></span>
+                    <span class="bk_name">KB국민</span>
+                    <span class="bk_num">362-3700-0222</span>
+                </div>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">계좌별명</div>
+                        <div class="value">급여이체전용계좌</div>
+                    </li>
+                    <li>
+                        <div class="key">계좌명</div>
+                        <div class="value">일반보통예금</div>
+                    </li>
+                </ul>
+                <div class="form_group">
+                    <div class="form_tit">계좌별명</div>
+                    <div class="form_row"> 
+                        <div class="input">
+                            <input type="text" placeholder="한글 15자, 영문/숫자 30자 이내" value="" title="계좌별명 입력" readonly class="bg_white">
+                        </div>
+                    </div>
+                    <div class="form_btm_full_wrap gap_sm">
+                        <span><button type="button" class="btn outline sm">수정</button></span>
+                        <span><button type="button" class="btn outline sm">별명 삭제</button></span>
+                    </div>   
+                </div>
+            </div>
+            <!-- //계좌별명 있을 경우 -->
+
+            <div class="result nodata sm">
+                <p class="tit">조회하신 내역이 없습니다.</p>
+            </div>
+            <!-- //220729 리웍 -->
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

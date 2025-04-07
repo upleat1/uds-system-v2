@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>이용안내 - 오픈뱅킹 계좌등록</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <h1 class="hidden">오픈뱅킹 계좌등록</h1>
+        <div class="section">
+            <div class="in_openbank_banner">
+                <div class="in_banner">
+                    <div class="banner_img"></div>
+                    <h2 class="h2 tit">내 계좌 한번에 불러오기<span class="tit_sub">(어카운트인포)</span></h2>
+                    <p class="txt">휴대폰 본인인증 한번으로<br>내 계좌 한번에 조회하여 등록하세요!</p>
+                </div>
+                <div class="btn_cnt_wrap">
+                    <span><button type="button" class="btn primary lg">한번에 불러오기</button></span>
+                </div>
+            </div>
+            <!-- 입출금 계좌가 없는 경우 -->
+            <div class="in_openbank_banner none"><!-- 220916 수정 : class 'none' 추가 -->
+                <div class="in_banner">
+                    <div class="banner_img"></div>
+                    <p class="txt">KB국민은행 입출금계좌를<br>보유하지 않은 고객님은<br>오픈뱅킹 계좌를 등록할 수 없습니다.</p>
+                </div>
+                <div class="btn_cnt_wrap">
+                    <span><button type="button" class="btn primary lg">입출금계좌 개설하러가기</button></span>
+                </div>
+            </div>
+            <!-- //입출금 계좌가 없는 경우 -->
+            <hr class="hr_divide full"></hr><!-- 220916 수정 : class 'full' 추가 -->
+            <p class="depth info">
+                휴대폰 인증이 불가능하거나 본인명의가 아닌 경우
+                <span class="btn_wrap sign_links"><a href="#none" class="btn_txt link sm">계좌 직접 입력하기</a></span>
+            </p>
+            <div class="btn_cnt_wrap in_openbank">
+                <span><button type="button" class="btn outline md">오픈뱅킹 계좌등록안내</button></span>
+                <span><button type="button" class="btn outline md">오픈뱅킹 안내영상 보기</button></span>
+            </div>
+            <div class="in_other_acc">
+                <!-- 220921 수정 : 배너 수정 -->
+                <div class="banner_type in01">
+                    <div class="banner_txt">
+                        <strong class="tit">국민은행 다른 앱에 등록된<br> 계좌가 있습니다.</strong>
+                        <p class="txt">기업뱅킹에 등록해서 사용하세요.</p>
+                    </div>
+                </div>
+                <!-- //220921 수정 : 배너 수정 -->
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

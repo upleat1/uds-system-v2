@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[장바구니]펀드</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="이체" href="/msbiz/app/css/my.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <!-- 221013 class="basket_wrap" 추가 -->
+        <div id="content" class="basket_wrap">
+            <h1 class="hidden">장바구니</h1>
+            <div class="tab_wrap">
+                <div class="tab_list">
+                    <div class="scroll_wrap">
+                        <a href="#">예금</a>
+                        <a href="#">외화예금</a>
+                        <a href="#">대출</a>
+                        <a href="#" class="active">펀드<span>(2)</span></a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <div class="section">
+
+                        <!-- 221013 마크업 삭제 및 추가 -->
+                        <!-- <ul class="list_comp noline check t2 has_tit">
+                            <li>
+                                <span class="selection">
+                                    <input type="checkbox" id="myFundChk1" name="myFundChk">
+                                    <label for="myFundChk1" class="label" aria-hidden="true">
+                                        <div class="acc_wrap">
+                                            <div class="acc_name bold">NH-Amundi USD 초단기채권 증권자투자신착(UH)[채권] C-P1e</div>
+                                            220929 gap_xs 추가
+                                            <div class="sub_info remark_wrap gap_xs">
+                                                <span class="remark risk4">다소높은위험</span><span class="remark">적립식</span><span class="remark risk4">적극투자형 이상 가입</span>
+                                            </div>
+                                            <div class="acc_sum_wrap gap_md">
+                                                <em>
+                                                    <span class="unit">3개월</span><span class="state_arr lg up" role="text"><em class="hidden">상승</em>7.23</span><strong class="num_unit">%</strong>
+                                                </em>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </span>
+                                <div class="btn_list_btm">
+                                    <span><button type="button" class="btn outline sm">상세보기</button></span>
+                                    <span><button type="button" class="btn outline sm">가입하기</button></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="selection">
+                                    <input type="checkbox" id="myFundChk2" name="myFundChk">
+                                    <label for="myFundChk2" class="label" aria-hidden="true">
+                                        <div class="acc_wrap">
+                                            <div class="acc_name bold">NH-Amundi USD 초단기채권 증권자투자신착(UH)[채권] C-P1e</div>
+                                            220929 gap_xs 추가
+                                            <div class="sub_info remark_wrap gap_xs">
+                                                <span class="remark risk1">매우낮은위험</span><span class="remark">임의식</span><span class="remark risk1">안정형 이상 가입</span>
+                                            </div>
+                                            <div class="acc_sum_wrap gap_md">
+                                                <span class="unit">3개월</span><span class="state_arr lg down" role="text"><em class="hidden">하락</em>7.23</span><strong class="num_unit">%</strong>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </span>
+                                <div class="btn_list_btm">
+                                    <span><button type="button" class="btn outline sm">상세보기</button></span>
+                                    <span><button type="button" class="btn outline sm">가입하기</button></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="selection">
+                                    <input type="checkbox" id="myFundChk2" name="myFundChk">
+                                    <label for="myFundChk2" class="label" aria-hidden="true">
+                                        <div class="acc_wrap">
+                                            <div class="acc_name bold">NH-Amundi USD 초단기채권 증권자투자신착(UH)[채권] C-P1e</div>
+                                            220929 gap_xs 추가
+                                            <div class="sub_info remark_wrap gap_xs">
+                                                <span class="remark risk4">다소높은위험</span><span class="remark">적립식</span><span class="remark risk4">적극투자형 이상 가입</span>
+                                            </div>
+                                            <div class="acc_sum_wrap gap_md">
+                                                220929 fs15 추가
+                                                <span class="unit fc_gray fs15">가입기간</span>
+                                                220929 fs16 추가
+                                                <span class="number fc_gray fs16">2022.09.01~2025.08.31</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </span>
+                                <div class="btn_list_btm">
+                                    <span><button type="button" class="btn outline sm">상세보기</button></span>
+                                </div>
+                            </li>
+                        </ul> -->
+
+                        <div class="acc_list_wrap">
+                            <div class="acc_pannel">
+                                <div class="selection">
+                                    <input type="checkbox" id="myFundChk1" name="myFundChk">
+                                    <label for="myFundChk1" class="label" aria-hidden="true">
+                                        <div class="acc_wrap">
+                                            <div class="acc_name bold">NH-Amundi USD 초단기채권 증권자투자신착(UH)[채권] C-P1e</div>
+                                            <div class="sub_info remark_wrap">
+                                                <span class="remark risk4">다소높은위험</span><span class="remark">적립식</span><span class="remark risk4">적극투자형 이상 가입</span>
+                                            </div>
+                                            <div class="acc_sum_wrap gap_md">
+                                                <em>
+                                                    <span class="unit">3개월</span><span class="state_arr lg up" role="text"><em class="hidden">상승</em>7.23</span><strong class="num_unit">%</strong>
+                                                </em>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="btn_area">
+                                    <span><a href="#none" role="button">상세보기</a></span>
+                                    <span><a href="#none" role="button">가입하기</a></span>
+                                </div>
+                                <button class="btn_ico_34"><i class="ico_20_x"></i></button>
+                            </div>
+                            <div class="acc_pannel">
+                                <div class="selection">
+                                    <input type="checkbox" id="myFundChk1" name="myFundChk">
+                                    <label for="myFundChk1" class="label" aria-hidden="true">
+                                        <div class="acc_wrap">
+                                            <div class="acc_name bold">NH-Amundi USD 초단기채권 증권자투자신착(UH)[채권] C-P1e</div>
+                                            <div class="sub_info remark_wrap gap_xs">
+                                                <span class="remark risk1">매우낮은위험</span><span class="remark">임의식</span><span class="remark risk1">안정형 이상 가입</span>
+                                            </div>
+                                            <div class="acc_sum_wrap gap_md">
+                                                <span class="unit">3개월</span><span class="state_arr lg down" role="text"><em class="hidden">하락</em>7.23</span><strong class="num_unit">%</strong>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="btn_area">
+                                    <span><a href="#none" role="button">상세보기</a></span>
+                                    <span><a href="#none" role="button">가입하기</a></span>
+                                </div>
+                                <button class="btn_ico_34"><i class="ico_20_x"></i></button>
+                            </div>
+                            <div class="acc_pannel">
+                                <div class="selection">
+                                    <input type="checkbox" id="myFundChk1" name="myFundChk">
+                                    <label for="myFundChk1" class="label" aria-hidden="true">
+                                        <div class="acc_wrap">
+                                            <div class="acc_name bold">NH-Amundi USD 초단기채권 증권자투자신착(UH)[채권] C-P1e</div>
+                                            <div class="sub_info remark_wrap gap_xs">
+                                                <span class="remark risk4">다소높은위험</span><span class="remark">적립식</span><span class="remark risk4">적극투자형 이상 가입</span>
+                                            </div>
+                                            <div class="acc_sum_wrap gap_md">
+                                                <span class="unit fc_gray fs15">가입기간</span>
+                                                <span class="number fc_gray fs16">2022.09.01~2025.08.31</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="btn_area">
+                                    <span><a href="#none" role="button">상세보기</a></span>
+                                </div>
+                                <button class="btn_ico_34"><i class="ico_20_x"></i></button>
+                            </div>
+                        </div>
+                        <!-- //221013 마크업 삭제 및 추가 -->
+
+                        <div class="result nodata">
+                            <p class="tit">장바구니에 담긴 내역이 없습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <!-- 221013 button 내용수정 -->
+                    <span><button type="button" class="btn secondary lg">금융상품 메인</button></span>
+                    <span><button type="button" class="btn primary lg" disabled>상품 비교하기</button></span>
+                    <!-- //221013 button 내용수정 -->
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <!--// 업무 HTML 선언 END -->
+
+    <!-- 업무 SCRIPT START -->
+    <script>
+    </script>
+    <!--// 업무 SCRIPT END -->
+</body>
+
+</html>

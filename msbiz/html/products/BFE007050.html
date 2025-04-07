@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[펀드]펀드상세</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">펀드 상세 정보</h1>
+
+        <!-- 상품 기본정보 -->
+		<div class="acc_wrap">
+			<div class="pro_info">
+				<div class="row">
+					<div class="col_r">
+						<button type="button"><i class="ico_35_share_gray"></i><span class="hidden">대체텍스트</span></button>
+						<button type="button"><i class="ico_35_cart_gray"></i><span class="hidden">대체텍스트</span></button>
+					</div>
+				</div>
+				<div class="tit">KB 유로인덱스 40 증권투자신탁 채권혼합-파생형) AE</div>
+				<div class="pro_smain_fund">
+					<span class="unit">수익률(3개월누적)</span> 
+					<!-- 220905 : 증감표기 추가 + 컬러 변경 -->
+					<span class="state_arr up" role="text"><em class="hidden">상승</em>1.25</span><span class="num_unit">%</span><span class="pro_unit">(상위 16%)</span>
+				</div>            
+				
+				<!-- list data -->
+				<ul class="list_data noline">
+					<li>
+						<div class="key_fund">펀드유형</div>
+						<div class="value_fund">채권혼합형<span class="value_stxt">(임의식)</span></div>
+					</li>
+					<li>
+						<div class="key_fund">위험등급</div>
+						<div class="value_fund">높은위험</div>
+					</li>
+				</ul>
+				<!-- list data -->
+			</div>
+			<!-- 추가정보 -->
+			<div class="pro_add acc_pannel acc_all">
+				<div class="acc_acco_list">
+					<div class="acc_list_wrap type_list">
+						<div class="acc_pannel">
+							<div class="acc_wrap inc_btn">
+								<div class="toggle_sm_wrap exchange"> <!-- 펀드 : exchange -->
+									<div class="toggle_panel" role="region">
+										<div class="acc_sum_wrap exchange">
+											<!-- 221020 : ELS펀드 케이스 경우 [선취수수료, 총보수, 운용사]항목만 노출 -->
+											<ul class="list_data">
+												<li>
+													<div class="key">선취수수료</div>
+													<div class="value">없음</div>
+												</li>
+												<li>
+													<div class="key">운용규모</div>
+													<div class="value">
+														<span class="number">18</span><span class="num_unit">억원</span>
+													</div>
+												</li>
+												<li>
+													<div class="key">총보수</div>
+													<div class="value">
+														연 <span class="number">0.662</span><span class="num_unit">%</span>
+													</div>
+												</li>
+												<li>
+													<div class="key">유입액(1개월)</div>
+													<div class="value">
+														<span class="number">-3</span><span class="num_unit">억원</span>
+													</div>
+												</li>
+												<li>
+													<div class="key">제로인등급(3년)</div>
+													<div class="value">
+														<span class="zeroin_rate1"><span class="hidden">1등급</span></span>
+														<span class="zeroin_rate2"><span class="hidden">2등급</span></span>
+														<span class="zeroin_rate3"><span class="hidden">3등급</span></span>
+														<span class="zeroin_rate4"><span class="hidden">4등급</span></span>
+														<span class="zeroin_rate5"><span class="hidden">5등급</span></span>
+														<span class="zeroin_rate9"><span class="hidden">무등급</span></span>
+													</div>
+												</li>
+												<li>
+													<div class="key">운용사</div>
+													<div class="value">KB자산운용</div>
+												</li>
+											</ul>
+											<!-- //221020 : ELS펀드 케이스 경우 [선취수수료, 총보수, 운용사]항목만 노출 -->
+										</div>
+									</div>
+									<!-- 추가정보 버튼 위치 변경 -->
+									<button class="tit js_toggle" aria-expanded="false">추가정보</button><!--  220905 : 추가정보로 명칭 변경 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 추가정보 -->
+		</div>
+
+		<!-- 예금자비보호안내 -->
+		<div class="kdic_row">
+			<div class="col">
+				<div class="col_l">
+					예금자보호법상 보호상품 아님.<br>
+					단, 증권매수 미사용 현금잔액은 5천만원까지 (회사별 보호상품 합산) 예금자보호
+				</div>
+				<div class="col_r">
+					<span class="kdic_logo">
+						<img src="/msbiz/app/img/products/pro_ico_kdic.png" alt="예금보험공사 비보호">
+					</span>
+				</div>
+			</div>			
+		</div>
+		<!-- //예금자비보호안내 -->
+		<div class="pro_hr_divide_fund"></div>
+		<!-- //상품 기본정보 -->
+
+        <!-- 상품 상세정보 : 펀드개요/분석요약/수익률/포트폴리오분석/기준가추이 -->
+        <div class="tab_wrap gap_md">
+            <div class="tab_list" role="tablist">
+                <div class="scroll_wrap">
+                    <button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">펀드개요</button>
+					<!-- 제로인 데이터 정보 노출 항목 : 분석요약, 수익률, 포트폴리오분석, 기준가추이 -->
+                    <button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">분석요약</button>
+                    <button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3">수익률</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_4">포트폴리오분석</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_5">기준가추이</button>
+					<!-- //제로인 데이터 정보 노출 항목 : 분석요약, 수익률, 포트폴리오분석, 기준가추이 -->
+                </div>
+            </div>
+            
+            <!-- ##################################################### 상품안내 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_1">
+                <h2 class="hidden">펀드개요</h2>
+                <div class="section">
+                    <h2 class="h2">상품특징</h2>
+                    <ul class="depth bul">
+						<li>유로존 대표 주가지수(EuroStoxx50지수) 투자를 통한 수익성과 국내 우량 채권투자를 통한 안정성을 동시에 추구
+							<ul class="depth dash">
+								<li>주식모펀드 : 주로 EuroStoxx50지수 선물 및 ETF 등에 투자하여 EuroStoxx50지수 추종을 목표로 운용하고, 지수선물 증거금, ETF 투자금액을 제외한 나머지 자산은 국내 단기채권 및 유동자산에 투자</li>
+								<li>채권모펀드 : 국내 단기 국채, 지방채, 특수채 및 우량채권에 투자하여 안정적인 수익추구</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h2 class="h2 gap_lg_0">가입대상</h2>
+                    <p class="p">제한 없음</p>
+
+					<h2 class="h2 gap_lg_0">가입금액</h2>
+                    <ul class="depth dash">
+						<li>신규가입시 : 1만원 이상(원 단위)</li>
+						<li>추가입금시 : 1만원 이상(원 단위)</li>
+					</ul>
+
+					<h2 class="h2 gap_lg_0">거래방법</h2>
+                    <ul class="depth dash">
+						<li>17시 : 제3영업일 공고되는 만원 이상(원 단위)</li>
+						<li>추가입금시 : 1만원 이상(원 단위)</li>
+					</ul>
+
+					<h2 class="h2 gap_lg_0">운용사</h2>
+                    <p class="p">국민은행</p>
+
+                    <h2 class="h2 gap_lg_0">판매회사</h2>
+                    <p class="p">유리자산운용</p>
+					
+                    <h2 class="h2 gap_lg_0">유의사항</h2>
+                    <ul class="depth dash">
+						<li>집합투자상품은 예금자보호법에 따라 예금보험공사가 보호하지 않으며, 투자의 결과에 따라 이익 또는 손실이 발생할 수 있으며, 그 결과는 투자자에게 귀속됩니다. 또한 과거의 운용실적이 미래의 수익을 보장하는 것은 아닙니다.</li>
+						<li>집합투자상품을 가입하시기 전에 투자대상, 환매방법 및 보수 등 펀드에 관한 정보가 상세히 기재되어 있는 투자설명서를 반드시 읽어보시기 바라며 상품에 대하여 충분히 이해하고 투자결정을 내리시기 바랍니다.</li>
+						<li>외화로 투자되는 자산은 환율변동에 따라 투자가치가 변동될 수 있고, 투자대상국가의 시장, 정치 및 경제상황 등에 따른 위험으로 자산가치의 손실이 발생할 수 있습니다.</li>
+					</ul>
+                </div>
+            </div>
+            
+            <!-- ##################################################### 분석요약 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_2">
+                <h2 class="hidden">분석요약</h2>
+				<div class="section">제로인 데이터 정보 노출</div>
+            </div>
+
+            <!-- ##################################################### 수익률 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_3">
+                <h2 class="hidden">수익률</h2>
+				<div class="section">제로인 데이터 정보 노출</div>
+            </div>
+
+			<!-- ##################################################### 포트폴리오분석 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_4">
+                <h2 class="hidden">포트폴리오분석</h2>
+				<div class="section">제로인 데이터 정보 노출</div>
+            </div>
+
+			<!-- ##################################################### 포트폴리오분석 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_5">
+                <h2 class="hidden">기준가추이</h2>
+				<div class="section">제로인 데이터 정보 노출</div>
+            </div>
+
+			<!-- 220927 : 하단 라인 & 상담안내 마크업 이동  -->
+			<div class="pro_hr_divide"></div>
+			<!-- 상담안내 -->
+			<div class="pro_tel_guide">
+				<span class="ico_guide"></span> 
+				<span class="txt">상담안내</span> 
+				<!-- 220824 : 상담안내 전화연결 추가 -->
+				<!-- 221124 : 상담안내 전화번호 변경 -->
+				<span class="number">
+					<a href="tel:15999999">1599-9999</a>
+				</span>     
+				<!-- //221124 : 상담안내 전화번호 변경 -->
+				<!-- //220824 : 상담안내 전화연결 추가 -->
+			</div>
+			<!-- //상담안내 -->
+			<!-- //220927 : 하단 라인 & 상담안내 마크업 이동  -->
+        </div>
+        <!-- //상품 상세정보 : 펀드개요/분석요약/수익률/포트폴리오분석/기준가추이 -->
+
+
+
+		<!-- 221020 상품 상세정보추가 : 상품안내/유의사항 케이스 추가 -->
+		<div class="tab_wrap gap_md">
+            <div class="tab_list" role="tablist">
+                <div class="scroll_wrap">
+                    <!-- 제로인 데이터 정보 노출 항목 : 상품안내 -->
+					<button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_6">상품안내</button>
+                    <!-- //제로인 데이터 정보 노출 항목 : 상품안내 -->
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_7">유의사항</button>
+                </div>
+            </div>
+            
+            <!-- ##################################################### 상품안내 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_6">
+                <h2 class="hidden">상품안내</h2>
+				<div class="section">제로인 데이터 정보 노출</div>
+            </div>
+
+			<!-- ##################################################### 유의사항 ################################################## -->
+            <div class="tab_panel" role="tabpanel" id="tabpanel_7">
+                <h2 class="hidden">유의사항</h2>
+                <div class="section">
+                    <ul class="depth dash">
+						<li>본 상품은 자본시장과 금융투자업에 관한 법률에 의하여 수탁회사(자산보관회사)에 안전하게 보관/관리되고 있으며, 운용실적에 따르는 이익과 손실의 결과는 투자자(주주)에게 귀속됩니다.</li>
+						<li>이 금융상품은 예금자 보호법에 따라 예금보험공사가 보호하지 않습니다.</li>
+						<li>수익증권을 취득하거나 증권투자회사 주식인수의 청약을 하기 전에 투자(신탁)설명서 또는 간이투자(신탁)설명서를 읽어보시기 바랍니다.</li>
+					</ul>
+                </div>
+            </div>
+
+			<!-- 220927 : 하단 라인 & 상담안내 마크업 이동  -->
+			<div class="pro_hr_divide"></div>
+			<!-- 상담안내 -->
+			<div class="pro_tel_guide">
+				<span class="ico_guide"></span> 
+				<span class="txt">상담안내</span> 
+				<!-- 220824 : 상담안내 전화연결 추가 -->
+				<!-- 221124 : 상담안내 전화번호 변경 -->
+				<span class="number">
+					<a href="tel:15999999">1599-9999</a>
+				</span>     
+				<!-- //221124 : 상담안내 전화번호 변경 -->
+				<!-- //220824 : 상담안내 전화연결 추가 -->
+			</div>
+			<!-- //상담안내 -->
+			<!-- //220927 : 하단 라인 & 상담안내 마크업 이동  -->
+        </div>
+		<!-- //221020 상품 상세정보추가 : 상품안내/유의사항 케이스 추가 -->
+
+        <!-- Case. 스타기업뱅킹 가입 불가한 경우 지점 상담예약 버튼만 노출 -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">지점 상담예약</button></span>
+            </div>
+        </div>
+        <!-- Case. 스타기업뱅킹 가입 불가한 경우 지점 상담예약 버튼만 노출 -->		
+
+		<!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">지점 상담예약</button></span>
+                <span><button type="button" class="btn primary lg">가입</button></span>
+            </div>
+        </div>
+        <!-- //page bottom button -->
+    </div>
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

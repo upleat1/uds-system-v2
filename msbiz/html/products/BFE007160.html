@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>투자성향분석</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품가입" href="/msbiz/app/css/products.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content">
+        <h1 class="hidden">투자성향분석 질문</h1>
+
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>다음 질문에 대하여 가장 적절하다고 생각되시는 답을 택하여 주십시오. (총 8문항)</li>
+                <li>다음 질문 사항은 고객님의 투자성향을 분석하기 위한 자료로 활용 예정이며, 투자성향분석은 고객님의 투자성향에 적합한 상품 선택에 도움을 드리기 위해 활용합니다.</li>
+                <li>투자성향분석 결과는 <span class="bold">온라인</span>과 <span class="bold">영업점창구</span>에서 에서 동일하게 적용되며, <span class="bold">1일 1회만 분석</span> 가능하오니 신중히 답변해 주시기 바랍니다.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">Ⅰ. 기본 투자성향 파악</h2>
+            <ol class="list_question box">
+                <li>
+                    <div class="tit_qut"><span class="tit_q">Q1.</span> 다음 중 고객님의 <span class="bold">수입원</span>을 가장 잘 나타내는 것은 어느 것 입니까?
+                    </div>
+                    <div class="qut_inner">
+                        <span class="selection">
+                            <input type="radio" id="radioQut1_1" name="radioQut1">
+                            <label for="radioQut1_1" class="label"><em>현재 일정한 수입(근로소득, 사업소득, 임대소득)이 발생하고 있으며 향후 현재 수준을 유지하거나 증가할 것으로 예상</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut1_2" name="radioQut1">
+                            <label for="radioQut1_2" class="label"><em>현재 일정한 수입이 발생하고 있으나, 향후 감소하거나 불안정할 것으로 예상</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut1_3" name="radioQut1">
+                            <label for="radioQut1_3" class="label"><em>현재 일정한 수입이 없거나 소액연금이 주 수입원임</em></label>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_qut"><span class="tit_q">Q2.</span> 고객님의 <span class="bold">총 자산(부동산 등 포함) 중 금융자산의 비중</span>은 어느 정도 입니까?</div>
+                    <div class="qut_inner">
+                        <span class="selection">
+                            <input type="radio" id="radioQut2_1" name="radioQut2">
+                            <label for="radioQut2_1" class="label"><em>10%이내</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut2_2" name="radioQut2">
+                            <label for="radioQut2_2" class="label"><em>30%이내</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut2_3" name="radioQut2">
+                            <label for="radioQut2_3" class="label"><em>50%이내</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut2_4" name="radioQut2">
+                            <label for="radioQut2_4" class="label"><em>80%이내</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut2_5" name="radioQut2">
+                            <label for="radioQut2_5" class="label"><em>80%초과</em></label>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_qut"><span class="tit_q">Q3.</span> 다음중 고객님의 <span class="bold">투자경험</span>과 가장 가까운 항목은 어느 것입니까? (중복선택 가능)</div>
+                    <div class="qut_inner">
+                        <span class="selection">
+                            <input type="checkbox" id="checkboxQut3_1" name="checkboxQut3">
+                            <label for="checkboxQut3_1" class="label"><em>은행 예적금, 국채, 지방채, 보증채, MMF, CMA 등</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="checkbox" id="checkboxQut3_2" name="checkboxQut3">
+                            <label for="checkboxQut3_2" class="label"><em>채권형 펀드, 금융채, 신용도가 높은 회사채, 원금보장형 ELS/ELF 등</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="checkbox" id="checkboxQut3_3" name="checkboxQut3">
+                            <label for="checkboxQut3_3" class="label"><em>혼합형 펀드, 신용도가 중간 등급의 회사채, 원금의 일부 보장되는 ELS/ELF 등</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="checkbox" id="checkboxQut3_4" name="checkboxQut3">
+                            <label for="checkboxQut3_4" class="label"><em>주식형 펀드, 신용도가 낮은 회사채, 원금이 보장되지 않는 ELS/ELF 등</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="checkbox" id="checkboxQut3_5" name="checkboxQut3">
+                            <label for="checkboxQut3_5" class="label"><em>파생상품 펀드, 주식 신용거래, ELW, 선물ㆍ옵션 등</em></label>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_qut"><span class="tit_q">Q4.</span> <span class="bold">파생상품, 파생결합증권(ELS, ELS) 또는 파생상품투자펀드(레버리지펀드 등)에 투자한 경험</span>이 있으신 경우 투자기간은 얼마나 되십니까?</div>
+                    <div class="qut_inner">
+                        <span class="selection">
+                            <input type="radio" id="radioQut4_1" name="radioQut4">
+                            <label for="radioQut4_1" class="label"><em>1년 미만 (투자경험 없음 포함)</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut4_2" name="radioQut4">
+                            <label for="radioQut4_2" class="label"><em>1년 이상~ 3년 미만</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut4_3" name="radioQut4">
+                            <label for="radioQut4_3" class="label"><em>3년 이상</em></label>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_qut"><span class="tit_q">Q5.</span> 고객님의 <span class="bold">금융투자상품에 대한 이해도</span>는 어느 정도입니까?</div>
+                    <div class="qut_inner">
+                        <span class="selection">
+                            <input type="radio" id="radioQut5_1" name="radioQut5">
+                            <label for="radioQut5_1" class="label"><em>매우 높음 - 파생상품을 포함한 대부분의 금융투자상품의 구조 및 위험을 이해하고 있음</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut5_2" name="radioQut5">
+                            <label for="radioQut5_2" class="label"><em>높음 - 주식, 채권, 펀드 등의 구조 및 위험을 깊이 있게 이해하고 있음</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut5_3" name="radioQut5">
+                            <label for="radioQut5_3" class="label"><em>낮음 - 주식과 채권의 차이를 구별할 수 있는 정도</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut5_4" name="radioQut5">
+                            <label for="radioQut5_4" class="label"><em>매우 낮음 - 금융상품 중 예·적금에 대해서만 알고 있는 정도</em></label>
+                        </span>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="section">
+            <h2 class="h2"> Ⅱ. 해당 투자자금 파악</h2>
+            <ol class="list_question box">
+                <li>
+                    <div class="tit_qut"><span class="tit_q">Q6.</span> 고객님께서 투자하려는 <span class="bold">목적</span>은 무엇입니까?</div>
+                    <div class="qut_inner">
+                        <span class="selection">
+                            <input type="radio" id="radioQut8_1" name="radioQut8">
+                            <label for="radioQut8_1" class="label"><em>자산 증식(여유 자금 투자)</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut8_2" name="radioQut8">
+                            <label for="radioQut8_2" class="label"><em>노후 자금 마련</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut8_3" name="radioQut8">
+                            <label for="radioQut8_3" class="label"><em>목적 자금 마련(결혼자금, 주택 자금 등)</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut8_4" name="radioQut8">
+                            <label for="radioQut8_4" class="label"><em>사용 예정 자금 단기 운용(전세금, 임차보증금 등)</em></label>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_qut"><span class="tit_q">Q7.</span> 고객님께서 투자하고자 하는 <span class="bold">자금의 투자기간</span>은 어느 정도입니까?</div>
+                    <div class="qut_inner">
+                        <span class="selection">
+                            <input type="radio" id="radioQut9_1" name="radioQut9">
+                            <label for="radioQut9_1" class="label"><em>투자기간과 상관없이 만기일까지 보유</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut9_2" name="radioQut9">
+                            <label for="radioQut9_2" class="label"><em>3년 이상</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut9_3" name="radioQut9">
+                            <label for="radioQut9_3" class="label"><em>3년 미만</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut9_4" name="radioQut9">
+                            <label for="radioQut9_4" class="label"><em>1년 미만</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut9_5" name="radioQut9">
+                            <label for="radioQut9_5" class="label"><em>6개월 미만</em></label>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="tit_qut"><span class="tit_q">Q8.</span> 다음 중 현재 투자하는 자금에 대하여 고객님의 <span class="bold">기대하는 수익과 감내할 수 있는 손실</span>은 어느 정도입니까?</div>
+                    <div class="qut_inner">
+                        <span class="selection">
+                            <input type="radio" id="radioQut10_1" name="radioQut10">
+                            <label for="radioQut10_1" class="label"><em>기대수익이 높다면 시장 상황에 따라 원금을 초과하는 손실을 감내할 수 있다.</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut10_2" name="radioQut10">
+                            <label for="radioQut10_2" class="label"><em>기대수익이 높다면 20% ~ 100% 손실을 감내할 수 있다.</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut10_3" name="radioQut10">
+                            <label for="radioQut10_3" class="label"><em>원하는 수준의 수익을 기대할 수 있다면 20% 이내의 손실을 감내할 수 있다.</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut10_4" name="radioQut10">
+                            <label for="radioQut10_4" class="label"><em>일정 수준의 수익을 기대할 수 있다면 경미한  수준의 손실을 감내할 수 있다.</em></label>
+                        </span>
+                        <span class="selection">
+                            <input type="radio" id="radioQut10_5" name="radioQut10">
+                            <label for="radioQut10_5" class="label"><em>투자원금 보전을 추구한다.</em></label>
+                        </span>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="section">
+            <p class="p"><strong class="bold">본인은 국민은행에 제공한 투자자정보와 관련하여 다음과 같은 사항을 확인합니다.</strong></p>
+            <ul class="depth bul">
+                <li>KB국민은행에 제공한 투자자정보는 본인의 투자 목적, 재산 상황 및 투자경험 등의 정보를 정확히 등록한 것입니다.</li>
+                <li>현재 투자자금성향을 파악하기 위하여 매번 투자 권유에 앞서 새로이 투자정보를 파악해야 함에 동의합니다.</li>
+            </ul>
+        </div>
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">결과보기</button></span>
+			</div>
+		</div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+    //질문 1개씩 노출
+    var viewQuestion = function() {
+            $('.list_question li').each(function () {
+            var $this = $(this),
+                $rdo = $this.find('input[type=radio]');
+
+            $rdo.on('change', function () {
+                var $liIdx = $this.index(),
+                    $liLength = $this.parents('.list_question').find('li').length - 1,
+                    $nextLi = $this.next('li'),
+                    $nextListQ = $this.parents('.section').next().find('.list_question');
+
+                if ($liIdx < $liLength) {
+                    var $offsetTop =  $nextLi.offset().top - 50;
+
+                    $('.list_question li').removeClass('active');
+                    $nextLi.addClass('active');
+                } else if ($liIdx == $liLength && $nextListQ.length > 0) {
+                    var $offsetTop =  $nextListQ.find('li').eq(0).offset().top - 50;
+
+                    $('.list_question li').removeClass('active');
+                    $nextListQ.find('li').eq(0).addClass('active');
+                } else {
+                    return false;
+                }
+
+                $('body,html').animate({ scrollTop: $offsetTop }, 300);
+            });
+        });
+    };
+    viewQuestion();
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

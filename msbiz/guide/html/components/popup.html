@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>No.1 기업금융플랫폼</title>
+    <link rel="stylesheet" href="/msbiz/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/msbiz/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/msbiz/app/css/common.css">
+    
+    <style>
+        #wrap {
+            height: auto;
+        }
+        [data-class="demo"] .popup {
+            display: block;
+            position: relative
+        }
+        [data-class="demo"] .pop_bg_close {
+            position: absolute
+        }
+        [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap {
+            position: absolute
+        }
+        @media (min-width: 1024px) {
+            [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap{left: 0; margin-left: 0}
+        }
+        .note_txt {margin-left:.5rem; font-size:1.5rem; color:#777;}
+        .p-tit {font-size: 18px; font-weight: bold; margin-bottom: 5px;}
+        .p-tit2 {color:#1733bf; font-weight: bold;}
+        .p-list li{position: relative; font-size:1.5rem; color:#666; line-height: 1.8; padding-left:10px;}
+        .p-list li::before{content: '-'; position: absolute; left: 0; top:0;}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <div data-class="component-name">팝업</div>
+        <div data-class="box">
+            <a href="/msbiz/guide/html/sample/popup.html" target="_blank" title="새창" data-class="button">Popup Sample</a>
+        </div>
+
+        <div data-class="box">
+            <div data-class="h3">
+                <p class="p-tit">1.알림, 컨펌 팝업</p>
+                <ul class="p-list"><!-- 에러 class="error" -->
+                    <li><strong class="p-tit2">단순 메세지성 컨펌 및 알림 팝업</strong> : 네이티브로 작업. (퍼블 작업 없음)</li>
+                    <!-- <li><strong class="p-tit2">풀팝업</strong> : 퍼블은 일반 페이지로 작업, 구현은 네이티브로 작업</li> -->
+                    <li><strong class="p-tit2">안내성(디자인) 레이어 팝업</strong> : 퍼블 작업</li>
+                    <!-- <li><strong class="p-tit2">딤 클릭 이벤트</strong> : 미지원</li> -->
+                </ul>  
+                <ul class="p-list"><!-- 에러 class="error" -->
+                    <li><strong class="p-tit2">단순 메세지성 컨펌 및 알림 팝업</strong> : 네이티브로 작업. (퍼블 작업 없음)</li>
+                    <!-- <li><strong class="p-tit2">풀팝업</strong> : 퍼블은 일반 페이지로 작업, 구현은 네이티브로 작업</li> -->
+                    <li><strong class="p-tit2">안내성(디자인) 레이어 팝업</strong> : 퍼블 작업</li>
+                    <!-- <li><strong class="p-tit2">딤 클릭 이벤트</strong> : 미지원</li> -->
+                </ul>                
+            </div>
+            <div data-class="h3">
+                <p class="p-tit">2.바텀시트 정책</p>
+                <ul class="p-list">
+                    <li><strong class="p-tit2">일반 바텀시트</strong> : max값 95%만 적용하며 높이는 컨텐츠길이만큼 자동으로 지원. 컨텐츠가 95%이상이면 스크롤 자동 지원</li>
+                    <!-- <li><strong class="p-tit2">탭이 있는 바텀시트</strong> : 고정값 적용, 사용 디바이스의 70% 고정값 사용, 확장/축소 기능 지원</li> -->
+                    <!-- <li><strong class="p-tit2">예외 처리</strong> : 탭이 있는 이체의 계좌선택 바텀시트만 고정값 적용, 바닥 컨텐츠의 남은 여백만큼 바텀시트 높이 지정</li>
+                    <li><strong class="p-tit2">딤 클릭이벤트</strong> : 사용여부로 지원</li> -->
+                </ul>                
+            </div>
+            <!-- <div data-class="h3">
+                <p class="p-tit">2-1.바텀시트 딤 클릭 이벤트 정책</p>
+                <ul class="p-list">
+                    <li><strong class="p-tit2">디폴트</strong> : 딤 클릭 이벤트 지원</li>
+                    <li><strong class="p-tit2">사용여부</strong> : 바텀시트내에 오른쪽 상단 X(닫기)버튼 존재여부로 사용여부 판단.<br>
+                        ㄱ. 오른쪽 상단 X(닫기)버튼 있을 때 : [딤 클릭 이벤트] 지원<br>
+                        ㄴ. 오른쪽 상단 X(닫기)버튼 없을 때 : [딤 클릭 이벤트] 미지원<br>             
+                        <p style="font-size:1.4rem; padding-left:2.2rem;">※ 만약 오른쪽 상단 X(닫기)버튼이 있는데, 딤드 이벤트를 제외해야 하는 케이스가 발생하면 바텀시트에서 X(닫기) 버튼을 제외하는것으로 처리<br>             </p>
+                        ㄷ. 오른쪽 상단 X(닫기)버튼이 있는데, 닫기 기능을 개발에서 컨트롤하는 경우에는 딤 클릭 지원 안됨 (closeAct:false).
+                    </li>              
+                </ul>                
+            </div> -->
+        </div>
+
+        <!-- section : 팝업 설명 -->
+        <div data-class="section">
+            <div data-class="h1">사용법</div>
+            <div data-class="h2">Bottm Sheet</div>
+            <!-- 레이어 호출 설명 영역 -->
+            <div data-class="box">
+                <div data-class="list number">
+                    <div>
+                        기본
+                        <div data-class="list disc">
+                            <div>팝업 ID 기준으로 호출하기때문에 팝업끼리 ID가 중복되면 안됨. 중복일 경우 변경</div>
+                            <div>팝업의 ID는 임시ID(개발에서 변경 사용 가능)</div>
+                        </div>
+                    </div>
+                    <div>
+                        Popup Open
+                        <div>아래와 같이 함수 호출
+<pre>
+    UICommon.Layer.open('#팝업ID');
+</pre>
+                        </div>
+                        <div>콜백이벤트 삽입
+<pre>
+    UICommon.Layer.open('#팝업ID', function(){
+        //팝업 오픈후 콜백이벤트 삽입
+    });
+</pre>
+                        </div>
+                    </div>
+                    <div>
+                        Popup Close
+                        <div>아래와 같이 함수 호출
+<pre>
+    UICommon.Layer.close('#팝업ID');
+</pre>
+                        </div>
+                        <div>콜백이벤트 삽입
+<pre>
+    UICommon.Layer.close('#팝업ID', function(){
+        //팝업 닫은 후 콜백이벤트 삽입
+    });
+</pre>
+                        </div>
+                        <div>Popup안에 있는 버튼에 Popup Close기능을 주려면 'ui_pop_close' 클래스 추가</div>
+                        <div>'ui_pop_close' 클래스는 해당 용도가 아니면 에러를 발생할수 있으니 안쓸때는 삭제</div>
+                    </div> 
+                    <div>딤 클릭 이벤트 방지
+                        <div>'bg_no_click' 클래스를 Popup 최상단에 엘리먼트에 추가</div>
+                    </div>
+                    <div>닫기버튼 삭제
+<pre>
+    UICommon.Layer.open('#팝업ID','','noClose');
+</pre>
+                    </div>
+                    <div>타이틀 삭제
+<pre>
+    UICommon.Layer.open('#팝업ID','noTitle');
+</pre>
+                    </div>
+                    <div>타이틀 변경
+<pre>
+    UICommon.Layer.open('#팝업ID','타이틀변경텍스트입력');
+</pre>
+                    </div>               
+                </div>
+            </div>
+
+            <script type="text/html" data-type="script">
+$(function(){
+    // Popup Open
+    UICommon.Layer.open('#팝업ID');
+    // Popup Open + Callback
+    UICommon.Layer.open('#팝업ID', function(){
+        //팝업 오픈후 콜백이벤트 삽입
+    });
+    // Popup Close
+    UICommon.Layer.close('#팝업ID');
+    // Popup Close + Callback
+    UICommon.Layer.close('#팝업ID', function(){
+        //팝업 닫은 후 콜백이벤트 삽입
+    });
+    // 닫기버튼 삭제
+    UICommon.Layer.open('#팝업ID','','noClose');
+    // 타이틀 삭제
+    UICommon.Layer.open('#팝업ID','noTitle');
+    // 타이틀 변경
+    UICommon.Layer.open('#팝업ID','타이틀변경텍스트입력');
+});
+
+<!-- layer html : default -->
+<div id="팝업ID" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop_wrap">
+        <div class="pop_head">
+            <div>
+                <h1>제목</h1>
+            </div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_section">
+                팝업 콘텐츠 영역
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg" data-action="close">취소</button></span>
+                    <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </article>
+</div>
+<!-- //layer html : default -->
+            </script>
+            <div data-class="h2">Alert</div>
+            <div data-class="box">기본 Alert 호출
+<pre>
+    UICommon.Layer.alert('얼럿 메세지');
+</pre>
+            </div>
+            <script type="text/html" data-type="script">
+//Alert 
+UICommon.Layer.alert('Alert 메세지');
+//Alert + Callback
+UICommon.Layer.alert('Alert 메세지.',function(){
+    console.log('얼럿 확인1');
+});
+//Alert + No Title
+UICommon.Layer.alert('Alert 메세지', 'noTitle');
+//Alert + Callback + 타이틀변경
+UICommon.Layer.alert('Alert 메세지.', 'Alert 제목', function () {
+    console.log('얼럿 확인2');
+});
+
+//Alert + Callback + 버튼 텍스트변경 (타이틀 변경안하면 '' 으로)
+UICommon.Layer.alert('Alert 메세지.', '', '완료', function () {
+    console.log('얼럿 완료1');
+});
+
+//Alert + Callback + 타이틀변경 + 버튼 텍스트변경
+UICommon.Layer.alert('Alert 메세지.', 'Alert 제목', '완료', function () {
+    console.log('얼럿 완료2');
+});
+            </script>
+
+            <div data-class="h2">Confirm</div>
+            <div data-class="box">기본 Confirm 호출
+<pre>
+    UICommon.Layer.confirm('Confirm 메세지'); 
+</pre>
+            </div>
+            <script type="text/html" data-type="script">
+//Confirm
+UICommon.Layer.confirm('Confirm 메세지'); 
+//Confirm + No Title
+UICommon.Layer.confirm('Confirm 메세지', 'noTitle');
+//Confirm + Callback
+UICommon.Layer.confirm('Confirm 창입니다.',function(e){
+    if(e){
+        console.log('Confirm 확인');
+    }else{
+        console.log('Confirm 취소');
+    }
+});
+//Alert + No Title
+UICommon.Layer.confirm('Confirm 메세지', 'noTitle');
+//Confirm + Callback + 타이틀변경
+UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목',function(e){
+    if(e){
+        console.log('Confirm 확인');
+    }else{
+        console.log('Confirm 취소');
+    }
+});
+//Confirm + Callback + 버튼 텍스트변경
+UICommon.Layer.confirm('컨펌창입니다.', '','완료','넘기기',function(e){
+    if(e){
+        console.log('Confirm 완료');
+    }else{
+        console.log('Confirm 넘기기');
+    }
+});
+//Confirm + Callback + 타이틀추가 + 버튼 텍스트변경
+UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기기',function(e){
+    if(e){
+        console.log('Confirm 확인');
+    }else{
+        console.log('Confirm 넘기기');
+    }
+});
+            </script>
+        </div>
+        <!-- //section : 팝업 설명 -->
+
+
+        <!-- section : 레이아웃 확인용 -->
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+            <div data-class="box">다음은 타입별 레이아웃 참고용입니다. 실제 구현시 상단의 [Popup Sample]을 참고하세요.</div>
+
+            <div data-class="h2">Bottom Sheet</div>
+            <script type="text/html">
+<div id="팝업ID" class="popup bottom ui_pop_last show" style="height:500px" role="dialog" aria-hidden="false"
+    aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
+    <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
+    <div class="pop_scl_wrap">
+        <article class="pop_wrap" style="max-height: 508px;">
+            <div class="pop_head">
+                <div>
+                    <h1 id="bottomPopup2Label">제목</h1>
+                </div>
+            </div>
+            <div class="pop_body" style="max-height: 252px;">
+                <div class="pop_section">
+                    <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn secondary lg" data-action="close">취소</button></span>
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h2">Bottom Sheet - No Title</div>
+            <script type="text/html">
+<div id="팝업ID" class="popup bottom ui_pop_last show" style="height:500px" role="dialog" aria-hidden="false"
+    aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
+    <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
+    <div class="pop_scl_wrap">
+        <article class="pop_wrap" style="max-height: 508px;">
+            <div class="pop_head">
+                <div>
+                    
+                </div>
+            </div>
+            <div class="pop_body" style="max-height: 252px;">
+                <div class="pop_section">
+                    <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn secondary lg" data-action="close">취소</button></span>
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h2">Bottom Sheet + Tab</div>
+            <script type="text/html">
+<div id="팝업ID" class="popup bottom ui_pop_last show" style="height:500px" role="dialog" aria-hidden="false"
+    aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
+    <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
+    <div class="pop_scl_wrap">
+        <article class="pop_wrap" style="max-height: 508px;">
+            <div class="pop_head">
+                <div>
+                    <h1 id="bottomPopup2Label">제목</h1>
+                </div>
+            </div>
+            <div class="pop_body" style="max-height: 252px;">
+                <div class="pop_section">
+                    <div class="tab_wrap">
+                        <div class="tab_list" role="tablist">
+                            <div class="scroll_wrap">
+                                <button role="tab" aria-selected="true" aria-controls="tabpanel4_1">탭메뉴 1</button>
+                                <button role="tab" aria-selected="false" aria-controls="tabpanel4_2">탭메뉴 2</button>
+                                <button role="tab" aria-selected="false" aria-controls="tabpanel4_3">탭메뉴 3</button>
+                            </div>
+                        </div>
+                        <div class="ly_cnt">
+                            <div role="tabpanel" class="tab_panel" id="tabpanel4_1">
+                                <div class="section">
+                                     <!-- sub-tab -->
+                                     <div class="tab_wrap box tab_list_sub">
+                                        <div class="tab_list" role="tablist">
+                                            <button type="button" role="tab" aria-selected="true" aria-controls="subtabpanel2_1">서브탭 2-1</button>
+                                            <button type="button" role="tab" aria-selected="false" aria-controls="subtabpanel2_2">서브탭 2-2</button>
+                                        </div>
+                                        
+                                        <div class="tab_panel" role="tabpanel" id="subtabpanel2_1">                                
+                                            <div class="section">
+                                                <h4 class="hidden">숨은 타이틀</h4>
+                                                서브텝의 콘텐츠 영역2-1
+                                            </div>
+                                        </div>
+                                        <div class="tab_panel" role="tabpanel" id="subtabpanel2_2">                                
+                                            <div class="section">
+                                                <h4 class="hidden">숨은 타이틀</h4>
+                                                서브텝의 콘텐츠 영역2-2
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                    <!-- // sub-tab -->
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab_panel" id="tabpanel4_2">
+                                <div class="section">2 레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용dd</div>
+                            </div>
+                            <div role="tabpanel" class="tab_panel" id="tabpanel4_3">
+                                <div class="section">3 레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용 레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용 레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용 레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내용<br>레이어 내end</div>
+                            </div>
+                        </div>           
+                    </div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div>
+                    <div class="btn_area">
+                        <span><button type="button" class="btn secondary lg" data-action="close">취소</button></span>
+                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        </article>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h2">Alert</div>
+            <script type="text/html">
+<div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
+    aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
+    <div class="pop_scl_wrap">
+        <article class="pop_wrap" style="max-height: 448px;">
+            <div class="pop_head">
+                <div>
+                    <h1 id="uiLayerAlert0Label">알림</h1>
+                </div>
+            </div>
+            <div class="pop_body" style="max-height: 296px;">
+                <div class="section">
+                    <div class="message">
+                        <div role="alert" aria-live="assertive">얼럿창입니다.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div class="btn_area">
+                    <span><button type="button" id="uiLayerAlert0ActionBtn" class="btn primary lg">확인</button></span>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h2">Confirm</div>
+            <script type="text/html">
+<div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
+    aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
+    <div class="pop_scl_wrap">
+        <article class="pop_wrap" style="max-height: 448px;">
+            <div class="pop_head">
+                <div>
+                    <h1 id="uiLayerAlert0Label">알림</h1>
+                </div>
+            </div>
+            <div class="pop_body" style="max-height: 296px;">
+                <div class="section">
+                    <div class="message">
+                        <div role="alert" aria-live="assertive">컨펌창입니다.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div class="btn_area"><span><button type="button" id="uiLayerAlert0CancelBtn"
+                            class="btn secondary lg">취소</button></span><span><button type="button"
+                            id="uiLayerAlert0ActionBtn" class="btn primary lg">확인</button></span></div>
+            </div>
+        </article>
+    </div>
+</div>
+            </script>
+
+        </div>   
+        <!-- //section : 레이아웃 확인용 -->                
+        
+    </div>
+    
+    <script src="/msbiz/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/msbiz/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/msbiz/guide/assets/js/components.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    
+    <!-- Loading Custom Script -->
+    <script src="/msbiz/app/js/common_ui.js"></script>
+
+    <!-- common ui init -->
+    <script>
+        $(function(){
+            $('[data-class="fold"]').eq(0).trigger('click');
+
+        });
+    </script>
+</body>
+</html>

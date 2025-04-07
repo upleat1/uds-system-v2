@@ -1,0 +1,1257 @@
+<!doctype html>
+<head lang="ko">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>지급내역조회</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="h1">지급내역조회 상세</h1>
+		
+		<!-- 지급구분 : 퇴직 -->
+		<div class="tab_wrap">
+			<div class="tab_list" role="tablist">
+				<div class="scroll_wrap">
+					<button type="button" role="tab" aria-selected="true" aria-controls="tabpanel_1">거래정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_2">퇴직/지급방법결정</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_3">퇴직급여 처리방법</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_4">상품매도정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_5">동일년도 퇴직소득</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpanel_6">수관정보</button>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_1">
+				<h2 class="hidden">거래정보</h2>
+				<div class="section">
+					<ul class="list_data left">
+						<li>
+							<div class="key">거래일자</div>
+							<div class="value"><span class="number">2022.01.01</span></div>
+						</li>
+						<li>
+							<div class="key">거래상태</div>
+							<div class="value">정상</div>
+						</li>
+						<li>
+							<div class="key">가입자고객번호</div>
+							<div class="value"><span class="number">000000-*******</span></div>
+						</li>
+						<li>
+							<div class="key">가입자명</div>
+							<div class="value">홍길순</div>
+						</li>
+						<li>
+							<div class="key">사용자계좌번호</div>
+							<div class="value"><span class="number">000000-00-000000</span></div>
+						</li>
+						<li>
+							<div class="key">고객명</div>
+							<div class="value">홍길동</div>
+						</li>
+						<li>
+							<div class="key">입사일자</div>
+							<div class="value"><span class="number">2007.02.01</span></div>
+						</li>
+						<li>
+							<div class="key">임직원구분</div>
+							<div class="value">직원</div>
+						</li>
+						<li>
+							<div class="key">중간정산일자</div>
+							<div class="value"><span class="number">2007.02.01</span></div>
+						</li>
+						<li>
+							<div class="key">중간지급일</div>
+							<div class="value"><span class="number">2007.02.01</span></div>
+						</li>
+						<li>
+							<div class="key">이연방식</div>
+							<div class="value">세액이연</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_2">
+				<h2 class="hidden">퇴직 및 지급방법결정 정보</h2>
+				<div class="section">
+					<ul class="list_data left lbt">
+						<li>
+							<div class="key">퇴직일자</div>
+							<div class="value"><span class="number">2022.01.01</span></div>
+						</li>
+						<li>
+							<div class="key">퇴직사유</div>
+							<div class="value">자발적퇴직</div>
+						</li>
+						<li>
+							<div class="key">근속기간제외월수</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">월</span></div>
+						</li>
+						<li>
+							<div class="key">근속기간제외월수(2012년 이전)</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">월</span></div>
+						</li>
+						<li>
+							<div class="key">근속기간제외월수(2013년 이후)</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">월</span></div>
+						</li>
+						<li>
+							<div class="key">중간정산(중도인출)특례</div>
+							<div class="value">해당무</div>
+						</li>
+						<li>
+							<div class="key">근무처행정관청</div>
+							<div class="value">해당무</div>
+						</li>
+						<li>
+							<div class="key">퇴직소득세</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">지방소득세</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">지급금액결정방식</div>
+							<div class="value">전액지급방식</div>
+						</li>
+						<li>
+							<div class="key">퇴직연금퇴직급여</div>
+							<div class="value"><span class="number">19,678,648</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">퇴직급여추계액</div>
+							<div class="value"><span class="number">20,157,002</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">적립비율</div>
+							<div class="value"><span class="number">1.14</span><span class="num_unit">%</span></div>
+						</li>
+						<li>
+							<div class="key">가입자지급가능금액</div>
+							<div class="value"><span class="number">19,678,648</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">가입자지급금액</div>
+							<div class="value"><span class="number">229,789</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">사용자지급가능금액</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">사용자지급금액</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">퇴직연금지급방법</div>
+							<div class="value">전부과세이연</div>
+						</li>
+						<li>
+							<div class="key">과세이연비율</div>
+							<div class="value"><span class="number">100</span><span class="num_unit">%</span></div>
+						</li>
+						<li>
+							<div class="key">퇴직소득 과세이연세액</div>
+							<div class="value"><span class="number">418,001</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">강제이전 대상여부</div>
+							<div class="value">예</div>
+						</li>
+						<li>
+							<div class="key">지급(예정)일자</div>
+							<div class="value"><span class="number">2016.04.06</span>(<span class="number">2016.04.06</span> 예정)</div>
+						</li>
+						<li>
+							<div class="key">사전적립금입금금액</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">사전적립면제승인</div>
+							<div class="value">아니오</div>
+						</li>
+						<li>
+							<div class="key">사전적립면제추가입금</div>
+							<div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_3">
+				<h2 class="hidden">퇴직급여 처리방법 정보</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">처리방법</div>
+									<div class="value">과세이연(퇴직연금)</div>
+								</li>
+								<li>
+									<div class="key">수령방법</div>
+									<div class="value">창구지급</div>
+								</li>
+								<li>
+									<div class="key">예금주명</div>
+									<div class="value">홍길동</div>
+								</li>
+								<li>
+									<div class="key">입금정보</div>
+									<div class="value">
+										<span class="number">000000-00-000000</span>(국민은행)
+									</div>
+								</li>
+								<li>
+									<div class="key">지급금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">처리방법</div>
+									<div class="value">과세이연(퇴직연금)</div>
+								</li>
+								<li>
+									<div class="key">수령방법</div>
+									<div class="value">창구지급</div>
+								</li>
+								<li>
+									<div class="key">예금주명</div>
+									<div class="value">홍길동</div>
+								</li>
+								<li>
+									<div class="key">입금정보</div>
+									<div class="value">
+										<span class="number">000000-00-000000</span>(국민은행)
+									</div>
+								</li>
+								<li>
+									<div class="key">지급금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_4">
+				<h2 class="hidden">상품 매도정보 및 매도상품 결정방법</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">상품</div>
+									<div class="value">국민은행 퇴직연금운용 정기예금(DB, 1년)</div>
+								</li>
+								<li>
+									<div class="key">자산관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">매매단위</div>
+									<div class="value">원</div>
+								</li>
+								<li>
+									<div class="key">매도수량</div>
+									<div class="value">
+										<span class="number">1,785</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">매도결제금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">상품</div>
+									<div class="value">국민은행 퇴직연금운용 정기예금(DB, 1년)</div>
+								</li>
+								<li>
+									<div class="key">자산관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">매매단위</div>
+									<div class="value">원</div>
+								</li>
+								<li>
+									<div class="key">매도수량</div>
+									<div class="value">
+										<span class="number">1,785</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">매도결제금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_5">
+				<h2 class="hidden">동일년도 퇴직소득 정보</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">순번</div>
+									<div class="value"><span class="number">100</span></div>
+								</li>
+								<li>
+									<div class="key">퇴직급여구분</div>
+									<div class="value">데이터 확인 필요</div>
+								</li>
+								<li>
+									<div class="key">법정퇴직급여</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">법정퇴직연금</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">법정외퇴직급여</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">법정외퇴직연금</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">기납부소득세</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">기납부지방소득세</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">순번</div>
+									<div class="value"><span class="number">100</span></div>
+								</li>
+								<li>
+									<div class="key">퇴직급여구분</div>
+									<div class="value">데이터 확인 필요</div>
+								</li>
+								<li>
+									<div class="key">법정퇴직급여</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">법정퇴직연금</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">법정외퇴직급여</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">법정외퇴직연금</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">기납부소득세</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">기납부지방소득세</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpanel_6">
+				<h2 class="hidden">수관정보</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">수관운용제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">수관운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">수관운용관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">수관운용제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">수관운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">수관운용관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+		</div>
+		<!-- //지급구분 : 퇴직 -->
+
+		<!-- 지급구분 : 계약이전 -->
+		<div class="tab_wrap">
+			<div class="tab_list" role="tablist">
+				<div class="scroll_wrap">
+					<button type="button" role="tab" aria-selected="true" aria-controls="tabpane2_1">거래정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpane2_2">계약이전정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpane2_3">자산기관별 지급정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpane2_4">상품매도정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpane2_5">수관정보</button>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane2_1">
+				<h2 class="hidden">거래정보</h2>
+				<div class="section">
+					<ul class="list_data left">
+						<li>
+							<div class="key">거래일자</div>
+							<div class="value"><span class="number">2022.01.01</span></div>
+						</li>
+						<li>
+							<div class="key">거래상태</div>
+							<div class="value">정상</div>
+						</li>
+						<li>
+							<div class="key">거래점</div>
+							<div class="value">데이터 확인 필요</div>
+						</li>
+						<li>
+							<div class="key">사용자계좌번호</div>
+							<div class="value"><span class="number">000000-00-000000</span></div>
+						</li>
+						<li>
+							<div class="key">고객명</div>
+							<div class="value">홍길동</div>
+						</li>
+						<li>
+							<div class="key">계약구분</div>
+							<div class="value">데이터 확인 필요</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane2_2">
+				<h2 class="hidden">계약이전정보</h2>
+				<div class="section">
+					<ul class="list_data left lbt">
+						<li>
+							<div class="key">계약이전구분</div>
+							<div class="value"><span class="number">2022.01.01</span></div>
+						</li>
+						<li>
+							<div class="key">계약이전사유</div>
+							<div class="value">자발적퇴직</div>
+						</li>
+						<li>
+							<div class="key">행내계약이전</div>
+							<div class="value">데이터 확인 필요</div>
+						</li>
+						<li>
+							<div class="key">등록일자</div>
+							<div class="value"><span class="number">2016.04.04</span></div>
+						</li>
+						<li>
+							<div class="key">자신이전(예정)일자</div>
+							<div class="value"><span class="number">2016.04.04</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane2_3">
+				<h2 class="hidden">자산기관별 지급정보</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">자산관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">잔존원금</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">평가금액</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">이전금액</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">수수료</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">자산관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">잔존원금</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">평가금액</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">이전금액</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">수수료</div>
+									<div class="value">
+										<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane2_4">
+				<h2 class="hidden">상품매도정보</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">상품</div>
+									<div class="value">고유대상품</div>
+								</li>
+								<li>
+									<div class="key">자산관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">매매단위</div>
+									<div class="value"><span class="number">1,100</span><span class="num_unit">원</span></div>
+								</li>
+								<li>
+									<div class="key">매도수량</div>
+									<div class="value"><span class="number">2,909</span></div>
+								</li>
+								<li>
+									<div class="key">매도결제금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">상품</div>
+									<div class="value">고유대상품</div>
+								</li>
+								<li>
+									<div class="key">자산관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">매매단위</div>
+									<div class="value"><span class="number">1,100</span><span class="num_unit">원</span></div>
+								</li>
+								<li>
+									<div class="key">매도수량</div>
+									<div class="value"><span class="number">2,909</span></div>
+								</li>
+								<li>
+									<div class="key">매도결제금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane2_5">
+				<h2 class="hidden">수관정보</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">이전운용관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">이전운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">이전운용계좌제도</div>
+									<div class="value"><span class="number">DC</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">입금정보</div>
+									<div class="value"><span class="number">000000-00-000000</span>(국민은행)</div>
+								</li>
+								<li>
+									<div class="key">분배금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">잔액처리여부</div>
+									<div class="value">데이터 확인 필요</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">이전운용관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">이전운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">이전운용계좌제도</div>
+									<div class="value"><span class="number">DC</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">입금정보</div>
+									<div class="value"><span class="number">000000-00-000000</span>(국민은행)</div>
+								</li>
+								<li>
+									<div class="key">분배금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">잔액처리여부</div>
+									<div class="value">데이터 확인 필요</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+		</div>
+		<!-- //지급구분 : 계약이전 -->
+
+		<!-- 지급구분 : 가입자이전 -->
+		<div class="tab_wrap">
+			<div class="tab_list" role="tablist">
+				<div class="scroll_wrap">
+					<button type="button" role="tab" aria-selected="true" aria-controls="tabpane3_1">거래정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpane3_2">이전정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpane3_3">이전금액 처리방법</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpane3_4">상품매도정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpane3_5">적립금정보</button>
+					<button type="button" role="tab" aria-selected="false" aria-controls="tabpane3_6">수관정보</button>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane3_1">
+				<h2 class="hidden">거래정보</h2>
+				<div class="section">
+					<ul class="list_data left">
+						<li>
+							<div class="key">거래일자</div>
+							<div class="value"><span class="number">2022.01.01</span></div>
+						</li>
+						<li>
+							<div class="key">거래상태</div>
+							<div class="value">정상</div>
+						</li>
+						<li>
+							<div class="key">가입자고객번호</div>
+							<div class="value"><span class="number">000000-*******</span></div>
+						</li>
+						<li>
+							<div class="key">가입자명</div>
+							<div class="value">홍길동</div>
+						</li>
+						<li>
+							<div class="key">사용자계좌번호</div>
+							<div class="value"><span class="number">000000-00-000000</span></div>
+						</li>
+						<li>
+							<div class="key">고객명</div>
+							<div class="value">홍길순</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane3_2">
+				<h2 class="hidden">이전정보</h2>
+				<div class="section">
+					<ul class="list_data left">
+						<li>
+							<div class="key">이전기준일자</div>
+							<div class="value"><span class="number">2022.01.01</span></div>
+						</li>
+						<li>
+							<div class="key">이전사유</div>
+							<div class="value">자발적퇴직</div>
+						</li>
+						<li>
+							<div class="key">지급금액결정방식</div>
+							<div class="value">전액지급방식</div>
+						</li>
+						<li>
+							<div class="key">퇴직연금퇴직급여</div>
+							<div class="value"><span class="number">1,000,000,000,000</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">퇴직급여추계액</div>
+							<div class="value"><span class="number">1,000,000,000,000</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">적립비율</div>
+							<div class="value"><span class="number">1.14</span><span class="num_unit">%</span></div>
+						</li>
+						<li>
+							<div class="key">지급가능금액</div>
+							<div class="value"><span class="number">1,000,000,000,000</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">가입자지급금액</div>
+							<div class="value"><span class="number">1,000,000,000,000</span><span class="num_unit">원</span></div>
+						</li>
+						<li>
+							<div class="key">지급(예정)일자</div>
+							<div class="value"><span class="number">2000.01.01</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane3_3">
+				<h2 class="hidden">이전금액 처리방법</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">계좌번호</div>
+									<div class="value">
+										<span class="number">000000-00-000000</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">처리방법</div>
+									<div class="value">과세이연(퇴직연금)</div>
+								</li>
+								<li>
+									<div class="key">수령방법</div>
+									<div class="value">창구지급</div>
+								</li>
+								<li>
+									<div class="key">예금주명</div>
+									<div class="value">홍길동</div>
+								</li>
+								<li>
+									<div class="key">입금정보</div>
+									<div class="value">
+										<span class="number">000000-00-000000</span>(국민은행)</div>
+								</li>
+								<li>
+									<div class="key">지급금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">계좌번호</div>
+									<div class="value">
+										<span class="number">000000-00-000000</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">처리방법</div>
+									<div class="value">과세이연(퇴직연금)</div>
+								</li>
+								<li>
+									<div class="key">수령방법</div>
+									<div class="value">창구지급</div>
+								</li>
+								<li>
+									<div class="key">예금주명</div>
+									<div class="value">홍길동</div>
+								</li>
+								<li>
+									<div class="key">입금정보</div>
+									<div class="value">
+										<span class="number">000000-00-000000</span>(국민은행)</div>
+								</li>
+								<li>
+									<div class="key">지급금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane3_4">
+				<h2 class="hidden">상품매도정보</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">상품</div>
+									<div class="value">고유대상품</div>
+								</li>
+								<li>
+									<div class="key">자산관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">매매단위</div>
+									<div class="value">
+										<span class="number">1,100</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">매도수량</div>
+									<div class="value"><span class="number">1,909</span></div>
+								</li>
+								<li>
+									<div class="key">매도결제금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">상품</div>
+									<div class="value">고유대상품</div>
+								</li>
+								<li>
+									<div class="key">자산관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">매매단위</div>
+									<div class="value">
+										<span class="number">1,100</span><span class="num_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="key">매도수량</div>
+									<div class="value"><span class="number">1,909</span></div>
+								</li>
+								<li>
+									<div class="key">매도결제금액</div>
+									<div class="value">
+										<strong class="number">1,000,000,000</strong><span class="num_unit">원</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane3_5">
+				<h2 class="hidden">적립금정보</h2>
+				<div class="section">
+					<ul class="list_data left lbt">
+						<li>
+							<div class="key">결제금액(A)</div>
+							<div class="value">
+								<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+							</div>
+						</li>
+						<li>
+							<div class="key">수수료(B)</div>
+							<div class="value">
+								<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+							</div>
+						</li>
+						<li>
+							<div class="key">수수료차감후 지급액(A-B)</div>
+							<div class="value">
+								<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+							</div>
+						</li>
+						<li>
+							<div class="key">사용자부담금</div>
+							<div class="value">
+								<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+							</div>
+						</li>
+						<li>
+							<div class="key">사용자부담금손익</div>
+							<div class="value">
+								<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+							</div>
+						</li>
+						<li>
+							<div class="key">통산사용자부담금</div>
+							<div class="value">
+								<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+							</div>
+						</li>
+						<li>
+							<div class="key">통산사용자부담금손익</div>
+							<div class="value">
+								<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+							</div>
+						</li>
+						<li>
+							<div class="key">가입자부담금</div>
+							<div class="value">
+								<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+							</div>
+						</li>
+						<li>
+							<div class="key">가입자부담금손익</div>
+							<div class="value">
+								<span class="number">1,000,000,000</span><span class="num_unit">원</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tab_panel" role="tabpanel" id="tabpane3_6">
+				<h2 class="hidden">수관정보</h2>
+				<div class="section">
+					<div class="list_data_group">
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">수관운용관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">수관운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">수관제도</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">수관기관</div>
+									<div class="value">기업은행</div>
+								</li>
+								<li>
+									<div class="key">수관계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+							</ul>
+						</div>
+						<div class="list_data_group_s">
+							<ul class="list_data left">
+								<li>
+									<div class="key">제도구분</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">수관운용관리기관</div>
+									<div class="value">국민은행</div>
+								</li>
+								<li>
+									<div class="key">수관운용계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+								<li>
+									<div class="key">수관제도</div>
+									<div class="value"><span class="number">DB</span></div><!-- 22/07/15 수정 -->
+								</li>
+								<li>
+									<div class="key">수관기관</div>
+									<div class="value">기업은행</div>
+								</li>
+								<li>
+									<div class="key">수관계좌번호</div>
+									<div class="value"><span class="number">000000-00-000000</span></div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_list_btm more">
+							<button type="button" class="btn">더보기</button>
+						</div>
+					</div>
+					<!-- 조회내역 없을 경우-->
+					<div class="result nodata"><!-- 221028 class 삭제 -->
+						<p class="tit">조회하신 내역이 없습니다.</p><!-- 221028 class 수정 -->
+					</div>
+					<!-- //조회내역 없을 경우-->
+				</div>
+			</div>
+		</div>
+		<!-- //지급구분 : 가입자이전 -->
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<head lang="ko">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no" />
+    <title>입금(기업형IRP)</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+		<h1 class="h1">정보입력</h1>
+
+        <div class="inform_top_wrap">
+			<ul class="depth bul">
+                <li>가입자별 입금금액을 확인 하신 후 출금계좌정보를 입력합니다.</li>
+                <li>[다음] 버튼을 누르시면 다음단계로 이동됩니다.</li>
+            </ul>
+		</div>
+
+		<div class="section">
+            <div class="hgroup_h3">
+                <div>
+                    <h2 class="h3">입금정보</h2>
+                </div>
+                <div>
+                    <button class="tit js_toggle" aria-expanded="false" aria-controls="info_01">
+                        상세정보<span class="arrow"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="toggle_panel" role="region" id="info_01">
+                <div class="list_data_group">
+                    <ul class="list_data left">
+                        <li>
+                            <div class="key">부담금 총합계</div>
+                            <div class="value">
+                                <strong class="number">200,000,000</strong><span class="num_unit">원</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list_data_group">
+                    <div class="list_data_group_s">
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">가입자명</div>
+                                <div class="value">홍길동</div>
+                            </li>
+                            <li>
+                                <div class="key">사용자부담금</div>
+                                <div class="value">
+                                    <span class="number">100,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">가입자부담금</div>
+                                <div class="value">
+                                    <span class="number">0</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list_data_group_s">
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">가입자명</div>
+                                <div class="value">홍길동</div>
+                            </li>
+                            <li>
+                                <div class="key">사용자부담금</div>
+                                <div class="value">
+                                    <span class="number">100,000,000</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">가입자부담금</div>
+                                <div class="value">
+                                    <span class="number">0</span><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="h3">출금정보</h2>
+            <div class="form_group">
+                <div class="form_tit">출금계좌정보</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="출금계좌정보 선택">000000-00-000000</button>
+                    </div>
+                </div>
+                <div class="form_btm_wrap right">
+                    <p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>           
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">이체금액</div>
+                <div class="form_row"> 
+                    <div class="input unit js_unit">
+                        <input type="tel" aria-hidden="true" maxlength="16" placeholder="숫자만 입력" title="이체금액" data-unit="원" value="200,000,000" readonly>
+                    </div>
+                </div>
+                <p class="form_hangul" aria-hidden="true">2억원</p>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">수취인 통장 표시내용</div>
+                <div class="form_row">        
+                    <div class="input" role="button" aria-label="수취인 통장 표시내용 입력" onclick="">            
+                        <input type="text" aria-hidden="true" placeholder="내용 입력" title="수취인 통장 표시내용" >
+                    </div>
+                </div>
+                <p class="tip_info">받는분 통장에 표시할 내용(10자 이내) 입력하지 않을 경우 출금계좌 예금주</p>
+            </div>
+        </div>
+		
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>
+				<span><button type="button" class="btn primary lg">다음</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

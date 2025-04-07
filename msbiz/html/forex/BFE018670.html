@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>-[내용변경신청]송금내용변경 정보입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<div id="wrap"><!-- wrap -->
+
+    <!-- 220729 리웍 -->
+    <div id="content">
+        <h1 class="h1">대상송금정보</h1>
+        
+        <div class="section">
+            <div class="list_data_group">
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">송금관리번호</div>
+                        <div class="value"><span class="number">OT07562204000044</span></div>
+                    </li>
+                    <li>
+                        <div class="key">송금일</div>
+                        <div class="value"><span class="number">2022.05.31</span></div>
+                    </li>
+                    <!-- 220825 추가 -->
+                    <li>
+                        <div class="key">송금액</div>
+                        <div class="value">USD <span class="number">10.00</span></div>
+                    </li>
+                    <!-- //220825 추가 -->
+                    <li>
+                        <div class="key">미화환산액(USD)</div>
+                        <div class="value">USD <span class="number">10.00</span></div>
+                    </li>
+                    <li>
+                        <div class="key">받는분</div>
+                        <div class="value"><span>HEUNGMIN SON</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">송금정보변경내용</h2>
+            <p class="p">변경하시고자 하는 항목을 누르시면 입력화면이 나타납니다.</p>
+
+            <ul class="list_acco js_accordion toggle gap_xxxs">
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="true">받는은행</a>
+                    <div class="toggle_panel" role="region">
+                    
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_tit">변경전</div>
+                            <!-- 220825 수정 -->
+                            <div class="form_row">
+                                <div class="form_txt">RECEIVING BANK NAME (from original DB)</div>
+                            </div>
+                            <div class="form_row">
+                                <div class="form_txt">RECEIVING BANK ADDRESS (from original DB)</div>
+                            </div>
+                            <!-- //220825 수정 -->
+                        </div>
+                    
+                        <div class="form_group">
+                            <div class="form_tit">변경후</div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" id="id01" placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 이내 입력" title="변경후"> <!-- 221014 타이틀 수정 -->
+                                </div>
+                            </div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" id="id02" placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 이내 입력" title="변경후"> <!-- 221014 타이틀 수정 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="true">받는분</a>
+                    <div class="toggle_panel" role="region">
+                    
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_tit">변경전</div>
+                            <!-- 220825 수정 -->
+                            <div class="form_row">
+                                <div class="form_txt">RECEIVING BANK NAME (from original DB)</div>
+                            </div>
+                            <div class="form_row">
+                                <div class="form_txt">RECEIVING BANK ADDRESS (from original DB)</div>
+                            </div>
+                            <!-- //220825 수정 -->
+                        </div>
+                        
+                    
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_tit">변경후</div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" id="id01" placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 이내 입력" title="변경후"> <!-- 221014 타이틀 수정 -->
+                                </div>
+                            </div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" id="id02" placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 이내 입력" title="변경후"> <!-- 221014 타이틀 수정 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="true">받는분계좌번호</a>
+                    <div class="toggle_panel" role="region">
+                    
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_tit">변경전</div>
+                            <!-- 220825 수정 -->
+                            <div class="form_row">
+                                <div class="form_txt">1234567890</div>
+                            </div>
+                            <!-- //220825 수정 -->
+                        </div>
+                        
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_tit">변경후</div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" id="id01" placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 이내 입력" title="변경후"> <!-- 221014 타이틀 수정 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="true">받는분연락처</a>
+                    <div class="toggle_panel" role="region">
+                    
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_tit">변경전</div>
+                            <!-- 220825 수정 -->
+                            <div class="form_row">
+                                <div class="form_txt">1234567890</div>
+                            </div>
+                            <!-- //220825 수정 -->
+                        </div>
+                        
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_tit">변경후</div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" id="id01" placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 이내 입력" title="변경후"> <!-- 221014 타이틀 수정 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </li>
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="true">중계은행</a>
+                    <div class="toggle_panel" role="region">
+                    
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_tit">변경전</div>
+                            <!-- 220825 수정 -->
+                            <div class="form_row">
+                                <div class="form_txt"></div>
+                            </div>
+                            <!-- //220825 수정 -->
+                        </div>
+                        
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_tit">변경후</div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" id="id01" placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 이내 입력" title="변경후"> <!-- 221014 타이틀 수정 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </li>
+                <li>
+                <a href="#none" role="button" class="tit" aria-expanded="true">기타변경사항</a>
+                    <div class="toggle_panel" role="region">
+
+                        <div class="form_group fr_txit"><!-- 221028 디자인요청 - 글자 크기, 굵기 처리 수정 -->
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" id="id01" placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 이내 입력" title="기타변경사항"> <!-- 221014 타이틀 수정 -->
+                                </div>
+                            </div>
+                            <div class="form_row">
+                                <div class="input">
+                                    <input type="text" id="id02" placeholder="영문, 숫자, 특수기호 /-?().,+ 로 50자 이내 입력" title="기타변경사항"> <!-- 221014 타이틀 수정 -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>  
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">수수료결제정보</h2>
+            <div class="form_group">
+                <div class="form_tit">수수료출금계좌번호(원화)</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" placeholder="수수료출금계좌번호 선택" title="출금계좌정보 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <!-- 220908 추가 -->
+                <div class="form_btm_wrap right">
+                    <p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>           
+                </div>
+                <!-- //220908 추가 -->
+            </div>
+
+            <div class="form_group tel">
+                <div class="form_tit">보내는분연락처</div>
+                <div class="form_row col">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="연락처 앞자리">02</button> <!-- 220922 타이틀 수정 -->
+                    </div>
+                    <div class="input" role="button">
+                        <input type="tel" id="id04" value="" title="전화번호"> <!-- 220922 타이틀 수정 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul">
+                    <li>기존 보내신 해외송금 정보를 해외은행에 변경 요청하는 화면입니다.</li>
+                    <li>요청하신 변경내용은 중계은행, 받는 은행의 사정에 따라 반영되지 않을 수 있습니다. </li>
+                    <li>수수료는 5,000원(전신료)이며 요청하신 내용이 해외은행 업무처리에 반영되지 않더라도 반환되지 않습니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+
+    </div>
+    <!-- //220729 리웍 -->
+</div><!-- //wrap -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[전자금융거래제한계좌 등록]등록 계좌번호 선택</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="뱅킹관리" href="/msbiz/app/css/banking_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <div class="step_wrap js_step">    
+            <div class="step" role="img" aria-label="총 2단계 중 현재 1단계">
+                <span class="current">1</span><span class="mark">/</span><span class="total">2</span>
+            </div>
+            <h1 class="h1">등록 계좌번호 선택</h1>
+        </div>
+
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>전자금융거래제한등록은 인증서를 이용한 온라인 신청 및 영업점에서의 등록이 가능하나 해제는 반드시 영업점 창구에서만 가능합니다.</li>
+                <li>전자금융거래제한계좌 등록은 한번에 최대 5개씩 등록하실 수 있습니다.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="h2">계좌번호 선택</h2>
+            <div class="form_group">
+                <div class="form_tit">계좌종류 선택</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="계좌종류 선택">입출금 계좌</button><!-- 220729 class="active" 추가 -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form_group">
+                <div class="form_tit">계좌번호 선택</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn active" title="계좌번호 선택">432102-01-271831 : 상품명</button><!-- 220729 class추가 및 텍스트수정 -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="btn_cnt_wrap">
+                <span><button type="button" class="btn primary lg">등록
+                </button></span>
+            </div>
+        </div>
+
+        <hr class="hr_divide">
+
+        <div class="section">
+            <h2 class="h2">등록 계좌번호</h2>
+            <ul class="list_link del btl">
+                <li>
+                    <div class="inr">
+                        <div class="acc_wrap">
+                            <div class="acc_bank col md gap_0"><!-- 220729 class="gap_0" 추가 -->
+                                <!-- <span class="icon_bank_020"></span> 아이콘 있을 경우 -->
+                                <!-- <span class="bk_name">국민(004)</span> -->
+                                <span class="bk_num">574498-90-009768</span>
+                            </div>
+                            <div class="acc_name">일반보통예금</div>
+                        </div>
+                        <button class="btn_ico_34"><i class="ico_20_circle_del"></i><span class="hidden">삭제</span></button>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <div class="acc_wrap">
+                            <div class="acc_bank col md gap_0"><!-- 220729 class="gap_0" 추가 -->
+                                <span class="bk_num">000000-00-000000</span>
+                            </div>
+                            <div class="acc_name">일반보통예금</div>
+                        </div>
+                        <button class="btn_ico_34"><i class="ico_20_circle_del"></i><span class="hidden">삭제</span></button>
+                    </div>
+                </li>
+                <li>
+                    <div class="inr">
+                        <div class="acc_wrap">
+                            <div class="acc_bank col md gap_0"><!-- 220729 class="gap_0" 추가 -->
+                                <span class="bk_num">000000-00-000000</span>
+                            </div>
+                            <div class="acc_name">사업자전용예금</div>
+                        </div>
+                        <button class="btn_ico_34"><i class="ico_20_circle_del"></i><span class="hidden">삭제</span></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="result nodata sm">
+            <p class="tit">등록한 계좌번호가 없습니다.</p>
+        </div>
+        
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">확인</button></span>
+            </div>
+        </div>
+
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

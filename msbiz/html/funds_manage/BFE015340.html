@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[통합카드조회]승인내역 상세</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content"><!-- 220729 리웍: 클래스 삭제 -->
+
+            <h1 class="h1">카드상세</h1>
+            <div class="section">
+                <div class="acc_pannel open btl">
+                    <div class="acc_wrap">
+                        <div class="acc_name">%카드명222%</div>
+                        <div class="acc_num"><span class="number">1658-****-****-1699</span></div>
+                        <div class="acc_top_info divide">
+                            <span class="txt">㈜사업자명</span>
+                            <span class="txt">부서명</span>
+                            <span class="txt">(구분)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab_wrap gap_md">
+                <div class="tab_list" role="tablist">
+                    <div class="scroll_wrap">
+                        <a href="#" class="active">승인내역</a>
+                        <a href="#">청구내역</a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <div class="section"><!-- 220816 수정: 클래스수정 --><!-- 220729 리웍: 클래스추가 -->
+
+                        <!-- 220816 수정: '일별/주별'선택 UI 변경 -->
+                        <div class="tab_wrap box outline">
+
+                            <!-- 탭메뉴 -->
+                            <!-- 220818 수정: 마크업 수정 -->
+                            <div class="tab_list">
+                                <a href="#" class="active">일별</a>
+                                <a href="#">주별</a>
+                            </div>
+                            <!--// 220818 수정: 마크업 수정 -->
+
+                            <!-- 220819 수정: 날짜표기 -->
+                            <div class="tab_list_cal">
+                                <!-- 개발 : 
+                                        이전,다음 버튼 비활성화시 속성 'disabled' 추가
+                                        아래의 일별, 주별 값 변경 시 버튼 텍스트도 함께 변경 필요
+                                        일별 -> 어제, 내일
+                                        주별 -> 지난주, 다음주
+                                -->
+                                <!-- 일별 -->
+                                <div class="cal_month fu_cal_month">
+                                    <button type="button" class="btn btn_ico prev"><span class="hidden">어제</span></button>
+                                    <span class="year_txt"><span class="number">2022.08.11</span></span>
+                                    <button type="button" class="btn btn_ico next"><span class="hidden">내일</span></button>
+                                </div>
+
+                                <!-- 주별
+                                <div class="cal_month fu_cal_month">
+                                    <button type="button" class="btn btn_ico prev"><span class="hidden">어제</span></button>
+                                    <span class="year_txt"><span class="number">2022.05.16 ~ 2022.05.22</span></span>
+                                    <button type="button" class="btn btn_ico next"><span class="hidden">내일</span></button>
+                                </div> -->
+                            </div>
+                            <!--// 220819 수정: 날짜표기 -->
+
+                            <div class="link_panel"><!-- 220818 수정: 클래스 수정 -->
+                                <!-- * 일별상세: 데이터 있을 경우 -->
+                                <h2 class="hidden">일별 상세</h2>
+                                <!-- 220729 리웍 -->
+                                <div class="acc_list_top mgt_0"><!-- 220822 수정: 클래스 추가 -->
+                                    <button type="button" class="btn_txt ico_reset sm2">승인내역 업데이트</button>
+                                    <span class="sep_txt">
+                                        <span class="number">2022.02.26 08:12:00</span> <em class="fc_nega">(오류)</em>
+                                    </span>
+                                </div>
+                                <div class="acc_list_wrap line"><!-- 220729 리웍: 클래스수정 -->
+                                    <!-- 국내, 일시불, 일별 -->
+                                    <div class="acc_pannel open">
+                                        <div class="acc_wrap">
+                                            <div class="acc_date">
+                                                <span class="number">2022.01.01</span>
+                                            </div>
+                                            <div class="acc_name lg">
+                                                Amazon
+                                            </div>
+                                            <div class="acc_sum_wrap">
+                                                <div class="acc_pay">
+                                                    <strong class="number">34,000</strong><span class="num_unit">원</span>
+                                                </div>
+                                                <div class="acc_pay_status">
+                                                    <span class="status">일시불</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //국내, 일시불, 일별 -->
+                                    <!-- 해외, 할부, 납부회차, 주별 -->
+                                    <div class="acc_pannel open">
+                                        <div class="acc_wrap">
+                                            <div class="acc_date">
+                                                <span class="number">2022.01.01 11:59</span>
+                                                <span class="sep_txt">해외</span>
+                                            </div>
+                                            <div class="acc_name lg">
+                                                Amazon
+                                            </div>
+                                            <div class="acc_sum_wrap">
+                                                <div class="acc_pay">
+                                                    <span class="num_unit">$</span><strong class="number">34.10</strong>
+                                                </div>
+                                                <div class="acc_pay_status">
+                                                    <span>12개월</span>
+                                                    <span class="status fc_nega">승인취소</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //해외, 할부, 납부회차, 주별 -->
+                                </div>
+                                <div class="btn_wrap center gap_sm">
+                                    <button type="button" class="btn_txt ico_add">더보기</button>
+                                </div>
+                                <!--// 220729 리웍 -->
+                                <!--// * 일별상세: 데이터 있을 경우 -->
+                                
+                                <!-- 구분용 마크업입니다.(개발X) -->
+                                <span class="ui-test-section" style="height: 20px;line-height: 20px;background-color: #333;color: #fff;font-size: 12px;font-weight: bold;text-align: center;display: block;margin:0 -2.4rem;">SAMPLE: 데이터 없을 경우</span>
+                                
+                                <!-- * 주별: 데이터 없을경우  -->
+                                <h2 class="hidden">주별 상세</h2>
+                                <div class="acc_list_top bdl">
+                                    <button type="button" class="btn_txt ico_reset sm2">승인내역 업데이트</button>
+                                    <span class="sep_txt">
+                                        <span class="number">2022.02.26 08:12:00</span> <em class="fc_nega">(오류)</em>
+                                    </span>
+                                </div>
+                                <!-- 목록 없음 -->
+                                <div class="result nodata sm"><!-- 220729 리웍: 클래스추가 -->
+                                    <p class="tit">보유내역이 없습니다.</p>
+                                </div>
+                                <!-- //목록 없음 -->
+                                <!--// * 주별: 데이터 없을경우  -->
+                            </div>
+                            
+                        </div>
+                        <!--// 220816 수정: '일별/주별'선택 UI 변경 -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>승인내역상세와 청구내역상세 각 영역에 있는 [승인내역 업데이트], [청구내역 업데이트]버튼을 통해 최신 내역을 확인하실 수 있습니다.</li>
+                        <li>'다른금융 등록/관리&gt;조회/인증서정보 변경'에서 로그인정보를 등록하실 수 있습니다.</li><!-- 220907 수정: 메뉴경로 업데이트 --><!-- 220729 리웍: 엔티티코드 수정 -->
+                    </ul>
+                </div>
+            </div>
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

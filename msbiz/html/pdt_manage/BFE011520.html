@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>신규대출상담</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+	<!-- 페이지별선언 -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+	<!-- 220729 리웍 -->
+    <div id="content">
+		<div class="step_wrap js_step">    
+			<div class="step" role="img" aria-label="총 6단계 중 현재 5단계">
+				<span class="current">5</span><span class="mark">/</span><span class="total">6</span>
+			</div>
+			<h1 class="h1">서류제출 안내</h1>
+		</div>
+
+		<!-- 220812 수정 : 서류제출 안내 -->
+		<div>
+			<div class="result nodata">
+				<p class="tit">보다 정확한 심사를 위해<br>서류를 제출해 주세요.</p>
+				<p class="txt">[다음] 버튼을 선택하여 서류제출을 진행해 주세요.</p><!-- 220831 SR 추가 -->
+			</div>
+		</div>
+		<!-- 220812 수정 : 서류제출 안내 -->
+
+		<!-- 서류제출 실패 -->
+		<div>
+			<div class="result fail">
+				<p class="tit">서류제출에 실패하였습니다.</p>
+			</div>
+			<div class="section">
+				<div class="result_etc">
+					<!-- 서류제출 실패 -->
+					<ul class="depth bul sm">
+						<li>다시 한번 정보조회를 희망하실 경우 재시도를, 원하지 않으실 경우 다음 버튼을 선택하시기 바랍니다.</li>
+						<li>[재시도]를 선택할 경우에는 '행정기관정보조회'에 다시 인증서 서명이 필요합니다.</li>
+						<li>☎ 전용상담번호 1644-0360</li>
+					</ul>
+
+					<!-- 홈택스에 등록되지 않은 인증서 -->
+					<ul class="depth bul sm">
+						<li>국세청 홈택스에 <strong>등록되지 않은 인증서</strong> 입니다.</li>
+						<li>국세청 홈택스에서 인증서 등록거래를 먼저 진행해주세요.</li>
+					</ul>
+
+					<!-- 사업자등록증명 스크래핑 오류 -->
+					<ul class="depth bul sm">
+						<li>아래 서류가 미제출되었습니다. 서류가 제출되지 않으면 대출신청이 진행되지 않습니다. 다시 시도하시겠습니까?</li>
+						<li><strong>미제출된 서류 : 사업자등록증명</strong></li>
+					</ul>
+
+					<!-- 휴폐업조회 스크래핑 오류 -->
+					<ul class="depth bul sm">
+						<li>아래 서류가 미제출되었습니다. 서류가 제출되지 않으면 대출신청이 진행되지 않습니다. 다시 시도하시겠습니까?</li>
+						<li><strong>미제출된 서류 : 휴폐업조회결과표</strong></li>
+					</ul>
+
+					<!-- 부가가치세과세표준증명 스크래핑 오류 -->
+					<ul class="depth bul sm">
+						<li>아래 서류가 미제출되었습니다. 서류가 제출되지 않으면 대출신청이 진행되지 않습니다. 다시 시도하시겠습니까?</li>
+						<li><strong>미제출된 서류 : 부가가치세과세표준증명</strong></li>
+					</ul>
+
+					<!-- 소득금액증명 스크래핑 오류 -->
+					<ul class="depth bul sm">
+						<li>소득금액증명 서류가 미제출되었습니다. 소득금액증명이 제출되지 않으면 추후 대출이 거절 될 수 있습니다.</li>
+						<li><strong>개인인증서</strong>로 다시 시도하시거나, [계속 진행]을 눌러 소득금액증명 없이 신청해주시기 바랍니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //서류제출 실패 -->
+
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span>
+				<span><button type="button" class="btn primary lg" onclick="UICommon.Layer.open('#BFE011520')">다음</button></span>
+				<span><button type="button" class="btn primary lg">서류제출</button></span><!-- KB국민인증서로 진행 시 --><!-- 220729 리웍 -->
+			</div>
+		</div> 
+	</div><!-- //content -->
+
+	<!-- 220831 SR 추가 -->
+	<div id="BFE011520" class="popup modal" role="dialog" aria-hidden="true">
+		<article class="pop_wrap">
+			<div class="pop_head">
+				<div>
+					<h1>서류제출 안내</h1>
+				</div>
+			</div>
+			<div class="pop_body">
+				<div class="pop_section">
+					<ul class="depth bul gap_0">
+						<li>오류내용 : <span>$에러 예시 문구입니다.$</span></li>
+						<li>공공 마이데이터 서비스 연동 중 오류가 발생하였습니다.</li>
+						<li>공공 마이데이터 연동으로 계속 진행하시려면 [재시도]를 선택해주세요. [서류제출생략]을 선택하시면 자동서류제출 없이 기한연장신청이 완료되지만 정확한 심사진행을 위해 영업점 직원이 별도 서류제출을 요청할 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop_foot">
+				<div>
+					<div class="btn_area">
+						<span><button type="button" class="btn secondary lg" data-action="close">다른방법선택</button></span>
+						<span><button type="button" class="btn primary lg ui_pop_close">재시도</button></span>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+		</article>
+	</div>
+	<!-- //220831 SR 추가 -->
+	<!-- //220729 리웍 -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

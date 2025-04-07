@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[자기앞수표 조회]자기앞수표조회</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/inquiry.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <h1 class="hidden">자기앞수표조회</h1>
+        <div class="inform_top_wrap">
+            <ul class="depth">
+                <li>국민은행 및 다른 은행 자기앞수표의 사고신고 내역을 조회할 수 있습니다.<br>(농협중앙회 및 단위농협 자기앞수표는 조회 불가)</li>
+            </ul>
+        </div>
+        <div class="img">
+            <img src="/msbiz/app/img/inquiry/check_sample.jpg" alt="자기앞수표 샘플" />
+        </div>
+        <div class="section">
+            <h2 class="h2">수표정보입력</h2>
+            <!-- fieldset -->
+            <div class="fieldset">
+                <div class="form_group">
+                    <div class="form_tit">
+                        <label for="chkNum">수표번호<span class="ico_num">1</span></label>
+                    </div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" id="chkNum" placeholder="숫자만 입력"><!-- 220729 리웍 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">수표금액<span class="ico_num">2</span></div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="수표금액 선택">10만원권</button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="tel" value="100,000" readonly="" title="수표금액">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">수표발행일자<span class="ico_num">3</span></div>
+                    <div class="form_row">
+                        <div class="input date">
+                            <input type="tel" maxlength="6" title="수표발행일자" value="2022.04.21" placeholder="날짜입력">
+                            <button type="button" class="btn_cal" onclick="UICommon.Layer.open('#chkDatePop')"><span class="hidden">날짜선택</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">
+                        <label for="chkOffice">수표행점번호<span class="ico_num">4</span></label>
+                    </div>
+                    <div class="form_row">
+                        <div class="input">
+                            <input type="text" id="chkOffice" placeholder="숫자만 입력"><!-- 220729 리웍 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">수표발행은행</div>
+                    <div class="form_row">
+                        <div class="select">
+                            <button type="button" class="select_btn active" title="수표발행은행 선택" onclick="UICommon.Layer.open('#chkBankPop')">KB국민</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn primary lg" disabled>조회</button></span>
+			</div>
+		</div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+<!-- 수표발행일자 팝업 -->
+<div id="chkDatePop" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop_wrap">
+        <div class="pop_head">
+            <div>
+                <h1>수표발행일자</h1>
+            </div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_section">
+                <div class="ly_calendar">
+                    <div class="cal_month">                    
+                        <button type="button" class="btn btn_ico first" disabled=""><span class="hidden">전년도</span></button>
+                        <button type="button" class="btn btn_ico prev" disabled=""><span class="hidden">이전달</span></button>   
+                        <span class="year_txt"><span class="number">2018.03</span></span>    
+                        <button type="button" class="btn btn_ico next"><span class="hidden">다음달</span></button>
+                        <button type="button" class="btn btn_ico end"><span class="hidden">다음년도</span></button>
+                        <button type="button" class="btn today">오늘<span class="hidden">선택</span></button>                    
+                    </div>
+                    <table class="cal_tbl">
+                        <caption>달력-일,월,화,수,목,금,토 항목으로 구성</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="sunday">일</th>
+                                <th scope="col">월</th>
+                                <th scope="col">화</th>
+                                <th scope="col">수</th>
+                                <th scope="col">목</th>
+                                <th scope="col">금</th>
+                                <th scope="col" class="saturday">토</th>
+                            </tr>
+                        </thead>
+                        <tbody>                 
+                            <tr>
+                                <td class="sunday"></td>
+                                <td></td>
+                                <td></td>
+                                <td><button type="button" class="selectable">1</button></td>
+                                <td><button type="button" class="selectable">2</button></td>
+                                <td><button type="button" class="selectable">3</button></td>
+                                <td class="saturday"><button type="button">4</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sunday"><button type="button">5</button></td>
+                                <td><button type="button" class="on" title="선택 됨">6</button></td><!-- 선택 됨 -->
+                                <td><button type="button" class="today" title="오늘 날짜">7</button></td> <!-- 오늘 날짜 표시 -->
+                                <td><button type="button" class="selectable">8</button></td>
+                                <td><button type="button" class="today on" title="오늘 날짜, 선택 됨">9</button></td><!-- 오늘 날짜 + 선택 -->
+                                <td><button type="button" class="selectable">10</button></td>
+                                <td class="saturday"><button type="button">11</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sunday"><button type="button">12</button></td>
+                                <td><button type="button" class="selectable">13</button></td>
+                                <td><button type="button" class="selectable">14</button></td>
+                                <td><button type="button" class="selectable">15</button></td>
+                                <td><button type="button" class="selectable">16</button></td>
+                                <td><button type="button" class="selectable">17</button></td>
+                                <td class="saturday"><button type="button">18</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sunday"><button type="button">19</button></td>
+                                <td><button type="button" class="selectable">20</button></td>
+                                <td><button type="button" class="selectable">21</button></td>
+                                <td><button type="button" class="selectable">22</button></td>
+                                <td><button type="button" class="selectable">23</button></td>
+                                <td><button type="button" class="selectable">24</button></td>
+                                <td class="saturday"><button type="button">25</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sunday"><button type="button">26</button></td>
+                                <td><button type="button" class="selectable">27</button></td>
+                                <td><button type="button" class="selectable">28</button></td>
+                                <td><button type="button" class="selectable">29</button></td>
+                                <td><button type="button" class="selectable">30</button></td>
+                                <td><button type="button" class="selectable">31</button></td>
+                                <td class="saturday"></td>
+                            </tr>                 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </article>
+</div>
+<!-- //수표발행일자 팝업 -->
+<!-- 수표발행은행 팝업 -->
+<div id="chkBankPop" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop_wrap">
+        <div class="pop_head">
+            <div>
+                <h1>수표발행은행</h1>
+            </div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_section">
+                <ul class="list_item_select bank_list transfer">
+                    <li><a href="#none"><span class="icon_bank_004 md"></span><strong>KB국민</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_003 md"></span><strong>기업</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_011 md"></span><strong>농협</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_088 md"></span><strong>신한</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_071 md"></span><strong>우체국</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_023 md"></span><strong>SC제일</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_081 md"></span><strong>하나</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_027 md"></span><strong>한국씨티</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_020 md"></span><strong>우리</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_039 md"></span><strong>경남</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_034 md"></span><strong>광주</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_031 md"></span><strong>대구</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_055 md"></span><strong>도이치</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_032 md"></span><strong>부산</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_002 md"></span><strong>산업</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_007 md"></span><strong>수협</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_037 md"></span><strong>전북</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_035 md"></span><strong>제주</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_045 md"></span><strong>새마을금고</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_048 md"></span><strong>신협</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_064 md"></span><strong>산림조합</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_054 md"></span><strong>HSBC</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_050 md"></span><strong>저축은행</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_060 md"></span><strong>뱅크오브아메리카</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_089 md"></span><strong>케이뱅크</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_090 md"></span><strong>카카오뱅크</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_057 md"></span><strong>JP모간체이스</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_061 md"></span><strong>BNP파리바</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_067 md"></span><strong>중국건설은행</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_062 md"></span><strong>중국공상</strong></a></li>
+                    <li><a href="#none"><span class="icon_bank_063 md"></span><strong>중국은행</strong></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </article>
+</div>
+<!-- //수표발행은행 팝업 -->
+
+</body>
+</html>

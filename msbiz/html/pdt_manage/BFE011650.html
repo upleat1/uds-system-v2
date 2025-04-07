@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[신규대출상담]법인 적합성 및 적정성 확인</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+	<!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="상품관리" href="/msbiz/app/css/pdt_manage.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap">
+    <div id="content" >
+		<div class="step_wrap js_step">    
+            <div class="step" role="img" aria-label="총 6단계 중 현재 4단계">
+                <span class="current">4</span><span class="mark">/</span><span class="total">6</span>
+            </div>
+            <h1 class="h1">적합성 및 적정성 확인</h1>
+        </div>
+        <div class="section">
+
+            <!-- 221026 추가 -->
+            <div class="form_group">
+                <div class="form_tit">
+                    금융소비자구분
+                    <div class="tooltip_limited">
+                        <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">금융소비자구분 자세히보기</span></button></p>
+                        <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                            <p class="tooltip_tit">일반금융소비자</p>
+                            <div class="tooltip_cont"> 
+                                <ul class="bul">
+                                    <li>개인사업자, 4인 이하 법인(상시근로자수 확인 서류 불가 포함)</li>
+                                </ul>
+                            </div>
+                            <p class="tooltip_tit gap_sm">전문금융소비자</p>
+                            <div class="tooltip_cont"> 
+                                <ul class="bul">
+                                    <li>국가, 한국은행, 금융회사(은행 포함), 상시근로자수 5인이상 법인, 조합, 단체 등</li>
+                                </ul>
+                            </div>
+                            <p class="tooltip_cont gap_sm">
+                                ※ 5인이상 법인은 비대면 신청인 경우 일반금융소비자로 간주하며, 전문금융 소비자로 신청을 원하는 경우는 확인서류를 준비하여 가까운 영업점을 방문하여 주시기 바랍니다.
+                            </p>
+                            <p class="tooltip_cont gap_sm">
+                                ※ 상시근로자수 확인서류 : 원천징수이행상황보고서, 4대보험(국민연금, 건강보험, 산재보험, 고용보험) 가입자명부
+                            </p>  
+                            <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <p class="form_txt">일반금융소비자</p>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">상시근로자수</div>
+                <div class="form_row">
+                    <p class="form_txt">비대면 상시근로자수 확인서류 제출 불가</p>
+                </div>
+            </div>
+            <!-- //221026 추가 -->
+            
+            <!-- 221115 추가 -->
+            <div class="form_group">
+                <div class="form_tit">업력</div>
+                <div class="form_row">
+                    <p class="form_txt"><span class="number">5</span>년</p>
+                </div>
+            </div>
+            <!-- //221115 추가 -->
+
+            <div class="form_group">
+                <div class="form_tit">대출자금을 어느 목적으로 사용하시나요?</div><!-- 220729 리웍 -->
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="대출용도">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">총자산은 얼마이신가요?</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="총자산">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">매출액은 얼마이신가요?</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="연소득">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">총부채는 얼마이신가요?</div><!-- 220729 리웍 -->
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="총 부채">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">고정지출 금액은 어느 정도인가요?</div><!-- 220729 리웍 -->
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="고정지출">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <p class="tip_info">예시: 인건비(임금),사업장 임차료,관리비,보험료 등</p>
+            </div>
+            <div class="form_group">
+                <div class="form_tit">대출은 어떤 소득을 통해 갚게 될까요?</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="소득종류">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+            </div>
+            <!-- 220729 리웍 -->
+            <div class="form_group">
+                <div class="form_tit">신용</div>
+                <div class="form_row">
+                    <span class="rdoChk_group inline">
+                        <span class="selection">
+                            <input type="checkbox" id="checkType1_1">
+                            <label for="checkType1_1" class="label"><em>KB국민은행을 통한 신용정보 조회에 동의합니다.</em></label><!-- 220729 리웍 -->
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <!-- // 220729 리웍 -->
+        </div>
+        <div class="section">
+            <h2 class="h2">적합성·적정성 관련서류 교부</h2>
+            <div class="form_group email">
+                <div class="form_tit">이메일주소</div>
+                <div class="form_row col">
+                    <div class="input">
+                        <input type="text" title="ID" placeholder="아이디" value="">
+                    </div>
+                    <span class="space">@</span>
+                    <div class="select">
+                        <button type="button" class="select_btn" title="도메인 선택">도메인</button>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="input"><input type="text" value="" title="도메인 직접입력"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 220729 리웍 -->
+		<div class="section">
+            <p class="p bold">본인은 KB국민은행에 제공한 적합성·적정성 관련 정보와 관련하여 다음과 같은 사항을 확인합니다.</p>
+            <ol class="depth num">
+                <li>본인이 제공한 정보가 정확하지 않거나 정보에 변경사항이 발생한 경우에는 적합성, 적정성 판단이 달라질수 있음을 설명받았습니다.</li>
+                <li>대출성 상품이 적정하지 않다고 판단되는 경우 고객님에게 적정성 판단보고서(LMS)를 제공합니다.</li>
+                <li>상기 목적을 위해 본인의 개인 정보를 수집, 이용, 제공하는 것에 동의 합니다.</li>
+            </ol>
+            <div class="rdoChk_box gap_sm_3">
+                <span class="selection">
+                    <input type="radio" id="radioBox1_1" name="radio_box1" checked="">
+                    <label for="radioBox1_1" class="label"><em>동의함</em></label>
+                </span>
+                <span class="selection">
+                    <input type="radio" id="radioBox1_2" name="radio_box1">
+                    <label for="radioBox1_2" class="label"><em>동의하지 않음</em></label>
+                </span>
+            </div>
+		</div>
+        <!-- //220729 리웍 -->
+        
+		<div class="btn_confirm_wrap">
+			<div class="btn_area">
+				<span><button type="button" class="btn secondary lg">취소</button></span>
+				<span><button type="button" class="btn primary lg" disabled>다음</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

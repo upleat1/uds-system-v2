@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[금융캘린더]내 정보 관리_ 금융캘린더_내 일정 등록/관리</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/my.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <h1 class="h1">내 일정 등록/관리</h1>
+        <div class="section">
+            <div class="form_group">
+                <div class="form_tit">날짜 선택</div>
+                <div class="form_row">
+                    <div class="input date">
+                        <input type="tel" maxlength="6" title="YYYY.MM.DD 날짜입력" placeholder="YYYY.MM.DD">
+                        <button type="button" class="btn_cal"><span class="hidden">날짜선택</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="form_group js_trans">
+                <div class="form_tit">일정 작성</div>
+                <div class="form_row">
+                    <div class="input">
+                        <input type="text" placeholder="일정을 작성해주세요.(최대 20자)" title="일정을 작성해주세요.(최대 20자)">
+                    </div>
+                </div>
+            </div>
+            <!-- 220802 버튼추가 -->
+            <div class="form_btm_full_wrap">
+                <span><button type="button" class="btn outline md">등록</button></span>
+            </div>
+            <!-- //220802 버튼추가 -->
+        </div>
+        <hr class="hr_divide">
+        <div class="section">
+            <div class="my_date_work">
+                <h2 class="h2">등록된 내 일정</h2>
+                <ul class="fin_cal_legend">
+                    <li class="tra">
+                        <span>나의 일정</span>
+                        <button type="button" class="btn_txt link sm">삭제</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">확인</button></span>  
+            </div>
+        </div>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

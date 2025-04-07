@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[연락처 이체]입력확인</title>
+	<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+	<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+	<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+	<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+	<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+	<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+	<script src="/msbiz/app/js/common_ui.js"></script> 
+	<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+	<!-- 업무 관련 CSS 선언 START -->
+	<link rel="stylesheet" data-description="이체" href="/msbiz/app/css/transfer.css">
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->
+	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <h1 class="hidden">연락처 이체 입력확인</h1>
+        <div class="result check many">
+            <div class="result_ico"></div><!-- 220729 : 마크업 추가 -->
+            <p class="txt_trans"><strong><span>김국민</span> 님께 연락처로<br><span class="number">50,000</span><span class="num_unit">원</span></strong>을<br>이체 신청하시겠습니까?</p>
+            <div class="acc_bank col">
+                <span class="ico_contact"></span><span class="bk_num number">010-1234-4567</span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="list_data_group">
+				<h2 class="h3">입금정보</h2>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">출금계좌</div>
+                        <!-- 220729 리웍 -->
+                        <div class="value">
+                            <div class="bank_name"><span class="icon_bank_004 md"></span>KB국민</div>
+                            <div class="account_num"><span class="number">432102-01-271831</span></div>
+                        </div>
+                        <!-- //220729 리웍 -->
+                    </li>
+                    <li>
+                        <div class="key">받는분</div>
+                        <div class="value">김국민</div>
+                    </li>
+                    <!-- 220729 : 삭제 -->
+                    <!-- <li>
+                        <div class="key">받는분 휴대폰번호</div>
+                        <div class="value"><span class="number">010-8901-****</span></div>
+                    </li> -->
+                    <!-- //220729 : 삭제 -->
+                    <li>
+                        <div class="key">이체금액</div>
+                        <div class="value"><span class="number fc_posi">50,000</span><span class="num_unit">원</span></div><!-- 221018 : class 변경 fc_nega -> fc_posi -->
+                    </li>
+                    <li>
+                        <div class="key">받는분 통장 메모</div>
+                        <div class="value">라마바(무신사)</div>
+                    </li>
+                    <li>
+                        <div class="key">내 통장 메모</div>
+                        <div class="value"></div>
+                    </li>
+                </ul>
+                <p class="tip_info">받는 분이 KB국민은행 계좌가 아닌 다른 은행 계좌로 입금하면 수수료가 발생할 수 있습니다.</p>
+			</div>
+
+            <div class="btn_cnt_wrap gap_md"><!-- 220729 : 클래스 수정 -->
+                <span><button type="button" class="btn outline md">수정</button></span>
+            </div>
+
+            <div class="rdoChk_group gap_sm"><!-- 220729 : 클래스 수정 -->
+                <span class="selection">
+                    <input type="checkbox" id="checkCard">
+                    <label for="checkCard" class="label"><em>메시지 카드 선택</em></label>
+                </span>
+            </div>
+        </div>
+
+        <div class="btn_confirm_wrap">
+			<div class="btn_area">
+                <span><button type="button" class="btn secondary lg">취소</button></span>  
+				<span><button type="button" class="btn primary lg">확인</button></span>
+			</div>
+		</div>
+	</div><!-- //content -->
+</div><!-- //wrap -->
+
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

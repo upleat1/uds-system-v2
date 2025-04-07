@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[공통]주소검색_상세주소입력(도로명주소)(팝)_결과없음</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content" data-ui="full_pop">
+            <div class="tab_wrap">
+                <div class="tab_list" role="tablist">
+                    <div class="scroll_wrap">
+                        <a href="#">통합검색</a>
+                        <a href="#">도로명주소</a>
+                        <a href="#" class="active">지번주소</a>
+                    </div>
+                </div>
+                <div class="link_panel">
+                    <h2 class="hidden">지번주소</h2>
+                    <div class="inform_top_wrap">
+                        <ul class="depth bul">
+                            <li>아래의 주소를 확인하시고 정확한 주소를 선택하신 후 확인버튼을 누르세요.</li>
+                            <li>정확한 우편물 발송을 위해 표준화 주소를 권장합니다.</li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <div class="fieldset">
+                            <h2 class="h2">표준화 지번주소</h2>
+                            <ul class="list_comp check">
+                                <li>
+                                    <span class="selection">
+                                        <input type="radio" name="radioType1" id="radioType1_1" checked="" aria-describedby="radioType1_1"><!-- 210803 접근성수정 -->
+                                        <label for="radioType1_1" class="label" aria-hidden="true"><em class="hidden">표준화 지번주소1 선택</em></label><!-- 210803 접근성수정 -->
+                                    </span>
+                                    <div class="addr_set vertical" id="radioType1_01" aria-hidden="true"><!-- 210803 접근성수정 -->
+                                        <div class="addr_row">
+                                            <span class="addr_tit">기본주소1</span><!-- 210804 접근성수정 -->
+                                            <span>[102-75] 경기 고양시 덕양구 읍내로</span>
+                                        </div>
+                                        <div class="addr_row">
+                                            <span class="addr_tit">상세주소</span>
+                                            <span>5-6 (고양동)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="selection">
+                                        <input type="radio" name="radioType1" id="radioType1_2" aria-describedby="radioType1_2"><!-- 210803 접근성수정 -->
+                                        <label for="radioType1_2" class="label" aria-hidden="true"><em class="hidden">표준화 지번주소2 선택</em></label><!-- 210803 접근성수정 -->
+                                    </span>
+                                    <div class="addr_set vertical" id="radioType1_02" aria-hidden="true"><!-- 210803 접근성수정 -->
+                                        <div class="addr_row">
+                                            <span class="addr_tit">기본주소2</span><!-- 210804 접근성수정 -->
+                                            <span>[102-75] 경기 고양시 덕양구 읍내로</span>
+                                        </div>
+                                        <div class="addr_row">
+                                            <span class="addr_tit">상세주소</span>
+                                            <span>5-6 (고양동)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="fieldset">
+                            <h2 class="h2">표준화 도로명주소</h2>
+                            <ul class="list_comp check">
+                                <li>
+                                    <span class="selection">
+                                        <input type="radio" name="radioType1" id="radioType1_3" aria-describedby="radioType1_3"><!-- 210803 접근성수정 -->
+                                        <label for="radioType1_3" class="label" aria-hidden="true"><em class="hidden">표준화 도로명주소1 선택</em></label><!-- 210803 접근성수정 -->
+                                    </span>
+                                    <div class="addr_set vertical" id="radioType1_03" aria-hidden="true"><!-- 210803 접근성수정 -->
+                                        <div class="addr_row">
+                                            <span class="addr_tit">기본주소1</span><!-- 210804 접근성수정 -->
+                                            <span>[102-75] 경기 고양시 덕양구 읍내로</span>
+                                        </div>
+                                        <div class="addr_row">
+                                            <span class="addr_tit">상세주소</span>
+                                            <span>5-6 (고양동)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="selection">
+                                        <input type="radio" name="radioType1" id="radioType1_4" aria-describedby="radioType1_4"><!-- 210803 접근성수정 -->
+                                        <label for="radioType1_4" class="label" aria-hidden="true"><em class="hidden">표준화 도로명주소2 선택</em></label><!-- 210803 접근성수정 -->
+                                    </span>
+                                    <div class="addr_set vertical" id="radioType1_04" aria-hidden="true"><!-- 210803 접근성수정 -->
+                                        <div class="addr_row">
+                                            <span class="addr_tit">기본주소2</span><!-- 210804 접근성수정 -->
+                                            <span>[102-75] 경기 고양시 덕양구 읍내로</span>
+                                        </div>
+                                        <div class="addr_row">
+                                            <span class="addr_tit">상세주소</span>
+                                            <span>5-6 (고양동)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="fieldset">
+                            <h2 class="h2">입력 주소</h2>
+                            <ul class="list_comp check">
+                                <li>
+                                    <span class="selection">
+                                        <input type="radio" name="radioType1" id="radioType1_5" aria-describedby="radioType1_5"><!-- 210803 접근성수정 -->
+                                        <label for="radioType1_5" class="label" aria-hidden="true"><em class="hidden">입력 주소1 선택</em></label><!-- 210803 접근성수정 -->
+                                    </span>
+                                    <div class="addr_set vertical" id="radioType1_05" aria-hidden="true"><!-- 210803 접근성수정 -->
+                                        <div class="addr_row">
+                                            <span class="addr_tit">기본주소1</span><!-- 210804 접근성수정 -->
+                                            <span>[102-75] 경기 고양시 덕양구 읍내로</span>
+                                        </div>
+                                        <div class="addr_row">
+                                            <span class="addr_tit">상세주소</span>
+                                            <span>5-6 (고양동)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="selection">
+                                        <input type="radio" name="radioType1" id="radioType1_6" aria-describedby="radioType1_6"><!-- 210803 접근성수정 -->
+                                        <label for="radioType1_6" class="label" aria-hidden="true"><em class="hidden">입력 주소2 선택</em></label><!-- 210803 접근성수정 -->
+                                    </span>
+                                    <div class="addr_set vertical">
+                                        <div class="addr_row" id="radioType1_06" aria-hidden="true"><!-- 210803 접근성수정 -->
+                                            <span class="addr_tit">기본주소2</span><!-- 210804 접근성수정 -->
+                                            <span>[102-75] 경기 고양시 덕양구 읍내로</span>
+                                        </div>
+                                        <div class="addr_row">
+                                            <span class="addr_tit">상세주소</span>
+                                            <span>5-6 (고양동)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_confirm_wrap">
+                    <div class="btn_area">
+                        <span><button type="button" class="btn secondary lg">다시검색</button></span>  
+                        <span><button type="button" class="btn primary lg">확인</button></span>  
+                    </div>    
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <!--// 업무 HTML 선언 END -->
+
+
+</body>
+
+</html>

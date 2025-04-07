@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>[투자수익현황] 투자수익현황(팝)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/main.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->
+    <div id="wrap">
+        <div id="content" data-ui="full_pop">
+            <h1 class="h1">투자상품 포트폴리오</h1>
+            <div class="section">
+                <div class="invest_portfolio_head">
+                    <ul class="invest_num">
+                        <li><span class="lb">펀드상품</span><strong class="number">8</strong></li>
+                        <li><span class="lb">신탁상품</span><strong class="number">8</strong></li>
+                    </ul>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline md">전계좌조회 바로가기</button></span>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr_divide">
+            <div class="section_l">
+                <div class="invest_portfolio_list">
+                    <div class="invest_portfolio_item">
+                        <div class="tit">
+                            <span>
+                                <strong>펀드상품</strong>
+                            </span>
+                            <span class="right">
+                                <a href="#none" class="btn_txt ico_arr">펀드계좌조회</a>
+                            </span>
+                        </div>
+                        <div class="invest_data">
+                            <div class="tr_sel_acc_panel">
+                                <button type="button" class="acc" title="펀드계좌 선택">
+                                    <div class="acc_p_info">
+                                        <strong class="bk_num number">432102-01-271831</strong>
+                                        <span class="p_name">펀드명 노출</span>
+                                    </div>
+                                </button>
+                            </div>
+                            <ul class="amount_info">
+                                <li>
+                                    <span class="lb">출금금액</span>
+                                    <span class="val"><span class="number">10,000,000</span>원</span>
+                                </li>
+                                <li>
+                                    <span class="lb">수익률</span>
+                                    <span class="val"><span class="state_arr up" role="text"><em class="hidden">상승</em>4.5</span><span class="num_unit">%</span></span>
+                                    <!-- <span class="val"><span class="state_arr dowm" role="text"><em class="hidden">하락</em>4.5</span><span class="num_unit">%</span></span> 하락일 경우 -->
+                                    <!-- <span class="val"><span class="state_arr same" role="text"><em class="hidden">상승하락 없음</em>4.5</span><span class="num_unit">%</span></span> 상승하락 없음일 경우 -->
+                                </li>
+                            </ul>
+                            <ul class="amount_info total">
+                                <li>
+                                    <span class="lb">평가금액</span>
+                                    <strong class="val fs18"><strong class="number fs20">1,000,000,000,000</strong> 원</strong>
+                                </li>
+                                <li>
+                                    <span class="lb">총 투자금액</span>
+                                    <strong class="val"><strong class="number">1,000,000,000,000</strong> 원</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 상품 개수 체크 - 50개이상 -->
+                        <div class="result nodata sm">
+                            <p class="tit">보유하고 계신 투자상품이 많습니다.<br> 상품별 정확한 수익률은<br> 아래의 경로에서 조회가 가능합니다.</p>
+                            <div class="list_btm_wrap">
+                                <button type="button" class="btn outline sm">펀드계좌조회 바로가기</button>
+                            </div>
+                        </div>
+                        <!-- //상품 개수 체크 - 50개이상 -->
+                    </div>
+                    <div class="invest_portfolio_item">
+                        <div class="tit">
+                            <span>
+                                <strong>신탁상품</strong>
+                            </span>
+                            <span class="right">
+                                <a href="#none" class="btn_txt ico_arr">신탁계좌조회</a>
+                            </span>
+                        </div>
+                        <div class="invest_data">
+                            <div class="tr_sel_acc_panel">
+                                <button type="button" class="acc" title="신탁계좌 선택">
+                                    <div class="acc_p_info">
+                                        <strong class="bk_num number">432102-01-271831</strong>
+                                        <span class="p_name">신탁상품명 노출</span>
+                                    </div>
+                                </button>
+                            </div>
+                            <ul class="amount_info total">
+                                <li>
+                                    <span class="lb">평가금액</span>
+                                    <strong class="val fs18"><strong class="number fs20">1,000,000,000,000</strong> 원</strong>
+                                </li>
+                                <li>
+                                    <span class="lb">총 투자금액</span>
+                                    <strong class="val"><strong class="number">1,000,000,000,000</strong> 원</strong>
+                                    <span class="standard">(전일자기준)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 상품 개수 체크 - 50개이상 -->
+                        <div class="result nodata sm">
+                            <p class="tit">보유하고 계신 투자상품이 많습니다.<br> 상품별 정확한 수익률은<br> 아래의 경로에서 조회가 가능합니다.</p>
+                            <div class="list_btm_wrap">
+                                <button type="button" class="btn outline sm">신탁계좌조회 바로가기</button>
+                            </div>
+                        </div>
+                        <!-- //상품 개수 체크 - 50개이상 -->
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a href="#" class="now_p_banner invest">
+                    <strong class="lb">KB 기업상품</strong>
+                    <span class="val">KB의 더 많은 상품을<br> 알아보세요~!</span>
+                </a>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</body>
+<!-- 업무 SCRIPT START -->
+<script>
+    $(function(){
+    });
+</script>
+<!--// 업무 SCRIPT END -->
+</html>

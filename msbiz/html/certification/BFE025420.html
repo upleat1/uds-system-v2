@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[타행(기관)인증서 해제] 사용자정보입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="인증센터" href="/msbiz/app/css/certification.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+        <div id="content">
+            <!-- 220729 리웍 : 삭제 -->
+            <!-- <div class="h2 gap_xs_2">
+                <h1 class="h1 inline">사용자 정보입력</h1>
+                <div class="tooltip_limited middle">
+                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                        <div class="tooltip_cont"> 
+                            본인확인을 위해 인터넷뱅킹(사용자) ID 및 사업자등록번호를 입력해 주세요. <br>ID를 잃어버리신 분은 ID찾기를 통해 찾을 수 있습니다.
+                        </div>
+                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                    </div>
+                </div>
+            </div> -->
+            <!-- //220729 리웍 : 삭제 -->
+
+            <!-- 220729 리웍 : 추가 -->
+            <h1 class="h1">사용자 정보입력</h1>
+            <!-- //220729 리웍 : 추가 -->
+            <div class="section">
+                <div class="form_group js_trans">
+                    <!-- 220729 리웍 : 툴팁 추가-->
+                    <div class="form_tit">사용자ID
+                        <div class="tooltip_limited">
+                            <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
+                            <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
+                                <div class="tooltip_cont"> 
+                                    본인확인을 위해 인터넷뱅킹(사용자) ID 및 사업자등록번호를 입력해 주세요. ID를 잃어버리신 분은 ID찾기를 통해 찾을 수 있습니다.
+                                </div>
+                                <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //220729 리웍 : 툴팁 추가-->
+                    <div class="form_row">
+                        <div class="input int_btn">
+                            <input type="text" title="사용자ID" placeholder="사용자ID">
+                            <button type="button" class="btn point sm round">ID찾기</button>
+                        </div>
+                    </div>
+                    <p class="tip_info">영문,숫자,영문숫자조합(6~12자리)</p>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">사업자등록번호(납세번호/고유번호)</div>
+                    <div class="form_row col business_num">
+                        <!-- 220729 리웍 : 수정 -->
+                        <span class="input" role="button" aria-label="사업자번호 첫번째 3자리">
+                            <input type="tel" aria-hidden="true" maxlength="3" placeholder="3자리" title="사업자번호 첫번째 3자리" readonly class="bg_white">
+                        </span>
+                        <span class="space">-</span>
+                        <span class="input" role="button" aria-label="사업자번호 중간 2자리">
+                            <input type="tel" aria-hidden="true" maxlength="2" placeholder="2자리" title="사업자번호 중간 2자리" readonly class="bg_white">
+                        </span>
+                        <span class="space">-</span>
+                        <span class="input" role="button" aria-label="사업자번호 마지막 5자리" onclick="">
+                            <input type="tel" aria-hidden="true" maxlength="5" placeholder="5자리" title="사업자번호 마지막 5자리" readonly class="bg_white">
+                        </span>
+                        <!-- //220729 리웍 : 수정 -->
+                    </div>
+                </div>
+                <div class="form_group">
+                    <div class="form_tit">주민등록번호 (개인사업자만 입력)</div>
+                    <!-- 220729 class="jumin" 삭제 -->
+                    <div class="form_row col">
+                        <!-- 220729 리웍 : 수정 -->
+                        <div class="input" role="button" aria-label="주민등록번호 앞자리">
+                            <input type="tel" aria-hidden="true" maxlength="6" placeholder="앞자리 6자리" title="주민등록번호 앞자리" readonly class="bg_white">
+                        </div>
+                        <!-- //220729 리웍 : 수정 -->
+                        <!-- 220729 리웍 : 삭제 -->
+                        <!-- <span class="space">-</span>
+                        <div class="input" role="button" aria-label="주민등록번호 뒷자리 입력" onclick="">
+                            <input type="password" aria-hidden="true" maxlength="7" placeholder="뒷자리 7자리" title="주민등록번호 뒷자리" readonly class="bg_white">
+                        </div> -->
+                        <!-- //220729 리웍 : 삭제 -->
+                    </div>
+                </div>
+            </div>
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">이용안내</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>등록하신 타행/타기관 인증서를 해제하는 메뉴입니다.</li>
+                        <li>ID를 분실하신 분은 [ID조회] 에서 확인 가능하며, 기업뱅킹 고객은 Master ID만 조회 가능합니다.</li>  
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <!-- dev : 모든값이 채워지면 button 속성 disabled 삭제해서 활성화 -->
+                    <span><button type="button" class="btn primary lg" disabled>다음</button></span>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+</div>
+</body>
+</html>
+

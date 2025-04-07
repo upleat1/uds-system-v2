@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+    <title>[KB PAYMENT USANCE 결제/수수료납부]수수료납부정보입력(국내수수료)</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <link rel="stylesheet" data-description="swiper" href="/msbiz/app/css/library/swiper.min.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="외환" href="/msbiz/app/css/forex.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <div id="content">
+		<h1 class="h1">정보입력</h1> 
+        
+        <div class="inform_top_wrap">
+            <ul class="depth bul">
+                <li>아래 정보를 확인하신 후 수수료 납부를 진행하시기 바랍니다.</li>
+                <li>적용환율은 현재 고시된 환율이며, 실제 거래시점의 적용환율은 변동될 수 있습니다.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="form_group">
+                <div class="form_tit">원화출금계좌번호</div>
+                <div class="form_row">
+                    <div class="select">
+                        <button type="button" class="select_btn" title="원화출금계좌번호 선택">선택</button><!-- 개발 : 버튼에 값이 들어갈 경우 클래스 "active" 추가 : ex) class="select_btn active" -->
+                    </div>
+                </div>
+                <div class="form_btm_wrap right">
+                    <p class="sum_hint">출금가능금액 : <span class="number fc_posi">1,787,888,000</span><span class="num_unit">원</span></p>           
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_tit">원화출금금액</div>
+                <div class="form_row">
+                    <div class="input unit js_unit">
+                        <input type="tel" title="원화출금금액" data-unit="원" readonly>
+                    </div>
+                    <p class="form_hangul" aria-hidden="true">삼만구천육백원</p>
+                </div>
+            </div>
+
+            <div class="list_data_group gap_lg_0">
+                <ul class="list_data">
+                    <li>
+                        <div class="key">국내/해외수수료</div>
+                        <div class="value">국내수수료</div>
+                    </li>
+                    <li>
+                        <div class="key">거래지점</div>
+                        <div class="value">판교종합금융센터</div>
+                    </li>
+                    <li>
+                        <div class="key">거래번호</div>
+                        <div class="value"><span class="number">M10072010SS00192</span></div>
+                    </li>
+                    <li>
+                        <div class="key">접수번호</div>
+                        <div class="value"><span class="number">1</span></div>
+                    </li>
+                    <li>
+                        <div class="key">수수료구분</div>
+                        <div class="value">Term Charge</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list_data_group">
+                <ul class="list_data">
+                    <li>
+                        <div class="key"><strong>총 납부금액</strong></div>
+                        <div class="value"><strong class="fc_posi"><span class="number">94,972</span><span class="num_unit">원</span></strong></div>
+                    </li>
+                    <li>
+                        <div class="key">└ Term Charge</div>
+                        <div class="value"><strong><span class="number">94,717</span><span class="num_unit">원</span></strong></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 지체료</div>
+                        <div class="value"><strong><span class="number">255</span><span class="num_unit">원</span></strong></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 초과수수료</div>
+                        <div class="value"><strong><span class="number">10,000</span><span class="num_unit">원</span></strong></div>
+                    </li>
+                    <li>
+                        <div class="key">└ 환출수수료</div>
+                        <div class="value"><strong><span class="number">-10,000</span><span class="num_unit">원</span></strong></div>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="list_acco js_accordion gap_lg_0">
+                <li>
+                    <a href="#none" role="button" class="tit" aria-expanded="false">수수료 내역 상세보기</a>
+                    <div class="toggle_panel" role="region">
+                        <h2 class="h3">Term Charge</h2>
+                        <div class="table">
+                            <table>
+                                <caption>Term Charge에 관한 표</caption>
+                                <colgroup>
+                                    <col style="width:40%">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">대상금액</th>
+                                        <td>USD <span class="number">602,077.74</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이자율(%)</th>
+                                        <td><span class="number">0.1823</span><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">대상기간</th>
+                                        <td><span class="number">2022.05.31~2022.07.31</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">적용일수(일)</th>
+                                        <td><span class="number">28/360</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">적용환율</th>
+                                        <td><span class="number">1,123.70</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">원화금액</th>
+                                        <td><span class="number">94,717</span><span class="num_unit">원</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 class="h3">지체료</h2>
+                        <div class="table">
+                            <table>
+                                <caption>지체료에 관한 표</caption>
+                                <colgroup>
+                                    <col style="width:40%">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">대상금액</th>
+                                        <td><span class="number">94,717</span><span class="num_unit">원</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이자율(%)</th>
+                                        <td><span class="number">0.12</span><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">대상기간</th>
+                                        <td><span class="number">2022.05.31~2022.07.31</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">적용일수(일)</th>
+                                        <td><span class="number">28/360</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">원화금액</th>
+                                        <td><span class="number">10,000</span><span class="num_unit">원</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 class="h3">초과수수료</h2>
+                        <div class="table">
+                            <table>
+                                <caption>초과수수료에 관한 표</caption>
+                                <colgroup>
+                                    <col style="width:40%">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">대상금액</th>
+                                        <td>USD <span class="number">602,077.74</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이자율(%)</th>
+                                        <td><span class="number">0.1823</span><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">대상기간</th>
+                                        <td><span class="number">2022.05.31~2022.07.31</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">적용일수(일)</th>
+                                        <td><span class="number">28/360</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">적용환율</th>
+                                        <td><span class="number">1,123.70</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">원화금액</th>
+                                        <td><span class="number">94,717</span><span class="num_unit">원</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 class="h3">환출수수료</h2>
+                        <div class="table">
+                            <table>
+                                <caption>환출수수료에 관한 표</caption>
+                                <colgroup>
+                                    <col style="width:40%">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">대상금액</th>
+                                        <td>USD <span class="number">602,077.74</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이자율(%)</th>
+                                        <td><span class="number">0.12</span><span class="num_unit">%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">대상기간</th>
+                                        <td><span class="number">2022.05.31~2022.07.31</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">적용일수(일)</th>
+                                        <td><span class="number">28/360</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">적용환율</th>
+                                        <td><span class="number">1,234.56</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">원화금액</th>
+                                        <td><span class="number">-10,000</span><span class="num_unit">원</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">다음</button></span>
+            </div>
+        </div>
+
+	</div>
+</div>
+<!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[통합사회보험료 납부]통합징수보험료납부간략조회</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="공과금" href="/msbiz/app/css/utility.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_utility">
+
+            <h1 class="h1">통합징수보험료납부 간략조회</h1>
+            <div class="inform_top_wrap">
+                <ul class="depth bul">
+                    <li>국민건강보험공단에서 고지하는 통합징수보험료(국민연금보험료, 건강보험료, 고용보험료, 산재보험료) 및 기타징수금 납부가 가능합니다.</li>
+                    <li>납부 가능시간 : <strong>00:30~23:30</strong>(토요일/공휴일 가능)</li>
+                    <li><strong>해당기관의 실시간 납부반영 시행으로 납부 후 취소가 불가하니 유의하시기 바랍니다.</strong></li>
+                    <li><strong>금융결제원 시스템 점검시간인 매월 두번째 토요일 <span>23:30</span>~익일 <span>07:00</span>까지 거래불가합니다.</strong></li>
+                </ul>
+            </div>
+            <div class="section">
+                <!-- 220729 오류시 클래스 추가 -->
+                <div class="form_group error">
+                    <div class="form_tit">전자납부번호</div>
+                    <div class="form_row">
+                        <div class="input" role="button" aria-label="" onclick="">
+                            <input type="tel" class="bg_white" placeholder="숫자만 입력" title="전자납부번호" readonly="readonly" aria-hidden="true">
+                        </div>
+                    </div>
+                    <!-- 221007 클래스 값 변경 -->
+                    <p class="tip_info">전자납부번호 13자리, 기타징수금 12자리를 입력해<br>주세요.</p>
+                    <!-- 220729 오류 메세지 -->
+                    <p class="tip">전자납부번호를 입력해 주세요.</p>
+                    <!-- //220729 오류 메세지 -->
+                </div>
+                <!-- 221019 주민등록번호 입력 폼 변경 -->
+                <div class="form_group">
+                    <div class="form_tit">납부의무자 주민등록번호</div>
+                    <div class="form_row col jumin">
+                        <div class="input" role="button" aria-label="주민등록번호 앞자리 입력" onclick="">
+                            <input type="tel" maxlength="6" title="주민등록번호 앞자리" aria-hidden="true" class="bg_white" readonly>
+                        </div>
+                        <span class="space">-</span>
+                        <div class="input" role="button" aria-label="주민등록번호 뒷자리 입력" onclick="">
+                            <input type="password" maxlength="7" title="주민등록번호 뒷자리" aria-hidden="true" class="bg_white" readonly>
+                        </div>
+                    </div>
+                </div>
+                <!-- //221019 주민등록번호 입력 폼 변경 -->
+                <div class="form_btm_full_wrap">
+                    <span><button type="button" class="btn primary md">조회</button></span>
+                </div>
+            </div>
+
+            <hr class="hr_divide">
+            <div class="section">
+                <div>
+                    <!-- loop -->
+                    <div class="list_data_group">
+                        <h3 class="h3">2022.06.08 <span class="sep_txt normal">해당 보험료 고지구분명</span></h3>
+                        <ul class="list_data">
+                            <li>
+                                <div class="key">납부기한</div>
+                                <div class="value"><span class="number">2022.06.22</span></div>
+                            </li>
+                            <li>
+                                <div class="key">보험구분</div>
+                                <div class="value">해당 보험구분명</div>
+                            </li>
+                            <li>
+                                <div class="key">납기구분</div>
+                                <div class="value">해당 납기구분</div>
+                            </li>
+                            <li>
+                                <div class="key">납부금액</div>
+                                <div class="value">
+                                    <!-- 221017 strong 태그로 변경, 한줄로변경 -->
+                                    <strong class="number">123,123,123,123</strong><span class="num_unit">원</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_list_btm">
+                            <span><button type="button" class="btn outline sm">납부하기</button></span>
+                        </div>
+                    </div>
+                    <!-- //loop -->
+                </div>
+
+                <!-- 220729 버튼 수정 -->
+                <div class="btn_list_btm more">
+                    <button type="button" class="btn">더보기</button>
+                </div>
+                <!-- //220729 버튼 수정 -->
+            </div>
+
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle on" aria-expanded="false" aria-controls="notice_1_1">안내사항</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>국민건강보험법 제13조(업무 등) 10항에 의하여 2011년 1월부터 4대보험료(건강보험료, 연금보험료, 고용보험료, 산재보험료) 징수업무를 국민건강보험공단에서 수행합니다.</li>
+                        <li>고지서에 표시된 전자납부번호를 입력하고 고지내역을 확인한 후 납부해 주세요.</li>
+                        <li><strong>고지내역은 당월분과 체납내역 전체(분할납부 신청 시 해당 차수분)가 표시됩니다. (단, 합산고지신청사업장에 한하여 합산당월분과 보험별 체납내역 전체가 표시됩니다.)</strong></li>
+                        <li><strong>2011년 7월분 보험료부터 건강보험료와 장기요양보험료가 통합고지 됩니다.</strong> 노인장기요양보험료=건강보험료*6.55%(직장가입자의 경우 가입자와 사용자가 50%씩 부담)</li>
+                        <li><strong>보험료 납부와 고지내역에 관한 사항, 이중납부 된 경우 환급신청 등은 국민건강보험공단으로 문의해 주세요.(국민건강보험공단 1577-1000)</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

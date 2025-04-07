@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[전자세금계산서 발행] 매출문서함_상세</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+	<!-- // -->
+	<!--// 업무 관련 CSS 선언 END -->
+
+	<!-- 업무 관련 JS 선언 START -->	
+	<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+<!-- 업무 관련 HTML 선언 START -->    
+<div id="wrap" data-ui="full_pop">
+    <div id="content">
+
+        <div class="inform_top_wrap">
+            <!-- 221102 수정: 디자인 변경 -->
+            <div class="acc_wrap approval"><!-- 220908 수정: 클래스 추가 -->
+                <div class="acc_name"><!-- 220908 수정: 클래스 추가 -->
+                    <strong>기재사항 착오정정</strong>
+                </div>
+                <!-- 220908 추가: 당초승인번호 -->
+                <div class="acc_infoTxt">
+                    <ul class="depth">
+                        <li>
+                            <span class="num_unit">국세청승인번호</span> <span class="number">20220504-88888888-00000000</span>
+                        </li>
+                        <li>
+                            <span class="num_unit">당초승인번호</span> <span class="number">20220519-12345678-12345678</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--// 221102 수정: 디자인 변경 -->
+        </div>
+        
+        <div class="section">
+            <h2 class="hidden">세금계산서 상세보기</h2>
+            <div class="table th_red">
+                <table>
+                    <caption>공급자의 등록번호, 종사업장등 상세정보</caption>
+                    <colgroup>
+                        <col style="width:40px">
+                        <col style="width:27%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th rowspan="10" scope="col">공급자</th>
+                            <th scope="col">등록번호</th>
+                            <td><span class="number">000-00-****</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">종사업장</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">상호</th>
+                            <td>㈜국민은행</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">성명</th>
+                            <td>허인</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">사업장</th>
+                            <td>서울특별시 영등포구 국제금융로 6길 26(여의도동)</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">업태</th>
+                            <td>금융 보험 부동산 서비스</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">종목</th>
+                            <td>은행, 신탁보험 임대 판매대리</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">담당자</th>
+                            <td>회계팀</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">전화번호</th>
+                            <td><span class="number">000-0000-0000</span</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">이메일</th>
+                            <td>test.@aaaa.com</td><!-- 220729 리웍: 태그수정 -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table th_blue">
+                <table>
+                    <caption>공급받는자의 등록번호, 종사업장 등 상세정보</caption>
+                    <colgroup>
+                        <col style="width:40px">
+                        <col style="width:27%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th rowspan="10">공급받는자</th>
+                            <th scope="col">등록번호</th>
+                            <td><span class="number">000-00-*****</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">종사업장</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">상호</th>
+                            <td>홍길동 주식회사</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">성명</th>
+                            <td>홍길동</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">사업장</th>
+                            <td>서울시 서울구 서울동 00</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">업태</th>
+                            <td>업태노출</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">종목</th>
+                            <td>종목 노출</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">담당자</th>
+                            <td>회계팀</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">전화번호</th>
+                            <td><span class="number">000-0000-0000</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">이메일</th>
+                            <td>ABCEDD@naver.com</td><!-- 220729 리웍: 태그수정 -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- 220726 리웍: section 분리 -->
+        <div class="section">
+            <h3 class="h3">공급금액</h3>
+            <div class="table">
+                <table>
+                    <caption>공급금액의 작성일자, 공급가액 등 상세정보</caption>
+                    <colgroup>
+                        <col style="width:30%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">작성일자</th>
+                            <td><span class="number">2020.11.28</span></td>
+                        </tr>
+
+                        <!-- 220729 리웍 -->
+                        <tr>
+                            <th scope="col">공급가액</th>
+                            <td><span class="number">100,000</span><span class="num_unit">원</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">세액</th>
+                            <td><span class="number">10,000</span><span class="num_unit">원</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">합계금액</th>
+                            <td><span class="number">110,000</span><span class="num_unit">원</span></td>
+                        </tr>
+                        <!-- 220729 리웍 -->
+
+                        <tr>
+                            <th scope="col">비고</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3 class="h3">품목상세</h3>
+            <div class="table">
+                <table>
+                    <caption>품목상세의 일자, 품목 등 상세정보</caption>
+                    <colgroup>
+                        <col style="width:30%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">일자</th>
+                            <td><span class="number">2000.00.00</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">품목</th>
+                            <td>기업 금융인증서 2년 인증서</td>
+                        </tr>
+
+                        <!-- 220729 리웍 -->
+                        <tr>
+                            <th scope="col">규격</th>
+                            <td><span class="number">100,000</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">수량</th>
+                            <td><span class="number">100,000</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">단가</th>
+                            <td><span class="number">100,000</span><span class="num_unit">원</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">공급가액</th>
+                            <td><span class="number">100,000</span><span class="num_unit">원</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">세액</th>
+                            <td><span class="number">10,000</span><span class="num_unit">원</span></td>
+                        </tr>
+                        <!--// 220729 리웍 -->
+
+                        <tr>
+                            <th scope="col">비고</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3 class="h3">결제구분</h3>
+            <div class="table">
+                <table>
+                    <caption>결제구분의 현금, 수표 등 상세정보</caption>
+                    <colgroup>
+                        <col style="width:30%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        
+                        <!-- 220729 리웍 -->
+                        <tr>
+                            <th scope="col">현금</th>
+                            <td><span class="number">110,000</span><span class="num_unit">원</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">수표</th>
+                            <td>
+                                <span class="number">110,000</span><span class="num_unit">원</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="col">어음</th>
+                            <td>
+                                <span class="number">110,000</span><span class="num_unit">원</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="col">외상미수금</th>
+                            <td>
+                                <span class="number">110,000</span><span class="num_unit">원</span>
+                            </td>
+                        </tr>
+                        <!--// 220729 리웍 -->
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="fu_gray_box outline">
+                <p class="p bold">이 금액을 <span>청구</span>함</p>
+            </div>
+            <p class="depth info">본 전자세금계산서는 국세청고시에 따라 전자서명하여 제휴사 팝빌에서 발행 되었습니다.</p>
+        </div>
+        <!--// 220726 리웍: section 분리 -->
+
+        <div class="section">
+            <h3 class="h3">문서상태</h3>
+
+            <!-- 220729 리웍 -->
+            <div class="fu_gray_box left">
+                <p class="bold">익일 국세청 자동 전송<br>2022년 05월 06일(금) 오후3시</p>
+                <p class="fs15 fc_gray">공급자가 국세청 전송전 ‘발행취소’ 하는 경우 국세청 전송에서 제외됩니다.</p>
+            </div>
+            <!--// 220729 리웍 -->
+
+            <div class="table gap_sm"><!-- 220729 리웍: 클래스추가 -->
+                <table>
+                    <caption>문서상태의 발행일, 문서상태, 휴폐업 자동조회 결과 정보</caption>
+                    <colgroup>
+                        <col style="width:32%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="col">발행일</th>
+                            <td><span class="number">2022.05.04</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="col">문서상태</th>
+                            <td>
+                                <!-- 발행완료 -->
+                                <span>발행완료</span><br>
+
+                                <!-- 221109 수정: 발행실패의 경우 노출 -->
+                                <a href="#none" class="btn_txt ico_arr_error sm">발행실패</a><br>
+
+                                <span class="number">2022.05.04 15:43</span><br>
+                                <button type="button" class="btn outline xs">문서이력</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="col">휴폐업 자동조회 결과</th>
+                            <td>사업중</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 220908 추가: 신규 -->
+        <div class="section">
+            <!-- 원본세금계산서 -->
+            <h3 class="h3">원본세금계산서</h3>
+            <ul class="list_data">
+                <li>
+                    <div class="key"><span class="number fs15">2022.05.04</span></div>
+                    <div class="value">
+                        <a href="#none" class="btn_txt ico_arr"><!-- 221101 수정: 개선요청으로 클래스명 변경 -->
+                            <span class="number">1,000,000,000</span><span class="num_unit inline">원</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 수정세금계산서 -->
+            <h3 class="h3">수정세금계산서</h3>
+            <ul class="list_data">
+                <li>
+                    <div class="key"><span class="number fs15">2022.05.04</span></div>
+                    <div class="value">
+                        <a href="#none" class="btn_txt ico_arr"><!-- 221101 수정: 개선요청으로 클래스명 변경 -->
+                            <span class="number">1,000,000,000</span><span class="num_unit inline">원</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="key"><span class="number fs15">2022.05.04</span></div>
+                    <div class="value">
+                        <a href="#none" class="btn_txt ico_arr"><!-- 221101 수정: 개선요청으로 클래스명 변경 -->
+                            <span class="number">-1,000,000,000</span><span class="num_unit inline">원</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="key"><span class="number fs15">2022.05.04</span></div>
+                    <div class="value">
+                        <a href="#none" class="btn_txt ico_arr"><!-- 221101 수정: 개선요청으로 클래스명 변경 -->
+                            <span class="number">1,000,000,000</span><span class="num_unit inline">원</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="key"><span class="number fs15">2022.05.04</span></div>
+                    <div class="value">
+                        <a href="#none" class="btn_txt ico_arr"><!-- 221101 수정: 개선요청으로 클래스명 변경 -->
+                            <span class="number">1,000,000,000</span><span class="num_unit inline">원</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--// 220908 추가: 신규 -->
+
+        <!-- 220901 추가: 신규 -->
+        <div class="section">
+            <h3 class="h3">입금계좌 정보</h3>
+            <div class="table">
+                <table>
+                    <caption>입금받을 계좌1, 입금받을 계좌2로 구성된 표</caption>
+                    <colgroup>
+                        <col style="width:39%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        
+                        <!-- 220729 리웍 -->
+                        <tr>
+                            <th scope="row">입금받을 계좌1</th>
+                            <td>
+                                <span class="number">000-0000000-00000</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">입금받을 계좌2</th>
+                            <td>
+                                <span class="number">-</span>
+                            </td>
+                        </tr>
+                        <!--// 220729 리웍 -->
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn_wrap btm mg_sm">
+                <span><button type="button" class="btn outline md">복사발행</button></span>
+            </div>
+        </div>
+        <!--// 220901 추가: 신규 -->
+
+        
+        <!-- page bottom button -->
+        <div class="btn_confirm_wrap">
+            <!-- 발행완료 상태에서 제공 버튼 -->
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">발행취소</button></span><!-- 220901 수정: 텍스트수정 -->
+                <span><button type="button" class="btn primary lg">국세청 즉시전송</button></span>
+            </div>
+
+            <!-- 전송성공 상태에서 제공 버튼
+            <div class="btn_area">
+                <span><button type="button" class="btn primary lg">수정세금계산서 작성</button></span>
+            </div>
+            -->
+        </div>
+        <!-- //page bottom button -->
+
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script type="text/javascript">
+
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

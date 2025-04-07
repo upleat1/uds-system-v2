@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[선정/평점 조회]나의 등급</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="기타" href="/msbiz/app/css/etc.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 네이티브영역 -->
+        <header id="header">
+            <!-- script src="../../guide/assets/js/publish.js"></script -->
+        </header>
+        <!-- //네이티브영역 -->
+        <div id="content">
+            <h1 class="hidden">선정/평점 조회</h1>
+
+            <div class="primary_info">
+                <p class="tit badge rank1 xlg">MVP스타</p><!-- 220929 클래스 수정 -->
+                <P>홍길동(ㅇㅇ그룹}님의<br>그룹 법인KB스타클럽 선정 정보입니다.</P>
+            </div>
+
+            <div class="section">
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">적용등급</div>
+                        <div class="value">MVP스타</div>
+                    </li>
+                    <li>
+                        <div class="key">선정구분<sup>주1)</sup></div>
+                        <div class="value">내용</div>
+                    </li>
+                    <li>
+                        <div class="key">등급 유효기간</div>
+                        <div class="value"><span class="number">2022.07.20</span>까지</div>
+                    </li>
+                    <li>
+                        <div class="key">고객관리점</div>
+                        <div class="value"><span class="number">00</span>점</div>
+                    </li>
+                    <li>
+                        <div class="key">KB평점<br>(전환예상등급)<sup>주2)</sup></div>
+                        <div class="value"><span class="number">00</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                </ul>
+                <ul class="depth sup">
+                    <li><span class="sup_tit">주1)</span>선정구분 : 자동선정(계열사별 실적 산정 기준에 의하여 산출된 포인트를 합산하여 부여하는 등급),
+                        신규유치선정(신규여신 유치 시 추후 실현될 월평균 예상수익을 포인트화하여 先부여하는 등급)</li>
+                    <li><span class="sup_tit">주2)</span>전환예상등급 : 자동선정 방식으로 산정된 고객의 당월 KB평점에 해당되는 등급(유효기간 종료 시 적용이 예상되는
+                        등급임)</li>
+                </ul>
+            </div>
+            <hr class="hr_divide">
+            <div class="section">
+                <h2 class="h2">선정 상세 정보</h2>
+                <ul class="list_data center gap_lg_0">
+                    <li>
+                        평점합계
+                        <p class="score_wrap"><span class="number">1,200</span><span class="num_unit">p</span></p><!-- 221019 수정 -->
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3 class="h3">KB국민은행</h3>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">수익금액(월평균)</div>
+                        <div class="value"><span class="number">200</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                    <li>
+                        <div class="key">급여이체(건수)</div>
+                        <div class="value"><span class="number">200</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                    <li>
+                        <div class="key">퇴직연금(잔액)</div>
+                        <div class="value"><span class="number">1,000,000</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                    <li>
+                        <div class="key">임직원 집단신용대출(잔액)</div>
+                        <div class="value"><span class="number">1,000,000</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                    <li>
+                        <div class="key">수익금액(월평균)</div>
+                        <div class="value"><span class="number">1,000,000</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                </ul>
+                <!-- 내용이 없을경우 출력 -->
+                <div class="list_nodata">
+                    <p>사용 이력 및 취득점수가 없습니다.</p>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm">KB국민은행을 이용해보시겠어요?</button></span><!-- 220818 버튼 문구수정 -->
+                    </div>
+                </div>
+                <!-- //내용이 없을경우 출력 -->
+            </div>
+            <hr class="hr_divide">
+            <div class="section">
+                <h3 class="h3">KB증권</h3>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">주식평가금액, 주식약정금액, 기타 투자상품, 기업자금대출</div>
+                        <div class="value"><span class="number">200</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                </ul>
+                <!-- 내용이 없을경우 출력 -->
+                <div class="list_nodata">
+                    <p>사용 이력 및 취득점수가 없습니다.</p>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm">KB증권을 이용해보시겠어요?</button></span>
+                    </div>
+                </div>
+                <!-- //내용이 없을경우 출력 -->
+            </div>
+            <hr class="hr_divide">
+            <div class="section">
+                <h3 class="h3">KB손해보험</h3>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">총납입보험료, 퇴직연금</div>
+                        <div class="value"><span class="number">200</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                </ul>
+                <!-- 내용이 없을경우 출력 -->
+                <div class="list_nodata">
+                    <p>사용 이력 및 취득점수가 없습니다.</p>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm">KB손해보험을 이용해보시겠어요?</button></span>
+                    </div>
+                </div>
+                <!-- //내용이 없을경우 출력 -->
+            </div>
+            <hr class="hr_divide">
+            <div class="section">
+                <h3 class="h3">KB국민카드</h3>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">신용카드 이용금액, 체크카드 이용금액, 해외 이용금액</div>
+                        <div class="value"><span class="number">200</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                </ul>
+                <!-- 내용이 없을경우 출력 -->
+                <div class="list_nodata">
+                    <p>사용 이력 및 취득점수가 없습니다.</p>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm">KB국민카드를 이용해보시겠어요?</button></span>
+                    </div>
+                </div>
+                <!-- //내용이 없을경우 출력 -->
+            </div>
+            <hr class="hr_divide">
+            <div class="section">
+                <h3 class="h3">KB캐피탈</h3>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">자동차할부금액, 자동차임대금액, 기업자금대출</div>
+                        <div class="value"><span class="number">200</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                </ul>
+                <!-- 내용이 없을경우 출력 -->
+                <div class="list_nodata">
+                    <p>사용 이력 및 취득점수가 없습니다.</p>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm">KB캐피탈을 이용해보시겠어요?</button></span>
+                    </div>
+                </div>
+                <!-- //내용이 없을경우 출력 -->
+            </div>
+            <hr class="hr_divide">
+            <div class="section">
+                <h3 class="h3">KB저축은행</h3>
+                <ul class="list_data lbt">
+                    <li>
+                        <div class="key">정기예금, 기업자금대출</div>
+                        <div class="value"><span class="number">200</span><span class="num_unit">p</span></div><!-- 221019 수정 -->
+                    </li>
+                </ul>
+                <!-- 내용이 없을경우 출력 -->
+                <div class="list_nodata">
+                    <p>사용 이력 및 취득점수가 없습니다.</p>
+                    <div class="btn_list_btm">
+                        <span><button type="button" class="btn outline sm">KB저축은행을 이용해보시겠어요?</button></span>
+                    </div>
+                </div>
+                <!-- //내용이 없을경우 출력 -->
+            </div>
+
+            <!-- 이용안내 -->
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">이용안내</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>KB금융그룹 계열사별 상세거래실적은 각 계열사를 통해서만 확인 가능합니다.</li>
+                        <li>평점산정 세부 기준은 그룹 법인KB스타클럽 > 제도 안내 페이지를 참조하여 주시기 바랍니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+    </script>
+</body>
+
+</html>

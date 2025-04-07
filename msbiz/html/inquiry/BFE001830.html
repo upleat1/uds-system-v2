@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>잔액조회 미완료 계좌목록 - 오픈뱅킹 계좌등록</title>
+		<!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+		<link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+		<link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+		<script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+		<script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+		<script src="/msbiz/app/js/library/swiper.min.js"></script> 
+		<script src="/msbiz/app/js/common_ui.js"></script> 
+		<!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+	
+		<!-- 업무 관련 CSS 선언 START -->
+		<link rel="stylesheet" data-description="조회" href="/msbiz/app/css/inquiry.css">
+		<!--// 업무 관련 CSS 선언 END -->
+	
+		<!-- 업무 관련 JS 선언 START -->
+		
+		<!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+<!-- 업무 관련 HTML 선언 START -->
+<div id="wrap">
+	<div id="content">
+        <h1 class="h1">잔액조회 미완료 계좌목록</h1>
+        <div class="section">
+            <div class="list_comp_wrap gap_sm_3"><!-- 220729 class=" gap_sm_3" 추가 -->
+                <div class="list_total clearfix">
+                    <div class="fl">
+                        <span class="selection">
+                            <input type="checkbox" id="checkType1">
+                            <label for="checkType1" class="label"><em class="fs_lg">전체선택</em></label>
+                        </span>
+                    </div>
+                    <div class="fr"><span class="number">1</span>/<span class="number fc_gray4">2</span></div>
+                </div>
+                <ul class="list_comp label_reverse"><!-- 220729 class="label_reverse" 추가 -->
+                    <li>
+                        <div class="selection chk">
+                            <input type="checkbox" id="chk1_1" name="chk1">
+                            <label for="chk1_1" class="label">
+                                <span class="acc_list_wrap">
+                                    <span class="acc_wrap acc_bank md acc_line2">
+                                        <span class="icon_bank_020"></span>
+                                        <span class="bk_name">우리</span><span class="acc_num"><span class="number">10000000123</span></span><!-- 220729 리웍 -->
+                                        <span class="epi_num number fc_gray4">012</span><!-- 회차번호 case 추가 -->
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="selection chk">
+                            <input type="checkbox" id="chk1_2" name="chk1">
+                            <label for="chk1_2" class="label">
+                                <span class="acc_list_wrap">
+                                    <span class="acc_wrap acc_bank md acc_line2">
+                                        <span class="icon_bank_081"></span>
+                                        <span class="bk_name">은행명 길어질 경우 계좌번호만 아래로</span><span class="acc_num"><span class="number">10000000123</span></span><!-- 220729 리웍 -->
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="inform_btm_wrap">
+            <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">유의사항</button>
+            <div class="toggle_panel" role="region" id="notice_1_1">
+                <ul class="depth bul"><!-- 220729 리웍 : 텍스트 변경 -->
+                    <li>잔액조회에 실패한 계좌정보를 확인하고 잔액조회를 실행할 계좌를 선택하는 화면입니다.</li>
+                    <li>잔액조회에 실패한 계좌정보를 삭제하실 수 있습니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- No Data -->
+        <div class="result nodata">
+            <p class="tit">잔액조회 미완료 계좌가 없습니다.</p>
+        </div>
+        <!-- //No Data -->
+
+        <div class="btn_confirm_wrap">
+            <div class="btn_area">
+                <span><button type="button" class="btn secondary lg">삭제</button></span>
+                <span><button type="button" class="btn primary lg">잔액조회</button></span>
+                <!-- <span><button type="button" class="btn primary lg">확인</button></span> -->
+            </div>
+        </div>       
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<!--// 업무 SCRIPT END -->
+</body>
+</html>

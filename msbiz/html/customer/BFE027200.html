@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[내가 발행한 번호표 보기]</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script>
+    <script src="/msbiz/app/js/common_ui.js"></script>
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="고객센터" href="/msbiz/app/css/customer.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="content" class="cate_customer">
+
+            <!-- Case : 번호표 상세 -->
+            <h1 class="hidden">내 번호표 상세</h1>
+            <!-- //Case : 번호표 상세 -->
+            <!-- Case : 번호표 상세 - 호출 -->
+            <h1 class="h1" style="margin-bottom: 2.8rem;">번호표가 호출되었습니다.</h1>
+            <!-- //Case : 번호표 상세 - 호출 -->
+            <div class="section gap_0">
+                <div class="verifi_wrap type1">
+                    <p class="verifi_tit">대기번호</p>
+                    <p class="verifi_num"><span class="number">152</span></p>
+                    <p class="verifi_txt gap_md">서염창 (점)</p>
+                    <p class="p gap_xs">입금 ・ 출금 ・ 송금</p>
+                    <p class="p_sub gap_sm fs_14 fc_gray">입금 │ 출금 │ 송금</p>
+                </div>
+                <!-- Case : 호출시간 초과 -->
+                <div class="btn_list_btm gap_md">
+                    <span><button class="btn outline md">재발행</button></span>
+                </div>
+                <!-- //Case : 호출시간 초과 -->
+            </div>
+            <!-- Case : 호출 -->
+            <div class="section">
+                <h2 class="h3">내 번호표 상세</h2>
+                <ul class="list_data">
+                    <li>
+                        <div class="key">대기고객</div>
+                        <div class="value">
+                            <button type="button" class="btn_txt ico_reset sm2"><span class="hidden">대기고객수 새로고침</span></button>
+                            <span class="number fc_posi">68</span>
+                            <span class="num_unit">명</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">예상대기시간</div>
+                        <div class="value"><span class="number">30</span><span class="num_unit">분</span></div>
+                    </li>
+                    <li>
+                        <div class="key">발행시간</div>
+                        <div class="value"><span class="number">2022.08.11 10:58:07</span></div>
+                    </li>
+                </ul>
+                <p class="depth info">예상대기시간은 참고사항으로 지점 상황에 따라 실제 대기시간과 다를 수 있는 점 양해부탁드립니다.</p>
+                <div class="btn_list_btm gap_md">
+                    <span><button class="btn outline md">번호표 취소</button></span>
+                    <span><button class="btn outline md">길찾기</button></span>
+                </div>
+            </div>
+            <!-- //Case : 호출 -->
+
+            <!-- Case : 호출시간 초과 -->
+            <div class="inform_btm_wrap">
+                <button class="tit js_toggle" aria-expanded="false" aria-controls="notice_1_1">알려드립니다</button>
+                <div class="toggle_panel" role="region" id="notice_1_1">
+                    <ul class="depth bul">
+                        <li>본 번호표는 은행 순번 발행기에서 발급되는 종이 번호표를 대신합니다.</li>
+                        <li>영업점 내점 시 번호표가 이미 호출된 경우 번호표를 재발행하셔야 합니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //Case : 호출시간 초과 -->
+
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn primary lg">확인</button></span>
+                </div>
+            </div>
+
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+
+    <script>
+        /* 업무 SCRIPT */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>[금융거래정보제공동의]이메일변경 정보 입력</title>
+    <!-- 공통 CSS, JS 선언 START || 가져가지마세요!!! -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/msbiz/app/css/common.css">
+    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/msbiz/app/css/style.css">
+    <script src="/msbiz/app/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/msbiz/app/js/library/jquery-ui.min.js"></script>
+    <script src="/msbiz/app/js/library/swiper.min.js"></script> 
+    <script src="/msbiz/app/js/common_ui.js"></script> 
+    <!-- // 공통 CSS, JS 선언 END || 가져가지마세요!!! -->
+
+    <!-- 업무 관련 CSS 선언 START -->
+    <link rel="stylesheet" data-description="자금관리" href="/msbiz/app/css/funds_manage.css">
+    <!--// 업무 관련 CSS 선언 END -->
+
+    <!-- 업무 관련 JS 선언 START -->
+    
+    <!--// 업무 관련 JS 선언 END -->
+</head>
+<body>
+
+    <!-- 업무 관련 HTML 선언 START -->    
+    <div id="wrap">
+
+        <div id="content">
+            <h1 class="h1">이메일변경 정보입력</h1><!-- 220729 리웍: 위치이동 -->
+
+            <div class="section">
+                <!-- 220729 리웍 -->
+                <div class="list_tit">이메일을 변경하려는 서비스제공자를 선택해주세요.</div>
+                <div class="chk_data_list_group gap_sm">
+                    <div class="chk_data_list">
+                        <!-- 220810 수정: 바로erp용 수정 -->
+                        <div class="chk_data_item"><!-- chk_head 클래스명 수정  -->
+                            <div class="selection"><!-- div 태그 수정  -->
+                                <input type="radio" id="chkData1" name="chkData" checked="">
+                                <label for="chkData1" class="label"><strong>국민솔루션</strong></label>
+
+                                <!-- 위치이동  -->
+                                <ul class="list_data noline">
+                                    <li>
+                                        <div class="key">동의일자</div>
+                                        <div class="value"><span class="number">2022.00.00</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="key">유효기일</div>
+                                        <div class="value"><span class="number">2022.00.00</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// 220810 수정: 바로erp용 수정 -->
+                    </div>
+    
+                    <div class="chk_data_list">
+                        <!-- 220810 수정: 바로erp용 수정 -->
+                        <div class="chk_data_item">
+                            <div class="selection">
+                                <input type="radio" id="chkData2" name="chkData">
+                                <label for="chkData2" class="label"><strong>Test2</strong></label>
+                                <ul class="list_data noline">
+                                    <li>
+                                        <div class="key">동의일자</div>
+                                        <div class="value"><span class="number">2022.00.00</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="key">유효기일</div>
+                                        <div class="value"><span class="number">2022.00.00</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// 220810 수정: 바로erp용 수정 -->
+                    </div>
+                </div>
+                <!--// 220729 리웍 -->
+            </div>
+
+            <hr class="hr_divide">
+            
+            <div class="section">
+                <div class="form_group">
+                    <div class="form_tit">변경 전 이메일 주소</div>
+                    <div class="form_row">
+                        <div class="input"><input type="text" value="kbtest@kbfg.com" title="변경 전 이메일 주소" readonly ></div>
+                    </div>    
+                </div>
+
+                <!-- 이메일 공통 태그 노출 -->
+                <div class="form_group email">
+                    <div class="form_tit">변경 후 이메일 주소</div>
+                    <div class="form_row col">
+                        <div class="input">
+                            <input type="text" title="ID" placeholder="아이디" value="">
+                        </div>
+                        <span class="space">@</span>
+                        <div class="select">
+                            <button type="button" class="select_btn" title="도메인 선택">직접입력</button>
+                        </div>
+                    </div>
+                    <div class="form_row">
+                        <div class="input"><input type="text" placeholder="도메인주소" title="도메인 직접입력"></div>
+                    </div>
+                </div>
+                <!-- // 이메일 공통 태그 노출 -->
+            </div>
+           
+            <div class="btn_confirm_wrap">
+                <div class="btn_area">
+                    <span><button type="button" class="btn secondary lg">취소</button></span>  
+                    <span><button type="button" class="btn primary lg" disabled >확인</button></span>  
+                </div>
+            </div>
+        </div><!-- //content -->
+    </div><!-- //wrap -->
+    <!--// 업무 HTML 선언 END -->
+
+<!-- 업무 SCRIPT START -->
+<script>
+	
+</script>
+<!--// 업무 SCRIPT END -->
+</body>
+</html>
