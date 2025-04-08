@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/pub/app/css/_variables.css">
     <link rel="stylesheet" href="/pub/app/css/common.css">
     <link rel="stylesheet" href="/pub/app/css/components.css">
+    <link rel="stylesheet" href="/pub/app/css/_button.css">
     <style>
         button, a {display:block; margin-right:15px;}
         .btn_wrap button {margin-right:0;}
@@ -37,7 +38,7 @@
         <div data-class="section">
             <div data-class="h1">Type</div>
 
-            <div data-class="h2">Stic Button</div>
+            <div data-class="h2">Stick Button</div>
             <div data-class="box">
                 <div data-class="list disc">
                     <div>한 줄에 최대 1단에서 2단 구성까지 지원하고 있으며 2단 형태의 경우 서로 다른 위계의 버튼 사용</div>
@@ -45,11 +46,73 @@
                     <div>Bottom에 플로팅되는 버튼의 경우 하단 그라데이션 BG 이미지 사용 필수</div>
                 </div>
             </div>
-            <div data-class="h3">Primary</div>
             <script type="text/html">
-<button type="button" class="btn primary lg">메인버튼</button>
-<button type="button" class="btn primary lg pressed">메인버튼</button>
-<button type="button" class="btn primary lg" disabled>버튼(disabled)</button>
+<div class="h3">Primary</div>
+<button type="button" class="btn stick primary lg">메인버튼(Normal)</button>
+<button type="button" class="btn stick primary pressed">메인버튼(Pressed)</button>
+<button type="button" class="btn stick primary" disabled>메인버튼(Disabled)</button>
+
+<div class="h3">Secondary</div>
+<button type="button" class="btn stick secondary">메인버튼(Normal)</button>
+<button type="button" class="btn stick secondary pressed">메인버튼(Pressed)</button>
+<button type="button" class="btn stick secondary" disabled>메인버튼(dsisabled)</button>
+
+<div class="h3">Outlined</div>
+<button type="button" class="btn stick outlined">메인버튼(Normal)</button>
+<button type="button" class="btn stick outlined pressed">메인버튼(Pressed)</button>
+<button type="button" class="btn stick outlined" disabled>메인버튼(Disabled)</button>
+            </script>
+
+            <div data-class="h2">Solid Button</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>Sticky Button 하위 레벨의 버튼으로 주기능을 수행할 버튼에 사용</div>
+                    <div>버튼 높이 48 / 40 두개의 사이즈로 구성되었으며 용도에 맞도록 사용</div>
+                </div>
+            </div>
+            <script type="text/html">
+<div class="h3">Primary</div>
+<button type="button" class="btn solid primary">버튼명(Normal)</button>
+<button type="button" class="btn solid primary pressed">버튼명(Pressed)</button>
+<button type="button" class="btn solid primary" disabled>버튼명(Disabled)</button>
+
+<div class="h3">Secondary</div>
+<button type="button" class="btn solid secondary">버튼명(Normal)</button>
+<button type="button" class="btn solid secondary pressed">버튼명(Pressed)</button>
+<button type="button" class="btn solid secondary" disabled>버튼명(Disabled)</button>
+
+<div class="h3">Outlined</div>
+<button type="button" class="btn solid outlined">버튼명(Normal)</button>
+<button type="button" class="btn solid outlined pressed">버튼명(Pressed)</button>
+<button type="button" class="btn solid outlined" disabled>버튼명(Disabled)</button>
+            </script>
+
+            <div data-class="h2">Text Button</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>본문 내 텍스트와 이이콘으로 구성된 버튼으로 본문 텍스트와 같은 크기로 사용한다.</div>
+                </div>
+            </div>
+            <script type="text/html">
+<div class="h3">Normal</div>
+<button type="button" class="btn text">텍스트버튼(18px)</button>
+<button type="button" class="btn text">텍스트버튼(16px)</button>
+<button type="button" class="btn text">텍스트버튼(14px)</button>
+
+<div class="h3">Secondary</div>
+<button type="button" class="btn text secondary">버튼명(18px)</button>
+<button type="button" class="btn text secondary">버튼명(16px)</button>
+<button type="button" class="btn text secondary">버튼명(14px)</button>
+
+<div class="h3">Disabled</div>
+<button type="button" class="btn text" disabled>버튼명(18px)</button>
+<button type="button" class="btn text" disabled>버튼명(16px)</button>
+<button type="button" class="btn text" disabled>버튼명(14px)</button>
+
+<div class="h3">Danger</div>
+<button type="button" class="btn text danger">버튼명(18px)</button>
+<button type="button" class="btn text danger">버튼명(16px)</button>
+<button type="button" class="btn text danger">버튼명(14px)</button>
             </script>
         </div>
     </div>

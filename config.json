@@ -3,7 +3,7 @@
   "platforms": {
     "css": {
       "transformGroup": "css",
-      "buildPath": "msbiz/app/css/",
+      "buildPath": "pub/app/css/",
       "files": [
         {
           "destination": "_variables.css",
