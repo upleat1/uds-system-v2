@@ -1,11 +1,5 @@
 @charset "euc-kr"; 
-<<<<<<< HEAD
-@import url("/pub/assets/css/library/swiper.min.css");
-@import url("/pub/assets/css/library/rolldate.css"); 
-@import url("/pub/assets/css/_button.css"); 
-=======
 @import url("/pub/app/css/library/swiper.min.css");
 @import url("/pub/app/css/library/rolldate.css"); 
 @import url("/pub/app/css/_button.css"); 
 @import url("/pub/app/css/_popup.css"); 
->>>>>>> b33c47b6582f296321f97cf083147cbba55084ca
