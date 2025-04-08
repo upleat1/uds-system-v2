@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>No.1 기업금융플랫폼</title>
+    <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/pub/app/css/_variables.css">
+    <link rel="stylesheet" href="/pub/app/css/common.css">
+    <link rel="stylesheet" href="/pub/app/css/components.css">
+    <style>
+        button, a {display:block; margin-right:15px;}
+        .btn_wrap button {margin-right:0;}
+        .btn_trans_group + .btn_trans_group {margin-top:10px;}
+        .btn_confirm_wrap {height:auto;}
+        .btn_confirm_wrap .btn_area {position: relative;}
+        [class^=btn_test] {display:inline-block;}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <div data-class="component-name"><span>버튼</span></div>
+        <div data-class="box">
+            <div data-class="h3">
+               <strong>a와 button 태그 사용시</strong> <br>
+1. 페이지 이동임이 명확하면 a 태그(풀팝업 포함)<br>
+2. 레이어팝업은 button 태그<br>
+3. 하나의 태그인데 상황에 따라 이동과 풀팝업을 혼용해서 쓸때는 button 태그
+            </div>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+
+            <div data-class="h2">Stic Button</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>한 줄에 최대 1단에서 2단 구성까지 지원하고 있으며 2단 형태의 경우 서로 다른 위계의 버튼 사용</div>
+                    <div>버튼 2개 사용 시 좌우 조합 사용, 문장형 등 레이블이 긴 경우에만 상하 조합 사용을 권장</div>
+                    <div>Bottom에 플로팅되는 버튼의 경우 하단 그라데이션 BG 이미지 사용 필수</div>
+                </div>
+            </div>
+            <div data-class="h3">Primary</div>
+            <script type="text/html">
+<button type="button" class="btn primary lg">메인버튼</button>
+<button type="button" class="btn primary lg pressed">메인버튼</button>
+<button type="button" class="btn primary lg" disabled>버튼(disabled)</button>
+            </script>
+        </div>
+    </div>
+    
+    <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/pub/guide/assets/js/components.js"></script>
+    <script src="/pub/app/js/common_ui.js"></script>
+
+</body>
+</html>
