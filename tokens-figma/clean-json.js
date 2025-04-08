@@ -11,17 +11,22 @@ const REMOVE_KEYS = [
   'semantic/Value-set'
 ];
 
-// 현재 rem 값은 1rem = 16px 기준으로 되어 있음
-// 이를 1rem = 10px 기준으로 재계산하려면 rem 값을 × (16 / 10)
-function adjustRemValues(str, oldBase = 16, newBase = 10) {
-  const ratio = oldBase / newBase; // 1.6
-  return str.replace(/(-?\d*\.?\d+)rem/g, (_, value) => {
-    const rem = parseFloat(value);
-    const adjusted = (rem * ratio).toFixed(4).replace(/\.?0+$/, ''); // 끝 0 제거
-    return `${adjusted}rem`;
-  });
+// 숫자(px)를 10px = 1rem 기준 rem 문자열로 변환
+function convertPxNumbersToRem(obj, base = 10) {
+  for (const key in obj) {
+    const val = obj[key];
+    if (typeof val === 'object' && val !== null) {
+      if (typeof val.value === 'number' && val.type === 'number') {
+        const rem = (val.value / base).toFixed(4).replace(/\.?0+$/, '');
+        val.value = `${rem}rem`;
+      } else {
+        convertPxNumbersToRem(val, base); // 재귀
+      }
+    }
+  }
 }
 
+// 깊은 병합 함수
 function mergeDeep(target, source) {
   for (const key in source) {
     if (
@@ -37,6 +42,7 @@ function mergeDeep(target, source) {
   }
 }
 
+// 실행
 try {
   const rawData = fs.readFileSync(inputFile, 'utf8');
   const inputJson = JSON.parse(rawData);
@@ -45,17 +51,17 @@ try {
 
   for (const key in inputJson) {
     if (REMOVE_KEYS.includes(key)) {
-      mergeDeep(outputJson, inputJson[key]); // 내부 값 병합
+      mergeDeep(outputJson, inputJson[key]);
     } else {
-      outputJson[key] = inputJson[key]; // 그대로 유지
+      outputJson[key] = inputJson[key];
     }
   }
 
-  // rem 값 변환: 16px 기준 → 10px 기준 (값이 더 커짐)
-  const adjustedJsonStr = adjustRemValues(JSON.stringify(outputJson, null, 2));
+  // px → rem 변환 (10px = 1rem 기준)
+  convertPxNumbersToRem(outputJson);
 
-  fs.writeFileSync(outputFile, adjustedJsonStr, 'utf8');
-  console.log(`✅ 변환 완료! rem 기준이 10px로 재계산되었습니다. 파일 경로: ${outputFile}`);
+  fs.writeFileSync(outputFile, JSON.stringify(outputJson, null, 2), 'utf8');
+  console.log(`✅ 변환 완료! 모든 px 숫자가 10px 기준 rem으로 처리되었습니다. 저장 경로: ${outputFile}`);
 } catch (err) {
   console.error('❌ 변환 중 오류 발생:', err.message);
 }
