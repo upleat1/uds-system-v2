@@ -565,6 +565,10 @@
         "outlined-disabled-text": {
           "value": "{color.gray.400}",
           "type": "color"
+        },
+        "primary-text 2": {
+          "value": "{color.gray.White}",
+          "type": "color"
         }
       },
       "solidbutton": {
@@ -629,7 +633,7 @@
           "type": "color"
         }
       },
-      "textbutton": {
+      "textbutton-X": {
         "text-basic": {
           "value": "{color.gray.700}",
           "type": "color"
@@ -677,11 +681,11 @@
           "type": "color"
         },
         "text-active": {
-          "value": "{color.gray.800}",
+          "value": "{color.gray.900}",
           "type": "color"
         },
         "text-filled": {
-          "value": "{color.gray.800}",
+          "value": "{color.gray.900}",
           "type": "color"
         },
         "background-disabled": {
@@ -701,7 +705,7 @@
           "type": "color"
         },
         "selection-off": {
-          "value": "{color.gray.500}",
+          "value": "{color.gray.400}",
           "type": "color"
         },
         "selection-offchoice": {
@@ -804,14 +808,52 @@
         }
       },
       "list": {
-        "data_list-top": {
+        "data-top": {
           "value": "{color.gray.600}",
           "type": "color"
         },
-        "data_list-line": {
+        "data-line": {
           "value": "{color.gray.300}",
           "type": "color"
+        },
+        "check_bg": {
+          "value": "{color.primary.50}",
+          "type": "color"
         }
+      }
+    },
+    "text_Button": {
+      "text-basic": {
+        "value": "{color.gray.700}",
+        "type": "color"
+      },
+      "text-secondary": {
+        "value": "{color.gray.600}",
+        "type": "color"
+      },
+      "text-disabled": {
+        "value": "{color.gray.400}",
+        "type": "color"
+      },
+      "text-danger": {
+        "value": "{color.red.600}",
+        "type": "color"
+      },
+      "font-size-large": {
+        "value": "{number.18}",
+        "type": "number"
+      },
+      "font-size-medium": {
+        "value": "{number.16}",
+        "type": "number"
+      },
+      "font-size-small": {
+        "value": "{number.14}",
+        "type": "number"
+      },
+      "padding-icon": {
+        "value": "{padding.4}",
+        "type": "number"
       }
     },
     "font-size": {
