@@ -36,6 +36,7 @@
         .p-tit2 {color:#1733bf; font-weight: bold;}
         .p-list li{position: relative; font-size:1.5rem; color:#666; line-height: 1.8; padding-left:10px;}
         .p-list li::before{content: '-'; position: absolute; left: 0; top:0;}
+        .popup.bottom > .pop_scl_wrap, .popup.bottom .pop_wrap {position: relative;}
     </style>
 </head>
 <body>
@@ -54,17 +55,11 @@
                     <li><strong class="p-tit2">안내성(디자인) 레이어 팝업</strong> : 퍼블 작업</li>
                     <!-- <li><strong class="p-tit2">딤 클릭 이벤트</strong> : 미지원</li> -->
                 </ul>  
-                <ul class="p-list"><!-- 에러 class="error" -->
-                    <li><strong class="p-tit2">단순 메세지성 컨펌 및 알림 팝업</strong> : 네이티브로 작업. (퍼블 작업 없음)</li>
-                    <!-- <li><strong class="p-tit2">풀팝업</strong> : 퍼블은 일반 페이지로 작업, 구현은 네이티브로 작업</li> -->
-                    <li><strong class="p-tit2">안내성(디자인) 레이어 팝업</strong> : 퍼블 작업</li>
-                    <!-- <li><strong class="p-tit2">딤 클릭 이벤트</strong> : 미지원</li> -->
-                </ul>                
             </div>
             <div data-class="h3">
                 <p class="p-tit">2.바텀시트 정책</p>
                 <ul class="p-list">
-                    <li><strong class="p-tit2">일반 바텀시트</strong> : max값 95%만 적용하며 높이는 컨텐츠길이만큼 자동으로 지원. 컨텐츠가 95%이상이면 스크롤 자동 지원</li>
+                    <li><strong class="p-tit2">일반 바텀시트</strong> : max값 90%만 적용하며 높이는 컨텐츠길이만큼 자동으로 지원. 컨텐츠가 90%이상이면 스크롤 자동 지원</li>
                     <!-- <li><strong class="p-tit2">탭이 있는 바텀시트</strong> : 고정값 적용, 사용 디바이스의 70% 고정값 사용, 확장/축소 기능 지원</li> -->
                     <!-- <li><strong class="p-tit2">예외 처리</strong> : 탭이 있는 이체의 계좌선택 바텀시트만 고정값 적용, 바닥 컨텐츠의 남은 여백만큼 바텀시트 높이 지정</li>
                     <li><strong class="p-tit2">딤 클릭이벤트</strong> : 사용여부로 지원</li> -->
@@ -86,8 +81,87 @@
 
         <!-- section : 팝업 설명 -->
         <div data-class="section">
-            <div data-class="h1">사용법</div>
-            <div data-class="h2">Bottm Sheet</div>
+            <div data-class="h1">사용법 - 단순메시지성</div>
+            <div data-class="h2">Alert</div>
+            <div data-class="box">기본 Alert 호출
+<pre>
+    UICommon.Layer.alert('얼럿 메세지');
+</pre>
+            </div>
+            <script type="text/html" data-type="script">
+//Alert 
+UICommon.Layer.alert('Alert 메세지');
+//Alert + Callback
+UICommon.Layer.alert('Alert 메세지.',function(){
+    console.log('얼럿 확인1');
+});
+//Alert + No Title
+UICommon.Layer.alert('Alert 메세지', 'noTitle');
+//Alert + Callback + 타이틀변경
+UICommon.Layer.alert('Alert 메세지.', 'Alert 제목', function () {
+    console.log('얼럿 확인2');
+});
+
+//Alert + Callback + 버튼 텍스트변경 (타이틀 변경안하면 '' 으로)
+UICommon.Layer.alert('Alert 메세지.', '', '완료', function () {
+    console.log('얼럿 완료1');
+});
+
+//Alert + Callback + 타이틀변경 + 버튼 텍스트변경
+UICommon.Layer.alert('Alert 메세지.', 'Alert 제목', '완료', function () {
+    console.log('얼럿 완료2');
+});
+            </script>
+
+            <div data-class="h2">Confirm</div>
+            <div data-class="box">기본 Confirm 호출
+<pre>
+    UICommon.Layer.confirm('Confirm 메세지'); 
+</pre>
+            </div>
+            <script type="text/html" data-type="script">
+//Confirm
+UICommon.Layer.confirm('Confirm 메세지'); 
+//Confirm + No Title
+UICommon.Layer.confirm('Confirm 메세지', 'noTitle');
+//Confirm + Callback
+UICommon.Layer.confirm('Confirm 창입니다.',function(e){
+    if(e){
+        console.log('Confirm 확인');
+    }else{
+        console.log('Confirm 취소');
+    }
+});
+//Alert + No Title
+UICommon.Layer.confirm('Confirm 메세지', 'noTitle');
+//Confirm + Callback + 타이틀변경
+UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목',function(e){
+    if(e){
+        console.log('Confirm 확인');
+    }else{
+        console.log('Confirm 취소');
+    }
+});
+//Confirm + Callback + 버튼 텍스트변경
+UICommon.Layer.confirm('컨펌창입니다.', '','완료','넘기기',function(e){
+    if(e){
+        console.log('Confirm 완료');
+    }else{
+        console.log('Confirm 넘기기');
+    }
+});
+//Confirm + Callback + 타이틀추가 + 버튼 텍스트변경
+UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기기',function(e){
+    if(e){
+        console.log('Confirm 확인');
+    }else{
+        console.log('Confirm 넘기기');
+    }
+});
+            </script>
+
+            <div data-class="h1">사용법 - 안내성(디자인)</div>
+            <div data-class="h2">Dialogs, Bottm Sheet</div>
             <!-- 레이어 호출 설명 영역 -->
             <div data-class="box">
                 <div data-class="list number">
@@ -174,16 +248,39 @@ $(function(){
 });
 
 <!-- layer html : default -->
-<div id="팝업ID" class="popup bottom" role="dialog" aria-hidden="true">
+<div id="팝업ID" class="popup modal" role="dialog" aria-hidden="true">
     <article class="pop_wrap">
         <div class="pop_head">
             <div>
-                <h1>제목</h1>
+                <h1>타이틀 영역</h1>
             </div>
         </div>
         <div class="pop_body">
             <div class="pop_section">
-                팝업 콘텐츠 영역
+                다이얼로그 컨텐츠
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
+                    <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </article>
+</div>
+<div id="팝업ID" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop_wrap">
+        <div class="pop_head">
+            <div>
+                <h1>바텀시트 타이틀</h1>
+            </div>
+        </div>
+        <div class="pop_body">
+            <div class="pop_section">
+                바텀시트 내용
             </div>
         </div>
         <div class="pop_foot">
@@ -199,83 +296,6 @@ $(function(){
 </div>
 <!-- //layer html : default -->
             </script>
-            <div data-class="h2">Alert</div>
-            <div data-class="box">기본 Alert 호출
-<pre>
-    UICommon.Layer.alert('얼럿 메세지');
-</pre>
-            </div>
-            <script type="text/html" data-type="script">
-//Alert 
-UICommon.Layer.alert('Alert 메세지');
-//Alert + Callback
-UICommon.Layer.alert('Alert 메세지.',function(){
-    console.log('얼럿 확인1');
-});
-//Alert + No Title
-UICommon.Layer.alert('Alert 메세지', 'noTitle');
-//Alert + Callback + 타이틀변경
-UICommon.Layer.alert('Alert 메세지.', 'Alert 제목', function () {
-    console.log('얼럿 확인2');
-});
-
-//Alert + Callback + 버튼 텍스트변경 (타이틀 변경안하면 '' 으로)
-UICommon.Layer.alert('Alert 메세지.', '', '완료', function () {
-    console.log('얼럿 완료1');
-});
-
-//Alert + Callback + 타이틀변경 + 버튼 텍스트변경
-UICommon.Layer.alert('Alert 메세지.', 'Alert 제목', '완료', function () {
-    console.log('얼럿 완료2');
-});
-            </script>
-
-            <div data-class="h2">Confirm</div>
-            <div data-class="box">기본 Confirm 호출
-<pre>
-    UICommon.Layer.confirm('Confirm 메세지'); 
-</pre>
-            </div>
-            <script type="text/html" data-type="script">
-//Confirm
-UICommon.Layer.confirm('Confirm 메세지'); 
-//Confirm + No Title
-UICommon.Layer.confirm('Confirm 메세지', 'noTitle');
-//Confirm + Callback
-UICommon.Layer.confirm('Confirm 창입니다.',function(e){
-    if(e){
-        console.log('Confirm 확인');
-    }else{
-        console.log('Confirm 취소');
-    }
-});
-//Alert + No Title
-UICommon.Layer.confirm('Confirm 메세지', 'noTitle');
-//Confirm + Callback + 타이틀변경
-UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목',function(e){
-    if(e){
-        console.log('Confirm 확인');
-    }else{
-        console.log('Confirm 취소');
-    }
-});
-//Confirm + Callback + 버튼 텍스트변경
-UICommon.Layer.confirm('컨펌창입니다.', '','완료','넘기기',function(e){
-    if(e){
-        console.log('Confirm 완료');
-    }else{
-        console.log('Confirm 넘기기');
-    }
-});
-//Confirm + Callback + 타이틀추가 + 버튼 텍스트변경
-UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기기',function(e){
-    if(e){
-        console.log('Confirm 확인');
-    }else{
-        console.log('Confirm 넘기기');
-    }
-});
-            </script>
         </div>
         <!-- //section : 팝업 설명 -->
 
@@ -284,6 +304,87 @@ UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기
         <div data-class="section">
             <div data-class="h1">Type</div>
             <div data-class="box">다음은 타입별 레이아웃 참고용입니다. 실제 구현시 상단의 [Popup Sample]을 참고하세요.</div>
+
+            <div data-class="h2">Alert</div>
+            <script type="text/html">
+<div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
+    aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
+    <div class="pop_scl_wrap">
+        <article class="pop_wrap" style="max-height: 448px;">
+            <div class="pop_head">
+                <div>
+                    <h1 id="uiLayerAlert0Label">알림</h1>
+                </div>
+            </div>
+            <div class="pop_body" style="max-height: 296px;">
+                <div class="section">
+                    <div class="message">
+                        <div role="alert" aria-live="assertive">얼럿창입니다.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div class="btn_area">
+                    <span><button type="button" id="uiLayerAlert0ActionBtn" class="btn solid primary">확인</button></span>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h2">Confirm</div>
+            <script type="text/html">
+<div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
+    aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
+    <div class="pop_scl_wrap">
+        <article class="pop_wrap" style="max-height: 448px;">
+            <div class="pop_head">
+                <div>
+                    <h1 id="uiLayerAlert0Label">알림</h1>
+                </div>
+            </div>
+            <div class="pop_body" style="max-height: 296px;">
+                <div class="section">
+                    <div class="message">
+                        <div role="alert" aria-live="assertive">컨펌창입니다.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_foot">
+                <div class="btn_area"><span><button type="button" id="uiLayerAlert0CancelBtn"
+                            class="btn solid secondary">취소</button></span><span><button type="button"
+                            id="uiLayerAlert0ActionBtn" class="btn solid primary">확인</button></span></div>
+            </div>
+        </article>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h2">Dialogs</div>
+            <script type="text/html">
+<div id="팝업ID" class="popup modal ui_pop_last show foot" role="dialog" aria-hidden="false" style="display: flex;" aria-labelledby="modalPopup1Label" tabindex="0"><div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
+    <article class="pop_wrap" style="padding-bottom: 96px; max-height: 600.3px;">
+        <div class="pop_head">
+            <div>
+                <h1 id="modalPopup1Label">타이틀 영역</h1>
+            </div>
+        </div>
+        <div class="pop_body" style="max-height: 428.3px;">
+            <div class="pop_section">
+                기본 다이얼로그 컨텐츠
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                </div>
+            </div>
+        </div>
+    </article>
+            </script>            
+
 
             <div data-class="h2">Bottom Sheet</div>
             <script type="text/html">
@@ -294,19 +395,19 @@ UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기
         <article class="pop_wrap" style="max-height: 508px;">
             <div class="pop_head">
                 <div>
-                    <h1 id="bottomPopup2Label">제목</h1>
+                    <h1 id="bottomPopup2Label">바텀시트 타이틀</h1>
                 </div>
             </div>
             <div class="pop_body" style="max-height: 252px;">
                 <div class="pop_section">
-                    <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div>
+                    바텀시트 내용
                 </div>
             </div>
             <div class="pop_foot">
                 <div>
                     <div class="btn_area">
-                        <span><button type="button" class="btn secondary lg" data-action="close">취소</button></span>
-                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                        <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
+                        <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
                     </div>
                 </div>
             </div>
@@ -318,7 +419,7 @@ UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기
 
             <div data-class="h2">Bottom Sheet - No Title</div>
             <script type="text/html">
-<div id="팝업ID" class="popup bottom ui_pop_last show" style="height:500px" role="dialog" aria-hidden="false"
+<div id="팝업ID" class="popup bottom ui_pop_last show footer no_title close" style="height:500px" role="dialog" aria-hidden="false"
     aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
     <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
     <div class="pop_scl_wrap">
@@ -330,14 +431,14 @@ UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기
             </div>
             <div class="pop_body" style="max-height: 252px;">
                 <div class="pop_section">
-                    <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div>
+                    바텀시트 내용
                 </div>
             </div>
             <div class="pop_foot">
                 <div>
                     <div class="btn_area">
-                        <span><button type="button" class="btn secondary lg" data-action="close">취소</button></span>
-                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                        <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
+                        <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
                     </div>
                 </div>
             </div>
@@ -356,7 +457,7 @@ UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기
         <article class="pop_wrap" style="max-height: 508px;">
             <div class="pop_head">
                 <div>
-                    <h1 id="bottomPopup2Label">제목</h1>
+                    <h1 id="bottomPopup2Label">바텀시트 타이틀</h1>
                 </div>
             </div>
             <div class="pop_body" style="max-height: 252px;">
@@ -408,8 +509,8 @@ UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기
             <div class="pop_foot">
                 <div>
                     <div class="btn_area">
-                        <span><button type="button" class="btn secondary lg" data-action="close">취소</button></span>
-                        <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                        <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
+                        <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
                     </div>
                 </div>
             </div>
@@ -418,63 +519,6 @@ UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기
     </div>
 </div>
             </script>
-
-            <div data-class="h2">Alert</div>
-            <script type="text/html">
-<div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
-    aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
-    <div class="pop_scl_wrap">
-        <article class="pop_wrap" style="max-height: 448px;">
-            <div class="pop_head">
-                <div>
-                    <h1 id="uiLayerAlert0Label">알림</h1>
-                </div>
-            </div>
-            <div class="pop_body" style="max-height: 296px;">
-                <div class="section">
-                    <div class="message">
-                        <div role="alert" aria-live="assertive">얼럿창입니다.</div>
-                    </div>
-                </div>
-            </div>
-            <div class="pop_foot">
-                <div class="btn_area">
-                    <span><button type="button" id="uiLayerAlert0ActionBtn" class="btn primary lg">확인</button></span>
-                </div>
-            </div>
-        </article>
-    </div>
-</div>
-            </script>
-
-            <div data-class="h2">Confirm</div>
-            <script type="text/html">
-<div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
-    aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
-    <div class="pop_scl_wrap">
-        <article class="pop_wrap" style="max-height: 448px;">
-            <div class="pop_head">
-                <div>
-                    <h1 id="uiLayerAlert0Label">알림</h1>
-                </div>
-            </div>
-            <div class="pop_body" style="max-height: 296px;">
-                <div class="section">
-                    <div class="message">
-                        <div role="alert" aria-live="assertive">컨펌창입니다.</div>
-                    </div>
-                </div>
-            </div>
-            <div class="pop_foot">
-                <div class="btn_area"><span><button type="button" id="uiLayerAlert0CancelBtn"
-                            class="btn secondary lg">취소</button></span><span><button type="button"
-                            id="uiLayerAlert0ActionBtn" class="btn primary lg">확인</button></span></div>
-            </div>
-        </article>
-    </div>
-</div>
-            </script>
-
         </div>   
         <!-- //section : 레이아웃 확인용 -->                
         

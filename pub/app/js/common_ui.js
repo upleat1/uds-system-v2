@@ -2250,6 +2250,7 @@ if (!UICommon) {
             contClass: 'pop_section',
             tabClass: 'tab_scroller',
             footClass: 'pop_foot',
+            closeClass: 'pop_close',
             innerClass: 'section',
             showClass: 'show',
             loadClass: 'load_show',
@@ -2303,9 +2304,9 @@ if (!UICommon) {
                 $html += '<div class="' + Layer.footClass + '">';
                 $html += '<div class="btn_area">';
                 if (type === 'confirm' || type === 'prompt') {
-                    $html += '<span><button type="button" id="' + btnCancelId + '" class="btn secondary lg">취소</button></span>';
+                    $html += '<span><button type="button" id="' + btnCancelId + '" class="btn solid secondary">취소</button></span>';
                 }
-                $html += '<span><button type="button" id="' + btnActionId + '" class="btn primary lg">확인</button></span>';
+                $html += '<span><button type="button" id="' + btnActionId + '" class="btn solid primary">확인</button></span>';
                 $html += '</div>';
                 $html += '</div>';
                 $html += '</article>';
@@ -2678,7 +2679,8 @@ if (!UICommon) {
                     } else if ($(tar).hasClass('body_swipe')) {
                         const _tabS = $tabScroller.scrollTop();
                         const _tabH = $body.find('.tab_list').outerHeight();
-                        const popMaxH = $(window).height() - 30;
+                        //const popMaxH = $(window).height() - 30;
+                        const popMaxH = $(window).height() * 0.9;
                         (_tabS <= 0) ? $tabScroller.removeClass('on').addClass('scroll') : $tabScroller.removeClass('scroll').addClass('on');
                         if (Math.abs($distanceY) > 25) {
                             if ($popup.hasClass('bottom') && !$isFull) {
@@ -2781,7 +2783,8 @@ if (!UICommon) {
                 const $popBody = $popup.find('.' + Layer.bodyClass);
                 const $btnPopClose = $popup.find('.pop_wrap .pop_close');
                 const $tabScroller = $popup.find('.' + Layer.tabClass);
-                const popMaxH = $(window).height() - 30;
+                //const popMaxH = $(window).height() - 30;
+                const popMaxH = $(window).height() * 0.9;
                 $('html').removeClass('keypad_open');
                 if ($popup.closest('#wrap').length) $('#wrap').after($popup);
                 if ($('#wrap').length && !$popup.hasClass('no_dimmed')) $('#wrap').attr('aria-hidden', true);
@@ -2807,7 +2810,8 @@ if (!UICommon) {
                     }
                     if ($btnPopClose.length) $btnPopClose.attr('id', $id + '_dev');
                     if (popTitle != undefined && popTitle != null && popTitle != '') $popup.find('.pop_head h1').text(popTitle);
-                    if (popTitle === 'noTitle' && popTitle != '') $popup.find('.pop_head h1').empty();
+                    //if (popTitle === 'noTitle' && popTitle != '') $popup.find('.pop_head h1').empty();
+                    if (popTitle === 'noTitle' && popTitle != '') $popup.find('.pop_head h1').remove();
                     if ($btnPopClose.length && popClose === 'noClose') $btnPopClose.remove();
                     if (!$popup.hasClass(Layer.alertClass)) {
                         if (Layer.openPop.length) {
@@ -2917,6 +2921,7 @@ if (!UICommon) {
                                 const $head = $wrap.find('.' + Layer.headClass);
                                 const _headH = $head.outerHeight();
                                 const $foot = $wrap.find('.' + Layer.footClass);
+                                const $close = $wrap.find('.' + Layer.closeClass);
                                 const $body = $wrap.find('.' + Layer.bodyClass);
                                 const _contH = $wrap.find('.' + Layer.contClass).height();
                                 const $tabScroller = $body.find('.tab_scroller');
@@ -2927,6 +2932,9 @@ if (!UICommon) {
                                     _footH = $foot.outerHeight();
                                     $popup.addClass('foot');
                                     $wrap.css('padding-bottom', _footH);
+                                }
+                                if ($close.length) {
+                                    $popup.addClass('close');
                                 }
                                 $wrap.css('max-height', popMaxH);
                                 $body.css('max-height', popMaxH - _headH - _footH);
