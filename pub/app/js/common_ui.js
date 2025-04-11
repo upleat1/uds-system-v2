@@ -882,9 +882,13 @@ if (!UICommon) {
                     $thisLeft = el.position().left + sb,
                     $thisWidth = el.outerWidth() + sb,
                     $scrollLeft = $thisLeft - ($parentWidth / 2) + ($thisWidth / 2),
-                    $speed = Math.max(300, Math.abs($scrollLeft * 2)),
-                    $line = $parent.find('.tab_bar');
-                if ($parentWidth < $parentScrollW) $parent.animate({ scrollLeft: $scrollLeft }, $speed);
+                    $speed = Math.max(300, Math.abs($scrollLeft * 2));
+                    
+                //if ($parentWidth < $parentScrollW) $parent.animate({ scrollLeft: $scrollLeft }, $speed);
+                if ($parentWidth < $parentScrollW) {
+                    console.log("tabscroll", $thisLeft, $scrollLeft);
+                    $parent.animate({ scrollLeft: $scrollLeft }, $speed);
+                }
             },
             tabBar: function () {
                 $('.tab_wrap').each(function () {
@@ -895,13 +899,16 @@ if (!UICommon) {
                             $tabWrap = $this.closest('.tab_wrap'),
                             $active = $tabWrap.find('[aria-selected=true]'),
                             $list = $btn.parent();
-                        ($tabWrap.hasClass('box')) ? $tabWrap.addClass('bar') : $tabWrap.addClass('line');
+                        //($tabWrap.hasClass('box')) ? $tabWrap.addClass('bar') : $tabWrap.addClass('line');
+                        $tabWrap.addClass('is_motion');
                         setTimeout(function () {
                             var $tabWidth = $active.outerWidth(),
                                 $listLeft = parseInt($list.css('margin-left')),
+                                $listPadding = parseInt($list.css('padding')),
                                 sb = Number($active.css('margin-left').replace('px', '')),
-                                sp = ($this.hasClass('box')) ? 0 : 24,
-                                $tabLeft = $listLeft + $active.position().left + $btn.position().left + sb + sp;
+                                //sp = ($this.hasClass('box')) ? 0 : 24,  // 기본 24px 사용 여부 확인 후 적용
+                                sp = 0;
+                                $tabLeft = $listLeft + $active.position().left + $btn.position().left + sb + sp - $listPadding;
                             $bar.css({ 'width': $tabWidth, 'left': $tabLeft });
                         }, 150);
                     }
@@ -2286,7 +2293,7 @@ if (!UICommon) {
                 $html += '<article class="' + Layer.wrapClass + '">';
                 $html += '<div class="' + Layer.headClass + '"><div><h1>알림</h1></div></div>';
                 $html += '<div class="' + Layer.bodyClass + '">';
-                $html += '<div class="' + Layer.innerClass + '">';
+                $html += '<div class="' + Layer.contClass + '">';
                 if (type === 'prompt') {
                     $html += '<div class="form-lbl mt-0">';
                     $html += '<label for="inpPrompt" role="alert" aria-live="assertive"></label>';
