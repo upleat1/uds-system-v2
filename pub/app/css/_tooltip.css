@@ -1,35 +1,67 @@
 /*** common.css ***/
+:root {
+    --bul-size-xsmall:var(--number-3);
+    --bul-size-small:var(--number-4);
+    --bul-size-medium:var(--number-5);
+    --bul-size-large:var(--number-6);
+    --bul-size-xlarge:var(--number-8);
+
+    --bul-radius-small:var(--radius-4); 
+
+    --btn-close-size-small:var(--number-20);
+    --btn-close-size-medium:var(--number-24);
+    --btn-close-size-large:var(--number-32);
+    --btn-close-size-xlarge:var(--number-34);
+}
 
 /*** Tooltip ***/
+:root {
+    --tooltip-gap:var(--gap-8);
+    --tooltip-radius:var(--radius-8);
+    --tooltip-wrap-padding:var(--padding-16) var(--padding-20);
+    --tooltip-wrap-background:var(--color-alpha-black80);
+    --tooltip-tit-padding-x:var(--padding-24);
+    --tooltip-tit-font-size:var(--font-size-heading-xsmall);
+    --tooltip-tit-font-weight:var(--typo-font-weight-semi-bold);
+    --tooltip-tit-line-height:var(--typo-line-height-24);
+    --tooltip-cont-font-size:var(--font-size-body-small);
+    --tooltip-cont-line-height:var(--typo-line-height-20);
+    --tooltip-bul-padding-x:var(--padding-12);
+    --tooltip-bul-background:var(--color-gray-200);
+    --tooltip-close-btn-x:var(--number-9);
+    --tooltip-close-btn-y:var(--number-9);
+}
+
 .tooltip {display:inline-block; font-size:1.4rem; color:var(--fc_05);}
 .tooltip_limited {display:inline-block; position:relative; white-space:normal;}
 .btn_tooltip {overflow:hidden; display:inline-block; width:2rem; height:2rem; margin-top:-.2rem; background:url(/pub/app/img/common/spr_ico_20x.png) no-repeat -14rem 0; background-size:25rem auto;  vertical-align:middle;}
 .btn_tooltip span {line-height:2rem; vertical-align:bottom;}
-.btn_tooltip_x {width:3.4rem; height:3.4rem; display:block; position:absolute; top:.9rem; right:.9rem; background-image: url("data:image/svg+xml,%0A%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_649_1747)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.8396 3.16076C17.165 3.4862 17.165 4.01384 16.8396 4.33928L4.33958 16.8393C4.01414 17.1647 3.48651 17.1647 3.16107 16.8393C2.83563 16.5138 2.83563 15.9862 3.16107 15.6608L15.6611 3.16076C15.9865 2.83533 16.5141 2.83533 16.8396 3.16076Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.74408 3.57745C3.06951 3.25201 3.59715 3.25201 3.92259 3.57745L16.4226 16.0775C16.748 16.4029 16.748 16.9305 16.4226 17.256C16.0972 17.5814 15.5695 17.5814 15.2441 17.256L2.74408 4.75596C2.41864 4.43053 2.41864 3.90289 2.74408 3.57745Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_649_1747'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A"); background-repeat: no-repeat; background-size: 2rem; background-position: center;}
+.btn_tooltip_x {width:var(--btn-close-size-xlarge); height:var(--btn-close-size-xlarge); display:block; position:absolute; top:var(--tooltip-close-btn-x); right:var(--tooltip-close-btn-y); background-image:url("data:image/svg+xml,%0A%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_649_1747)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.8396 3.16076C17.165 3.4862 17.165 4.01384 16.8396 4.33928L4.33958 16.8393C4.01414 17.1647 3.48651 17.1647 3.16107 16.8393C2.83563 16.5138 2.83563 15.9862 3.16107 15.6608L15.6611 3.16076C15.9865 2.83533 16.5141 2.83533 16.8396 3.16076Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.74408 3.57745C3.06951 3.25201 3.59715 3.25201 3.92259 3.57745L16.4226 16.0775C16.748 16.4029 16.748 16.9305 16.4226 17.256C16.0972 17.5814 15.5695 17.5814 15.2441 17.256L2.74408 4.75596C2.41864 4.43053 2.41864 3.90289 2.74408 3.57745Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_649_1747'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A"); background-repeat:no-repeat; background-size:var(--btn-close-size-small); background-position:center;}
 .h3 .btn_tooltip {margin-top:-.4rem;}
 
+.tooltip_wrap {display:none; position:absolute; left:0; right:0; margin-top:var(--tooltip-gap); padding:var(--tooltip-wrap-padding); border-radius:var(--tooltip-radius); background-color:var(--tooltip-wrap-background); color:var(--color-gray-200); text-align:left; z-index:100; opacity:0; transform:scaleY(0.8) translateY(-1.0rem); transform-origin:top left; transition:opacity .3s cubic-bezier(.25, .75, .5, 1.25), transform .3s cubic-bezier(.25, .75, .5, 1.25);}
+.tooltip_wrap.top {bottom:25px; transform-origin:bottom left;transform:scaleY(0.8) translateY(1.0rem);}
+.tooltip_wrap.show {opacity:1;transform:scaleY(1) translateY(0);}
+.tooltip_wrap.active {display:block;}
+
+.tooltip_wrap .tooltip_cont {padding-right:var(--padding-32); font-size:var(--tooltip-cont-font-size); line-height:var(--tooltip-cont-line-height); white-space:normal;}
+.tooltip_wrap .tooltip_cont .p {font-size:inherit;}
+.tooltip_wrap .tooltip_cont ul.bul {margin-top:var(--tooltip-gap);}
+.tooltip_wrap .tooltip_cont ul.bul > li {position:relative; padding:0 0 0 var(--tooltip-bul-padding-x);}
+.tooltip_wrap .tooltip_cont ul.bul > li + li {margin-top:var(--tooltip-gap);}
+.tooltip_wrap .tooltip_cont ul.bul > li::before {content:''; position:absolute; top:var(--tooltip-gap); left:0; width:var(--bul-size-small); height:var(--bul-size-xsmall); border-radius:var(--bul-radius-small); background-color:var(--tooltip-bul-background);}
+
+.tooltip_wrap .tooltip_tit {display:block; padding-right:var(--tooltip-tit-padding-x); font-weight:var(--tooltip-tit-font-weight); font-size:var(--tooltip-tit-font-size); color:var(--color-gray-white); line-height:var(--tooltip-tit-line-height);}
+.tooltip_wrap .tooltip_tit + .tooltip_cont {margin-top:var(--tooltip-gap); padding-right:0;}
+
+/* .btn_tooltip_x {width:3.4rem; height:3.4rem; display:block; position:absolute; top:0.5rem; right:0.5rem; background: url(/pub/app/img/common/ico_btn_x.png) no-repeat center center; background-size:1.4rem;} */
+/*
 .tooltip_limited_wrap {text-align:right; color:var(--fc_05); font-size:1.4rem; margin:0.6rem 2.4rem 0 0;}
 .tooltip_limited_wrap .tooltip_limited {margin-left:.3rem;}
 .tooltip_limited_wrap .tooltip_limited .tooltip_wrap {top:15rem;}
 .tooltip_limited_wrap .tooltip_limited .tooltip_wrap.many_trans {top:18rem;}
 .tooltip_limited_wrap .btn_tooltip{margin-top:-.4rem;}
-
-.tooltip_wrap {display:none; position:absolute; left:0; right:0; margin-top:.8rem; padding:var(--padding-16) var(--padding-20); border-radius:var(--radius-8); background-color:var(--color-alpha-black80); color:var(--color-gray-200); text-align:left; z-index:100; opacity:0; transform:scaleY(0.8) translateY(-1.0rem); transform-origin:top left; transition:opacity .3s cubic-bezier(.25, .75, .5, 1.25), transform .3s cubic-bezier(.25, .75, .5, 1.25);}
-.tooltip_wrap.top {bottom:25px; transform-origin:bottom left;transform:scaleY(0.8) translateY(1.0rem);}
-.tooltip_wrap.show {opacity:1;transform:scaleY(1) translateY(0);}
-.tooltip_wrap.active {display:block;}
-
-.tooltip_wrap .tooltip_tit {display:block; padding-right:2rem; font-weight:700; font-size:var(--font-size-heading-xsmall); color:var(--color-gray-white); line-height:var(--typo-line-height-24);}
-.tooltip_wrap .tooltip_tit + .tooltip_cont {margin-top:0.8rem; padding-right:0;}
-.tooltip_wrap .tooltip_tit + .tooltip_cont .tooltip_cont{padding-right:0}
-.tooltip_wrap .tooltip_cont {padding-right:var(--padding-32); font-size:var(--font-size-body-small); line-height:var(--typo-line-height-20); white-space:normal;}
-.tooltip_wrap .tooltip_cont .p {font-size:inherit;}
-
-.tooltip_wrap .tooltip_cont ul.bul {margin-top:0.8rem;}
-.tooltip_wrap .tooltip_cont ul.bul > li {position:relative; padding:0 0 0 1.2rem}
-.tooltip_wrap .tooltip_cont ul.bul > li + li {margin-top:0.8rem}
-.tooltip_wrap .tooltip_cont ul.bul > li::before {content:''; position:absolute; top:.8rem; left:0; width:.4rem; height:.3rem; border-radius:.4rem; background-color:var(--color-gray-200);}
-
+*/
 /* .tooltip_wrap .depth li,
 .tooltip_wrap p.depth.info {color:var(--fc_08); line-height:1.4;}
 .tooltip_wrap p.depth.info::before {background-position: -22rem -12rem;}
