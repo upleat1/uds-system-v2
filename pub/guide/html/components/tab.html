@@ -53,8 +53,25 @@
         </div>
     </div>
     <div class="tab_panel" role="tabpanel" id="tabpanel_2">
-        <div class="section">
-            항목2 콘텐츠 
+        <div class="tab_wrap tab_list_sub">
+            <div class="tab_list" role="tablist">
+                <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpane1_2_1">하위항목1</button>
+                <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpane1_2_2">하위항목2</button>
+                <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpane1_2_2">하위항목3</button>
+                <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpane1_2_2">하위항목4</button>
+            </div>
+            <div class="tab_panel" role="tabpanel" id="tabpane1_2_1">
+                <div class="section">하위항목1 콘텐츠</div>
+            </div>
+            <div class="tab_panel" role="tabpanel" id="tabpane1_2_2">
+                <div class="section">하위항목2 콘텐츠 </div>
+            </div>
+            <div class="tab_panel" role="tabpanel" id="tabpane1_2_3">
+                <div class="section">하위항목3 콘텐츠 </div>
+            </div>
+            <div class="tab_panel" role="tabpanel" id="tabpane1_2_4">
+                <div class="section">하위항목4 콘텐츠 </div>
+            </div>
         </div>
     </div>
     <div class="tab_panel" role="tabpanel" id="tabpanel_3">
@@ -152,7 +169,6 @@
 </div>
             </script>
         </div>
-
         <div data-class="section">
             <div data-class="h2">Box Tab</div>
             <div data-class="box">
@@ -165,168 +181,100 @@
             <script type="text/html">
 <div class="tab_wrap box"> <!-- 박스형 : box -->
     <div class="tab_list" role="tablist">
-        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tab2panel1_1">은행</button>
-        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tab2panel1_2">증권사</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tab2panel1_1">메뉴명</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tab2panel1_2">메뉴명</button>
     </div>
     <div class="tab_panel" role="tabpanel" id="tab2panel1_1">
-        항목 1 콘텐츠 
+        <div class="section">메뉴명 1 콘텐츠</div>
     </div>
     <div class="tab_panel" role="tabpanel" id="tab2panel1_2">
-        항목 2 콘텐츠 
+        <div class="section">메뉴명 2 콘텐츠</div>
     </div>
 </div>
             </script>
             <script type="text/html">
 <div class="tab_wrap box"> <!-- 박스형 : box -->
     <div class="tab_list" role="tablist">
-        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tab2panel2_1">은행</button>
-        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tab2panel2_2">증권사</button>
-        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tab2panel2_3">증권사</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tab2panel2_1">메뉴명</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tab2panel2_2">메뉴명</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tab2panel2_3">메뉴명</button>
     </div>
     <div class="tab_panel" role="tabpanel" id="tab2panel2_1">
-        항목 1 콘텐츠 
+        <div class="section">메뉴명 1 콘텐츠</div>
     </div>
     <div class="tab_panel" role="tabpanel" id="tab2panel2_2">
-        항목 2 콘텐츠 
+        <div class="section">메뉴명 2 콘텐츠</div>
     </div>
     <div class="tab_panel" role="tabpanel" id="tab2panel2_3">
-        항목 3 콘텐츠 
+        <div class="section">메뉴명 3 콘텐츠</div>
     </div>
 </div>
             </script>
         </div>
-
         <div data-class="section">
             <div data-class="h2">Box Tab - 모션</div>
             <script type="text/html">
 <div class="tab_wrap box"> <!-- 박스형 : box -->
     <div class="tab_list" role="tablist">
         <i class="tab_bar" aria-hidden="true"></i> <!-- tab_bar : 있으면 자동으로 모션 적용, tab_wrap에 is_motion 추가됨 -->
-        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpanel6_1">은행</button>
-        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpanel6_2">증권사</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpanel6_1">메뉴명</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpanel6_2">메뉴명</button>
     </div>
     <div class="tab_panel" role="tabpanel" id="tabpanel6_1">
-        
-        항목 1 콘텐츠 
+        <div class="section">메뉴명 1 콘텐츠</div>
     </div>
     <div class="tab_panel" role="tabpanel" id="tabpanel6_2">
-        
-        항목 2 콘텐츠 
+        <div class="section">메뉴명 2 콘텐츠</div>
     </div>
 </div>
         </script>
         </div>
-
-        <div data-class="section">
-            <div data-class="h2">Mix</div>
-            <script type="text/html">
-<div class="step_wrap js_step">    
-    <div class="step" role="img" aria-label="총 5단계 중 현재 2단계">
-        <span class="current">2</span><span class="mark">/</span><span class="total">5</span>
-    </div>
-    <h1 class="h1">페이지 타이틀</h1>
-</div>
-<div class="tab_wrap ">
-    <div class="tab_list" role="tablist">
-        <div class="scroll_wrap">
-            <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpane5_1">메뉴명 1</button>
-            <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpane5_2">메뉴명 2</button>
-        </div>
-    </div>
-    <div class="tab_panel" role="tabpanel" id="tabpane5_1">    
-                            
-        <div class="section">
-            <div class="tab_wrap box tab_list_sub">
-                <div class="tab_list" role="tablist">
-                    <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpane5_1_1">은행</button>
-                    <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpane5_1_2">증권사</button>
-                </div>
-                <div class="tab_panel" role="tabpanel" id="tabpane5_1_1">
-                    항목 1-1 콘텐츠 
-                </div>
-                <div class="tab_panel" role="tabpanel" id="tabpane5_1_2">
-                    항목 1-2 콘텐츠 
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tab_panel" role="tabpanel" id="tabpane5_2">
-        
-        <div class="section">
-            <div class="tab_wrap box tab_list_sub">
-                <div class="tab_list" role="tablist">
-                    <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpane5_2_1">은행</button>
-                    <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpane5_2_2">증권사</button>
-                </div>
-                <div class="tab_panel" role="tabpanel" id="tabpane5_2_1">
-                    
-                    항목 2-1 콘텐츠 
-                </div>
-                <div class="tab_panel" role="tabpanel" id="tabpane5_2_2">
-                    
-                    항목 2-2 콘텐츠 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-            </script>
-        </div>
-
-        
-
         <div data-class="section">
             <div data-class="h2">Tab Panel Swipe</div>
             <script type="text/html">
 <div class="tab_wrap box"> <!-- 박스형 : box -->
     <div class="tab_list" role="tablist">
         <i class="tab_bar" aria-hidden="true"></i> <!-- tab_bar : 있으면 자동으로 모션 적용, tab_wrap에 is_motion 추가됨 -->
-        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpanel7_1">은행</button>
-        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpanel7_2">증권사</button>
-        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpanel7_3">국세/지방세</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="tabpanel7_1">메뉴명</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpanel7_2">메뉴명</button>
+        <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="tabpanel7_3">메뉴명</button>
     </div>
     <div class="tab_swipe">
         <div class="tab_panel" role="tabpanel" id="tabpanel7_1">
-            
-            <div style="height:100px;line-height:100px;background-color:#eee;text-align:center">항목 1 콘텐츠</div>
+            <div style="height:100px;line-height:100px;background-color:#eee;text-align:center">메뉴명 1 콘텐츠</div>
         </div>
         <div class="tab_panel" role="tabpanel" id="tabpanel7_2">
-            
-            <div style="height:100px;line-height:100px;background-color:#ccc;text-align:center">항목 2 콘텐츠</div>
+            <div style="height:100px;line-height:100px;background-color:#ccc;text-align:center">메뉴명 2 콘텐츠</div>
         </div>
         <div class="tab_panel" role="tabpanel" id="tabpanel7_3">
-            
-            <div style="height:100px;line-height:100px;background-color:#eee;text-align:center">항목 3 콘텐츠</div>
+            <div style="height:100px;line-height:100px;background-color:#eee;text-align:center">메뉴명 3 콘텐츠</div>
         </div>
     </div>
 </div>
         </script>
         </div>
-
         <div data-class="section">
             <div data-class="h2">Swipe 포함</div>
             <div data-class="box">
-                가로스크롤
+                탭패널 내 스와이프 포함
             </div>
             <script type="text/html">
 <div class="tab_wrap">
     <div class="tab_list" role="tablist">
         <div class="scroll_wrap">
             <button type="button" class="btn_tab" role="tab" aria-selected="true" aria-controls="swipePanel_1">메뉴테스트 1</button>
-            <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="swipePanel_2">Swipe</button>
+            <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="swipePanel_2">메뉴테스트 22</button>
             <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="swipePanel_3">메뉴테스트 333</button>
             <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="swipePanel_4">메뉴테스트 4444</button>
             <button type="button" class="btn_tab" role="tab" aria-selected="false" aria-controls="swipePanel_5">메뉴테스트 55555</button>
         </div>
     </div>
     <div class="tab_panel" role="tabpanel" id="swipePanel_1">
-        
         <div class="section">
-            항목 1 콘텐츠 
+            메뉴 1 콘텐츠 
         </div>
     </div>
     <div class="tab_panel" role="tabpanel" id="swipePanel_2">
-        
         <div class="section">
             <div class="ui_swiper">
                 <div class="swiper">
@@ -347,66 +295,32 @@
         </div>
     </div>
     <div class="tab_panel" role="tabpanel" id="swipePanel_3">
-        
         <div class="section">
-            항목 3 콘텐츠 
+            메뉴 3 콘텐츠 
         </div>
     </div>
     <div class="tab_panel" role="tabpanel" id="swipePanel_4">
-        
         <div class="section">
-            항목 4 콘텐츠 
+            메뉴 4 콘텐츠 
         </div>
     </div>
     <div class="tab_panel" role="tabpanel" id="swipePanel_5">
-        
         <div class="section">
-            항목 5 콘텐츠 
+            메뉴 5 콘텐츠 
         </div>
     </div>
 </div>
             </script>
         </div>
-
-        <div data-class="section">
-            <div data-class="h2">Radio</div>
-            <script type="text/html">
-<div class="tab_wrap box">
-    <div class="tab_radio">
-        <div class="rdoChk_box">
-            <span class="selection">
-                <input type="radio" id="rdo1_1" name="rdo1"checked>
-                <label for="rdo1_1" class="label"><em>원화</em></label>
-            </span>
-            <span class="selection">
-                <input type="radio" id="rdo1_2" name="rdo1">
-                <label for="rdo1_2" class="label"><em>외화</em></label>
-            </span>
-        </div>
     </div>
-    <div class="tab_panel">
-        <h3 class="hidden">원화</h3>
-        <div class="form_group between gap_0">
-           원화  내용
-        </div>
-    </div>
-    <div class="tab_panel">
-        <h3 class="hidden">외화</h3>
-        <div class="form_group error gap_0"><!-- 개발 : error -->
-            외화  내용
-        </div>
-    </div>
-</div>
-        </script>
-        </div>
-
-        <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
-        <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
-        <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
-        <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
-        <script src="/pub/guide/assets/js/components.js"></script>
-        <script src="/pub/app/js/library/swiper.min.js"></script>
-        <script src="/pub/app/js/common_ui.js"></script>
+        
+    <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/pub/guide/assets/js/components.js"></script>
+    <script src="/pub/app/js/library/swiper.min.js"></script>
+    <script src="/pub/app/js/common_ui.js"></script>
 
 </body>
 

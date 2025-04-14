@@ -1,15 +1,23 @@
 /*** common.css ***/
 
 /*** Tab ***/
+:root {
+    --tab-linetext-default:#666;
+    --tab-linetext-selected:#222;
+    --tab-ling-bg:#FAFAFA;
+
+    --tab-line-section-padding:var(--padding-28);
+    --tab-line-sub-padding-x:var(--padding-10);
+    --tab-line-sub-padding-y:var(--padding-12);
+    --tab-line-sub-line-height:var(--typo-line-height-24);
+    --tab-line-sub-gab:var(--gap-8);
+}
+
 /* Line Tab */
 .tab_wrap {position:relative; width:100%;}
 .tab_wrap::after {content:''; display:block; position:absolute; right:0; top:0; width:3.46rem; height:4.8rem; z-index:1; background:linear-gradient(270deg, var(--color-gray-white) 15%, var(--color-alpha-white0) 100%);}
-
 .tab_wrap .btn_tab {overflow:visible; position:relative; margin:0; color:var(--color-tab-line-text-default); font-size:1.6rem; text-align:center;}
 .tab_wrap .btn_tab::after {content:''; position:absolute; z-index:3; bottom:-1px; left:50%; width:0; height:0.4rem; background:#2d2f34; box-shadow:none;}
-
-
-
 .tab_wrap .btn_tab[aria-selected=true]::after, 
 .tab_wrap .btn_tab.active::after {left:0; width:100%; -webkit-transition:.2s; transition:.2s;}
 .tab_wrap .tab_list {position:relative; overflow-x:auto; white-space:nowrap;}
@@ -19,8 +27,6 @@
 .tab_wrap .scroll_wrap .btn_tab {display:block; overflow:visible; position:relative; height:4.8rem; margin:0; padding:.8rem 0.2rem 1.2rem; font-size:var(--font-size-heading-medium); color:var(--color-tab-line-text-default); font-weight:700; letter-spacing:-.05rem; text-align:center;}
 .tab_wrap .scroll_wrap .btn_tab[aria-selected=true], 
 .tab_wrap .scroll_wrap .btn_tab.active {border-radius:0; outline:0; color:var(--color-tab-line-text-selected);}
-
-
 .tab_wrap .scroll_wrap .btn_tab > span.ico_read {position:absolute;right:-1rem;top:.4rem;width:.6rem;height:.6rem;border-radius:.3rem;background-color:#f23f3f}
 .tab_wrap .scroll_wrap .btn_tab + .btn_tab {margin-left: var(--gap-16);}
 
@@ -30,12 +36,21 @@
 .tab_wrap .tab_panel[tabindex='-1'] {display:none;}
 .tab_wrap .tab_panel[tabindex='0'] {display:block;}
 .tab_wrap .link_panel {padding:0}
-.tab_wrap [class^=section]:first-of-type {padding-top:2.8rem;}
+.tab_wrap [class^=section]:first-of-type {padding-top:var(--tab-line-section-padding);}
 .tab_wrap div > .hr_divide + [class^=section]:first-of-type {padding-top:0;}
 
 .tab_wrap.line.is_motion .scroll_wrap .btn_tab::after,
 .tab_wrap.line.is_motion .scroll_wrap .btn_tab.active::after {display: none}
 .tab_wrap.line.is_motion .tab_bar {position:absolute;left:2.4rem;bottom:0;width:0;height:0.3rem;z-index:1;background-color:#2d2f34;transition:left 0.4s cubic-bezier(.25, .75, .5, 1.25)}
+
+.tab_wrap.line .tab_list_sub {background:var(--tab-ling-bg);}
+.tab_wrap.line .section .tab_list_sub {margin-top:calc(var(--tab-line-section-padding)*-1);}
+.tab_wrap.line .tab_list_sub .btn_tab[aria-selected=true]::after, 
+.tab_wrap.line .tab_list_sub .btn_tab.active::after {display:none;}
+.tab_wrap.line .tab_list_sub .btn_tab {padding: var(--tab-line-sub-padding-x) var(--tab-line-sub-padding-y); color:var(--tab-linetext-default); line-height:var(--tab-line-sub-line-height);}
+.tab_wrap.line .tab_list_sub .btn_tab + .btn_tab {margin-left:var(--tab-line-sub-gab);}
+.tab_wrap.line .tab_list_sub .btn_tab[aria-selected=true], 
+.tab_wrap.line .tab_list_sub .btn_tab.active {font-weight: 600; color:var(--tab-linetext-selected);}
 
 /* Box Tab */
 .tab_wrap.box::after {display:none;}
@@ -45,7 +60,6 @@
 .tab_wrap.box .btn_tab[aria-selected='true']::after {display:none;}
 .tab_wrap.box .tab_list {display:inline-flex; width:100%; height:auto; margin:0; padding:var(--padding-2); border-radius:var(--radius-8); border-bottom:0; background-color:var(--color-tab-box-bg); }
 .tab_wrap.box .tab_list:after {height:auto; border-bottom:0;}
-.tab_wrap.box .tab_panel {margin:2rem 0 0;}
 .tab_wrap.box.is_motion .btn_tab {z-index:2;cursor:auto}
 .tab_wrap.box.is_motion .btn_tab[aria-selected='true'] {background:none;box-shadow:none;border:none}
 .tab_wrap.box.is_motion .tab_list,
@@ -56,14 +70,3 @@
 /* Swipe */
 .tab_swipe{overflow:hidden}
 .tab_swipe .tab_panel{display:block}
-
-.form_row .tab_wrap.box .tab_panel {padding:0;}
-/* .tab_wrap [role='tab'] .number {font-size:1.7rem;} */
-/*
-.tab_wrap .rol_etab {position:relative; margin:0; padding:.8rem 0.2rem 1.2rem; overflow:visible; color:#8c949e; font-size:1.6rem; text-align:center; letter-spacing:-.05rem; font-weight:700;}
-.tab_wrap .rol_etab::after {content:''; position:absolute; z-index:3; bottom:0; left:50%; width:0; height:0.4rem; background:#2d2f34; box-shadow:none;}
-.tab_wrap .rol_etab[aria-selected=true] {border-radius:0; outline:0; color:#2d2f34; background-color:#fff;}
-.tab_wrap .rol_etab[aria-selected=true]::after {left:0; width:100%; -webkit-transition:.2s; transition:.2s;}
-*/
-
-

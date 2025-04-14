@@ -18,11 +18,11 @@
     <script src="/pub/app/js/common_ui.js"></script>
     <!-- // -->
     <style>
-        .btn_cnt_wrap {
+       #wrap > .btn_cnt_wrap {
             margin-top: 0;
             text-align: center;
         }
-        .btn_cnt_wrap+.btn_cnt_wrap {
+        #wrap > .btn_cnt_wrap + .btn_cnt_wrap {
             margin-top: 2.0rem
         }
     </style>
@@ -83,15 +83,12 @@
               });">Confirm + Callback</button></span>
         </div>
 
-        <h1 class="h1">안내성(디자인) 레이어 팝업</h1>
+        <h1 class="h1">안내성(디자인) Dialogs 레이어 팝업</h1>
         <div class="btn_cnt_wrap">
             <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#modalPopup1')">Dialogs (기본형)</button></span>
         </div>
         <div class="btn_cnt_wrap">
             <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#modalPopup2')">Dialogs (기본형+닫기버튼)</button></span>
-        </div>
-        <div class="btn_cnt_wrap">
-            <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#modalPopupScroll')">Dialogs (기본형+스크롤형)</button></span>
         </div>
         <div class="btn_cnt_wrap">
             <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#modalPopupCombination')">Dialogs (아이콘+텍스트 조합형) </button></span>
@@ -111,8 +108,12 @@
             <span><button type="button" class="btn solid primary"
                     onclick="UICommon.Layer.open('#devPopup','','noClose')">Dialogs 닫기버튼삭제</button></span>
         </div>
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn solid primary"
+                    onclick="UICommon.Layer.open('#devPopupNoTitle1')">Dialogs - No title (팝업창 닫기 버튼 있는 경우)</button></span>
+        </div>
 
-
+        <h1 class="h1">안내성(디자인) Bottomsheet 레이어 팝업</h1>
         <div class="btn_cnt_wrap">
             <span><button type="button" class="btn solid primary"
                     onclick="UICommon.Layer.open('#bottomPopup1')">Bottomsheet - flexible</button></span>
@@ -127,7 +128,7 @@
         </div>
         <div class="btn_cnt_wrap">
             <span><button type="button" class="btn solid primary"
-                    onclick="UICommon.Layer.open('#bottomPopupNoTitle2')">Bottomsheet - 게이트형</button></span>
+                    onclick="UICommon.Layer.open('#bottomPopupGate')">Bottomsheet - 게이트형</button></span>
         </div>
         <div class="btn_cnt_wrap">
             <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#dimmedPopup')">Bottomsheet
@@ -138,40 +139,6 @@
                 alert('Popup ok!');
             })">Bottomsheet + Callback</button></span>
         </div>
-        <!-- <div class="btn_cnt_wrap">
-            <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#tabPopup')">Bottomsheet -
-                    Tab 포함</button></span>
-        </div>
-        <div class="btn_cnt_wrap">
-            <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#tabPopup2')">Bottomsheet -
-                    Half 높이</button></span>
-        </div>
-        <div class="btn_cnt_wrap">
-            <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#tabPopup3')">Bottomsheet -
-                    Default 높이</button></span>
-        </div>
-        <div class="btn_cnt_wrap">
-            <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#swipePopup')">Bottomsheet
-                    - Swiper 포함</button></span>
-        </div>
-        <div class="btn_cnt_wrap">
-            <span><button type="button" class="btn solid primary"
-                    onclick="UICommon.Layer.open('#isSwipePopup')">Bottomsheet - isSwipe</button></span>
-        </div>
-        <div class="btn_cnt_wrap">
-            <span><button type="button" class="btn solid primary"
-                    onclick="UICommon.Layer.open('#swipeMovePopup')">Bottomsheet - isSwipe Touch
-                    Move</button></span>
-        </div>
-        <div class="btn_cnt_wrap">
-            <span><button type="button" class="btn solid primary"
-                    onclick="UICommon.Layer.open('#bodyMovePopup')">Bottomsheet - body Touch
-                    Move</button></span>
-        </div>
-        <div class="btn_cnt_wrap">
-            <span><button type="button" class="btn solid secondary" onclick="UICommon.Layer.toast('토스트 팝업 입니다.')">Toast
-                    Popup</button></span>
-        </div> -->
         
         <!-- 다이얼로그 -->
         <div id="modalPopup1" class="popup modal" role="dialog" aria-hidden="true">
@@ -184,7 +151,6 @@
                 <div class="pop_body">
                     <div class="pop_section">
                         기본 다이얼로그 컨텐츠
-                        <!-- <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div> -->
                     </div>
                 </div>
                 <div class="pop_foot">
@@ -207,7 +173,6 @@
                 <div class="pop_body">
                     <div class="pop_section">
                         기본 다이얼로그 컨텐츠
-                        <!-- <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div> -->
                     </div>
                 </div>
                 <div class="pop_foot">
@@ -220,27 +185,6 @@
                 <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
             </article>
         </div>
-        <div id="modalPopupScroll" class="popup modal" role="dialog" aria-hidden="true">
-            <article class="pop_wrap">
-                <div class="pop_head">
-                    <div>
-                        <h1>타이틀 영역</h1>
-                    </div>
-                </div>
-                <div class="pop_body">
-                    <div class="pop_section">
-                        <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div>
-                    </div>
-                </div>
-                <div class="pop_foot">
-                    <div>
-                        <div class="btn_area">
-                            <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
         <div id="modalPopupCombination" class="popup modal" role="dialog" aria-hidden="true">
             <article class="pop_wrap">
                 <div class="pop_head">
@@ -250,7 +194,16 @@
                 </div>
                 <div class="pop_body">
                     <div class="pop_section">
-                        아이콘+텍스트 조합형 컨텐츠 진행 예정
+                        <p class="p">기본 알렷렷</p>
+                        <div class="section" style="height: 128px; background: #f1f1f1;">추가 콘텐츠 영역</div>
+                        <div class="btn_cnt_wrap">
+                            <span>
+                                <span class="selection">
+                                    <input type="checkbox" id="chkDate" checked>
+                                    <label for="chkDate" class="label"><em>다시보지않기</em></label>
+                                </span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="pop_foot">
@@ -267,8 +220,9 @@
             <article class="pop_wrap">
                 <div class="pop_body">
                     <div class="pop_section">
-                        <div class="result center"><!-- 정렬 left, center, right -->
-                            이벤트 등 사용 컨텐츠 진행 예정
+                        <div class="result info center"><!-- 메시지 : info, 정렬 : left, center, right -->
+                            <p class="tit">타이틀 영역</p>
+                            <p class="txt">타이틀 영역</p>
                         </div>
                     </div>
                 </div>
@@ -288,6 +242,30 @@
                 <div class="pop_head">
                     <div>
                         <h1>팝업 타이틀</h1>
+                    </div>
+                </div>
+                <div class="pop_body">
+                    <div class="pop_section">
+                        다이얼로그 컨텐츠
+                    </div>
+                </div>
+                <div class="pop_foot">
+                    <div>
+                        <div class="btn_area">
+                            <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
+                            <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+            </article>
+        </div>
+        <!--  -->
+        <div id="devPopupNoTitle1" class="popup modal" role="dialog" aria-hidden="true"> <!-- pop_head에 h1 제목이 없으면 'no_title' 자동 생성 -->
+            <article class="pop_wrap">
+                <div class="pop_head">
+                    <div>
+                        <!-- <h1>Bottomsheet제목 Bottomsheet제목 Bottomsheet제목 Bottomsheet제목 Bottomsheet제목 Bottomsheet제목</h1> 제목만 삭제 -->
                     </div>
                 </div>
                 <div class="pop_body">
@@ -378,22 +356,21 @@
                 <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
             </article>
         </div>
-        <div id="bottomPopupNoTitle2" class="popup bottom" role="dialog" aria-hidden="true">
+        <div id="bottomPopupGate" class="popup bottom" role="dialog" aria-hidden="true">
             <article class="pop_wrap">
                 <div class="pop_body">
                     <div class="pop_section">
                         <div style="height: 140px; background: #f1f1f1; text-align: center">임시영역</div>
-                    </div>
-                </div>
-                <div class="pop_foot">
-                    <div>
-                        <div class="btn_area multi_conts">
-                            <!-- 진행 예정 -->
-                            <span class="selection">
-                                <input type="checkbox" id="check">
+                        <div class="btn_cnt_wrap">
+                            <span>
+                                <span class="selection">
+                                    <input type="checkbox" id="chkDateP" checked="" aria-hidden="true">
+                                    <label for="chkDateP" class="label" role="checkbox" aria-checked="true"><em>체크박스 텍스트</em></label>
+                                </span>
                             </span>
-                            <span>닫기</span>
-                            <!-- // 진행 예정 -->
+                            <span class="right">
+                                <button type="button" class="btn_close ui_pop_close"><strong>닫기</strong></button>
+                            </span>
                         </div>
                     </div>
                 </div>
