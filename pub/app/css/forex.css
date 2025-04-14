@@ -90,7 +90,7 @@
 
 
 /* 폼 타이틀 좌우 */
-.form_tit.fo_flex {display:table;}
+.form_label.fo_flex {display:table;}
 .fo_flex .col {display:table-cell;}
 .fo_flex .col + .col {text-align:right;}
 
@@ -207,7 +207,7 @@ p.fn_black{color:var(--fc_02, #484b51); margin-top:1.2rem; font-size:1.4rem;}
 .table.table_type2 table td:first-child{border-left: 1px solid var(--fc_09, #ebeef0);}
 
 /* BFE018670 상하 간격 폰트 굵기 조정 */
-.form_group.fr_txit .form_tit {font-weight:normal; line-height:3rem; margin-top:0px; margin-bottom:0px;}
+.form_group.fr_txit .form_label {font-weight:normal; line-height:3rem; margin-top:0px; margin-bottom:0px;}
 .form_group.fr_txit .form_row + .form_row {margin-top:0px;}
 .form_group.fr_txit .form_txt {font-weight:normal; margin-top:0px; margin-bottom:0px;}
 

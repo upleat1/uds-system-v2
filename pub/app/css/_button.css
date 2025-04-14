@@ -2,7 +2,7 @@
 
 /*** Button ***/
 .btn {display:inline-block; position: relative; overflow:hidden; text-align:center;}
-.btn.stick {min-width:32.7rem; height:5.6rem; line-height: 5.6rem; border-radius: var(--radius-12);}
+.btn.stick {min-width:32.7rem; height:var(--size-height-button-xlarge); line-height: var(--size-height-button-xlarge); border-radius: var(--radius-element-button-basic);}
 .btn.stick.primary {background:var(--color-stickbutton-primary-fill); color:var(--color-stickbutton-primary-text);}
 .btn.stick.primary.pressed {background:var(--color-stickbutton-primary-pressed); color:var(--color-stickbutton-primary-text);}
 .btn.stick.primary:disabled {background:var(--color-stickbutton-primary-disabled); color:var(--color-stickbutton-primary-text);}
@@ -15,7 +15,7 @@
 .btn.stick.outlined.pressed {background:var(--color-stickbutton-outlined-fill); color:var(--color-stickbutton-outlined-text); border:1px solid var(--color-stickbutton-outlined-pressed-border)}
 .btn.stick.outlined:disabled {background:var(--color-stickbutton-outlined-fill); color:var(--color-stickbutton-outlined-disabled-text); border:1px solid var(--color-stickbutton-outlined-disabled-border)}
 
-.btn.solid {min-width:32.7rem; height:4.8rem; line-height: 4.8rem; border-radius: var(--radius-8);}
+.btn.solid {min-width:32.7rem; height:var(--size-height-button-large); line-height:var(--size-height-button-large); border-radius: var(--radius-element-button-small);}
 .btn.solid.primary {background:var(--color-solidbutton-primary-fill); color:var(--color-solidbutton-primary-text);}
 .btn.solid.primary.pressed {background:var(--color-solidbutton-primary-pressed); color:var(--color-solidbutton-primary-text);}
 .btn.solid.primary:disabled {background:var(--color-solidbutton-primary-disabled); color:var(--color-solidbutton-primary-text);}
@@ -28,9 +28,9 @@
 .btn.solid.outlined.pressed {background:var(--color-solidbutton-outlined-fill); color:var(--color-solidbutton-outlined-text); border:1px solid var(--color-solidbutton-outlined-pressed-border)}
 .btn.solid.outlined:disabled {background:var(--color-solidbutton-outlined-fill); color:var(--color-solidbutton-outlined-disabled-text); border:1px solid var(--color-solidbutton-outlined-disabled-border)}
 
-.btn.text.large {font-size: var(--font-size-buttom-large);}
-.btn.text.medium {font-size: var(--font-size-buttom-medium);}
-.btn.text.small {font-size: var(--font-size-buttom-small);}
+.btn.text.large {font-size: var(--font-size-button-large);}
+.btn.text.medium {font-size: var(--font-size-button-medium);}
+.btn.text.small {font-size: var(--font-size-button-small);}
 .btn.text {color:var(--color-textbutton-text-basic);}
 .btn.text.btn.secondary {color:var(--color-textbutton-text-secondary);}
 .btn.text:disabled {color:var(--color-textbutton-text-disabled);}
@@ -51,9 +51,9 @@
 .btn.text.icon.small::before,
 .btn.text.icon.small::after {width:1.4rem; height:1.4rem; background-repeat: no-repeat; background-position: 0 0; background-size:1.4rem auto;}
 
-.btn.text.icon[class*=ico-20x-01]::before {background-image:url(/pub/app/img/common/icon-20x-01.svg);}
-.btn.text.icon[class*=ico-20x-02]::after {background-image:url(/pub/app/img/common/icon-20x-02.svg);}
-.btn.text.medium[class*=ico-16x-01]::before {background-image:url(/pub/app/img/common/icon-20x-01.svg);}
-.btn.text.medium[class*=ico-16x-02]::after {background-image:url(/pub/app/img/common/icon-20x-02.svg);}
-.btn.text.small[class*=ico-14x-01]::before {background-image:url(/pub/app/img/common/icon-20x-01.svg);}
-.btn.text.small[class*=ico-14x-02]::after {background-image:url(/pub/app/img/common/icon-20x-02.svg);}
+.btn.text.icon[class*=ico-20x-01]::before {background-image:url(/pub/app/img/common/ico-20x-01.svg);}
+.btn.text.icon[class*=ico-20x-02]::after {background-image:url(/pub/app/img/common/ico-20x-02.svg);}
+.btn.text.medium[class*=ico-16x-01]::before {background-image:url(/pub/app/img/common/ico-20x-01.svg);}
+.btn.text.medium[class*=ico-16x-02]::after {background-image:url(/pub/app/img/common/ico-20x-02.svg);}
+.btn.text.small[class*=ico-14x-01]::before {background-image:url(/pub/app/img/common/ico-20x-01.svg);}
+.btn.text.small[class*=ico-14x-02]::after {background-image:url(/pub/app/img/common/ico-20x-02.svg);}

@@ -1,0 +1,48 @@
+@charset "euc-kr"; 
+
+/*** TextField ***/
+.form_group {position:relative;}
+.form_tip + .form_group,
+.form_group + .form_group {margin-top: 2rem;}
+.form_row {display: flex; align-items: center; width: 100%;}
+.form_row .form_ele {position:relative; width:100%; font-size:1.9rem}
+.form_label {display:inline-block; margin-bottom: .6rem; font-size:var(--font-size-form-element-label); color:var(--fc_04); font-weight:400; line-height:2rem;}
+.form_group .form_area,
+.form_group .form_ele .inp {width:100%;}
+
+/* Tip */
+.form_tip {position:relative; margin-top:.6rem; padding-left:2.4rem; font-size:1.4rem;}
+.form_tip::before {content:''; display:inline-block; position:absolute; left:0; top:0; width:2rem; height:2rem; background-image:url(/pub/app/img/common/ico-20x-03.svg); background-repeat: no-repeat; background-position: 0 0; background-size:2rem auto;}
+.form_tip.error {color:var(--color-text-danger)}
+.form_tip.error::before {background-image:url(/pub/app/img/common/ico-20x-03-error.svg);}
+.form_tip.success {color:var(--color-text-success)}
+.form_tip.success::before {background-image:url(/pub/app/img/common/ico-20x-03-success.svg);}
+
+.form_ele .btn_clear {display:inline-block; position: absolute; right: 1.8rem; top: 50%;  width:2rem; height:2rem; border-radius: 50px; transform: translateY(-50%); background-image:url(/pub/app/img/common/ico-20x-04.svg); background-repeat: no-repeat; background-position: 0 0; background-size:2rem auto;}
+.form_ele .inp[readonly] ~ .btn_clear,
+.form_ele .inp:disabled ~ .btn_clear {display:none;}
+
+/* Basic */
+.form_group.basic .form_ele .inp {position:relative; height:var(--size-height-texfield-basic); padding-left:1.6rem; padding-right:4.9rem; background-color:var(--color-form-element-background); color:var(--color-form-element-text-basic); font-weight:700; font-size: var(--font-size-form-element-large); line-height: 2.8rem; border-radius: var(--radius-element-textfield-basic); border:1px solid var(--color-form-element-border-basic)}
+.form_group.basic.focused .form_ele .inp,
+.form_group.basic .form_ele .inp:focus {border-color:var(--color-form-element-border-active); color:var(--color-form-element-text-active)}
+.form_group.basic.filled .form_ele .inp {border-color:var(--color-form-element-border-basic); color:var(--color-form-element-text-active)}
+.form_group.basic.disabled .form_ele .inp,
+.form_group.basic .form_ele .inp:disabled {border:none; color:var(--color-form-element-text-disabled); background: var(--color-form-element-background-disabled);}
+.form_group.basic.readonly .form_ele .inp,
+.form_group.basic .form_ele .inp[readonly] {border-color:var(--color-form-element-border-basic); color:var(--color-form-element-text-filled)}
+.form_group.basic.error .form_ele .inp {border-color:var(--color-form-element-border-error); color:var(--color-form-element-text-filled)}
+.form_group.basic .form_row .space {display: inline-block; padding:2.2rem .5rem 0;}
+
+/* Label Inline */
+.form_group.label-inline .form_ele,
+.form_group.label-inline .inp {height: 2.6rem; line-height: 2.6rem;}
+.form_group.label-inline .form_area {position:relative; padding:1.6rem; background-color:var(--color-form-element-background); color:var(--color-form-element-text-basic); font-weight:700; font-size: var(--font-size-form-element-large); line-height: 2.8rem; border-radius: var(--radius-element-textfield-basic); border:1px solid var(--color-form-element-border-basic)}
+.form_group.label-inline.focused .form_area {border-color:var(--color-form-element-border-active); color:var(--color-form-element-text-active)}
+.form_group.label-inline.filled .form_area {border-color:var(--color-form-element-border-basic); color:var(--color-form-element-text-active)}
+.form_group.label-inline.disabled .form_area {border:none; color:var(--color-form-element-text-disabled); background: var(--color-form-element-background-disabled);}
+.form_group.label-inline.readonly .form_area {border-color:var(--color-form-element-border-basic); color:var(--color-form-element-text-filled)}
+.form_group.label-inline.error .form_area {border-color:var(--color-form-element-border-error); color:var(--color-form-element-text-filled)}
+.form_group.label-inline .form_row .space {display: inline-block; padding:0 .5rem;}
+.form_group.label-inline .form_ele .btn_clear {right: 0;}
+

@@ -934,9 +934,9 @@ h1.hidden + .section > .h2:first-child{margin-bottom: 2rem;}
 .ico_pro_seller.untact {background-position:-30rem 0;}
 
 .pro_look_info .form_group + .form_group {margin-top:2.4rem;}
-.pro_look_info .form_tit {font-size:1.6rem;}
-.pro_look_info .form_tit .number {font-size:1.7rem;}
-.pro_look_info .form_tit + .form_row {margin-top:2rem;}
+.pro_look_info .form_label {font-size:1.6rem;}
+.pro_look_info .form_label .number {font-size:1.7rem;}
+.pro_look_info .form_label + .form_row {margin-top:2rem;}
 .pro_look_info .form_row + .info_area {margin-top:1.6rem; padding-top:.4rem; border-top:1px solid var(--fc_09, #ebeef0);}
 .pro_look_info .form_row + .info_area p + .p_sub  {margin-top:1.6rem; padding-left:2.3rem; color:var(--fc_04, #696e76);}
 .pro_look_info .form_row .rdoChk_group {margin-top:0;}

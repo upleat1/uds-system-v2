@@ -126,7 +126,7 @@ strong.normal + .p {margin-top:.6rem;}
 
 .select.type_sch .select_btn {padding-right:2.4rem;}
 .select.type_sch .select_btn::after { display:block; right:0; width:2.4rem; height:2.4rem; margin-top:0; background-image:url(/pub/app/img/common/spr_ico_24x.png); background-repeat:no-repeat; background-position:-12rem 0; background-size:25rem auto; z-index:2; border:none; transform:translateY(-50%) rotate(0); -webkit-transform:translateY(-50%) rotate(0); -moz-transform:translateY(-50%) rotate(0); -ms-transform:translateY(-50%) rotate(0); -o-transform:translateY(-50%) rotate(0); }
-.form_tit .grid .btn {position:relative; z-index:1;}
+.form_label .grid .btn {position:relative; z-index:1;}
 .form_group.period .input input {padding-right:2.5rem;}
 .form_group.period .input input:focus + .unit {color:var(--fc_02, #26282c);}
 .form_group.period .unit {position:absolute; right:0; font-size: 1.7rem; font-weight: bold; line-height: 4.4rem;}/*221028 color:#8c959f;*/

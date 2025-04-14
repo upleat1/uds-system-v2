@@ -1382,7 +1382,7 @@ if (!UICommon) {
             },
             btnClearSet: function (tar) { //input clear button set
                 var _this = tar;
-                var _parent = _this.parent(".input");
+                var _parent = _this.parent(".form_ele");
                 var _langRem = 10;
                 if (!_this.parents('.form_group').is('.between') && !_this.parents('.form_row').is('.col') && !_parent.is('.outline') && _this.is(':not([type=tel], [type=hidden])') && !_this.is('[readonly], [disabled]') && !_this.parents('.unit').is('.decimal') && !_parent.is('.date')) {
                     var _inpBtn = _parent.find('.btn.point.round');
@@ -1390,7 +1390,7 @@ if (!UICommon) {
 
                     _parent.find('.btn_clear').remove();
                     _this.css('padding-right', 3.6 + 'rem').siblings(".btn_clear").css('right', 0.6 + 'rem');
-                    _parent.append('<button type="button" class="btn_clear"><span class="hidden">입력내용 초기화</span></button>');
+                    _parent.append('<button type="button" class="btn_clear" aria-label="입력내용 초기화"></button>');
 
                     _this.val() == '' ? _parent.find('.btn_clear').hide() : _parent.find('.btn_clear').show();
 
@@ -1434,18 +1434,18 @@ if (!UICommon) {
                 });
 
                 //input init
-                $(".input input").each(function (e) {
+                $(".form_ele input").each(function (e) {
                     var _this = $(this);
-                    var _parent = _this.parent(".input");
+                    var _parent = _this.parent(".form_ele");
                     var _valueL = _this.val().length;
                     //UICommon._front.btnClearSet(_this); //input clear 추가
                     //_this.val().length > 0 ? _this.addClass('finished') :  _this.removeClass('finished');
                     if (!_this.is('[readonly]') && !_this.is('[disabled]')) {
                         _this.on('focusin', function () {
-                            _this.parent(".input").addClass('focus');
+                            _this.parent(".form_ele").addClass('focus');
                             if (_this.closest('.form_date_term')) _this.closest('.form_date_term').addClass('focus');
                         }).on('blur', function () {
-                            _this.parent(".input").removeClass('focus');
+                            _this.parent(".form_ele").removeClass('focus');
                             if (_this.closest('.form_date_term')) _this.closest('.form_date_term').removeClass('focus');
                         });
                     } else {
@@ -1481,13 +1481,13 @@ if (!UICommon) {
                         if (_valueL) _this.siblings('.unit').addClass('on');
                     }
 
-                    if (_this.closest('.input').hasClass('js_global_unit')) {
-                        if (_valueL) _this.closest('.input').addClass('active').find('span.txt_unit').addClass('on');
+                    if (_this.closest('.form_ele').hasClass('js_global_unit')) {
+                        if (_valueL) _this.closest('.form_ele').addClass('active').find('span.txt_unit').addClass('on');
                     }
 
-                    _doc.off("keyup", ".input input").on("keyup", ".input input", function () {
+                    _doc.off("keyup", ".form_ele input").on("keyup", ".form_ele input", function () {
                         var _this = $(this);
-                        var _parent = _this.parent(".input");
+                        var _parent = _this.parent(".form_ele");
                         var _valueL = _this.val().length;
                         var _btn = _this.siblings(".btn_clear");
 
@@ -1496,9 +1496,9 @@ if (!UICommon) {
                         _this.next('.unit').addClass('on');
                         if (!_valueL) _this.next('.unit').removeClass('on');
 
-                        if (_this.closest('.input').hasClass('js_global_unit')) {
-                            _this.closest('.input').addClass('active').find('span.txt_unit').addClass('on');
-                            if (!_valueL) _this.closest('.input').removeClass('active').find('span.txt_unit').removeClass('on');
+                        if (_this.closest('.form_ele').hasClass('js_global_unit')) {
+                            _this.closest('.form_ele').addClass('active').find('span.txt_unit').addClass('on');
+                            if (!_valueL) _this.closest('.form_ele').removeClass('active').find('span.txt_unit').removeClass('on');
                         }
 
                         _btn.toggle(Boolean(_this.val()));
@@ -1521,13 +1521,13 @@ if (!UICommon) {
                         };
                     }).off("focusout").on("focusout", function () {
                         var _this = $(this);
-                        var _parent = _this.parent(".input");
+                        var _parent = _this.parent(".form_ele");
                         var _valueL = _this.val().length;
                         if (!_valueL) _parent.find('.unit').removeClass('on');
 
-                    }).off('click', '.input .btn_clear').on("click", ".input .btn_clear", function () {
+                    }).off('click', '.form_ele .btn_clear').on("click", ".form_ele .btn_clear", function () {
                         var _this = $(this);
-                        var _parent = _this.parent(".input");
+                        var _parent = _this.parent(".form_ele");
 
                         _this.removeAttr('style').hide().siblings('input').val('').focus();
                         _parent.find('.unit').removeClass('on');

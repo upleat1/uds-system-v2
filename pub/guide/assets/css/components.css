@@ -230,7 +230,15 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
 }
 
 [data-class="h3"] {
-    padding: 50px 0 10px;
+    padding: 40px 0 10px;
+    color: var(--fc_04, #666);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+[data-class="h4"] {
+    padding: 30px 0 10px;
     color: var(--fc_04, #666);
     font-weight: 700;
     font-size: 14px;
@@ -240,10 +248,12 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
 [data-class="preview"] + [data-class="h3"]{padding-top:10px}
 [data-class="h3"]::before{content:'#'}
 [data-class="h3"]::after{content:'';display:block;height:4px;background-color:var(--bg_04, #eceef0);margin-top:-7px}
-[data-class="h3"]:first-child {
+[data-class="h3"]:first-child,
+[data-class="h4"]:first-child {
     padding-top: 0;
 }
-[data-class="h3"]:last-child {
+[data-class="h3"]:last-child,
+[data-class="h4"]:last-child {
     padding-bottom: 0;
 }
 [data-class="h2"] + [data-class="h3"] {

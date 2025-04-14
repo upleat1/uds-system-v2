@@ -1,0 +1,18 @@
+@charset "euc-kr"; 
+
+/*** TextArea ***/
+.form_group .textarea {position: relative;}
+.form_group .textarea textarea {padding-bottom:4rem; border:1px solid var(--fc_06); border-radius: var(--radius-element-textfield-basic);}
+.form_group textarea {width:100%; height:11.5rem; padding:1.6rem; font-size:1.6rem; color:var(--fc_02); line-height:1.4; -webkit-appearance:none; resize:none; background-color:transparent}
+.form_group textarea.ht2{height:20.5rem}
+.form_group textarea:focus, .textarea.focus {border-color:var(--fc_02)}
+.form_group textarea::-webkit-input-placeholder, textarea::placeholder{font-size:1.6rem;font-weight:400;font-family:'KBText','Roboto','NotoSans','Droid Sans','AppleGothicNeoSD','Apple SD 산돌고딕 Neo','Sans-serif','돋음','dotum'}
+.form_group.readonly textarea,
+.form_group.disabled textarea,
+.form_group textarea[readonly],
+.form_group textarea[disabled] {border:0; background:var(--fc_10); color:var(--fc_02);} 
+.form_group textarea[readonly]::-webkit-input-placeholder,
+.form_group textarea[readonly]::placeholder {color:var(--fc_02);}
+.form_group.error textarea {border-color:var(--color-form-element-border-error); background-color: #fff;}
+.form_group .textarea .byte {position:absolute; bottom:1.6rem; right:1.6rem; font-size:1.4rem; color: #949c96; line-height: 1; text-align:right;}
+

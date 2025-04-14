@@ -16,7 +16,7 @@
 .btn_confirm_wrap .btn_area.zindex2 {z-index:2;}
 .txtcenter {text-align:center;}
 .mb1rem {margin-bottom:1rem;}
-.form_group .form_tit.flexjust {display:flex; justify-content: space-between;}
+.form_group .form_label.flexjust {display:flex; justify-content: space-between;}
 .btn.point.sm.round.endless {background:#ff5858; display:inline-block; padding:0 1.2rem; height:2.5rem; line-height:2.4rem;}
 .btn.point.sm.round.winless {background:#297eff; display:inline-block; padding:0 1.2rem; height:2.5rem; line-height:2.4rem;}
 .btn.point.sm.round.editbtn {background:#fff; display:inline-block; padding:0 1.2rem; height:2.5rem; line-height:2.4rem; color:#26282c; border:solid 1px #c6cbd0; margin-top:.5rem}
@@ -116,7 +116,7 @@ img.wins {width:17rem; height:auto; display:block; margin:0 auto;}
 .etc_cl .tpline > li > div {display:table-cell; font-size:1.5rem; vertical-align:text-top;}
 .etc_cl div.form_group:first-child {margin-top:0px !important}
 .etc_cl div.form_group {margin-top:2rem !important;  border-bottom:1px solid var(--bdc_01, #ebeef0); padding-bottom:2rem;}
-.etc_cl div.form_group .form_tit {padding-top:0px;}
+.etc_cl div.form_group .form_label {padding-top:0px;}
 .etc_cl div.form_group .h2 {margin-top:2rem;}
 
 

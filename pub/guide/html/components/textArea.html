@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>Upleat Design System</title>
+    <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/pub/app/css/_variables.css">
+    <link rel="stylesheet" href="/pub/app/css/common.css">
+    <link rel="stylesheet" href="/pub/app/css/components.css">
+</head>
+<body>
+    <div data-class="contents">
+        <h1 data-class="component-name"><span>TextArea<span></h1>    
+        <div data-class="box">
+            <div data-class="list disc">
+                <div>한 줄 입력인 텍스트 필드(Text Field)와 여러 줄 입력인 텍스트 영역(Text Area)으로 나뉩니다.</div>
+            </div>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+            <div data-class="h2">Basic</div>
+<script type="text/html">
+<div class="form_group">
+    <div class="form_area">
+        <div class="form_label">레이블</div>
+        <div class="textarea">
+            <textarea title="타이틀명" placeholder="내용을 입력하세요."></textarea>
+            <p class="byte"><span class="curr">0</span> / <span>5,000</span></p>
+        </div>
+    </div>
+</div>
+<p class="form_tip">안내문구 영역입니다</p> 
+
+<div class="form_group">
+    <div class="form_area">
+        <div class="form_label">레이블 (Focused)</div>
+        <div class="textarea"><!-- 에러시 error 클래스 추가 -->
+            <textarea title="타이틀명" placeholder="내용을 입력해주세요."></textarea> 
+            <p class="byte"><span class="curr">0</span> / <span>5,000</span></p>
+        </div>
+    </div>
+</div>
+<p class="form_tip">안내문구 영역입니다</p> 
+
+<div class="form_group focused">
+    <div class="form_area">
+        <div class="form_label">레이블 (Filld)</div>
+        <div class="textarea"><!-- byte 없을 경우, .nobyte 클래스 추가 -->
+            <textarea title="타이틀명" placeholder="내용을 입력해주세요."></textarea> 
+            <p class="byte"><span class="curr">0</span> / <span>5,000</span></p>
+        </div>
+    </div>
+</div>
+<p class="form_tip">안내문구 영역입니다</p> 
+
+<div class="form_group filled">
+    <div class="form_area">
+        <div class="form_label">레이블 (Readonly)</div>
+        <div class="textarea">
+            <textarea title="타이틀명" placeholder="내용을 입력해주세요." readonly></textarea>   
+            <p class="byte"><span class="curr">0</span> / <span>5,000</span></p>
+        </div>
+    </div>
+</div>
+<p class="form_tip">안내문구 영역입니다</p> 
+
+<div class="form_group disabled">
+    <div class="form_area">
+        <div class="form_label">레이블 (Disabled)</div>
+        <div class="textarea">
+            <textarea title="타이틀명" placeholder="내용을 입력해주세요." disabled></textarea> 
+            <p class="byte"><span class="curr">0</span> / <span>5,000</span></p>     
+        </div>
+    </div>
+</div>
+<p class="form_tip">안내문구 영역입니다</p> 
+
+<div class="form_group error">
+    <div class="form_area">
+        <div class="form_label">레이블 (Error)</div>
+        <div class="textarea">
+            <textarea name="frm-cont" title="타이틀명">입력텍스트</textarea>
+            <p class="byte"><span class="curr">0</span> / <span>5,000</span></p>     
+        </div>
+    </div>
+</div>
+<p class="form_tip error">에러문구 영역입니다</p> 
+</script>
+        </div>
+    </div>
+
+    </div>
+    <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/pub/guide/assets/vendor/jquery-ui.min.js"></script>
+    <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/pub/guide/assets/js/components.js"></script>
+    <script src="/pub/app/js/common_ui.js"></script>  
+</body>
+</html>

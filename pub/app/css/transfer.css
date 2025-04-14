@@ -355,7 +355,7 @@ header + #content{min-height: calc(100% - 5.6rem);}
 
 .tr_affiliated {margin-top: 3rem;}
 .form_group.tr_check {margin-top: 4rem;}
-.form_group.tr_check .selection + .form_tit {margin-top: 1.2rem;}
+.form_group.tr_check .selection + .form_label {margin-top: 1.2rem;}
 
 .tr_acc_all_pop.pop_section .acc_list .bk_pay .number {font-size: 1.6rem;}
 .tr_acc_all_pop.pop_section .acc_list .bk_pay .num_unit {font-size: 1.5rem;}

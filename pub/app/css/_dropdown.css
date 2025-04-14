@@ -1,0 +1,20 @@
+@charset "euc-kr"; 
+
+/*** DropDown ***/
+.form_group .select {position: relative;}
+.form_group .select .select_btn {position: relative; line-height: 1; width: 100%; text-align: left;}
+.form_group .select:after {content:''; display:inline-block; position: absolute; right: 1.8rem; top: 50%;  width:2rem; height:2rem; border-radius: 50px; transform: translateY(-50%); background-image:url(/pub/app/img/common/ico-16x-01.svg); background-repeat: no-repeat; background-position: 0 0; background-size:2rem auto;}
+.form_group.disabled .select::after {background-image:url(/pub/app/img/common/ico-16x-01-disabled.svg);}
+
+/* Basic */
+.form_group.basic .select .select_btn {position:relative; height:var(--size-height-texfield-basic); padding-left:1.6rem; padding-right:4.9rem; background-color:var(--color-form-element-background); color:var(--color-form-element-text-basic); font-weight:700; font-size: var(--font-size-form-element-large); line-height: 2.8rem; border-radius: var(--radius-element-textfield-basic); border:1px solid var(--color-form-element-border-basic)}
+.form_group.basic.focused .select .select_btn,
+.form_group.basic .select .select_btn:focus {border-color:var(--color-form-element-border-active); color:var(--color-form-element-text-active)}
+.form_group.basic.filled .select .select_btn {border-color:var(--color-form-element-border-basic); color:var(--color-form-element-text-active)}
+.form_group.basic.disabled .select .select_btn,
+.form_group.basic .select .select_btn:disabled {border:none; color:var(--color-form-element-text-disabled); background: var(--color-form-element-background-disabled);}
+.form_group.basic.readonly .select .select_btn,
+.form_group.basic .select .select_btn[readonly] {border-color:var(--color-form-element-border-basic); color:var(--color-form-element-text-filled)}
+.form_group.basic.error .select .select_btn {border-color:var(--color-form-element-border-error); color:var(--color-form-element-text-filled)}
+.form_group.basic .form_row .space {display: inline-block; padding:2.2rem .5rem 0;}
+
