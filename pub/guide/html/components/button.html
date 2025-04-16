@@ -14,14 +14,16 @@
     <link rel="stylesheet" href="/pub/app/css/common.css">
     <link rel="stylesheet" href="/pub/app/css/components.css">
     <style>
+        button + .h3 {margin-top: 3rem;}
         button, a {display:block; margin-right:15px;}
         .btn {margin:.2rem .5rem}
         .btn.text {margin:.2rem 1rem}
+        .btn_confirm_wrap .btn_area {position: relative; top:auto; left:auto; bottom:auto}
     </style>
 </head>
 <body>
     <div data-class="contents">
-        <div data-class="component-name"><span>버튼</span></div>
+        <div data-class="component-name"><span>Button</span></div>
         <div data-class="box">
             <div data-class="h3">
                <strong>a와 button 태그 사용시</strong> <br>
@@ -68,19 +70,31 @@
             </div>
             <script type="text/html">
 <h3 class="h3">Primary</h3>
-<button type="button" class="btn solid primary">버튼명(Normal)</button>
-<button type="button" class="btn solid primary pressed">버튼명(Pressed)</button>
-<button type="button" class="btn solid primary" disabled>버튼명(Disabled)</button>
+<button type="button" class="btn solid large primary">버튼명(Normal/large)</button>
+<button type="button" class="btn solid large primary pressed">버튼명(Pressed/large)</button>
+<button type="button" class="btn solid large primary" disabled>버튼명(Disabled/large)</button>
+<br>
+<button type="button" class="btn solid medium primary">버튼명(Normal/medium)</button>
+<button type="button" class="btn solid medium primary pressed">버튼명(Pressed/medium)</button>
+<button type="button" class="btn solid medium primary" disabled>버튼명(Disabled/medium)</button>
 
 <h3 class="h3">Secondary</h3>
-<button type="button" class="btn solid secondary">버튼명(Normal)</button>
-<button type="button" class="btn solid secondary pressed">버튼명(Pressed)</button>
-<button type="button" class="btn solid secondary" disabled>버튼명(Disabled)</button>
+<button type="button" class="btn solid large secondary">버튼명(Normal/large)</button>
+<button type="button" class="btn solid large secondary pressed">버튼명(Pressed/large)</button>
+<button type="button" class="btn solid large secondary" disabled>버튼명(Disabled/large)</button>
+<br>
+<button type="button" class="btn solid medium secondary">버튼명(Normal/medium)</button>
+<button type="button" class="btn solid medium secondary pressed">버튼명(Pressed/medium)</button>
+<button type="button" class="btn solid medium secondary" disabled>버튼명(Disabled/medium)</button>
 
 <h3 class="h3">Outlined</h3>
-<button type="button" class="btn solid outlined">버튼명(Normal)</button>
-<button type="button" class="btn solid outlined pressed">버튼명(Pressed)</button>
-<button type="button" class="btn solid outlined" disabled>버튼명(Disabled)</button>
+<button type="button" class="btn solid large outlined">버튼명(Normal/large)</button>
+<button type="button" class="btn solid large outlined pressed">버튼명(Pressed/large)</button>
+<button type="button" class="btn solid large outlined" disabled>버튼명(Disabled/large)</button>
+<br>
+<button type="button" class="btn solid medium outlined">버튼명(Normal/medium)</button>
+<button type="button" class="btn solid medium outlined pressed">버튼명(Pressed/medium)</button>
+<button type="button" class="btn solid medium outlined" disabled>버튼명(Disabled/medium)</button>
             </script>
 
             <div data-class="h2">Text Button</div>
@@ -91,9 +105,9 @@
             </div>
             <script type="text/html">
 <h3 class="h3">Normal</h3>
-<button type="button" class="btn text large icon ico-20x-01-l ico-20x-02-r">텍스트버튼(18px)</button>
-<button type="button" class="btn text medium icon ico-16x-01-l ico-16x-02-r">텍스트버튼(16px)</button>
-<button type="button" class="btn text small icon ico-14x-01-l ico-14x-02-r">텍스트버튼(14px)</button>
+<button type="button" class="btn text basic large icon ico-20x-01-l ico-20x-02-r">텍스트버튼(18px)</button>
+<button type="button" class="btn text basic medium icon ico-16x-01-l ico-16x-02-r">텍스트버튼(16px)</button>
+<button type="button" class="btn text basic small icon ico-14x-01-l ico-14x-02-r">텍스트버튼(14px)</button>
 
 <h3 class="h3">Secondary</h3>
 <button type="button" class="btn text secondary large icon ico-20x-01-l ico-20x-02-r">텍스트버튼(18px)</button>
@@ -101,14 +115,34 @@
 <button type="button" class="btn text secondary small icon ico-14x-01-l ico-14x-02-r">텍스트버튼(14px)</button>
 
 <h3 class="h3">Disabled</h3>
-<button type="button" class="btn text large icon ico-20x-01-l ico-20x-02-r" disabled>텍스트버튼(18px)</button>
-<button type="button" class="btn text medium icon ico-16x-01-l ico-16x-02-r" disabled>텍스트버튼(16px)</button>
-<button type="button" class="btn text small icon ico-14x-01-l ico-14x-02-r" disabled>텍스트버튼(14px)</button>
+<button type="button" class="btn text basic large icon ico-20x-01-l ico-20x-02-r" disabled>텍스트버튼(18px)</button>
+<button type="button" class="btn text basic medium icon ico-16x-01-l ico-16x-02-r" disabled>텍스트버튼(16px)</button>
+<button type="button" class="btn text basic small icon ico-14x-01-l ico-14x-02-r" disabled>텍스트버튼(14px)</button>
 
 <h3 class="h3">Danger</h3>
 <button type="button" class="btn text danger large icon ico-20x-01-l ico-20x-02-r">텍스트버튼(18px)</button>
 <button type="button" class="btn text danger medium icon ico-16x-01-l ico-16x-02-r">텍스트버튼(16px)</button>
 <button type="button" class="btn text danger small icon ico-14x-01-l ico-14x-02-r">텍스트버튼(14px)</button>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Component</div>
+
+            <div data-class="h2">Confirm Button</div>
+            <script type="text/html">
+<div class="btn_confirm_wrap">
+    <div class="btn_area">
+        <button type="button" class="btn stick primary lg">메인버튼(Normal)</button>
+    </div>
+</div>
+<br>
+<div class="btn_confirm_wrap">
+    <div class="btn_area">
+        <span><button type="button" class="btn stick secondary lg">부정</button></span>
+        <span><button type="button" class="btn stick primary lg">긍정</button></span>
+    </div>
+</div>
             </script>
         </div>
     </div>

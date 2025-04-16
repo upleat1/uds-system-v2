@@ -25,7 +25,7 @@
 .selection.alone input[type=checkbox] + .label {width:2.4rem; padding-left:0;}
 .selection.mid input[type=checkbox] + .label:before {top:50%; transform:translateY(-50%);}
 .selection.mid input[type=checkbox] + .label:after {top:50%;transform:translateY(-50%);margin-top:0.1rem;}
-.selection input[type=checkbox]:checked + .label:before {border-color:#ffcc00; background:#ffcc00;}
+.selection input[type=checkbox]:checked + .label:before {border-color:#ffcc00; background:var(--Button-solidButton-primary-pressed);}
 .selection input[type=checkbox]:checked + .label:after {background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='12' viewBox='0 0 15 12'%3E%3Cpath style='fill:none;stroke:%2326282c;stroke-linecap:round;stroke-width:.15rem;fill-rule: evenodd;' d='M402,806l4,4,6-7' transform='translate(-399.313 -801.656)'/%3E%3C/svg%3E");animation: chkeckboxAni 0.3s linear}
 .moa_ads_area .selection input[type=checkbox] + .label:after{background:none;}
 .selection input[type=checkbox]:disabled + .label:before {border-color:#dde1e4;background-color:#dde1e4}

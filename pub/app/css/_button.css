@@ -2,39 +2,53 @@
 
 /*** Button ***/
 .btn {display:inline-block; position: relative; overflow:hidden; text-align:center;}
-.btn.stick {min-width:32.7rem; height:var(--size-height-button-xlarge); line-height: var(--size-height-button-xlarge); border-radius: var(--radius-element-button-basic);}
-.btn.stick.primary {background:var(--color-stickbutton-primary-fill); color:var(--color-stickbutton-primary-text);}
-.btn.stick.primary.pressed {background:var(--color-stickbutton-primary-pressed); color:var(--color-stickbutton-primary-text);}
-.btn.stick.primary:disabled {background:var(--color-stickbutton-primary-disabled); color:var(--color-stickbutton-primary-text);}
 
-.btn.stick.secondary {background:var(--color-stickbutton-secondary-fill); color:var(--color-stickbutton-seconday-text);}
-.btn.stick.secondary.pressed {background:var(--color-stickbutton-secondary-pressed); color:var(--color-stickbutton-seconday-text);}
-.btn.stick.secondary:disabled {background:var(--color-stickbutton-secondary-disabled); color:var(--color-stickbutton-seconday-disabled-text);}
+/* Confirm Button */
+.btn_confirm_wrap .btn_area {display:flex;position:fixed;left:0;bottom:0;width:100%;z-index:150}
+.btn_confirm_wrap .btn_area > span {display:block;width:100%}
+.btn_confirm_wrap .btn {display:block; width:100%; height:auto; padding:1.8rem 1rem 1.7rem; line-height:1.2; border-radius: 0; font-size:1.8rem; font-weight:700;}
+.btn_confirm_wrap.nofix .btn_area {position:absolute;}
 
-.btn.stick.outlined {background:var(--color-stickbutton-outlined-fill); color:var(--color-stickbutton-outlined-text); border:1px solid var(--color-stickbutton-outlined-border)}
-.btn.stick.outlined.pressed {background:var(--color-stickbutton-outlined-fill); color:var(--color-stickbutton-outlined-text); border:1px solid var(--color-stickbutton-outlined-pressed-border)}
-.btn.stick.outlined:disabled {background:var(--color-stickbutton-outlined-fill); color:var(--color-stickbutton-outlined-disabled-text); border:1px solid var(--color-stickbutton-outlined-disabled-border)}
+/* Sick Button */
+.btn.stick {min-width:32.7rem; height:var(--button-stick-button-height-basic); border-radius: var(--button-stick-button-radius-basic); font-size: var(--button-stick-button-font-large);}
+.btn.stick.primary {background:var(--button-stick-button-primary-fill); color:var(--button-stick-button-primary-text);}
+.btn.stick.primary.pressed {background:var(--button-stick-button-primary-pressed); color:var(--button-stick-button-primary-text);}
+.btn.stick.primary:disabled {background:var(--button-stick-button-primary-disabled); color:var(--button-stick-button-primary-text);}
 
-.btn.solid {min-width:32.7rem; height:var(--size-height-button-large); line-height:var(--size-height-button-large); border-radius: var(--radius-element-button-small);}
-.btn.solid.primary {background:var(--color-solidbutton-primary-fill); color:var(--color-solidbutton-primary-text);}
-.btn.solid.primary.pressed {background:var(--color-solidbutton-primary-pressed); color:var(--color-solidbutton-primary-text);}
-.btn.solid.primary:disabled {background:var(--color-solidbutton-primary-disabled); color:var(--color-solidbutton-primary-text);}
+.btn.stick.secondary {background:var(--button-stick-button-secondary-fill); color:var(--button-stick-button-seconday-text);}
+.btn.stick.secondary.pressed {background:var(--button-stick-button-secondary-pressed); color:var(--button-stick-button-seconday-text);}
+.btn.stick.secondary:disabled {background:var(--button-stick-button-secondary-disabled); color:var(--button-stick-button-seconday-disabled-text);}
 
-.btn.solid.secondary {background:var(--color-solidbutton-secondary-fill); color:var(--color-solidbutton-seconday-text);}
-.btn.solid.secondary.pressed {background:var(--color-solidbutton-secondary-pressed); color:var(--color-solidbutton-seconday-text);}
-.btn.solid.secondary:disabled {background:var(--color-solidbutton-secondary-disabled); color:var(--color-solidbutton-seconday-disabled-text);}
+.btn.stick.outlined {background:var(--button-stick-button-outlined-fill); color:var(--button-stick-button-outlined-text); border:1px solid var(--button-stick-button-outlined-border)}
+.btn.stick.outlined.pressed {background:var(--button-stick-button-outlined-fill); color:var(--color-stickbutton-outlined-text); border:1px solid var(--button-stick-button-outlined-pressed-border)}
+.btn.stick.outlined:disabled {background:var(--button-stick-button-outlined-fill); color:var(--button-stick-button-outlined-disabled-text); border:1px solid var(--button-stick-button-outlined-disabled-border)}
 
-.btn.solid.outlined {background:var(--color-solidbutton-outlined-fill); color:var(--color-solidbutton-outlined-text); border:1px solid var(--color-solidbutton-outlined-border)}
-.btn.solid.outlined.pressed {background:var(--color-solidbutton-outlined-fill); color:var(--color-solidbutton-outlined-text); border:1px solid var(--color-solidbutton-outlined-pressed-border)}
-.btn.solid.outlined:disabled {background:var(--color-solidbutton-outlined-fill); color:var(--color-solidbutton-outlined-disabled-text); border:1px solid var(--color-solidbutton-outlined-disabled-border)}
+/* Solid Button */
+.btn.solid {min-width:32.7rem;}
+.btn.solid.large {height:var(--button-solid-button-height-large); padding:var(--button-solid-button-text-padding); font-size: var(--button-solid-button-font-large); border-radius: var(--button-solid-button-radius-large);}
+.btn.solid.medium {height:var(--button-solid-button-height-medium); padding:1rem; font-size: var(--button-solid-button-font-medium); border-radius: var(--button-solid-button-radius-medium);}
 
-.btn.text.large {font-size: var(--font-size-button-large);}
-.btn.text.medium {font-size: var(--font-size-button-medium);}
-.btn.text.small {font-size: var(--font-size-button-small);}
-.btn.text {color:var(--color-textbutton-text-basic);}
-.btn.text.btn.secondary {color:var(--color-textbutton-text-secondary);}
-.btn.text:disabled {color:var(--color-textbutton-text-disabled);}
-.btn.text.btn.danger {color:var(--color-textbutton-text-danger);}
+.btn.solid.primary {background:var(--button-solid-button-primary-fill); color:var(--button-solid-button-primary-text);}
+.btn.solid.primary.pressed {background:var(--button-solid-button-primary-pressed); color:var(--button-solid-button-primary-text);}
+.btn.solid.primary:disabled {background:var(--button-solid-button-primary-disabled); color:var(--button-solid-button-primary-text);}
+
+.btn.solid.secondary {background:var(--button-solid-button-secondary-fill); color:var(--button-solid-button-seconday-text);}
+.btn.solid.secondary.pressed {background:var(--button-solid-button-secondary-pressed); color:var(--button-solid-button-seconday-text);}
+.btn.solid.secondary:disabled {background:var(--button-solid-button-secondary-disabled); color:var(--button-solid-button-seconday-disabled-text);}
+
+.btn.solid.outlined {background:var(--button-solid-button-outlined-fill); color:var(--button-solid-button-outlined-text); border:1px solid var(--button-solid-button-outlined-border)}
+.btn.solid.outlined.pressed {background:var(--button-solid-button-outlined-fill); color:var(--button-solid-button-outlined-text); border:1px solid var(--button-solid-button-outlined-pressed-border)}
+.btn.solid.outlined:disabled {background:var(--button-solid-button-outlined-fill); color:var(--button-solid-button-outlined-disabled-text); border:1px solid var(--button-solid-button-outlined-disabled-border)}
+
+/* Text Button */
+.btn.text.large {font-size: var(--button-text-button-font-large);}
+.btn.text.medium {font-size: var(--button-text-button-font-medium);}
+.btn.text.small {font-size: var(--button-text-button-font-small);}
+
+.btn.text.basic {color:var(--button-text-button-text-basic);}
+.btn.text.secondary {color:var(--button-text-button-text-secondary);}
+.btn.text:disabled {color:var(--button-text-button-text-disabled);}
+.btn.text.danger {color:var(--button-text-button-text-danger);}
 
 .btn.text.large.icon {position:relative; padding:0 2.4rem 0 2.7rem}
 .btn.text.medium.icon {position:relative; padding: 0 2rem}

@@ -97,20 +97,20 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
 /*****************************************************************
   Header
 *****************************************************************/
-#gHeader{display:flex;position:fixed;top:0;left:0;width:100%;height:54px;padding:0 20px;background-color:var(--bg_02, #fed03a);z-index:100;box-shadow:0 2px 4px -1px rgba(0,0,0,.5)}
-#gHeader h1, #gHeader .g_util{display:inline-flex;width:100%;align-items:center;vertical-align:middle}
+#gHeader{display:flex;position:fixed;top:0;left:0;width:100%;height:54px;padding:0 20px;background-color:#0026d2;z-index:100;box-shadow:0 2px 4px -1px rgba(0,0,0,.5)}
+#gHeader h1, #gHeader .g_util{display:inline-flex;width:100%;align-items:center;vertical-align:middle;font-weight:700}
 .g_util .g_search, .g_util .switch, .g_util .g_project, .g_util .btn_responsive{position:relative;margin-left:20px}
-#gHeader h1{width:110px;height:54px;background:url(../images/logo.png) 50% 50% no-repeat;background-size:107px 20px}
+#gHeader h1{width:200px;height:54px;font-size: 16px; color:rgba(255,255,255,.9); text-shadow:1px 1px 2px rgba(0,0,0,0.5)}
 .g_util .g_search{width:200px;margin-left:auto}
 .g_util .g_search #btnGsearch{position:absolute;top:0;right:0;width:40px;height:30px;background-image:url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' viewBox='0 0 513.749 513.749' style='enable-background:new 0 0 513.749 513.749;' xml:space='preserve' width='512' height='512'%3E%3Cpath fill='%235d5d5d' d='M504.352,459.061l-99.435-99.477c74.402-99.427,54.115-240.344-45.312-314.746S119.261-9.277,44.859,90.15 S-9.256,330.494,90.171,404.896c79.868,59.766,189.565,59.766,269.434,0l99.477,99.477c12.501,12.501,32.769,12.501,45.269,0 c12.501-12.501,12.501-32.769,0-45.269L504.352,459.061z M225.717,385.696c-88.366,0-160-71.634-160-160s71.634-160,160-160 s160,71.634,160,160C385.623,314.022,314.044,385.602,225.717,385.696z'/%3E%3C/svg%3E");background-size:16px 16px;background-repeat:no-repeat;background-position:50% 50%}
-.g_util .g_search input[type=text]{width:100%;height:30px;padding:0 60px 0 15px;outline:none;border-radius:30px;background-color:var(--bg_03, rgba(255, 255, 255, 0.3));border:none}
+.g_util .g_search input[type=text]{width:100%;height:30px;padding:0 60px 0 15px;outline:none;border-radius:30px;background-color:var(--bg_03, rgba(255, 255, 255, 0.6));border:none;color:#000}
 .g_util .g_search input[type=text]:focus{background-color:var(--bg_13, rgba(255, 255, 255, 0.6));color:var(--fc_01, #fff)}
-.g_util .g_search input[type=text]::placeholder{color:var(--fc_03, #666)}
-.g_util .g_search input[type=text]:-ms-input-placeholder{color:var(--fc_03, #666)}
-.g_util .g_search input[type=text]::-ms-input-placeholder{color:var(--fc_03, #666)}
+.g_util .g_search input[type=text]::placeholder{color:#000}
+.g_util .g_search input[type=text]:-ms-input-placeholder{color:#000}
+.g_util .g_search input[type=text]::-ms-input-placeholder{color:#000}
 .g_util .g_search .btn_search_del{position:absolute;top:0;right:30px;width:30px;height:30px;background-image:url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' id='Outline' viewBox='0 0 24 24' width='512' height='512'%3E%3Cpath fill='%23999' d='M16,8a1,1,0,0,0-1.414,0L12,10.586,9.414,8A1,1,0,0,0,8,9.414L10.586,12,8,14.586A1,1,0,0,0,9.414,16L12,13.414,14.586,16A1,1,0,0,0,16,14.586L13.414,12,16,9.414A1,1,0,0,0,16,8Z'/%3E%3Cpath fill='%23999' d='M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z'/%3E%3C/svg%3E%0A");background-size:14px 14px;background-position:50% 50%;background-repeat:no-repeat}
 .switch{position:relative;width:300px;height:30px;padding:4px;overflow:hidden;border-radius:30px;box-sizing:border-box}
-.switch>.bar{content:'';position:absolute;top:4px;height:22px;background-color:var(--bg_02, #fed03a);border-radius:22px;z-index:-1;transform:scale(0);transition:left 0.4s cubic-bezier(.25, .75, .5, 1.25)}
+.switch>.bar{content:'';position:absolute;top:4px;height:22px;background-color:rgba(255,255,255,0.4);border-radius:22px;z-index:-1;transform:scale(0);transition:left 0.4s cubic-bezier(.25, .75, .5, 1.25);color:#fff}
 .switch::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-color:var(--bg_03, rgba(255, 255, 255, 0.3));border-radius:30px;z-index:-2}
 .switch>ul{display:flex}
 .switch>ul>li{flex:1}
@@ -224,9 +224,9 @@ html.util_show .btn_util .bar.b3{stroke-dasharray:14 14;stroke-dashoffset:14}
 #gContainer{position:relative;margin-right:0;transition:margin 0.3s}
 html.m #gContainer{margin-right:370px}
 #gWrap.admin #gContainer{margin-right:0}
-.g_titles{display:flex;position:fixed;top:54px;left:0;right:0;padding:5px 20px;background-color:var(--bg_02, #fed03a);transition:padding 0.8s;z-index:10}
+.g_titles{display:flex;position:fixed;top:54px;left:0;right:0;padding:5px 20px;background-color:#0026d2;transition:padding 0.8s;z-index:10}
 .g_titles h2, .g_titles .g_project_status{display:inline-flex;width:100%;align-items:center;vertical-align:middle;transition:0.3s}
-.g_titles h2{width:200px;font-size:15px;font-weight:700;color:#fff;text-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);transition:0.3s}
+.g_titles h2{width:200px;font-size:15px;font-weight:700;color:rgba(255,255,255,.8);)transition:0.3s}
 html.m .g_titles .g_project_status{padding-right:370px}
 .g_nav+#gContainer{margin:0 0 0 200px}
 .g_content{padding:30px 20px}
@@ -381,12 +381,12 @@ html.m .g_board_tab{right:380px}
 .g_project_status .g_count, .g_project_status .g_project_ing{display:inline-flex;align-items:center;vertical-align:middle}
 .g_project_status .g_count{margin-right:20px;text-align:center}
 .g_project_status .g_count:first-child{margin-left:auto}
-.g_project_status .g_count>span{display:block;height:20px;line-height:20px;font-size:11px;color:var(--fc_03, #666);transition:0.3s}
+.g_project_status .g_count>span{display:block;height:20px;line-height:20px;font-size:11px;color:rgba(255,255,255,.6);transition:0.3s}
 .g_project_status .g_count>strong{display:block;height:35px;line-height:33px;margin-left:5px;font-size:15px;font-weight:bold;color:#fff;text-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);transition:0.3s}
 .g_project_status .g_project_ing{position:relative;width:250px;height:30px;transition:0.3s}
 .g_project_status .g_project_ing .ing{position:absolute;top:7px;left:0;width:100%;font-size:15px;text-align:center;font-weight:500;color:#fff;text-shadow:1px 1px 1px rgba(0,0,0,0.4);z-index:10;transition:0.3s}
-.g_project_status .g_project_ing .graph{display:block;position:relative;width:100%;height:100%;background-color:var(--bg_16, rgba(0, 0, 0, 0.05));overflow:hidden;box-shadow:inset 1px 1px 1px 0px var(--bg_15, rgba(0,0,0,0.3)) }
-.g_project_status .g_project_ing .graph .bar{position:absolute;top:0;left:0;height:100%;width:0;overflow:hidden;background:var(--bg_04, #fed03a);box-shadow:1px 1px 1px 0px rgba(0,0,0,0.3);transition:width 2s ease-in-out}
+.g_project_status .g_project_ing .graph{display:block;position:relative;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.4);overflow:hidden;box-shadow:inset 1px 1px 1px 0px var(--bg_15, rgba(0,0,0,0.3)) }
+.g_project_status .g_project_ing .graph .bar{position:absolute;top:0;left:0;height:100%;width:0;overflow:hidden;background:rgba(0, 0, 0, 0.05);box-shadow:1px 1px 1px 0px rgba(0,0,0,0.3);transition:width 2s ease-in-out}
 .search_title{position:fixed;top:110px;left:0;right:0;height:40px;line-height:40px;padding:0 20px;background-color:#000;color:#fff;animation:titleShow 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;z-index:10;transition:0.3s}
 html.m .search_title{right:360px}
 .search_title .btn_search_cancel{position:absolute;top:0;right:0;height:40px;line-height:40px;padding:0 44px 0 20px;background-color:#fed03a;color:#000;font-weight:700}
@@ -415,9 +415,9 @@ html.m .panel_head{right:370px}
 .g_status span.num{position:relative;margin-right:20px;font-size:12px;color:var(--fc_03, #666);vertical-align:middle}
 .g_status span.num+span.num::before{content:'';position:absolute;top:11px;left:-10px;width:2px;height:10px;background-color:var(--bg_14, rgba(0,0,0,.2))}
 .g_status span.num strong{padding-left:5px;font-size:14px;color:var(--fc_02, #000);font-weight:700}
-.g_status .ing{position:absolute;top:0;left:50%;width:180px;margin-left:-90px;text-align:center;font-size:14px;font-weight:500;color:var(--fc_02, #000)}
+.g_status .ing{position:absolute;top:0;left:50%;width:180px;margin-left:-90px;text-align:center;font-size:14px;font-weight:500;color:#fff}
 .g_status_box{position:relative;width:200px;height:30px;background-color:var(--bg_09, #fff);vertical-align:middle;border-radius:30px;overflow:hidden}
-.g_status_box .bar{position:absolute;top:0;left:0;height:30px;width:0;background-color:var(--bg_02, #fed03a);transition:width 2s ease-in-out}
+.g_status_box .bar{position:absolute;top:0;left:0;height:30px;width:0;background-color:#0026d2;transition:width 2s ease-in-out}
 @media screen and (max-width: 768px) {
 .g_search input[type=text]{width:100%;height:40px;padding:0;border-width:0 0 1px 0;border-radius:0}
 .g_search #btnGsearch{top:15px;right:15px;width:40px;height:40px}
@@ -463,7 +463,7 @@ html.m .panel_head{right:370px}
 .g_board table tbody td.type>span{display:inline-block;width:60px;height:22px;line-height:22px;border:1px solid #999;background-color:var(--bg_01, #fff);font-size:11px;color:var(--fc_03, #666);border-radius:24px}
 .g_board table tbody td.complete>span{display:inline-block;width:60px;height:22px;line-height:22px;background-color:#e6e6e6;font-size:11px;color:var(--fc_03, #666);border-radius:24px}
 .g_board table tbody td.complete>span.ing{background-color:#d9e4fa;color:#000}
-.g_board table tbody td.complete>span.done{background-color:#fed03a;color:#000}
+.g_board table tbody td.complete>span.done{background-color:#0026d2;color:#fff}
 .g_board table tbody td.complete>span.del{background-color:#777;color:#fff;font-weight:700}
 .g_board table tbody td.complete>span.hold{background-color:#cac4b7;color:#fff;font-weight:700}
 .g_board table tbody .complete td{background-color:#fff;color:var(--fc_03, #666)}
