@@ -1822,9 +1822,9 @@ if (!UICommon) {
                     if ($result.find('.result_ico').length) return false;
                     if ($result.hasClass('success')) {
                         var $icon = '<div class="result_ico">';
-                        $icon += '<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">';
-                        $icon += '<circle class="circle" cx="30" cy="30" r="28" stroke-dasharray="180" stroke-dashoffset="180" />';
-                        $icon += '<path class="check" d="M18,28l8,8L41,20" stroke-dasharray="70" stroke-dashoffset="70" />';
+                        $icon += '<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">';
+                        $icon += '<circle class="circle" cx="32.5" cy="32.5" r="32" fill="#F3F7FF"/>';
+                        $icon += '<path fill-rule="evenodd" clip-rule="evenodd" d="M35.0014 34.1378C34.9945 34.3398 34.8287 34.5 34.6266 34.5H30.3734C30.1713 34.5 30.0055 34.3398 29.9986 34.1378L29.5132 19.8878C29.506 19.6758 29.6759 19.5 29.888 19.5H35.112C35.3241 19.5 35.494 19.6758 35.4868 19.8878L35.0014 34.1378ZM35.5 41.4916C35.5 43.1797 34.1544 44.5 32.5079 44.5C30.8456 44.5 29.5 43.1797 29.5 41.4916C29.5 39.8203 30.8456 38.5 32.5079 38.5C34.1544 38.5 35.5 39.8203 35.5 41.4916Z" fill="#0026D2"/>';
                         $icon += '</svg>';
                         $icon += '</div>';
                         $result.prepend($icon);
