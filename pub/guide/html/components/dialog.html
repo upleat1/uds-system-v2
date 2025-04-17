@@ -25,11 +25,11 @@
         [data-class="demo"] .pop_bg_close {
             position: absolute
         }
-        [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap {
+        [data-class="demo"] .popup.bottom>.pop_wrap {
             position: absolute
         }
         @media (min-width: 1024px) {
-            [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap{left: 0; margin-left: 0}
+            [data-class="demo"] .popup.bottom>.pop_wrap{left: 0; margin-left: 0}
         }
         .note_txt {margin-left:.5rem; font-size:1.5rem; color:#777;}
         .p-tit {font-size: 18px; font-weight: bold; margin-bottom: 5px;}
@@ -283,27 +283,25 @@ $(function(){
             <script type="text/html">
 <div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
     aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
-    <div class="pop_scl_wrap">
-        <article class="pop_wrap" style="max-height: 448px;">
-            <div class="pop_head">
-                <div>
-                    <h1 id="uiLayerAlert0Label">알림</h1>
+    <article class="pop_wrap" style="max-height: 448px;">
+        <div class="pop_head">
+            <div>
+                <h1 id="uiLayerAlert0Label">알림</h1>
+            </div>
+        </div>
+        <div class="pop_body" style="max-height: 296px;">
+            <div class="pop_section">
+                <div class="message">
+                    <div role="alert" aria-live="assertive">얼럿창입니다.</div>
                 </div>
             </div>
-            <div class="pop_body" style="max-height: 296px;">
-                <div class="pop_section">
-                    <div class="message">
-                        <div role="alert" aria-live="assertive">얼럿창입니다.</div>
-                    </div>
-                </div>
+        </div>
+        <div class="pop_foot">
+            <div class="btn_area">
+                <span><button type="button" id="uiLayerAlert0ActionBtn" class="btn solid primary">확인</button></span>
             </div>
-            <div class="pop_foot">
-                <div class="btn_area">
-                    <span><button type="button" id="uiLayerAlert0ActionBtn" class="btn solid primary">확인</button></span>
-                </div>
-            </div>
-        </article>
-    </div>
+        </div>
+    </article>
 </div>
             </script>
 
@@ -311,27 +309,25 @@ $(function(){
             <script type="text/html">
 <div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
     aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
-    <div class="pop_scl_wrap">
-        <article class="pop_wrap" style="max-height: 448px;">
-            <div class="pop_head">
-                <div>
-                    <h1 id="uiLayerAlert0Label">알림</h1>
+    <article class="pop_wrap" style="max-height: 448px;">
+        <div class="pop_head">
+            <div>
+                <h1 id="uiLayerAlert0Label">알림</h1>
+            </div>
+        </div>
+        <div class="pop_body" style="max-height: 296px;">
+            <div class="pop_section">
+                <div class="message">
+                    <div role="alert" aria-live="assertive">컨펌창입니다.</div>
                 </div>
             </div>
-            <div class="pop_body" style="max-height: 296px;">
-                <div class="pop_section">
-                    <div class="message">
-                        <div role="alert" aria-live="assertive">컨펌창입니다.</div>
-                    </div>
-                </div>
-            </div>
-            <div class="pop_foot">
-                <div class="btn_area"><span><button type="button" id="uiLayerAlert0CancelBtn"
-                            class="btn solid secondary">취소</button></span><span><button type="button"
-                            id="uiLayerAlert0ActionBtn" class="btn solid primary">확인</button></span></div>
-            </div>
-        </article>
-    </div>
+        </div>
+        <div class="pop_foot">
+            <div class="btn_area"><span><button type="button" id="uiLayerAlert0CancelBtn"
+                        class="btn solid secondary">취소</button></span><span><button type="button"
+                        id="uiLayerAlert0ActionBtn" class="btn solid primary">확인</button></span></div>
+        </div>
+    </article>
 </div>
             </script>
 

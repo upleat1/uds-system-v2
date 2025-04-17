@@ -6,12 +6,11 @@
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
     <meta id="viewport2" http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>No.1 기업금융플랫폼</title>
+    <title>Upleat Design System</title>
     <!-- 전역선언(SPA 탬플릿에 선언 되어져 있음) -->
     <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/app/css/_variables.css">
     <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/app/css/common.css">
     <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/app/css/components.css">
-    <link rel="stylesheet" data-description="운영 공통 적용 스타일" href="/pub/app/css/style.css">
     <script src="/pub/app/js/library/jquery-3.3.1-min.js"></script>
     <script src="/pub/app/js/library/jquery-ui.min.js"></script>
     <script src="/pub/app/js/library/swiper.min.js"></script>
@@ -127,6 +126,15 @@
             <span><button type="button" class="btn solid primary" onclick="UICommon.Layer.open('#bottomPopup1', function() {
                 alert('Popup ok!');
             })">Bottomsheet + Callback</button></span>
+        </div>
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn solid primary"
+                    onclick="UICommon.Layer.open('#isSwipePopup')">Bottomsheet - isSwipe</button></span>
+        </div>
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn solid primary"
+                    onclick="UICommon.Layer.open('#swipeMovePopup')">Bottomsheet - isSwipe Touch
+                    Move</button></span>
         </div>
         
         <!-- 다이얼로그 -->
@@ -337,6 +345,52 @@
                                 <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
                                 <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+            </article>
+        </div>
+        <div id="isSwipePopup" class="popup bottom is_swipe" role="dialog" aria-hidden="true">
+            <article class="pop_wrap">
+                <div class="pop_head">
+                    <div>
+                        <h1>Swipe Popup</h1>
+                    </div>
+                </div>
+                <div class="pop_body">
+                    <div class="pop_section">
+                        <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div>
+                    </div>
+                </div>
+                <div class="pop_foot">
+                    <div>
+                        <div class="btn_area">
+                            <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
+                            <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+            </article>
+        </div>
+        <div id="swipeMovePopup" class="popup bottom is_swipe touch_move" role="dialog" aria-hidden="true">
+            <article class="pop_wrap">
+                <div class="pop_head">
+                    <div>
+                        <h1>Swipe Move Popup</h1>
+                    </div>
+                </div>
+                <div class="pop_body">
+                    <div class="pop_section">
+                        <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div>
+                    </div>
+                </div>
+                <div class="pop_foot">
+                    <div>
+                        <div class="btn_area">
+                            <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
+                            <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
                         </div>
                     </div>
                 </div>

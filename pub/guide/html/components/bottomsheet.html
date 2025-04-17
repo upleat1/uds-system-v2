@@ -25,11 +25,11 @@
         [data-class="demo"] .pop_bg_close {
             position: absolute
         }
-        [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap {
+        [data-class="demo"] .popup.bottom>.pop_wrap, [data-class="demo"] .popup.bottom>.pop_wrap {
             position: absolute
         }
         @media (min-width: 1024px) {
-            [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap{left: 0; margin-left: 0}
+            [data-class="demo"] .popup.bottom>.pop_wrap, [data-class="demo"] .popup.bottom>.pop_wrap{left: 0; margin-left: 0}
         }
         .note_txt {margin-left:.5rem; font-size:1.5rem; color:#777;}
         .p-tit {font-size: 18px; font-weight: bold; margin-bottom: 5px;}
@@ -207,30 +207,28 @@ $(function(){
 <div id="팝업ID" class="popup bottom ui_pop_last show" style="height:500px" role="dialog" aria-hidden="false"
     aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
     <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
-    <div class="pop_scl_wrap">
-        <article class="pop_wrap" style="max-height: 508px;">
-            <div class="pop_head">
-                <div>
-                    <h1 id="bottomPopup2Label">바텀시트 타이틀</h1>
+    <article class="pop_wrap" style="max-height: 508px;">
+        <div class="pop_head">
+            <div>
+                <h1 id="bottomPopup2Label">바텀시트 타이틀</h1>
+            </div>
+        </div>
+        <div class="pop_body" style="max-height: 252px;">
+            <div class="pop_section">
+                <p class="p">바텀시트 내용</p>
+                <div class="section" style="height: 128px; background: #f1f1f1;">추가 콘텐츠 영역</div>
+            </div>
+        </div>
+        <div class="pop_foot">
+            <div>
+                <div class="btn_area">
+                    <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
+                    <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
                 </div>
             </div>
-            <div class="pop_body" style="max-height: 252px;">
-                <div class="pop_section">
-                    <p class="p">바텀시트 내용</p>
-                    <div class="section" style="height: 128px; background: #f1f1f1;">추가 콘텐츠 영역</div>
-                </div>
-            </div>
-            <div class="pop_foot">
-                <div>
-                    <div class="btn_area">
-                        <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
-                        <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
-        </article>
-    </div>
+        </div>
+        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+    </article>
 </div>
             </script>
 
