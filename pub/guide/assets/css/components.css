@@ -84,7 +84,7 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
     width:100%;
     height: 8px;
     margin-top: -15px;
-    background-color: var(--bg_09, #fed03a);
+    background-color: rgba(0,38,210,.4);
 }
 
 [data-class="section"] {

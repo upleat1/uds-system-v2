@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>Upleat Design System</title>
+    <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/pub/app/css/_variables.css">
+    <link rel="stylesheet" href="/pub/app/css/common.css">
+    <link rel="stylesheet" href="/pub/app/css/components.css">
+    <style>
+        .h3 {margin-bottom: 1rem;}
+        div + .h3 {margin-top: 3rem;}
+        .selection,
+        .switch {display: inline-block; margin:1rem}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <h1 data-class="component-name"><span>Selection Control<span></h1>    
+        <div data-class="box">
+            <div data-class="list disc">
+                <div>사용자가 선택 옵션들을 제어할 수 있도록 돕는 컴포넌트</div>
+            </div>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+            <div data-class="h2">Radio Button</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>두 개 이상의 항목에서 하나만 선택할 수 있는 경우에 사용</div>
+                    <div>선택되지 않은 Radio Button을 선택하는 순간, 이전에 선택한 항목은 자동으로 선택이 해제된다.</div>
+                </div>
+            </div>
+            <div data-class="h2">large(24x24) / medium(20x20)</div>
+            <script type="text/html">
+<div class="rdoChk_group inline">
+    <span class="selection">
+        <input type="radio" id="radioH1" name="radio_h1">
+        <label for="radioH1" class="label">레이블(off)</label>
+    </span>
+    <span class="selection">
+        <input type="radio" id="radioH2" name="radio_h2" disabled>
+        <label for="radioH2" class="label">레이블(off/disabled)</label>
+    </span>
+    <span class="selection">
+        <input type="radio" id="radioH3" name="radio_h3" checked>
+        <label for="radioH3" class="label">레이블(on)</label>
+    </span>
+    <span class="selection">
+        <input type="radio" id="radioH4" name="radio_h4" checked disabled>
+        <label for="radioH4" class="label">레이블(on/disabled)</label>
+    </span>
+    <span class="selection alone">
+        <input type="radio" id="radioH5" name="radio_h5" checked aria-label="레이블(only)">
+        <label for="radioH5" class="label"></label>
+    </span>
+</div>
+            </script>
+        </div>
+    </div>
+
+    </div>
+    <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/pub/guide/assets/vendor/jquery-ui.min.js"></script>
+    <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/pub/guide/assets/js/components.js"></script>
+    <script src="/pub/app/js/common_ui.js"></script>  
+</body>
+</html>

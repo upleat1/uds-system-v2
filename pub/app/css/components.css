@@ -5,7 +5,9 @@
 @import url("/pub/app/css/_textfield.css"); 
 @import url("/pub/app/css/_textarea.css"); 
 @import url("/pub/app/css/_dropdown.css"); 
-@import url("/pub/app/css/_selection.css"); 
+@import url("/pub/app/css/_checkbox.css"); 
+@import url("/pub/app/css/_radio.css"); 
+@import url("/pub/app/css/_switch.css"); 
 @import url("/pub/app/css/_popup.css");
 @import url("/pub/app/css/_tab.css");
 @import url("/pub/app/css/_tooltip.css");

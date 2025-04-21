@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>Upleat Design System</title>
+    <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/pub/app/css/_variables.css">
+    <link rel="stylesheet" href="/pub/app/css/common.css">
+    <link rel="stylesheet" href="/pub/app/css/components.css">
+    <style>
+        .h3 {margin-bottom: 1rem;}
+        div + .h3 {margin-top: 3rem;}
+        .selection,
+        .switch {display: inline-block; margin:1rem}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <h1 data-class="component-name"><span>Selection Control<span></h1>    
+        <div data-class="box">
+            <div data-class="list disc">
+                <div>사용자가 선택 옵션들을 제어할 수 있도록 돕는 컴포넌트</div>
+            </div>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+            <div data-class="h2">Switch</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>각 선택 항목의 상태를 즉시 제어할 때 사용</div>
+                </div>
+            </div>
+            <div data-class="h2">large(24x24) / medium(20x20)</div>
+            <script type="text/html">
+<div style="margin-top:.4rem;">
+    <span class="switch">    
+        <input type="checkbox" id="switch2">
+        <label for="switch2">레이블(off)</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch3" disabled>
+        <label for="switch3">레이블(off/disabled)</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch1" checked>
+        <label for="switch1">레이블(on)</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch4" checked disabled>
+        <label for="switch4">레이블(on/disabled)</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch5" checked aria-label="레이블(only)">
+        <label for="switch5"></label>
+    </span>
+</div>
+            </script>
+        </div>
+    </div>
+
+    </div>
+    <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/pub/guide/assets/vendor/jquery-ui.min.js"></script>
+    <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/pub/guide/assets/js/components.js"></script>
+    <script src="/pub/app/js/common_ui.js"></script>  
+</body>
+</html>

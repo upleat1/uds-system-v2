@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>Upleat Design System</title>
+    <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
+    <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/pub/app/css/_variables.css">
+    <link rel="stylesheet" href="/pub/app/css/common.css">
+    <link rel="stylesheet" href="/pub/app/css/components.css">
+    <style>
+        .h3 {margin-bottom: 1rem;}
+        div + .h3 {margin-top: 3rem;}
+        .selection,
+        .switch {display: inline-block; margin:1rem}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <h1 data-class="component-name"><span>CheckBox<span></h1>    
+        <div data-class="box">
+            <div data-class="list disc">
+                <div>사용자가 선택 옵션들을 제어할 수 있도록 돕는 컴포넌트</div>
+            </div>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+            <div data-class="h2">Basic</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>옵션명은 2줄로 노출하지 않는다</div>
+                    <div>옵션명이 영역을 초과할 경우 말줄임표(...)를 노출할 수 있으나 지양한다</div>
+                </div>
+            </div>
+            <div data-class="h3">large(24x24) / medium(20x20)</div>
+            <script type="text/html">
+<h3 class="h3">Basic</h3>
+<div class="rdoChk_group inline">
+    <span class="selection checkbox lg off">
+        <input type="checkbox" id="checkSize2">
+        <label for="checkSize2" class="label">레이블(off)</label>
+    </span>
+    <span class="selection checkbox lg off disabled">
+        <input type="checkbox" id="checkSize3" disabled>
+        <label for="checkSize3" class="label">레이블(off/disabled)</label>
+    </span>
+    <span class="selection checkbox lg on">
+        <input type="checkbox" id="checkSize1" checked>
+        <label for="checkSize1" class="label">레이블(on)</label>
+    </span>
+    <span class="selection checkbox lg on disabled">
+        <input type="checkbox" id="checkSize4" checked disabled>
+        <label for="checkSize4" class="label">레이블(on/disabled)</label>
+    </span>
+    <span class="selection checkbox lg alone">
+        <input type="checkbox" id="checkSize5" aria-label="레이블(alone)">
+        <label for="checkSize5" class="label"></label>
+    </span>
+</div>
+
+<h3 class="h3">Small</h3>
+<div class="rdoChk_group inline">
+    <span class="selection checkbox md off">
+        <input type="checkbox" id="checkCHK222">
+        <label for="checkCHK222" class="label">레이블(off)</label>
+    </span>
+    <span class="selection checkbox md off disabled">
+        <input type="checkbox" id="checkCHK333" disabled>
+        <label for="checkCHK333" class="label">레이블(off/disabled)</label>
+    </span>
+    <span class="selection checkbox md on">
+        <input type="checkbox" id="checkCHK111" checked>
+        <label for="checkCHK111" class="label">레이블(on)</label>
+    </span>
+    <span class="selection checkbox md on disabled">
+        <input type="checkbox" id="checkCHK444" checked disabled>
+        <label for="checkCHK444" class="label">레이블(on/disabled)</label>
+    </span>
+    <span class="selection checkbox md alone">
+        <input type="checkbox" id="checkCHK555" aria-label="레이블(alone)">
+        <label for="checkCHK555" class="label"></label>
+    </span>
+</div>
+            </script>
+        </div>
+    </div>
+
+    </div>
+    <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/pub/guide/assets/vendor/jquery-ui.min.js"></script>
+    <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/pub/guide/assets/js/components.js"></script>
+    <script src="/pub/app/js/common_ui.js"></script>  
+</body>
+</html>
