@@ -112,7 +112,11 @@
         </div>
         <div class="btn_cnt_wrap">
             <span><button type="button" class="btn solid primary"
-                    onclick="UICommon.Layer.open('#bottomPopupNoTitle1')">Bottomsheet - No title (팝업창 닫기 버튼 있는 경우)</button></span>
+                    onclick="UICommon.Layer.open('#bottomPopupNoTitle1')">Bottomsheet - No title (닫기 x 버튼 있는 경우)</button></span>
+        </div>
+        <div class="btn_cnt_wrap">
+            <span><button type="button" class="btn solid primary"
+                    onclick="UICommon.Layer.open('#bottomPopupNoTitle2')">Bottomsheet - No title (닫기 x 버튼 없는 경우)</button></span>
         </div>
         <div class="btn_cnt_wrap">
             <span><button type="button" class="btn solid primary"
@@ -306,6 +310,28 @@
                 <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
             </article>
         </div>
+        <div id="bottomPopupNoTitle2" class="popup bottom" role="dialog" aria-hidden="true"> <!-- pop_head에 h1 제목이 없으면 'no_title' 자동 생성 -->
+            <article class="pop_wrap">
+                <div class="pop_head">
+                    <div>
+                        <!-- <h1>Bottomsheet제목 Bottomsheet제목 Bottomsheet제목 Bottomsheet제목 Bottomsheet제목 Bottomsheet제목</h1> 제목만 삭제 -->
+                    </div>
+                </div>
+                <div class="pop_body">
+                    <div class="pop_section">
+                        바텀시트 내용
+                    </div>
+                </div>
+                <div class="pop_foot">
+                    <div>
+                        <div class="btn_area">
+                            <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
+                            <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
         <div id="bottomPopupGate" class="popup bottom" role="dialog" aria-hidden="true">
             <article class="pop_wrap">
                 <div class="pop_body">
@@ -319,7 +345,7 @@
                                 </span>
                             </span>
                             <span class="right">
-                                <button type="button" class="btn_close ui_pop_close"><strong>닫기</strong></button>
+                                <button type="button" class="btn_close ui_pop_close">닫기</button>
                             </span>
                         </div>
                     </div>
