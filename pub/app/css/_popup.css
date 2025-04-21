@@ -14,7 +14,7 @@
 :root{
     --bottomsheet-title-toucharea-x:var(--bottomsheet-close-padding-x); /* 타이틀 있고 x 닫기 버튼 있는 경우 */
     --bottomsheet-title-toucharea-y:var(--bottomsheet-close-padding-y);
-    --bottomsheet-untitled-toucharea-y:var(--bottomsheet-close-untitled-padding-x);  /* 타이틀 없고 x 닫기 버튼 있는 경우 */
+    --bottomsheet-untitled-toucharea-y:var(--bottomsheet-close-untitled-padding-y);  /* 타이틀 없고 x 닫기 버튼 있는 경우 */
 }
 
 html.lock, 
