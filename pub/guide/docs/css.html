@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-    <title>Upleat Design System</title>
+    <title>유플리트</title>
     <link rel="stylesheet" href="/pub/guide/assets/css/docs.css">
 </head>
 <body>
     <div class="contents">
-        <div class="docs-name"><span>CSS 규칙</span></div>
+        <div class="docs-name">CSS 규칙</div>
 
         <div class="paper">
             <div class="h1">작은 따옴표 사용 범위</div>
@@ -18,9 +18,9 @@
 				<li>폰트의 선언, filter, content에 작은 따옴표('')를 사용한다. 그 외의 경우는 사용하지 않는다.</li>
             </ul>
             <div class="code only">
-                <xmp class="html">.class_name {font-family:'dotum'}
-.class_name:after{content:'.'}
-.class_name {background:url(img.gif) no-repeat}</xmp>
+                <xmp class="html">.class-name {font-family:'dotum'}
+.class-name:after{content:'.'}
+.class-name {background:url(img.gif) no-repeat}</xmp>
             </div>
             
             <div class="h1">세미콜론</div>
@@ -33,10 +33,10 @@
 				<li>선택자 간, 중괄호간 한칸의 공백을 사용한다, 중괄호 안쪽 좌우에는 공백은 사용하지 않는다.</li>
             </ul>
             <div class="code only">
-                <xmp class="html">.class_name,
-.class_name .child_class {background:url(../img/img.gif) no-repeat;}
-.class_name {padding:0; margin:0;}
-.class_name {padding:0; margin:0;}</xmp>
+                <xmp class="html">.class-name,
+.class-name .child-class {background:url(/img/img.gif) no-repeat;}
+.class-name {padding:0; margin:0;}
+.class-name {padding:0; margin:0;}</xmp>
             </div>
             
             <div class="h1">들여쓰기 줄바꿈</div>
@@ -45,10 +45,10 @@
                 <li>공통으로 사용되는 속성의 선택자간의 줄 바꿈은 허용하며 이 외의 줄바꿈은 허용하지 않는다.</li>
             </ul>
             <div class="code only">
-                <xmp class="html">h4.class_name {font-size:1.25em; letter-spacing:-1px; margin:0.5em 0 0 0;}
+                <xmp class="html">h4.class-name {font-size:1.25em; letter-spacing:-1px; margin:0.5em 0 0 0;}
 
-.class_name,
-.class_name .child_class {background:url(../img/img.gif) no-repeat;}</xmp>
+.class-name,
+.class-name .child-class {background:url(/img/img.gif) no-repeat;}</xmp>
             </div>
             
             <div class="h1">단위</div>
@@ -107,7 +107,7 @@
             </ul>
             <div class="code only">
                 <xmp class="html">/* title */
-.title_type1 {margin:30px 0 10px 0;}
+.title-type1 {margin:30px 0 10px 0;}
     
 /* description */
 .desc1 {padding:2px 0 0 15px; font-size:0.917em;}</xmp>
@@ -179,6 +179,5 @@
     
     <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
     <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
-    <script src="/pub/guide/assets/js/document.js"></script>
 </body>
 </html>

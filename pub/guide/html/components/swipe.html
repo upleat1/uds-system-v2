@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-    <title>Upleat Design System</title>
+    <title>유플리트</title>
     <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
     <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
     
     <!-- resource -->
-    <link rel="stylesheet" href="/pub/app/css/common.css">
-    <link rel="stylesheet" href="/pub/app/css/library/swiper.min.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" href="/pub/assets/css/library/swiper.min.css">
     <style>
-        .p-tit {font-size: 18px; font-weight: bold; margin-bottom: 5px;}
-        .p-tit2 {color:#1733bf; font-weight: bold;}
+        .p-tit {font-size: 18px; font-weight:700; margin-bottom: 5px;}
+        .p-tit2 {color:#1733bf; font-weight:700;}
         .p-list li{position: relative; font-size:1.5rem; color:#666; line-height: 1.8; padding-left:10px;}
         .p-list li.dh::before{content: '-'; position: absolute; left: 0; top:0;}
     </style>
@@ -40,7 +41,7 @@
                 <script>
                     var demoSwipeUpdate = function(){
                         $('.swiper-wrapper').append('<div class="swiper-slide"><div style="width:100%;height:200px;background-color:#ff0000"></div></div>');
-                        UICommon.uiSwiper.update('.ui_swiper');
+                        UICommon.uiSwiper.update('.ui-swiper');
                     }
                     var demoSwipeUpdate2 = function(){
                         $('#testSwiper .swiper-wrapper').append('<div class="swiper-slide"><div style="width:100%;height:200px;background-color:#ff0000"></div></div>');
@@ -52,7 +53,7 @@
                 <p class="p-tit">3. swiper destroy</p>
                 <ul class="p-list">
                     <li class="dh"><strong class="p-tit2">UICommon.uiSwiper.destroy('셀렉터')</li>
-                    <li><button type="button" data-class="button" onclick="UICommon.uiSwiper.destroy('.ui_swiper');">swiper destroy</button>
+                    <li><button type="button" data-class="button" onclick="UICommon.uiSwiper.destroy('.ui-swiper');">swiper destroy</button>
                     <button type="button" data-class="button" onclick="UICommon.uiSwiper.destroy('#testSwiper');">첫번째 swiper destroy</button></li>
                 </ul>                
             </div>
@@ -72,10 +73,10 @@
                 Swiper 기본타입
             </div>
             <script type="text/html">
-<div id="testSwiper" class="ui_swiper">
+<div id="testSwiper" class="ui-swiper">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+            <div style="width:100%;height:200px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide">
             <div style="width:100%;height:200px;background-color:#384d84"></div>
@@ -96,10 +97,10 @@
                 아래 CODE와 같이 'full' 클래스 추가
             </div>
             <script type="text/html">
-<div class="ui_swiper full">
+<div class="ui-swiper full">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+            <div style="width:100%;height:200px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide">
             <div style="width:100%;height:200px;background-color:#384d84"></div>
@@ -120,10 +121,10 @@
                 아래 CODE와 같이 'data-view'에 기본으로 보여줄 갯수를 삽입
             </div>
             <script type="text/html">
-<div class="ui_swiper" data-view="2">
+<div class="ui-swiper" data-view="2">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+            <div style="width:100%;height:200px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide">
             <div style="width:100%;height:200px;background-color:#384d84"></div>
@@ -144,10 +145,10 @@
                 아래 CODE와 같이 'data-space'에 간격 수치(px기준) 삽입
             </div>
             <script type="text/html">
-<div class="ui_swiper swiper_items" data-space="10">
+<div class="ui-swiper swiper-items" data-space="10">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+            <div style="width:100%;height:200px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide">
             <div style="width:100%;height:200px;background-color:#384d84"></div>
@@ -158,7 +159,7 @@
     </div>
     <div class="swiper-pagination"></div>
 </div>
-<div class="ui_swiper swiper_items" data-space="20">
+<div class="ui-swiper swiper-items" data-space="20">
     <div class="swiper-wrapper">
         <div class="swiper-slide" style="width:20rem;">
             <div style="width:100%;height:100px;background-color:#e2dfda"></div>
@@ -167,7 +168,7 @@
             <div style="width:100%;height:100px;background-color:#384d84"></div>
         </div>
         <div class="swiper-slide" style="width:20rem;">
-            <div style="width:100%;height:100px;background-color:#fed03a"></div>
+            <div style="width:100%;height:100px;background-color:#00ebff"></div>
         </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -179,13 +180,13 @@
             <div data-class="h1">Swiper Centered</div>
             <div data-class="box">
                 <p class="p-tit">Swiper view 중앙에서 시작</p> 
-                아래 CODE와 같이 '_center' 클래스 추가
+                아래 CODE와 같이 '-center' 클래스 추가
             </div>
             <script type="text/html">
-<div class="ui_swiper _center swiper_items" data-space="20">
+<div class="ui-swiper -center swiper-items" data-space="20">
     <div class="swiper-wrapper">
         <div class="swiper-slide" style="width:15rem;">
-            <div style="width:100%;height:100px;background-color:#fed03a"></div>
+            <div style="width:100%;height:100px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide" style="width:15rem;">
             <div style="width:100%;height:100px;background-color:#384d84"></div>
@@ -203,13 +204,13 @@
             <div data-class="h1">Swiper Auto Height</div>
             <div data-class="box">
                 <p class="p-tit">Swiper view Height 자동변경</p> 
-                아래 CODE와 같이 '_autoHeight' 클래스 추가
+                아래 CODE와 같이 '-autoHeight' 클래스 추가
             </div>
             <script type="text/html">
-<div class="ui_swiper _autoHeight">
+<div class="ui-swiper -autoHeight">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+            <div style="width:100%;height:200px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide">
             <div style="width:100%;height:100px;background-color:#384d84"></div>
@@ -227,13 +228,13 @@
             <div data-class="h1">Swiper Loop</div>
             <div data-class="box">
                 <p class="p-tit">Swiper 무한반복</p> 
-                아래 CODE와 같이 '_loop' 클래스 추가
+                아래 CODE와 같이 '-loop' 클래스 추가
             </div>
             <script type="text/html">
-<div class="ui_swiper _loop">
+<div class="ui-swiper -loop">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+            <div style="width:100%;height:200px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide">
             <div style="width:100%;height:200px;background-color:#384d84"></div>
@@ -251,13 +252,13 @@
             <div data-class="h1">Swiper Navigation</div>
             <div data-class="box">
                 <p class="p-tit">Swiper 좌/우 이동 버튼</p> 
-                아래 CODE와 같이 '_loop' 클래스 추가
+                아래 CODE와 같이 '-loop' 클래스 추가
             </div>
             <script type="text/html">
-<div class="ui_swiper _nav">
+<div class="ui-swiper -nav">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+            <div style="width:100%;height:200px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide">
             <div style="width:100%;height:200px;background-color:#384d84"></div>
@@ -275,13 +276,13 @@
             <div data-class="h1">Swiper Pagination Fraction</div>
             <div data-class="box">
                 <p class="p-tit">Swiper 페이지 매김 분수로 표현</p> 
-                아래 CODE와 같이 '_fraction' 클래스 추가
+                아래 CODE와 같이 '-fraction' 클래스 추가
             </div>
             <script type="text/html">
-<div class="ui_swiper _fraction">
+<div class="ui-swiper -fraction">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+            <div style="width:100%;height:200px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide">
             <div style="width:100%;height:200px;background-color:#384d84"></div>
@@ -302,10 +303,10 @@
                 아래 CODE와 같이 'data-auto' 속성에 delay 시간 적용
             </div>
             <script type="text/html">
-<div class="ui_swiper" data-auto="5000">
+<div class="ui-swiper" data-auto="5000">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="width:100%;height:200px;background-color:#fed03a"></div>
+            <div style="width:100%;height:200px;background-color:#00ebff"></div>
         </div>
         <div class="swiper-slide">
             <div style="width:100%;height:200px;background-color:#384d84"></div>
@@ -325,6 +326,6 @@
     <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
     <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
     <script src="/pub/guide/assets/js/components.js"></script>
-    <script src="/pub/app/js/common_ui.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
 </body>
 </html>

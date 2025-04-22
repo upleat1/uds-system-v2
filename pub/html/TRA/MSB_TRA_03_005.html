@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�ڵ���ü��ȸ ��ü�������</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">�ڵ���ü��ȸ</h1>
+            <button type="button" class="action-prev" title="����"></button>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container tra bg01">
+        <div class="pg-content">
+            <div class="section">
+                <div class="lists-headnote sticky">
+                    <!-- mod-date:0517: ��ũ�� ����, title �߰� -->
+                    <button type="button" class="btn md ico-chevron-sm" title="��ȸ ���� ����">
+                        <i class="ci-18x bk-000" role="img" aria-label="SBI��������(���̴ٹ�ũ)"></i>���������(0123)<!-- mod-date:0613: [���ټ�] role�߰� --><!-- mod-date:0315: �̹����±� ������ i�±׷� ���� -->
+                    </button>
+                    <button type="button" class="btn md ico-chevron-sm" data-ui="pop-open" onclick="UICommon.Layer.open('#regDetail')" title="��ȸ �ɼ� ����">��ϳ���</button> <!-- mod-date:0612: [���ټ�] title ���� -->
+                    <!-- // -->
+                </div>
+                <div class="inq-state sticky">
+                    <div class="state-keyword">
+                        <span class="ico-search"></span>
+                        <!-- �˻��� ���̴� ���� -->
+                        <div class="view-st">
+                            <input type="search" title="�˻����Է�" class="srch">
+                        </div>
+                        <!-- �˻��� ���̴� ���� -->
+       <!--              <div class="view-nd">
+                            <span>����</span>
+                            <button type="button" class="del" title="�˻������"></button>
+                        </div> --><!-- mod-date:0404: title �߰� -->
+                    </div>
+                    <button class="btn md ico-chevron-sm" data-ui="pop-open" onclick="UICommon.Layer.open('#periodPop')" title="��ȸ�ɼ� ����">1����/��ü/�ֽż�</button><!-- mod-date:0517: [���ټ�] title �߰� -->
+                </div>
+
+                <div class="card-set">
+                    <div class="headnote tall">2023.01</div>
+                    <!-- ��ü�Ϸ� -->
+                    <div class="card-wrap" role="button" title="�󼼺���">
+                        <div class="card-head fit">
+                            <div class="state-msg">������</div>
+                            <span class="btn ico-arr-right"></span>
+                            <span class="badge line-posi state-btn">��ü�Ϸ�</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="numbers-20 nums-bold fc-point" role="text"><span class="num">123,456,789</span><span class="num-unit">��</span></span>
+                        </div>
+                        <ul class="lists data noline">
+                            <li>
+                                <div class="key">�Աݰ���</div>
+                                <div class="value">�������� 459647954592876</div>
+                            </li>
+                            <li>
+                                <div class="key">��ü�Ͻ�</div>
+                                <div class="value">2023.01.10 13:25:47</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //��ü�Ϸ� -->
+                    
+                    <!-- ��ü���� -->
+                    <div class="card-wrap" role="button" title="�󼼺���">
+                        <div class="card-head fit">
+                            <div class="state-msg">�Ҿ���������(9874)</div>
+                            <span class="btn ico-arr-right"></span>
+                            <span class="badge line-nega state-btn">��ü����</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="numbers-20 nums-bold fc-point" role="text"><span class="num">123,456,789</span><span class="num-unit">��</span></span>
+                        </div>
+                        <ul class="lists data noline">
+                            <li>
+                                <div class="key">�Աݰ���</div>
+                                <div class="value">SBI���� 0281913123456</div>
+                            </li>
+                            <li>
+                                <div class="key">��ü��û�Ͻ�</div>
+                                <div class="value">2023.01.10 13:25:47</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //��ü���� -->
+                </div>
+                
+                <div class="card-set">
+                    <div class="headnote tall">2023.01</div>
+                    <!-- ��ü�Ϸ� -->
+                    <div class="card-wrap" role="button" title="�󼼺���">
+                        <div class="card-head fit">
+                            <div class="state-msg">������</div>
+                            <span class="btn ico-arr-right"></span>
+                            <span class="badge line-nega state-btn">��ü����</span>
+                        </div>
+                        <div class="card-price">
+                            <span class="numbers-20 nums-bold fc-point" role="text"><span class="num">123,456,789</span><span class="num-unit">��</span></span>
+                        </div>
+                        <ul class="lists data noline">
+                            <li>
+                                <div class="key">�Աݰ���</div>
+                                <div class="value">�������� 459647954592876</div>
+                            </li>
+                            <li>
+                                <div class="key">��ü��û�Ͻ�</div>
+                                <div class="value">2023.01.10 13:25:47</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //��ü�Ϸ� -->                  
+                </div>
+
+                <!-- not found -->
+                <div class="result nodata">
+                    <p class="tit">Ȯ���� �� �ִ� �ڵ���ü ����� �����.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <footer class="pg-footer"></footer> -->
+</div>
+
+
+<!-- ���̾��˾� START -->
+<!-- ��ϳ��� -->
+<div id="regDetail" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="list-wrap">
+                    <button type="button" class="list-block selected" title="���õ�"><!-- mod-date:0315: Ŭ����, Ÿ��Ʋ�߰� --><!-- ����: ���ý� selected Ŭ���� �� title �߰� -->
+                        ��ϳ���
+                    </button >
+                    <button type="button" class="list-block">
+                        ��������
+                    </button >
+                    <button type="button" class="list-block">
+                        ��ü���
+                    </button >
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //��ϳ��� -->
+
+<!-- �Ⱓ���� -->
+<div id="periodPop" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label fz-16">��ȸ�Ⱓ</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox">
+                            <span class="form-sel">
+                                <input type="radio" id="period2-1" name="period-pop" checked>
+                                <label for="period2-1" class="label"><em>1����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period2-2" name="period-pop">
+                                <label for="period2-2" class="label"><em>3����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period2-3" name="period-pop">
+                                <label for="period2-3" class="label"><em>6����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period2-4" name="period-pop">
+                                <label for="period2-4" class="label"><em>�Ⱓ����</em></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-row by-box">
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn">YYYY.MM.DD</button>
+                        </div> 
+                        <span class="space">~</span>
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn">YYYY.MM.DD</button>
+                        </div> 
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label fz-16">��ü����</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox">
+                            <span class="form-sel">
+                                <input type="radio" id="tempA001" name="tempA" checked>
+                                <label for="tempA001" class="label">��ü</label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="tempA002" name="tempA">
+                                <label for="tempA002" class="label">��ü�Ϸ�</label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="tempA003" name="tempA">
+                                <label for="tempA003" class="label">��ü����</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label fz-16">���ļ���</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox">
+                            <span class="form-sel">
+                                <input type="radio" id="tempB001" name="tempB" checked>
+                                <label for="tempB001" class="label">�ֽż�</label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="tempB002" name="tempB">
+                                <label for="tempB002" class="label">���ż�</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn primary" data-ui="pop-close">Ȯ��</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //�Ⱓ���� -->
+<!-- //���̾��˾� END -->
+
+
+<!-- ���� SCRIPT START -->
+<script>
+    // <!-- mod-date:0612: ��ũ��Ʈ ���� -->
+    // var input = document.querySelector(".srch");
+    // input.addEventListener("input", resizeInput);
+    // resizeInput.call(input)
+
+    // function resizeInput(){
+    //     this.style.width = this.value.length * 1.1 + "rem";
+    // }
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

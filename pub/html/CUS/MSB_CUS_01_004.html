@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>���ֹ�������</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">���ֹ�������</h1>
+            <button type="button" class="action-prev" title="����"></button>
+        </div>
+    </header>  
+    <div class="pg-container cus">
+        <div class="pg-content">
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <input type="text" title="�˻��� �Է�" placeholder="�ñ��� ������ �˻��غ�����" class="inp"> <!-- mod-date:0613: [���ټ�] title ���� -->
+                            <button type="button" title="�˻�" class="sz-40 btn-sch"><i class="ico-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-wrap round">
+                    <div class="tab-list">
+                        <div class="scroll-wrap">
+                            <button type="button" role="tab" aria-controls="tab1panel1-1" aria-selected="true" class="active">������</button>
+                            <button type="button" role="tab" aria-controls="tab1panel1-2" aria-selected="false">�ſ����</button>
+                            <button type="button" role="tab" aria-controls="tab1panel1-3" aria-selected="false">�㺸����(�ߵ���/���ô㺸)</button>
+                            <button type="button" role="tab" aria-controls="tab1panel1-4" aria-selected="false">�����δ���(���յ�/�޻��)</button>
+                            <button type="button" role="tab" aria-controls="tab1panel1-5" aria-selected="false">üũī��</button>
+                            <button type="button" role="tab" aria-controls="tab1panel1-6" aria-selected="false">����</button>
+                            <button type="button" role="tab" aria-controls="tab1panel1-7" aria-selected="false">ATM/CD</button>
+                            <button type="button" role="tab" aria-controls="tab1panel1-8" aria-selected="false">����/����</button>
+                            <button type="button" role="tab" aria-controls="tab1panel1-9" aria-selected="false">����/��Ÿ</button>
+                        </div>
+                        <i class="tab-bar" aria-hidden="true"></i>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="tab1panel1-1">
+                        <div class="board-list">
+                            <ul class="accordion faq" data-ui="accordion">
+                                <!-- mod-date:0613: [���ټ�] span.hidden �±� �߰� -->
+                                <li>
+                                    <button type="button" class="acco-item" aria-expanded="false"><span class="hidden">����.</span>1���� ��ȭ����<span class="fc-point">����</span> �űԶ�?</button>
+                                    <div class="acco-panel"><span class="hidden">�亯 </span>���� �湮 ���� ���� �Ǹ�Ȯ�� ������� ������� ���� ��ȭ�䱸��<span class="fc-point">����</span>�� �ű� �����ϴ� ���񽺸� ���մϴ�.</div>
+                                </li>
+                                <li>
+                                    <button type="button" class="acco-item" aria-expanded="false"><span class="hidden">����.</span>�̿� ��� ������ ��� �ǳ���? ����/���λ����/���Ǵ�ü ��� �̿밡�� �Ѱ���?</button>
+                                    <div class="acco-panel"><span class="hidden">�亯 </span>���� �湮 ���� ���� �Ǹ�Ȯ�� ������� ������� ���� ��ȭ�䱸��<span class="fc-point">����</span>�� �ű� �����ϴ� ���񽺸� ���մϴ�.</div>
+                                </li>
+                                <li>
+                                    <button type="button" class="acco-item" aria-expanded="false"><span class="hidden">����.</span>���� ��ȭ����<span class="fc-point">����</span> �űԶ�?</button>
+                                    <div class="acco-panel"><span class="hidden">�亯 </span>���� �湮 ���� ���� �Ǹ�Ȯ�� ������� ������� ���� ��ȭ�䱸��<span class="fc-point">����</span>�� �ű� �����ϴ� ���񽺸� ���մϴ�.</div>
+                                </li>
+                                <!-- //mod-date:0613 -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="tab1panel1-2">
+                        <div class="board-list">
+                            <ul class="accordion faq" data-ui="accordion">
+                                <li>
+                                    <button type="button" class="acco-item" aria-expanded="false">2���� ��ȭ���뿹�� �űԶ�?</button>
+                                    <div class="acco-panel">���� �湮 ���� ���� �Ǹ�Ȯ�� ������� ������� ���� ��ȭ�䱸�ҿ����� �ű� �����ϴ� ���񽺸� ���մϴ�.</div>
+                                </li>
+                                <li>
+                                    <button type="button" class="acco-item" aria-expanded="false">�̿� ��� ������ ��� �ǳ���? ����/���λ����/���Ǵ�ü ��� �̿밡�� �Ѱ���?</button>
+                                    <div class="acco-panel">���� �湮 ���� ���� �Ǹ�Ȯ�� ������� ������� ���� ��ȭ�䱸�ҿ����� �ű� �����ϴ� ���񽺸� ���մϴ�.</div>
+                                </li>
+                                <li>
+                                    <button type="button" class="acco-item" aria-expanded="false">���� ��ȭ���뿹�� �űԶ�?</button>
+                                    <div class="acco-panel">���� �湮 ���� ���� �Ǹ�Ȯ�� ������� ������� ���� ��ȭ�䱸�ҿ����� �ű� �����ϴ� ���񽺸� ���մϴ�.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="tab1panel1-3">
+                        <div class="board-list">
+                            <ul class="accordion faq" data-ui="accordion">
+                                <li>
+                                    <button type="button" class="acco-item" aria-expanded="false">���� ��ȭ���뿹�� �űԶ�?</button>
+                                    <div class="acco-panel">���� �湮 ���� ���� �Ǹ�Ȯ�� ������� ������� ���� ��ȭ�䱸�ҿ����� �ű� �����ϴ� ���񽺸� ���մϴ�.</div>
+                                </li>
+                                <li>
+                                    <button type="button" class="acco-item" aria-expanded="false">�̿� ��� ������ ��� �ǳ���? ����/���λ����/���Ǵ�ü ��� �̿밡�� �Ѱ���?</button>
+                                    <div class="acco-panel">���� �湮 ���� ���� �Ǹ�Ȯ�� ������� ������� ���� ��ȭ�䱸�ҿ����� �ű� �����ϴ� ���񽺸� ���մϴ�.</div>
+                                </li>
+                                <li>
+                                    <button type="button" class="acco-item" aria-expanded="false">���� ��ȭ���뿹�� �űԶ�?</button>
+                                    <div class="acco-panel">���� �湮 ���� ���� �Ǹ�Ȯ�� ������� ������� ���� ��ȭ�䱸�ҿ����� �ű� �����ϴ� ���񽺸� ���մϴ�.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

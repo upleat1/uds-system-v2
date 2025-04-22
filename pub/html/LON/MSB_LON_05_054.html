@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>2���ѵ���ȸ</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap"><!-- Ǯ�˾�: .full Ŭ���� �߰� -->
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">�¶������ô㺸�����û</h1><!-- mod-date:0525: Ÿ��Ʋ���� -->
+            <button type="button" class="action-chatbot" title="ê��"></button>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container lon">
+        <div class="pg-content">
+            <div class="hgroup-2">
+                <h2 class="ht-2"><strong>�ִ� 2�� 5õ��������</strong><br> ������ ��û�� �� �־��</h2>
+                <p class="p fc-sub">2023.03.06 ����</p>
+            </div>
+            <div class="section">
+
+                <div class="form-group">
+                    <div class="form-label">����ݾ�
+                        <!-- mod-date:0620: �ڼ������� �߰� -->
+                        <p class="tooltip"><button type="button" class="btn-tooltip" data-ui="pop-open"><span class="hidden">LTE������ �ݸ��� �ѵ� �ڼ�������</span></button></p>
+                        <!-- // -->
+                    </div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" title="��ü�ݾ� �Է�" class="inp-btn right on">25,000</button>
+                            <span class="unit">����</span><!-- mod-date:0612: �������� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">������</div>
+                    <div class="form-row">
+                        <div class="form-ele calendar">
+                            <button type="button" title="��¥����" class="inp-btn on">2023.05.03</button>
+                        </div> 
+                    </div>
+                </div>
+
+                <!-- @��ȣ���� 2��, ������ǰ�� ��쿡�� ���� -->
+                <div class="soho-wrap">
+                    <h3 class="ht-4">�ݸ��ɼ� <span class="fw-400">(�ߺ� ���� ����)</span></h3>
+                    <div class="form-group mgt-0">
+                        <div class="form-rdochk box tp-data">
+                            <span class="form-sel on"><!-- �ӽ� / ����: on Ŭ���� ���� -->
+                                <input type="checkbox" id="formChk01" checked><!-- �ӽ� / ����: checked �Ӽ� ���� -->
+                                <label for="formChk01" class="label"><!-- mod-date:1220: [���ټ�] role���� --><!-- mod-date:0509: role�߰�(���ټ�) -->
+                                    �����ݸ�
+                                    <span class="descr">������ ���� ���� �ű� COFIX�ݸ� + ����ݸ� + 1.0%</span>
+                                </label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="checkbox" id="formChk02">
+                                <label for="formChk02" class="label"><!-- mod-date:1220: [���ټ�] role���� --><!-- mod-date:0509: role�߰�(���ټ�) -->
+                                    �ߵ���ȯ������ �Ϻ� ����
+                                    <span class="descr">��ü ������� 30%���� �ߵ���ȯ������ ����<br>
+                                    ����ݸ� + 0.2%</span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- // -->
+
+                <div class="btns cont-foot">
+                    <button type="button" class="btn outline lg hidden-btn" data-ui="toggle" aria-expanded="false" aria-controls="limitResult">Ȯ��</button><!-- mod-date:0612: ��ư������ -->
+                </div>
+            
+                <!-- @2���ѵ� ���Ȯ�� ���ý� ���� -->
+                <div id="limitResult" class="toggle-panel">
+                    <h3 class="ht-4">2���ѵ� ���Ȯ��</span></h3>
+                    <ul class="lists data free">
+                        <li>
+                            <div class="key">����Ⱓ</div>
+                            <div class="value">5��(60����)</div>
+                        </li>
+                        <li>
+                            <div class="key">��ȯ��� 
+                                <p class="tooltip"><button type="button" class="btn-tooltip" data-ui="pop-open"><span class="hidden">��ȯ��� �ڼ�������</span></button></p>
+                            </div>
+                            <div class="value">�����Ͻû�ȯ</div>
+                        </li>
+                        <li>
+                            <div class="key">����ݸ�</div>
+                            <div class="value">�� 8.9%</div>
+                        </li>
+                        <li>
+                            <div class="key">����ݾ�</div>
+                            <div class="value">250,000,000��</div>
+                        </li>
+                        <li>
+                            <div class="boxs2">
+                                <ul class="lists data free noline">
+                                    <li>
+                                        <div class="key">���� ��ȯ�ݾ�</div>
+                                        <div class="value">1,000,000��</div>
+                                    </li>
+                                    <li>
+                                        <div class="key">�硤Ÿ���ȯ�ݾ�</div>
+                                        <div class="value">69,000,000��</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key fw-500 fc">������ɱݾ�
+                                <div class="tooltips">
+                                    <p class="tooltip"><button type="button" class="btn-tooltip" class="btn-tooltip" data-ui="tooltip"><span class="hidden">���� �ڼ�������</span></button></p>
+                                    <div class="tooltip-wrap" role="tooltip" aria-hidden="true">
+                                        <p class="tooltip-tit">������ɱݾ�</p>
+                                        <div class="tooltip-cont"> 
+                                            ������ɱݾ��� �����Բ��� ��û�Ͻ� �����û�ݾ׿��� 
+                                            ���� ��ȯ  ��  �硤Ÿ�� ��ȯ�ݾ��� �����ϰ� 
+                                            ���� �ԱݵǴ� �ݾ��̿���.
+                                            <p class="p-sub">(������  ä�Ǹ��Ժ� ��  ������� ����)</p>
+                                        </div>
+                                        <button type="button" class="btn-tooltip-x"><span class="hidden">���� �ݱ�</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="value">
+                                <span class="numbers-18 nums-bold fc-point" role="text"><span class="num">180,000,000</span><span class="num-unit">��</span></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="depth info">������ɱݾ���  ��� (������  ä�Ǹ��Ժ� ��) ���� �� �ݾ��̿���</p><!-- mod-date:0905: �ؽ�Ʈ���� -->
+
+                    <div class="table gap-md">
+                        <table>
+                            <caption>�ݸ� �����ѵ� ����</caption>
+                            <colgroup>
+                                <col style="width:25%">
+                                <col style="width:25%">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">LTV����</th>
+                                    <th scope="col">�ݸ�</th>
+                                    <th scope="col">�ѵ�</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>90%</td>
+                                    <td>8.90%</td>
+                                    <td>250,000,000��</td>
+                                </tr>
+                                <tr>
+                                    <td>85%</td>
+                                    <td>8.90%</td>
+                                    <td>200,000,000��</td>
+                                </tr>
+                                <tr>
+                                    <td>80%</td>
+                                    <td>8.90%</td>
+                                    <td>150,000,000��</td>
+                                </tr>
+                                <tr>
+                                    <td>70% ����</td>
+                                    <td>8.90%</td>
+                                    <td>100,000,000�� �̻�<br>
+                                    200,000,000�� �̸�</td>
+                                </tr>
+                            </tbody>
+                        </table>   
+                        <div class="table-footnote">
+                            <ul class="depth bul">
+                                <li>�ü� ���� : KB�ε��� �Ǵ� �ѱ��ε���� �ü�</li>
+                                <li><button type="button" class="underline fc-point" data-ui="pop-open" onclick="UICommon.Layer.open('#tooltip_1')">LTV����</button> : ������ ���� ��</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- // -->
+            </div>
+        </div>
+        <div class="pg-content-foot">
+            <div class="inform-btm-wrap">
+                <h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>�ѵ��� �ݸ��� �������� ���� �Է��� ������ �������� �ɻ��� �����, ���� ���⼭���� ���� �ɻ����� �޶��� �� �ֽ��ϴ�.</li>
+                    <li>��ȯ, ���� ��ȯ ������ ������ ��� �ǿ�������� ���·� 1�� �۱ݵǸ� ��ȯ �� ��� ���� �� ���� �ݾ��� �����Բ� �Աݵ˴ϴ�.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">����</button>
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<div id="tooltip_1" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>LTV(Loan To Value ratio)��?</h1>
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <ul class="depth bul">
+                    <li>�㺸���������̶�� �ϸ�, ���� ���� ��� ���� �����Դϴ�.</li>
+                    <li>�ִ� LTV�� �������� �ſ����� �� ���ǿ� ���� �ٸ��� �����˴ϴ�.
+                        <p class="p-sub">(��: LTV�� 80%�� �� �ü� 2��� ����Ʈ �ִ� ���Ⱑ�ɱݾ��� 1�� 6õ����)</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+    //2���ѵ� ���Ȯ�� ��ư Ŭ���� ����
+    let hideBtn = function() {
+        $('.pg-content-foot, .pg-footer').hide();
+        $('.btn.hidden-btn').on('click', function(){
+            $('.pg-content-foot, .pg-footer').show();
+        });
+    }
+    hideBtn();
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-    <title>Upleat Design System</title>
+    <title>유플리트</title>
     <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
     <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
     
     <!-- resource -->
-    <link rel="stylesheet" href="/pub/app/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/component.css">
 </head>
 <body>
     <div data-class="contents">
@@ -21,55 +22,12 @@
 
             <div data-class="h2">더보기</div>            
             <script type="text/html">
-<div class="btn_list_btm more">
-    <button type="button" class="btn">더보기<span class="number">(1/30)</span></button>
-</div>
-            </script>
-
-
-            <div data-class="h2">더보기 - 총건</div>            
-            <script type="text/html">
-<div class="btn_list_btm more">
-    <button type="button" class="btn">더보기<span></span></button>
-</div>
-            </script>
-                        
-
-            <div data-class="h2">더보기 - 원형</div>            
-            <script type="text/html">
-<div class="btn_list_btm more">
-    <button type="button" class="btn circle"><span class="hidden">더보기</span></button>
-</div>
+<div class="btns center gap-sm">
+    <button type="button" class="btn"><i class="ico-more sz-16"></i><span>더보기</span></button>
+</div>  
             </script>
             
-            <div data-class="h2">페이징</div>   
-            <script type="text/html">
-<div class="paging">
-    <a href="#none" class="first"><span>처음</span></a>
-    <a href="#none" class="prev on"><span>이전</span></a>
-    <span class="curr"><em>현재 페이지</em>1</span><span class="total"><em>전체 페이지</em>100</span>
-    <a href="#none" class="next on"><span>다음</span></a>
-    <a href="#none" class="end on"><span>끝</span></a>
-</div>
-            </script>
-            <!-- 페이징 backup 
-            <div class="paging_wrap">
-                <div class="page_btn before">
-                    <a href="#none" class="btn first" aria-label="처음"><span class="hidden">처음</span></a>
-                    <a href="#none" class="btn prev" aria-label="이전"><span class="hidden">이전</span></a>
-                </div>
-                <div class="page_num">
-                    <a href="#none" class="on"><span>1</span></a>
-                    <a href="#none"><span>2</span></a>
-                    <a href="#none"><span>3</span></a>
-                    <a href="#none"><span>4</span></a>
-                    <a href="#none"><span>5</span></a>
-                </div>
-                <div class="page_btn after">
-                    <a href="#none" class="btn next" aria-label="다음"><span class="hidden">다음</span></a>
-                    <a href="#none" class="btn end" aria-label="끝"><span class="hidden">끝</span></a>
-                </div>
-            </div>--> 
+
         </div>
     </div>
     
@@ -78,7 +36,7 @@
     <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
     <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
     <script src="/pub/guide/assets/js/components.js"></script>
-    <script src="/pub/app/js/common_ui.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
 
 </body>
 </html>

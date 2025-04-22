@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�ŷ��������ޱ�</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">�ŷ��������ޱ�</h1>
+			<button type="button" class="action-prev" title="����"></button>
+		</div>
+	</header>
+    <div class="pg-container inq">
+		<div class="pg-content">
+			<h2 class="ht-2"><strong>�̸��Ϸ� �ŷ�������</strong><br>���� �� �־��</h2>
+			<div class="section">
+                <div class="form-group">
+                    <div class="form-label fz-16">�Ⱓ</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox fit">
+                            <span class="form-sel">
+                                <input type="radio" id="period01" name="period" checked>
+                                <label for="period01" class="label"><em>1����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period02" name="period">
+                                <label for="period02" class="label"><em>1����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period03" name="period">
+                                <label for="period03" class="label"><em>3����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period04" name="period">
+                                <label for="period04" class="label"><em>12����</em></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-row by-box">
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn on">2023.01.03</button>
+                        </div> 
+                        <span class="space">~</span>
+                        <div class="form-ele calendar">
+                            <button type="button" title="�Ϸ��� ����" class="inp-btn on">2023.01.10</button>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label fz-16">�ŷ�����</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox fit">
+                            <span class="form-sel">
+                                <input type="radio" id="method01" name="method" checked>
+                                <label for="method01" class="label"><em>��ü</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="method02" name="method">
+                                <label for="method02" class="label"><em>�Ա�</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="method03" name="method">
+                                <label for="method03" class="label"><em>���</em></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">�̸���</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <input type="text" placeholder="�Է³���" title="�̸����ּ�" value="saidabank@gmail.com" readonly class="inp">
+                        </div>
+                    </div>
+                    <!-- mod-date:0509: ��ũ�� ���� -->
+                    <div class="btns cont-foot right">
+                        <button type="button" class="btn ico-arr-sm">�̸��� ����</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-rdochk v">
+                        <span class="form-sel lg mgb-0"><!-- mod-date:0908: .mgb-0 Ŭ�����߰� -->
+                            <input type="checkbox" id="chkAgree" checked>
+                            <label for="chkAgree" class="label">�������� ���� �� �̿뿡 �����մϴ�</label>
+                        </span>
+                    </div>
+                    <ul class="depth bul form-inner">
+                        <li>���������� ���� �� �̿���� : �ŷ����� �߼�</li>
+                        <li>���������� �����׸� : �̸��� �ּ�</li>
+                        <li>���������� ���� �� �̿�Ⱓ : <span class="fc-point">�߼� �����Ϸκ��� 1��</span></li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+        <div class="pg-content-foot">
+            <div class="inform-btm-wrap">
+                <h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>�ŷ��������� ���� Ȯ�� �뵵�� �߼۵Ǹ�, �������� ����Ͻ� �� �����ϴ�.</li>
+                    <li>����뵵�� ���� �߱��� [��ü�޴�&gt;��������&gt;������ �߱�>�ŷ�������] �޴��� �̿����ּ���.</li>
+                </ul>
+            </div>
+        </div>
+	</div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary">�ŷ����� ��û�ϱ�</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

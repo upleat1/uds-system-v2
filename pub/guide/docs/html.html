@@ -5,26 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-    <title>Upleat Design System</title>
+    <title>유플리트</title>
     <link rel="stylesheet" href="/pub/guide/assets/css/docs.css">
 </head>
 <body>
     <div class="contents">
-        <div class="docs-name"><span>HTML 규칙</span></div>
+        <div class="docs-name">HTML 규칙</div>
 
         <div class="paper">
-            <div class="h1">SPA 관련 주의 사항</div>
-            <ul class="ul">
-                <li><xmp><script type="text/javascript" src="/pub/app/js/common_check.js"></script></xmp> 파일별 head 안에 선언 : 공통 CSS, JS 자동 선언</li>
-                <li>common_check.js 
-                    <ul>
-                        <li>위치 : /pub/app/js/common_check.js</li>
-                        <li>목적 1 : SPA 구조에서는 공통 CSS, JS는 브라우저 메모리에 기 호출되어 있으므로 재호출 방지</li>
-                        <li>목적 2 : 개발 환경과 비슷하게 작업</li>
-                    </ul>
-                </li>
-            </ul>
-
             <div class="h1">들여쓰기</div>
             <ul class="ul">
 				<li>1탭 들여쓰기 하며, 1탭의 크기는 공백 4칸으로 설정한다.</li>
@@ -37,8 +25,7 @@
 
             <div class="h1">주석</div>
             <ul class="ul">
-				<li>기본형식 <xmp><!-- 주석내용 --><!-- //주석내용 --></xmp></li>
-				<li>수정 <xmp><!-- 210401 수정내용 --><!-- //210401 수정내용 --></xmp></li>
+				<li>기본형식 <xmp><!-- mod-date:0201: 주석내용 --><!-- //주석내용 --></xmp></li>
             </ul>
 
             <div class="h1">특수기호 Entity name</div>
@@ -50,7 +37,7 @@
             <div class="table">
                 <table>
                     <colgroup>
-                        <col style="width: 8%">
+                        <col style="width: 10%">
                         <col style="width: 20%">
                         <col>
                     </colgroup>
@@ -109,7 +96,7 @@
                 <xmp class="html"><a href="#none" title="새창열기" target="" class="">인쇄하기</a>
 <iframe src="about:blank" title="빈프레임"></iframe>
 <img src="img.gif" alt="대체텍스트">
-<input type="text" name="" ue="" title="" class="" style="" disabled=""></xmp>
+<input type="text" name="" value="" title="" class="" style="" disabled></xmp>
             </div>
 
             <div class="h1">노치디자인(아이폰X Safe Area) 대응</div>
@@ -164,6 +151,5 @@ env(safe-area-inset-left)</xmp>
     
     <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
     <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
-    <script src="/pub/guide/assets/js/document.js"></script>
 </body>
 </html>

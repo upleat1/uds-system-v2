@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>개인정보보호 - 개인정보처리방침</title>
+    <style>
+        /* 구버전 개인정보처리방침 및 신용정보활용체제 */
+        .sec {margin:30px 0; box-sizing:border-box;}
+        .sec-st-tit {font-size:16px; font-weight:400; margin:-4px 0 7px; display:block; color:#000;}
+        .sec-st-tit.wght {font-weight:700; font-size:15px;}
+        .sec-st-tit.top-ini {margin-top:0;}
+        .sec-st-tit > span {position:relative; display:inline-block; margin:2px 0 0 14px; font-size:12px; color:#888}
+        .sec-st-tit > span:before {position:absolute; top:1px; left:-11px; content:"|"; width:1px; height:5px; font-size:10px; color:#e5e5e5}
+        .sec-st-tit + .ico-set.type-help {margin-top:-11px;}
+        .sec-st-date {margin-bottom:15px; font-size:12px; color:#888; line-height:12px;}
+        .sec-st-msg {font-size:13px; color:#555; line-height:13px;}
+        .sec-st-msg.blt {position:relative;padding-left:9px; text-indent:-9px;}
+        .sec-st-msg.blt:before {content:' '; display:inline-block; width:3px; height:3px; margin-right:6px; vertical-align:3px; background-color:#777; border-radius:50%;}
+        .sec-st-msg02 {font-size:13px; line-height:1.4; margin-bottom:-2px; color:#555;}
+    
+        /* terms */
+        .lists-terms.type01 li{position:relative; padding-left:35px;}
+        .lists-terms.type01 li:not(:first-child) {margin-top:26px}
+        .lists-terms.type01 .in-tit {position:absolute; top:0; left:0; display:block; font-size:13px; color:#888; font-weight:400}
+        
+        .lists-terms.type02.blt-sirc-num li {padding-top:2px;font-size:13px; color:#333}
+        .lists-terms.type02.blt-sirc-num li:not(:first-child) {margin-top:5px}
+        .lists-terms.type02.blt-sirc-num li:before {width:16px; height:16px; margin-right:10px; margin-top:-2px; background-color:#b7bfc7; border-radius:50%; font-size:12px; font-weight:700; color:#fff; content:""; display:inline-block; vertical-align:middle; text-align:center}
+        .lists-terms.type02.blt-sirc-num li:first-child:before {content:'1';}
+        .lists-terms.type02.blt-sirc-num li:nth-child(2):before {content:'2'}
+        .lists-terms.type02.blt-sirc-num li:nth-child(3):before {content:'3'}
+        .lists-terms.type02.blt-sirc-num li:nth-child(4):before {content:'4'}
+        .lists-terms.type02.blt-sirc-num li:nth-child(5):before {content:'5'}
+        .lists-terms.type02.blt-sirc-num li:nth-child(6):before {content:'6'}
+        .lists-terms.type02.blt-sirc-num li:nth-child(7):before {content:'7'}
+        .lists-terms.type02.blt-sirc-num li:nth-child(8):before {content:'8'}
+        .lists-terms.type02.blt-sirc-num li:nth-child(9):before {content:'9'}
+        .lists-terms.type02.blt-sirc-num li:nth-child(10):before {content:'10'}
+    
+        .lists-terms.type03 > ul:not(.lists-mgn-short) > li:not(:first-child), .lists-terms.type03 > ol:not(.lists-mgn-short) > li:not(:first-child) {margin-top:7px;}
+        .lists-terms.type03 > ol.lists-mgn01 li:not(:first-child) {margin-top:15px;}
+        .lists-terms.type03 > ul li > ul li:not(:first-child), .lists-terms.type03 > ul li > ol li:not(:first-child), .lists-terms.type03 > ol li > ol li:not(:first-child), .lists-terms.type03 > ol li > ul li:not(:first-child) {margin-top:2px;}
+        .lists-terms.type03 li {font-size:13px; color:#555}
+        .lists-terms.type03 li:before {display:inline-block; vertical-align:middle;}
+        .lists-terms.type03 > ul, .lists-terms.type03 > ol {margin-top:11px;}
+        .lists-terms.type03 > ul li > ul, .lists-terms.type03 ul li > ol, .lists-terms.type03 > ol li > ul, .lists-terms.type03 ol li > ol {margin-top:3px;}
+        .lists-terms.type03 > ul li > .sec-st-msg02, .lists-terms.type03 > ol li > .sec-st-msg02 {margin-top:4px}
+        .lists-terms.type03 > ul li > p, .lists-terms.type03 > ol li > p {padding-left:0px; text-indent:0;}
+    
+        .lists-terms.type03 .lists-blt-dot > li {padding-left:8px; text-indent:-8px;}
+        .lists-terms.type03 .lists-blt-dot > li:before {content:' '; width:3px; height:3px; margin-right:5px; background-color:#777; border-radius:50%;}
+    
+        .lists-terms.type03 .lists-blt-dash > li {padding-left:8px; text-indent:-6px; margin-left:4px}
+        .lists-terms.type03 .lists-blt-dash > li:before {content:'-'; width:3px; margin-right:2px}
+        .solid-box .lists-terms.type03 .lists-blt-dash {text-indent:-16px; margin-top:-1px;}
+    
+        .lists-terms.type03 a {display:inline-block; text-indent:0}
+        .lists-terms.type03 .lists-blt-star {margin-top:5px; padding-left:14px; text-indent:-14px; font-size:12px; color:#888}
+        .lists-terms.type03 .lists-blt-star:before {content:"※"; display:inline; margin-right:3px; vertical-align:middle;}
+    
+        .lists-terms.type03 .lists-type-gana > li {margin-left:6px; padding-left:14px; text-indent:-18px;}
+    
+        .lists-terms.type03 .left-mgn {margin-left:8px;}
+        .lists-terms.type03 .left-mgn > li {padding-left:6px; text-indent:-14px;}
+    
+        .lists-terms.type03 .left-mgn-more {margin-left:16px}
+        .lists-terms.type03 li:not(:first-child) .sec-terms-tit {margin-top:7px}
+        .lists-terms.type03 .solid-box {margin-top:6px}
+        .lists-terms.type03 .solid-box ul {margin-top:0;}
+        .lists-terms.type03 .btns.xs {margin-bottom:4px}
+        .sec-st-msg02+ .sec-st-msg02 {margin-top:10px}
+        .sec-st-msg02 + .solid-box {margin-top:8px}
+        .sec-st-tit + .lists-terms.type03 {margin-top:-12px;}
+        
+        .btns-wrap .btns:last-child {margin-right: 0;}
+        .btns-wrap .btns:first-child {margin-left: 0;}
+        .btns-wrap.narrow-st .btn{width: 100%;}
+        .btns-wrap.narrow-st {margin: 11px 0;}
+    
+        .solid-box .lists{display: block;border-bottom: none;}
+        .solid-box .lists > li {display: list-item;min-height: auto;border-bottom: none;}
+        .solid-box .lists.type02 li:first-child {margin-top: 0;}
+        .solid-box .lists.type02 li, .txt-indent {font-size: 12px;padding-left: 9px;text-indent: -9px;margin-top: 4px;color: #888;}
+        .solid-box .lists.type02 li:before, .txt-indent:before {content: ' ';display: inline-block;width: 3px;height: 3px;margin-right: 6px;vertical-align: 3px;background-color: #777;border-radius: 50%;}
+    
+        .sec.tmg-minus {margin-top: -15px;}
+        .solid-box {background-color: #f5f5f5;padding: 16px 15px 14px;border-radius:0.6rem;}
+    </style>
+</head>
+
+<body>
+    <div class="pg-wrap">
+        <header class="pg-header">
+            <div class="pg-gnb fixed">
+                <h1 class="ht-1">개인정보보호</h1>
+            </div>
+        </header>
+        <div class="pg-container cus">
+            <div class="pg-content">
+                <div data-vo="cnts1">
+                    <section class="sec by-pad"><strong class="sec-st-tit">개정이력 : 2023.02.01</strong>
+                    <section class="sec by-pad"><strong class="sec-st-tit wght">총칙</strong>
+                        <p class="sec-st-msg02">SBI저축은행(이하"회사")은 개인정보보호를 매우 중요시하며, 개인정보 보호를 위하여 관계법령 규정을 준수하는 등 최선을 다하여
+                            개인정보를 보호함은 물론
+                            개인정보 처리방침을 통하여 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다. 회사는
+                            개인정보처리방침을 개인정보 보호법 제30조에
+                            따라 홈페이지 첫 화면에 공개함으로써 정보주체가 언제나 용이하게 보실 수 있도록 조치하고 있습니다.</p>
+                    </section>
+                    <section class="sec first"><strong class="sec-st-tit wght">제1조 개인정보의 처리 목적</strong>
+                        <p class="sec-st-msg02">회사는 개인정보를 다음 각 호의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적 외의 용도로는 사용되지 않으며 이용 목적이
+                            변경될 시에는 관련 법령상
+                            허용되는 경우가 아닌 한, 사전동의를 받을 예정입니다.</p>
+                        <div class="lists-terms type03">
+                            <ol>
+                                <li>1. (금융)거래 관계 관련
+                                    <p class="sec-st-msg02">(금융)거래와 관련하여 신용정보회사 또는 신용정보집중기관에 대한 개인신용정보의 조회, (금융)거래 관계의
+                                        설정 여부의 판단, (금융)거래
+                                        관계의 설정·유지·이행·관리, 금융사고 조사, 분쟁 해결, 민원 처리 및 법령상 의무이행 등의 목적으로 개인정보를 처리합니다.</p>
+                                    <p class="lists-blt-star">(금융)거래라 함은 은행업무(여신, 수신, 내·외국환), 겸영업무(방카슈랑스, 체크카드 등) 및
+                                        부수업무(보호예수, 수납 및
+                                        지급대행, 판매대행 등)와 이와 관련된 거래를 의미합니다.</p>
+                                </li>
+                                <li>2. 상품·서비스 홍보 및 판매 권유
+                                    <p class="sec-st-msg02">고객 만족도 조사를 위한 신규 서비스 개발 및 맞춤서비스 제공, 인구통계학적 특성에 따른 서비스 제공 및
+                                        광고의 게재, 서비스의 유효성
+                                        확인, 경품지급, 사은행사 등 고객의 편의 및 참여기회의 제공, 접속빈도 파악, 회원의 서비스 이용에 대한 통계 등의 목적으로 개인정보를
+                                        처리합니다.</p>
+                                </li>
+                                <li>3. 회원 가입 및 관리
+                                    <p class="sec-st-msg02">회원가입, 회원제 서비스 이용, 제한적 본인 확인제에 따른 본인확인, 개인식별, 부정이용방지, 비인가
+                                        사용방지, 가입의사 확인, 만14세
+                                        미만 아동 개인정보 수집시 법정대리인 동의여부 확인, 추후 법정대리인 본인확인, 사고 조사, 분쟁해결, 민원처리 및 고지사항 전달 등의 목적으로
+                                        개인정보를 처리합니다.
+                                    </p>
+                                </li>
+                                <li>4. 온라인 거래 관련 목적
+                                    <p class="sec-st-msg02">전자금융거래법 제21조, 제22조에 의해 전자금융거래의 내용 추적 및 검색, 보안정책 수립용 통계자료로 활용
+                                        등을 목적으로 개인정보를
+                                        처리합니다.</p>
+                                </li>
+                                <li>5. 통계작성, 과학적연구, 공익적 기록보존 목적
+                                    <p class="sec-st-msg02">개인정보 보호법 제28조의2에 의해 통계작성(상업적 목적 포함), 과학적연구(산업적 연구 포함), 공익적
+                                        기록보존 목적 등을 위하여
+                                        개인정보를 가명처리 할 수 있습니다.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제2조 개인정보의 처리 및 보유 기간</strong>
+                        <div class="lists-terms type03" style="margin-top: 0px;">
+                            <ol class="left-mgn">
+                                <li>① (금융)거래와 관련한 개인(신용)정보는 수집·이용에 관한 동의일로부터 (금융)거래 종료일 이후 5년까지 위 이용목적을 위하여 보유·이용됩니다. 단,
+                                    (금융)거래 종료일 이후에는
+                                    금융사고 조사, 분쟁 해결, 민원처리, 법령상 의무이행 및 회사의 리스크 관리업무만을 위하여 보유·이용됩니다.</li>
+                                <li>② 개인(신용)정보의 조회를 목적으로 수집된 개인(신용)정보는 수집·이용에 대한 동의일로부터 고객에 대한 신용정보 제공·조회 동의의 효력 기간까지
+                                    보유·이용됩니다. 단, 신용정보
+                                    제공·조회 동의의 효력 기간 종료 후에는 금융사고 조사, 분쟁 해결, 민원처리 및 법령상 의무이행만을 위하여 보유·이용됩니다.</li>
+                                <li>③ 상품 및 서비스 홍보 및 판매 권유 등과 관련한 개인(신용)정보는 수집·이용에 관한 동의일로부터 (금융)거래 종료일 이후 3개월 또는 동의
+                                    철회일까지 보유·이용됩니다. 단,
+                                    (금융)거래 종료일 또는 동의 철회일 후에는 제1조의 목적과 관련된 사고 조사, 분쟁 해결, 민원처리, 법령상 의무이행만을 위하여 보유·이용됩니다.
+                                </li>
+                                <li>④ 회원 가입 및 관리 목적으로 수집된 개인(신용)정보는 고객의 회원 가입일로부터 회원 탈퇴일까지 보유·이용됩니다. 단 회원 탈퇴일 후에는 제1조의
+                                    목적과 관련된 사고 조사, 분쟁
+                                    해결, 민원처리, 법령상 의무이행 만을 위하여 보유·이용됩니다.</li>
+                                <li>⑤ 온라인 거래 관련한 개인(신용)정보는 전자금융거래법 시행령 제12조에서 정하는 기간까지 보유·이용됩니다.</li>
+                                <li>⑥ 통계작성, 과학적연구, 공익적 기록보존에 활용하기 위해 "가명처리한 개인정보"(이하 가명정보)는 가명처리 계획 수립시 정한 목적을 달성하는
+                                    기간(시점)까지만 보유 및 이용
+                                    됩니다.</li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제3조 개인정보 수집 출처 등 고지</strong>
+                        <div class="lists-terms type03" style="margin-top: 0px;">
+                            <ol class="left-mgn">
+                                <li>① 회사는 정보주체 이외로부터 수집한 개인정보를 처리하는 때에는 정당한 사유가 없는 한 정보주체의 요구가 있은 날로부터 3영업일 이내에 수집 출처,
+                                    처리 목적, 개인정보 처리의
+                                    정지를 요구할 권리가 있다는 사실을 정보주체에게 알립니다.</li>
+                                <li>② 개인정보 보호법 제20조제2항 각 호에 근거하여 제1항에 따른 정보주체의 요구를 거부하는 경우에는, 정당한 사유가 없는 한 정보주체의 요구가 있은
+                                    날로부터 3영업일 이내에 그
+                                    거부의 근거와 사유를 정보주체에게 알립니다.</li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제4조 개인정보의 제3자 제공에 관한 사항</strong>
+                        <div class="lists-terms type03" style="margin-top: 0px;">
+                            <ol class="left-mgn">
+                                <li>① 회사는 원칙적으로 고객의 개인정보를 제1조에서 명시한 목적 범위 내에서 처리하며, 정보주체의 사전 동의 없이는 본래의 범위를 초과하여 처리하거나
+                                    제3자에게 제공하지 않습니다.
+                                    단, 다음의 각 호의 경우에는 정보주체 또는 제3자의 이익을 부당하게 침해할 우려가 있을 때를 제외하고는 개인정보를 목적 외의 용도로 이용하거나 이를
+                                    제3자에게 제공할 수
+                                    있습니다.
+                                    <ol class="left-mgn">
+                                        <li>1. 정보주체로부터 별도의 동의를 받은 경우</li>
+                                        <li>2. 다른 법률에 특별한 규정이 있는 경우</li>
+                                        <li>3. 정보주체 또는 그 법정대리인이 의사표시를 할 수 없는 상태에 있거나 주소불명 등으로 사전 동의를 받을 수 없는 경우로서 명백히
+                                            정보주체 또는 제3자의 급박한
+                                            생명, 신체, 재산의 이익을 위하여 필요 하다고 인정되는 경우</li>
+                                        <li>4. 개인정보를 목적 외의 용도로 이용하거나 이를 제3자에게 제공하지 아니하면 다른 법률에서 정하는 소관 업무를 수행할 수 없는 경우로서
+                                            보호위원회의 심사·의결을
+                                            거친 경우</li>
+                                        <li>5. 조약, 그 밖의 국제협정의 이행을 위하여 외국정부 또는 국제기구에 제공하기 위하여 필요한 경우</li>
+                                        <li>6. 범죄의 수사와 공소의 제기 및 유지를 위하여 필요한 경우</li>
+                                        <li>7. 법원의 재판업무 수행을 위하여 필요한 경우</li>
+                                        <li>8. 형(刑) 및 감호, 보호처분의 집행을 위하여 필요한 경우</li>
+                                    </ol>
+                                </li>
+                                <li>② 회사는 다음 각 호와 같이 신용정보집중기관 및 신용정보회사에 개인정보를 제공하고 있습니다.
+                                    <ol class="left-mgn">
+                                        <li>가. 제공대상
+                                            <ul class="lists-blt-dash">
+                                                <li>신용정보집중기관 : 한국신용정보원</li>
+                                                <li>신용정보회사 : NICE평가정보㈜, 코리아크레딧뷰로㈜ 등</li>
+                                            </ul>
+                                        </li>
+                                        <li>나. 제공하는 신용정보의 종류
+                                            <ul class="lists-blt-dash">
+                                                <li>식별정보</li>
+                                                <li>신용거래정보</li>
+                                                <li>신용도판단정보</li>
+                                                <li>신용능력정보</li>
+                                                <li>기타 신용평가를 위한 정보</li>
+                                            </ul>
+                                        </li>
+                                        <li>다. 제공받는 자의 이용목적
+                                            <ul class="lists-blt-dash">
+                                                <li>신용을 판단하거나, 공공기관에서 정책자료 활용</li>
+                                                <li>기타 동법 및 다른 법률의 규정에서 정한 사항</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>③ 회사는 제휴업체에 개인정보를 제공하고 있으며 자세한 내용은 홈페이지&gt;고객센터&gt;개인정보보호&gt;위탁 및 제공현황에서 확인할 수 있습니다.
+                                </li>
+                                <li>④ 개인(신용)정보는 제공된 날로부터 동의 철회 시 또는 제공된 목적을 달성할 때까지 보유·이용됩니다. 동의 철회 또는 제공된 목적 달성 후에는 위에
+                                    기재된 이용목적과 관련된
+                                    금융사고 조사, 분쟁해결, 민원처리, 법령상 의무이행을 위하여 필요한 범위 내에서만 보유·이용됩니다. </li>
+                                <li>⑤ 회사는 가명정보를 제3자에게 제공하고 있으며 가명정보의 제공에 관한 자세한 내용(제공받는 자, 제공받는 자의 이용목적, 제공하는 가명정보의 종류
+                                    등)은
+                                    홈페이지&gt;고객센터&gt;개인정보보호&gt;가명정보 처리 현황에서 확인할 수 있습니다.
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제5조 개인정보 처리의 위탁에 관한 사항</strong>
+                        <div class="lists-terms type03" style="margin-top: 0px;">
+                            <ol class="left-mgn">
+                                <li>① 회사는 고객의 동의를 받아 다음 각 호와 같이 개인정보의 처리를 위탁하고 있습니다.
+                                    <ol class="left-mgn">
+                                        <li>1. 수탁업체
+                                            <ul class="lists-blt-dash">
+                                                <li>홈페이지&gt;고객센터&gt;개인정보보호&gt;위탁 및 제공현황
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>2. 수탁의 목적
+                                            <ul class="lists-blt-dash">
+                                                <li>(금융)거래의 설정·유지·이행·관리 등에 필요한 위탁 받은 업무의 수행</li>
+                                                <li>상품 및 서비스 홍보 및 판매권유, 사은행사, 고객만족도 조사 등에 필요한 경우로서 위탁 받은 업무의 수행</li>
+                                            </ul>
+                                        </li>
+                                        <li>3. 개인정보 제공항목
+                                            <ul class="lists-blt-dash">
+                                                <li>개인식별정보 : 성명, 주민등록번호 등 고유식별정보, 국적, 직업, 주소, 전화번호 등 연락처</li>
+                                                <li>(금융)거래정보 : 상품종류, 거래조건(이자율, 만기, 담보 등), 거래일시, 금액 등 거래 설정 및 내역 정보</li>
+                                                <li>개인식별정보 외에 거래신청서에 기재된 정보 또는 고객이 제공한 정보 : 주거 및 가족사항, 거주기간, 세대구성, 결혼여부
+                                                    등</li>
+                                            </ul>
+                                            <p class="lists-blt-star">본 동의 이전에 수집한 개인(신용)정보도 포함됩니다.</p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>② 위탁계약 체결 시 개인정보보호 관련 법규의 준수, 개인정보에 관한 제3자 제공 금지 및 책임부담 등을 명확히 규정하고, 당해 계약내용을 서면 및
+                                    전자 보관하고 있습니다. 업체
+                                    변경 시 본 개인정보처리방침을 통해 고지하겠습니다.</li>
+                                <li>③ 회사는 위탁계약 체결 시 [개인정보 보호법] 제 26조에 따라 위탁업무 수행목적 외 개인정보 처리 금지, 기술적·관리적 보호조치, 재 위탁 제한,
+                                    수탁자에 대한 관리·감독,
+                                    손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제6조 정보주체와 법정대리인의 권리·의무 및 그 행사방법에 관한 사항</strong>
+                        <div class="lists-terms type03" style="margin-top: 0px;">
+                            <ol class="left-mgn">
+                                <li>① 고객은 회사가 처리하는 자신 및 14세 미만 아동(법정대리인만 해당)의 열람을 요구할 수 있습니다.
+                                </li>
+                                <li>② 자신의 개인정보를 열람한 고객은 사실과 다르거나 확인할 수 없는 개인정보에 대하여 회사에 정정 또는 삭제를 요구할 수 있습니다. 다만, 다른
+                                    법령에서 그 개인정보가 수집
+                                    대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</li>
+                                <li>③ 고객은 회사에 대하여 자신의 개인정보 처리의 정지를 요구할 수 있습니다. 다만 다음 각 호의 어느 하나에 해당하는 경우에는 회사는 해당 사유를
+                                    고객에게 알리고, 처리정지 요구를
+                                    거절할 수 있습니다.
+                                    <ol class="left-mgn">
+                                        <li>1. 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+                                        <li>2. 다른 사람의 생명·신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우</li>
+                                        <li>3. 개인정보를 처리하지 아니하면 고객과 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서 고객이 그 계약의 해지 의사를
+                                            명확하게 밝히지 아니한 경우
+                                            (상세내용 회사 홈페이지 고객권리안내문 게시)</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제7조 처리하는 개인정보의 항목</strong>
+                        <p class="sec-st-msg02">회사는 금융거래의 설정·유지·이행·관리 및 상품서비스의 제공을 위한 필수정보 및 선택정보를 다음 각 호와 같이 수집하고 있습니다.
+                        </p>
+                        <div class="lists-terms type03">
+                            <ol class="left-mgn">
+                                <li>1. 필수적 정보
+                                    <ul class="lists-blt-dash">
+                                        <li>개인식별정보 : 주민등록번호 등 고유식별정보, 국적, 직업, 주소,전자우편 주소,전화번호 등 연락처</li>
+                                        <li>(금융)거래정보 : 상품종류, 거래조건(이자율, 만기, 담보 등), 거래일시,금액 등 거래 설정 및 내역 정보</li>
+                                        <li>신용평가를 위한 정보(여신거래에 한함)
+                                            <ol class="lists-blt-dot left-mgn">
+                                                <li>신용능력정보 : 재산,채무,소득의 총액, 납세실적</li>
+                                                <li>신용도판단정보: 연체, 대위변제, 대지급, 부도, 관련인 발생사실 등</li>
+                                            </ol>
+                                        </li>
+                                        <li>기타 금융거래의 설정·유지·이행·관리를 위한 상담, 채권관리 등을 통해 생성되는 정보</li>
+                                    </ul>
+                                </li>
+                                <li>2. 선택적 정보
+                                    <ul class="lists-blt-dash">
+                                        <li>개인식별정보 외에 거래신청서에 기재된 정보 또는 고객이 제공한 정보</li>
+                                        <li>주거 및 가족사항, 거주기간, 세대구성, 결혼여부 등</li>
+                                    </ul>
+                                </li>
+                                <li>3. 전자금융거래법에 따른 수집 정보(자동수집되며 온라인 거래에 한함)
+                                    <ul class="lists-blt-dash">
+                                        <li>전자금융거래의 내용 추적 및 검색 : 고객 아이디, 접속 일시, IP Adress(주소), HDD Serial, MAC Adress 등
+                                        </li>
+                                        <li>보안정책 수립용 통계 자료 : 개인방화벽 설정, 운영체제 종류, 운영체제 주요 보안패치 여부, 방화벽 설정, 원격접속 설정,브라우저
+                                            버전, 키보드 타입 등</li>
+                                    </ul>
+                                    <p class="lists-blt-star">회사는 정보주체의 사생활을 침해할 우려가 있는 민감 정보에 대해서는 원칙적으로 수집하지 않으며, 필요한
+                                        경우 정보주체의 별도 동의를
+                                        받아 수집하고 동의 목적을 위해서만 제한적으로 이용합니다</p>
+                                    <p class="lists-blt-star">회사 홈페이지에서는 만 14세미만 아동으로부터 어떠한 개인정보도 수집하지 않습니다. 다만, 만14세미만
+                                        아동이 회사 영업점에서
+                                        법정대리인의 동의하에 인터넷뱅킹에 가입한 경우에는 그러하지 아니합니다.</p>
+                                </li>
+                                <li>4. 전화상담 업무 과정에서 자동 수집되는 다음의 정보
+                                    <ul class="lists-blt-dash">
+                                        <li>고객센터 대고객 업무 과정에서 생성되는 정보</li>
+                                        <li>민원업무 과정에서 생성되는 정보</li>
+                                        <li>자산관리 또는 대출자동연장 업무 과정에서 생성되는 정보</li>
+                                        <li>별도의 거절절차는 없으며 전화상담 거부시 자동 수집되지 않음</li>
+                                    </ul>
+                                </li>
+                                <li>5. 처리하는 가명정보의 종류 및 항목, 이용목적을 확인하실 수 있습니다.
+                                    <ul class="lists-blt-dash">
+                                        <li>홈페이지&gt;고객센터&gt;개인정보보호&gt;가명정보 처리 현황
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>6. 수집 방법
+                                    <ul class="lists-blt-dash">
+                                        <li>회사 영업점에 내방한 고객으로부터 직접 수집</li>
+                                        <li>홈페이지, 서면양식, 팩스, 전화, 상담 게시판, 이메일, 응모내역, 배송요청</li>
+                                        <li>생성정보 수집 툴을 통한 수집</li>
+                                        <li>고객센터의 문의사항을 통한 수집</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제8조 개인정보의 파기에 관한 사항</strong>
+                        <div class="lists-terms type03" style="margin-top: 0px;">
+                            <ol class="left-mgn">
+                                <li>① 회사는 개인정보의 보유기간이 경과된 경우에는 다음 각 호의 사유가 없는 한 보유기간의 종료일로부터 5영업일 이내에, 개인정보의 처리 목적 달성,
+                                    해당 서비스의 폐지, 사업의
+                                    종료 등 그 개인정보가 불필요하게 되었을 때에는 다음 각 호의 사유가 없는 한 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 5영업일 이내에 그
+                                    개인정보를 파기합니다.
+                                    <ol class="left-mgn">
+                                        <li>1. 신용정보집중기관 또는 신용정보회사가 신용정보의 집중관리·활용 또는 개인의 신용도 등을 평가하기 위한 목적으로 개인신용정보를 보유하는
+                                            경우(보유기간에 한함)
+                                        </li>
+                                        <li>2. 신용정보회사 등이 민·형사상의 책임 또는 시효가 지속되거나 분쟁의 입증자료로서 개인신용정보를 보유하는 경우</li>
+                                        <li>3. 법령에 따라 보존하여야 하는 경우
+                                            <ul class="lists-blt-dash">
+                                                <li>상법 제 33조 : 계약서, 거래신청서 등 영업에 관한 중요서류</li>
+                                                <li>신용정보의 이용 및 보호에 관한 법률 제20조의2 : 계좌 개설 및 거래내역 등 금융거래정보</li>
+                                                <li>소득세법 시행령 제201조의10 : 연금계좌 납입액, 인출액 등 연금확인서 발급을 위한 정보</li>
+                                                <li>특정금융거래의 보고 및 이용에 관한 법률 제5조의4 : 실지명의의 확인 및 보고대상이 된 금융거래자료 송금인 및 수취인에
+                                                    관한 정보</li>
+                                            </ul>
+                                        </li>
+                                        <li>4. 기타 이와 유사한 정당한 사유가 있는 경우</li>
+                                    </ol>
+                                </li>
+                                <li>② 개인정보가 기록된 출력물, 서면 등은 파쇄 또는 소각의 방법으로 파기하고, 전자적 파일형태의 개인정보는 복원이 불가능한 방법으로 영구 삭제하는
+                                    방법으로 파기합니다.</li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제9조 개인정보의 안전성 확보 조치에 관한 사항</strong>
+                        <p class="sec-st-msg02">회사는 개인정보보호법 제29조에 따라 정보주체의 안전성 확보 조치를 위하여 다음 각 호와 같이 조치를 하고 있습니다.</p>
+                        <div class="lists-terms type03">
+                            <ol class="left-mgn">
+                                <li>① 개인정보에 대한 접근 통제 및 접근권한의 제한 조치</li>
+                                <li>② 개인정보를 안전하게 저장·전송할 수 있는 암호화 기술의 적용 또는 이에 상응하는 조치</li>
+                                <li>③ 개인정보 침해사고 발생에 대응하기 위한 접속기록의 보관 및 위조·변조 방지를 위한 조치</li>
+                                <li>④ 개인정보에 대한 보안프로그램의 설치 및 갱신</li>
+                                <li>⑤ 개인정보의 안전한 보관을 위한 보관시설의 마련 또는 잠금 장치의 설치 등</li>
+                                <li>⑥ 개인정보 취급 직원의 최소화 및 교육실시</li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제10조 추가적인 이용·제공 판단 기준</strong>
+                        <div class="lists-terms type03" style="margin-top: 0px;">
+                            <ol class="left-mgn">
+                                <li>① 회사는 개인정보 보호법 제15조제3항 및 제17조제4항에 따라 개인정보 보호법 시행령 제14조의2에 따른 사항을 고려하여 정보주체의 동의 없이
+                                    개인정보를 추가적으로 이용·제공할
+                                    수 있습니다.</li>
+                                <li>② 회사가 정보주체의 동의 없이 추가적인 이용·제공을 하기 위해서 다음과 같은 사항을 고려하였습니다.
+                                    <ol class="left-mgn">
+                                        <li>1. 개인정보를 추가적으로 이용·제공하려는 목적이 당초 수집 목적과 관련성이 있는지 여부</li>
+                                        <li>2. 개인정보를 수집한 정황 또는 처리 관행에 비추어 볼 때 추가적인 이용·제공에 대한 예측 가능성이 있는지 여부</li>
+                                        <li>3. 개인정보의 추가적인 이용·제공이 정보주체의 이익을 부당하게 침해하는지 여부</li>
+                                        <li>4. 가명처리 또는 암호화 등 안전성 확보에 필요한 조치를 하였는지 여부</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제11조 개인정보 처리방침의 변경</strong>
+                        <p class="sec-st-msg02">회사는 개인정보 처리방침을 변경하는 경우에는 변경 및 시행의 시기, 변경된 내용을 지속적으로 공개하며, 변경된 내용은 쉽게 확인할
+                            수 있도록 변경 전·후를
+                            비교하여 공개합니다.</p>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제12조 개인정보 자동 수집 장치의 설치, 운영 및 거부 관련 사항</strong>
+                        <p class="sec-st-msg02">(쿠키에 의한 개인정보 수집)</p>
+                        <p class="sec-st-msg02">회사의 모든 사이트는 귀하에 대한 정보를 저장하고 수시로 찾아내는 쿠키(cookie)를 사용합니다. 쿠키는 웹사이트가 귀하의
+                            컴퓨터 브라우저(인터넷
+                            익스플로러, 넷스케이프 등)로 전송하는 소량의 정보입니다. 귀하께서 웹사이트에 접속을 하면 회사 사이트의 컴퓨터는 귀하의 브라우저에 있는 쿠키의 내용을 읽고, 귀하의
+                            추가정보를 귀하의 컴퓨터에서
+                            찾아 접속에 따른 성명 등의 추가 입력 없이 서비스를 제공할 수 있습니다. 쿠키는 귀하의 컴퓨터는 식별하지만 귀하를 개인적으로 식별하지는 않습니다. 또한 귀하는
+                            쿠키에 대한 선택권이 있습니다.
+                            웹브라우저의 옵션을 조정함으로써 모든 쿠키를 다 받아들이거나, 쿠키가 설치될 때 통지를 보내도록 하거나, 아니면 모든 쿠키를 거부할 수 있는 선택권을 가질 수
+                            있습니다.</p>
+                        <p class="sec-st-msg02">(쿠키 설정 거부 방법)</p>
+                        <p class="sec-st-msg02">사용하는 웹 브라우저의 옵션을 선택함으로써 모든 쿠키를허용하거나 쿠키를 저장할 때마다 확인을 거치거나 모든 쿠키의 저장을 거부할
+                            수
+                            있습니다.설정(MicrosoftEdge) 방법 예시 : 웹 브라우저 상단의 더보기&gt;설정&gt;쿠키 및 사이트 권한</p>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제13조&nbsp;행태정보 수집·이용 및 거부 관련 사항</strong>
+                        <p class="sec-st-msg02">회사는 상품·서비스 개발 및 고객분석 등 사이트 이용 분석에 활용하기 위해 행태정보를 수집·이용하고 있습니다. 행태정보란 웹
+                            사이트 방문 이력, 앱 사용
+                            이력, 구매 및 검색 이력 등 이용자의 관심, 흥미, 기호 및 성향 등을 파악하고 분석할 수 있는 온라인상의 이용자 활동 정보를 말합니다.</p>
+                        <div class="lists-terms type03" style="margin-top: 0px;">
+                            <ol class="left-mgn">
+                                <li>1. 수집하는 행태정보의 항목
+                                    <ul class="lists-blt-dash">
+                                        <li>웹/앱 서비스 방문 기록, 검색·클릭 등 사용기록, 광고식별자</li>
+                                    </ul>
+                                </li>
+                                <li>2. 행태정보 수집 방법
+                                    <ul class="lists-blt-dash">
+                                        <li>Google에서 제공하는 웹로그 분석 도구 Google Analytics를 이용하여 이용자의 방문 빈도, 방문 페이지 등의 정보를 수집
+                                        </li>
+                                        <li>이용자 개인을 식별할 수 없도록 비식별화 처리된 익명의 사용자 정보를 이용</li>
+                                        <li>웹사이트 및 앱 내에서 행해지는 고객의 주요 행동에 대한 로그 수집</li>
+                                    </ul>
+                                </li>
+                                <li>3. 행태정보 수집 목적
+                                    <ul class="lists-blt-dash">
+                                        <li>신상품·서비스 개발 및 통계, 고객분석 등 이용자 분석, 이용자 행태정보 기반 맞춤형 광고 제공</li>
+                                    </ul>
+                                </li>
+                                <li>4. 행태정보 보유·이용기간 및 이후 정보처리 방법
+                                    <ul class="lists-blt-dash">
+                                        <li>수집일로부터 최대 3년간 보유·이용되며, 보유기간 경과 후 지체없이 삭제</li>
+                                    </ul>
+                                </li>
+                                <li>5. 이용자 통제권 행사방법
+                                    <ul class="lists-blt-dash">
+                                        <li>고객이 브라우저 설정을조정하여 쿠키 저장 거부 등을 통해 이용을 거부할 수 있습니다.</li>
+                                        <li>웹 브라우저
+                                            <ol class="lists-blt-dot left-mgn">
+                                                <li>Microsoft Edge: 웹 브라우저 상단의 더보기&gt; 설정&gt; 개인정보&gt; "추적 안함" 요청 보내기
+                                                </li>
+                                                <li>Chrome: 설정&gt; 고급&gt; 개인정보 및 보안&gt; 콘텐츠 설정&gt; 쿠키&gt; 타사 쿠키 차단</li>
+                                            </ol>
+                                        </li>
+                                        <li>스마트폰
+                                            <ol class="lists-blt-dot left-mgn">
+                                                <li>안드로이드 폰: 구글설정&gt; 광고&gt; 광고 맞춤설정 선택 해제</li>
+                                                <li>아이폰: 아이폰설정&gt; 개인정보보호&gt; 광고&gt; 광고 추적 제한</li>
+                                            </ol>
+                                            <p class="lists-blt-star">OS버전에 따라 다소 상이할 수 있음</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>6. 이용자 피해구제 방법
+                                    <ul class="lists-blt-dash">
+                                        <li>관련부서 및 고객문의 : SBI저축은행 금융소비자보호팀 (1566-2210)</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제14조 권익침해 구제방법</strong>
+                        <p class="sec-st-msg02">고객은 개인정보침해로 인한 신고나 상담이 필요하신 경우 회사 콜센터 또는 아래 기관에 문의하시기 바랍니다.</p>
+                        <div class="lists-terms type03">
+                            <ol class="left-mgn">
+                                <li>1. 개인정보분쟁조정위원회<br>
+                                    (<a href="http://www.kopico.go.kr/" target="_blank">www.kopico.go.kr</a> / <a
+                                        href="tel:1833-6972">1833-6972</a>)</li>
+                                <li>2. 한국인터넷진흥원 개인정보침해신고센터<br>
+                                    (<a href="http://www.privacy.kisa.or.kr/" target="_blank">privacy.kisa.or.kr</a> /
+                                    국번 없이 <a href="tel:118">118</a>)</li>
+                                <li>3. 정보보호마크인증위원회<br>
+                                    (<a href="http://www.eprivacy.or.kr/" target="_blank">www.eprivacy.or.kr</a> / <a
+                                        href="tel:02-550-9531">02-550-9531~2</a>)</li>
+                                <li>4. 대검찰청 사이버수사과<br>
+                                    (<a href="http://www.spo.go.kr/" target="_blank">www.spo.go.kr</a> / 국번없이 <a
+                                        href="tel:1301">1301</a>)</li>
+                                <li>5. 경찰청 사이버안전국<br>
+                                    (<a href="http://www.cyberbureau.police.go.kr/"
+                                        target="_blank">cyberbureau.police.go.kr</a> / 국번없이
+                                    <a href="tel:182">182</a>)
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="sec"><strong class="sec-st-tit wght">제15조 개인정보 보호책임자 및 고충사항 처리 담당부서</strong>
+                        <p class="sec-st-msg02">개인정보 보호법 제31조 제1항에 따른 회사의 개인정보 보호책임자는 다음과 같습니다.</p>
+                        <div class="solid-box">
+                            <ul class="lists type02 blt-dot">
+                                <li>개인정보 보호책임자 : SBI저축은행 이사 송민호</li>
+                                <li>개인정보 담당부서 : 정보기획보안팀</li>
+                                <li>고충사항 처리 담당부서 : 금융소비자보호팀</li>
+                                <li>전화번호 : <a href="tel:1566-2210">1566-2210</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="sec tmg-minus">
+                        <div class="lists-terms type03">
+                            <ul>
+                                <li>개인정보처리방침 시행 일자 : 2023.02.01</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

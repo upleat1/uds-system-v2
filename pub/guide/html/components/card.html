@@ -5,820 +5,1068 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-    <title>Upleat Design System</title>
+    <title>유플리트</title>
     <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
     <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
     
     <!-- resource -->
-    <link rel="stylesheet" href="/pub/app/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/component.css">
+    <style>
+        .mycard-info + .mycard-info {margin:3rem auto;}
+    </style>
 </head>
 <body>
     <div data-class="contents">
         <h1 data-class="component-name"><span>카드형 리스트<span></h1>
-        <div data-class="box">
-            <span><a href="/pub/html/reference/BFE050000.html" target="_blank" title="새창" data-class="button">전계좌조회</a></span>
-            <span><a href="/pub/guide/sample/account_detail.html" target="_blank" title="새창" data-class="button">거래내역조회</a></span>
-        </div>
-        <div data-class="box">
-            <div data-class="list disc">
-                <div>카드형에서 기본적으로 계좌번호가 강조 (.acc_num.big)<br>
-                계좌번호 없을 경우에는 상품명 강조</div>
-            </div>
-        </div>
+
         <div data-class="section">
             <div data-class="h1">Type</div>
-            <div data-class="h2">계좌번호</div>
-            <div data-class="h3">기본</div>
+            <div data-class="h2">Card</div>
 
             <script type="text/html">
-<div class="acc_pannel">
-    <div class="acc_wrap">
-        <div class="acc_name big">주택청약종합저축</div>
-        <div class="acc_num"><span class="number">400407-01-023569</span></div>
+<div class="card-wrap" role="button" title="상세보기">
+    <div class="card-head fit">
+        <div class="state-msg">소액자유적금(9874)소액자유적금(9874)소액자유적금(9874)소액자유적금(9874)</div>
+        <span class="btn ico-arr-right state-btn"></span>
     </div>
-</div>
-                            </script>
-                            <div data-class="h3">계좌명 강조</div>
-                            <script type="text/html">
-<div class="acc_wrap bul_line">
-    <div class="acc_name big">주택청약종합저축</div>
-    <div class="acc_num"><span class="number">400407-01-023569</span></div>
-</div>
-                            </script>
-                            <div data-class="h3">계좌번호 강조</div>
-                            <script type="text/html">
-<div class="acc_wrap bul_line">
-    <div class="acc_name">주택청약종합저축</div>
-    <div class="acc_num big"><span class="number">400407-01-023569</span></div>
-</div>
-                            </script>
-
-            <div data-class="h2">카드리스트</div>
-            <script type="text/html">
-<div class="acc_list_wrap">
-    <div class="acc_pannel">
-        <div class="acc_wrap">
-            <div class="acc_name">주택청약종합저축</div>
-            <div class="acc_num"><span class="number">400407-01-023569</span></div>
-            <div class="acc_info_wrap">
-                <div class="acc_info">
-                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em>11.15</span><span class="num_unit">%</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em>11.15</span><span class="num_unit">%</span>
-                </div>
-            </div>
-            <div class="acc_sum_wrap">
-                <div class="acc_pay"><span class="unit">잔액</span>
-                    <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-                </div>
-            </div>
-        </div>
-        <div class="btn_area">
-            <span><a href="#none">입금</a></span>
-        </div>
-    </div>
-    <div class="acc_pannel">
-        <div class="acc_wrap">
-            <div class="acc_name">주택청약종합저축</div>
-            <div class="acc_num"><span class="number">400407-01-023569</span></div>
-            <div class="acc_info_wrap">
-                <div class="acc_info">
-                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em>11.15</span><span class="num_unit">%</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em>11.15</span><span class="num_unit">%</span>
-                </div>
-            </div>
-            <div class="acc_sum_wrap">
-                <div class="acc_pay"><span class="unit">잔액</span>
-                    <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-                </div>
-            </div>
-        </div>
-        <div class="btn_area">
-            <span><a href="#none">입금</a></span>
-            <span><a href="#none">자동이체 등록</a></span>
-        </div>
-    </div>
-    <!-- 신탁/ISA일때 -->
-    <div class="acc_pannel">
-        <div class="acc_wrap reverse">
-            <div class="acc_name">KB 실버웰빙 연금신탁(채권형)</div>
-            <div class="acc_num"><span class="number">400407-01-023569</span></div>
-            <div class="acc_info_wrap">
-                <div class="acc_info">
-                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
-                </div>
-            </div>
-            <div class="acc_sum_wrap">
-                <div class="acc_pay">
-                    <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-                </div>
-            </div>
-            <div class="acc_func_wrap">
-                <div class="acc_func">
-                    <div class="tit">월말 수익률 알림</div>
-                    <div class="func">
-                        <span class="switch">    
-                            <input type="checkbox" id="switch5" checked >
-                            <label for="switch5"><span class="hidden">월말 수익률 알림</span></label>
-                        </span>
-                    </div>
-                </div>
-                <div class="acc_func">
-                    <div class="tit">안내희망수익률 알림</div>
-                    <div class="func">
-                        <span><a href="#none" class="btn_txt ico_arr">설정</a></span>
-                        <span><a href="#none" class="btn_txt ico_arr">해제</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //신탁/ISA일때 -->
-</div>
-            </script>
- 
-            <div data-class="h2">계좌상세</div>
-            <div data-class="h3">기본</div>
-            <script type="text/html">
-<div class="acc_pannel top">
-    <div class="acc_wrap">     
-        <div class="acc_name">
-            <button type="button" class="btn_txt ico_pencil">KB실버웰빙 연금신탁 채권형</button>
-        </div>
-        <div class="acc_num"><button type="button" class="btn_txt ico_copy"><span class="number">400407-01-023569</span></button></div>
-        <div class="acc_sum_wrap">
-            <div class="acc_pay">
-                <div class="tooltip_limited">
-                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">원화환산 평가금액 도움말 자세히보기</span></button></p>
-                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
-                        <div class="tooltip_cont"> 
-                            현재 수익률은 평균잔액 기준입니다.(2018년 4월 20일 이전 수익률은 잔액 기준)<br>
-                            평균잔액 기준 수익률 = 수익금액 / 평균잔액 X 100<br>
-                            잔액 기준 수익률 = 수익금액 / 잔액 X 100
-                        </div>
-                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
-                    </div>
-                </div>
-                총금액
-                <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-            </div>
-            <div class="acc_sum">원금 <span class="number">37,018,600</span><span class="num_unit">원</span></div>
-        </div>
-    </div>
-    <ul class="list_data">
+    <ul class="lists data">
         <li>
-            <div class="key">잔액</div>
-            <div class="value"><strong class="number">100,000</strong><span class="num_unit">원</span></div>
+            <div class="key">자동이체구분</div>
+            <div class="value">오픈뱅킹</div>
         </li>
         <li>
-            <div class="key">수익률</div>
-            <div class="value"><strong class="number">0.0</strong><span class="num_unit">%</span></div>
-        </li>
-        <li>
-            <div class="key">수익금액</div>
-            <div class="value"><strong class="number">0</strong><span class="num_unit">원</span></div>
-        </li>
-        <li>
-            <div class="key">평균잔액</div>
-            <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
-        </li>
-        <li>
-            <div class="key">월말 수익률 SMS</div>
-            <div class="value">알림</div>
-        </li>
-        <li>
-            <div class="key">안내희망 수익률 SMS</div>
-            <div class="value">알림 거부</div>
-        </li>
-    </ul>
-    <div class="btn_area">
-        <span><a href="#none">스마트출금</a></span>
-        <span><a href="#none">모으기</a></span>
-        <span><a href="#none" class="btn primary">이체</a></span>
-    </div>
-    <button type="button" class="btn_admin"><span class="hidden">관리</span></button>
-</div>
-            </script>
- 
-            <div data-class="h3">상세링크</div>
-            <script type="text/html">
-<div class="acc_pannel top">
-    <div class="acc_wrap acc_link">
-        <div class="acc_name">KB실버웰빙 연금신탁 채권형</div>
-        <div class="acc_num"><button type="button" class="btn_txt ico_copy"><span class="number">400407-01-023569</span></button></div>
-        <div class="acc_sum_wrap">
-            <div class="acc_pay">총금액
-                <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-            </div>
-            <div class="acc_sum">원금 <span class="number">37,018,600</span><span class="num_unit">원</span></div>
-        </div>
-        <a href="#none" class="btn_txt ico_arr"><span class="hidden">상세</span></a>
-    </div>
-    <ul class="list_data">
-        <li>
-            <div class="key">잔액</div>
-            <div class="value"><strong class="number">100,000</strong><span class="num_unit">원</span></div>
-        </li>
-        <li>
-            <div class="key">수익률</div>
-            <div class="value"><strong class="number">0.0</strong><span class="num_unit">%</span></div>
-        </li>
-        <li>
-            <div class="key">수익금액</div>
-            <div class="value"><strong class="number">0</strong><span class="num_unit">원</span></div>
-        </li>
-        <li>
-            <div class="key">평균잔액</div>
-            <div class="value"><span class="number">0</span><span class="num_unit">원</span></div>
-        </li>
-        <li>
-            <div class="key">월말 수익률 SMS</div>
-            <div class="value">알림</div>
-        </li>
-        <li>
-            <div class="key">안내희망 수익률 SMS</div>
-            <div class="value">알림 거부</div>
+            <div class="key">이용기관명</div>
+            <div class="value">국민은행</div>
         </li>
     </ul>
 </div>
-            </script>
 
-
-            <div data-class="h3">nobg</div>
-            <script type="text/html">
-<div class="acc_pannel top nobg">
-    <div class="acc_wrap">
-        <div class="acc_name">KB실버웰빙 연금신탁 채권형</div>
-        <div class="acc_num"><span class="number">400407-01-023569</span></div>
+<div class="card-wrap" role="button" title="상세보기">
+    <div class="card-head fit">
+        <div class="state-msg">소액자유적금(9874)</div>
+        <span class="btn ico-arr-right state-btn"></span>
     </div>
-    <button type="button" class="btn_admin"><span class="hidden">설정</span></button>
+    <ul class="lists data">
+        <li>
+            <div class="key">자동이체구분</div>
+            <div class="value">오픈뱅킹</div>
+        </li>
+        <li>
+            <div class="key">이용기관명</div>
+            <div class="value">국민은행</div>
+        </li>
+    </ul>
+</div>
+
+<div class="card-wrap" role="button" title="상세보기">
+    <div class="card-head fit">
+        <i class="ci-40x bk-090" role="img" aria-label="카카오뱅크"></i>
+        <div class="state-msg">소액자유적금(9874)</div>
+        <span class="btn ico-arr-right"></span>
+        <span class="badge line-nega state-btn">처리실패</span>
+        <!-- ano. case -->
+        <!-- <span class="badge line-posi state-btn">처리완료</span> -->
+        <!-- //ano. case -->
+    </div>
+    <ul class="lists data">
+        <li>
+            <div class="key">자동이체구분</div>
+            <div class="value">오픈뱅킹</div>
+        </li>
+        <li>
+            <div class="key">이용기관명</div>
+            <div class="value">국민은행</div>
+        </li>
+    </ul>
+</div>
+
+<div class="card-wrap state-case01" role="button" title="상세보기">
+    <div class="card-head fit">
+        <i class="ci-24x bk-090" role="img" aria-label="카카오뱅크"></i>
+        <div class="state-msg">박다롬이</div>
+        <span class="btn ico-arr-right"></span>
+        <span class="badge line state-btn">이체완료</span>
+        <!-- ano. case -->
+        <!-- 
+        <span class="badge line-nega state-btn">이체실패</span>
+        <span class="badge line-nega state-btn">이체취소</span>
+        <span class="badge line-posi state-btn">입금대기중</span>
+        <span class="badge line-posi state-btn">이체대기중</span> 
+        -->
+        <!-- //ano. case -->
+    </div>
+    <div class="card-price">
+        <span class="numbers-20 nums-bold fc-point" role="text"><span class="num">123,456,789</span><span class="num-unit">원</span></span>
+    </div>
+    <ul class="lists data">
+        <li>
+            <div class="key">자동이체구분</div>
+            <div class="value">오픈뱅킹</div>
+        </li>
+        <li>
+            <div class="key">이용기관명</div>
+            <div class="value">국민은행</div>
+        </li>
+    </ul>
+</div>
+
+<div class="card-wrap">
+    <div class="card-head my-card fit">
+        <div class="state-img">
+            <i class="ci-card-sm crd-01"></i> 
+        </div>
+        <div class="state-msg">PAY백체크카드2<br><span class="card-no">[7111]</span></div>
+        <span class="badge state-posi state-btn">가족카드</span>
+        <!-- ano. case -->
+        <!-- <span class="badge state-share state-btn">가족카드</span> -->
+        <!-- //ano. case -->
+    </div>
+    <div class="card-price line">
+        <p class="fc-sub">2023년 1월 사용금액</p>
+        <span class="numbers-24 nums-bold" role="text"><span class="num-unit">총</span><span class="num">123,456,789</span><span class="num-unit">원</span></span>
+    </div>
+    <div class="btns list-foot">
+        <button type="button" class="btn outline md">카드를 등록해주세요</button>
+    </div>
+</div>
+
+<div class="card-wrap type02 meth01"><!-- meth01: 아이콘 클래스 -->
+    <div class="card-head fit">
+        <div class="state-msg">
+            OTP
+            <span class="msg-sub">발급기간 : 신한은행</span>
+            <span class="msg-sub">발급일자 : 2018.06.27</span>
+        </div>
+    </div>
+    <div class="btns list-foot">
+        <button type="button" class="btn outline md">사고신고</button>
+    </div>
+</div>
+
+<div class="card-wrap solid" role="button" title="상세보기">
+    <div class="card-head my-card fit">
+        <div class="state-img">
+            <i class="ci-card crd-01"></i>
+        </div>
+        <div>
+            <span class="badge state-normal state-btn">국내전용</span>
+            <span class="badge state-posi state-btn">가족카드</span>
+            <div class="state-msg">PAY백체크카드2</div>
+            <p class="card-no">
+                <span class="items">연회비:무료</span>
+                <span class="items">연회비:무료</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="card-wrap">
+    <div class="card-head fit">
+        <div class="state-msg">자료열람요구권</div>
+        <span class="badge line-posi state-btn">통지완료</span>
+    </div>
+    <ul class="lists data free">
+        <li>
+            <div class="key">신청일자</div>
+            <div class="value">2023.02.10</div>
+        </li>
+        <li>
+            <div class="key">신청계좌</div>
+            <div class="value">복리정기예금(1234)</div>
+        </li>
+        <li>
+            <div class="key">열람목적</div>
+            <div class="value">금융감독원 분쟁조정 신청외 N건</div>
+        </li>
+        <li>
+            <div class="key">요청자료</div>
+            <div class="value eps">
+                <span class="eps">내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및내부통제기준의 제정 및</span>
+                <span>외 N건</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="card-wrap" role="button" title="상세보기">
+    <div class="card-head fit">
+        <div class="state-msg">중금리신용대출<span class="badge state-green">최저금리</span></div>
+        <span class="btn ico-arr-right state-btn"></span>
+    </div>
+    <ul class="lists data lg-num">
+        <li>
+            <div class="key">금리<span class="numbers-18 nums-bold" role="text"><span class="num">8.0</span><span class="num-unit">%</span></span></div>
+            <div class="value">한도<span class="numbers-18 nums-bold fc-point" role="text"><span class="num">9,000</span><span class="num-unit">만원</span></span></div>
+        </li>
+    </ul>
+</div>
+<!-- 대출불가 케이스 [card-wrap의 role, title 삭제] -->
+<div class="card-wrap disabled">
+    <div class="card-head fit">
+        <div class="state-msg fc-sub">비상금대출</div>
+        <span class="state-btn fc-nega">대출불가</span>
+    </div>
+    <div class="right gap-xs">
+        <button type="button" class="btn ico-arr-sm">거절사유</button>
+    </div>
+</div>
+<!--//대출불가 케이스 -->
+
+            </script>
+            
+            <script type="text/html">
+<div class="mycard-info" style="background-image:url(/pub/assets/img/@temp/@card-bg1.png)">
+    <span class="badge state-posi card-type">가족카드</span>
+    <!-- <span class="badge state-share card-type">가족카드</span> -->
+    <span class="card-name">SBI사이다톡톡체크카드</span>
+    <span class="card-num">1234 1234 **** **34</span>
+    <div class="card-num-view">
+        <button type="button" class="btn outline xs reverse">카드번호 보기</button>
+        <span class="badge state-posi-tall">1분 30초</span>
+    </div>
+    <span class="card-state">정상</span>
+</div>
+<div class="mycard-info mode-light" style="background-image:url(/pub/assets/img/@temp/@card-bg4.png)">
+    <!-- <span class="badge state-posi card-type">가족카드</span> --><!-- 계좌주 가족카드 -->
+    <span class="badge state-share card-type">가족카드</span><!-- 공유자 가족카드 -->
+    <span class="card-name">SBI사이다톡톡체크카드</span>
+    <span class="card-num">1234 1234 **** **34</span>
+    <div class="card-num-view">
+        <button type="button" class="btn outline xs reverse">카드번호 보기</button>
+        <span class="badge state-posi-tall">1분 30초</span>
+    </div>
+    <span class="card-state">정상</span>
+</div>
+<div class="mycard-info null">
+    <span class="txt">카드사용등록을 해주세요.</span>
+    <button type="button" class="card-reg" title="카드사용등록"></button>
+    <span class="card-state">미등록카드</span>
 </div>
             </script>
 
 
-        </div>
-
-        <div data-class="section">   
-            <div data-class="h1">전계좌조회</div>
-            <div data-class="h2">기본</div>
+        <div data-class="section">
+            <div data-class="h1">Component</div>
+<!--             <div data-class="h2">Box</div>
             <script type="text/html">
-<div class="acc_list_wrap">
-    <div class="acc_pannel">
-        <div class="acc_wrap inc_btn">
-            <div class="acc_name">KB종합통장</div>
-            <div class="acc_num"><span class="number">400407-01-023569</span></div>
-            <div class="acc_sum_wrap">
-                <div class="acc_pay"><span class="unit hidden">잔액</span>
-                    <strong class="number">50,000</strong><span class="num_unit">원</span>
+<div class="boxs">
+    <div class="boxs-cont">
+        <div class="list-name big">주택청약종합저축</div>
+        <div class="acc-num">400407-01-023569</div>
+    </div>
+</div>
+<br>
+<div class="boxs shadow">
+    <div class="boxs-cont">
+        <div class="list-name big">주택청약종합저축</div>
+        <div class="acc-num">400407-01-023569</div>
+    </div>
+</div>
+<br>
+<div class="boxs outline">
+    <div class="boxs-cont">
+        <div class="list-name big">주택청약종합저축</div>
+        <div class="acc-num">400407-01-023569</div>
+    </div>
+</div>
+<br>
+<div class="boxs acc-wrap solid">
+    <div class="boxs-cont">
+        <div class="list-name big">주택청약종합저축</div>
+        <div class="acc-num">400407-01-023569</div>
+    </div>
+</div>
+<br>
+<div class="boxs solid blue round">
+    <div class="boxs-cont">
+        <div class="list-name big">주택청약종합저축</div>
+        <div class="acc-num">400407-01-023569</div>
+    </div>
+</div>
+            </script> -->
+
+            <div data-class="h2">Check List</div>
+            <div data-class="box">
+                <div><strong>체크박스와 결합된 카드</strong>형태의 케이스들 모음</div>
+                <div data-class="list disc">
+                    <div>label 영역에 텍스트 또는 기타 요소들이 포함되지 않은 단순한 카드 : Default 사용</div>
+                    <div>label 영역에 텍스트 또는 기타 요소들이 많이 포함된 복잡한 카드 : 그외 케이스들 사용 (접근성 대응 주의)</div>
                 </div>
-            </div>
-        </div>
-        <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button>
-        <div class="btn_area">
-            <span><a href="#none">모으기</a></span>
-            <span><a href="#none">이체</a></span>
-        </div>
-    </div>
-</div>
-        </script>
- 
-    <div data-class="h2">카드형(KB)</div>
-    <script type="text/html">
-<div class="acc_pannel">
-    <div class="acc_wrap inc_btn"> <!-- 상단 버튼있을때 : inc_btn 추가  -->
-        <div class="acc_top_info">
-            <span class="badge txt pdt4">부동산담보대출</span>
-            <span class="badge line">한도제한계좌</span>
-            <span class="badge pdt1">예적금</span>
-        </div>
-        <div class="acc_name">주택청약종합저축</div>
-        <div class="acc_num"><span class="number">400407-01-023569</span></div>
-        <div class="acc_top_info divide">
-            <span class="txt fc_nega">다소높은위험</span>
-            <span class="txt">계열사</span>
-            <span class="txt">공격투자형만 가입</span>
-        </div>
-        <div class="acc_invest"><span class="tit">나의 투자성향</span>공격투자형 <span class="date">(<span class="number">2021.02.22</span>기준)</span></div>
-        <div class="acc_info_wrap">
-            <div class="acc_info">
-                <span class="tit">신규일</span><span class="number">2015.06.16</span>
-            </div>
-            <div class="acc_info">
-                <span class="tit">만기일</span><span class="number">2015.06.16</span>
-            </div>
-            <div class="acc_info">
-                <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em>11.15</span><span class="num_unit">%</span>
-            </div>
-            <div class="acc_info">
-                <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em>11.15</span><span class="num_unit">%</span>
-            </div>
-        </div>
-        <div class="acc_txt fc_nega">이체를 위해 출금계좌 등록이 필요합니다.</div>
-        <div class="acc_sum_wrap">
-            <div class="acc_pay"><span class="unit">잔액</span>
-                <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-            </div>
-        </div>
-        <div class="acc_sum_wrap exchange">
-            <div class="acc_pay"><span class="unit">USD</span>
-                <strong class="number">0.000000</strong>
-            </div>
-            <div class="acc_pay"><span class="unit">JPY</span>
-                <strong class="number">0.000000</strong>
-            </div>
-            <div class="acc_pay"><span class="unit">CNY</span>
-                <strong class="number">0.000000</strong>
-            </div>
-        </div>
-        <div class="toggle_sm_wrap exchange"> <!-- 외환리스트 : exchange -->
-            <div class="toggle_panel" role="region">
-                <div class="acc_sum_wrap exchange">
-                    <div class="acc_pay"><span class="unit">AUD</span>
-                        <strong class="number">0.000000</strong>
-                    </div>
-                    <div class="acc_pay"><span class="unit">CAD</span>
-                        <strong class="number">0.000000</strong>
-                    </div>
-                    <div class="acc_pay"><span class="unit">CHF</span>
-                        <strong class="number">0.000000</strong>
-                    </div>
-                </div>
-            </div>
-            <button class="tit js_toggle" aria-expanded="false">통화더보기</button>
-        </div>
-    </div>
-    <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button>
-    <div class="btn_area">
-        <span><a href="javascript:void(0)">입금</a></span>
-        <span><a href="javascript:void(0)">자동이체 등록</a></span>
-    </div>
-    <div class="btn_area">
-        <span><a href="javascript:void(0)">입금</a></span>
-        <span><a href="javascript:void(0)">자동이체 등록</a></span>
-    </div>
-    <div class="btn_area right">
-        <button type="button" class="btn_txt ico_arrow sm" aria-expanded="false">전용화면</button>
-    </div>
-    <!-- 하단 슬라이드 리스트 -->
-    <div class="toggle_sm_wrap">
-        <button class="tit js_toggle" aria-expanded="false">자세히 보기</button>
-        <div class="toggle_panel" role="region">
-            <ul class="list_comp noline">
-                <li>
-                    <div class="acc_pannel">
-                        <div class="acc_wrap inc_btn">
-                            <div class="acc_name">NH-Amundi 하나로단기채 증권<br>증권투자 신탁(채권) CE</div>
-                            <div class="acc_num"><span class="number">400407-01-023569</span></div>
-                            <div class="acc_info_wrap">
-                                <div class="acc_info">
-                                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
-                                </div>
-                                <div class="acc_info">
-                                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
-                                </div>
-                                <div class="acc_info">
-                                    <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em></em>11.15</span><span class="num_unit">%</span>
-                                </div>
-                                <div class="acc_info">
-                                    <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em></em>11.15</span><span class="num_unit">%</span>
-                                </div>
-                            </div>
-                            <div class="acc_sum_wrap">
-                                <div class="acc_pay"><span class="unit">평가액 USD</span>
-                                    <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button>
-                    </div>
-                </li>
-                <li>
-                    <div class="acc_pannel check">
-                        <span class="selection">
-                            <input type="checkbox" id="account1_1" name="account1">
-                            <label for="account1_1" class="label"><em class="hidden">계좌1 선택</em></label>
-                        </span>
-                        <div class="acc_wrap">
-                            <div class="acc_name">NH-Amundi 하나로단기채 증권<br>증권투자 신탁(채권) CE</div>
-                            <div class="acc_num"><span class="number">400407-01-023569</span></div>
-                            <div class="acc_info_wrap">
-                                <div class="acc_info">
-                                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
-                                </div>
-                                <div class="acc_info">
-                                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
-                                </div>
-                                <div class="acc_info">
-                                    <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em></em>11.15</span><span class="num_unit">%</span>
-                                </div>
-                                <div class="acc_info">
-                                    <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em></em>11.15</span><span class="num_unit">%</span>
-                                </div>
-                            </div>
-                            <div class="acc_sum_wrap">
-                                <div class="acc_pay"><span class="unit">평가액 USD</span>
-                                    <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button>
-                    </div>
-                </li>
-                <li>
-                    <ul class="list_data">
-                        <li>
-                            <div class="key">기초자산</div>
-                            <div class="value">
-                                <span>KOSPI200</span> / <span>S&amp;P200</span><br> / <span>EUROSTOXX50</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="key">상품구조</div>
-                            <div class="value">90(85)-90(L80)-85-75-70<br>낙인50,리자드1.00배</div>
-                        </li>
-                        <li>
-                            <div class="key">모집일</div>
-                            <div class="value"><span class="number">2021.03.31</span> ~ <span class="number">2021.03.31</span></div>
-                        </li>
-                        <li>
-                            <div class="key">성정일</div>
-                            <div class="value"><span class="number">2021.03.31</span></div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- // 하단슬라이드 리스트 -->
-</div>
-    </script>
-    <div data-class="h2">카드형(다른금융)</div>
-    <script type="text/html">
-<div class="acc_pannel">
-    <div class="acc_wrap inc_btn">
-        <div class="acc_name">
-            <button type="button" class="btn_txt ico_pencil">우리WON모아예금</button>
-        </div>
-        <div class="acc_bank md">
-            <span class="icon_bank_004"></span>
-            <span class="bk_name">우리</span>
-            <span class="bk_num">574498-90-009768</span>
-        </div>
-        <div class="acc_bank md col">
-            <span class="icon_bank_004"></span>
-            <span class="bk_name">우리</span>
-            <span class="bk_num">574498-90-009768</span>
-        </div>
-        <div class="acc_info_wrap">
-            <div class="acc_info">
-                <span class="tit">신규일</span><span class="number">2015.06.16</span>
-            </div>
-            <div class="acc_info">
-                <span class="tit">만기일</span><span class="number">2015.06.16</span>
-            </div>
-            <div class="acc_info">
-                <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em>11.15</span><span class="num_unit">%</span>
-            </div>
-            <div class="acc_info">
-                <span class="tit">수익률</span><a href="#none" class="btn_txt ico_arr"><span class="state_arr down" role="text"><em class="hidden">하락</em>11.15</span><span class="num_unit">%</span></a>
-            </div>
-        </div>
-        <div class="acc_sum_wrap">
-            <div class="acc_pay">
-                <span class="unit">잔액</span>
-                <span class="number">25,120,000</span><span class="num_unit">원</span>
-            </div>
-        </div>
-    </div>
-    <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button>
-    <div class="btn_area">
-        <span><a href="#none">입금</a></span>
-        <span><a href="#none">자동이체 등록</a></span>
-    </div>
-</div>
-     </script>
-
-     <script type="text/html">
-<div class="acc_pannel">
-    <div class="acc_wrap inc_btn">
-        <div class="acc_name">KB 금융전문인 우대대출</div>
-        <div class="acc_num"><span class="number">400407-01-023569</span></div>
-        <div class="acc_info_wrap">
-            <div class="acc_info">
-                <span class="tit">신규일</span><span class="number">2015.06.16</span>
-            </div>
-            <div class="acc_info">
-                <span class="tit">만기일</span><span class="number">2015.06.16</span>
-            </div>
-        </div>
-        <div class="acc_sum_wrap">
-            <div class="acc_pay"><span class="unit">대출잔액</span>
-                <strong class="number">3,000,000</strong><span class="num_unit">원</span>
-            </div>
-            <div class="acc_pay"><span class="unit">대출원금</span>
-                <strong class="number">5,000,000</strong><span class="num_unit">원</span>
-            </div>
-        </div>
-    </div>
-    <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button>
-    <div class="btn_area">
-        <span><a href="#none">상환</a></span>
-        <span><a href="#none">이자납부</a></span>
-    </div>
-</div>
-            </script>
-
-            <div data-class="h2">대출</div>
+            </div>  
+            <div data-class="h3">Default1 (form-rdochk.tp-data)</div>
             <script type="text/html">
-<div class="acc_list_wrap">
-    <div class="acc_pannel check">
-        <span class="selection">
-            <input type="checkbox" id="account1_1" name="account1" aria-describedby="account_1">
-            <label for="account1_1" class="label" aria-hidden="true"><em class="hidden">계좌1</em></label>
+<div class="form-group">
+    <div class="form-rdochk box tp-data">
+        <span class="form-sel on"><!-- 임시 / 개발: on 클래스 삭제 -->
+            <input type="checkbox" id="formChk01" checked><!-- 임시 / 개발: checked 속성 삭제 -->
+            <label for="formChk01" class="label">
+                입출금통장
+                <span class="descr">02819-13-123456</span>
+                <span class="numbers-18 nums-bold fc-point" role="text"><span class="num">1,000,000</span><span class="num-unit">원</span></span>
+            </label>
         </span>
-        <div class="acc_wrap inc_btn" id="account_1" aria-hidden="true">
-            <div class="acc_name">주택청약종합저축</div>
-            <div class="acc_num"><span class="number">400407-01-023569</span></div>
-            <div class="acc_info_wrap">
-                <div class="acc_info">
-                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em></em>11.15</span><span class="num_unit">%</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em></em>11.15</span><span class="num_unit">%</span>
-                </div>
-            </div>
-            <div class="acc_sum_wrap">
-                <div class="acc_pay"><span class="unit">잔액</span>
-                    <strong class="number fc_posi">25,120,000</strong><span class="num_unit">원</span>
-                </div>
-            </div>
-        </div>
-        <button type="button" class="btn_menu" aria-describedby="account_1"><span class="ico_menu"></span><span class="hidden">메뉴</span></button>
-    </div>
-    <div class="acc_pannel check">
-        <span class="selection">
-            <input type="checkbox" id="account1_1" name="account1" aria-describedby="account_2">
-            <label for="account1_1" class="label" aria-hidden="true"><em class="hidden">계좌2</em></label>
+        <span class="form-sel">
+            <input type="checkbox" id="formChk02">
+            <label for="formChk02" class="label">
+                입출금통장
+                <span class="descr">02819-13-123456</span>
+                <span class="numbers-18 nums-bold fc-point" role="text"><span class="num">1,000,000</span><span class="num-unit">원</span></span>
+            </label>
         </span>
-        <div class="acc_wrap inc_btn" id="account_2" aria-hidden="true">
-            <div class="acc_name">주택청약종합저축</div>
-            <div class="acc_num"><span class="number">400407-01-023569</span></div>
-            <div class="acc_info_wrap">
-                <div class="acc_info">
-                    <span class="tit">신규일</span><span class="number">2015.06.16</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">만기일</span><span class="number">2015.06.16</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em></em>11.15</span><span class="num_unit">%</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em></em>11.15</span><span class="num_unit">%</span>
-                </div>
-            </div>
-            <div class="acc_sum_wrap">
-                <div class="acc_pay"><span class="unit">잔액</span>
-                    <strong class="number fc_posi">25,120,000</strong><span class="num_unit">원</span>
-                </div>
-            </div>
-        </div>
-        <button type="button" class="btn_menu" aria-describedby="account_2"><span class="ico_menu"></span><span class="hidden">메뉴</span></button>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-rdochk box tp-data">
+        <span class="form-sel on"><!-- 임시 / 개발: on 클래스 삭제 -->
+            <input type="radio" id="formChk011" name="formChk" checked><!-- 임시 / 개발: checked 속성 삭제 -->
+            <label for="formChk011" class="label">
+                입출금통장
+                <span class="descr">02819-13-123456</span>
+                <span class="numbers-18 nums-bold fc-point" role="text"><span class="num">1,000,000</span><span class="num-unit">원</span></span>
+            </label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="formChk022" name="formChk">
+            <label for="formChk022" class="label">
+                입출금통장
+                <span class="descr">02819-13-123456</span>
+                <span class="numbers-18 nums-bold fc-point" role="text"><span class="num">1,000,000</span><span class="num-unit">원</span></span>
+            </label>
+        </span>
+    </div>
+</div>
+
+            </script>
+
+            <div data-class="h3">Default2 (form-rdochk.order)</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-rdochk box order">
+        <span class="form-sel">
+            <input type="checkbox" id="traOrder1" checked>
+            <label for="traOrder1" class="label">
+                <i class="ci-24x bk-004"></i>
+                KB국민은행<span class="descr">KB종합통장 01234121231567</span>
+            </label>
+            <span class="ord"><span class="hidden">이체순서</span>1</span><!-- 개발: 이체순서대로 ord-1 ~ 4 클래스 추가(최대4) -->
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="traOrder2">
+            <label for="traOrder2" class="label">
+                <i class="ci-24x bk-090"></i>
+                카카오뱅크<span class="descr">입출금통장 01234121231879</span>
+            </label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="traOrder3" checked>
+            <label for="traOrder3" class="label">
+                <i class="ci-24x bk-004"></i>
+                KB국민은행<span class="descr">KB종합통장 01234121231567</span>
+            </label>
+            <span class="ord"><span class="hidden">이체순서</span>2</span><!-- 개발: 이체순서대로 ord-1 ~ 4 클래스 추가(최대4) -->
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="traOrder4">
+            <label for="traOrder4" class="label">
+                <i class="ci-24x bk-090"></i>
+                카카오뱅크<span class="descr">입출금통장 01234121231879</span>
+            </label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="traOrder5" checked>
+            <label for="traOrder5" class="label">
+                <i class="ci-24x bk-092"></i>
+                토스은행<span class="descr">입출금통장 01234121231879</span>
+            </label>
+            <span class="ord"><span class="hidden">이체순서</span>4</span><!-- 개발: 이체순서대로 ord-1 ~ 4 클래스 추가(최대4) -->
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="traOrder6" checked>
+            <label for="traOrder6" class="label">
+                <i class="ci-24x bk-092"></i>
+                토스은행<span class="descr">입출금통장 01234121231879</span>
+            </label>
+            <span class="ord"><span class="hidden">이체순서</span>3</span><!-- 개발: 이체순서대로 ord-1 ~ 4 클래스 추가(최대4) -->
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="traOrder7">
+            <label for="traOrder7" class="label">
+                <i class="ci-24x bk-092"></i>
+                토스은행<span class="descr">입출금통장 01234121231879</span>
+            </label>
+        </span>
     </div>
 </div>
             </script>
-            <div data-class="h2">펀드</div>
+
+            <div data-class="h3">Transform Default(Left)</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>기본구조 : chk-card-wrap > chk-card(체크박스) or chk-card.rdo(라디오)</div>
+                    <div>(체크박스)선택 비활성화: already, disable 클래스 사용</div>
+                    <div>(라디오)선택 비활성화: disable 클래스 사용</div>
+                    <div>선택 비활성화시에는 role 속성값을 "text"로 변경하고 aria-disabled 속성을 추가해야함 (접근성 고려)</div>
+                </div>
+            </div> 
             <script type="text/html">
-<div class="acc_pannel js_card_toggle">
-    <div class="acc_wrap">
-        <div class="acc_name">로보 쌤 적극투자형 포트폴리오</div>
+<div class="chk-card-wrap">
+    <div class="chk-card" role="checkbox" aria-labelledby="chkCard01"><!-- 개발: aria-labelledby 추가(접근성) -->
+        <div class="chk-inr" id="chkCard01" aria-hidden="true"><!-- 개발: aria-labelledby와 id 연결(접근성) -->
+            <div class="item-name">보통예금 (IBK 평생한가족통장)</div>
+            <div class="item-desc">01234121234567</div>
+            <div class="item-desc gap-xxs">신규일 : 2020.01.05</div>
+            <div class="item-desc">만기일 : 2025.01.04</div>
+            <div class="numbers-18 nums-bold fc-point" role="text"><span class="num">1,000,000</span><span class="num-unit">원</span></div>
+        </div>
     </div>
-    <div class="btn_area">
-        <span><a href="#none">포트폴리오 일괄입금</a></span>
+    <div class="chk-card" role="checkbox" aria-labelledby="chkCard01-1">
+        <div class="chk-inr" id="chkCard01-1" aria-hidden="true">
+            <div class="item-name">입출금통장</div>
+            <div class="item-desc">02819-13-123456</div>
+            <div class="item-desc lg">해지일 : 2022.12.17</div>
+        </div>
     </div>
-    <div class="btn_acco_wrap">
-        <button type="button" class="btn_txt ico_arrdown sm" aria-expanded="false">포트폴리오 상세</button>
+</div>
+<br>
+<br>
+<div class="chk-card-wrap" role="radiogroup">
+    <div class="chk-card rdo checked" role="radio" aria-labelledby="rdoChkCard01" aria-checked="true">
+        <div class="chk-inr" id="rdoChkCard01" aria-hidden="true">
+            <div class="item-name">입출금통장</div>
+            <div class="item-desc">02819-13-123456</div>
+            <div class="item-desc gap-xxs">신규일 : 2022.12.17</div>
+            <div class="numbers-18 nums-bold" role="text"><span class="num">1,234,567</span><span class="num-unit">원</span></div>
+        </div>
     </div>
-    <div class="toggle_panel">
-        <ul class="list_comp noline">
+    <div class="chk-card rdo disable" role="text" aria-labelledby="rdoChkCard02" aria-disabled="true"><!-- 개발: 선택 비활성화시 role 변경, disable 클래스 및 aria-disabled 추가 -->
+        <div class="chk-inr" id="rdoChkCard02" aria-hidden="true">
+            <div class="item-name">입출금통장<span class="badge line-normal">처리중</span></div>
+            <div class="item-desc">02819-13-123456</div>
+            <div class="item-desc gap-xxs">신규일 : 2022.12.17</div>
+            <div class="numbers-18 nums-bold" role="text"><span class="num">1,234,567</span><span class="num-unit">원</span></div>
+        </div>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h3">Transform Right</div>
+            <script type="text/html">
+<div class="chk-card-wrap">
+    <div class="chk-card r" role="checkbox" aria-labelledby="chkCard02"><!-- 개발: aria-labelledby 추가(접근성) -->
+        <div class="chk-inr" id="chkCard02" aria-hidden="true"><!-- 개발: aria-labelledby와 id 연결(접근성) -->
+            <div class="item-deco">
+                <span class="badge state-prod01">입출금</span>
+            </div>
+            <div class="item-name">보통예금 (IBK 평생한가족통장)</div>
+            <div class="item-desc">01234121234567</div>
+            <div class="numbers-18 nums-bold" role="text"><span class="num">1,000,000</span><span class="num-unit">원</span></div>
+        </div>
+    </div>
+    <div class="chk-card r already" role="text" aria-labelledby="chkCard02-1" aria-disabled="true"><!-- 개발: 선택 비활성화시 role 변경, disable 클래스 및 aria-disabled 추가 -->
+        <div class="chk-inr" id="chkCard02-1" aria-hidden="true">
+            <div class="item-deco">
+                <span class="badge state-prod02">예금&middot;적금</span>
+                <span class="badge line-posi">연결완료</span>
+            </div>
+            <div class="item-name">적금</div>
+            <div class="item-desc">01234121234567</div>
+            <div class="numbers-18 nums-bold" role="text"><span class="num">1,000,000</span><span class="num-unit">원</span></div>
+        </div>
+    </div>
+    <div class="chk-card r disable" role="text" aria-labelledby="chkCard02-2" aria-disabled="true"><!-- 개발: 선택 비활성화시 role 변경, disable 클래스 및 aria-disabled 추가 -->
+        <div class="chk-inr" id="chkCard02-2" aria-hidden="true">
+            <div class="item-deco">
+                <span class="badge state-prod03">수익증권</span>
+                <span class="txt">비활동성</span>
+                <span class="badge line-nega">연결불가</span>
+            </div>
+            <div class="item-name">입출금통장</div>
+            <div class="item-desc">01234121234567</div>
+            <div class="numbers-18 nums-bold" role="text"><span class="num">1,000,000</span><span class="num-unit">원</span></div>
+        </div>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h3">Transform Mix</div>
+            <script type="text/html">
+<div class="item-wrap chk-bundle">
+    <div class="bg-item-box type2 checked " role="checkbox" aria-labelledby="chkItem01" aria-checked="true"><!-- 임시 / 개발: checked 클래스 및 aria-checked 속성 삭제(선택시 스타일) -->
+        <div id="chkItem01" aria-hidden="true">
+            <i class="ci-24x bk-003"></i>
+            <div class="item-txt">기업은행</div>
+            <div class="item-deco" role="text"><span class="hidden">조회된 항목</span>1</div>
+        </div>
+    </div>
+
+    <div class="chk-card-wrap">
+        <div class="chk-card chk-none active" role="text"><!-- 임시 / 개발: active 클래스 삭제(선택시 스타일) -->
+            <div class="chk-inr">
+                <div class="item-deco">
+                    <span class="badge state-prod01">본인/신용</span>
+                </div>
+                <div class="item-name">플래티늄카드</div>
+                <div class="item-desc">1234-1***-****-1234</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="item-wrap chk-bundle">
+    <div class="bg-item-box type2 " role="text" aria-labelledby="chkItem03"><!-- 개발: 연결완료 시 role 속성 text로 변경 -->
+        <div id="chkItem03" aria-hidden="true">
+            <i class="ci-24x bk-020"></i>
+            <div class="item-txt">우리카드</div>
+            <div class="item-deco" role="text"><span class="hidden">조회된 항목</span>1</div>
+            <span class="badge line-posi">연결완료</span>
+        </div>
+    </div>
+
+    <div class="chk-card-wrap">
+        <div class="chk-card chk-none disable" role="text"><!-- 개발: 연결불가 시 disable 클래스 추가 -->
+            <div class="chk-inr">
+                <div class="item-deco">
+                    <span class="badge state-prod01">본인/신용</span>
+                    <span class="txt">휴면</span>
+                </div>
+                <div class="item-name">좋은 친구카드</div>
+                <div class="item-desc">1234-1***-****-1234</div>
+            </div>
+        </div>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h3">Toggle Mix</div>
+            <script type="text/html">
+<div class="toggle-wrap chk-list">
+    <div class="toggle-box">
+        <div class="toggle-item" role="checkbox" aria-labelledby="chk1"><!-- 개발: aria-labelledby 추가(접근성) -->
+            <div class="toggle-label" id="chk1" aria-hidden="true"><!-- 개발: aria-labelledby와 id 연결(접근성) -->
+                <div class="item-name">지방세 관악구<span class="badge state-posi">예정</span></div>
+                <div class="item-desc">2023.01.15까지</div>
+                <div class="numbers-18 nums-bold fc-point" role="text"><span class="num-unit">총</span><strong class="num">23,000</strong><span class="num-unit">원</span></div>
+            </div>
+        </div>
+        <button type="button" class="toggle-btn" data-ui="toggle" aria-expanded="false" aria-controls="toggleChkItem1" title="상세보기"><i class="arrow"></i></button>
+    </div>
+    <div id="toggleChkItem1" class="toggle-panel">
+        <ul class="lists data">
             <li>
-                <div class="acc_pannel check">
-                    <span class="selection">
-                        <input type="checkbox" id="account1_1" name="account1">
-                        <label for="account1_1" class="label"><em class="hidden">계좌1 선택</em></label>
-                    </span>
-                    <div class="acc_wrap">
-                        <div class="acc_name">NH-Amundi 하나로단기채 증권<br>증권투자 신탁(채권) CE</div>
-                        <div class="acc_num"><span class="number">400407-01-023569</span></div>
-                        <div class="acc_info_wrap">
-                            <div class="acc_info">
-                                <span class="tit">신규일</span><span class="number">2015.06.16</span>
-                            </div>
-                            <div class="acc_info">
-                                <span class="tit">만기일</span><span class="number">2015.06.16</span>
-                            </div>
-                            <div class="acc_info">
-                                <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em></em>11.15</span><span class="num_unit">%</span>
-                            </div>
-                            <div class="acc_info">
-                                <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em></em>11.15</span><span class="num_unit">%</span>
-                            </div>
-                        </div>
-                        <div class="acc_sum_wrap">
-                            <div class="acc_pay"><span class="unit">평가액 USD</span>
-                                <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button>
+                <div class="key">납세번호</div>
+                <div class="value">12345-1234-123456789</div>
+            </li>
+            <li>
+                <div class="key">전자납부번호</div>
+                <div class="value">1234-123-123456</div>
+            </li>
+            <li>
+                <div class="key">수납기관</div>
+                <div class="value">관악구</div>
+            </li>
+            <li>
+                <div class="key">세목명</div>
+                <div class="value">지방소득세 종합소득분</div>
+            </li>
+            <li>
+                <div class="key">고지구분</div>
+                <div class="value">신고분</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="toggle-wrap chk-list on"><!-- 임시 / 개발: on 클래스 삭제 -->
+    <div class="toggle-box">
+        <div class="toggle-item checked" role="checkbox" aria-labelledby="chk2"><!-- 개발: aria-labelledby 추가(접근성) --> <!-- 임시 / 개발: checked 속성 삭제 -->
+            <div class="toggle-label" id="chk2" aria-hidden="true"><!-- 개발: aria-labelledby와 id 연결 및 aria-hidden 추가(접근성) -->
+                <div class="item-name">지방세 관악구<span class="badge state-posi">예정</span></div>
+                <div class="item-desc">2023.01.15까지</div>
+                <div class="numbers-18 nums-bold fc-point" role="text"><span class="num-unit">총</span><strong class="num">23,000</strong><span class="num-unit">원</span></div>
+            </div>
+        </div>
+        <button type="button" class="toggle-btn on" data-ui="toggle" aria-expanded="false" aria-controls="toggleChkItem2" title="상세보기"><i class="arrow"></i></button><!-- 임시 / 개발: on 클래스 삭제 -->
+    </div>
+    <div id="toggleChkItem2" class="toggle-panel" style="display:block;"><!-- 임시 / 개발: style 속성 삭제 -->
+        <ul class="lists data">
+            <li>
+                <div class="key">납세번호</div>
+                <div class="value">12345-1234-123456789</div>
+            </li>
+            <li>
+                <div class="key">전자납부번호</div>
+                <div class="value">1234-123-123456</div>
+            </li>
+            <li>
+                <div class="key">수납기관</div>
+                <div class="value">관악구</div>
+            </li>
+            <li>
+                <div class="key">세목명</div>
+                <div class="value">지방소득세 종합소득분</div>
+            </li>
+            <li>
+                <div class="key">고지구분</div>
+                <div class="value">신고분</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="toggle-wrap chk-list">
+    <div class="toggle-box">
+        <div class="toggle-item" role="checkbox" aria-labelledby="chk3"><!-- 개발: aria-labelledby 추가(접근성) -->
+            <div class="toggle-label" id="chk3" aria-hidden="true"><!-- 개발: aria-labelledby와 id 연결 및 aria-hidden 추가(접근성) -->
+                <div class="item-desc">22년 5월분 납부금액<span class="badge state-nega">체납</span></div>
+                    <div class="numbers-18 nums-bold" role="text"><span class="num">53,000</span><span class="num-unit">원</span></div>
+            </div>
+        </div>
+        <button type="button" class="toggle-btn" data-ui="toggle" aria-expanded="false" aria-controls="toggleChkItem3" title="상세보기"><i class="arrow"></i></button>
+    </div>
+    <div id="toggleChkItem3" class="toggle-panel">
+        <ul class="lists data">
+            <!-- 체납내역 있을 경우 노출 -->
+            <li>
+                <div class="key">체납기간</div>
+                <div class="value">2022.11 ~ 2022.12(2개월)</div>
+            </li>
+            <!-- 체납내역 있을 경우 노출 -->
+            <li>
+                <div class="key">지로번호</div>
+                <div class="value">0125896</div>
+            </li>
+            <li>
+                <div class="key">고객번호</div>
+                <div class="value">0886954532</div>
+            </li>
+            <li>
+                <div class="key">납부자명</div>
+                <div class="value">김저축</div>
+            </li>
+            <li>
+                <div class="key">수납기관</div>
+                <div class="value">한국전력공사</div>
+            </li>
+            <li>
+                <div class="key">수납기관 연락처</div>
+                <div class="value">1899-6300</div>
+            </li>
+        </ul>
+    </div>
+</div>
+            </script>
+
+
+            
+
+            <div data-class="h3">체크, 라디오 우측정렬 및 상하가운데 정렬</div>
+            <script type="text/html">
+<div class="item-wrap chk-bundle bundle-2">
+    <div class="bg-item-box type3 checked " role="checkbox" aria-labelledby="chkItem01" aria-checked="true"><!-- 임시 / 개발: checked 클래스 및 aria-checked 속성 삭제(선택시 스타일) -->
+        <div id="chkItem01" aria-hidden="true">
+            <i class="ci-40x bk-004"></i>
+            <div class="item-txt">
+                KB국민은행 
+                <div class="item-deco" role="text"><span class="hidden">조회된 항목</span>4</div>
+                <p class="p-sub">01234121234567</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="boxs line gap-xs">
+        <ul class="lists auto">
+            <li>
+                <div class="form-sel sm reverse">
+                    <input type="checkbox" id="term1-1" name="chk" checked>
+                    <label for="term1-1" class="label" title="바로가기" aria-hidden="true">서울도시가스㈜</label>
                 </div>
             </li>
             <li>
-                <div class="acc_pannel check">
-                    <span class="selection">
-                        <input type="checkbox" id="account1_1" name="account1">
-                        <label for="account1_1" class="label"><em class="hidden">계좌1 선택</em></label>
-                    </span>
-                    <div class="acc_wrap">
-                        <div class="acc_name">NH-Amundi 하나로단기채 증권<br>증권투자 신탁(채권) CE</div>
-                        <div class="acc_num"><span class="number">400407-01-023569</span></div>
-                        <div class="acc_info_wrap">
-                            <div class="acc_info">
-                                <span class="tit">신규일</span><span class="number">2015.06.16</span>
-                            </div>
-                            <div class="acc_info">
-                                <span class="tit">만기일</span><span class="number">2015.06.16</span>
-                            </div>
-                            <div class="acc_info">
-                                <span class="tit">수익률</span><span class="state_arr up" role="text"><em class="hidden">상승</em></em>11.15</span><span class="num_unit">%</span>
-                            </div>
-                            <div class="acc_info">
-                                <span class="tit">수익률</span><span class="state_arr down" role="text"><em class="hidden">하락</em></em>11.15</span><span class="num_unit">%</span>
-                            </div>
-                        </div>
-                        <div class="acc_sum_wrap">
-                            <div class="acc_pay"><span class="unit">평가액 USD</span>
-                                <strong class="number">25,120,000</strong><span class="num_unit">원</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button>
+                <div class="form-sel sm reverse">
+                    <input type="checkbox" id="term1-2" name="chk">
+                    <label for="term1-2" class="label" title="바로가기" aria-hidden="true">네이버파이낸셜</label>
+                </div>
+            </li>
+            <li>
+                <div class="form-sel sm reverse">
+                    <input type="checkbox" id="term1-3" name="chk">
+                    <label for="term1-3" class="label" title="바로가기" aria-hidden="true">카카오페이</label>
+                </div>
+            </li>
+            <li>
+                <div class="form-sel sm reverse">
+                    <input type="checkbox" id="term1-4" name="chk" disabled checked>
+                    <label for="term1-4" class="label" title="바로가기" aria-hidden="true">케이비국민카드(국민카드)</label>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="item-wrap">
+    <div class="bg-item-box type3 checked" data-rock="true" aria-labelledby="rdoItem01">
+        <div id="rdoItem01" aria-hidden="true">
+            <i class="ci-40x bk-004"></i>
+            <div class="item-txt">
+                KB국민은행 
+                <div class="item-deco" role="text"><span class="hidden">조회된 항목</span>4</div>
+                <p class="p-sub">01234121234567</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="boxs line gap-xs">
+        <ul class="lists auto">
+            <li>
+                <div class="form-sel sm reverse">
+                    <input type="radio" id="termAA1-1" name="rdo" checked>
+                    <label for="termAA1-1" class="label" title="바로가기" aria-hidden="true">
+                        KB국민은행 (이보라)<br>KB국민은행 (이보라)<br>KB국민은행 (이보라)
+                        <span class="p-sub">매월 01일, 100,000원</span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-sel sm reverse">
+                    <input type="radio" id="termAA1-2" name="rdo">
+                    <label for="termAA1-2" class="label" title="바로가기" aria-hidden="true">
+                        IBK기업은행 (이보라)
+                        <span class="p-sub">매월 01일, 100,000원</span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-sel sm reverse">
+                    <input type="radio" id="termAA1-3" name="rdo">
+                    <label for="termAA1-3" class="label" title="바로가기" aria-hidden="true">
+                        카카오뱅크 (이보라)
+                        <span class="p-sub">매월 01일, 100,000원</span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-sel sm reverse">
+                    <input type="radio" id="termAA1-4" name="rdoAnoCase" disabled checked>
+                    <label for="termAA1-4" class="label" title="바로가기" aria-hidden="true">
+                        케이뱅크 (이보라)
+                        <span class="p-sub">매월 01일, 100,000원</span>
+                    </label>
                 </div>
             </li>
         </ul>
     </div>
 </div>
             </script>
-            <div data-class="h2">보험</div>
+
+            
+            <div data-class="h3">체크, 라디오 우측정렬 및 상하가운데 정렬</div>
             <script type="text/html">
-<div class="acc_list_wrap">
-    <div class="acc_pannel">
-        <div class="acc_wrap inc_btn">
-            <div class="acc_name big">(무)라이프플래닛b저축보험IV</div>
-            <div class="acc_company">교보라이프플래닛</div>
-            <div class="acc_info_wrap">
-                <div class="acc_info">
-                    <span class="tit">공시이율</span><span class="number fc_posi">2.18</span><span class="num_unit">%</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">월납</span><span class="number">300,000</span><span class="num_unit">원</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">연금 개시나이</span><span class="number">65</span><span class="num_unit">세</span>
-                </div>
-                <div class="acc_info">
-                    <span class="tit">예상 적립액</span><span class="number">114,580,250</span><span class="num_unit">원</span>
-                </div>
-            </div>
-            <div class="acc_sum_wrap">
-                <div class="acc_pay"><span class="unit">환급률</span>
-                    <strong class="number fc_nega">144,83</strong><span class="num_unit">%</span>
-                </div>
-            </div>
-        </div>
-        <button type="button" class="btn_menu"><span class="ico_menu"></span><span class="hidden">메뉴 더보기</span></button>
-        <div class="btn_area">
-            <span><a href="#none">상세보기</a></span>
-        </div>
+<div class="card-wrap" role="button" title="상세보기">
+    <div class="card-head fit reverse">
+        <div class="state-msg ico-move-pay">자동납부</div>
+        <span class="items-ea">10건</span>
+        <span class="ico-arr-right state-btn"></span>
     </div>
-    <div class="acc_pannel">
-        <div class="acc_wrap">
-            <div class="acc_name bold">(무)라이프플래닛b저축보험IV</div>
-            <div class="acc_company">교보라이프플래닛</div>
-            <div class="acc_txt fc_nega">간편설계 결과를 가져오지 못하였습니다.<br>
-                실제 설계를 통해 확인해보세요.
+    <div class="card-info sepe-line-dark">
+        <p class="fc-sub">보험료, 통신비, 가스요금, 카드대금 등 상품이나 서비스 이용 비용을 납부하는 건</p>
+    </div>
+</div>
+            </script>
+
+            
+
+            <div data-class="h2">Box</div>
+            <div data-class="h3">Bg simple</div>
+            <script type="text/html">
+<div class="bg-txt-box">
+    <p class="p">출국사실을 확인하기 위해서는 개인정보보호법 제15조(개인정보수집.이용) 및 제 18조(개인정보의 이용?제공 제한)에 따라 고객님의 주민등록번호 및 성명을 출국정보 조회 시스템을 운영하고 있는 금융결제원을 통하여 법무부 출입국관리사무소로 전송하고, 확인 받는 것에 대해여 동의해 주시기 바랍니다.</p>
+</div>
+<br>
+<div class="bg-item-box">
+    <strong>서울수도사업소</strong> 수납기관번호 56342354
+</div>
+<div class="bg-item-box type2" style="margin-bottom:4rem"><!-- style 임시 넣음. 작업시 삭제 -->
+    <i class="ci-24x st-243"></i>
+    <div class="item-txt">한국투자증권</div>
+    <div class="item-deco" role="text"><span class="hidden">조회된 항목</span> 2</div>
+</div>
+<div class="bg-item-box type2 light-blue">
+    <div class="item-txt">2023.03.26</div>
+</div>
+            </script>
+
+            <div data-class="h3">Round</div>
+            <div data-class="box">
+                <ul>
+                    <li><strong>.boxs :</strong> Border-radius: 1.2rem / padding:2.4rem</li>
+                    <li><strong>.boxs2 :</strong> Border-radius: .4rem / padding:1.2rem</li>
+                </ul>
             </div>
-        </div>
-        <div class="btn_area">
-            <span><a href="#none">상세보기</a></span>
+            <script type="text/html">
+<div class="boxs round">
+    <div class="boxs-head">
+        box-head
+    </div>
+    <div class="boxs-cont">
+        <ul class="lists data">
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용<br>내용</div>
+            </li>
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+        </ul>
+        <p class="depth info">한줄 형태로 지원되는 가이드 텍스트입니다.</p>
+    </div>
+    <div class="boxs-foot">
+        <ul class="lists data">
+            <li>
+                <div class="key">타이틀</div>
+                <div class="value">내용</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<br>
+
+<div class="boxs2">
+    <ul class="lists data noline">
+        <li>
+            <div class="key">담당자</div>
+            <div class="value">홍길동</div>
+        </li>
+        <li>
+            <div class="key">담당부서</div>
+            <div class="value">부동산금융팀</div>
+        </li>
+        <li>
+            <div class="key">연락처</div>
+            <div class="value"><a href="tel: 1234-5678" class="underline" title="전화 앱으로 전환">1234-5678</a></div>
+        </li>
+    </ul>
+</div>
+            </script>
+
+            <div data-class="h3">Line & Etc</div>
+            <div data-class="box">
+                <ul>
+                    <li>기본 : line-box.etc > boxs-cont > ul > li.cont-item</li>
+                    <li>단일 : line-box.etc > boxs-cont > div.cont-item.type2</li>
+                </ul>
+            </div>
+            <script type="text/html">
+<div class="line-box etc">
+    <div class="boxs-cont">
+        <ul>
+            <li class="cont-item"><!-- 개발: 제출완료 시 on 클래스 추가 -->
+                <strong class="cont-txt">주민등록초본</strong>
+                <button type="button" class="btn ico-arr-right">서류촬영</button>
+            </li>
+            <li class="cont-item on">
+                <strong class="cont-txt">변경완료된 신분증</strong>
+                <button type="button" class="btn ico-arr-right">재촬영</button>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="line-box etc">
+    <div class="boxs-cont">
+        <div class="cont-item type2"><!-- 개발: 제출완료 시 on 클래스 추가 -->
+            <div class="top">
+                <strong class="cont-txt">양수도계약서</strong>
+                <button type="button" class="btn ico-arr-right">제출완료</button>
+                <!-- <button type="button" class="btn ico-arr-right">다시제출</button> -->
+            </div>
+            <div class="btm">
+                <p class="depth info fc-nega">분양권매매계약서를 제출해주세요.</p>
+            </div>
         </div>
     </div>
 </div>
             </script>
 
-            <div data-class="h2">신탁/ISA</div>
+            <div data-class="h3">Etc</div>
             <script type="text/html">
-<div class="acc_pannel top">
-    <div class="acc_wrap reverse"><!-- 신탁/ISA일때는 reverse 들어갑니다!!!!!!! -->
-        <div class="acc_name">
-            <button type="button" class="btn_txt ico_pencil">KB국민 만능ISA (일임형)</button>
-        </div>
-        <div class="acc_num">
-            <button type="button" class="btn_txt ico_arrdown"><span class="number">400407-01-023569</span></button>
-        </div>
+<div class="boxs line blue01">
+    <div class="align-justify add-arr" role="button">
+        이제까지 세후이자
+        <span class="numbers-18 nums-bold" role="text"><span class="num">1,500</span><span class="num-unit">원</span></span>
     </div>
-    <ul class="list_data">
-        <li>
-            <div class="key">수익률</div>
-            <div class="value"><span class="state_arr down" role="text"><em class="hidden">하락</em>11.15</span><span class="num_unit">%</span></div>
-        </li>
-        <li>
-            <div class="key">수익금액
-                <div class="tooltip_limited">
-                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
-                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
-                        <div class="tooltip_cont"> 
-                            현재 수익률은 평균잔액 기준입니다.(2018년 4월 20일 이전 수익률은 잔액 기준)<br>
-                            평균잔액 기준 수익률 = 수익금액 / 평균잔액 X 100<br>
-                            잔액 기준 수익률 = 수익금액 / 잔액 X 100
-                        </div>
-                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="value"><strong class="number fc_posi">0</strong><span class="num_unit">원</span></div>
-        </li>
-        <li>
-            <div class="key">평가금액</div>
-            <div class="value"><span class="number">20,000</span><span class="num_unit">원</span></div>
-        </li>
-        <li>
-            <div class="key">잔액
-                <div class="tooltip_limited">
-                    <p class="tooltip"><button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button></p>
-                    <div class="tooltip_wrap" role="tooltip" aria-hidden="true">
-                        <div class="tooltip_cont"> 
-                            일임형 ISA 잔액은 현재 기준이며 평가액 등은 전열업일 기준입니다.
-                        </div>
-                        <button type="button" class="btn_tooltip_x"><span class="hidden">도움말 닫기</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="value"><span class="number">20,000</span><span class="num_unit">원</span></div>
-        </li>
-        <li>
-            <div class="key">평균잔액</div>
-            <div class="value"><span class="number">12,500</span><span class="num_unit">원</span></div>
-        </li>
-    </ul>
-    <button type="button" class="btn_admin"><span class="hidden">설정</span></button>
+</div>
+
+<div class="gap-md">
+    <div class="line-box edge2">     
+        <span class="tip inline">안내메세지</span>
+    </div>
+</div>
+<br><br>
+
+<div class="line-box edge">
+    <p class="fz-16">서울특별시 강동구 성내동<br>코오롱아파트(1차)  201동 1007호</p><!-- mod-date:0327: class 수정 -->
 </div>
             </script>
+
+
+<!--             <div data-class="h3">계좌리스트</div>
+            <script type="text/html">
+<div class="card-wrap">
+    <div class="card">
+        <div class="list-name">주택청약종합저축</div>
+        <div class="acc-num">400407-01-023569</div>
+        <ul class="lists data">
+            <li>
+                <div class="key">신규일</div>
+                <div class="value">2015.06.16</div>
+            </li>
+            <li>
+                <div class="key">만기일</div>
+                <div class="value">2015.06.16</div>
+            </li>
+            <li>
+                <div class="key">수익률</div>
+                <div class="value">상승 11.15%</div>
+            </li>
+            <li>
+                <div class="key">수익률</div>
+                <div class="value">하락 11.15%</div>
+            </li>
+        </ul>
+        <div class="acc-sum right">
+            <span class="unit">잔액</span>
+            <span class="numbers">25,120,000원</span>
+        </div>
+        <div class="btns list-foot">
+            <button type="button" class="btn outline sm" title="주택청약종합저축 400407-01-023569">입금</button>
+        </div>
     </div>
+    <div class="card">
+        <div class="list-name">주택청약종합저축</div>
+        <div class="acc-num">400407-01-023569</div>
+        <ul class="lists data">
+            <li>
+                <div class="key">신규일</div>
+                <div class="value">2015.06.16</div>
+            </li>
+            <li>
+                <div class="key">만기일</div>
+                <div class="value">2015.06.16</div>
+            </li>
+            <li>
+                <div class="key">수익률</div>
+                <div class="value">상승 11.15%</div>
+            </li>
+            <li>
+                <div class="key">수익률</div>
+                <div class="value">하락 11.15%</div>
+            </li>
+        </ul>
+        <div class="acc-sum right">
+            <span class="unit">잔액</span>
+            <span class="numbers">25,120,000원</span>
+        </div>
+        <div class="btns list-foot">
+            <button type="button" class="btn outline sm" title="주택청약종합저축 400407-01-023569">입금</button>
+            <button type="button" class="btn outline sm" title="주택청약종합저축 400407-01-023569">자동이체 등록</button>
+        </div>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h3">전계좌조회</div>
+            <div data-class="box">
+                [ios 접근성 대응]<br>
+                방법1) 금액(단위붙는) 앞에 히든 수식어를 붙일 경우 상위 div에 role="text" 추가 (현재 태그 위치 변동X)<br>
+                방법2) 히든 태그를 strong 안에 위치시키고 strong에 role="text" 추가 (현재 태그 위치 수정O)
+            </div>
+            <script type="text/html">
+<div class="list-wrap-acc">
+    <div class="card">
+        <div class="list-name">KB종합통장</div>
+        <div class="acc-num">400407-01-023569</div>
+        <div class="acc-sum right">
+            <span class="unit hidden">잔액</span>
+            <span class="numbers">50,000원</span>
+        </div>
+        <div class="btns list-foot">
+            <button type="button" class="btn outline sm" title="KB종합통장 400407-01-023569">모으기</button>
+            <button type="button" class="btn outline sm" title="KB종합통장 400407-01-023569">이체</button>
+        </div>
+        <button type="button" class="btn-menu sz-32" title="KB종합통장 400407-01-023569 메뉴 더보기"><i class="ico-menu sz-24"></i></button>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h3">보험</div>
+            <script type="text/html">
+<div class="list-wrap-acc">
+    <div class="card">
+        <div class="list-name">(무)라이프플래닛b저축보험IV</div>
+        <div class="acc-company">교보라이프플래닛</div>
+        <ul class="lists data">
+            <li>
+                <div class="acc-info">
+                    <span class="tit">공시이율</span>
+                    <span class="numbers fc-posi">2.18%</span>
+                </div>
+            </li>
+            <li>
+                <div class="acc-info">
+                    <span class="tit">월납</span>
+                    <span class="numbers">300,000원</span>
+                </div>
+            </li>
+            <li>
+                <div class="acc-info">
+                    <span class="tit">연금 개시나이</span>
+                    <span class="numbers">65세</span>
+                </div>
+            </li>
+            <li>
+                <div class="acc-info">
+                    <span class="tit">예상 적립액</span>
+                    <span class="numbers">114,580,250원</span>
+                </div>
+            </li>
+        </ul>
+        <div class="acc-sum right">
+            <span class="unit">환급률</span>
+            <span class="numbers fc-nega">144,83%</span>
+        </div>
+        <div class="btns list-foot">
+            <button type="button" class="btn outline sm" title="(무)라이프플래닛b저축보험IV">상세보기</button>
+        </div>
+        <button type="button" class="btn btn-menu" title="메뉴 더보기"><i class="ico-menu"></i></button>
+    </div>
+</div>
+            </script> -->
+        </div>
     
     <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
     <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
     <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
     <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
     <script src="/pub/guide/assets/js/components.js"></script>
-    <script src="/pub/app/js/common_ui.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
 
-    <!-- <script type="text/javascript" src="/pub/app/js/library/sortable.min.js"></script>
+    <!-- <script type="text/javascript" src="/pub/assets/js/library/sortable.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-		var account_id = new Array(
+		var account-id = new Array(
 			'drag'
 		);
-		accountSetup(account_id);
+		accountSetup(account-id);
 
 		function accountSetup(id){
 			for(var i = 0; i < id.length; i++){
 				Sortable.create( document.getElementById(id[i]), {
-					handle: '.btn_move',
+					handle: '.btn-move',
 					animation: 150,
 					scrollSensitivity: 30,
 					onUpdate: function (){

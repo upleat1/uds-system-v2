@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>���ڹ�������>�������߱��ϱ�</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">���ڹ�������</h1>
+			<button type="button" class="action-prev" title="����"></button>
+			<button type="button" class="action">����</button>
+		</div>
+	</header>
+    <div class="pg-container ctf bg01">
+		<div class="pg-content wallet"><!-- @���ڹ�������: .wallet -->
+            <div class="tab-wrap fit">
+                <div class="tab-full">
+                    <div class="tab-list" role="tablist">
+                        <div class="scroll-wrap">
+                            <button type="button" role="tab" aria-selected="false" aria-controls="tabpanel1">������ �߱��ϱ�</button>
+                            <button type="button" role="tab" aria-selected="true" aria-controls="tabpanel2">�� ������</button>
+                        </div>
+                        <i class="tab-bar" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="tab-panel active" role="tabpanel" id="tabpanel2">
+                    <div class="inq-state wider type2">
+                        <div class="state-keyword">
+                            <span class="ico-search"></span>
+                            <!-- �˻��� ���̴� ���� -->
+                       <!--      <div class="view-st">
+                                <input type="search" title="������ �˻� �Է�" class="srch" placeholder="������ �˻�" value="">
+                            </div> -->
+                            <!-- �˻��� ���̴� ���� -->
+                            <div class="view-nd">
+                                <span>����</span>
+                                <button type="button" class="del" title="�˻������"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chk-card-wrap">
+                        <div class="chk-card-area">
+                            <div class="chk-card" role="checkbox" aria-labelledby="certif-1">
+                                <div class="chk-inr" id="certif-1" role="text" aria-hidden="true"><!-- ����: aria-labelledby�� id ����(���ټ�) -->
+                                    <div class="card-head fit">
+                                        <label for="certif-1" class="label state-msg">����� ������</label>
+                                    </div>
+                                    <ul class="lists data left free">
+                                        <li>
+                                            <div class="key">�߱� ����</div>
+                                            <div class="value">2023.05.18</div>
+                                        </li>
+                                    </ul>
+                                    <span class="badge line-posi state-btn">00�� ����</span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-golink" title="����� ������ �󼼺���"></button>
+                        </div>
+                        <div class="chk-card-area">
+                            <div class="chk-card" role="checkbox" aria-labelledby="certif-2">
+                                <div class="chk-inr" id="certif-2" role="text" aria-hidden="true"><!-- ����: aria-labelledby�� id ����(���ټ�) -->
+                                    <div class="card-head fit">
+                                        <label for="certif-2" class="label state-msg">����������(���� �Ǵ� ����)Ȯ�μ� (���� �Ǵ� ����)Ȯ��</label>
+                                    </div>
+                                    <ul class="lists data left free">
+                                        <li>
+                                            <div class="key">�߱� ����</div>
+                                            <div class="value">2023.05.18</div>
+                                        </li>
+                                    </ul>
+                                    <span class="badge line-posi state-btn">00�� ����</span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-golink" title="����������(���� �Ǵ� ����)Ȯ�μ� (���� �Ǵ� ����)Ȯ�� �󼼺���"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <div class="pg-content-foot">
+            <div class="inform-btm-wrap">
+                <h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>��û�� ������ ������ '���� &gt; ��û�� ������' ���� Ȯ�� �����մϴ�.</li>
+                </ul>
+            </div>
+        </div>
+	</div>
+    <div class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">������ ��������</button>
+        </div>
+    </div>
+</div>
+
+<!-- ���̾��˾� START -->
+<div id="htmlTest" class="layerHTML">
+</div>
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+    // ���������� ���������� ��� ������ �� ��� : ���ǹ����� �ش� �г��� index �� �����Ͽ� ���������� ����
+    $(document).on('click','[role="tab"]', function() {
+        if($(this).index() == 1) {
+            $(this).parents('.pg-container').addClass('bg01')
+        }else {
+            $(this).parents('.pg-container').removeClass('bg01')
+        }
+    })
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

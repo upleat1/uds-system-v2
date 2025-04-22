@@ -1,82 +1,86 @@
 [
     {
         "cateName":"메인",
-        "url":"/pub/guide/json/approval.json"
+        "url":"/pub/guide/json/MIN.json"
     },
     {
         "cateName":"조회",
-        "url":"/pub/guide/json/banking_manage.json"
+        "url":"/pub/guide/json/INQ.json"
     },
     {
         "cateName":"이체/출금",
-        "url":"/pub/guide/json/certification.json"
+        "url":"/pub/guide/json/TRA.json"
     },
     {
         "cateName":"대출신청",
-        "url":"/pub/guide/json/common.json"
+        "url":"/pub/guide/json/LON.json"
     },
     {
         "cateName":"고객센터",
-        "url":"/pub/guide/json/customer.json"
+        "url":"/pub/guide/json/CUS.json"
     },
     {
         "cateName":"공통",
-        "url":"/pub/guide/json/etc.json"
+        "url":"/pub/guide/json/CMM.json"
     },
     {
         "cateName":"카드",
-        "url":"/pub/guide/json/forex.json"
+        "url":"/pub/guide/json/CKC.json"
     },
     {
         "cateName":"금융/신용관리",
-        "url":"/pub/guide/json/funds_manage.json"
+        "url":"/pub/guide/json/CRD.json"
     },
     {
         "cateName":"인증/보안",
-        "url":"/pub/guide/json/global.json"
+        "url":"/pub/guide/json/CRT.json"
     },
     {
         "cateName":"공지사항",
-        "url":"/pub/guide/json/guide.json"
+        "url":"/pub/guide/json/NTC.json"
     },
     {
         "cateName":"혜택",
-        "url":"/pub/guide/json/inquiry.json"
+        "url":"/pub/guide/json/EVT.json"
     },
     {
         "cateName":"설정",
-        "url":"/pub/guide/json/log.json"
+        "url":"/pub/guide/json/SET.json"
     },
     {
         "cateName":"로그인",
-        "url":"/pub/guide/json/main.json"
+        "url":"/pub/guide/json/LOG.json"
     },
     {
         "cateName":"회원가입",
-        "url":"/pub/guide/json/mypage.json"
+        "url":"/pub/guide/json/JOI.json"
     },
     {
         "cateName":"외화/환전",
-        "url":"/pub/guide/json/pdt_manage.json"
+        "url":"/pub/guide/json/CHE.json"
     },
     {
         "cateName":"내정보",
-        "url":"/pub/guide/json/products.json"
+        "url":"/pub/guide/json/PIC.json"
     },
     {
         "cateName":"공과금 ",
-        "url":"/pub/guide/json/search.json"
+        "url":"/pub/guide/json/PBT.json"
     },
     {
         "cateName":"증명서 발급/제출",
-        "url":"/pub/guide/json/setting.json"
+        "url":"/pub/guide/json/CTF.json"
     },
     {
         "cateName":"사이다 부스터",
-        "url":"/pub/guide/json/transfer.json"
+        "url":"/pub/guide/json/BST.json"
     },
     {
         "cateName":"예/적금 상품가입",
-        "url":"/pub/guide/json/utility.json"
+        "url":"/pub/guide/json/DEP.json"
+    },
+    {
+        "cateName":"기타",
+        "url":"/pub/guide/json/ETC.json"
     }
 ]

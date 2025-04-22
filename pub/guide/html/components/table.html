@@ -5,116 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-    <title>Upleat Design System</title>
+    <title>유플리트</title>
     <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
     <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
     
     <!-- resource -->
-    <link rel="stylesheet" href="/pub/app/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/component.css">
 </head>
 <body>
-    <div data-class="contents">
-        <div data-class="component-name"><span>테이블</span></div>
+<div data-class="contents">
+    <div data-class="component-name"><span>테이블</span></div>
 
-        <div data-class="section">
-            <div data-class="box">
-                <div data-class="h3">가로형 테이블 1행만 있을 경우<br>
-                    - 텍스트 모두 중앙정렬</div>
-                <div data-class="h3">가로형 테이블 2행 이상<br> 
-                    - 라디오, 체크박스, 인풋요소, 버튼: 중앙정렬<br> 
-                    - 텍스트: 좌측정렬<br> 
-                    - 숫자: 우측정렬
-                </div>
-            </div>
-            <div data-class="box">
-                <div data-class="h3">
-                    td : 좌측정렬 기본<br>
-                    td.center / table.center td : 중앙정렬<br>
-                    td.right / table.right td  : 우측정렬<br>
-                    td.element : 버튼, 폼요소
-                </div>
-                <div data-class="h3">caption규칙 : 테이블 간단 설명 문구&lt;/caption&gt;</div>
-            </div>
-        </div>
-
-        <div data-class="section">
-            <div data-class="h1">Type</div>
-            <div data-class="h2">기본</div>
-<script type="text/html">
+    <!-- Type -->
+    <div data-class="section">
+        <div data-class="h1">Type</div>
+        <div data-class="h2">가로형</div>
+        <script type="text/html">
+<h3 class="ht-3">h3 타이틀</h3>
+<h4 class="ht-4">테이블 타이틀</h4>
 <div class="table">
+    <div class="table-headnote">(2023.01.16/세전)</div>
+    <!-- Case: headnote 좌,우
+    <div class="table-headnote between">
+        <div class="col">(기준: <span class="date">2021.02.19 15:37:43</span>)</div>
+        <div class="col">오른쪽 영역</div>
+    </div> -->
     <table>
         <caption>테이블 제목 정보</caption>
         <colgroup>
-            <col style="width:25%">
             <col style="width:40%">
             <col>
-        </colgroup>
-        <thead>
-            <tr>
-                <th scope="col">제목</th>
-                <th scope="col">제목</th>
-                <th scope="col">제목</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">제목</th>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-            <tr>
-                <th scope="row">제목</th>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-            <tr>
-                <th scope="row">제목</th>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-        </tbody>
-    </table>    
-</div>
-                </script>  
-
-            <div data-class="h2">가로형</div>
-            <script type="text/html">
-<h2 class="h2">타이틀</h2>
-<div class="table">
-    <table>
-        <caption>테이블 제목 정보</caption>
-        <colgroup>
-            <col style="width:50%">
             <col>
         </colgroup>
         <thead>
             <tr>
                 <th scope="col">제목</th>
                 <th scope="col">제목</th>
+                <th scope="col">제목</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>내용</td>
                 <td>내용</td>
+                <td>내용</td>
             </tr>
             <tr>
                 <td>내용</td>
-                <td class="center">내용</td>
-            </tr>
-            <tr>
                 <td>내용</td>
                 <td class="right">내용</td>
             </tr>
+            <tr>
+                <td>내용</td>
+                <td>내용</td>
+                <td class="left">내용</td>
+            </tr>
         </tbody>
     </table>   
+    <div class="table-footnote">
+        <p class="depth info">상단항목 중앙정렬 / 내용 중앙정렬 / 숫자,금액 우측정렬</p>
+    </div>
 </div>
-            </script>
 
-            <div data-class="h2">세로형</div>
-            <script type="text/html">
-<h2 class="h2">타이틀</h2>
+<h4 class="ht-4">테이블 타이틀</h4>
 <div class="table">
+    <div class="table-headnote">단위 : 원</div>
+    <table>
+        <caption>테이블 제목 정보</caption>
+        <colgroup>
+            <col style="width:40%">
+            <col style="width:25%">
+            <col>
+        </colgroup>
+        <thead>
+            <th scope="col">날짜</th>
+            <th scope="col">항목</th>
+            <th scope="col">금액</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2020.01.20</td>
+                <td>입금</td>
+                <td class="right">150,000</td>
+            </tr>
+            <tr>
+                <td>2020.01.20</td>
+                <td>출금</td>
+                <td class="right">1,2220,000,000</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="table-footnote">
+        <p class="depth info">상단항목 중앙정렬 / 내용 중앙정렬 / 숫자,금액 우측정렬</p>
+    </div>
+</div>
+        </script>
+
+        <div data-class="h2">세로형 (.table.v)</div>
+        <script type="text/html">
+<h4 class="ht-4">테이블 타이틀</h4>
+<div class="table v">
     <table>
         <caption>테이블 제목 정보</caption>
         <colgroup>
@@ -130,313 +121,186 @@
                 <th scope="row">제목</th>
                 <td>내용</td>
             </tr>
+        </tbody>
+    </table>
+</div>
+        </script> 
+
+
+        <div data-class="h2">복합형 (.table.mix)</div>
+        <script type="text/html">
+<h4 class="ht-4">테이블 타이틀</h4>
+<div class="table mix">
+    <table>
+        <caption>테이블 제목 정보</caption>
+        <colgroup>
+            <col style="width:40%">
+            <col>
+            <col>
+        </colgroup>
+        <thead>
             <tr>
-                <th scope="row">제목</th>
-                <td>내용</td>
+                <th scope="col">구분</th>
+                <th scope="col">변경 전</th>
+                <th scope="col">변경 후</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">기준금리</th>
+                <td class="right">연 5.60%</td>
+                <td class="right">연 5.60%</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    본부승인금리<br>(2020.12.12 기준)
+                </th>
+                <td class="right">연 5.60%</td>
+                <td class="right">연 5.60%</td>
             </tr>
         </tbody>
     </table>
 </div>
-            </script> 
-        </div>
 
-        <div data-class="section">
-        <div data-class="h1">정렬</div>
-
-        <div data-class="h2">Left</div>
-        <script type="text/html">
-<h2 class="h2">타이틀</h2>
-<div class="table">
-    <div class="table_top_wrap">
-        <div class="col col_l">(기준: <span class="number">2021.02.19 15:37:43</span>)</div>
-        <div class="col col_r">오른쪽 영역</div>
-    </div>
+<h4 class="ht-4">테이블 타이틀</h4>
+<div class="table mix">
     <table>
         <caption>테이블 제목 정보</caption>
         <colgroup>
-            <col style="width:50%">
+            <col style="width:25%">
+            <col>
+            <col>
             <col>
         </colgroup>
         <thead>
             <tr>
+                <th scope="col" colspan="2">구분</th>
                 <th scope="col">제목</th>
                 <th scope="col">제목</th>
             </tr>
         </thead>
         <tbody>
             <tr>
+                <th scope="row" rowspan="2">분류</th>
+                <th scope="row">소분류</th>
                 <td>내용</td>
-                <td>내용</td>
+                <td class="right">내용</td>
             </tr>
             <tr>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-            <tr>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-        </tbody>
-    </table>   
-</div>
-        </script>
-
-        <div data-class="h2">Center</div>
-        <script type="text/html">
-<h2 class="h2">타이틀</h2>
-<div class="table">
-    <div class="table_top_wrap">
-        <div class="col col_l">(기준: <span class="number">2021.02.19 15:37:43</span>)</div>
-        <div class="col col_r">오른쪽 영역</div>
-    </div>
-    <table class="center">
-        <caption>테이블 제목 정보</caption>
-        <colgroup>
-            <col style="width:50%">
-            <col>
-        </colgroup>
-        <thead>
-            <tr>
-                <th scope="col">제목</th>
-                <th scope="col">제목</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-            <tr>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-            <tr>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-        </tbody>
-    </table>   
-</div>
-        </script>
-
-        <div data-class="h2">Right</div>
-        <script type="text/html">
-<h2 class="h2">타이틀</h2>
-<div class="table">
-    <div class="table_top_wrap">
-        <div class="col col_l">(기준: <span class="number">2021.02.19 15:37:43</span>)</div>
-        <div class="col col_r">오른쪽 영역</div>
-    </div>
-    <table class="right">
-        <caption>테이블 제목 정보</caption>
-        <colgroup>
-            <col style="width:50%">
-            <col>
-        </colgroup>
-        <thead>
-            <tr>
-                <th scope="col">제목</th>
-                <th scope="col">제목</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-            <tr>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-            <tr>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-        </tbody>
-    </table>   
-</div>
-        </script>
-
-        <div data-class="h2">요소별</div>
-        <script type="text/html">
-<h2 class="h2">타이틀</h2>
-<div class="table">
-    <div class="table_top_wrap">
-        <div class="col col_l">(기준: <span class="number">2021.02.19 15:37:43</span>)</div>
-        <div class="col col_r">오른쪽 영역</div>
-    </div>
-    <table>
-        <caption>테이블 제목 정보</caption>
-        <colgroup>
-            <col style="width:50%">
-            <col>
-        </colgroup>
-        <thead>
-            <tr>
-                <th scope="col">제목</th>
-                <th scope="col">제목</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>내용</td>
-                <td>내용</td>
-            </tr>
-            <tr>
-                <td>내용</td>
-                <td class="center">내용</td>
-            </tr>
-            <tr>
+                <th scope="row" class="bdl">소분류</th>
                 <td>내용</td>
                 <td class="right">내용</td>
             </tr>
         </tbody>
-    </table>   
+    </table>
 </div>
         </script>
     </div>
+    <!-- //Type -->
 
-
-<div data-class="section">
-    <div data-class="h1">Component</div>
-    <script type="text/html">
-<h2 class="h2">타이틀</h2>
-<div class="box_line">
-    <p class="tit_sub">거래가격 기준</p>
-    <ul class="depth dash sm">
-        <li>사실 때 : 기준가격 x 중량 x ( 1 + 판매마진율 )</li>
-        <li>파실 때 : 기준가격 x 중량 x ( 1 - 판매마진율 )</li>
-    </ul>
+    <!-- Combination -->
+    <div data-class="section">
+        <div data-class="h1">Combination</div>
+        <div data-class="h2">텍스트 + 버튼(block)</div>
+        <script type="text/html">
+<h4 class="ht-4">테이블 타이틀</h4>
+<div class="table v">
+    <table>
+        <caption>테이블 제목 정보</caption>
+        <colgroup>
+            <col style="width:30%">
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">제목</th>
+                <td>내용</td>
+            </tr>
+            <tr>
+                <th scope="row">제목</th>
+                <td>
+                    내용<br>내용
+                    <div class="btns block">
+                        <button type="button" class="btn outline xs">자세히 보기</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
+        </script>
+
+        <div data-class="h2">텍스트 + 버튼(inline)</div>
+        <script type="text/html">
+<h4 class="ht-4">테이블 타이틀</h4>
+<div class="table v">
+    <table>
+        <caption>영업점안내</caption>
+        <colgroup>
+            <col style="width:30%">
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">영업시간</th>
+                <td>09:30~15:30<br>(사회적 거리두기 3단계 해제시까지)<br>주말, 공휴일 휴무</td>
+            </tr>
+            <tr>
+                <th scope="row">대표전화</th>
+                <td>
+                    1566-2210
+                    <div class="btns inline">
+                        <button type="button" class="btn outline xs">전화걸기</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">도로명주소</th>
+                <td>서울특별시 강남구 강남대로 340, 2층 (역삼동, 경원빌딩)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </script>
+
+        <div data-class="h2">테이블 버튼</div>
+        <script type="text/html">
+<h4 class="ht-4">테이블 타이틀</h4>
 <div class="table">
     <table>
         <caption>테이블 제목 정보</caption>
         <colgroup>
-            <col style="width:50%">
+            <col style="width:70%">
             <col>
         </colgroup>
-        <thead>
-            <tr>
-                <th scope="col">제목</th>
-                <th scope="col">제목</th>
-            </tr>
-        </thead>
         <tbody>
             <tr>
-                <td>내용</td>
-                <td>내용</td>
+                <th scope="col">제목<br>(제목 두줄 케이스)</th>
+                <th scope="col">제목</th>
             </tr>
             <tr>
-                <td>내용</td>
-                <td class="center">내용</td>
+                <td class="left">내용</td>
+                <td>
+                    <button type="button" class="btn outline xs">자세히 보기</button>
+                </td>
             </tr>
             <tr>
-                <td>내용</td>
-                <td class="right">내용</td>
+                <td class="left">내용<br>(내용 두줄 케이스)</td>
+                <td>
+                    <button type="button" class="btn outline xs">자세히 보기</button>
+                </td>
             </tr>
         </tbody>
-    </table>   
-    <p class="depth info">작업코드명은 0000기준을 따릅니다.</p> 
+    </table>
 </div>
-    </script>
-
-
-    <script type="text/html">
-<h2 class="h2">타이틀</h2>
-<ul class="depth bul">
-    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
-    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. </li>
-</ul>
-<div class="table">
-    <div class="table_top_wrap">
-        <div class="col col_l">(기준: <span class="number">2021.02.19 15:37:43</span>)</div>
-        <div class="col col_r">오른쪽 영역</div>
+        </script>
     </div>
-    <table>
-        <caption>테이블 제목 정보</caption>
-        <colgroup>
-            <col style="width:20%">
-            <col style="width:40%">
-            <col>
-        </colgroup>
-        <thead>
-            <tr>
-                <th scope="col">제목</th>
-                <th scope="col">제목</th>
-                <th scope="col">제목<br>(타이틀 2줄 케이스)</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>합계</th>
-                <td class="right"><span class="number">123,456,789</span><span class="num_unit">원</span></td>
-                <td class="center">-</td>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td>
-                    내용
-                    <div class="btn_wrap v gap_xxs">
-                        <span><a href="#none" class="btn outline xs">바로가기</a></span>
-                    </div>
-                </td>
-                <td class="center">내용</td>
-                <td class="element"><a href="#none" class="btn outline xs">바로가기</a></td>
-            </tr>
-            <tr>
-                <td>
-                    내용
-                    <div class="btn_wrap v gap_xxs">
-                        <span><a href="#none" class="btn outline xs">바로가기</a></span>
-                        <span><a href="#none" class="btn outline xs">바로가기</a></span>
-                    </div>
-                </td>
-                <td class="center">내용</td>
-                <td class="element"><a href="#none" class="btn outline xs">바로가기</a></td>
-            </tr>
-            <tr>
-                <td class="element">
-                    <span class="selection">
-                        <input type="radio" id="radio1_1" name="radio1" checked>
-                        <label for="radio1_1" class="label"><em class="hidden">단독사용</em></label>
-                    </span>
-                </td>
-                <td class="center">내용</td>
-                <td class="element"><a href="#none" class="btn outline xs">바로가기</a></td>
-            </tr>
-            <tr>
-                <td class="element">
-                    <span class="selection">
-                        <input type="radio" id="radio1_1" name="radio1">
-                        <label for="radio1_1" class="label"><em class="hidden">단독사용</em></label>
-                    </span>
-                </td>
-                <td class="right"><span class="number">2.43</span><span class="num_unit">%</span></td>
-                <td class="element"><a href="#none" class="btn outline xs">바로가기</a></td>
-            </tr>
-            <tr>
-                <td class="element">
-                    <span class="selection">
-                        <input type="radio" id="radio1_1" name="radio1">
-                        <label for="radio1_1" class="label"><em class="hidden">단독사용</em></label>
-                    </span>
-                </td>
-                <td class="right"><span class="number">123,456,789</span><span class="num_unit">원</span></td>
-                <td class="element"><a href="#none" class="btn outline xs">바로가기</a></td>
-            </tr>
-        </tbody>
-    </table>    
-</div>
-<!-- //table -->
-                </script>
-            </div>
     
     <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
     <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
     <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
     <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
     <script src="/pub/guide/assets/js/components.js"></script>
-    <script src="/pub/app/js/common_ui.js"></script>
+<script src="/pub/assets/js/common-ui.js"></script>
 </body>
 </html>

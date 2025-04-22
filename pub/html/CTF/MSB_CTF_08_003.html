@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>���°���Ȯ�μ�</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">���°���Ȯ�μ�</h1>
+			<button type="button" class="action-prev" title="����"></button>
+		</div>
+	</header>
+    <div class="pg-container ctf">
+		<div class="pg-content">
+			<h2 class="ht-2"><strong>�߱��� ���¸�</strong> �������ּ���</h2>
+			<div class="section">
+                <div class="form-group">
+                    <div class="form-label fz-16">���¼���</div>
+                    <div class="form-rdochk box tp-data">
+                        <span class="form-sel">
+                            <input type="radio" id="midA31" name="radioChk01" checked><!-- �ӽ� / ����: checked �Ӽ� ���� --> <!-- mod-date:0412: type ���� �� name �Ӽ� �߰� -->
+                            <label for="midA31" class="label"><!-- mod-date:1220: [���ټ�] role���� --><!-- mod-date:0330: role�߰�(���ټ�) -->
+                                ���������
+                                <span class="descr">02819-13-123456</span>
+                                <span class="numbers-18 nums-bold fc-point" role="text"><span class="num">28,000,000</span><span class="num-unit">��</span></span>
+                            </label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="midA32" name="radioChk01"> <!-- mod-date:0412: type ���� �� name �Ӽ� �߰� -->
+                            <label for="midA32" class="label"><!-- mod-date:1220: [���ټ�] role���� --><!-- mod-date:0330: role�߰�(���ټ�) -->
+                                ���������
+                                <span class="descr">02819-13-123456</span>
+                                <span class="numbers-18 nums-bold fc-point" role="text"><span class="num">28,000,000</span><span class="num-unit">��</span></span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+			</div>
+
+            <!-- ��ȸ���X -->
+            <div class="result nodata">
+                <p class="tit">�������� �߱��� �� �ִ� ���°� �����.</p>
+            </div>
+            <!-- //��ȸ���X -->
+		</div>
+	</div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary" data-ui="pop-open" onclick="UICommon.Layer.open('#checkInfo');">��û�ϱ�</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- ����Ȯ�� �˾� -->
+<div id="checkInfo" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>YYYY.MM.DD ���� ���°���Ȯ�μ� 1���� PC�� �߱��Ͻðھ��?</h1>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn secondary">�ƴϿ�</button>
+                <button type="button" class="btn primary">��</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //����Ȯ�� �˾� -->
+
+<!-- ���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,80 @@
+[
+    {
+        "directory": "/pub/html/BST"
+    },
+    {
+        "state": null,
+        "id": "MSB_BST_01_001",
+        "type": "본창",
+        "depth1": "사이다 부스터",
+        "depth2": "메인",
+        "depth3": null,
+        "depth4": null,
+        "name": "메인",
+        "worker": "김용호",
+        "workdate": "2023-04-28",
+        "change": "2023-11-14",
+        "complete": "완료",
+        "etc": ["1114: 경로변경","0927: [접근성] title추가","0519: 태그수정, 속성추가", "0509 마크업 수정"]
+    },
+    {
+        "state": null,
+        "id": "MSB_BST_01_005",
+        "type": "본창",
+        "depth1": "사이다 부스터",
+        "depth2": "태그목록",
+        "depth3": null,
+        "depth4": null,
+        "name": "모아보기",
+        "worker": "김용호",
+        "workdate": "2023-04-28",
+        "change": "2023-11-14",
+        "complete": "완료",
+        "etc": ["1114: 경로변경","0509 마크업 수정"]
+    },
+    {
+        "state": null,
+        "id": "MSB_BST_01_002",
+        "type": "본창",
+        "depth1": "사이다 부스터",
+        "depth2": "모아보기",
+        "depth3": null,
+        "depth4": null,
+        "name": "모아보기",
+        "worker": "김용호",
+        "workdate": "2023-04-28",
+        "change": "2023-11-14",
+        "complete": "완료",
+        "etc": ["1114: 경로변경","0824: 문구변경","0518: [접근성] title 추가"]
+    },
+    {
+        "state": null,
+        "id": "MSB_BST_01_004",
+        "type": "바텀",
+        "depth1": "사이다 부스터",
+        "depth2": "모아보기",
+        "depth3": "카테고리 선택",
+        "depth4": null,
+        "name": "카테고리 선택",
+        "worker": "이희영",
+        "workdate": "2023-03-30",
+        "change": null,
+        "complete": "완료",
+        "etc": null
+    },
+    {
+        "state": null,
+        "id": "MSB_BST_01_003",
+        "type": "본창",
+        "depth1": "사이다 부스터",
+        "depth2": "상세",
+        "depth3": null,
+        "depth4": null,
+        "name": "상세",
+        "worker": "이희영",
+        "workdate": "2023-03-30",
+        "change": "2023-11-14",
+        "complete": "완료",
+        "etc": ["1114: 경로변경","0918: 닫기로 변경","0824: 클래스 수정", "0728: 이미지위치수정", "0613: [접근성] title 수정", "0519: 태그추가, 속성추가", "0504: 접근성수정"]
+    }
+]

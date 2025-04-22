@@ -1,0 +1,23 @@
+@charset "utf-8"; 
+
+
+/*** approval_kji.css ***/
+/* 조회날짜 */
+.cate_approval .sch_period {border-bottom:none}
+
+/* 뱃지위치 */
+.cate_approval .badge_wrap {text-align:right}
+.cate_approval .badge_wrap + .list_data {margin-top:1.2rem}
+
+
+
+/*** approval_hcw.css ***/
+/* 결재상세 */
+.table.scroll_x {overflow-x: auto;}
+
+.li_in_nodata .result.nodata.sm {margin: 0; padding: 3.1rem 0 3.4rem;}
+.li_in_nodata .result.nodata.sm .tit {font-size: 1.5rem;}
+
+.list_data_group .h3.grid {justify-content: space-between;}
+
+.list_data a.btn.outline.xxs {display: block; width: max-content;}

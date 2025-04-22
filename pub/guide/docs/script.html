@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-    <title>Upleat Design System</title>
+    <title>유플리트</title>
     <link rel="stylesheet" href="/pub/guide/assets/css/docs.css">
 </head>
 <body>
     <div class="contents">
-        <div class="docs-name"><span>작업 환경</span></div>
+        <div class="docs-name">작업 환경</div>
 
         <div class="paper">
             <div class="h1">프로젝트 일정</div>
             <ul class="ul">
-                <li>2020.12.16 ~ 2021.11.30</li>
+                <li>2022.11.14 ~ 2024.01.13</li>
             </ul>
 
             <div class="h1">작업 기준</div>
@@ -32,7 +32,7 @@
                         </tr>
                         <tr>
                             <th>인코딩</th>
-                            <td>UTF-8</td>
+                            <td>euc-kr</td>
                         </tr>
                         <tr>
                             <th>JQuery</th>
@@ -45,9 +45,9 @@
                         <tr>
                             <th>Mobile 웹 호환성</th>
                             <td>
-                                안드로이드 5.0 이상, IOS 9.0 이상, 사파리, 크롬, 삼성인터넷<br>
+                                안드로이드 6.0 이상, IOS 11.0 이상, 사파리, 크롬, 삼성인터넷<br>
                                 <span class="point">(flex, vw, vh, calc 사용 불가)</span>
-                        </td>
+                            </td>
                         </tr>
                         <tr>
                             <th>기준 해상도 / 최소 해상도</th>
@@ -60,7 +60,7 @@
             <div class="h1">파일 위치(스타루트)</div>
             <ul class="ul">
                 <li>컨텐츠관리 &gt; 통합컨텐츠 관리 &gt; 화면 개발 &gt; 웹루트(DocRoot)</li>
-                <li>도메인 주소 https://zmbank.kbstar.com</li>
+                <li>도메인 주소 https://.com</li>
             </ul>
 
             <div class="table">
@@ -72,19 +72,19 @@
                     <tbody>
                         <tr>
                             <th>CSS</th>
-                            <td>/mnbank/app/css/</td>
+                            <td>/pub/assets/css/</td>
                         </tr>
                         <tr>
                             <th>Image</th>
-                            <td>/mnbank/app/img/</td>
+                            <td>/pub/assets/img/</td>
                         </tr>
                         <tr>
                             <th>JS</th>
-                            <td>/mnbank/app/js/</td>
+                            <td>/pub/assets/js/</td>
                         </tr>
                         <tr>
                             <th>HTML</th>
-                            <td>/mnbank/app/html/</td>
+                            <td>/pub/html/</td>
                         </tr>
                     </tbody>
                 </table>
@@ -94,118 +94,86 @@
             <div class="directory">
                 <ul>
                     <li>
-                        mnbank
+                        _pub
                         <ul>
                             <li>
-                                app
+                                assets
                                 <ul>
                                     <li>
                                         css
                                         <ul>
-                                            <li>
-                                                sbank
-                                                <ul>
-                                                    <li>common.css <span>- 스뱅 공통 CSS</span></li>
-                                                    <li>card.css <span>- 조회</span></li>
-                                                    <li>card.css <span>- 이체</span></li>
-                                                    <li>card.css <span>- 관리</span></li>
-                                                    <li>card.css <span>- 공과금</span></li>
-                                                    <li>card.css <span>- 상품</span></li>
-                                                    <li>card.css <span>- 외환</span></li>
-                                                    <li>card.css <span>- 금융서비스</span></li>
-                                                    <li>card.css <span>- 인증/보완</span></li>
-                                                    <li>card.css <span>- 고객센터</span></li>
-                                                    <li>card.css <span>- 알림함</span></li>
-                                                    <li>card.css <span>- 영업점</span></li>
-                                                    <li>card.css <span>- 설정</span></li>
-                                                    <li>card.css <span>- 인증센터</span></li>
-                                                    <li>card.css <span>- 다국어<span></span></span></li>
-                                                </ul>
-                                            </li>
+                                            <li>common.css <span>- 전체 공통 CSS</span></li>
+                                            <li>component.css <span>- 컴포넌트 요소별 CSS</span></li>
+                                            <li>contents.css <span>- 컨텐츠별 css</span></li>
                                         </ul>
                                     </li>
                                     <li>
                                         img
                                         <ul>
-                                            <li>
-                                                sbank
-                                                <ul>
-                                                    <li>temp <span>: 더미 이미지 모음</span></li>
-                                                    <li>common <span>: 	공통 이미지 모음</span></li>
-                                                    <li>card <span>- 조회</span></li>
-                                                    <li>card <span>- 이체</span></li>
-                                                    <li>card <span>- 관리</span></li>
-                                                    <li>card <span>- 공과금</span></li>
-                                                    <li>card <span>- 상품</span></li>
-                                                    <li>card <span>- 외환</span></li>
-                                                    <li>card <span>- 금융서비스</span></li>
-                                                    <li>card <span>- 인증/보완</span></li>
-                                                    <li>card <span>- 고객센터</span></li>
-                                                    <li>card <span>- 알림함</span></li>
-                                                    <li>card <span>- 영업점</span></li>
-                                                    <li>card <span>- 설정</span></li>
-                                                    <li>card <span>- 인증센터</span></li>
-                                                    <li>card <span>- 다국어<span></span></span></li>
-                                                </ul>
-                                            </li>
+                                            <li>temp <span>: 더미 이미지 모음</span></li>
+                                            <li>common <span>: 	공통 이미지 모음</span></li>
+                                            <li>card <span>- 조회</span></li>
+                                            <li>card <span>- 이체</span></li>
+                                            <li>card <span>- 관리</span></li>
+                                            <li>card <span>- 공과금</span></li>
+                                            <li>card <span>- 상품</span></li>
+                                            <li>card <span>- 외환</span></li>
+                                            <li>card <span>- 금융서비스</span></li>
+                                            <li>card <span>- 인증/보완</span></li>
+                                            <li>card <span>- 고객센터</span></li>
+                                            <li>card <span>- 알림함</span></li>
+                                            <li>card <span>- 영업점</span></li>
+                                            <li>card <span>- 설정</span></li>
+                                            <li>card <span>- 인증센터</span></li>
+                                            <li>card <span>- 다국어<span></span></span></li>
                                         </ul>
                                     </li>
                                     <li>
                                         js
                                         <ul>
                                             <li>
-                                                sbank
+                                                library <span>- JS library 모음</span>
                                                 <ul>
-                                                    <li>
-                                                        library <span>- JS library 모음</span>
-                                                        <ul>
-                                                            <li>jquery-1.8.1.min.js <span>: jQuery v1.8.1</span></li>
-                                                            <li>swiper3.4.2.min.js <span>: Swiper</span></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>common_ui.js <span>- 스뱅 퍼블리싱 공통 JS</span></li>
-                                                    <li>card.js <span>- 조회</span></li>
-                                                    <li>card.js <span>- 이체</span></li>
-                                                    <li>card.js <span>- 관리</span></li>
-                                                    <li>card.js <span>- 공과금</span></li>
-                                                    <li>card.js <span>- 상품</span></li>
-                                                    <li>card.js <span>- 외환</span></li>
-                                                    <li>card.js <span>- 금융서비스</span></li>
-                                                    <li>card.js <span>- 인증/보완</span></li>
-                                                    <li>card.js <span>- 고객센터</span></li>
-                                                    <li>card.js <span>- 알림함</span></li>
-                                                    <li>card.js <span>- 영업점</span></li>
-                                                    <li>card.js <span>- 설정</span></li>
-                                                    <li>card.js <span>- 인증센터</span></li>
-                                                    <li>card.js <span>- 다국어<span></span></span></li>
+                                                    <li>jquery-3.3.1.min.js <span>: jQuery v3.3.1</span></li>
+                                                    <li>swiper3.4.2.min.js <span>: Swiper</span></li>
                                                 </ul>
                                             </li>
+                                            <li>common-ui.js <span>- 스뱅 퍼블리싱 공통 JS</span></li>
+                                            <li>card.js <span>- 조회</span></li>
+                                            <li>card.js <span>- 이체</span></li>
+                                            <li>card.js <span>- 관리</span></li>
+                                            <li>card.js <span>- 공과금</span></li>
+                                            <li>card.js <span>- 상품</span></li>
+                                            <li>card.js <span>- 외환</span></li>
+                                            <li>card.js <span>- 금융서비스</span></li>
+                                            <li>card.js <span>- 인증/보완</span></li>
+                                            <li>card.js <span>- 고객센터</span></li>
+                                            <li>card.js <span>- 알림함</span></li>
+                                            <li>card.js <span>- 영업점</span></li>
+                                            <li>card.js <span>- 설정</span></li>
+                                            <li>card.js <span>- 인증센터</span></li>
+                                            <li>card.js <span>- 다국어<span></span></span></li>
                                         </ul>
                                     </li>
                                     <li>
                                         html
                                         <ul>
-                                            <li>
-                                                sbank
-                                                <ul>
-                                                    <li>comnmon <span>- 공통</span></li>
-                                                    <li>card <span>- 조회</span></li>
-                                                    <li>card <span>- 이체</span></li>
-                                                    <li>card <span>- 관리</span></li>
-                                                    <li>card <span>- 공과금</span></li>
-                                                    <li>card <span>- 상품</span></li>
-                                                    <li>card <span>- 외환</span></li>
-                                                    <li>card <span>- 금융서비스</span></li>
-                                                    <li>card <span>- 인증/보완</span></li>
-                                                    <li>card <span>- 고객센터</span></li>
-                                                    <li>card <span>- 알림함</span></li>
-                                                    <li>card <span>- 영업점</span></li>
-                                                    <li>card <span>- 설정</span></li>
-                                                    <li>card <span>- 인증센터</span></li>
-                                                    <li>card <span>- 다국어<span></span></span></li>
-                                                    <li>index.html</li>
-                                                </ul>
-                                            </li>
+                                            <li>comnmon <span>- 공통</span></li>
+                                            <li>card <span>- 조회</span></li>
+                                            <li>card <span>- 이체</span></li>
+                                            <li>card <span>- 관리</span></li>
+                                            <li>card <span>- 공과금</span></li>
+                                            <li>card <span>- 상품</span></li>
+                                            <li>card <span>- 외환</span></li>
+                                            <li>card <span>- 금융서비스</span></li>
+                                            <li>card <span>- 인증/보완</span></li>
+                                            <li>card <span>- 고객센터</span></li>
+                                            <li>card <span>- 알림함</span></li>
+                                            <li>card <span>- 영업점</span></li>
+                                            <li>card <span>- 설정</span></li>
+                                            <li>card <span>- 인증센터</span></li>
+                                            <li>card <span>- 다국어<span></span></span></li>
+                                            <li>index.html</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -225,6 +193,5 @@
     
     <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
     <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
-    <script src="/pub/guide/assets/js/document.js"></script>
 </body>
 </html>

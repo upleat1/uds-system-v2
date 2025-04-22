@@ -2,19 +2,19 @@
 
 @font-face {
     font-family:'KBText';font-style:normal;font-weight:400;    
-	src:url('/pub/app/css/fonts/kbfg_text_l.woff') format('woff');
+	src:url('/pub/assets/css/fonts/kbfg_text_l.woff') format('woff');
 }
 @font-face {
     font-family:'KBText';font-style:normal;font-weight:700;    
-	src:url('/pub/app/css/fonts/kbfg_text_b.woff') format('woff'); 
+	src:url('/pub/assets/css/fonts/kbfg_text_b.woff') format('woff'); 
 }
 @font-face {
 	font-family:'Roboto';font-style:normal;font-weight:400;
-	src:url('/pub/app/css/fonts/roboto_regular.woff') format('woff');
+	src:url('/pub/assets/css/fonts/roboto_regular.woff') format('woff');
 }
 @font-face {
 	font-family:'Roboto';font-style:normal;font-weight:500;
-	src:url('/pub/app/css/fonts/roboto_medium.woff') format('woff');
+	src:url('/pub/assets/css/fonts/roboto_medium.woff') format('woff');
 }
 
 *,

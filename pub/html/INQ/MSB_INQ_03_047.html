@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>��������</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">��������</h1>
+            <button type="button" class="action-prev" title="����"></button>
+        </div>
+    </header>
+    <div class="pg-container inq">
+        <div class="pg-content">
+            <div class="hgroup-2">
+                <h2 class="ht-2">�̹��� ���ݸ���?<br><strong>������ ���� Ȯ���غ�����</strong></h2>
+                <p class="txt">ģ�� 2������ �����ϰ� 2�� �� �޾ƺ�����.</p>
+            </div>
+            <!-- mod-date:0502: ��Ű�ڽ�default -->
+            <div class="lottie-area" title="��Ű�ڽ��� Ŭ���� �߰��ݸ��� ������ �ֽ��ϴ�." role="button">
+                <div>
+                    <img src="/pub/assets/img/common/ani-luckybox.png" alt="">
+                </div>
+            </div>
+            <!-- //��Ű�ڽ� succ. -->
+            <!-- mod-date:0502: ��Ű�ڽ� succ. -->
+            <div class="lottie-area" title="��Ű�ڽ��� Ŭ���� �߰��ݸ��� ������ �ֽ��ϴ�." role="button">
+                <div>
+                    <img src="/pub/assets/img/common/ani-luckybox-win.png" alt="">
+                    <div class="lucky-result-wrap" style="display:block">
+                        <div class="lucky-result">
+                            <span class="numbers-30 nums-bold" role="text"><span class="num">0.2</span><span class="num-unit">%</span></span>
+                            <div class="sub">��÷�ƾ��!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //��Ű�ڽ� succ. -->
+            <!-- mod-date:0502: ��Ű�ڽ� fail. -->
+            <div class="lottie-area" title="��Ű�ڽ��� Ŭ���� �߰��ݸ��� ������ �ֽ��ϴ�." role="button">
+                <div>
+                    <img src="/pub/assets/img/common/ani-luckybox-losing-none.png" alt="">
+                    <div class="lucky-result-wrap" style="display:block">
+                        <div class="lucky-result null">
+                            <span class="numbers-30 nums-bold" role="text"><span class="num">��!</span></span>
+                            <div class="sub">������ȸ��~</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //��Ű�ڽ� fai -->
+            <div class="btns cont-foot v">
+                <button type="button" class="btn primary lg">������  2�� �����</button>
+                <button type="button" class="btn outline lg last">������ �� �ޱ�</button>
+            </div>
+            <div class="boxs blue01 gap-md">
+                <div class="align-justify add-arr" role="button">
+                    ���ݱ��� ����<br>���ݸ�
+                    <span class="numbers-18 nums-bold" role="text"><span class="num">0.2</span><span class="num-unit">%</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+    let aniPresent = function() {
+        let stamp ="?";
+        stamp += Date.now();
+        $('.lottie-area').on('click', function(){
+            let $img = $(this).find('img');
+            $img.attr('src', $img.attr('src') + stamp);
+        });
+    }
+    aniPresent();
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

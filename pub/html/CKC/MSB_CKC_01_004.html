@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>üũī���û</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">üũī���û</h1>
+            <button type="button" class="action">���</button>
+        </div>
+    </header> 
+    <div class="pg-container ckc">
+        <div class="pg-content">
+            <h2 class="ht-2">üũī��<br><strong>��û������ �Է����ּ���</strong></h2><!-- mod-date:0605: [���ټ�] role ���� -->
+            <div class="section">
+                <div class="card-wrap solid mgt-0"><!-- mod-date:0614: [���ټ�] role, title ���� -->
+                    <div class="card-head my-card fit">
+                        <div class="state-img">
+                            <img src="/pub/assets/img/common/@card-temp.png" alt="PAY�� ī��">
+                        </div>
+                        <div>
+                            <span class="badge state-normal state-btn">��������</span>
+                            <div class="state-msg">PAY��üũī��2</div>
+                            <p class="card-no">
+                                <span class="items">��ȸ��:����</span>
+                                <span class="items">��������:����</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="ht-3 gap-md">�����������</h3>
+                <div class="form-group">
+                    <div class="form-label">��������</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="�������� ����"  onclick="UICommon.Layer.open('#selectAcc')">12345-12-1234567</button><!-- ����: value�� �Է½� on Ŭ���� �߰� / ��Ȱ��ȭ �� readonly Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">ī���й�ȣ</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" title="ī���й�ȣ 4�ڸ� �Է�" class="inp-btn masking-ele">�ܡܡܡ�</button><!-- ����: �Է� �Ϸ�� on Ŭ���� �߰� --> <!-- mod-date:0614: [���ټ�] title ���� -->
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="ht-3">�����˸�</h3>
+                <div class="form-rdochk rdobox fit">
+                    <span class="form-sel">
+                        <input type="radio" id="radioBox1-1" name="radio-box11">
+                        <label for="radioBox1-1" class="label">���ڸ޽���(����)</label>
+                    </span>
+                    <span class="form-sel">
+                        <input type="radio" id="radioBox1-2" name="radio-box11">
+                        <label for="radioBox1-2" class="label">���� ����</label>
+                    </span>
+                </div>
+
+                <h3 class="ht-3">�����ѵ�</h3>
+                <div class="form-group mgt-0">
+                    <div class="form-label right">�ִ� 300����</div>
+                    <div class="form-row"><!-- ����: ������ error Ŭ���� �߰� -->
+                        <div class="form-ele">
+                            <span class="like-label fx-none">1ȸ</span>
+                            <button type="button" title="1ȸ �����ѵ� �ݾ� �Է�" class="inp-btn right">���� ���� �Է�</button><!-- mod-date:0614: [���ټ�] title ���� -->
+                            <span class="unit">����</span>
+                        </div>
+                    </div>
+                    <p class="form-hangul" aria-hidden="true">0����</p>
+                    <!-- <p class="tip error">1ȸ �����ѵ��� �� �Է����ּ���.</p> --><!-- ����: ������ error Ŭ���� �߰�(��쿡 ���� ���� ����) -->
+                </div>
+                <div class="form-group">
+                    <div class="form-label right">�ִ� 300����</div>
+                    <div class="form-row"><!-- ����: ������ error Ŭ���� �߰� -->
+                        <div class="form-ele">
+                            <span class="like-label fx-none">1��</span>
+                            <button type="button" title="1�� �����ѵ� �ݾ� �Է�" class="inp-btn right">���� ���� �Է�</button><!-- mod-date:0614: [���ټ�] title ���� -->
+                            <span class="unit">����</span>
+                        </div>
+                    </div>
+                    <p class="form-hangul" aria-hidden="true">0����</p>
+                    <!-- <p class="tip error">1�� �����ѵ��� �� �Է����ּ���.</p> --><!-- ����: ������ error Ŭ���� �߰�(��쿡 ���� ���� ����) -->
+                </div>
+                <div class="form-group">
+                    <div class="form-label right">�ִ� 2���</div>
+                    <div class="form-row error"><!-- ����: ������ error Ŭ���� �߰� -->
+                        <div class="form-ele">
+                            <span class="like-label fx-none">����</span><!-- mod-date:0523 : ���� ���� -->
+                            <button type="button" title="���� �����ѵ� �ݾ� �Է�" class="inp-btn right on">15,000</button><!-- ����: value�� �Է½� on Ŭ���� �߰� --><!-- mod-date:0614: [���ټ�] title ���� -->
+                            <span class="unit">����</span>
+                        </div>
+                    </div>
+                    <p class="form-hangul" aria-hidden="true">1��5õ����</p>
+                    <p class="tip error">�� �����ѵ��� �� �Է����ּ���.</p><!-- ����: ������ error Ŭ���� �߰� -->
+                    <!-- ano -->
+                    <!-- <p class="tip error">�� �ִ� �����ѵ��� �ʰ��߾��.</p> -->
+                    <!-- <p class="tip error">�� �����ѵ��� 1�� �����ѵ� �ݾ׺��� ���ƾ� �ؿ�.</p> -->
+                    <!-- <p class="tip error">�� �����ѵ��� 1���� �̻� �Է����ּ���.</p> -->
+                    <!-- //ano -->
+                </div>
+            </div>
+        </div>
+        <div class="content-foot">
+            <div class="inform-btm-wrap">
+                <h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>üũī��� 1���� �߱��� �� �ֽ��ϴ�.</li>
+                    <li>���� �����˸� ���񽺴� �����̳�, ���� ��å�� ���� ����� ����� �� �ֽ��ϴ�.</li>
+                    <li>ī������ѵ��� 1��/�� �ִ� 1����Դϴ�.</li>
+                    <li>ī������ѵ��� [üũī����� > �����ѵ�����]���� ������ �� �ֽ��ϴ�.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary">����</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<div id="selectAcc" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>���¸� �������ּ���</h1>
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="list-wrap-acc">
+                    <div class="list-block-wrap">
+                        <div class="list-block-btn selected" role="button" title="���õ�"><!-- ����: ���ý� selected Ŭ���� �� title �߰� -->
+                            <i class="ci-40x bk-000" role="img" aria-label="SBI��������(���̴ٹ�ũ)"></i><!-- mod-date:0613: [���ټ�] role�߰� -->
+                            <div class="list-info"><!-- mod-date:0504: class ���� -->
+                                <strong class="list-name middle">���������(1234)</strong><!-- mod-date:0504: class ���� -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-block-wrap">
+                        <div class="list-block-btn" role="button">
+                            <i class="ci-40x bk-000" role="img" aria-label="SBI��������(���̴ٹ�ũ)"></i><!-- mod-date:0613: [���ټ�] role�߰� -->
+                            <div class="list-info"><!-- mod-date:0504: class ���� -->
+                                <strong class="list-name middle">���������(1234)</strong><!-- mod-date:0504: class ���� -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-block-wrap">
+                        <div class="list-block-btn" role="button">
+                            <i class="ci-40x bk-000" role="img" aria-label="SBI��������(���̴ٹ�ũ)"></i><!-- mod-date:0613: [���ټ�] role�߰� -->
+                            <div class="list-info"><!-- mod-date:0504: class ���� -->
+                                <strong class="list-name middle">Ŀ������ <i class="ico-couple"></i></strong><!-- mod-date:0504: class ���� -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-block-wrap">
+                        <div class="list-block-btn" role="button">
+                            <i class="ci-40x bk-000" role="img" aria-label="SBI��������(���̴ٹ�ũ)"></i><!-- mod-date:0613: [���ټ�] role�߰� -->
+                            <div class="list-info"><!-- mod-date:0504: class ���� -->
+                                <strong class="list-name middle">���������(1234)</strong><!-- mod-date:0504: class ���� -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

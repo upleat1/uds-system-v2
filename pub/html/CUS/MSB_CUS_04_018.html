@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>������Ȱ���̵� - ������⿹��ȳ�</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">������Ȱ���̵�</h1>
+			<button type="button" class="action-prev" title="����"></button>
+		</div>
+	</header>
+    <div class="pg-container cus">
+		<div class="pg-content">
+            <!-- mod-date:0531: .section div ���� -->
+            <div class="tab-wrap round"><!-- mod-date:0531: .mgt-0 ���� -->
+                <div class="tab-list"><!-- mod-date:0531: .mgt-0 ���� -->
+                    <div class="scroll-wrap">
+                        <button type="button" role="tab" aria-controls="tab2panel2-1" aria-selected="true" class="active">������� ����ȳ�</button>
+                        <button type="button" role="tab" aria-controls="tab2panel2-2" aria-selected="false">�ݸ����Ͽ䱸��</button>
+                        <button type="button" role="tab" aria-controls="tab2panel2-3" aria-selected="false">���ڱ������ؿ��� 10�� ��Ģ</button>
+                        <button type="button" role="tab" aria-controls="tab2panel2-4" aria-selected="false">���ڱ����ŷ��̿��� 10���</button>
+                        <button type="button" role="tab" aria-controls="tab2panel2-5" aria-selected="false">���̽��ǽ� ���� 10���</button>
+                    </div>
+                    <i class="tab-bar" aria-hidden="true"></i>
+                </div>
+                <div class="tab-panel active" role="tabpanel" id="tab2panel2-1"><!-- mod-date:0531: .gap-md ���� -->
+                    <div class="info-bg-top info-txt">
+                        <p class="tit">������ű�������?</p>
+                        <p class="txt">��������� Ÿ���� ����� �����ϴ� �������� �ϳ��Դϴ�. ������ż����� �̿��� ����ŷ��� ���� �����о߿��� �߻��ϴ� ������ Ư����� �����Դϴ�.</p>
+                    </div>
+                    <ul class="accordion prod gap-lg" data-ui="accordion">
+                        <li class="on">
+                            <button type="button" class="acco-item" aria-expanded="true">
+                                �����ŷ������䱸�� ���� �������� �� ��
+                            </button>
+                            <div class="acco-panel agree-box">
+                                <p>��ȭ�� �������� ����, ���˻�� ���� ���� ������ ���¹�ȣ, ī���ȣ, ���ͳݹ�ŷ ������ ���ų� ���ͳ� ����Ʈ�� �Է��� �䱸�ϴ� ��� ���� ������ ���ƾ� �ϸ�, Ư�� �ڷ���ŷ�� ��� ���ͳݰ� �޸� ���������� ��߱� ���� ������ �ʿ�ġ �ʾ� Ÿ���� ��� ������ؿ� ���</p>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="acco-item" aria-expanded="false">
+                                �������ޱ�� �����ϸ� 100% ���̽��ǽ� <!-- mod-date:0901: �������� -->
+                            </button>
+                            <div class="acco-panel agree-box">
+                                <p>�������ޱ⸦ �̿��Ͽ� ����, ����� ���� ȯ�����شٰų� ���� ������ġ�� �����ְڴٸ鼭 �������ޱ�� �����ϴ� ��� ����� ������ �� ��</p><!-- mod-date:1213: �������� -->
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="acco-item" aria-expanded="false">
+                                �ڳೳġ ���̽��ǽ̿� �̸����
+                            </button>
+                            <div class="acco-panel agree-box">
+                                <p>�ڳೳġ�� ���̽��ǽ� ��� ���� ��� �ڳ��� ģ��, ������ ��ô ���� ����ó�� �̸� Ȯ���� ��</p>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="acco-item" aria-expanded="false">
+                                ���Ρ������ŷ������� �̸� �˰� �����ϴ� ��쿡�� ������ ������ Ȯ��<!-- mod-date:0901: �������� -->
+                            </button>
+                            <div class="acco-panel agree-box">
+                                <p>���Ρ������ŷ������� �̸� �˰� �����ϴ� ��찡 �����Ƿ� ��ȭ, ���ڸ޼���, ���ͳݸ޽��� ������ ������ �ݵ�� Ȯ���� ��</p><!-- mod-date:0901: �������� -->
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="acco-item" aria-expanded="false">
+                                ���ظ� ���� ��� �ż��� ���������� ��û
+                            </button>
+                            <div class="acco-panel agree-box">
+                                <p>���̽��ǽ��� ���� ��� ����û 112�ݼ��� �Ǵ� ����ȸ�� �ݼ��͸� ���� �ż��� �����¿� ���� ���������� ��û�� ��</p>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="acco-item" aria-expanded="false">
+                                ����� �����ŷ������� ��� ���
+                            </button>
+                            <div class="acco-panel agree-box">
+                                <p>����� �����ŷ������� ��� �����ϰų� ����� ��</p>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="acco-item" aria-expanded="false">
+                                �������� �� ����(üũ)ī�� �絵����<!-- mod-date:0901: p�±� ���� -->
+                            </button>
+                            <div class="acco-panel agree-box">
+                                <p>�����̳� ����(üũ)ī�� �絵 �� ���˿� �̿�ǹǷ� ��� ��쿡�� Ÿ�ο��� �絵���� ���ƾ� �ϸ�, �����̳� ����(üũ)ī�� �絵�� ���ڱ����ŷ��� �������� ����ó���� ���� �� �ִ� ������(3�������� ¡�� �Ǵ� 2õ���� ���� ����</p>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="acco-item" aria-expanded="false">
+                                �߽�(��ȭ)��ȣ�� ������ �����Կ� ����<!-- mod-date:0901: p�±� ���� -->
+                            </button>
+                            <div class="acco-panel agree-box">
+                                <p>�ڷ���ŷ *����������ȣ���� ���ԵǾ��� �ϴ��� ���ͳ� ��ȯ�⸦ ���� �߽Ź�ȣ ������ ������<br>������ ��ϵ� Ư�������� �ڷ���ŷ�� �� �� �ִ� ����</p><!-- mod-date:1213: �������� -->
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="acco-item" aria-expanded="false">
+                                ����ȸ�� �� ��Ȯ�� Ȩ������ Ȯ�� �ʿ�<!-- mod-date:0901: �������� -->
+                            </button>
+                            <div class="acco-panel agree-box">
+                                <p>�ǽ̻���Ʈ�� ��� �������� ������ �ƴϹǷ� ���ڸ޽���, �̸��� ������ ���� �� ����ȸ�� �� ��������� Ȩ�������� �ݵ�� ���ͳ� �˻� ���� ���� ��Ȯ�� �ּ������� Ȯ�� �� ��</p><!-- mod-date:1213: �������� -->
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btns cont-foot">
+                        <button type="button" class="btn outline lg">������� ���� ���</button>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

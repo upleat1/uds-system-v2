@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�ڷ῭���䱸�� ��û</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">�ڷ῭���䱸�� ��û</h1>
+            <button type="button" class="action-prev" title="����"></button>
+        </div>
+    </header>
+    <div class="pg-container cus">
+        <div class="pg-content">
+            <h2 class="ht-2"><strong>������ �䱸�� ���¸�</strong><br>�������ּ���</h2><!-- mod-date:0605: [���ټ�] role ���� -->
+            <!-- mod-date:0531: .section div ���� -->
+            <div class="tab-wrap fit">
+                <div class="tab-list" role="tablist">
+                    <div class="scroll-wrap">
+                        <button type="button" role="tab" aria-selected="true" aria-controls="tabpanelLine-1-1">�������</button>
+                        <button type="button" role="tab" aria-selected="false" aria-controls="tabpanelLine-1-2">��������</button>
+                    </div>
+                    <i class="tab-bar" aria-hidden="true"></i>
+                </div>
+                
+                <!-- ������� -->
+                <div class="tab-panel" role="tabpanel" id="tabpanelLine-1-1">
+                    <div class="section"><!-- mod-date:0531: .section div �߰� -->
+                        <div class="form-group">
+                            <div class="form-label fz-16">��������</div>
+                            <div class="form-rdochk rdobox">
+                                <span class="form-sel">
+                                    <input type="radio" id="radioBox1-1" name="radio-box11" aria-controls="rdopanel01" checked><!-- mod-date:0331: aria- �Ӽ� �߰� --><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                                    <label for="radioBox1-1" class="label">�����ݰ���</label>
+                                </span>
+                                <span class="form-sel">
+                                    <input type="radio" id="radioBox1-2" name="radio-box11" aria-controls="rdopanel02"><!-- mod-date:0331: aria- �Ӽ� �߰� --><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                                    <label for="radioBox1-2" class="label">�������</label>
+                                </span>
+                            </div>
+
+                            <!-- mod-date:0331: ��ũ�� ���� -->
+                            <!-- @������ -->
+                            <div class="rdo-panel gap-md" id="rdopanel01"><!-- mod-date:0518: .gap-md Ŭ���� �߰� -->
+                                <!-- ���°� ���� ��� ���� -->
+                                <h3 class="ht-4 fw-500">���¼���</h3>
+                                <div class="chk-card-wrap" role="radiogroup">
+                                    <div class="chk-card rdo checked" role="radio" aria-labelledby="rdoChkCard01-1" aria-checked="true"><!-- ����: aria-labelledby �߰�(���ټ�) -->
+                                        <div class="chk-inr" id="rdoChkCard01-1" aria-hidden="true"><!-- ����: aria-labelledby�� id ����(���ټ�) -->
+                                            <div class="item-name">���������</div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="item-desc gap-xxs">�ű��� : 2022.12.17</div>
+                                            <div class="numbers-18 nums-bold" role="text"><span class="num">1,234,567</span><span class="num-unit">��</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="chk-card rdo" role="radio" aria-labelledby="rdoChkCard01-2">
+                                        <div class="chk-inr" id="rdoChkCard01-2" aria-hidden="true">
+                                            <div class="item-name">���⿹��</div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="item-desc gap-xxs">�ű��� : 2019.01.05</div>
+                                            <div class="item-desc">������ : 2020.01.05</div>
+                                            <div class="numbers-18 nums-bold" role="text"><span class="num">1,234,567</span><span class="num-unit">��</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="chk-card rdo disable" role="text" aria-labelledby="rdoChkCard01-3" aria-disabled="true"><!-- ����: ���� ��Ȱ��ȭ�� role ����, disable Ŭ���� �� aria-disabled �߰� -->
+                                        <div class="chk-inr" id="rdoChkCard01-3" aria-hidden="true">
+                                            <div class="item-name">���⿹��<span class="badge line-normal">ó����</span></div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="item-desc gap-xxs">�ű��� : 2019.01.05</div>
+                                            <div class="item-desc">������ : 2020.01.05</div>
+                                            <div class="numbers-18 nums-bold" role="text"><span class="num">1,234,567</span><span class="num-unit">��</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ���°� ���� ��� ���� -->
+                                <div class="result nodata">
+                                    <p class="tit">��ȸ ����� �����.</p>
+                                </div>
+                            </div>
+                            <!-- //@������ -->
+
+                            <!-- @���� -->
+                            <div class="rdo-panel gap-md" id="rdopanel02"><!-- mod-date:0518: .gap-md Ŭ���� �߰� -->
+                                <!-- ���°� ���� ��� ���� -->
+                                <h3 class="ht-4 fw-500">���¼���</h3>
+                                <div class="chk-card-wrap" role="radiogroup">
+                                    <div class="chk-card rdo checked" role="radio" aria-labelledby="rdoChkCard02-1" aria-checked="true">
+                                        <div class="chk-inr" id="rdoChkCard02-1" aria-hidden="true">
+                                            <div class="item-name">�ſ����</div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="numbers-18 nums-bold" role="text"><span class="num">28,000,000</span><span class="num-unit">��</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="chk-card rdo" role="radio" aria-labelledby="rdoChkCard02-2">
+                                        <div class="chk-inr" id="rdoChkCard02-2" aria-hidden="true">
+                                            <div class="item-name">���̳ʽ�����</div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="numbers-18 nums-bold" role="text"><span class="num">28,000,000</span><span class="num-unit">��</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ���°� ���� ��� ���� -->
+                                <div class="result nodata">
+                                    <p class="tit">��ȸ ����� �����.</p>
+                                </div>
+                            </div>
+                            <!-- //@���� -->
+                            <!-- //��ũ�� ���� -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //������� -->
+
+                <!-- �������� -->
+                <div class="tab-panel" role="tabpanel" id="tabpanelLine-1-2">
+                    <div class="section"><!-- mod-date:0531: .section div �߰� -->
+                        <div class="form-group">
+                            <div class="form-label fz-16">��������</div>
+                            <div class="form-rdochk rdobox">
+                                <span class="form-sel">
+                                    <input type="radio" id="radioBox2-1" name="radio-box22" aria-controls="rdopanel03" checked><!-- mod-date:0331: aria- �Ӽ� �߰� --><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                                    <label for="radioBox2-1" class="label">�����ݰ���</label>
+                                </span>
+                                <span class="form-sel">
+                                    <input type="radio" id="radioBox2-2" name="radio-box22" aria-controls="rdopanel04"><!-- mod-date:0331: aria- �Ӽ� �߰� --><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                                    <label for="radioBox2-2" class="label">�������</label>
+                                </span>
+                            </div>
+
+                            <!-- mod-date:0331: ��ũ�� ���� -->
+                            <!-- @������ -->
+                            <div class="rdo-panel gap-md" id="rdopanel03"><!-- mod-date:0518: .gap-md Ŭ���� �߰� -->
+                                <!-- ���°� ���� ��� ���� -->
+                                <h3 class="ht-4 fw-500">���¼���</h3>
+                                <div class="chk-card-wrap" role="radiogroup">
+                                    <div class="chk-card rdo checked" role="radio" aria-labelledby="rdoChkCard03-1" aria-checked="true">
+                                        <div class="chk-inr" id="rdoChkCard03-1" aria-hidden="true">
+                                            <div class="item-name">���������</div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="item-desc lg">������ : 2020.01.05</div>
+                                        </div>
+                                    </div>
+                                    <div class="chk-card rdo" role="radio" aria-labelledby="rdoChkCard03-2">
+                                        <div class="chk-inr" id="rdoChkCard03-2" aria-hidden="true">
+                                            <div class="item-name">����</div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="item-desc lg">������ : 2020.01.05</div>
+                                        </div>
+                                    </div>
+                                    <div class="chk-card rdo disable" role="text" aria-labelledby="rdoChkCard03-3" aria-disabled="true"><!-- ����: ���� ��Ȱ��ȭ�� role ����, disable Ŭ���� �� aria-disabled �߰� -->
+                                        <div class="chk-inr" id="rdoChkCard03-3" aria-hidden="true">
+                                            <div class="item-name">���⿹��<span class="badge line-normal">ó����</span></div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="item-desc lg">������ : 2020.01.05</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ���°� ���� ��� ���� -->
+                                <div class="result nodata">
+                                    <p class="tit">��ȸ ����� �����.</p>
+                                </div>
+                            </div>
+                            <!-- //@������ -->
+
+                            <!-- @���� -->
+                            <div class="rdo-panel gap-md" id="rdopanel04"><!-- mod-date:0518: .gap-md Ŭ���� �߰� -->
+                                <!-- ���°� ���� ��� ���� -->
+                                <h3 class="ht-4 fw-500">���¼���</h3>
+                                <div class="chk-card-wrap" role="radiogroup">
+                                    <div class="chk-card rdo checked" role="radio" aria-labelledby="rdoChkCard04-1" aria-checked="true">
+                                        <div class="chk-inr" id="rdoChkCard04-1" aria-hidden="true">
+                                            <div class="item-name">�ſ����</div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="item-desc lg">������ : 2020.01.05</div>
+                                        </div>
+                                    </div>
+                                    <div class="chk-card rdo disable" role="text" aria-labelledby="rdoChkCard04-2" aria-disabled="true"><!-- ����: ���� ��Ȱ��ȭ�� role ����, disable Ŭ���� �� aria-disabled �߰� -->
+                                        <div class="chk-inr" id="rdoChkCard04-2" aria-hidden="true">
+                                            <div class="item-name">���̳ʽ�����<span class="badge line-normal">ó����</span></div>
+                                            <div class="item-desc">02819-13-123456</div>
+                                            <div class="item-desc lg">������ : 2020.01.05</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ���°� ���� ��� ���� -->
+                                <div class="result nodata">
+                                    <p class="tit">��ȸ ����� �����.</p>
+                                </div>
+                            </div>
+                            <!-- //@���� -->
+                            <!-- //��ũ�� ���� -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //�������� -->
+            </div>
+        </div>
+        <div class="pg-content-foot">
+			<div class="inform-btm-wrap">
+				<h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>�� ���� �ϳ��� ���¸� ��û�� �����մϴ�.</li>
+                    <li>�ڷ῭���䱸�� ��û ó�� ���� ���´� ������ �� �����ϴ�.</li>
+                </ul>
+			</div>
+		</div>
+    </div>
+    <footer class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">����</button>
+            <!-- <button type="button" class="btn primary">Ȯ��</button> -->
+        </div>
+    </footer>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

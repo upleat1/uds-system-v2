@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>��û�����Է�</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap"> 
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">���ݰ���</h1>
+            <button type="button" class="action-chatbot" title="ê��"></button>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container container-fit dep">
+        <div class="pg-content">
+            <section class="psn-cnnt-sec type01">
+                <div class="focus-upper">
+                    <div class="calc-case light">
+                        <div class="case-flow center mgt-0">
+                            <span class="item-key aside"><strong>12����</strong> ����</span>
+                            <div class="form-row item-value deco-price">
+                                <div class="form-ele line-fix">
+                                    <button type="button" class="select-btn on" title="�� ���Ծ� ����">20<strong>����</strong></button>
+                                </div>
+                            </div>
+                            <span class="item-key aside">��</span><br>
+                            <div class="form-row item-value deco-account">
+                                <div class="form-ele line-fix">
+                                    <button type="button" class="select-btn" title="��ݰ��� ����">��ݰ���</button>
+                                </div>
+                            </div>
+                            <span class="item-key aside">����</span><br>
+                            <div class="form-row item-value deco-payment">
+                                <div class="form-ele line-fix">
+                                    <button type="button" class="select-btn" title="������ ����">�ſ� ������</button>
+                                </div>
+                            </div>
+                            <span class="item-key aside">�� �ڵ���ü �մϴ�.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- range & svg-->
+            <div class="graph-sec">
+                <input id="rangeCurve" type="range" min="0" max="4" step="1" value="0" class="range-pass"><!-- ini. value -->
+                <svg id="sliderArea" viewBox="0 0 450 54">
+                <path id="curveBg" stroke="#d8dbe0" stroke-width="5" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
+                <path id="curve" stroke="#0086ff" stroke-width="5" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="300, 423"/>
+                <circle id="thumb" r="16" stroke="#0086ff" stroke-width="4" />
+                </svg>
+            </div>
+
+            <!-- applied interest rate -->
+            <section class="interest-cnnt-sec">
+                <!-- <div class="mid-info">0.2%</div> -->
+                <div class="interest-cnnt">
+                    <div class="item">
+                        <span class="numbers-24" role="text"><span class="num fw-700" id="friendCnt">3</span><span class="num-unit">��</span></span>
+                        <p class="">�θ�</p>
+                    </div>
+                    <div class="item">
+                        <span class="numbers-24" role="text"><span class="num fw-700">4.6</span><span class="num-unit">%</span></span>
+                        <p class="">�ִ�����</p>
+                    </div>
+                </div>
+                <span class="interest-info">
+                    �� 2.5% + �θ� <strong>0.2%</strong>
+                </span><!-- 1.0% �κ��� 0���� 0.2 �� �߰� -->
+            </section>
+
+
+        </div>
+        <div class="pg-content-foot" aria-hidden="true">
+            <div class="focus-down">
+                <div class="friend">
+                    <ul>
+                        <li class="on"><span>1��</span></li>
+                        <li><span>2��</span></li>
+                        <li><span>3��</span></li>
+                        <li><span>4��</span></li>
+                        <li><span>5��</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary">���⿹��� ����ϱ�</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+    const curve = {
+        x: 18,
+        y: 20,
+        cpx: 215,
+        cpy: 60,
+        endx: 430,
+        endy: 20
+    };
+
+    let rangeEl = document.getElementById('rangeCurve'),
+        curveEl = document.getElementById('curve');
+    let curveBg = document.getElementById('curveBg');
+    let thumbEl = document.getElementById('thumb');
+    let rangeVal = rangeEl.getAttribute("value") / 4;
+    let percent = rangeVal;  //ini. friend count
+
+    // get the XY at the specified percentage along the curve
+    const getQuadraticBezierXYatPercent = (curve, percent) => {
+        let x = Math.pow(1 - percent, 2) * curve.x + 2 * (1 - percent) * percent * curve.cpx + Math.pow(percent, 2) * curve.endx;
+        let y = Math.pow(1 - percent, 2) * curve.y + 2 * (1 - percent) * percent * curve.cpy + Math.pow(percent, 2) * curve.endy;
+        return { x, y };
+    };
+
+    const drawCurve = () => {
+        curveEl.setAttribute(
+            'd', `M${curve.x},${curve.y} Q${curve.cpx},${curve.cpy} ${curve.endx},${curve.endy}`);
+
+        curveBg.setAttribute(
+            'd', `M${curve.x},${curve.y} Q${curve.cpx},${curve.cpy} ${curve.endx},${curve.endy}`);
+    };
+
+    const drawThumb = percent => {
+        let pos = getQuadraticBezierXYatPercent(curve, percent);
+        thumbEl.setAttribute('cx', pos.x);
+        thumbEl.setAttribute('cy', pos.y);
+        curveEl.setAttribute('stroke-dasharray', (pos.x - 5) +', 423');
+
+        let friendCnt = document.getElementById('friendCnt').textContent = parseInt(percent * 4) + 1;    
+        var len = document.querySelectorAll(".friend li");
+        for (var i=0; i<len.length; i++){
+            len[i].classList='';
+            len[friendCnt - 1].className = 'crnt';
+        }
+        rangeEl.setAttribute("aria-label", `�� ${i}���߿� ${parseInt(percent * 4 + 1)}�� ����`); // mod-date:07003: aria-label ����
+        $(".crnt").prevAll().addClass("crnt");
+    };
+
+    const moveThumb = e => {
+        percent = e.target.value / 4;
+        drawThumb(percent);
+    };
+
+    // event on the range input
+    rangeEl.value = percent * 100;
+    rangeEl.addEventListener('input', moveThumb);
+    rangeEl.addEventListener('change', moveThumb);  // mod-date:07003: �߰�
+
+    // init
+    drawCurve();
+    drawThumb(percent);
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�㺸�������˻�</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+</head>
+<body>
+<div class="pg-wrap">
+</div>
+<!-- ���̾��˾� START -->
+<!-- ��ϳ��� -->
+<div id="regDetail" class="popup bottom show" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <!-- LON_02_012 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>��/���� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�">����Ư����</button><!-- mod-date:0314: ���ý� selected Ŭ���� �� title �߰� -->
+                        <button type="button" class="list-block">�λ걤����</button>
+                        <button type="button" class="list-block">�뱸������</button>
+                        <button type="button" class="list-block">��õ������</button>
+                        <button type="button" class="list-block">���ֱ�����</button>
+                        <button type="button" class="list-block">����������</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="1" onclick="UICommon.Layer.moveStream()">Ȯ��</button><!-- mod-date:0612: ��ư������ -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- LON_02_013 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>��/��/���� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�">������</button><!-- ���ý� selected Ŭ���� �� title �߰� -->
+                        <button type="button" class="list-block">������</button>
+                        <button type="button" class="list-block">���ϱ�</button>
+                        <button type="button" class="list-block">������</button>
+                        <button type="button" class="list-block">���Ǳ�</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="2" onclick="UICommon.Layer.moveStream()">����</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LON_02_014 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>��/��/���� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�">���ϵ�</button><!-- ���ý� selected Ŭ���� �� title �߰� -->
+                        <button type="button" class="list-block">������</button>
+                        <button type="button" class="list-block">�浿</button>
+                        <button type="button" class="list-block">���̵�</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="3" onclick="UICommon.Layer.moveStream()">����</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LON_02_015 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>�˻� ��� �� 1���� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="tab-wrap box">
+                    <div class="tab-list" role="tablist">
+                        <div class="scroll-wrap">
+                            <button type="button" role="tab" aria-selected="true" aria-controls="tab2panel2-1" class="active">KB�ü�</button>
+                            <button type="button" role="tab" aria-selected="false" aria-controls="tab2panel2-2">�������ü�</button>
+                        </div>
+                        <i class="tab-bar" aria-hidden="true"></i>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="tab2panel2-1">
+                        <div class="list-wrap">
+                            <button type="button" class="list-block selected" title="���õ�">�Ȼ��Ʈ��Ÿ��Ǫ��������������Ʈ</button><!-- ���ý� selected Ŭ���� �� title �߰� -->
+                            <button type="button" class="list-block">�޼���ũǪ��������������Ʈ</button>
+                            <button type="button" class="list-block">��������Ʈ������Ƽ</button>
+                            <button type="button" class="list-block">��������ƮǪ����������</button>
+                            <button type="button" class="list-block">ã�� ����Ʈ�� ������ �ʾƿ�</button>
+                        </div>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="tab2panel2-2">
+                        <div class="list-wrap">
+                            <button type="button" class="list-block selected" title="���õ�">��������ƮǪ����������</button><!-- ���ý� selected Ŭ���� �� title �߰� -->
+                            <button type="button" class="list-block">�Ȼ��Ʈ��Ÿ��Ǫ��������������Ʈ</button>
+                            <button type="button" class="list-block">�޼���ũǪ��������������Ʈ</button>
+                            <button type="button" class="list-block">��������Ʈ������Ƽ</button>
+                            <button type="button" class="list-block">ã�� ����Ʈ�� ������ �ʾƿ�</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="4" onclick="UICommon.Layer.moveStream()">����</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LON_02_008 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>����/Ÿ���� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�"><!-- ����: ���ý� selected Ŭ���� �� title �߰� -->
+                            89.26m2 (27��) AŸ��
+                        </button>
+                        <button type="button" class="list-block">
+                            109.09m2 (33��) BŸ��
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //��ϳ��� -->
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

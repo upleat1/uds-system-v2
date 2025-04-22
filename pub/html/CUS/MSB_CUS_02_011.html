@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>����Ű�����(����ī��)</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">����ī�� ����Ű�����</h1>
+			<button type="button" class="action">���</button>
+		</div>
+	</header>
+    <div class="pg-container cus">
+		<div class="pg-content">
+            <div class="hgroup-2">
+                <h2 class="ht-2"><strong>������ ����ī��������</strong><br>�Է����ּ���</h2>
+                <!-- <p class="txt">��Ȯ�� �Է����ּ���.</p> --><!-- mod-date:0901: �������� -->
+            </div>
+            <div class="section">
+                <!-- mod-date:0619: ��ũ�� ���� -->
+                <!-- <div class="form-group">
+                    <div class="form-label">����ī�� �߱�����</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <input type="text" title="����ī�� �߱�����" value="2023.01.25" readonly class="inp">
+                        </div>
+                    </div>
+                </div> -->
+                <!-- //mod-date:0619: ��ũ�� ���� -->
+                <div class="form-group">
+                    <div class="form-label">����Ű��Ͻ�</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <input type="text" title="����Ű��Ͻ�" value="2023.01.15" readonly class="inp">
+                        </div>
+                    </div>  
+                </div> 
+                <div class="form-group">
+                    <div class="form-label fz-16 mgb-0"><strong>03��</strong> <span class="fc-sub fw-400">�� 2�ڸ�</span></div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" title="03�� �� 2�ڸ� �Է�" class="inp-btn masking-ele">�ܡ�<span class="already">�ܡ�</span></button><!-- ����: �Է� �Ϸ�� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label fz-16 mgb-0"><strong>99��</strong> <span class="fc-sub fw-400">�� 2�ڸ�</span></div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" title="99�� �� 2�ڸ� �Է�" class="inp-btn masking-ele"><span class="already">�ܡ�</span>�ܡ�</button><!-- ����: �Է� �Ϸ�� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <!-- mod-date:0901: ����ī���ȣ ��ġ �� �������� -->
+                <div class="form-group">
+                    <div class="form-label fz-16 mgb-0"><strong>����ī�� �Ϸù�ȣ</strong> <span class="fc-sub fw-400">�� 4�ڸ�</span></div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" title="����ī�� �Ϸù�ȣ �� 4�ڸ� �Է�" class="inp-btn masking-ele"><span class="already">�ܡܡܡ�</span>�ܡܡܡ�</button><!-- ����: �Է� �Ϸ�� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //����ī���ȣ ��ġ �� �������� -->
+            </div>
+        </div>
+        <div class="pg-content-foot">
+			<div class="inform-btm-wrap">
+				<h4 class="ht-4">�˷������</h4>
+				<ul class="depth bul">
+					<li>����Ű��� ����ī��� �Ű����� �� �ٷ� ����� �����մϴ�.</li>  
+                    <li>����ī���� ����Ű� ������ ���ͳݹ�ŷ �� ������������ ó���� �� �ֽ��ϴ�. </li><!-- mod-date:0921: �������� --><!-- mod-date:0901: �������� --><!-- mod-date:0619: �ؽ�Ʈ ���� -->
+				</ul>
+			</div>
+		</div>
+	</div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary" data-ui="popup-open" onclick="UICommon.Layer.open('#checkInfo');">�Ű������ϱ�</button>
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- ����Ȯ�� -->
+<div id="checkInfo" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>����ī�� ����Ű��� �����Ͻðھ��?</h1>
+        </div>
+        <div class="pop-body">
+            <h3 class="ht-4">����ī��</h3>
+            <ul class="lists data">
+                <li>
+                    <div class="key">�Ϸù�ȣ</div><!-- mod-date:0619: �ؽ�Ʈ ���� -->
+                    <div class="value">1234****</div><!-- mod-date:0619: �ؽ�Ʈ ���� -->
+                </li>
+            </ul>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn secondary lg" data-action="close">�ƴϿ�</button>
+                <button type="button" class="btn primary lg" data-ui="pop-close">��</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //����Ȯ�� -->
+
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

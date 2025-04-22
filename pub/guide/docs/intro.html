@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-    <title>Upleat Design System</title>
+    <title>유플리트</title>
     <link rel="stylesheet" href="/pub/guide/assets/css/docs.css">
 </head>
 <body>
     <div class="contents">
-        <div class="docs-name"><span>작업 환경</span></div>
+        <div class="docs-name">작업 환경</div>
 
         <div class="paper">
             <div class="h1">프로젝트 일정</div>
             <ul class="ul">
-                <li>2022.04.01 ~ 2022.12.31</li>
+                <li>2022.11.14 ~ 2024.01.13</li>
             </ul>
 
             <div class="h1">작업 기준</div>
@@ -32,7 +32,7 @@
                         </tr>
                         <tr>
                             <th>인코딩</th>
-                            <td>UTF-8</td>
+                            <td>euc-kr</td>
                         </tr>
                         <tr>
                             <th>JQuery</th>
@@ -44,15 +44,11 @@
                         </tr>
                         <tr>
                             <th>Mobile 앱 호환성</th>
-                            <td>안드로이드 5.0 이상, IOS 11.0 이상</td>
+                            <td>안드로이드 6.0 이상, IOS 12.0 이상</td>
                         </tr>
                         <tr>
                             <th>기준 해상도 / 최소 해상도</th>
-                            <td>IOS 750px(375PX) / 320px</td>
-                        </tr>
-                        <tr>
-                            <th>SPA 관련 주의 사항</th>
-                            <td>/pub/app/js/common_check.js 사용 </td>
+                            <td>IOS 750px(375px) / 320px</td>
                         </tr>
                     </tbody>
                 </table>
@@ -60,8 +56,7 @@
 
             <div class="h1">파일 위치(스타루트)</div>
             <ul class="ul">
-                <li>NEW모바일컨텐츠관리 &gt; 모바일컨텐츠 화면개발 &gt; 모바일웹루트(nfsdocs_n)</li>
-                <li>도메인 주소 https://zmsbiz.kbstar.com</li>
+                <li>도메인 주소 https://d-app.sbisb.co.kr/</li>
             </ul>
 
             <div class="table">
@@ -73,15 +68,15 @@
                     <tbody>
                         <tr>
                             <th>CSS</th>
-                            <td>/pub/app/css/</td>
+                            <td>/pub/assets/css/</td>
                         </tr>
                         <tr>
                             <th>Image</th>
-                            <td>/pub/app/img/카테고리명</td>
+                            <td>/pub/assets/img/</td>
                         </tr>
                         <tr>
                             <th>JS</th>
-                            <td>/pub/app/js/</td>
+                            <td>/pub/assets/js/</td>
                         </tr>
                         <tr>
                             <th>HTML(퍼블 확인용)</th>
@@ -95,83 +90,87 @@
             <div class="directory">
                 <ul>
                     <li>
-                        mnbank
+                        app
                         <ul>
                             <li>
-                                app
+                                _pub
                                 <ul>
                                     <li>
-                                        css
-                                        <ul>
-                                            <li>common.css <span>- 스타기업뱅킹 공통 CSS</span></li>
-                                            <li>common_big.css <span>- 큰글씨 모드</span></li>
-                                            <li>inquiry.css <span>- 조회</span></li>
-                                            <li>transfer.css <span>- 이체</span></li>
-                                            <li>utility.css <span>- 공과금</span></li>
-                                            <li>products.css <span>- 상품가입</span></li>
-                                            <li>pdt_manage.css <span>- 상품관리</span></li>
-                                            <li>funds_manage.css <span>- 자금관리</span></li>
-                                            <li>banking_manage.css <span>- 뱅킹관리</span></li>
-                                            <li>certification.css <span>- 인증센터</span></li>
-                                            <li>customer.css <span>- 고객센터</span></li>
-                                            <li>setting.css <span>- 환경설정</span></li>
-                                            <li>approval.css <span>- 승인결제</span></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        img
-                                        <ul>
-                                            <li>common <span>- 스타기업뱅킹 공통 </span></li>
-                                            <li>inquiry <span>- 조회</span></li>
-                                            <li>transfer <span>- 이체</span></li>
-                                            <li>utility <span>- 공과금</span></li>
-                                            <li>products <span>- 상품가입</span></li>
-                                            <li>pdt_manage <span>- 상품관리</span></li>
-                                            <li>funds_manage <span>- 자금관리</span></li>
-                                            <li>banking_manage <span>- 뱅킹관리</span></li>
-                                            <li>certification <span>- 인증센터</span></li>
-                                            <li>customer <span>- 고객센터</span></li>
-                                            <li>setting <span>- 환경설정</span></li>
-                                            <li>payment <span>- 승인결제</span></li>
-
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        js
+                                        assets
                                         <ul>
                                             <li>
-                                                library <span>- JS library 모음</span>
+                                                css
                                                 <ul>
-                                                    <li>jquery-3.3.1-min.js <span>: jquery-3.3.1</span></li>
-                                                    <li>jquery-ui.min.js <span>: jQuery UI</span></li>
-                                                    <li>jquery.ui.touch-punch.min.js <span>: Mobile Touch</span></li>
-                                                    <li>swiper3.4.2.min.js <span>: Swiper</span></li>
-                                                    <li>sortable.min.js <span>: Drag</span></li>
-                                                    <li>lottie.min.js <span>: Lottie Animation</span></li>
+                                                    <li>fonts <span>- 폰트</span></li>
+                                                    <li>etc <span>- 기타(외부지원용)</span></li>
+                                                    <li>library
+                                                        <ul>
+                                                            <li>swiper.min.css</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>common.css <span>- 퍼블 UI 공통 css</span></li>
+                                                    <li>component.css <span>- 컴포넌트별 css</span></li>
+                                                    <li>contents.css <span>- 서브 컨텐츠</span></li>
                                                 </ul>
                                             </li>
-                                            <li>common_ui.js <span>- 스뱅 퍼블 공통 JS</span></li>
-                                            <!-- <li>common_ui_init.js <span>- 스뱅 퍼블 공통 init.js</span></li> -->
+                                            <li>
+                                                img
+                                                <ul>
+                                                    <li>@temp <span>- 더미 이미지 </span></li>
+                                                    <li>admin <span>- 어드민 등록 이미지</span></li>
+                                                    <li>ci <span>- 은행CI</span></li>
+                                                    <li>common <span>- 공통이미지</span></li>
+                                                    <li>email <span>- 외부지원용</span></li>
+                                                    <li>fax <span>- 외부지원용</span></li>
+                                                    <li>nice <span>- 외부지원용</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                js
+                                                <ul>
+                                                    <li>etc <span>- 기타(외부지원용)</span></li>
+                                                    <li>
+                                                        library <span>- JS library 모음</span>
+                                                        <ul>
+                                                            <li>jquery-3.3.1-min.js <span>: jquery-3.3.1</span></li>
+                                                            <li>jquery-ui.min.js <span>: jQuery UI</span></li>
+                                                            <li>jquery.ui.touch-punch.min.js <span>: Mobile Touch</span></li>
+                                                            <li>swiper3.4.2.min.js <span>: Swiper</span></li>
+                                                            <li>sortable.min.js <span>: Drag</span></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>common-ui.js <span>- 퍼블 UI 공통 JS</span></li>
+                                                    <!-- <li>common_ui_init.js <span>- 스뱅 퍼블 공통 init.js</span></li> -->
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
-                                </ul>
-                            </li>
-                            <li>
-                                html
-                                <ul>
-                                    <li>common <span>- 스타기업뱅킹 공통 </span></li>
-                                    <li>inquiry <span>- 조회</span></li>
-                                    <li>transfer <span>- 이체</span></li>
-                                    <li>utility <span>- 공과금</span></li>
-                                    <li>products <span>- 상품가입</span></li>
-                                    <li>pdt_manage <span>- 상품관리</span></li>
-                                    <li>funds_manage <span>- 자금관리</span></li>
-                                    <li>banking_manage <span>- 뱅킹관리</span></li>
-                                    <li>certification <span>- 인증센터</span></li>
-                                    <li>customer <span>- 고객센터</span></li>
-                                    <li>setting <span>- 환경설정</span></li>
-                                    <li>approval <span>- 승인결제</span></li>
-                                    
+                                    <li>
+                                        html
+                                        <ul>
+                                            <li>MIN <span>- 메인 </span></li>
+                                            <li>INQ <span>- 조회 </span></li>
+                                            <li>TRA <span>- 이체/출금</span></li>
+                                            <li>LON <span>- 대출신청 </span></li>
+                                            <li>CUS <span>- 고객센터 </span></li>
+                                            <li>CMM <span>- 공통  </span></li>
+                                            <li>CKC <span>- 카드 </span></li>
+                                            <li>CRD <span>- 금융/신용관리</span></li>
+                                            <li>CRT <span>- 인증/보안</span></li>
+                                            <li>NTC <span>- 공지사항 </span></li>
+                                            <li>EVT <span>- 혜택 </span></li>
+                                            <li>SET <span>- 설정 </span></li>
+                                            <li>LOG <span>- 로그인</span></li>
+                                            <li>JOI <span>- 회원가입</span></li>
+                                            <li>CHE <span>- 외화/환전</span></li>
+                                            <li>PIC <span>- 내정보 </span></li>
+                                            <li>PBT <span>- 공과금 </span></li>
+                                            <li>CTF <span>- 증명서 발금/제출</span></li>
+                                            <li>BST <span>- 사이다 부스터</span></li>
+                                            <li>DEP <span>- 예/적금 상품가입</span></li>
+                                            <li>ETC <span>- 기타(외부지원용)</span></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -182,13 +181,12 @@
             <div class="h1">파일 경로</div>
             <ul class="ul">
                 <li>작업이 완료된 HTML 파일은 로컬 브라우저와 다양한 OS에서 확인이 가능하여야 한다.</li>
-                <li>스타루트에는 개발환경에 맞게 절대경로로 등록한다.</li>
+                <li>개발환경에 맞게 절대경로로 등록한다.</li>
             </ul>
         </div>
     </div>
     
     <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
     <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
-    <script src="/pub/guide/assets/js/document.js"></script>
 </body>
 </html>

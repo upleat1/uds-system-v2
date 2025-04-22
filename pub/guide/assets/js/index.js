@@ -1,9 +1,7 @@
 $(function () {
     if (localStorage.lightMode == "dark") {
-        $('html').attr("light-mode", "dark").addClass('dark');
-        setTimeout(function(){
-            $('iframe').contents().find('html').attr("light-mode", "dark").addClass('dark');
-        }, 100);
+        $('html').attr("light-mode", "dark");
+        $('iframe').contents().find('html').attr("light-mode", "dark");
     }
     guide.init();
 });
@@ -74,6 +72,7 @@ var guide = {
         var $tab = $('.g_list_tab');
         if ($tab.length) {
             tabSwiper = new Swiper('.g_list_tab', {
+                initialSlide: $('.gnb__item.active').index(),
                 slidesPerView: 'auto',
                 freeMode: true
             });
@@ -84,12 +83,7 @@ var guide = {
                 var myIndex = $this.index();
                 tabSwiper.slideTo(myIndex - 1);
                 $this.closest('li').addClass('active').siblings('li').removeClass('active');
-                if (localStorage.lightMode == "dark") {
-                    $('html').attr("light-mode", "dark").addClass('dark');
-                    setTimeout(function(){
-                        $('iframe').contents().find('html').attr("light-mode", "dark").addClass('dark');
-                    }, 100);
-                }
+                history.replaceState(null, null, location.origin+location.pathname+'?pageIdx='+myIndex);
             });
             $(window).on('load', function () {
                 tabSwiper.update();
@@ -127,7 +121,7 @@ var guide = {
                 tabSwiper.slideTo($(this).parent().index()-1);
             }
         });
-        if (!$('.btm_btn_set').length) $('body').append('<div class="btm_btn_set"><button type="button" class="btn_guide_top"><span class="offscreen">TOP</span></button><button type="button" class="btn_light_mode"><i></i><i></i><i></i><i></i><span class="offscreen">다크모드</span></button></div>');
+        if (!$('.btm_btn_set').length) $('body').append('<div class="btm_btn_set"><button type="button" class="btn_guide_top"><span class="offscreen">TOP</span></button></div>');
         var $btnLightMode = $('.btn_light_mode');
         $btnLightMode.off('click').on('click', toggle_light_mode);
         function toggle_light_mode(){
@@ -135,11 +129,11 @@ var guide = {
             var iframeApp = $('iframe').contents().find('html');
             if (localStorage.lightMode == "dark") {
                 localStorage.lightMode = "light";
-                app.attr("light-mode", "light").removeClass('dark');
+                app.attr("light-mode", "light");
                 iframeApp.attr("light-mode", "light").removeClass('dark');
             } else {
                 localStorage.lightMode = "dark";
-                app.attr("light-mode", "dark").addClass('dark');
+                app.attr("light-mode", "dark");
                 iframeApp.attr("light-mode", "dark").addClass('dark');
             }
         }

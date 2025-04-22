@@ -61,7 +61,7 @@
             <h2>Guide</h2>
             <div class="g_list_tab">
                 <ul class="swiper-wrapper"> 
-                    <li class="gnb__item swiper-slide">
+                    <li class="gnb__item swiper-slide active">
                         <a href="/pub/guide/html/components/heading.html" target="iframe" class="gnb__link">Heading</a>
                     </li>
                     <li class="gnb__item swiper-slide">
@@ -159,5 +159,11 @@
     <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
     <script src="/pub/guide/assets/vendor/swiper.min.js"></script>
     <script src="/pub/guide/assets/js/index.js"></script>
+    <script>
+        const url = new URL(location.href);
+        const activeIdx = url.searchParams.get('pageIdx') ? parseInt(url.searchParams.get('pageIdx')) : 0;
+        $('.gnb__item').removeClass('active').eq(activeIdx).addClass('active')
+        $('.iframe').attr('src', $('.gnb__item').eq(activeIdx).find('a').attr('href'))
+    </script>
 </body>
 </html>

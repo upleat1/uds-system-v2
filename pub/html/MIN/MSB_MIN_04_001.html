@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>��ü�޴�</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/library/swiper.min.js"></script><!-- mod-date:1114: ��κ��� -->
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="all-menu">
+    <div class="contents-wrap">
+        <!-- �������� -->
+        <div class="section user-area sticky">
+            <div class="user-info">
+                <div class="img-box">
+                    <img src="/pub/assets/img/@temp/@couple01.png" alt="�����ʻ���">
+                </div>
+                <button type="button" class="member" title="���������� �̵�"><strong>������</strong>��</button><!-- mod-date:0925: [���ټ�] �������� -->
+            </div>
+            <!-- mod-date:0926:���ټ� ���� ȭ������� �°� �������� �ϴ����� �̵� -->
+            <header class="header sticky">
+                <div class="gnb">
+                    <h1 class="hidden">��ü�޴�</h1>
+                    <button type="button" class="btn ico-set-24"><span class="hidden">����</span></button>
+                    <button type="button" class="btn ico-chatbot-24"><span class="hidden">ê������</span></button>
+                </div>
+            </header>
+        </div>
+        <div class="section user-state">
+            <p class="recent">�ֱ����� <span>YYYY.MM.DD HH:MM:mm</span></p>
+            <button type="button" class="btn outline xs logout">�α׾ƿ�</button>
+        </div>
+        <!-- //�������� -->
+        <!-- ������� ��ũ -->
+        <div class="section util-area">
+            <button type="button" class="ico-cer">����/����</button>
+            <button type="button" class="ico-cen">��������</button>
+            <button type="button" class="ico-not">��������<span class="new">NEW</span></button>
+        </div>
+        <!-- //������� ��ũ -->
+        <!-- ��� -->
+        <div class="section banner-area">
+            <!-- ��ʿ��� : ��ʾ����� ���� (section banner-area�� ���� ���� banner-box ����) --><!-- [�����ڵ��] �ٰǹ�� -->
+            <div class="banner-box ui-swiper -loop -fraction -nav" data-auto="5000"><!-- mod-date:0718: -loop Ŭ�����߰� -->
+                <div class="swiper-wrapper">
+                    <!-- mod-date:0710: ��� ���� (img-wrap) -->
+                    <div class="item swiper-slide">
+                        <a href="/pub/html/MIN/MSB_MIN_05_001.html" class="img-wrap" style="background-color: #f1f6fb;">
+                            <img src="/pub/assets/img/admin/banner/prod-menu-bnn01.png" alt="��������� ���� ���� ���� ��ŷ�ϼ���!">
+                        </a>
+                    </div>
+                    <div class="item swiper-slide">
+                        <span class="img-wrap" style="background-color: #f1f6fb;">
+                            <img src="/pub/assets/img/admin/banner/prod-menu-bnn07.png" alt="PAYBACK üũī�� �� ������ �ƹ��� ĳ�ù� ����">
+                        </span>
+                    </div>
+                    <div class="item swiper-slide">
+                        <button type="button" class="img-wrap" style="background-color: #f1f6fb;">
+                            <img src="/pub/assets/img/admin/banner/prod-menu-bnn10.png" alt="���յ�2 �ſ��� ���Ƶ� ���ݸ� �δ� ����">
+                        </button>
+                    </div>
+                    <!-- //mod-date:0710: ��� ���� -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- //��ʿ��� : ��ʾ����� ���� -->
+        </div>
+        <!-- //��� -->
+        <!-- �޴��׺���̼� -->
+        <div class="section nav-area sticky">
+            <div class="ui-swiper" data-view="auto"><!-- mod-date:1017:[���ټ�] -nav ���� -->
+                <ul class="swiper-wrapper">
+                    <!-- navigator.init ���� ���� <li class="swiper-slide"><button type="button" aria-controls="">��ü</button></li> -->
+                </ul>
+            </div>
+        </div>
+        <!-- //�޴��׺���̼� -->
+        <!-- �޴� -->
+        <!-- mod-date:0621: Ÿ��Ʋ ������, ���� �̹����� ����(���߿�û) -->
+        <div class="section menu-area">
+            <div class="lnb-wrap multi-cont-wrap">
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-2.svg" alt="">��ȸ</span></div><!-- mod-date:0911: �̹��� ���ϸ� ���� -->
+                    <ul>
+                        <li><button type="button">��ü������ȸ</button></li>
+                        <li><button type="button">������Ȳ��ȸ</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-3.svg" alt="">��ü</span></div>
+                    <ul>
+                        <li><button type="button">������ü<span class="badge/pub/ src="/pub/assets/img/admin/badge-1-3x.png" alt="����"></span></button></li><!-- //mod-date:0707: �̹��� ���� -->
+                        <li><button type="button">�ڵ���ü</button></li>
+                        <li><button type="button">�ڵ�����</button></li>
+                        <li><button type="button">����Ʈ/â�����<span class="/pub/><img src="/pub/assets/img/admin/badge-2-3x.png" alt="����"></span></button></li><!-- //mod-date:0707: �̹��� ���� -->
+                        <li><button type="button">��ü������ȸ</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-4.svg" alt="">�����ǵ�</span></div>
+                    <ul>
+                        <li><button type="button">���ڵǴ� ���͵�</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-5.svg" alt="">��/���ݻ�ǰ</span></div>
+                    <ul>
+                        <li><button type="button">���������</button></li>
+                        <li><button type="button">Ŀ������</button></li>
+                        <li><button type="button">���⿹��(��/����)</button></li>
+                        <li><button type="button">ȸ�� ���⿹��(��/����)</button></li>
+                        <li><button type="button">��������</button></li>
+                        <li><button type="button">�θ�����</button></li>
+                        <li><button type="button">���ݸ�����</button></li>
+                        <li><button type="button">���ٹ�����</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-6.svg" alt="">�����ǰ</span></div>
+                    <ul>
+                        <li><button type="button">�ſ��������</button></li>
+                        <li><button type="button">�޻��</button></li>
+                        <li><button type="button">���յ�2</button></li>
+                        <li><button type="button">�¶������ô㺸����<span cl/pub/adge"><img src="/pub/assets/img/admin/badge-3-3x.png" alt="��õ"></span></button></li><!-- //mod-date:0707: �̹��� ���� -->
+                        <li><button type="button">�ߵ��ݴ���</button></li>
+                        <li><button type="button">���ݴ㺸����</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-7.svg" alt="">üũī��</span></div>
+                    <ul>
+                        <li><button type="button">PAY��üũī��2</button></li>
+                        <li><button type="button">����ī��</button></li>
+                        <li><button type="button">�� ī��</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-8.svg" alt="">���¹�ŷ</span></div>
+                    <ul>
+                        <li><button type="button">�ٸ�������ȸ</button></li>
+                        <li><button type="button">�޿���ü</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-9.svg" alt="">��ȭ/ȯ��</span></div>
+                    <ul>
+                        <li><button type="button">ȯ������</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-10.svg" alt="">������</span></div>
+                    <ul>
+                        <li><button type="button">��ó���<span class="badge"></pub/c="/pub/assets/img/admin/badge-1-3x.png" alt="����"></span></button></li>
+                        <li><button type="button">�ڵ����ΰ���</button></li>
+                        <li><button type="button">�� ���漼</button></li>
+                        <li><button type="button">���ΰ����ȸ</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-11.svg" alt="">����/�ſ����</span></div>
+                    <ul>
+                        <li><button type="button">�����̵�����</button></li>
+                        <li><button type="button">�������հ�������</button></li>
+                        <li><button type="button">NICE�ſ��������</button></li>
+                        <li><button type="button">�� �ſ����� ����(NICE)</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-12.svg" alt="">������ �߱�/����</span></div>
+                    <ul>
+                        <li><button type="button">�������߱�</button></li><!-- mod-date:0906: �ؽ�Ʈ���� -->
+                        <li><button type="button">�߱޳�����ȸ</button></li>
+                        <li><button type="button">�����ŷ������������</button></li>
+                        <li><button type="button">�����ڷ�����</button></li>
+                        <li><button type="button">���ڹ�������</button></li>
+                    </ul>
+                </div>
+                <div class="lnb">
+                    <div class="menu-tit"><span class="sub-cat"><img src="/pub/assets/img/common/ico-20x-13.svg" alt="">����</span></div>
+                    <ul>
+                        <li><button type="button">�̺�Ʈ</button></li>
+                        <li><button type="button">������</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //mod-date:0621: Ÿ��Ʋ ������, ���� �̹����� ����(���߿�û) -->
+        <!-- //�޴� -->
+    </div>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- //���̾��˾� END -->
+<!-- ���� SCRIPT START -->
+<script>
+    $(window).on('load', function() {
+        UICommon.allMenu.init(); //2023-07-10 ��ũ��Ʈ ���� ���Ϸ� �̵�
+    })
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

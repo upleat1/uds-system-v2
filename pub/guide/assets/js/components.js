@@ -5,6 +5,8 @@ var preview = preview || (function() {
         copy();
         addEvent();
         deviceSize();
+        
+        $("code").attr("aria-hidden", "true");
     })();
 
     function deviceSize() {
@@ -111,15 +113,11 @@ var Contents = (function() {
     function btnSet() {
         var $btmBtnSet = $(parent.document).find('.btm_btn_set');
         var $btnTop = $(parent.document).find('.btn_guide_top');
-        var $btnC = $(parent.document).find('.g_project .current');
         $btnTop.on('click', function () {
             $(window).scrollTop(0);
         });
         $(window).scroll(function () {
             ($(window).scrollTop() > 100) ? $btmBtnSet.addClass('active') : $btmBtnSet.removeClass('active');
-        });
-        window.addEventListener('mouseup', function(e){
-            $btnC.removeClass('active').next('.g_list').slideUp();
         });
     }
 })();

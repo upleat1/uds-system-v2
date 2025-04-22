@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>����뵵 ����</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">�ſ�����û</h1>
+            <button type="button" class="action-chatbot" title="ê��"></button>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container lon">
+        <div class="pg-content">
+            <h2 class="ht-2">������ �����ǰ��<br><strong>���ռ� ���θ� Ȯ���ҰԿ�</strong></h2>
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label">�İ��ο���</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="�İ��ο��� ����" data-ui="pop-open" data-no="0" onclick="UICommon.Layer.open('#regDetail')">�������ּ���</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">����뵵</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="����뵵 ����" data-ui="pop-open" data-no="1" onclick="UICommon.Layer.open('#regDetail')">�������ּ���</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">��ȯ���</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="��ȯ��� ����" data-ui="pop-open" data-no="2" onclick="UICommon.Layer.open('#regDetail')">�������ּ���</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">�����ҵ�</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="�����ҵ� ����" data-ui="pop-open" data-no="3" onclick="UICommon.Layer.open('#regDetail')">�������ּ���</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <div class="form-label">�ҵ�������</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="�ҵ������� ����" data-ui="pop-open" data-no="4" onclick="UICommon.Layer.open('#regDetail')">�������ּ���</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">��ä�ݾ�</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="��ä�ݾ� ����" data-ui="pop-open" data-no="5" onclick="UICommon.Layer.open('#regDetail')">�������ּ���</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">���ڻ�Ը�</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="���ڻ�Ը� ����" data-ui="pop-open" data-no="6" onclick="UICommon.Layer.open('#regDetail')">�������ּ���</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agree-check">
+                    <div class="form-rdochk v">
+                        <span class="form-sel lg">
+                            <input type="checkbox" id="compactChk">
+                            <label for="compactChk" class="label">���ռ� Ȯ���� ���� ���������� �����ϸ�, ������ ������ 1�� ���� ��ȿ���� Ȯ���մϴ�.</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">Ȯ��</button>
+        </div>
+    </footer>
+</div>
+<!-- ���̾��˾� START -->
+<!-- ��ϳ��� -->
+<div id="regDetail" class="popup bottom show" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <!-- LON_02_065 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>�İ��� ���θ� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block">�������İ���</button>
+                        <button type="button" class="list-block">�Ǽ����İ���</button>
+                        <button type="button" class="list-block selected" title="���õ�">�ش����</button><!-- ����: ���ý� selected Ŭ���� �� title �߰� -->
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="1" onclick="UICommon.Layer.moveStream()">����</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LON_02_009 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>����뵵�� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�">��Ȱ�ڱ�</button><!-- mod-date:0314: ���ý� selected Ŭ���� �� title �߰� -->
+                        <button type="button" class="list-block">����ڱ�</button>
+                        <button type="button" class="list-block">�����ڱ�</button>
+                        <button type="button" class="list-block">�Ƿ��</button>
+                        <button type="button" class="list-block">�����ȯ�ڱ�</button>
+                        <button type="button" class="list-block">���ڱ�/������</button>
+                        <button type="button" class="list-block">��Ÿ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <!-- mod-date:0327: Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <!-- //Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="2" onclick="UICommon.Layer.moveStream()">����</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ON_02_010 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>��ȯ����� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�">�ٷμҵ�</button><!-- mod-date:0314: ���ý� selected Ŭ���� �� title �߰� -->
+                        <button type="button" class="list-block">����ҵ�</button>
+                        <button type="button" class="list-block">�Ӵ�ҵ�</button>
+                        <button type="button" class="list-block">���ݼҵ�</button>
+                        <button type="button" class="list-block">��Ÿ�ҵ�</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <!-- mod-date:0327: Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <!-- //Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="3" onclick="UICommon.Layer.moveStream()">����</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ON_02_011 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>�����ҵ��� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�">5�鸸�� �̸�</button><!-- mod-date:0314: ���ý� selected Ŭ���� �� title �߰� -->
+                        <button type="button" class="list-block">5�鸸�� �̻�~5õ���� �̸�</button>
+                        <button type="button" class="list-block">5õ���� �̻�~1��� �̸�</button>
+                        <button type="button" class="list-block">1��� �̻�</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <!-- mod-date:0327: Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <!-- //Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="4" onclick="UICommon.Layer.moveStream()">����</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ON_02_012 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>�ҵ��� ����Ը� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�">���ҵ��� �ʰ����� ����</button><!-- mod-date:0314: ���ý� selected Ŭ���� �� title �߰� -->
+                        <button type="button" class="list-block">���ҵ��� �ʰ��ؼ� ���</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <!-- mod-date:0327: Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <!-- //Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="5" onclick="UICommon.Layer.moveStream()">����</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ON_02_013 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>���� ���� ����ݾ��� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�">1õ���� �̸�</button><!-- mod-date:0314: ���ý� selected Ŭ���� �� title �߰� -->
+                        <button type="button" class="list-block">1õ���� �̻�~1��� �̸�</button>
+                        <button type="button" class="list-block">1��� �̻�~3��� �̸�</button>
+                        <button type="button" class="list-block">3��� �̻�</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <!-- mod-date:0327: Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+                <!-- //Ȯ�ι�ư�߰� -->
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="5" onclick="UICommon.Layer.moveStream()">����</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ON_02_014 -->
+        <div class="stream-wrap">
+            <div class="pop-head">
+                <h1>�� �ڻ�Ը� �������ּ���</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="���õ�">1��� �̸�</button><!-- mod-date:0314: ���ý� selected Ŭ���� �� title �߰� -->
+                        <button type="button" class="list-block">1��� �̻�~5��� �̸�</button>
+                        <button type="button" class="list-block">5��� �̻�~10��� �̸�</button>
+                        <button type="button" class="list-block">10��� �̻�</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //��ϳ��� -->
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

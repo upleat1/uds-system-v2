@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="format-detection" content="telephone=no">
-    <title>Upleat Design System</title>
-    <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
-    <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>유플리트</title>
+    <link rel="stylesheet" href="/pub/guide/assets/css/components.css" />
+    <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css"
+    />
+
     <!-- resource -->
-	<link rel="stylesheet" href="/pub/app/css/common.css">
-    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/app/css/main.css">
-    <link rel="stylesheet" href="/pub/app/css/library/swiper.min.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="컨텐츠 스타일" href="/pub/assets/css/contents.css">
+    <style>
+        .all-menu .banner-area {width:100%;}  /* 가이드내 임시용 */
+    </style>
 </head>
 <body>
     <div data-class="contents">
@@ -20,141 +24,145 @@
 
         <div data-class="section">
             <div data-class="h1">Type</div>
+            <div data-class="h2">컨텐츠형</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>관리등록인 상품목록, 전체메뉴만 통이미지를 사용</div>
+                    <div>기존 통이미지 배너에서 컨텐츠로 변경</div>
+                </div>
+            </div>
+            <script type="text/html">
+<div class="boxs line blue01" role="button" title="보이스피싱 예방서비스 상세보기">
+    <div class="section-phishing add-arr">
+        <div class="state-msg">
+            <strong class="msg-tit">보이스피싱 예방을 위한 서비스도 이용해보세요</strong>
+        </div>
+    </div>
+</div>
 
-            <div data-class="h2">마케팅배너</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>배너간격 20px</div>
-                    <div>해상도 420px 이상일때는 배너너비값 420px 고정으로 다중 노출</div>
-                </div>
-            </div>
-            <script type="text/html">
-<div class="m_banner_marketing">
-    <div class="ui_swiper _loop _center img_banner" data-auto="3000" data-title="마케팅 배너">
-        <div class="swiper-wrapper" data-bubble="false">
-            <div class="swiper-slide">
-                <a href="#">
-                    <img src="/pub/app/img/temp/banner_sample.png" alt="KB와 재태크 시작하면 한정판 굿즈 이벤트 참여" />
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#">
-                    <img src="/pub/app/img/temp/banner_sample.png" alt="KB와 재태크 시작하면 한정판 굿즈 이벤트 참여" />
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#">
-                    <img src="/pub/app/img/temp/banner_sample.png" alt="KB와 재태크 시작하면 한정판 굿즈 이벤트 참여" />
-                </a>
-            </div>
+<div class="boxs line blue01 gap-sm" role="button" title="지방세 연간 일정 안내 상세보기">
+    <div class="section-texplan add-arr">
+        <div class="state-msg">
+            <strong class="msg-tit">지방세 연간 일정 안내</strong>
         </div>
-        <div class="swiper-pagination"></div>
     </div>
 </div>
             </script>
-            <div data-class="h2">마케팅배너 - 하나일 경우</div>
+            
             <div data-class="box">
                 <div data-class="list disc">
-                    <div>마케팅배너가 하나일 경우는 스와이퍼 기능 해제</div>
+                    <div>우측의 카드이미지는 관리자에서 등록된 이미지</div>
                 </div>
             </div>
             <script type="text/html">
-<div class="m_banner_marketing">
-    <div class="ui_swiper _loop _center img_banner" data-auto="3000" data-title="마케팅 배너">
-        <div class="swiper-wrapper" data-bubble="false">
-            <div class="swiper-slide">
-                <a href="#">
-                    <img src="/pub/app/img/temp/banner_sample.png" alt="KB와 재태크 시작하면 한정판 굿즈 이벤트 참여" />
-                </a>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</div>
-            </script>
-            <div data-class="h2">서비스 안내배너 1</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>배너너비 가변</div>
-                </div>
-            </div>
-            <script type="text/html">
-<button type="button" class="m_banner_open_banking m_ani">
-    <strong>KB 오픈뱅킹 서비스</strong>
-    <span>다른 금융 계좌를 한번에 조회<br> 이체하는 통합자금 관리</span>
+<button type="button" class="propose-wrap">
+    <strong>기관에서 보증해주는<br>사잇돌 햇살론 대출은 어떠세요?</strong>
+    <span class="arr">보증부대출 알아보기</span>
+    <span class="thumn">
+        <img src="/pub/assets/img/common/ico-60x-propose1.svg" alt="">
+    </span>
+</button>
+
+<button type="button" class="propose-wrap">
+    <strong>조건없이 전가맹점 캐시백 할인</strong>
+    <span class="arr">PAY백체크카드2 신청하기</span>
+    <span class="thumn">
+        <img src="/pub/assets/img/common/@card-temp.png" alt="PAY백체크카드2">
+    </span>
 </button>
             </script>
-            <div data-class="h2">서비스 안내배너 2</div>
+            
+            <div data-class="h2">관리자등록</div>
             <div data-class="box">
+                <div><strong>상품목록(상단, 중간)</strong></div>
                 <div data-class="list disc">
-                    <div>배너너비 가변</div>
+                    <div>관리자등록배너</div>
+                    <div>상단은 중앙정렬, 중간은 왼쪽정렬 기준이며, 배경색은 인스타일로 지정</div>
                 </div>
             </div>
             <script type="text/html">
-<div class="m_grid_list m_ani on">
-    <button type="button" class="m_grid_item i1"><span>임대인 누구나 쉽게 사용하는</span> <strong>부동산 임대관리 렌트온</strong></button>
-    <button type="button" class="m_grid_item i2"><span>발행, 거래처, 품목관리, 매출내역을 한곳에서!</span><strong>전자세금계산서 발행</strong></button>
-    <button type="button" class="m_grid_item i3"><span>급여명세서 작성 및 다양한 경영지원 정보</span><strong>경영지원 모음</strong></button>
-    <button type="button" class="m_grid_item i4"><span>급여관리부터 세금신고까지 한번에!</span><strong>간편세무장부/HR</strong></button>
-</div>
+                <div class="widest scene01" id="scene1">
+                    <div class="ui-swiper -loop -fraction -nav" data-auto="5000" data-space="18">
+                        <div class="swiper-wrapper prod-main-focus">
+                            <button type="button" class="swiper-slide" style="background-color:#d4ebff"><!-- 태그변경, 배경색 -->
+                                <img src="/pub/assets/img/admin/banner/prod-top-bnn01.png" alt="잠깐도 좋고 오래도 좋으니 갈곳 잃은 돈 파킹통장으로" title="자세히보기">
+                            </button>
+                            <button type="button" class="swiper-slide" style="background-color:#e4e2fa">
+                                <img src="/pub/assets/img/admin/banner/prod-top-bnn09.png" alt="신용대출 여러상품을 한번에 조회해요" onclick="" title="자세히보기">
+                            </button>
+                            <button type="button" class="swiper-slide" style="background-color:#f0e7c9">
+                                <img src="/pub/assets/img/admin/banner/prod-top-bnn15.png" alt="NICE 신용관리서비스 내 신용정보는 안녕하신가요?" onclick="" title="자세히보기">
+                            </button>
+                        </div>
+                        <div class="swiper-pagination prod-main"></div>
+                    </div>
+                </div>
+                
+                <button type="button" class="bnn-strip" style="background-color:#d4ebff"><!-- 배경색 -->
+                    <img src="/pub/assets/img/admin/banner/prod-strip-bnn05.png" alt="커피 향 나는 이자 한잔 어때요? 여기가 이자 맛집!">
+                </button>
             </script>
-            <div data-class="h2">서비스 안내배너 3</div>
+            
             <div data-class="box">
+                <div><strong>전체메뉴</strong></div>
                 <div data-class="list disc">
-                    <div>배너너비 가변</div>
+                    <div>관리자등록배너</div>
+                    <div>중앙정렬기준이며, 배경색은 인스타일로 지정</div>
                 </div>
             </div>
             <script type="text/html">
-<button type="button" class="m_star_cms_report m_ani on">
-    <!-- 220902 'm_ani' 클래스 추가 -->
-    <strong class="txt1">Star CMS 자금보고서</strong>
-    <span class="txt2">은행, 카드, 국세청 계산서 등<br> 매출/매입 자료 관리를 한눈에!</span>
-    <span class="txt3">서비스 이용하기</span>
-</button>
-            </script>
-            <div data-class="h2">서비스 안내배너 4</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>배너사이즈 200*160 고정</div>
-                    <div>배너간격 10px</div>
+<div class="all-menu">
+    <div class="banner-area">
+        <div class="banner-box ui-swiper -loop -fraction -nav" data-auto="5000">
+            <div class="swiper-wrapper">
+                <div class="item swiper-slide">
+                    <button type="button" class="img-wrap" style="background-color: #f1f6fb;">
+                        <img src="/pub/assets/img/admin/banner/prod-menu-bnn01.png" alt="입출금통장 갈곳 일은 돈을 파킹하세요!">
+                    </button>
+                </div>
+                <div class="item swiper-slide">
+                    <button type="button" class="img-wrap" style="background-color: #f1f6fb;">
+                        <img src="/pub/assets/img/admin/banner/prod-menu-bnn10.png" alt="사잇돌2 신용이 낮아도 고금리 부담 없이">
+                    </button>
                 </div>
             </div>
-            <script type="text/html">
-<div class="m_kb_fin_product m_ani">
-    <div class="ui_swiper swiper_items" data-space="10" data-title="셀러존 이벤트">
-        <div class="swiper-wrapper" data-bubble="false">
-            <div class="swiper-slide">
-                <a href="#" class="m_kb_fin_product_item i1" title="셀러존 이벤트 상세화면으로 이동">
-                    <strong>KB셀러론</strong>
-                    <span>내일·매일이 정산일!<br>선정산 서비스</span>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#" class="m_kb_fin_product_item i2" title="셀러존 이벤트 상세화면으로 이동">
-                    <strong>KB매출더하기론</strong>
-                    <span>선정산에 신용 더하기+</span>
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#" class="m_kb_fin_product_item i3" title="셀러존 이벤트 상세화면으로 이동">
-                    <strong>KB메가셀러론</strong>
-                    <span>40개 마켓(또는 PG)을<br>‘일사천리' 선정산</span>
-                </a>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</div>
-            </script>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
-    
+</div>
+            </script>
+        
+            
+            <div data-class="h2">기타</div>
+            <div data-class="box">
+                <div><strong>로그인, 회원가입</strong></div>
+                <div data-class="list disc">
+                    <div>관리자등록배너</div>
+                    <div>중앙정렬기준이며, 배경색은 인스타일로 지정</div>
+                    <div>회원가입완료(MSB_JOI_10_001)에서 사용되며, 현재는 네이티브 페이지</div>
+                </div>
+            </div>
+            <script type="text/html">
+    <div class="banner-wrap">
+        <a href="#none" class="banner" style="background-color:#c3f1ff">
+            <img src="/pub/assets/img/admin/banner/prod-change-bnn01.png" alt="새로운 금융을 맛볼 준비 되셨나요? 새로운 금융의 맛보기">
+        </a>
+    </div>
+            </script>
+        </div>
+
+    </div>
+
     <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
-    <script src="/pub/guide/assets/vendor/swiper.min.js"></script>
     <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
     <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
     <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
-    <script src="/pub/guide/assets/js/components.js"></script>
-    <script src="/pub/app/js/common_ui.js"></script>
+    <script src="/pub/guide/assets/js/components.js?1"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <script src="/pub/guide/assets/vendor/swiper.min.js"></script>
+
+    <script>
+        UICommon.uiSwiper.init();
+    </script>
 </body>
 </html>

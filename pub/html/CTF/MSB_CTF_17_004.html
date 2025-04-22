@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�������ȸ/���� ����</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">�������ȸ/���� ����</h1>
+            <button type="button" class="action-prev" title="����"></button>
+        </div>
+    </header>
+    <div class="pg-container ctf">
+		<div class="pg-content">
+            <h2 class="ht-2"><strong>����� ��û������</strong><br>�������ּ���</h2>
+
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label">��û����</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="��û���� ����" onclick="UICommon.Layer.open('#selectOpt');">�������ּ���</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="ht-4">���⼭��</h3>
+                <div class="line-box etc">
+                    <div class="boxs-cont">
+                        <div class="cont-item"><!-- ����: �Կ� �� on Ŭ���� �߰� -->
+                            <strong class="cont-txt">������ �Կ����ּ���</strong>
+                            <button type="button" class="btn ico-arr-right" title="������ ����">�����Կ�</button><!-- mod-date:0522: [���ټ�] title �߰� -->
+                        </div>
+                        <div class="cont-item on">
+                            <strong class="cont-txt">������ �Կ����ּ���</strong>
+                            <button type="button" class="btn ico-arr-right" title="������ ����(�����Կ�)">���Կ�</button><!-- mod-date:0522: [���ټ�] title �߰� -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+    <div class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">���� �����ϱ�</button> 
+        </div>
+    </div>
+</div>
+
+<!-- ���̾��˾� START -->
+<div id="selectOpt" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>��û������ �������ּ���</h1>
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="list-wrap">
+                    <button type="button" class="list-block selected" title="���õ�"><!-- ����: ���ý� selected Ŭ���� �� title �߰� -->
+                        �����
+                    </button >
+                    <button type="button" class="list-block">
+                        ����������
+                    </button >
+                    <button type="button" class="list-block">
+                        ���������� �� ������ ����
+                    </button >
+                    <button type="button" class="list-block">
+                        ���ʼ�����
+                    </button >
+                    <button type="button" class="list-block">
+                        5.18 ����ȭ� �λ���
+                    </button >
+                    <button type="button" class="list-block">
+                        ������ ������ȯ��
+                    </button >
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- ���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

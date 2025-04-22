@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>����������</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">������ ����</h1>
+			<button type="button" class="action-prev" title="����"></button>
+			<button type="button" class="action">���</button>
+		</div>
+	</header>
+    <div class="pg-container pic">
+		<div class="pg-content">
+            <h2 class="ht-2"><strong>ȫ�浿��</strong><br>������ Ȯ�����ּ���</h2><!-- mod-date:0605: [���ټ�] role ���� -->
+            <!-- �⺻���� -->
+            <div class="section">
+                <h3 class="ht-3">�⺻����</h3>
+                <div class="form-group">
+                    <div class="form-label">�����̸�</div>
+                    <div class="form-row">
+                        <div class="form-ele wp-40 error"><!-- ����: ������ error Ŭ���� �߰� -->
+                            <input type="text" placeholder="��" title="���� �� �Է�" value="" class="inp">
+                        </div>
+                        <div class="form-ele">
+                            <input type="text" placeholder="�̸�" title="���� �̸� �Է�" value="gildong" class="inp">
+                        </div>
+                    </div>
+                    <p class="tip error">���� ���� �� �Է����ּ���.</p><!-- ����: ������ error Ŭ���� �߰� -->
+                </div>
+                <div class="form-group">
+                    <div class="form-label">����ó</div>
+                    <div class="form-row">
+                        <div class="form-ele">            
+                            <button type="button" title="����ó ����" class="inp-btn justify on"><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                                <span>010-1234-5678</span>
+                                <span class="point sm" aria-hidden="true">����</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">�߰���������ó</div>
+                    <div class="form-row"><!-- ����: ������ error Ŭ���� �߰� -->
+                        <div class="form-ele">
+                            <button type="button" title="�߰���������ó �Է�" class="inp-btn on">010-1234-5678</button><!-- mod-date:0614: [���ټ�] title ���� -->
+                        </div>
+                    </div>
+                    <!-- <p class="tip error">�߰���������ó�� �� �Է����ּ���.</p> --><!-- ����: ������ error Ŭ���� �߰� -->
+                </div>
+                <div class="form-group">
+                    <div class="form-label">�̸���</div>
+                    <div class="form-row v inp-ref-wrap"><!-- ������ error Ŭ���� �߰� -->
+                        <div class="form-ele">
+                            <input type="text" placeholder="�Է����ּ���" title="�̸��� �Է�" class="inp">
+                        </div>
+                        <!-- (����)�ڵ��ϼ� -->
+                        <!-- <div class="inp-ref-pos">
+                            <div class="inp-ref">
+                                <div class="ref-list list-mail">
+                                    <a href="#" role="button">kimjeju<em>@naver.com</em></a>
+                                    <a href="#" role="button">kimjeju<em>@hanmail.net</em></a>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- // -->
+                    </div>
+                    <!-- <p class="tip error">�̸����� �� �Է����ּ���.</p> --><!-- ������ error Ŭ���� �߰� -->
+                </div>
+                <div class="form-group">
+                    <div class="form-label">���ּ�</div>
+                    <div class="form-row">
+                        <div class="form-ele addr"><!-- ����: �ּ� �Է��� addr Ŭ���� �߰� -->
+                            <button type="button" title="�� �ּ� �˻�" class="inp-btn justify on"><!-- ����: �ּ� �Է��� on Ŭ���� �߰� -->
+                                <span class="address eps"><strong class="post-num">11040</strong>����� ������ �ܴٸ��� 39 (������, �ε�����) 4��</span>
+                                <span class="point sm" aria-hidden="true">�˻�</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- mod-date:0907: (������) ��ũ�� ���� -->
+                <ul class="depth info gap-md">
+                    <li>����ó ���� �� �޴��� ���������� �ʿ��ؿ�.</li>
+                    <li>���� �� �ź����� ���� ǥ��� ��ġ�ؾ� �մϴ�.</li>
+                </ul>
+                <!-- //0907: (������) ��ũ�� ���� -->
+            </div>
+            <!-- // -->
+
+            <!-- �������� -->
+            <div class="section">
+                <h3 class="ht-3">��������</h3>
+                <div class="form-group">
+                    <div class="form-label">����</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="���� ����">������</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">����</div>
+                    <div class="form-row">
+                        <div class="form-ele">            
+                            <button type="button" title="���� ����" class="inp-btn justify on"><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                                <span class="address eps">���ø�Ʈ</span><!-- ����: �ּ� �Է��� Ŭ���� �߰� -->
+                                <span class="point sm" aria-hidden="true">�˻�</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">���� &middot; ����</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="����,���� ����">����</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">�����ּ�</div>
+                    <div class="form-row">
+                        <div class="form-ele addr"><!-- ����: �ּ� �Է��� addr Ŭ���� �߰� -->
+                            <button type="button" title="�����ּ� �˻�" class="inp-btn justify on"><!-- ����: �ּ� �Է��� on Ŭ���� �߰� -->
+                                <span class="address"><strong class="post-num">11040</strong>����� ������ �ܴٸ��� 39 (������, �ε�����) 4��</span>
+                                <span class="point sm" aria-hidden="true">�˻�</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">���忬��ó</div>
+                    <div class="form-row">
+                        <div class="form-ele wp-30">
+                            <button type="button" title="���忬��ó ���ڸ� �Է�" class="select-btn">����</button>
+                        </div>
+                        <div class="form-ele">
+                            <button type="button" title="���忬��ó ���ڸ� �Է�" class="inp-btn">�Է����ּ���</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // -->
+
+            <!-- ������ -->
+            <div class="section">
+                <h3 class="ht-3">�������޴°�</h3>
+                <div class="form-group">
+                    <div class="form-rdochk rdobox"><!-- col-3 -->
+                        <span class="form-sel">
+                            <input type="radio" id="radioChk01-1" name="radioChk01" checked>
+                            <label for="radioChk01-1" class="label">��</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioChk01-2" name="radioChk01">
+                            <label for="radioChk01-2" class="label">����</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioChk01-3" name="radioChk01">
+                            <label for="radioChk01-3" class="label">��������</label>
+                        </span>
+                    </div>
+                </div>
+                <p class="tip gap-xsm">������ �� �������ͻ�� �� ���� ���� �ʼ� �ȳ������� ���������� ������� �� �ּҷ� �����帳�ϴ�.</p>
+            </div>
+            <!-- // -->
+
+            <!-- mod-date:0508 : �����ǹ� �׸� ����(����ȭ) -->
+
+            <!-- �ؿܳ����ǹ� -->
+            <div class="section">
+                <h3 class="ht-3">�ؿܳ����ǹ��� �ֳ���?</h3>
+                <div class="form-group">
+                    <div class="form-rdochk rdobox">
+                        <span class="form-sel">
+                            <input type="radio" id="radioChk03-1" name="radioChk03" aria-controls="radhiPanel01"><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                            <label for="radioChk03-1" class="label">�ƴϿ�</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioChk03-2" name="radioChk03" aria-controls="radhiPanel02" checked><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                            <label for="radioChk03-2" class="label">��</label>
+                        </span>
+                    </div>
+                    <div class="rdo-panel gap-md" id="radhiPanel02">
+                        <div class="form-group">
+                            <div class="form-label">�����̸�</div>
+                            <div class="form-row">
+                                <div class="form-ele wp-40"><!-- ����: ������ error Ŭ���� �߰� -->
+                                    <input type="text" placeholder="��" title="���� �� �Է�" value="" class="inp">
+                                </div>
+                                <div class="form-ele"><!-- ����: ������ error Ŭ���� �߰� -->
+                                    <input type="text" placeholder="�̸�" title="���� �̸� �Է�" value="" class="inp">
+                                </div>
+                            </div>
+                            <!-- <p class="tip error">���� ���� �� �Է����ּ���.</p> --><!-- ����: ������ error Ŭ���� �߰� -->
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label">�ּ�������</div>
+                            <div class="form-row">
+                                <div class="form-ele">
+                                    <button type="button" class="select-btn on" title="�ּ������� ����">�ѱ�</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label">�����ּ�</div>
+                            <div class="form-row">
+                                <div class="form-ele">
+                                    <input type="text" placeholder="�Է����ּ���" title="�����ּ� �Է�" value="" class="inp"><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // -->
+
+            <!-- �ؿܳ������� -->
+            <div class="section">
+                <h3 class="ht-3 between">�ؿ� ��������(�߰�����1)<button type="button" class="btn underline">��������</button></h3><!-- mod-date:0518 : ��ũ�� ���� -->
+                <!-- @�̱� -->
+                <div class="form-group">
+                    <div class="form-label">�����ǹ�����</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="�����ǹ����� ����">�̱�</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">�����ڹ�ȣ</div>
+                    <div class="form-row">
+                        <div class="form-ele">            
+                            <button type="button" title="�����ڹ�ȣ �Է�" class="inp-btn">�Է����ּ���</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                    <!-- <p class="tip error">�����ڹ�ȣ�� �� �Է����ּ���</p> --><!-- ����: ������ error Ŭ���� �߰� -->
+                </div>
+                <div class="form-group">
+                    <div class="form-label">��������</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="�������� ����">�������ּ���</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                    <!-- <p class="tip error">���������� �� �Է����ּ���</p> --><!-- ����: ������ error Ŭ���� �߰� -->
+                </div>
+                <div class="btns cont-foot"><!-- mod-date:0426: Ŭ���� ���� -->
+                    <button type="button" class="btn outline lg">�����߰��ϱ�</button>
+                </div>
+                <!-- //@ -->
+
+                <!-- @�̱� �� -->
+                <div class="form-group">
+                    <div class="form-label">�����ǹ�����</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="�����ǹ����� ����">�������ּ���</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-rdochk rdobox">
+                        <span class="form-sel">
+                            <input type="radio" id="radioChk04-1" name="radioChk04" aria-controls="radioChkPanel04-1" checked><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                            <label for="radioChk04-1" class="label">�����ڹ�ȣ �Է�</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioChk04_2" name="radioChk04" aria-controls="radioChkPanel04-2"><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                            <label for="radioChk04_2" class="label">�����ڹ�ȣ ����</label>
+                        </span>
+                    </div>
+                    <div class="rdo-panel gap-md" id="radioChkPanel04-1">
+                        <div class="form-group">
+                            <div class="form-label">�����ڹ�ȣ</div>
+                            <div class="form-row"><!-- ����: ������ error Ŭ���� �߰� -->
+                                <div class="form-ele">            
+                                    <button type="button" title="�����ڹ�ȣ �Է�" class="inp-btn">�Է����ּ���</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                                </div>
+                            </div>
+                            <!-- <p class="tip error">�����ڹ�ȣ�� �� �Է����ּ���</p> --><!-- ����: ������ error Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                    <div class="rdo-panel gap-md"id="radioChkPanel04-2">
+                        <div class="form-group">
+                            <div class="form-label">����</div>
+                            <div class="form-row">
+                                <div class="form-ele">
+                                    <button type="button" class="select-btn" title="���� ����">�������ּ���</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btns cont-foot"><!-- mod-date:0426: Ŭ���� ���� -->
+                        <button type="button" class="btn outline lg">�����߰��ϱ�</button>
+                    </div>
+                </div>
+                <!-- //@ -->
+            </div>
+            <!-- // -->
+		</div>
+        <div class="content-foot">
+            <div class="inform-btm-wrap">
+                <h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>�̱��� �����ڹ�ȣ �Է��� �ʼ��Դϴ�.</li>
+                    <li>���������� ���� ���� ��� ������ �߰��Ͽ� ����� �� �ֽ��ϴ�.</li>
+                    <li>���������� ����� ���, �����ڷḦ �����ؾ� �մϴ�.</li>
+                    <li>������� �� 51�� ��7�׿� ���� �ؿܳ����ǹ��� ������ ������ ������ ����Ǵ� ��� ��������� �� ����� �˸��� ������ �ǹ��� �ֽ��ϴ�.</li>
+                    <li>�ؿ� �����ǹ��� ���� ������ �δ��ϰ� �źΡ������ϴ� ����, ���� ���� ���� ���� ���� ��������� �ǻ��ǹ��� �����ǹ��� �����ϴ� ������ ������� �� 50���� ���� ��������� ���� ����û�� �Ű��˴ϴ�.</li>
+                    <li>�ڼ��� ������ SBI�������� ��������(1566-2210)�� �������ּ���.</li>
+                </ul>
+            </div>
+        </div>
+	</div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary">�����ϱ�</button>
+        </div>
+    </footer>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

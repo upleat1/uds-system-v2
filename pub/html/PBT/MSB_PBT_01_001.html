@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>��ó���>�����Է�</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">��ó���</h1>
+            <button type="button" class="action-prev" title="����"></button>
+		</div>
+	</header>
+    <div class="pg-container pbt">
+		<div class="pg-content">
+            <h2 class="ht-2"><strong>������ ������ ������</strong> �Է����ּ���</h2><!-- mod-date:0605: [���ټ�] role ���� --><!-- mod-date:0405: ������ �ݿ� -->
+			<div class="section">
+                <div class="form-group">
+                    <div class="form-label">����������</div><!-- mod-date:0405: ������ �ݿ� -->
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="���α��� ����" data-ui="pop-open" onclick="UICommon.Layer.open('#selectUilPop');">�Ϲ�����</button><!-- ���� : value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">���ι�ȣ</div>
+                    <div class="form-ele">
+                        <button type="button" title="���ι�ȣ �Է�" class="inp-btn on">0125896</button><!-- ���� : value�� �Է½� on Ŭ���� �߰� -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">�����ڹ�ȣ</div><!-- mod-date:0405: ������ �ݿ� -->
+                    <div class="form-ele">
+                        <button type="button" title="������ȣ �Է�" class="inp-btn on">0886954532</button><!-- ���� : value�� �Է½� on Ŭ���� �߰� -->
+                    </div>
+                </div>
+                <!-- ���漼 ���ý� -->
+                <div class="form-group">
+                    <div class="form-label">���ڳ��ι�ȣ</div>
+                    <div class="form-ele">
+                        <button type="button" title="���ڳ��ι�ȣ �Է�" class="inp-btn on">123451234123456789</button><!-- ���� : value�� �Է½� on Ŭ���� �߰� -->
+                    </div>
+                </div>
+                <!-- //���漼 ���ý� -->
+			</div>
+		</div>
+		<div class="pg-content-foot">
+			<div class="inform-btm-wrap">
+				<h4 class="ht-4">�˷������</h4>
+				<ul class="depth bul">
+                    <!-- mod-date:0405: ������ �ݿ� -->
+                    <li>��ó��� ���� ����� ��ȸ�� �� �ֽ��ϴ�.</li>
+                    <li>����� ���� �����ڹ�ȣ�� �ٸ��� ���ڳ��ι�ȣ, �����ڹ�ȣ, ���밡��ȣ �� �Է� ������ ��ȣ�� �Է����ּ���.</li>
+                    <li>�ڵ����� ���� �������� ��ó����ϸ� �������� ��ݵ� �� ������ �� Ȯ�� �� �������ּ���.</li>
+                    <!-- //������ �ݿ� -->
+				</ul>
+			</div>
+		</div>
+	</div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary">Ȯ��</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- ���α��� ���� �˾� -->
+<div id="selectUilPop" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>������ ������ �������ּ���</h1><!-- mod-date:0405: ������ �ݿ� -->
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="list-wrap">
+                    <button type="button" class="list-block selected" title="���õ�"><!-- ����: ���ý� selected Ŭ���� �� title �߰� --> <!-- mod-date:0314: selected Ŭ����, title �Ӽ� �߰�(���ټ�����) -->
+                        �Ϲ�����
+                    </button>
+                    <button type="button" class="list-block">
+                        ������
+                    </button>
+                    <button type="button" class="list-block">
+                        4�뺸���
+                    </button>
+                    <button type="button" class="list-block">
+                        KT��ſ��
+                    </button>
+                    <button type="button" class="list-block">
+                        ���ο��� (�ݳ���/�߳������)
+                    </button>
+                    <button type="button" class="list-block">
+                        ���漼 (���ϼ��� ����)
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn primary lg" data-ui="pop-close">����</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //���α��� ���� �˾� -->
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

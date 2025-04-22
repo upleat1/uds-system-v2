@@ -1,0 +1,64 @@
+<div class="pg-wrap full h-auto" id="fullId-3">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">대출적합성재확인</h1>
+            <button type="button" class="action" data-ui="full-close">닫기</button>
+        </div>
+    </header>
+    <div class="pg-container lon"><!-- mod-date:0314: 클래스변경 -->
+		<div class="pg-content">
+            <div class="hgroup-2">
+                <h2 class="ht-2">YY.MM.DD에<br><strong>부적합 결과를 받았어요</strong><br>재심사 사유를 선택해주세요</h2>
+                <p class="txt">상품에 대한 적합 여부를 재심사하기 위해 요청 사유가 필요합니다.</p>
+            </div>
+            <div class="section">                
+                <div class="form-group">
+                    <div class="form-label fz-16">요청사유</div>
+                    <div class="form-rdochk v">
+                        <span class="form-sel">
+                            <input type="radio" id="radioH1" name="radio-h" checked="">
+                            <label for="radioH1" class="label">정보 오입력으로 인한 재신청</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioH2" name="radio-h">
+                            <label for="radioH2" class="label">소득정보 등 환경의 변화</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioH3" name="radio-h" aria-expanded="false" aria-controls="radioVpanel1">
+                            <label for="radioH3" class="label">기타</label>
+                        </span>
+                        <div class="rdo-panel" id="radioVpanel1">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="form-ele">
+                                        <input type="text" placeholder="사유 직접 입력" title="기타 요청사유" class="inp">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+    <footer class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary" data-ui="pop-open" onclick="UICommon.Layer.open('#checkInfo');">확인</button>
+        </div>
+    </footer>
+</div>
+<!-- 정보확인 팝업 -->
+<div id="checkInfo" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>YYYY.MM.DD 기준 미연체확인서 1장을 PC로 발급하시겠어요?</h1>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn secondary">아니요</button>
+                <button type="button" class="btn primary">예</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="팝업창 닫기">닫기</button>
+    </article>
+<!-- //정보확인 팝업 -->

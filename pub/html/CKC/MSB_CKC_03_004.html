@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>����ī���û</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">����ī���û</h1>
+            <button type="button" class="action">���</button>
+        </div>
+    </header> 
+    <div class="pg-container ckc">
+        <div class="pg-content">
+            <h2 class="ht-2">����ī��<br><strong>��û������ �Է����ּ���</strong></h2><!-- mod-date:0605: [���ټ�] role ���� -->
+            <div class="section">
+                <div class="card-wrap solid mgt-0">
+                    <div class="card-head my-card fit">
+                        <div class="state-img">
+                            <img src="/pub/assets/img/common/@card-temp.png" alt="PAY�� ī��">
+                        </div>
+                        <div>
+                            <span class="badge state-normal state-btn">��������</span><span class="badge state-posi card-type">����ī��</span>
+                            <div class="state-msg">PAY��üũī��2</div>
+                            <p class="card-no">
+                                <span class="items">��ȸ��:����</span>
+                                <span class="items">��������:����</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="ht-3 gap-md">�����������</h3>
+                <div class="form-group">
+                    <div class="form-label">��������</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on readonly" title="�������� ����" readonly>���¸�(1234)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="ht-3">�����ѵ�</h3>
+                <div class="form-group mgt-0">
+                    <div class="form-label right">�ִ� 1���</div>
+                    <div class="form-row between readonly">
+                        <span class="row-tit">1ȸ</span>
+                        <div class="form-ele">
+                            <button type="button" title="�����ѵ� 1ȸ �ݾ� �Է�" class="inp-btn right on" aria-disabled="true">1,000</button><!-- mod-date:0614: [���ټ�] title ���� �� aria-disabled �Ӽ� �߰� -->
+                            <span class="unit">����</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label right">�ִ� 1���</div>
+                    <div class="form-row between readonly">
+                        <span class="row-tit">1��</span>
+                        <div class="form-ele">
+                            <button type="button" title="�����ѵ� 1�� �ݾ� �Է�" class="inp-btn right on" aria-disabled="true">1,000</button><!-- mod-date:0614: [���ټ�] title ���� �� aria-disabled �Ӽ� �߰� -->
+                            <span class="unit">����</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label right">�ִ� 1���</div>
+                    <div class="form-row between readonly">
+                        <span class="row-tit">����</span><!-- mod-date:0523: �ؽ�Ʈ���� -->
+                        <div class="form-ele">
+                            <button type="button" title="�����ѵ� ���� �ݾ� �Է�" class="inp-btn right on" aria-disabled="true">1,000</button><!-- mod-date:0614: [���ټ�] title ���� �� aria-disabled �Ӽ� �߰� -->
+                            <span class="unit">����</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="depth info">����ī���� �����ѵ��� �������� �ѵ��������� ��� �����մϴ�.</p>
+                
+                <h3 class="ht-3">�߱޴��</h3>
+                <div class="form-group gap-sm">
+                    <div class="form-rdochk rdobox">
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-1" name="radio-box11" checked>
+                            <label for="radioBox1-1" class="label">�����</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-2" name="radio-box11">
+                            <label for="radioBox1-2" class="label">�θ�</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-3" name="radio-box11">
+                            <label for="radioBox1-3" class="label">�ڳ�</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-4" name="radio-box11">
+                            <label for="radioBox1-4" class="label">����/�ڸ�</label>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">������ ������ �̸�</div>
+                    <div class="form-row error"><!-- ������ error Ŭ���� �߰� -->
+                        <div class="form-ele"> 
+                            <input type="text" placeholder="�Է����ּ���" title="������ ������ �̸�" value="ȫ�浿" class="inp"><!-- mod-date:0524: [���ټ�] title ���� -->
+                        </div>
+                    </div>   
+                    <p class="tip error">�̸��� Ȯ�����ּ���.</p><!-- ������ error Ŭ���� �߰� -->
+                </div>
+                <div class="form-group">
+                    <div class="form-label">������ ������ �޴�����ȣ</div>
+                    <div class="form-row error">
+                        <div class="form-ele"> 
+                            <input type="text" placeholder="���ڸ� �Է�" title="������ ������ �޴�����ȣ" value="012345678" class="inp"><!-- mod-date:0524: [���ټ�] title ���� -->
+                        </div>
+                    </div>   
+                    <p class="tip error">�޴��� ��ȣ�� Ȯ�����ּ���.</p>
+                    <p class="tip">����ī�� �߱� ���� ���� Ȯ�� �� ��û ���� �ۼ� ��û�� �ϱ� ���� �뵵�Դϴ�.</p>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">������ ������ ������� 8�ڸ�</div><!-- mod-date:0524: �������� -->
+                    <div class="form-row error">
+                        <div class="form-ele"> 
+                            <input type="text" placeholder="���ڸ� �Է�" title="������ ������ ������� 8�ڸ�" value="20020310" class="inp"><!-- mod-date:0524: [���ټ�] title ���� -->
+                        </div>
+                    </div>   
+                    <p class="tip error">��������� Ȯ�����ּ���.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="content-foot">
+            <div class="inform-btm-wrap">
+                <h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <!-- <li>����ī�� �߱��� Ŀ���������� ��ȯ�� ��������� 1���� ���ؼ��� �����մϴ�.</li> --><!-- mod-date:1020: �������� -->
+                    <li>����ī�� �߱� ��, ī�� ��ȿ�Ⱓ�� �������� ���� ī��� �����ϰ� ����˴ϴ�.</li>
+                    <li>����ī�� ��û ��, ���� ������ ������ ������ �Է��ϰ� �������� ������ �� �ִ� ������ �����ؾ� ����ī�� �߱��� ����˴ϴ�.</li>
+                    <li>����ī���� �ѵ��� ���� ī���� �ѵ� ������ �̿밡���ϸ�, ������ �ѵ��� �ο����� �ʽ��ϴ�.</li>
+                    <li>������ ī���� �ܿ� ��ȿ�Ⱓ�� 6���� �̸��� ��� ����ī�� �߱��� ������ �� �ֽ��ϴ�.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary">����</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

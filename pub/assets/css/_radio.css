@@ -1,0 +1,33 @@
+@charset "euc-kr"; 
+
+/*** Radio Button ***/
+.selection input[type=radio] {width:var(--radiobutton-large-line-height); height:var(--radiobutton-large-line-height); font-size:var(--radiobutton-large-font-size);}
+.selection input + .label [class^=icon_bank_]{vertical-align:middle;margin:-.6rem .6rem 0 0}
+.selection input + .label [class^=icon_bank_]+em, .selection input + .label [class^=icon_bank_]+strong{margin-top:-.5rem}
+
+.selection input[type=radio] + .label {display:inline-block; position:relative; z-index:1; width:100%; min-height:var(--radiobutton-large-line-height); padding-left:calc(var(--radiobutton-large-line-height) + var(--radiobutton-label-gap));}
+.selection input[type=radio] + .label:before {content:''; display: inline-block; position:absolute; left:0; top:-.1rem; z-index:1; width:var(--radiobutton-large-line-height); height:var(--radiobutton-large-line-height); border:var(--radiobutton-border-width) solid var(--radiobutton-large-off-background-color); border-radius:100px;background-color:var(--radiobutton-background-color); transition:0.3s}
+.selection input[type=radio] + .label:after {content:''; display: inline-block; position:absolute; left:.7rem; top:.6rem; z-index:1; width:1.2rem; height:1.2rem; border-radius:50%; background:var(--radiobutton-large-on-background-color); transform: scale(0);}
+.selection.alone input[type=radio] + .label {width:2.4rem; padding-left:0;}
+.selection input[type=radio]:checked + .label:before {border-color:var(--radiobutton-large-on-background-color);}
+.selection input[type=radio]:checked + .label:after {animation: radioAni .3s linear forwards}
+
+.selection input[type=radio]:disabled + .label {color:var(--radiobutton-large-off-disabled-font-color)}
+.selection input[type=radio]:disabled + .label:before {border-color:var(--fc_08)}
+.selection input[type=radio]:checked:disabled + .label {color:var(--radiobutton-large-on-disabled-font-color)}
+.selection input[type=radio]:checked:disabled + .label:before {border-color:var(--radiobutton-large-on-disabled-border-color)}
+.selection input[type=radio]:checked:disabled + .label:after {background:var(--radiobutton-large-on-disabled-border-color)}
+@keyframes radioAni {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.selection.mid input[type=radio] + .label:before {top:50%; transform:translateY(-50%);}
+.selection.mid input[type=radio]:checked + .label:after {top:50%;margin-top:-0.6rem;}

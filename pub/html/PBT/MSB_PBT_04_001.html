@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>���ΰ����ȸ>���</title>
+    <link rel="stylesheet" data-description="���� ��/pub/ref="/pub/assets/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/pub/��" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" data-description="������ �/pub/href="/pub/assets/css/contents.css">
+    <script src="/pub/assets/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/pub/assets/js/library/jquery-ui.min.js"></script>
+    <script src="/pub/assets/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">���ΰ����ȸ</h1>
+			<button type="button" class="action-prev" title="����"></button>
+		</div>
+	</header>
+    <div class="pg-container pbt bg01">
+		<div class="pg-content">
+            <div class="section">
+                <div class="lists-headnote sticky">
+                    <button type="button" class="btn md ico-chevron-sm" data-ui="pop-open" onclick="UICommon.Layer.open('#organPop')" title="������� ����"><span class="eps">��ü�������</span></button><!-- mod-date:1101: span �߰� --><!-- mod-date:0517: [���ټ�] title �߰� -->
+                    <button type="button" class="btn md ico-chevron-sm" data-ui="pop-open" onclick="UICommon.Layer.open('#periodPop')" title="��ȸ�ɼ� ����">3����/��ü/�ֽż�</button><!-- mod-date:0517: [���ټ�] title �߰� -->
+                </div>
+                <!-- mod-date:0405: ��ũ�� �߰� -->
+                <div class="scroll-able" data-ui="scroll-able">
+                    <div class="scroll-hor">
+                        <button type="button" class="active" title="���õ�">��ü</button><!-- @����: ���õ� ��ư�� title="���õ�" �߰� --><!-- mod-date:0512: [���ټ�] aria-pressed ����, title �߰� -->
+                        <button type="button">��ó���</button>
+                        <button type="button">�ڵ�����</button>
+                    </div>
+                </div>
+                <!-- //��ũ�� �߰� -->
+                <div class="card-set">
+                    <div class="headnote">�� 3��</div>
+                    <div class="card-wrap" role="button" title="�󼼺���">
+                        <div class="card-head fit">
+                            <div class="state-msg">���ﵵ�ð���</div>
+                            <span class="btn ico-arr-right"></span>
+                            <span class="badge line-posi state-btn">���οϷ�</span>
+                            <!-- ano -->
+                            <!-- <span class="badge line-nega state-btn">���ν���</span> -->
+                            <!-- //anno -->
+                        </div>
+                        <ul class="lists data">
+                            <!-- mod-date:0405: ��ũ�� �߰� -->
+                            <li>
+                                <div class="key">��������</div>
+                                <div class="value">��ó���</div>
+                            </li>
+                            <!-- //��ũ�� �߰� -->
+                            <li>
+                                <div class="key">���ι�ȣ</div>
+                                <div class="value">123456</div>
+                            </li>
+                            <li>
+                                <div class="key">�����ڹ�ȣ</div><!-- mod-date:0405: ������ �ݿ� -->
+                                <div class="value">2005987654321</div>
+                            </li>
+                            <li>
+                                <div class="key">������</div><!-- mod-date:0405: ������ �ݿ� -->
+                                <div class="value">2023.01.17</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-wrap" role="button" title="�󼼺���">
+                        <div class="card-head fit">
+                            <div class="state-msg">KT</div>
+                            <span class="btn ico-arr-right"></span>
+                            <span class="badge line-nega state-btn">���ν���</span>
+                        </div>
+                        <ul class="lists data">
+                            <!-- mod-date:0405: ��ũ�� �߰� -->
+                            <li>
+                                <div class="key">��������</div>
+                                <div class="value">�ڵ�����</div>
+                            </li>
+                            <!-- //��ũ�� �߰� -->
+                            <li>
+                                <div class="key">���ι�ȣ</div>
+                                <div class="value">123456</div>
+                            </li>
+                            <li>
+                                <div class="key">�����ڹ�ȣ</div><!-- mod-date:0405: ������ �ݿ� -->
+                                <div class="value">2005987654321</div>
+                            </li>
+                            <li>
+                                <div class="key">������</div><!-- mod-date:0405: ������ �ݿ� -->
+                                <div class="value">2023.01.17</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-wrap" role="button" title="�󼼺���">
+                        <div class="card-head fit">
+                            <div class="state-msg">�ѱ������������</div>
+                            <span class="btn ico-arr-right"></span>
+                            <span class="badge line-nega state-btn">���ν���</span>
+                        </div>
+                        <ul class="lists data">
+                            <!-- mod-date:0405: ��ũ�� �߰� -->
+                            <li>
+                                <div class="key">��������</div>
+                                <div class="value">��ó���</div>
+                            </li>
+                            <!-- //��ũ�� �߰� -->
+                            <li>
+                                <div class="key">���ι�ȣ</div>
+                                <div class="value">123456</div>
+                            </li>
+                            <li>
+                                <div class="key">�����ڹ�ȣ</div><!-- mod-date:0405: ������ �ݿ� -->
+                                <div class="value">2005987654321</div>
+                            </li>
+                            <li>
+                                <div class="key">������</div><!-- mod-date:0405: ������ �ݿ� -->
+                                <div class="value">2023.01.17</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- mod-date:0524: ������ ���� -->
+                </div>
+            </div>
+
+            
+            <!-- ���� ����X -->
+            <div class="result nodata">
+                <p class="tit">���� ������ �������� �����.</p><!-- mod-date:0405: ������ �ݿ� -->
+            </div>
+            <!-- //���� ����X -->
+		</div>
+	</div>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- ���α�� ���� -->
+<div id="organPop" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>��������� �������ּ���</h1><!-- mod-date:0405: ������ �ݿ� -->
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="list-wrap">
+                    <button type="button" class="list-block selected" title="���õ�"><!-- mod-date:0314: selected Ŭ����, title �Ӽ� �߰�(���ټ�����) -->
+                        ��ü������� <!-- mod-date:0405: ������ �ݿ� -->
+                    </button>
+                    <button type="button" class="list-block">
+                        ���ο���
+                    </button>
+                    <button type="button" class="list-block">
+                        ��ȸ����� <!-- mod-date:0405: ������ �ݿ� -->
+                    </button>
+                    <button type="button" class="list-block">
+                        ���漼 <!-- mod-date:0405: ������ �ݿ� -->
+                    </button>
+                    <button type="button" class="list-block">
+                        �ѱ����°��� <!-- mod-date:0405: ������ �ݿ� -->
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //���α�� ���� -->
+
+<!-- �Ⱓ���� -->
+<div id="periodPop" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label fz-16">��ȸ�Ⱓ</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox fit"><!-- mod-date:0405: fit Ŭ���� �߰� -->
+                            <span class="form-sel">
+                                <input type="radio" id="period1-1" name="period-pop">
+                                <label for="period1-1" class="label"><em>1����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period1-2" name="period-pop">
+                                <label for="period1-2" class="label"><em>3����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period1-3" name="period-pop">
+                                <label for="period1-3" class="label"><em>6����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period1-4" name="period-pop" checked>
+                                <label for="period1-4" class="label"><em>�Ⱓ����</em></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-row by-box">
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn on">2022.10.15</button><!-- ���� : value�� �Է½� on Ŭ���� �߰� -->
+                        </div> 
+                        <span class="space">~</span>
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn on">2022.10.15</button><!-- ���� : value�� �Է½� on Ŭ���� �߰� -->
+                        </div> 
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label fz-16">���λ���</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox fit"><!-- mod-date:0405: fit Ŭ���� �߰� -->
+                            <span class="form-sel">
+                                <input type="radio" id="payState01" name="payState" checked>
+                                <label for="payState01" class="label">��ü</label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="payState02" name="payState">
+                                <label for="payState02" class="label">���οϷ�</label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="payState03" name="payState">
+                                <label for="payState03" class="label">���ν���</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label fz-16">���ļ���</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox">
+                            <span class="form-sel">
+                                <input type="radio" id="order01" name="order" checked>
+                                <label for="order01" class="label">�ֽż�</label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="order02" name="order">
+                                <label for="order02" class="label">���ż�</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn primary" data-ui="pop-close">Ȯ��</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //�Ⱓ���� -->
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>
