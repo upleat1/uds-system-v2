@@ -27,8 +27,8 @@
 
 /* Solid Button */
 .btn.solid {min-width:32.7rem;}
-.btn.solid.medium {height:var(--button-solid-medium-height); padding:var(--button-solid-medium-text-padding-x); font-size: var(--button-solid-medium-font-size); border-radius: var(--button-solid-medium-radius); border-width:var(--button-solid-medium-border-width)}
-.btn.solid.small {height:var(--button-solid-small-height); padding:var(--button-solid-small-text-padding-x); font-size: var(--button-solid-small-font-size); border-radius: var(--button-solid-small-radius); border-width:var(--button-solid-small-border-width)}
+.btn.solid.medium {height:var(--button-solid-medium-height); line-height: 1; padding:0 var(--button-solid-medium-text-padding-x); font-size: var(--button-solid-medium-font-size); border-radius: var(--button-solid-medium-radius); border-width:var(--button-solid-medium-border-width)}
+.btn.solid.small {height:var(--button-solid-small-height); line-height: 1; padding:0 var(--button-solid-small-text-padding-x); font-size: var(--button-solid-small-font-size); border-radius: var(--button-solid-small-radius); border-width:var(--button-solid-small-border-width)}
 
 .btn.solid.primary {background:var(--button-solid-primary-default-background-color); color:var(--button-solid-primary-default-font-color);}
 .btn.solid.primary.pressed {background:var(--button-solid-primary-pressed-background-color); color:var(--button-solid-primary-pressed-font-color);}

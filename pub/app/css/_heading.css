@@ -1,0 +1,14 @@
+@charset "euc-kr"; 
+
+/*** Heading Title ***/
+/* Heading */
+h1, h2, h3, h4 {font-weight:700; color:var(--fc_02); vertical-align:middle; word-break:keep-all;}
+.h1 {font-size:var(--font-size-heading-large)}
+.h2 {margin:3.2rem 0 0;font-size:var(--font-size-heading-medium)} 
+.h3 {margin:3.2rem 0 0;font-size:var(--font-size-heading-small)} 
+.h4 {margin:1.2rem 0 0; font-size:var(--font-size-heading-xsmall);}
+
+/* Body Text */
+.p-lg {font-size: var(--font-size-body-large);}
+.p-md {font-size: var(--font-size-body-medium);}
+.p-sm {font-size: var(--font-size-body-small);}
