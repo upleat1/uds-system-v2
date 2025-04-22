@@ -33,15 +33,15 @@
   --color-red-700: #d32f2f;
   --color-red-800: #c62828;
   --color-red-900: #b71c1c;
-  --color-lightblue-100: #bbdefb;
-  --color-lightblue-200: #90caf9;
-  --color-lightblue-300: #64b5f6;
-  --color-lightblue-400: #42a5f5;
-  --color-lightblue-500: #2196f3;
-  --color-lightblue-600: #1e88e5;
-  --color-lightblue-700: #0026d2;
-  --color-lightblue-800: #1565c0;
-  --color-lightblue-900: #0d47a1;
+  --color-lightblue-100: #f7fdff;
+  --color-lightblue-200: #e5f6fe;
+  --color-lightblue-300: #c4ecfe;
+  --color-lightblue-400: #a1e1ff;
+  --color-lightblue-500: #70d2ff;
+  --color-lightblue-600: #3dc2ff;
+  --color-lightblue-700: #00aeff;
+  --color-lightblue-800: #008dcf;
+  --color-lightblue-900: #006796;
   --color-alpha-black100: #000000;
   --color-alpha-black75: rgba(0, 0, 0, 0.75);
   --color-alpha-black50: rgba(0, 0, 0, 0.5);
@@ -64,6 +64,15 @@
   --color-orange-700: #ff5e20;
   --color-orange-800: #f24500;
   --color-orange-900: #c53100;
+  --color-yellow-100: #fff9e8;
+  --color-yellow-200: #fff6d1;
+  --color-yellow-300: #ffedbd;
+  --color-yellow-400: #fee580;
+  --color-yellow-500: #feda4a;
+  --color-yellow-600: #ffd15b;
+  --color-yellow-700: #f5c342;
+  --color-yellow-800: #f1b33d;
+  --color-yellow-900: #ea9635;
   --typo-font-type: Pretendard;
   --typo-font-weight-regular: Regular;
   --typo-font-weight-bold: Bold;
@@ -161,7 +170,7 @@
   --button-stick-wrap-padding-x: 2.4rem;
   --button-stick-wrap-padding-top: 1.6rem;
   --button-stick-wrap-height: 9.2rem;
-  --button-stick-wrap-gap-left: 0.8rem; /*  */
+  --button-stick-wrap-gap-x: 0.8rem;
   --button-solid-primary-default-font-color: #ffffff;
   --button-solid-primary-default-background-color: #005ce6;
   --button-solid-primary-pressed-background-color: #0026d2;
@@ -211,30 +220,44 @@
   --button-text-large-icon-size: 2rem;
   --button-text-medium-icon-size: 1.6rem;
   --button-text-small-icon-size: 1.4rem;
-  --tab-정리중-line-selected: #222222;
-  --tab-정리중-line-default: #efefef;
-  --tab-정리중-linetext-default: #666666;
-  --tab-정리중-linetext-selected: #222222;
-  --tab-정리중-line-bg: #fafafa;
-  --tab-정리중-box-bg: #f5f5f5;
-  --tab-정리중-box-text-default: #757575;
-  --tab-정리중-box-text-selected: #222222;
-  --tab-정리중-box-line-default: #efefef;
-  --tab-정리중-border-lineselected-width: 0.4rem;
-  --tab-정리중-padding-line-horizontal: 0.2rem;
-  --tab-정리중-border-line-width: 0.1rem;
-  --tab-정리중-height-line: 4.8rem;
-  --tab-정리중-font-line: 2rem;
-  --tab-정리중-padding-secondary-horizontal: 1.2rem;
-  --tab-정리중-padding-secondary-vertical: 1rem;
-  --tab-정리중-font-secondary: 1.6rem;
-  --tab-정리중-border-boxselected-width: 0.1rem;
-  --tab-정리중-height-box: 3.8rem;
-  --tab-정리중-font-box: 1.6rem;
-  --tab-정리중-radius-box: 0.8rem;
-  --tab-정리중-gap-box: 0.3rem;
-  --tab-정리중-padding-box-vertical: 0.2rem;
-  --tab-정리중-padding-box-horizontal: 0.2rem;
+  --tab-line-selected-border-color: #222222;
+  --tab-line-default-border-color: #efefef;
+  --tab-line-default-font-color: #666666;
+  --tab-line-selected-font-color: #222222;
+  --tab-line-secondary-background-color: #fafafa;
+  --tab-line-secondary-selected-font-color: #222222;
+  --tab-line-secondary-default-font-color: #666666;
+  --tab-line-default-font-weight: Regular;
+  --tab-line-selected-font-weight: Bold;
+  --tab-line-secondary-selected-font-weight: SemiBold;
+  --tab-line-secondary-default-font-weight: Regular;
+  --tab-line-selected-border-width: 0.4rem;
+  --tab-line-padding-x: 0.2rem;
+  --tab-line-default-border-width: 0.1rem;
+  --tab-line-height: 4.8rem;
+  --tab-line-default-font-size: 2rem;
+  --tab-line-secondary-padding-x: 1.2rem;
+  --tab-line-secondary-padding-y: 1rem;
+  --tab-line-secondary-font-size: 1.6rem;
+  --tab-line-default-line-height: 2.8rem;
+  --tab-line-secondary-line-height: 2.4rem;
+  --tab-line-default-gap-x: 1.6rem;
+  --tab-line-secondary-gap-x: 0.8rem;
+  --tab-box-default-background-color: #f5f5f5;
+  --tab-box-default-font-color: #757575;
+  --tab-box-selected-font-color: #222222;
+  --tab-box-selected-border-color: #efefef;
+  --tab-box-selected-background-color: #ffffff;
+  --tab-box-font-weight: Regular;
+  --tab-box-selected-font-weight: SemiBold;
+  --tab-box-selected-border-width: 0.1rem;
+  --tab-box-height: 3.8rem;
+  --tab-box-font-size: 1.6rem;
+  --tab-box-radius: 0.8rem;
+  --tab-box-gap-x: 0.3rem;
+  --tab-box-padding-y: 0.2rem;
+  --tab-box-padding-x: 0.2rem;
+  --tab-box-line-height: 2.4rem;
   --list-정리중-data-top: #666666;
   --list-정리중-data-line: #efefef;
   --list-정리중-check-bg: #f3f7ff;
@@ -278,19 +301,14 @@
   --text-field-basic-radius: 1.2rem;
   --text-field-basic-height: 5.6rem;
   --text-field-basic-border-width: 0.1rem;
-  --text-field-basic-input-text-padding-x: 1.6rem;/* padding-x, gap-x 구분? */
+  --text-field-basic-input-text-padding-x: 1.6rem;
   --text-field-basic-input-line-height: 2.6rem;
   --text-field-basic-label-line-height: 2rem;
-  --text-field-basic-input-text-gap-x: 1.6rem;/* padding-x, gap-x 구분? */
+  --text-field-basic-input-text-gap-x: 1.6rem;
   --text-field-message-info-font-color: #666666;
   --text-field-message-error-font-color: #e53935;
   --text-field-message-success-font-color: #005ce6;
   --text-field-message-icon-gap: 0.4rem;
-  
-  --text-field-message-font-size: 1.4rem;/* 추가 */
-  --text-field-message-padding-left: 0.4rem;/* 추가 */
-  --text-field-message-icon-size: 2rem;/* 추가 */
-
   --text-field-lable-inline-label-font-color: #666666;
   --text-field-lable-inline-default-font-color: #666666;
   --text-field-lable-inline-focused-font-color: #222222;
@@ -323,7 +341,6 @@
   --text-field-lable-inline-input-text-padding-top: 1.6rem;
   --text-field-lable-inline-message-gap-y: 0.8rem;
   --text-field-lable-inline-input-text-gap-x: 1.6rem;
-
   --textarea-label-font-color: #666666;
   --textarea-default-font-color: #666666;
   --textarea-disabled-font-color: #9e9e9e;
@@ -350,7 +367,6 @@
   --textarea-byte-gap-y: 0.8rem;
   --textarea-label-line-height: 2rem;
   --textarea-line-height: 2.4rem;
-
   --dropdown-basic-label-font-color: #666666;
   --dropdown-basic-default-font-color: #666666;
   --dropdown-basic-disabled-font-color: #9e9e9e;
@@ -381,7 +397,6 @@
   --dropdown-basic-line-height: 2.6rem;
   --dropdown-basic-label-line-height: 2rem;
   --dropdown-basic-text-gap-x: 1.6rem;
-
   --dropdown-lable-inline-label-font-color: #666666;
   --dropdown-lable-inline-default-font-color: #666666;
   --dropdown-lable-inline-disabled-font-color: #9e9e9e;
@@ -414,7 +429,6 @@
   --dropdown-lable-inline-line-height: 2.6rem;
   --dropdown-lable-inline-label-line-height: 2rem;
   --dropdown-lable-inline-text-padding-top: 1.6rem;
-  
   --checkbox-background-color: #ffffff;
   --checkbox-large-off-border-color: #9e9e9e;
   --checkbox-large-off-check-color: #757575;
@@ -451,7 +465,6 @@
   --checkbox-label-gap: 0.8rem;
   --checkbox-large-line-height: 2.6rem;
   --checkbox-medium-line-height: 2.4rem;
-
   --radiobutton-background-color: #ffffff;
   --radiobutton-large-off-background-color: #9e9e9e;
   --radiobutton-large-on-background-color: #0026d2;
@@ -468,37 +481,36 @@
   --radiobutton-border-width: 0.1rem;
   --radiobutton-label-gap: 0.8rem;
   --radiobutton-large-line-height: 2.6rem;
-
   --switch-background-color: #ffffff;
   --switch-large-off-background-color: #9e9e9e;
   --switch-large-on-background-color: #0026d2;
   --switch-large-on-disabled-background-color: #d8e5fd;
   --switch-large-off-disabled-background-color: #efefef;
   --switch-large-radius: 10rem;
-  
   --bottomsheet-title-font-color: #222222;
   --bottomsheet-background-color: #ffffff;
-  --bottomsheet-dim: rgba(0, 0, 0, 0.75);
+  --bottomsheet-dim-color: rgba(0, 0, 0, 0.75);
   --bottomsheet-title-font-weight: SemiBold;
   --bottomsheet-padding-x: 2.4rem;
   --bottomsheet-title-padding-top: 3.2rem;
   --bottomsheet-title-padding-bottom: 2rem;
   --bottomsheet-top-radius: 1.6rem;
   --bottomsheet-title-font-size: 2rem;
-  --bottomsheet-height-type-colse: 6.4rem;
-  --bottomsheet-height-type-untitled: 3rem;
-  --bottomsheet-padding-button-top: 2.4rem;
-  --bottomsheet-padding-button-bottom: 1.6rem;
-  --bottomsheet-padding-chek-x: 1.4rem;
+  --bottomsheet-untitled-close-height: 6.4rem;
+  --bottomsheet-untitled-noclose-height: 3rem;
+  --bottomsheet-button-padding-top: 2.4rem;
+  --bottomsheet-button-padding-bottom: 1.6rem;
+  --bottomsheet-chek-padding-y: 1.4rem;
   --bottomsheet-title-gap: 1.6rem;
-  --bottomsheet-toucharea: 4.4rem;
-  --bottomsheet-close-padding-x: 1.8rem;
-  --bottomsheet-close-padding-y: 1.6rem;
-  --bottomsheet-close-untitled-padding-x: 1rem;
+  --bottomsheet-close-toucharea: 4.4rem;
+  --bottomsheet-close-padding-y: 1.8rem;
+  --bottomsheet-close-padding-x: 1.6rem;
+  --bottomsheet-close-untitled-padding-y: 1rem;
   --bottomsheet-title-line-height: 2.8rem;
+  --bottomsheet-button-gap-x: 0.6rem;
   --dialogs-title-font-color: #222222;
   --dialogs-text-font-color: #666666;
-  --dialogs-dim: rgba(0, 0, 0, 0.75);
+  --dialogs-dim-color: rgba(0, 0, 0, 0.75);
   --dialogs-background-color: #ffffff;
   --dialogs-title-font-weight: Bold;
   --dialogs-wrap-gap: 3.2rem;
@@ -509,9 +521,10 @@
   --dialogs-icon-gap: 1.6rem;
   --dialogs-icon-text-gap: 1.6rem;
   --dialogs-button-gap: 1rem;
-  --dialogs-dialogs-radius: 1.6rem;
+  --dialogs-radius: 1.6rem;
   --dialogs-title-line-height: 2.8rem;
   --dialogs-text-line-height: 2.4rem;
+  --dialogs-padding-x: 2.4rem;
   --tooltip-background-color: rgba(0, 0, 0, 0.8);
   --tooltip-title-font-color: #ffffff;
   --tooltip-text-font-color: #f5f5f5;
@@ -543,6 +556,7 @@
   --color-text-disabled: #9e9e9e;
   --color-text-gray700: #3f3f3f;
   --color-text-white: #ffffff;
+  --color-text-gray500: #757575;
   --color-border-component-gray: #9e9e9e;
   --color-border-gray400: #9e9e9e;
   --color-border-gray600: #666666;
@@ -550,6 +564,7 @@
   --color-border-gray300: #efefef;
   --color-border-primary600: #0026d2;
   --color-border-danger: #e53935;
+  --color-border-gray900: #222222;
   --color-icon-gray: #2a2a2a;
   --color-background-white: #ffffff;
   --color-background-gray200: #f5f5f5;

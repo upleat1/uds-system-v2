@@ -6,9 +6,9 @@ const outputFile = path.join(__dirname, './tokens/tokens.json');
 
 // 제거할 루트 경로들
 const REMOVE_KEYS = [
-  'primitive/Value-set',
-  'component/Value-set',
-  'semantic/light'
+  "primitive/Value-set",
+  "component/Value-set",
+  "semantic/light"
 ];
 
 // 숫자(px)를 10px = 1rem 기준 rem 문자열로 변환

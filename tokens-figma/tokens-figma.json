@@ -685,7 +685,7 @@
           "type": "dimension"
         },
         "large-border-width": {
-          "value": "{border-\bwidth.regular}",
+          "value": "{border-width.regular}",
           "type": "dimension"
         },
         "large-line-height": {
@@ -766,7 +766,7 @@
           "value": "{Color.border.gray300}",
           "type": "color"
         },
-        "\boutlined-disabled-font-color": {
+        "outlined-disabled-font-color": {
           "value": "{Color.text.disabled}",
           "type": "color"
         },
@@ -823,7 +823,7 @@
           "type": "dimension"
         },
         "medium-border-width": {
-          "value": "{border-\bwidth.regular}",
+          "value": "{border-width.regular}",
           "type": "dimension"
         },
         "small-text-padding-x": {
@@ -831,7 +831,7 @@
           "type": "dimension"
         },
         "small-border-width": {
-          "value": "{border-\bwidth.regular}",
+          "value": "{border-width.regular}",
           "type": "dimension"
         },
         "medium-line-height": {
@@ -965,7 +965,7 @@
           "type": "dimension"
         },
         "default-border-width": {
-          "value": "{border-\bwidth.regular}",
+          "value": "{border-width.regular}",
           "type": "dimension"
         },
         "height": {
@@ -996,11 +996,11 @@
           "value": "{typo.line-height.font-size-16}",
           "type": "dimension"
         },
-        "\bdefault-gap-x": {
+        "default-gap-x": {
           "value": "{gap.16}",
           "type": "dimension"
         },
-        "\bsecondary-gap-x": {
+        "secondary-gap-x": {
           "value": "{gap.8}",
           "type": "dimension"
         }
@@ -1106,7 +1106,7 @@
         "type": "dimension"
       },
       "border-width": {
-        "value": "{border-\bwidth.regular}",
+        "value": "{border-width.regular}",
         "type": "dimension"
       },
       "font-text": {
@@ -1168,7 +1168,7 @@
           "value": "{Color.border.gray300}",
           "type": "color"
         },
-        "focused-\bborder-color": {
+        "focused-border-color": {
           "value": "{Color.border.primary600}",
           "type": "color"
         },
@@ -1241,7 +1241,7 @@
           "type": "dimension"
         },
         "border-width": {
-          "value": "{border-\bwidth.regular}",
+          "value": "{border-width.regular}",
           "type": "dimension"
         },
         "input-text-padding-x": {
@@ -1312,7 +1312,7 @@
           "value": "{Color.border.gray400}",
           "type": "color"
         },
-        "focused-\bborder-color": {
+        "focused-border-color": {
           "value": "{Color.border.primary600}",
           "type": "color"
         },
@@ -1393,7 +1393,7 @@
           "type": "dimension"
         },
         "border-width": {
-          "value": "{border-\bwidth.regular}",
+          "value": "{border-width.regular}",
           "type": "dimension"
         },
         "input-text-padding-top": {
@@ -1439,7 +1439,7 @@
         "value": "{Color.border.gray300}",
         "type": "color"
       },
-      "focused-\bborder-color": {
+      "focused-border-color": {
         "value": "{Color.border.primary600}",
         "type": "color"
       },
@@ -1467,7 +1467,7 @@
         "value": "{Color.background.gray200}",
         "type": "color"
       },
-      "\berror-font-color": {
+      "error-font-color": {
         "value": "{Color.text.strong}",
         "type": "color"
       },
@@ -1500,7 +1500,7 @@
         "type": "dimension"
       },
       "border-width": {
-        "value": "{border-\bwidth.regular}",
+        "value": "{border-width.regular}",
         "type": "dimension"
       },
       "byte-gap-y": {
@@ -1546,11 +1546,11 @@
           "value": "{Color.border.gray300}",
           "type": "color"
         },
-        "focused-\bborder-color": {
+        "focused-border-color": {
           "value": "{Color.border.primary600}",
           "type": "color"
         },
-        "error-\bborder-color": {
+        "error-border-color": {
           "value": "{TextField.lableInline.error-border-color}",
           "type": "color"
         },
@@ -1570,7 +1570,7 @@
           "value": "{Color.border.gray300}",
           "type": "color"
         },
-        "\breadonly-background-color": {
+        "readonly-background-color": {
           "value": "{Color.background.gray200}",
           "type": "color"
         },
@@ -1623,7 +1623,7 @@
           "type": "dimension"
         },
         "border-width": {
-          "value": "{border-\bwidth.regular}",
+          "value": "{border-width.regular}",
           "type": "dimension"
         },
         "line-height": {
@@ -1668,11 +1668,11 @@
           "value": "{Color.border.gray300}",
           "type": "color"
         },
-        "focused-\bborder-color": {
+        "focused-border-color": {
           "value": "{Color.border.primary600}",
           "type": "color"
         },
-        "error-\bborder-color": {
+        "error-border-color": {
           "value": "{Color.border.danger}",
           "type": "color"
         },
@@ -1753,7 +1753,7 @@
           "type": "dimension"
         },
         "border-width": {
-          "value": "{border-\bwidth.regular}",
+          "value": "{border-width.regular}",
           "type": "dimension"
         },
         "line-height": {
@@ -1884,7 +1884,7 @@
         "type": "dimension"
       },
       "border-width": {
-        "value": "{border-\bwidth.regular}",
+        "value": "{border-width.regular}",
         "type": "dimension"
       },
       "medium-font-size": {
@@ -1970,7 +1970,7 @@
         "type": "dimension"
       },
       "border-width": {
-        "value": "{border-\bwidth.regular}",
+        "value": "{border-width.regular}",
         "type": "dimension"
       },
       "label-gap": {
@@ -2119,7 +2119,7 @@
         "value": "{gap.32}",
         "type": "dimension"
       },
-      "padding-\by": {
+      "padding-y": {
         "value": "{padding.24}",
         "type": "dimension"
       },
@@ -2674,7 +2674,7 @@
         "type": "dimension"
       }
     },
-    "border-\bwidth": {
+    "border-width": {
       "regular": {
         "value": "0.1rem",
         "type": "dimension"
