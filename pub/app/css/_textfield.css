@@ -11,8 +11,8 @@
 .form_group .form_ele .inp {width:100%;}
 
 /* Tip */
-.form_tip {position:relative; margin-top:var(--text-field-message-icon-gap); padding-left:calc(var(--text-field-message-icon-size) + var(--text-field-message-padding-left)); font-size:var(--text-field-message-font-size); color:var(--text-field-message-info-font-color)}
-.form_tip::before {content:''; display:inline-block; position:absolute; left:0; top:0; width:var(--text-field-message-icon-size); height:var(--text-field-message-icon-size); background-repeat: no-repeat; background-position: 0 0; background-size:var(--text-field-message-icon-size) auto;}
+.form_tip {position:relative; margin-top:var(--text-field-message-icon-gap); padding-left:calc(var(--iconsize-20) + var(--text-field-message-icon-gap)); font-size:var(--text-field-message-font-size); color:var(--text-field-message-info-font-color)}
+.form_tip::before {content:''; display:inline-block; position:absolute; left:0; top:0; width:var(--iconsize-20); height:var(--iconsize-20); background-repeat: no-repeat; background-position: 0 0; background-size:var(--iconsize-20) auto;}
 .form_tip.info {color:var(--text-field-message-info-font-color)}
 .form_tip.info::before {background-image:url(/pub/app/img/common/ico-20x-03.svg);}
 .form_tip.error {color:var(--text-field-message-error-font-color)}
