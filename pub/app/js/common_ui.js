@@ -2311,9 +2311,9 @@ if (!UICommon) {
                 $html += '<div class="' + Layer.footClass + '">';
                 $html += '<div class="btn_area">';
                 if (type === 'confirm' || type === 'prompt') {
-                    $html += '<span><button type="button" id="' + btnCancelId + '" class="btn solid secondary">취소</button></span>';
+                    $html += '<span><button type="button" id="' + btnCancelId + '" class="btn solid medium secondary">취소</button></span>';
                 }
-                $html += '<span><button type="button" id="' + btnActionId + '" class="btn solid primary">확인</button></span>';
+                $html += '<span><button type="button" id="' + btnActionId + '" class="btn solid medium primary">확인</button></span>';
                 $html += '</div>';
                 $html += '</div>';
                 $html += '</article>';
