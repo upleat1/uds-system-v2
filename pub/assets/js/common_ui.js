@@ -1285,7 +1285,7 @@ if (!UICommon) {
                 _front.form();
                 _front.scroll();
                 _front.slider();
-                _front.result();
+                //_front.result();
                 //_front.accAccoTipPos(); 아코디언 버튼안에 tooltip 포지션값(추후반영예정) 221026
                 // main
                 _front.rdoFunc();

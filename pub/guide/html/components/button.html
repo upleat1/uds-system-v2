@@ -106,24 +106,43 @@
             </div>
             <script type="text/html">
 <h3 class="h3">Normal</h3>
-<button type="button" class="btn-text default lg icon-left icon-right"><i class="ico-20x-01 ico-l"></i>텍스트버튼(18px)<i class="ico-20x-02 ico-r"></i></button>
-<button type="button" class="btn-text default md icon-left icon-right"><i class="ico-16x-01 ico-l"></i>텍스트버튼(16px)<i class="ico-16x-02 ico-r ico-r"></i></button>
-<button type="button" class="btn-text default sm icon-left icon-right"><i class="ico-14x-01 ico-l"></i>텍스트버튼(14px)<i class="ico-14x-02 ico-r"></i></button>
+<button type="button" class="btn-text default lg item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼(18px)</span><i class="icon_arrow_right ico-r"></i></button>
+<button type="button" class="btn-text default md item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼(16px)</span><i class="icon_arrow_right ico-r"></i></button>
+<button type="button" class="btn-text default sm item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼(14px)</span><i class="icon_arrow_right ico-r"></i></button>
 
 <h3 class="h3">Secondary</h3>
-<button type="button" class="btn-text secondary lg icon-left icon-right"><i class="ico-20x-01 ico-l"></i>텍스트버튼(18px)<i class="ico-20x-02 ico-r"></i></button>
-<button type="button" class="btn-text secondary md icon-left icon-right"><i class="ico-16x-01 ico-l"></i>텍스트버튼(16px)<i class="ico-16x-02 ico-r"></i></button>
-<button type="button" class="btn-text secondary sm icon-left icon-right"><i class="ico-14x-01 ico-l"></i>텍스트버튼(14px)<i class="ico-14x-02 ico-r"></i></button>
+<button type="button" class="btn-text secondary lg item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼(18px)</span><i class="icon_arrow_right ico-r"></i></i></button>
+<button type="button" class="btn-text secondary md item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼(16px)</span><i class="icon_arrow_right ico-r"></i></button>
+<button type="button" class="btn-text secondary sm item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼(14px)</span><i class="icon_arrow_right ico-r"></i></button>
 
 <h3 class="h3">Disabled</h3>
-<button type="button" class="btn-text default lg icon-left icon-right" disabled><i class="ico-20x-01 ico-l"></i>텍스트버튼(18px)<i class="ico-20x-02 ico-r"></i></button>
-<button type="button" class="btn-text default md icon-left icon-right" disabled><i class="ico-16x-01 ico-l"></i>텍스트버튼(16px)<i class="ico-16x-02 ico-r"></i></button>
-<button type="button" class="btn-text default sm icon-left icon-right" disabled><i class="ico-14x-01 ico-l"></i>텍스트버튼(14px)<i class="ico-14x-02 ico-r"></i></button>
+<button type="button" class="btn-text default lg item-left item-right" disabled><i class="icon_duplicate ico-l"></i><span>텍스트버튼(18px)</span><i class="icon_arrow_right ico-r"></i></i></button>
+<button type="button" class="btn-text default md item-left item-right" disabled><i class="icon_duplicate ico-l"></i><span>텍스트버튼(16px)</span><i class="icon_arrow_right ico-r"></i></button>
+<button type="button" class="btn-text default sm item-left item-right" disabled><i class="icon_duplicate ico-l"></i><span>텍스트버튼(14px)</span><i class="icon_arrow_right ico-r"></i></button>
 
 <h3 class="h3">Danger</h3>
-<button type="button" class="btn-text danger lg icon-left icon-right"><i class="ico-20x-01 ico-l"></i>텍스트버튼(18px)<i class="ico-20x-02 ico-r"></i></button>
-<button type="button" class="btn-text danger md icon-left icon-right"><i class="ico-16x-01 ico-l"></i>텍스트버튼(16px)<i class="ico-16x-02 ico-r"></i></button>
-<button type="button" class="btn-text danger sm icon-left icon-right"><i class="ico-14x-01 ico-l"></i>텍스트버튼(14px)<i class="ico-14x-02 ico-r"></i></button>
+<button type="button" class="btn-text danger lg item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼(18px)</span><i class="icon_arrow_right ico-r"></i></i></button>
+<button type="button" class="btn-text danger md item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼(16px)</span><i class="icon_arrow_right ico-r"></i></button>
+<button type="button" class="btn-text danger sm item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼(14px)</span><i class="icon_arrow_right ico-r"></i></button>
+            </script>
+
+            <div data-class="h2">Icon Button</div>
+            <script type="text/html">
+    <h3 class="h3">단일 아이콘</h3>
+    <button type="button"><i class="icon_delete"></i><span class="hidden">대체텍스트</span></button>
+
+    <h3 class="h3">아이콘 + 텍스트 (Text Button)</h3>
+    <h4 class="h4">왼쪽</h4>
+    <button type="button" class="btn-text default lg item-left"><i class="icon_duplicate ico-l"></i><span>텍스트버튼</span></button> <!-- item-left -->
+    <button type="button" class="btn-text danger md item-left"><i class="icon_error ico-l"></i><span>텍스트버튼</span></button>
+    <h4 class="h4">오른쪽</h4>
+    <button type="button" class="btn-text default lg item-right"><span>텍스트버튼</span><i class="icon_arrow_right ico-r"></i></button> <!-- item-right -->
+    <button type="button" class="btn-text default sm item-right"><span>텍스트버튼</span><i class="icon_tooltip ico-r"></i></button>
+    <h4 class="h4">양쪽</h4>
+    <button type="button" class="btn-text default lg item-left item-right"><i class="icon_duplicate ico-l"></i><span>텍스트버튼</span><i class="icon_arrow_right ico-r"></i></button>
+
+    <h3 class="h3">배경 이미지</h3>
+    <button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button>
             </script>
         </div>
 
