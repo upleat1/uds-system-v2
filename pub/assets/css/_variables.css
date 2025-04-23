@@ -131,13 +131,17 @@
   --number-64: 6.4rem;
   --number-68: 6.8rem;
   --number-72: 7.2rem;
-  --iconsize-14: 1.4rem;
-  --iconsize-16: 1.6rem;
-  --iconsize-20: 2rem;
-  --iconsize-24: 2.4rem;
-  --iconsize-32: 3.2rem;
-  --iconsize-40: 4rem;
-  --iconsize-64: 6.4rem;
+  --iconsize-xxlg: 6.4rem;
+  --iconsize-lg: 4rem;
+  --iconsize-mlg: 3.2rem;
+  --iconsize-md: 2.4rem;
+  --iconsize-sm: 1.8rem;
+  --iconsize-xsm: 1.6rem;
+  --iconsize-xxs: 1.4rem;
+  --iconsize-xxxs: 1.2rem;
+  --iconsize-xlg: 4.8rem;
+  --iconsize-xxxlg: 7.2rem;
+  --iconsize-smd: 2rem;
   --touch-40: 4rem;
   --touch-44: 4.4rem;
   --button-stick-primary-default-font-color: #ffffff;
@@ -171,7 +175,6 @@
   --button-stick-wrap-padding-top: 1.6rem;
   --button-stick-wrap-height: 9.2rem;
   --button-stick-wrap-gap-x: 0.8rem;
-
   --button-solid-primary-default-font-color: #ffffff;
   --button-solid-primary-default-background-color: #005ce6;
   --button-solid-primary-pressed-background-color: #0026d2;
@@ -205,7 +208,6 @@
   --button-solid-small-border-width: 0.1rem;
   --button-solid-medium-line-height: 2.4rem;
   --button-solid-small-line-height: 2rem;
-
   --button-text-default-font-color: #3f3f3f;
   --button-text-secondary-font-color: #666666;
   --button-text-disabled-font-color: #9e9e9e;
@@ -219,7 +221,7 @@
   --button-text-large-line-height: 2.6rem;
   --button-text-medium-line-height: 2.4rem;
   --button-text-small-line-height: 2rem;
-  --button-text-large-icon-size: 2rem;
+  --button-text-large-icon-size: 1.8rem;
   --button-text-medium-icon-size: 1.6rem;
   --button-text-small-icon-size: 1.4rem;
   --tab-line-selected-border-color: #222222;
@@ -277,7 +279,6 @@
   --list-정리중-padding-check-vertical: 1.6rem;
   --list-정리중-radius-check: 1.2rem;
   --list-정리중-padding-secondary-vertical: 1.2rem;
-
   --text-field-basic-label-font-color: #666666;
   --text-field-basic-default-font-color: #666666;
   --text-field-basic-disabled-font-color: #9e9e9e;
@@ -297,7 +298,6 @@
   --text-field-basic-focused-background-color: #ffffff;
   --text-field-basic-filled-background-color: #ffffff;
   --text-field-basic-error-background-color: #ffffff;
-
   --text-field-basic-input-font-weight: SemiBold;
   --text-field-basic-input-font-size: 1.8rem;
   --text-field-basic-label-font-size: 1.4rem;
@@ -309,12 +309,12 @@
   --text-field-basic-input-line-height: 2.6rem;
   --text-field-basic-label-line-height: 2rem;
   --text-field-basic-input-text-gap-x: 1.6rem;
-
   --text-field-message-info-font-color: #666666;
   --text-field-message-error-font-color: #e53935;
   --text-field-message-success-font-color: #005ce6;
   --text-field-message-icon-gap: 0.4rem;
-  
+  --text-field-message-font-size: 1.4rem;
+  --text-field-message-line-height: 2rem;
   --text-field-lable-inline-label-font-color: #666666;
   --text-field-lable-inline-default-font-color: #666666;
   --text-field-lable-inline-focused-font-color: #222222;
@@ -334,7 +334,6 @@
   --text-field-lable-inline-disabled-background-color: #f5f5f5;
   --text-field-lable-inline-readonly-background-color: #f5f5f5;
   --text-field-lable-inline-error-background-color: #ffffff;
-
   --text-field-lable-inline-input-font-weight: SemiBold;
   --text-field-lable-inline-input-font-size: 1.8rem;
   --text-field-lable-inline-input-line-height: 2.6rem;
@@ -348,7 +347,6 @@
   --text-field-lable-inline-input-text-padding-top: 1.6rem;
   --text-field-lable-inline-message-gap-y: 0.8rem;
   --text-field-lable-inline-input-text-gap-x: 1.6rem;
-
   --textarea-label-font-color: #666666;
   --textarea-default-font-color: #666666;
   --textarea-disabled-font-color: #9e9e9e;
@@ -553,18 +551,30 @@
   --tooltip-bullet-gap: 0.8rem;
   --tooltip-close-padding-top: 1.8rem;
   --tooltip-close-toucharea: 4rem;
+  --bulletlist-font-color: #666666;
+  --bulletlist-circle-icon-color: #2a2a2a;
+  --bulletlist-line-icon-color: #757575;
+  --bulletlist-gap-x: 0.8rem;
+  --bulletlist-font-size: 1.4rem;
+  --bulletlist-line-height: 2rem;
+  --bulletlist-circle-icon-size-width: 0.4rem;
+  --bulletlist-circle-icon-size-height: 1.8rem;
+  --bulletlist-line-icon-size-width: 0.6rem;
+  --bulletlist-line-icon-size-height: 1.8rem;
+  --bulletlist-bullet-list-gap-y: 0.8rem;
   --color-text-title: #222222;
   --color-text-subtitle: #666666;
   --color-text-basic: #666666;
   --color-text-strong: #222222;
   --color-text-danger: #e53935;
   --color-text-success: #005ce6;
-  --color-text-primary: #0026d2;
+  --color-text-primary600: #0026d2;
   --color-text-gray800: #2a2a2a;
   --color-text-disabled: #9e9e9e;
   --color-text-gray700: #3f3f3f;
   --color-text-white: #ffffff;
   --color-text-gray500: #757575;
+  --color-text-gray200: #f5f5f5;
   --color-border-component-gray: #9e9e9e;
   --color-border-gray400: #9e9e9e;
   --color-border-gray600: #666666;
@@ -573,13 +583,17 @@
   --color-border-primary600: #0026d2;
   --color-border-danger: #e53935;
   --color-border-gray900: #222222;
-  --color-icon-gray: #2a2a2a;
+  --color-border-primary100: #d8e5fd;
+  --color-icon-gray800: #2a2a2a;
+  --color-icon-gray500: #757575;
   --color-background-white: #ffffff;
   --color-background-gray200: #f5f5f5;
   --color-background-gray100: #fafafa;
   --color-background-gray300: #efefef;
   --color-background-gray400: #9e9e9e;
   --color-background-primary600: #0026d2;
+  --color-background-primary100: #d8e5fd;
+  --color-background-black80: rgba(0, 0, 0, 0.8);
   --color-primary-50: #f3f7ff;
   --color-primary-100: #d8e5fd;
   --color-primary-200: #b1cefb;
@@ -590,6 +604,7 @@
   --color-primary-700: #001687;
   --color-primary-800: #001168;
   --color-primary-900: #000e54;
+  --color-dim-black75: rgba(0, 0, 0, 0.75);
   --font-size-heading-large: 2.8rem;
   --font-size-heading-medium: 2rem;
   --font-size-heading-small: 1.8rem;

@@ -15,12 +15,12 @@ h1, h2, h3, h4 {font-weight:700; color:var(--fc_02); vertical-align:middle; word
 
 /*** Text List ***/
 .depth {margin-top:1.2rem;}
-.depth > li {position: relative; margin-top:.8rem; color:var(--fc_02);}
+.depth > li {position: relative; margin-top:.8rem; font-size: var(--bulletlist-font-size); color:var(--bulletlist-font-color); line-height: var(--bulletlist-line-height);}
 .depth > li:before {content:''; display:inline-block; position: absolute; left:0; top:.8rem;}
 .depth > li:first-child {margin-top:0;}
 .depth + .depth {margin-top:1.6rem;}
 
-.depth.bul > li {padding-left:1.1rem;word-break:keep-all; word-wrap:break-word;} 
+.depth.bul > li {padding-left:calc(var(-bulletlist-gap-x));word-break:keep-all; word-wrap:break-word;} 
 .depth.bul > li:before {width:.3rem; height:.3rem; background:var(--fc_03);}
 
 .depth.dash > li {padding-left:1.4rem; line-height:1.4; color:var(--fc_04);}
