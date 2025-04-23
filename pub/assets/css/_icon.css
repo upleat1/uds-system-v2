@@ -1,0 +1,28 @@
+/*** Icon ***/
+[class*="icon"] {display:inline-flex;}
+[class*="icon"]::before {content:''; display:inline-block; width:100%; background-size:100%; background-repeat:no-repeat;}
+.icon_xxxs {width:var(--iconsize-xxxs); height:var(--iconsize-xxxs);}
+.icon_xxs {width:var(--iconsize-xxs); height:var(--iconsize-xxs);}
+.icon_xsm {width:var(--iconsize-xsm); height:var(--iconsize-xsm);}
+.icon_sm {width:var(--iconsize-sm); height:var(--iconsize-sm);} 
+.icon_smd {width:var(--iconsize-smd); height:var(--iconsize-smd);}
+.icon_md {width:var(--iconsize-md); height:var(--iconsize-md);}   /* basic size */
+.icon_mlg {width:var(--iconsize-mlg); height:var(--iconsize-mlg);}
+.icon_lg {width:var(--iconsize-lg); height:var(--iconsize-lg);}
+.icon_xlg {width:var(--iconsize-xlg); height:var(--iconsize-xlg);}
+.icon_xxlg {width:var(--iconsize-xxlg); height:var(--iconsize-xxlg);}
+.icon_xxxlg {width:var(--iconsize-xxxlg); height:var(--iconsize-xxxlg);}
+
+.icon_arrow_right:before {background-image:url(/pub/assets/img/common/ico-24x-arrow-right.svg);}
+.icon_arrow_down:before {background-image:url(/pub/assets/img/common/ico-24x-arrow-down.svg);}
+.icon_system_info:before {background-image:url(/pub/assets/img/common/ico-24x-system-info.svg);}
+.icon_close:before {background-image:url(/pub/assets/img/common/ico-24x-close.svg);}
+.icon_delete:before {background-image:url(/pub/assets/img/common/ico-24x-delete.svg);}
+.icon_duplicate:before {background-image:url(/pub/assets/img/common/ico-24x-duplicate.svg);}
+.icon-info:before {background-image:url(/pub/assets/img/common/ico-24x-info.svg);}
+.icon-success:before {background-image:url(/pub/assets/img/common/ico-24x-success.svg);}
+.icon-error:before {background-image:url(/pub/assets/img/common/ico-24x-error.svg);}
+.icon-tooltip:before {background-image:url(/pub/assets/img/common/ico-24x-tooltip.svg);}
+
+
+

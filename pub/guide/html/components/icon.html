@@ -5,463 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-    <title>유플리트</title>
+    <title>Upleat Design System</title>
     <link rel="stylesheet" href="/pub/guide/assets/css/components.css">
     <link rel="stylesheet" href="/pub/guide/assets/vendor/highlight/github-gist.css">
     
     <!-- resource -->
-    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/common.css">
-    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/pub/assets/css/component.css">
+    <link rel="stylesheet" href="/pub/assets/css/_variables.css">
+    <link rel="stylesheet" href="/pub/assets/css/common.css">
+    <link rel="stylesheet" href="/pub/assets/css/components.css">
+
     <style>
-        /*.btn-ico-34 {border:1px red dashed;}*/ /* width:34px; height:34px; */
-        /* a.btn-ico-34 {text-align:center; line-height:3.4rem;} */
-        div.del {text-decoration:line-through;}
-        [data-class=point],
-        div.strong {color:red;}
-        span.badge[class *= rank] + span.badge[class *= rank] {margin-left:1rem;}
-        span.md.badge[class *= rank] + span.md.badge[class *= rank] {margin-left:1rem;}
-        button[class^=size-] {background-color:#dfdfdf; border:1px solid #999;}
+        [data-class="demo-grid"] {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        [data-class="demo-grid"] > li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding-top: 40px;
+            text-align: center;
+            border: 1px red dashed;
+        }
+        [data-class="demo-grid"] > li > span {
+            display: block;
+            margin-top: 10px;
+            padding: 4px 10px;
+            background: #ccc;
+        }
+        [data-class="demo-grid"] > li > span:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
     <div data-class="contents">
         <div data-class="component-name"><span>아이콘</span></div>
-        <div data-class="box">
-            <a href="/pub/guide/html/sample/icon.html" target="-blank" title="새창" data-class="button">content 100% icon Sample</a>
-        </div>
-        
-        <div data-class="section">
-            <div data-class="h1">Icon</div>
-            <div data-class="box"> 
-                <div data-class="list number">
-                    <div style="text-decoration:line-through">아이콘 기본사이즈는 24px 이다.</div>
-                    <div>둥근 모양의 아이콘일 경우 .r 을 사용해 radius를 별도 적용할 수 있다.</div>
-                    <div>ico-로 시작클래스와 sz-[xx]가 동시에 적용시 배경이미지를 100%로 사이즈 재지정</div>
-                </div>
-            </div>
-            <div data-class="h2">크기</div>
-            <script type="text/html">
-<i class="ico-favo" title="즐겨찾기"></i>
-<i class="ico-favo sz-24" title="즐겨찾기"></i>
-<button class="ico-calr-prev" title="이전달"></button>
-<button class="ico-calr-next" title="다음달"></button>
-            </script>
-
-            <div data-class="h2">형태</div>
-            <div data-class="h3">단독 버튼형 아이콘</div>
-            <div data-class="box"> 
-                <div data-class="list disc">
-                    <div>용도에 맞는 적절한 버튼 크기는 button 의 class=sz-[xx] 에서 정의한다.</div>
-                </div>
-            </div>
-            <script type="text/html">
-<button type="button" class="sz-24" title="버튼명"><i class="ico-close"></i></button>
-<button type="button" class="sz-40" title="버튼명"><i class="ico-favo"></i></button>
-            </script>
-
-            <div data-class="h3">데이터 관련 아이콘</div>
-        
-            <script type="text/html">
-<span class="ico-rate up"><span class="hidden">상승</span></span>
-<span class="ico-rate down"><span class="hidden">하락</span></span>
-            </script>
-        </div>
-
 
         <div data-class="section">
-            <div data-class="h1">Badge</div>
-        <div data-class="h2">텍스트형</div>
-        <script type="text/html">
-<span class="badge state-posi">상태 긍정</span>
-<!-- <span class="badge state-posi-light">상태 긍정</span> -->
-<span class="badge state-nega">상태 부정</span>
-<span class="badge state-normal">기본</span>
-<span class="badge state-gray">해외겸용</span>
-<span class="badge state-pass">기납부</span>
-<span class="badge state-purple">추천</span>
-<span class="badge state-green">최저금리</span>
-<br><br>
-
-<span class="badge state-relief">안심</span>
-<span class="badge state-warning">주의</span>
-<br><br>
-
-<span class="badge line">라인 기본</span>
-<span class="badge line-normal">중단</span>
-<span class="badge line-posi">라인 긍정</span>
-<span class="badge line-nega">승낙 부정</span><br>
-<span class="badge line-cancel">취소</span><br>
-<span class="badge line opacity little">투명</span><br>
-<br>
-
-<span class="badge state-posi">가족카드</span>
-<span class="badge state-share">가족카드</span>
-<br><br>
-
-<span class="badge circle-type01">납부</span>
-<span class="badge circle-type02">송금</span>
-
-<span class="badge round-posi">라인 긍정</span>
-
-        </script>
-    </div>
-
-        <div data-class="section">
-            <div data-class="h1">CI</div>
-            <div data-class="box"> 
+            <div data-class="h1">시스템 아이콘</div>
+            <div data-class="box">
                 <div data-class="list disc">
-                    <div>사이즈 : 40x / 24x / 18px</div>
-                </div>
-            </div>
-            <div data-class="h2">접근성 대응</div>
-            <div data-class="box"> 
-                <div data-class="list disc">
-                    <div data-class="point">CI 옆에 텍스트로 은행명이 없을 경우에는 aria-label 추가</div>
+                    <div>기본 아이콘을 24사이즈로 제작 후 컴포넌트화 하여 가이드된 사이즈로 조정하여 사용한다</div>
                 </div>
             </div>
             <script type="text/html">
-<i class="ci-40x bk-000" role="img" aria-label="SBI저축은행(유플리트)"></i>
-<i class="ci-40x bk-092" role="img" aria-label="토스뱅크"></i>
-            </script>
-
-            <div data-class="h2">Type</div>
-            <div data-class="h3">Blank</div>
-            <script type="text/html">
-<i class="ci-40x bk-tel"></i> <!-- 전화연결 -->
-<i class="ci-24x bk-tel"></i> <!-- 전화연결 -->
-<i class="ci-18x bk-tel"></i> <!-- 전화연결 -->
-            </script>
-            <div data-class="h3">은행</div>
-            <script type="text/html">
-<i class="ci-40x bk-000"></i> <!-- SBI저축은행(유플리트) -->
-<i class="ci-40x bk-002"></i> <!-- 산업은행 -->
-<i class="ci-40x bk-003"></i> <!-- IBK기업은행 -->
-<i class="ci-40x bk-004"></i> <!-- KB국민은행 -->
-<i class="ci-40x bk-007"></i> <!-- SH수협은행 -->
-<i class="ci-40x bk-011"></i> <!-- NH농협은행 -->
-<i class="ci-40x bk-012"></i> <!-- 지역농축협 -->
-<i class="ci-40x bk-020"></i> <!-- 우리은행 -->
-<i class="ci-40x bk-023"></i> <!-- SC제일은행 -->
-<i class="ci-40x bk-027"></i> <!-- 한국씨티은행 --> 
-<i class="ci-40x bk-031"></i> <!-- 대구은행 -->
-<i class="ci-40x bk-032"></i> <!-- 부산은행 -->
-<i class="ci-40x bk-034"></i> <!-- 광주은행 -->
-<i class="ci-40x bk-035"></i> <!-- 제주은행 -->
-<i class="ci-40x bk-037"></i> <!-- 전북은행 -->
-<i class="ci-40x bk-039"></i> <!-- 경남은행 -->
-<i class="ci-40x bk-045"></i> <!-- 새마을금고 -->
-<i class="ci-40x bk-048"></i> <!-- 신협중앙회 -->
-<i class="ci-40x bk-050"></i> <!-- 저축은행 -->
-<i class="ci-40x bk-054"></i> <!-- HSBC은행 -->
-<i class="ci-40x bk-055"></i> <!-- 도이치은행 -->
-<i class="ci-40x bk-057"></i> <!-- JP모건제이스은행 -->
-<i class="ci-40x bk-060"></i> <!-- 뱅크오브아메리카 -->
-<i class="ci-40x bk-061"></i> <!-- BNP파리바은행 -->
-<i class="ci-40x bk-062"></i> <!-- 중국공상은행 -->
-<i class="ci-40x bk-063"></i> <!-- 중국은행 -->
-<i class="ci-40x bk-064"></i> <!-- 산림조합중앙회 -->
-<i class="ci-40x bk-067"></i> <!-- 중국건설은행 -->
-<i class="ci-40x bk-071"></i> <!-- 우체국 -->
-<i class="ci-40x bk-081"></i> <!-- KEB하나은행 -->
-<i class="ci-40x bk-088"></i> <!-- 신한은행 -->
-<i class="ci-40x bk-089"></i> <!-- K뱅크 -->
-<i class="ci-40x bk-090"></i> <!-- 카카오뱅크 -->
-<i class="ci-40x bk-092"></i> <!-- 토스뱅크 -->
- 
-<br> 
- 
-<i class="ci-24x bk-000"></i> <!-- SBI저축은행(유플리트) -->
-<i class="ci-24x bk-002"></i> <!-- 산업은행 -->
-<i class="ci-24x bk-003"></i> <!-- IBK기업은행 -->
-<i class="ci-24x bk-004"></i> <!-- KB국민은행 -->
-<i class="ci-24x bk-007"></i> <!-- SH수협은행 -->
-<i class="ci-24x bk-011"></i> <!-- NH농협은행 -->
-<i class="ci-24x bk-012"></i> <!-- 지역농축협 -->
-<i class="ci-24x bk-020"></i> <!-- 우리은행 -->
-<i class="ci-24x bk-023"></i> <!-- SC제일은행 -->
-<i class="ci-24x bk-027"></i> <!-- 한국씨티은행 -->
-<i class="ci-24x bk-031"></i> <!-- 대구은행 -->
-<i class="ci-24x bk-032"></i> <!-- 부산은행 -->
-<i class="ci-24x bk-034"></i> <!-- 광주은행 -->
-<i class="ci-24x bk-035"></i> <!-- 제주은행 -->
-<i class="ci-24x bk-037"></i> <!-- 전북은행 -->
-<i class="ci-24x bk-039"></i> <!-- 경남은행 -->
-<i class="ci-24x bk-045"></i> <!-- 새마을금고 -->
-<i class="ci-24x bk-048"></i> <!-- 신협중앙회 -->
-<i class="ci-24x bk-050"></i> <!-- 저축은행 -->
-<i class="ci-24x bk-054"></i> <!-- HSBC은행 -->
-<i class="ci-24x bk-055"></i> <!-- 도이치은행 -->
-<i class="ci-24x bk-057"></i> <!-- JP모건제이스은행 -->
-<i class="ci-24x bk-060"></i> <!-- 뱅크오브아메리카 -->
-<i class="ci-24x bk-061"></i> <!-- BNP파리바은행 -->
-<i class="ci-24x bk-062"></i> <!-- 중국공상은행 -->
-<i class="ci-24x bk-063"></i> <!-- 중국은행 -->
-<i class="ci-24x bk-064"></i> <!-- 산림조합중앙회 -->
-<i class="ci-24x bk-067"></i> <!-- 중국건설은행 -->
-<i class="ci-24x bk-071"></i> <!-- 우체국 -->
-<i class="ci-24x bk-081"></i> <!-- KEB하나은행 -->
-<i class="ci-24x bk-088"></i> <!-- 신한은행 -->
-<i class="ci-24x bk-089"></i> <!-- K뱅크 -->
-<i class="ci-24x bk-090"></i> <!-- 카카오뱅크 -->
-<i class="ci-24x bk-092"></i> <!-- 토스뱅크 -->
- 
-<br> 
- 
-<i class="ci-18x bk-000"></i> <!-- SBI저축은행(유플리트) -->
-<i class="ci-18x bk-002"></i> <!-- 산업은행 -->
-<i class="ci-18x bk-003"></i> <!-- IBK기업은행 -->
-<i class="ci-18x bk-004"></i> <!-- KB국민은행 -->
-<i class="ci-18x bk-007"></i> <!-- SH수협은행 -->
-<i class="ci-18x bk-011"></i> <!-- NH농협은행 -->
-<i class="ci-18x bk-012"></i> <!-- 지역농축협 -->
-<i class="ci-18x bk-020"></i> <!-- 우리은행 -->
-<i class="ci-18x bk-023"></i> <!-- SC제일은행 -->
-<i class="ci-18x bk-027"></i> <!-- 한국씨티은행 -->
-<i class="ci-18x bk-031"></i> <!-- 대구은행 -->
-<i class="ci-18x bk-032"></i> <!-- 부산은행 -->
-<i class="ci-18x bk-034"></i> <!-- 광주은행 -->
-<i class="ci-18x bk-035"></i> <!-- 제주은행 -->
-<i class="ci-18x bk-037"></i> <!-- 전북은행 -->
-<i class="ci-18x bk-039"></i> <!-- 경남은행 -->
-<i class="ci-18x bk-045"></i> <!-- 새마을금고 -->
-<i class="ci-18x bk-048"></i> <!-- 신협중앙회 -->
-<i class="ci-18x bk-050"></i> <!-- 저축은행 -->
-<i class="ci-18x bk-054"></i> <!-- HSBC은행 -->
-<i class="ci-18x bk-055"></i> <!-- 도이치은행 -->
-<i class="ci-18x bk-057"></i> <!-- JP모건제이스은행 -->
-<i class="ci-18x bk-060"></i> <!-- 뱅크오브아메리카 -->
-<i class="ci-18x bk-061"></i> <!-- BNP파리바은행 -->
-<i class="ci-18x bk-062"></i> <!-- 중국공상은행 -->
-<i class="ci-18x bk-063"></i> <!-- 중국은행 -->
-<i class="ci-18x bk-064"></i> <!-- 산림조합중앙회 -->
-<i class="ci-18x bk-067"></i> <!-- 중국건설은행 -->
-<i class="ci-18x bk-071"></i> <!-- 우체국 -->
-<i class="ci-18x bk-081"></i> <!-- KEB하나은행 -->
-<i class="ci-18x bk-088"></i> <!-- 신한은행 -->
-<i class="ci-18x bk-089"></i> <!-- K뱅크 -->
-<i class="ci-18x bk-090"></i> <!-- 카카오뱅크 -->
-<i class="ci-18x bk-092"></i> <!-- 토스뱅크 -->
-           </script>
-
-            <div data-class="h3">증권사</div>
-            <script type="text/html">
-<i class="ci-40x st-209"></i> <!-- 유안타증권 -->
-<i class="ci-40x st-218"></i> <!-- KB증권-->
-<i class="ci-40x st-224"></i> <!-- BNK투자증권 -->
-<i class="ci-40x st-225"></i> <!-- IBK투자증권 -->
-<i class="ci-40x st-227"></i> <!-- 다올투자증권 -->
-<i class="ci-40x st-238"></i> <!-- 미래에셋대우 -->
-<i class="ci-40x st-240"></i> <!-- 삼성증권 -->
-<i class="ci-40x st-243"></i> <!-- 한국투자증권 -->
-<i class="ci-40x st-247"></i> <!-- NH투자증권 -->
-<i class="ci-40x st-261"></i> <!-- 교보증권 -->
-<i class="ci-40x st-262"></i> <!-- 하이투자증권 -->
-<i class="ci-40x st-263"></i> <!-- 현대차투자증권 -->
-<i class="ci-40x st-264"></i> <!-- 키움증권 -->
-<i class="ci-40x st-265"></i> <!-- 이베스트투자증권 -->
-<i class="ci-40x st-266"></i> <!-- SK증권 -->
-<i class="ci-40x st-267"></i> <!-- 대신증권 -->
-<i class="ci-40x st-269"></i> <!-- 한화증권 -->
-<i class="ci-40x st-270"></i> <!-- 하나금융투자 -->
-<i class="ci-40x st-271"></i> <!-- 토스증권 -->
-<i class="ci-40x st-278"></i> <!-- 신한금융투자 -->
-<i class="ci-40x st-279"></i> <!-- DB금융투자 -->
-<i class="ci-40x st-280"></i> <!-- 유진투자증권 -->
-<i class="ci-40x st-287"></i> <!-- 메리츠종합금융증권 -->
-<i class="ci-40x st-288"></i> <!-- 카카오페이증권 -->
-<i class="ci-40x st-290"></i> <!-- 부국증권 -->
-<i class="ci-40x st-291"></i> <!-- 신영증권 -->
-<i class="ci-40x st-292"></i> <!-- 케이프투자증권 -->
-<i class="ci-40x st-294"></i> <!-- 한국포스증권 -->
-            </script>
-
-            <div data-class="h3">저축은행</div>
-            <script type="text/html">
-<i class="ci-40x sv-050"></i> <!-- 저축은행 -->
-<i class="ci-40x sv-050-028"></i> <!-- SBI저축은행(유플리트) -->
-<i class="ci-40x sv-050-002"></i> <!-- 애큐온저축은행 -->
-<i class="ci-40x sv-050-007"></i> <!-- DB저축은행 -->
-<i class="ci-40x sv-050-014"></i> <!-- 푸른저축은행 -->
-<i class="ci-40x sv-050-062"></i> <!-- NH상호저축은행 -->
-<i class="ci-40x sv-050-063"></i> <!-- 대신저축은행 -->
-<i class="ci-40x sv-050-065"></i> <!-- KB저축은행 -->
-<i class="ci-40x sv-050-066"></i> <!-- 웰컴저축은행 -->
-<i class="ci-40x sv-050-067"></i> <!-- 하나저축은행 -->
-<i class="ci-40x sv-050-130"></i> <!-- BNK저축은행 -->
-<i class="ci-40x sv-050-347"></i> <!-- 신한저축은행 -->
-<i class="ci-40x sv-050-650"></i> <!-- IBK저축은행 -->
-<i class="ci-40x sv-050-064"></i> <!-- OK저축은행 -->
-            </script>
-
-            <div data-class="h3">카드</div>
-            <script type="text/html">
-<i class="ci-40x cd-002"></i> <!-- 산업은행 -->
-<i class="ci-40x cd-003"></i> <!-- 기업은행 -->
-<i class="ci-40x cd-007"></i> <!-- 수협은행 -->
-<i class="ci-40x cd-011"></i> <!-- NH농협은행 -->
-<i class="ci-40x cd-023"></i> <!-- BC카드 (SC제일은행) -->
-<i class="ci-40x cd-027"></i> <!-- 씨티은행 -->
-<i class="ci-40x cd-031"></i> <!-- BC카드 (대구은행) -->
-<i class="ci-40x cd-032"></i> <!-- BC카드 (부산은행) -->
-<i class="ci-40x cd-034"></i> <!-- 광주은행 -->
-<i class="ci-40x cd-035"></i> <!-- 제주은행 -->
-<i class="ci-40x cd-037"></i> <!-- 전북은행 -->
-<i class="ci-40x cd-039"></i> <!-- BC카드 (경남은행) -->
-<i class="ci-40x cd-041"></i> <!-- 우리카드 -->
-<i class="ci-40x cd-044"></i> <!-- 하나카드 -->
-<i class="ci-40x cd-089"></i> <!-- 케이뱅크 -->
-<i class="ci-40x cd-090"></i> <!-- KB국민카드 (카카오뱅크) -->
-<i class="ci-40x cd-092"></i> <!-- 토스뱅크 -->
-<i class="ci-40x cd-361"></i> <!-- BC카드 -->
-<i class="ci-40x cd-364"></i> <!-- 광주카드 -->
-<i class="ci-40x cd-365"></i> <!-- 삼성카드 -->
-<i class="ci-40x cd-366"></i> <!-- 신한카드 -->
-<i class="ci-40x cd-367"></i> <!-- 현대카드 -->
-<i class="ci-40x cd-368"></i> <!-- 롯데카드 -->
-<i class="ci-40x cd-369"></i> <!-- 수협카드 -->
-<i class="ci-40x cd-370"></i> <!-- 씨티카드 -->
-<i class="ci-40x cd-371"></i> <!-- NH카드 -->
-<i class="ci-40x cd-372"></i> <!-- 전북카드 -->
-<i class="ci-40x cd-373"></i> <!-- 제주카드 -->
-<i class="ci-40x cd-374"></i> <!-- 하나카드 -->
-<i class="ci-40x cd-381"></i> <!-- KB국민카드 -->
-            </script>
-
-            <div data-class="h3">페이</div>
-            <script type="text/html">
-<i class="ci-40x py-F01"></i> <!-- 지머니트랜스 -->
-<i class="ci-40x py-F02"></i> <!-- 핀샷 -->
-<i class="ci-40x py-F03"></i> <!-- 글로벌머니익스프레스 -->
-<i class="ci-40x py-F04"></i> <!-- 한패스 -->
-<i class="ci-40x py-F05"></i> <!-- 트래블월렛 -->
-<i class="ci-40x py-F06"></i> <!-- 비바리퍼블리카(토스페이) -->
-<i class="ci-40x py-F07"></i> <!-- 핀크 -->
-<i class="ci-40x py-F08"></i> <!-- 디셈버앤컴퍼니(핀트) -->
-<i class="ci-40x py-F09"></i> <!-- 카카오페이 -->
-<i class="ci-40x py-F10"></i> <!-- 세틀뱅크 -->
-<i class="ci-40x py-F11"></i> <!-- 뱅크샐러드 -->
-<i class="ci-40x py-F12"></i> <!-- 쿠콘 -->
-<i class="ci-40x py-F13"></i> <!-- 갤럭시아머니트리 -->
-<i class="ci-40x py-F14"></i> <!-- 코나아이 -->
-<i class="ci-40x py-F15"></i> <!-- 쿠팡페이 -->
-<i class="ci-40x py-F16"></i> <!-- 네이버파이낸셜(네이버페이) -->
-<i class="ci-40x py-F17"></i> <!-- 에스에스지닷컴(SSG페이) -->
-<i class="ci-40x py-F18"></i> <!-- 티머니 -->
-<i class="ci-40x py-F19"></i> <!-- 페이코 -->
-<i class="ci-40x py-F20"></i> <!-- 십일번가(SK페이) -->
-<i class="ci-40x py-F21"></i> <!-- 케이에스넷 -->
-<i class="ci-40x py-F22"></i> <!-- DGB유페이 -->
-<i class="ci-40x py-F23"></i> <!-- 롯데멤버스(L페이) -->
-<i class="ci-40x py-F24"></i> <!-- 오케이인베스트먼트파트너스 -->
-<i class="ci-40x py-F25"></i> <!-- 나이스정보통신 -->
-<i class="ci-40x py-F26"></i> <!-- 이베이코리아(스마일페이) -->
-<i class="ci-40x py-F27"></i> <!-- 차이코퍼레이션 -->
-<i class="ci-40x py-F28"></i> <!-- 다날 -->
-<i class="ci-40x py-F29"></i> <!-- 웰컴페이먼츠 -->
-<i class="ci-40x py-F30"></i> <!-- 에스케이플래닛 -->
-<i class="ci-40x py-F31"></i> <!-- 아이씨비 -->
-<i class="ci-40x py-F32"></i> <!-- KG모빌리언스 -->
-            </script>
-        </div>
-
-    <div data-class="section">
-        <div data-class="h3">내카드</div>
-        <script type="text/html">
-<i class="ci-card crd-01"></i> <!-- PAY백체크카드2 -->
-<i class="ci-card crd-02"></i> <!-- 유플리트 카드 2 -->
-<i class="ci-card crd-03"></i> <!-- 유플리트 카드 3 -->
-<i class="ci-card crd-04"></i> <!-- 유플리트 카드 4 -->
-<i class="ci-card crd-05"></i> <!-- 유플리트 카드 5 -->
-<i class="ci-card crd-06"></i> <!-- 유플리트 카드 6 -->
-<br>
-<i class="ci-card-sm crd-01"></i> <!-- PAY백체크카드2 -->
-<i class="ci-card-sm crd-02"></i> <!-- 유플리트 카드 2 -->
-<i class="ci-card-sm crd-03"></i> <!-- 유플리트 카드 3 -->
-<i class="ci-card-sm crd-04"></i> <!-- 유플리트 카드 4 -->
-<i class="ci-card-sm crd-05"></i> <!-- 유플리트 카드 5 -->
-<i class="ci-card-sm crd-06"></i> <!-- 유플리트 카드 6 -->
-<br>
-<i class="ci-card-bg-01"></i> <!-- 유플리트 카드 bg 1 -->
-<i class="ci-card-bg-02"></i> <!-- 유플리트 카드 bg 2 -->
-<i class="ci-card-bg-03"></i> <!-- 유플리트 카드 bg 3 -->
-<i class="ci-card-bg-04"></i> <!-- 유플리트 카드 bg 4 -->
-        </script>
-    </div>
-
-    <div data-class="section">
-        <div data-class="h1">Flag</div>
-        <div data-class="h2">외환</div>
-        <div data-class="box"> 
-            <div data-class="list disc">
-                <div>사이즈 : 24x</div>
-            </div>
-        </div>
-        <script type="text/html">
-<i class="flag-24x krw" role="img" aria-label="대한민국(원)"></i> <!-- 대한민국(원) -->
-<i class="flag-24x aud" role="img" aria-label="호주(달러)"></i> <!-- 호주(달러) -->
-<i class="flag-24x cad" role="img" aria-label="캐나다(달러)"></i> <!-- 캐나다(달러) -->
-<i class="flag-24x chf" role="img" aria-label="스위스(프랑)"></i> <!-- 스위스(프랑) -->
-<i class="flag-24x cny" role="img" aria-label="중국(위안)"></i> <!-- 중국(위안) -->
-<i class="flag-24x eur" role="img" aria-label="유럽연합(유로)"></i> <!-- 유럽연합(유로) -->
-<i class="flag-24x gbp" role="img" aria-label="영국(파운드)"></i> <!-- 영국(파운드) -->
-<i class="flag-24x hkd" role="img" aria-label="홍콩(달러)"></i> <!-- 홍콩(달러) -->
-<i class="flag-24x jpy" role="img" aria-label="일본(엔)"></i> <!-- 일본(엔) -->
-<i class="flag-24x nzd" role="img" aria-label="뉴질랜드(달러)"></i> <!-- 뉴질랜드(달러) -->
-<i class="flag-24x sgd" role="img" aria-label="싱가포르(달러)"></i> <!-- 싱가포르(달러) -->
-<i class="flag-24x thb" role="img" aria-label="태국(바트)"></i> <!-- 태국(바트) -->
-<i class="flag-24x usd" role="img" aria-label="미국(달러)"></i> <!-- 미국(달러) -->
-        </script>
-    </div>
-
-    <div data-class="section">
-        <div data-class="h1">Component</div>
-
-        <div data-class="h2">은행선택</div>
-        <script type="text/html">
-<div class="bank-list-wrap">
-    <button type="button" class="bank-list-block">
-        <i class="ci-40x bk-000"></i>SBI저축은행
-    </button>
+<div data-class="demo-grid">
+    <i class="icon_md icon_arrow_right"></i>
+    <i class="icon_md icon_system_info"></i>
+    <i class="icon_md icon_close"></i>
+    <i class="icon_md icon_delete"></i>
+    <i class="icon_md icon_arrow_down"></i>
+    <i class="icon_md icon_duplicate"></i>
+    <i class="icon_md icon-info"></i>
+    <i class="icon_md icon-success"></i>
+    <i class="icon_md icon-error"></i>
+    <i class="icon_md icon-tooltip"></i>
 </div>
-<div class="bank-list-wrap">
-    <button type="button" class="bank-list-block">
-        <i class="ci-24x bk-000"></i>SBI저축은행
-    </button>
-</div>
-<div class="bank-list-wrap">
-    <button type="button" class="bank-list-block">
-        <i class="ci-18x bk-000"></i>SBI저축은행
-    </button>
-</div>
-        </script>
-        
-        <div data-class="box">
-            <div data-class="list disc">
-                <div>.list-block-wrap 안의 은행이미지 44x44</div>
-                <div>.list-block-wrap 요소를 role="button"으로 지정</div>
-            </div>
-        </div>
-        <script type="text/html">
-<div class="list-wrap-acc">
-    <div class="list-block-wrap" role="button">
-        <i class="ci-40x bk-000"></i>
-        <div class="list-info">
-            <strong class="list-name">입출금통장</strong>
-            <p class="bank-detail">
-                <span>유플리트</span>
-                <span>02819-11-1111117</span>
-            </p>
-        </div>
-    </div>
-</div>
-        </script>
-    </div>            
+            </script>
+
+            <div data-class="h2">Size</div>
+            <script type="text/html">
+<ul data-class="demo-grid">
+    <li>
+        <i class="icon_xxxlg icon_system_info"></i>
+        <span>xxxlg : 72*72</span>
+    </li>
+    <li>
+        <i class="icon_xxxlg icon_system_info"></i>
+        <span>xxlg : 64*64</span>
+    </li>
+    <li>
+        <i class="icon_xlg icon_system_info"></i>
+        <span>xlg : 48*48</span>
+    </li>
+    <li>
+        <i class="icon_mlg icon_system_info"></i>
+        <span>mlg : 40*40</span>
+    </li>
+
+    <li>
+        <span>basic size</span>
+        <i class="icon_md icon_system_info"></i>
+        <span>md : 24*24</span>
+    </li>
     
-<script src="/pub/guide/assets/vendor/jquery.min.js"></script>
-<script src="/pub/guide/assets/vendor/lodash.min.js"></script>
-<script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
-<script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
-<script src="/pub/guide/assets/js/components.js"></script>
-<script src="/pub/assets/js/common-ui.js"></script>
+    <li>
+        <i class="icon_smd icon_system_info"></i>
+        <span>smd : 20*20</span>
+    </li>
+    <li>
+        <i class="icon_sm icon_system_info"></i>
+        <span>sm : 18*18</span>
+    </li>
+    <li>
+        <i class="icon_xsm icon_system_info"></i>
+        <span>xsm : 16*16</span>
+    </li>
+    <li>
+        <i class="icon_xxs icon_system_info"></i>
+        <span>xxs: 14*14</span>
+    </li>
+    <li>
+        <i class="icon_xxxs icon_system_info"></i>
+        <span>xxxs: 12*12</span>
+    </li>
+</ul>
+            </script>
+
+            <div data-class="box">
+                <div data-class="h2">Example: 버튼 대체텍스트</div>
+            </div>
+            <script type="text/html">
+<div data-class="demo-grid">
+    <button type="button"><span class="hidden">삭제</span><i class="icon_md icon_delete"></i></button>
+    <button type="button" class="btn_tooltip js_tooltip"><span class="hidden">도움말 자세히보기</span></button>
+</div>
+            </script>
+        </div>
+    </div>              
+
+    <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
+    <script src="/pub/guide/assets/vendor/lodash.min.js"></script>
+    <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
+    <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
+    <script src="/pub/guide/assets/js/components.js"></script>
+    <script src="/pub/assets/js/common_ui.js"></script>
 </body>
 </html>
