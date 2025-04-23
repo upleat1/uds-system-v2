@@ -1249,7 +1249,7 @@
           "type": "dimension"
         },
         "radius": {
-          "value": "{radius.12}",
+          "value": "0rem",
           "type": "dimension"
         },
         "height": {
@@ -1261,7 +1261,7 @@
           "type": "dimension"
         },
         "input-text-padding-x": {
-          "value": "{padding.16}",
+          "value": "0.4rem",
           "type": "dimension"
         },
         "input-line-height": {
@@ -1274,6 +1274,22 @@
         },
         "input-text-gap-X": {
           "value": "{gap.16}",
+          "type": "dimension"
+        },
+        "border-top": {
+          "value": "0rem",
+          "type": "dimension"
+        },
+        "border-left": {
+          "value": "0rem",
+          "type": "dimension"
+        },
+        "border-right": {
+          "value": "0rem",
+          "type": "dimension"
+        },
+        "border-bottom": {
+          "value": "0.1rem",
           "type": "dimension"
         }
       },
@@ -2275,15 +2291,15 @@
         "value": "{Color.text.basic}",
         "type": "color"
       },
-      "circle-icon-color": {
+      "bullet-icon-color": {
         "value": "{Color.icon.gray800}",
         "type": "color"
       },
-      "line-icon-color": {
+      "dash-icon-color": {
         "value": "{Color.icon.gray500}",
         "type": "color"
       },
-      "\bgap-x": {
+      "icon-\bgap-x": {
         "value": "{gap.8}",
         "type": "dimension"
       },
@@ -2295,23 +2311,23 @@
         "value": "{typo.line-height.font-size-14}",
         "type": "dimension"
       },
-      "circle-icon-size-width": {
-        "value": "{number.4}",
+      "bullet-icon-size-width": {
+        "value": "0.4rem",
         "type": "dimension"
       },
-      "circle-icon-size-height": {
-        "value": "{iconsize.sm}",
+      "bullet-icon-size-height": {
+        "value": "0.4rem",
         "type": "dimension"
       },
-      "line-icon-size-width": {
-        "value": "{number.6}",
+      "dash-icon-size-width": {
+        "value": "0.6rem",
         "type": "dimension"
       },
-      "line-icon-size-height": {
-        "value": "{iconsize.sm}",
+      "dash-icon-size-height": {
+        "value": "0.1rem",
         "type": "dimension"
       },
-      "bullet-list-\bgap-y": {
+      "list-\bgap-y": {
         "value": "{gap.8}",
         "type": "dimension"
       }
@@ -2345,7 +2361,7 @@
           "type": "color"
         },
         "primary600": {
-          "value": "{color.Blue.600}",
+          "value": "{Color.primary.600}",
           "type": "color"
         },
         "gray800": {
@@ -2395,7 +2411,7 @@
           "type": "color"
         },
         "primary600": {
-          "value": "{color.Blue.600}",
+          "value": "{Color.primary.600}",
           "type": "color"
         },
         "danger": {
@@ -2457,43 +2473,43 @@
       },
       "primary": {
         "50": {
-          "value": "{color.Blue.50}",
+          "value": "#fffef4",
           "type": "color"
         },
         "100": {
-          "value": "{color.Blue.100}",
+          "value": "{color.Yellow.100}",
           "type": "color"
         },
         "200": {
-          "value": "{color.Blue.200}",
+          "value": "{color.Yellow.200}",
           "type": "color"
         },
         "300": {
-          "value": "{color.Blue.300}",
+          "value": "{color.Yellow.300}",
           "type": "color"
         },
         "400": {
-          "value": "{color.Blue.400}",
+          "value": "{color.Yellow.400}",
           "type": "color"
         },
         "500": {
-          "value": "{color.Blue.500}",
+          "value": "{color.Yellow.500}",
           "type": "color"
         },
         "600": {
-          "value": "{color.Blue.600}",
+          "value": "{color.Yellow.600}",
           "type": "color"
         },
         "700": {
-          "value": "{color.Blue.700}",
+          "value": "{color.Yellow.700}",
           "type": "color"
         },
         "800": {
-          "value": "{color.Blue.800}",
+          "value": "{color.Yellow.800}",
           "type": "color"
         },
         "900": {
-          "value": "{color.Blue.900}",
+          "value": "{color.Yellow.900}",
           "type": "color"
         }
       },
