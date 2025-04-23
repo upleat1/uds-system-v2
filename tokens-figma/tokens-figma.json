@@ -541,32 +541,48 @@
       }
     },
     "iconsize": {
-      "14": {
-        "value": "1.4rem",
+      "xxlg": {
+        "value": "6.4rem",
         "type": "dimension"
       },
-      "16": {
-        "value": "1.6rem",
-        "type": "dimension"
-      },
-      "20": {
-        "value": "2rem",
-        "type": "dimension"
-      },
-      "24": {
-        "value": "2.4rem",
-        "type": "dimension"
-      },
-      "32": {
-        "value": "3.2rem",
-        "type": "dimension"
-      },
-      "40": {
+      "lg": {
         "value": "4rem",
         "type": "dimension"
       },
-      "64": {
-        "value": "6.4rem",
+      "mlg": {
+        "value": "3.2rem",
+        "type": "dimension"
+      },
+      "md": {
+        "value": "2.4rem",
+        "type": "dimension"
+      },
+      "sm": {
+        "value": "1.8rem",
+        "type": "dimension"
+      },
+      "xsm": {
+        "value": "1.6rem",
+        "type": "dimension"
+      },
+      "xxs": {
+        "value": "1.4rem",
+        "type": "dimension"
+      },
+      "xxxs": {
+        "value": "1.2rem",
+        "type": "dimension"
+      },
+      "xlg": {
+        "value": "4.8rem",
+        "type": "dimension"
+      },
+      "xxxlg": {
+        "value": "7.2rem",
+        "type": "dimension"
+      },
+      "smd": {
+        "value": "2rem",
         "type": "dimension"
       }
     },
@@ -897,15 +913,15 @@
           "type": "dimension"
         },
         "large-icon-size": {
-          "value": "{iconsize.20}",
+          "value": "{iconsize.sm}",
           "type": "dimension"
         },
         "medium-icon-size": {
-          "value": "{iconsize.16}",
+          "value": "{iconsize.xsm}",
           "type": "dimension"
         },
         "small-icon-size": {
-          "value": "{iconsize.14}",
+          "value": "{iconsize.xxs}",
           "type": "dimension"
         }
       }
@@ -2259,6 +2275,14 @@
         "value": "{Color.text.basic}",
         "type": "color"
       },
+      "circle-icon-color": {
+        "value": "{Color.icon.gray800}",
+        "type": "color"
+      },
+      "line-icon-color": {
+        "value": "{Color.icon.gray500}",
+        "type": "color"
+      },
       "\bgap-x": {
         "value": "{gap.8}",
         "type": "dimension"
@@ -2269,6 +2293,26 @@
       },
       "line-height": {
         "value": "{typo.line-height.font-size-14}",
+        "type": "dimension"
+      },
+      "circle-icon-size-width": {
+        "value": "{number.4}",
+        "type": "dimension"
+      },
+      "circle-icon-size-height": {
+        "value": "{iconsize.sm}",
+        "type": "dimension"
+      },
+      "line-icon-size-width": {
+        "value": "{number.6}",
+        "type": "dimension"
+      },
+      "line-icon-size-height": {
+        "value": "{iconsize.sm}",
+        "type": "dimension"
+      },
+      "bullet-list-\bgap-y": {
+        "value": "{gap.8}",
         "type": "dimension"
       }
     }
