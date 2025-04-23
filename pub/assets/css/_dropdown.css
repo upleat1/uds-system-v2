@@ -9,7 +9,7 @@
 /* Basic */
 .form_group.dropdown.basic .select:after {right: 1.6rem;}
 .form_group.dropdown.basic .form_label {margin-bottom: var(--dropdown-basic-label-gap-y); font-size: var(--dropdown-basic-label-font-size); color:var(--dropdown-basic-label-font-color); line-height: var(--dropdown-basic-label-line-height);}
-.form_group.dropdown.basic .select .select_btn {position:relative; height:var(--dropdown-basic-height); padding:var(--dropdown-basic-text-padding-x) calc(var(--dropdown-basic-text-padding-x) + var(--iconsize-20) + var(--dropdown-basic-text-gap-x)) var(--dropdown-basic-text-padding-x) var(--dropdown-basic-text-padding-x); font-weight:var(--dropdown-basic-font-weight); font-size: var(--dropdown-basic-font-size); line-height: var(--dropdown-basic-line-height); border-radius: var(--dropdown-basic-radius); border-top-width:var(--dropdown-basic-border-top-width); border-left-width:var(--dropdown-basic-border-left-width); border-right-width:var(--dropdown-basic-border-right-width); border-bottom-width:var(--dropdown-basic-border-bottom-width); border-style:solid;}
+.form_group.dropdown.basic .select .select_btn {position:relative; height:var(--dropdown-basic-height); padding:var(--dropdown-basic-text-padding-x) calc(var(--dropdown-basic-text-padding-x) + var(--iconsize-smd) + var(--dropdown-basic-text-gap-x)) var(--dropdown-basic-text-padding-x) var(--dropdown-basic-text-padding-x); font-weight:var(--dropdown-basic-font-weight); font-size: var(--dropdown-basic-font-size); line-height: var(--dropdown-basic-line-height); border-radius: var(--dropdown-basic-radius); border-top-width:var(--dropdown-basic-border-top-width); border-left-width:var(--dropdown-basic-border-left-width); border-right-width:var(--dropdown-basic-border-right-width); border-bottom-width:var(--dropdown-basic-border-bottom-width); border-style:solid;}
 
 .form_group.dropdown.basic.default .select .select_btn {background-color:var(--dropdown-basic-default-background-color); color:var(--dropdown-basic-default-font-color); border-color:var(--dropdown-basic-default-border-color)}
 .form_group.dropdown.basic.focused .select .select_btn,
@@ -23,11 +23,11 @@
 .form_group.dropdown.basic .form_row .space {display: inline-block; padding:2.2rem .5rem 0;}
 
 /* Label Inline */
-.form_group.dropdown.label-inline .select:after {right: calc((var(--dropdown-basic-text-padding-x) + var(--iconsize-20)) * -1);}
+.form_group.dropdown.label-inline .select:after {right: 0;}
 .form_group.dropdown.label-inline .form_label {margin-bottom: var(--dropdown-lable-inline-label-gap-y); font-size: var(--dropdown-lable-inline-label-font-size); color:var(--dropdown-lable-inline-label-font-color); line-height: var(--dropdown-lable-inline-label-line-height);}
 .form_group.dropdown.label-inline .form_area .select_btn {font-weight:var(--dropdown-lable-inline-font-weight); font-size: var(--dropdown-lable-inline-font-size); line-height: var(--dropdown-lable-inline-line-height);}
 
-.form_group.dropdown.label-inline .form_area {position:relative; height:var(--dropdown-lable-inline-height); padding:var(--dropdown-lable-inline-text-padding-x) calc(var(--dropdown-lable-inline-text-padding-x) + var(--iconsize-20) + var(--dropdown-lable-inline-text-gap-x)) var(--dropdown-lable-inline-text-padding-x) var(--dropdown-lable-inline-text-padding-x); border-width:var(--dropdown-lable-inline-border-width); border-style:solid; border-radius: var(--dropdown-lable-inline-radius);}
+.form_group.dropdown.label-inline .form_area {position:relative; height:var(--dropdown-lable-inline-height); padding:var(--dropdown-lable-inline-text-padding-x); border-width:var(--dropdown-lable-inline-border-width); border-style:solid; border-radius: var(--dropdown-lable-inline-radius);}
 .form_group.dropdown.label-inline.default .form_area {background-color:var(--dropdown-lable-inline-default-background-color); color:var(--dropdown-lable-inline-default-font-color); border-color:var(--dropdown-lable-inline-default-border-color)}
 .form_group.dropdown.label-inline.focused .form_area {border-color:var(--dropdown-lable-inline-focused-border-color); color:var(--dropdown-lable-inline-focused-font-color); background-color: var(--dropdown-lable-inline-focused-background-colorr);}
 .form_group.dropdown.label-inline.filled .form_area {border-color:var(--dropdown-lable-inline-filled-border-color); color:var(--dropdown-lable-inline-filled-font-color); background-color: var(--dropdown-lable-inline-filled-background-color);}
