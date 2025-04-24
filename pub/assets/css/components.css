@@ -10,6 +10,7 @@
 @import url("/pub/assets/css/_checkbox.css"); 
 @import url("/pub/assets/css/_radio.css"); 
 @import url("/pub/assets/css/_switch.css"); 
-@import url("/pub/assets/css/_popup.css");
+@import url("/pub/assets/css/_dialog.css");
+@import url("/pub/assets/css/_bottomsheet.css");
 @import url("/pub/assets/css/_tab.css");
 @import url("/pub/assets/css/_tooltip.css");
