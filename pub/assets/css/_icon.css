@@ -13,13 +13,13 @@
 [class*="icon"].xxlg {width:var(--iconsize-xxlg); height:var(--iconsize-xxlg);}
 [class*="icon"].xxxlg {width:var(--iconsize-xxxlg); height:var(--iconsize-xxxlg);}
 
-.icon_arrow_right:before {background-image:url(/pub/assets/img/common/ico-24x-arrow-right.svg);}
-.icon_arrow_down:before {background-image:url(/pub/assets/img/common/ico-24x-arrow-down.svg);}
-.icon_system_info:before {background-image:url(/pub/assets/img/common/ico-24x-system-info.svg);}
-.icon_close:before {background-image:url(/pub/assets/img/common/ico-24x-close.svg);}
-.icon_delete:before {background-image:url(/pub/assets/img/common/ico-24x-delete.svg);}
-.icon_duplicate:before {background-image:url(/pub/assets/img/common/ico-24x-duplicate.svg);}
-.icon_info:before {background-image:url(/pub/assets/img/common/ico-24x-info.svg);}
-.icon_success:before {background-image:url(/pub/assets/img/common/ico-24x-success.svg);}
-.icon_error:before {background-image:url(/pub/assets/img/common/ico-24x-error.svg);}
-.icon_tooltip:before {background-image:url(/pub/assets/img/common/ico-24x-tooltip.svg);}
+.icon-arrow-right:before {background-image:url(/pub/assets/img/common/ico-24x-arrow-right.svg);}
+.icon-arrow-down:before {background-image:url(/pub/assets/img/common/ico-24x-arrow-down.svg);}
+.icon-system-info:before {background-image:url(/pub/assets/img/common/ico-24x-system-info.svg);}
+.icon-close:before {background-image:url(/pub/assets/img/common/ico-24x-close.svg);}
+.icon-delete:before {background-image:url(/pub/assets/img/common/ico-24x-delete.svg);}
+.icon-duplicate:before {background-image:url(/pub/assets/img/common/ico-24x-duplicate.svg);}
+.icon-info:before {background-image:url(/pub/assets/img/common/ico-24x-info.svg);}
+.icon-success:before {background-image:url(/pub/assets/img/common/ico-24x-success.svg);}
+.icon-error:before {background-image:url(/pub/assets/img/common/ico-24x-error.svg);}
+.icon-tooltip:before {background-image:url(/pub/assets/img/common/ico-24x-tooltip.svg);}

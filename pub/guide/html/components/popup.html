@@ -22,16 +22,16 @@
             display: block;
             position: relative
         }
-        [data-class="demo"] .pop_bg_close {
+        [data-class="demo"] .pop-bg-close {
             position: absolute
         }
-        [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap {
+        [data-class="demo"] .popup.bottom>.pop-scl-wrap, [data-class="demo"] .popup.bottom>.pop-wrap {
             position: absolute
         }
         @media (min-width: 1024px) {
-            [data-class="demo"] .popup.bottom>.pop_scl_wrap, [data-class="demo"] .popup.bottom>.pop_wrap{left: 0; margin-left: 0}
+            [data-class="demo"] .popup.bottom>.pop-scl-wrap, [data-class="demo"] .popup.bottom>.pop-wrap{left: 0; margin-left: 0}
         }
-        .note_txt {margin-left:.5rem; font-size:1.5rem; color:#777;}
+        .note-txt {margin-left:.5rem; font-size:1.5rem; color:#777;}
         .p-tit {font-size: 18px; font-weight: bold; margin-bottom: 5px;}
         .p-tit2 {color:#1733bf; font-weight: bold;}
         .p-list li{position: relative; font-size:1.5rem; color:#666; line-height: 1.8; padding-left:10px;}
@@ -183,11 +183,11 @@ UICommon.Layer.confirm('Confirm 창입니다.','Confirm 제목','완료','넘기
     });
 </pre>
                         </div>
-                        <div>Popup안에 있는 버튼에 Popup Close기능을 주려면 'ui_pop_close' 클래스 추가</div>
-                        <div>'ui_pop_close' 클래스는 해당 용도가 아니면 에러를 발생할수 있으니 안쓸때는 삭제</div>
+                        <div>Popup안에 있는 버튼에 Popup Close기능을 주려면 'ui-pop-close' 클래스 추가</div>
+                        <div>'ui-pop-close' 클래스는 해당 용도가 아니면 에러를 발생할수 있으니 안쓸때는 삭제</div>
                     </div> 
                     <div>딤 클릭 이벤트 방지
-                        <div>'bg_no_click' 클래스를 Popup 최상단에 엘리먼트에 추가</div>
+                        <div>'bg-no-click' 클래스를 Popup 최상단에 엘리먼트에 추가</div>
                     </div>
                     <div>닫기버튼 삭제
 <pre>
@@ -231,49 +231,49 @@ $(function(){
 
 <!-- layer html : default -->
 <div id="팝업ID" class="popup modal" role="dialog" aria-hidden="true">
-    <article class="pop_wrap">
-        <div class="pop_head">
+    <article class="pop-wrap">
+        <div class="pop-head">
             <div>
                 <h1>타이틀 영역</h1>
             </div>
         </div>
-        <div class="pop_body">
-            <div class="pop_section">
+        <div class="pop-body">
+            <div class="pop-section">
                 다이얼로그 콘텐츠
             </div>
         </div>
-        <div class="pop_foot">
+        <div class="pop-foot">
             <div>
-                <div class="btn_area">
+                <div class="btn-area">
                     <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
-                    <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                    <span><button type="button" class="btn solid primary ui-pop-close">확인</button></span>
                 </div>
             </div>
         </div>
-        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        <button type="button" class="pop-close ui-pop-close" aria-label="팝업창 닫기"></button>
     </article>
 </div>
 <div id="팝업ID" class="popup bottom" role="dialog" aria-hidden="true">
-    <article class="pop_wrap">
-        <div class="pop_head">
+    <article class="pop-wrap">
+        <div class="pop-head">
             <div>
                 <h1>바텀시트 타이틀</h1>
             </div>
         </div>
-        <div class="pop_body">
-            <div class="pop_section">
+        <div class="pop-body">
+            <div class="pop-section">
                 바텀시트 내용
             </div>
         </div>
-        <div class="pop_foot">
+        <div class="pop-foot">
             <div>
-                <div class="btn_area">
+                <div class="btn-area">
                     <span><button type="button" class="btn secondary lg" data-action="close">취소</button></span>
-                    <span><button type="button" class="btn primary lg ui_pop_close">확인</button></span>
+                    <span><button type="button" class="btn primary lg ui-pop-close">확인</button></span>
                 </div>
             </div>
         </div>
-        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+        <button type="button" class="pop-close ui-pop-close" aria-label="팝업창 닫기"></button>
     </article>
 </div>
 <!-- //layer html : default -->
@@ -287,24 +287,24 @@ $(function(){
 
             <div data-class="h2">Alert</div>
             <script type="text/html">
-<div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
+<div id="uiLayerAlert0" class="popup modal alert ui-pop-alert show" role="dialog" aria-hidden="false"
     aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
-    <div class="pop_scl_wrap">
-        <article class="pop_wrap" style="max-height: 448px;">
-            <div class="pop_head">
+    <div class="pop-scl-wrap">
+        <article class="pop-wrap" style="max-height: 448px;">
+            <div class="pop-head">
                 <div>
                     <h1 id="uiLayerAlert0Label">알림</h1>
                 </div>
             </div>
-            <div class="pop_body" style="max-height: 296px;">
-                <div class="pop_section">
+            <div class="pop-body" style="max-height: 296px;">
+                <div class="pop-section">
                     <div class="message">
                         <div role="alert" aria-live="assertive">얼럿창입니다.</div>
                     </div>
                 </div>
             </div>
-            <div class="pop_foot">
-                <div class="btn_area">
+            <div class="pop-foot">
+                <div class="btn-area">
                     <span><button type="button" id="uiLayerAlert0ActionBtn" class="btn solid primary">확인</button></span>
                 </div>
             </div>
@@ -315,24 +315,24 @@ $(function(){
 
             <div data-class="h2">Confirm</div>
             <script type="text/html">
-<div id="uiLayerAlert0" class="popup modal alert ui_pop_alert show" role="dialog" aria-hidden="false"
+<div id="uiLayerAlert0" class="popup modal alert ui-pop-alert show" role="dialog" aria-hidden="false"
     aria-labelledby="uiLayerAlert0Label" style="display: flex;" tabindex="0">
-    <div class="pop_scl_wrap">
-        <article class="pop_wrap" style="max-height: 448px;">
-            <div class="pop_head">
+    <div class="pop-scl-wrap">
+        <article class="pop-wrap" style="max-height: 448px;">
+            <div class="pop-head">
                 <div>
                     <h1 id="uiLayerAlert0Label">알림</h1>
                 </div>
             </div>
-            <div class="pop_body" style="max-height: 296px;">
-                <div class="pop_section">
+            <div class="pop-body" style="max-height: 296px;">
+                <div class="pop-section">
                     <div class="message">
                         <div role="alert" aria-live="assertive">컨펌창입니다.</div>
                     </div>
                 </div>
             </div>
-            <div class="pop_foot">
-                <div class="btn_area"><span><button type="button" id="uiLayerAlert0CancelBtn"
+            <div class="pop-foot">
+                <div class="btn-area"><span><button type="button" id="uiLayerAlert0CancelBtn"
                             class="btn solid secondary">취소</button></span><span><button type="button"
                             id="uiLayerAlert0ActionBtn" class="btn solid primary">확인</button></span></div>
             </div>
@@ -351,23 +351,23 @@ $(function(){
                 </div>
             </div>
             <script type="text/html">
-<div id="팝업ID" class="popup modal ui_pop_last show foot" role="dialog" aria-hidden="false" style="display: flex;" aria-labelledby="modalPopup1Label" tabindex="0">
-    <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
-    <article class="pop_wrap" style="padding-bottom: 103.976px; max-height: 1270.8px;">
-        <div class="pop_head">
+<div id="팝업ID" class="popup modal ui-pop-last show foot" role="dialog" aria-hidden="false" style="display: flex;" aria-labelledby="modalPopup1Label" tabindex="0">
+    <div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>
+    <article class="pop-wrap" style="padding-bottom: 103.976px; max-height: 1270.8px;">
+        <div class="pop-head">
             <div>
                 <h1 id="modalPopup1Label">타이틀 영역</h1>
             </div>
         </div>
-        <div class="pop_body" style="max-height: 428.3px;">
-            <div class="pop_section">
+        <div class="pop-body" style="max-height: 428.3px;">
+            <div class="pop-section">
                 기본 알럿
             </div>
         </div>
-        <div class="pop_foot">
+        <div class="pop-foot">
             <div>
-                <div class="btn_area">
-                    <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                <div class="btn-area">
+                    <span><button type="button" class="btn solid primary ui-pop-close">확인</button></span>
                 </div>
             </div>
         </div>
@@ -382,19 +382,19 @@ $(function(){
                 </div>
             </div>
             <script type="text/html">
-<div id="팝업ID" class="popup modal ui_pop_last show foot" role="dialog" aria-hidden="false" style="display: flex;" aria-labelledby="modalPopup1Label" tabindex="0">
-    <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
-    <article class="pop_wrap" style="padding-bottom: 103.976px; max-height: 1270.8px;">
-        <div class="pop_head">
+<div id="팝업ID" class="popup modal ui-pop-last show foot" role="dialog" aria-hidden="false" style="display: flex;" aria-labelledby="modalPopup1Label" tabindex="0">
+    <div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>
+    <article class="pop-wrap" style="padding-bottom: 103.976px; max-height: 1270.8px;">
+        <div class="pop-head">
             <div>
                 <h1 id="modalPopupCombinationLabel">타이틀 영역</h1>
             </div>
         </div>
-        <div class="pop_body" style="max-height: 1090.83px;">
-            <div class="pop_section">
+        <div class="pop-body" style="max-height: 1090.83px;">
+            <div class="pop-section">
                 <p class="p">기본 알렷</p>
                 <div class="section" style="height: 128px; background: #f1f1f1;">추가 콘텐츠 영역</div>
-                <div class="btn_cnt_wrap">
+                <div class="btn-cnt-wrap">
                     <span>
                         <span class="selection">
                             <input type="checkbox" id="chkDate" checked="" aria-hidden="true">
@@ -404,11 +404,11 @@ $(function(){
                 </div>
             </div>
         </div>
-        <div class="pop_foot">
+        <div class="pop-foot">
             <div>
-                <div class="btn_area">
-                    <span><button type="button" class="btn solid secondary ui_pop_close">취소</button></span>
-                    <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                <div class="btn-area">
+                    <span><button type="button" class="btn solid secondary ui-pop-close">취소</button></span>
+                    <span><button type="button" class="btn solid primary ui-pop-close">확인</button></span>
                 </div>
             </div>
         </div>
@@ -423,22 +423,22 @@ $(function(){
                 </div>
             </div>
             <script type="text/html">
-<div id="팝업ID" class="popup modal ui_pop_last show foot" role="dialog" aria-hidden="false" style="display: flex;" aria-labelledby="modalPopup1Label" tabindex="0">
-    <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
-    <article class="pop_wrap" style="padding-bottom: 103.976px; max-height: 1270.8px;">
-        <div class="pop_body no_scroll">
-            <div class="pop_section">
-                <div class="result info center"><div class="result_ico"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65"><circle cx="32.5" cy="32.5" r="32" fill="#F3F7FF"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M35.0014 34.1378C34.9945 34.3398 34.8287 34.5 34.6266 34.5H30.3734C30.1713 34.5 30.0055 34.3398 29.9986 34.1378L29.5132 19.8878C29.506 19.6758 29.6759 19.5 29.888 19.5H35.112C35.3241 19.5 35.494 19.6758 35.4868 19.8878L35.0014 34.1378ZM35.5 41.4916C35.5 43.1797 34.1544 44.5 32.5079 44.5C30.8456 44.5 29.5 43.1797 29.5 41.4916C29.5 39.8203 30.8456 38.5 32.5079 38.5C34.1544 38.5 35.5 39.8203 35.5 41.4916Z" fill="#0026D2"></path></svg></div><!-- 메시지 : info, 정렬 : left, center, right -->
+<div id="팝업ID" class="popup modal ui-pop-last show foot" role="dialog" aria-hidden="false" style="display: flex;" aria-labelledby="modalPopup1Label" tabindex="0">
+    <div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>
+    <article class="pop-wrap" style="padding-bottom: 103.976px; max-height: 1270.8px;">
+        <div class="pop-body no-scroll">
+            <div class="pop-section">
+                <div class="result info center"><div class="result-ico"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65"><circle cx="32.5" cy="32.5" r="32" fill="#F3F7FF"></circle><path fill-rule="evenodd" clip-rule="evenodd" d="M35.0014 34.1378C34.9945 34.3398 34.8287 34.5 34.6266 34.5H30.3734C30.1713 34.5 30.0055 34.3398 29.9986 34.1378L29.5132 19.8878C29.506 19.6758 29.6759 19.5 29.888 19.5H35.112C35.3241 19.5 35.494 19.6758 35.4868 19.8878L35.0014 34.1378ZM35.5 41.4916C35.5 43.1797 34.1544 44.5 32.5079 44.5C30.8456 44.5 29.5 43.1797 29.5 41.4916C29.5 39.8203 30.8456 38.5 32.5079 38.5C34.1544 38.5 35.5 39.8203 35.5 41.4916Z" fill="#0026D2"></path></svg></div><!-- 메시지 : info, 정렬 : left, center, right -->
                     <p class="tit">타이틀 영역</p>
                     <p class="txt">텍스트 영역</p>
                 </div>
             </div>
         </div>
-        <div class="pop_foot">
+        <div class="pop-foot">
             <div>
-                <div class="btn_area">
-                    <span><button type="button" class="btn solid secondary ui_pop_close">취소</button></span>
-                    <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                <div class="btn-area">
+                    <span><button type="button" class="btn solid secondary ui-pop-close">취소</button></span>
+                    <span><button type="button" class="btn solid primary ui-pop-close">확인</button></span>
                 </div>
             </div>
         </div>
@@ -454,31 +454,31 @@ $(function(){
                 </div>
             </div>
             <script type="text/html">
-<div id="팝업ID" class="popup bottom ui_pop_last show" style="height:500px" role="dialog" aria-hidden="false"
+<div id="팝업ID" class="popup bottom ui-pop-last show" style="height:500px" role="dialog" aria-hidden="false"
     aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
-    <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
-    <div class="pop_scl_wrap">
-        <article class="pop_wrap" style="max-height: 508px;">
-            <div class="pop_head">
+    <div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>
+    <div class="pop-scl-wrap">
+        <article class="pop-wrap" style="max-height: 508px;">
+            <div class="pop-head">
                 <div>
                     <h1 id="bottomPopup2Label">바텀시트 타이틀</h1>
                 </div>
             </div>
-            <div class="pop_body" style="max-height: 252px;">
-                <div class="pop_section">
+            <div class="pop-body" style="max-height: 252px;">
+                <div class="pop-section">
                     <p class="p">바텀시트 내용</p>
                     <div class="section" style="height: 128px; background: #f1f1f1;">추가 콘텐츠 영역</div>
                 </div>
             </div>
-            <div class="pop_foot">
+            <div class="pop-foot">
                 <div>
-                    <div class="btn_area">
+                    <div class="btn-area">
                         <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
-                        <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                        <span><button type="button" class="btn solid primary ui-pop-close">확인</button></span>
                     </div>
                 </div>
             </div>
-            <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기"></button>
+            <button type="button" class="pop-close ui-pop-close" aria-label="팝업창 닫기"></button>
         </article>
     </div>
 </div>
@@ -491,29 +491,29 @@ $(function(){
                 </div>
             </div>
             <script type="text/html">
-<div id="팝업ID" class="popup bottom ui_pop_last show" style="height:500px" role="dialog" aria-hidden="false" aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
-    <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
-    <article class="pop_wrap" style="padding-bottom: 96.5938px; max-height: 450px;">
-        <div class="pop_head">
+<div id="팝업ID" class="popup bottom ui-pop-last show" style="height:500px" role="dialog" aria-hidden="false" aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
+    <div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>
+    <article class="pop-wrap" style="padding-bottom: 96.5938px; max-height: 450px;">
+        <div class="pop-head">
             <div>
                 <h1 id="bottomPopup2Label">바텀시트 타이틀</h1>
             </div>
         </div>
-        <div class="pop_body scroll" style="max-height: 273.406px;">
-            <div class="pop_section">
+        <div class="pop-body scroll" style="max-height: 273.406px;">
+            <div class="pop-section">
                 바텀시트 내용
                 <div style="height: 1500px; background: #f1f1f1; text-align: center">스크롤을 위한 임시영역</div>
             </div>
         </div>
-        <div class="pop_foot pop-bottom_fixed">
+        <div class="pop-foot pop-bottom-fixed">
             <div>
-                <div class="btn_area">
+                <div class="btn-area">
                     <span><button type="button" class="btn solid secondary" data-action="close">취소</button></span>
-                    <span><button type="button" class="btn solid primary ui_pop_close">확인</button></span>
+                    <span><button type="button" class="btn solid primary ui-pop-close">확인</button></span>
                 </div>
             </div>
         </div>
-        <button type="button" class="pop_close ui_pop_close" aria-label="팝업창 닫기" id="bottomPopup2_dev"></button>
+        <button type="button" class="pop-close ui-pop-close" aria-label="팝업창 닫기" id="bottomPopup2-dev"></button>
     </article>
 </div>
             </script>
@@ -526,13 +526,13 @@ $(function(){
                     </div>
                 </div>
                 <script type="text/html">
-<div id="팝업ID" class="popup bottom ui_pop_last show no_title" style="height:400px" role="dialog" aria-hidden="false" style="display: block;" tabindex="0">
-    <div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>
-    <article class="pop_wrap" style="max-height: 450px;">
-        <div class="pop_body no_scroll">
-            <div class="pop_section">
+<div id="팝업ID" class="popup bottom ui-pop-last show no-title" style="height:400px" role="dialog" aria-hidden="false" style="display: block;" tabindex="0">
+    <div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>
+    <article class="pop-wrap" style="max-height: 450px;">
+        <div class="pop-body no-scroll">
+            <div class="pop-section">
                 <div style="height: 140px; background: #f1f1f1; text-align: center">임시영역</div>
-                <div class="btn_cnt_wrap">
+                <div class="btn-cnt-wrap">
                     <span>
                         <span class="selection">
                             <input type="checkbox" id="chkDateP" checked="" aria-hidden="true">
@@ -540,7 +540,7 @@ $(function(){
                         </span>
                     </span>
                     <span class="right">
-                        <button type="button" class="btn_close ui_pop_close"><strong>닫기</strong></button>
+                        <button type="button" class="btn-close ui-pop-close"><strong>닫기</strong></button>
                     </span>
                 </div>
             </div>
@@ -557,13 +557,6 @@ $(function(){
     <script src="/pub/guide/assets/vendor/highlight/highlight.min.js"></script>
     <script src="/pub/guide/assets/vendor/clipboard.min.js"></script>
     <script src="/pub/guide/assets/js/components.js"></script>
-    <script src="/pub/assets/js/common_ui.js"></script>
-    
-    <!-- Loading Custom Script -->
-    <script src="/pub/assets/js/common_ui.js"></script>
-
-    <!-- common ui init -->
-    <script>
-    </script>
+    <script src="/pub/assets/js/common-ui.js"></script>
 </body>
 </html>

@@ -4,11 +4,11 @@
 .btn {display:inline-block; position: relative; overflow:hidden; text-align:center;}
 
 /* Confirm Button */
-.btn_confirm_wrap .btn_area {display:flex;position:fixed;left:0;bottom:0;width:100%; height:var(--button-stick-wrap-height);  padding:var(--button-stick-wrap-padding-top) var(--button-stick-wrap-padding-x) 0; z-index:150;}
-.btn_confirm_wrap .btn_area > span {display:block;width:100%;}
-.btn_confirm_wrap .btn_area > span + span {margin-left:var(--button-stick-wrap-gap-left)}
-.btn_confirm_wrap .btn {display:block; width:100%;}
-.btn_confirm_wrap.nofix .btn_area {position:absolute;}
+.btn-confirm-wrap .btn-area {display:flex;position:fixed;left:0;bottom:0;width:100%; height:var(--button-stick-wrap-height);  padding:var(--button-stick-wrap-padding-top) var(--button-stick-wrap-padding-x) 0; z-index:150;}
+.btn-confirm-wrap .btn-area > span {display:block;width:100%;}
+.btn-confirm-wrap .btn-area > span + span {margin-left:var(--button-stick-wrap-gap-left)}
+.btn-confirm-wrap .btn {display:block; width:100%;}
+.btn-confirm-wrap.nofix .btn-area {position:absolute;}
 
 /* Sick Button */
 .btn.stick.lg {min-width:32.7rem; height:var(--button-stick-large-height); padding:0 var(--button-stick-large-text-padding-x); border-radius: var(--button-stick-large-radius); font-size: var(--button-stick-large-font-size); border-width:var(--button-stick-large-border-width); line-height:var(--button-stick-large-line-height)}
@@ -52,12 +52,12 @@
 .btn-text.lg [class*=icon] {width: var(--button-text-large-icon-size); height: var(--button-text-large-icon-size);}
 .btn-text.md [class*=icon] {width: var(--button-text-medium-icon-size); height: var(--button-text-medium-icon-size);}
 .btn-text.sm [class*=icon] {width: var(--button-text-small-icon-size); height: var(--button-text-small-icon-size);}
-.btn-text.lg .icon-left {padding-right: var(--button-text-large-icon-gap-x);}
-.btn-text.lg .icon-right {padding-left: var(--button-text-large-icon-gap-x);}
-.btn-text.md .icon-left {padding-right: var(--button-text-medium-icon-gap-x);}
-.btn-text.md .icon-right {padding-left: var(--button-text-medium-icon-gap-x);}
-.btn-text.sm .icon-left {padding-right: var(--button-text-small-icon-gap-x);}
-.btn-text.sm .icon-right {padding-left: var(--button-text-small-icon-gap-x);}
+.btn-text.lg [class*=icon].left {padding-right: var(--button-text-large-icon-gap-x);}
+.btn-text.lg [class*=icon].right {padding-left: var(--button-text-large-icon-gap-x);}
+.btn-text.md [class*=icon].left {padding-right: var(--button-text-medium-icon-gap-x);}
+.btn-text.md [class*=icon].right {padding-left: var(--button-text-medium-icon-gap-x);}
+.btn-text.sm [class*=icon].left {padding-right: var(--button-text-small-icon-gap-x);}
+.btn-text.sm [class*=icon].right {padding-left: var(--button-text-small-icon-gap-x);}
 
 .btn-text.default {color:var(--button-text-default-font-color);}
 .btn-text.secondary {color:var(--button-text-secondary-font-color);}

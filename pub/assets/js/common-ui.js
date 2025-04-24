@@ -38,7 +38,7 @@ if (!UICommon) {
 
         var uiReset = function () {
             Body.unlock();
-            $('html').removeClass('keypad_open');
+            $('html').removeClass('keypad-open');
             if ($('#wrap').length) $('#wrap').removeAttr('aria-hidden');
             if ($('#content').length) $('#content').removeAttr('aria-hidden');
             originalPotion = false;
@@ -315,7 +315,7 @@ if (!UICommon) {
                 return [upParentTop, upParentheight, upParentNPTop, upParentNPHeight];
             },
             compareOff: function (_re) {
-                var toggleIs = $('.tit_area.js_toggle.on');
+                var toggleIs = $('.tit-area.js-toggle.on');
                 if (toggleIs.length > 0 && !_re == 're') {
                     toggleIs.each(function () {
                         var thisLi = $(this).next().children().find('.li');
@@ -325,12 +325,12 @@ if (!UICommon) {
                         $(this).next().children().removeAttr('style');
                     });
                 } else if (_re == 're') {
-                    var newListDrag = $('.new_list_drag');
+                    var newListDrag = $('.new-list-drag');
                     newListDrag.children().each(function () {
                         $(this).removeClass('chosen')
                         $(this).removeAttr('style');
                     });
-                    newListDrag.removeClass('type_drag').addClass('drag').removeAttr('style');
+                    newListDrag.removeClass('type-drag').addClass('drag').removeAttr('style');
                 } else {
                     var thisLi = $('.drag').children();
                     thisLi.each(function (index, item) {
@@ -340,8 +340,8 @@ if (!UICommon) {
                 }
             },
             compareOn: function (_currentClass, _this,) {
-                if (_currentClass == 'orderSet') {
-                    var toggleIs = $('#wrap .tit_area.js_toggle.on'); // [전담반 Biz-171] 대표계좌 설정 개선 :20220405 개발 피드백 수정
+                if (-currentClass == 'orderSet') {
+                    var toggleIs = $('#wrap .tit-area.js-toggle.on'); // [전담반 Biz-171] 대표계좌 설정 개선 :20220405 개발 피드백 수정
                     if (toggleIs.length > 0) {
                         console.log('test1');
                         toggleIs.each(function () {
@@ -351,11 +351,11 @@ if (!UICommon) {
                         });
                     } else {
                         console.log('test');
-                        var thisLi = $('.type_drag').children();
+                        var thisLi = $('.type-drag').children();
                         var itemHeight = orderList.liEachSet(thisLi);
                         thisLi.parent().css('height', itemHeight);
                     }
-                } else if (_currentClass == 'type_drag') {
+                } else if (_currentClass == 'type-drag') {
                     var thisLi = _this.next().children().find('.li');
                     var itemHeight = orderList.liEachSet(thisLi);
                     _this.next().children().css('height', itemHeight);
@@ -363,7 +363,7 @@ if (!UICommon) {
             },
             orderUp: function (_this) {
                 var upParent = _this.closest($('.li'));
-                var thisLi = _this.closest($('.type_drag')).children();
+                var thisLi = _this.closest($('.type-drag')).children();
                 var upParentNP = upParent.prev();
                 var [upParentTop, upParentheight, upParentNPTop, upParentNPHeight] = orderList.liPosHeight(upParent, upParentNP);
                 // animate stop
@@ -385,13 +385,13 @@ if (!UICommon) {
                     orderList.evtStop(thisLi);
                 });
                 // 애니메이션 완료 후 호출
-                $('.new_list_drag .li').removeClass('chosen');
+                $('.new-list-drag .li').removeClass('chosen');
                 upParent.addClass('chosen');
 
             },
             orderDown: function (_this) {
                 var upParent = _this.closest($('.li'));
-                var thisLi = _this.closest($('.type_drag')).children();
+                var thisLi = _this.closest($('.type-drag')).children();
                 var upParentNP = upParent.next();
                 var [upParentTop, upParentheight, upParentNPTop, upParentNPHeight] = orderList.liPosHeight(upParent, upParentNP);
                 // animate stop
@@ -410,22 +410,22 @@ if (!UICommon) {
                     orderList.evtStop(thisLi);
                 });
                 // 애니메이션 완료 후 호출
-                $('.new_list_drag .li').removeClass('chosen');
+                $('.new-list-drag .li').removeClass('chosen');
                 upParent.addClass('chosen');
             },
             init: function (_currentClass) {
-                var btnMove = $('.move_area button');
+                var btnMove = $('.move-area button');
                 orderList.compareOn(_currentClass);
                 btnMove.each(function () {
                     $(this).off('click').on('click', function (e) {
                         e.preventDefault();
                         var $this = $(this),
-                            $list = $this.closest('.acc_list'),
-                            $btnDel = $list.find('.btn_move_del');
+                            $list = $this.closest('.acc-list'),
+                            $btnDel = $list.find('.btn-move-del');
                         //if ($btnDel.length) $btnDel.hide();
-                        if ($this.hasClass('btn_up')) {
+                        if ($this.hasClass('btn-up')) {
                             orderList.orderUp($this);
-                        } else if ($this.hasClass('btn_down')) {
+                        } else if ($this.hasClass('btn-down')) {
                             orderList.orderDown($this);
                         } else {
                             return;
@@ -439,7 +439,7 @@ if (!UICommon) {
             drag_id: [],
             dragIs: function () {
                 orderDragBtn.drag_id = new Array();
-                var dragListIs = $('.new_list_drag');
+                var dragListIs = $('.new-list-drag');
                 dragListIs.each(function (index, item) {
                     orderDragBtn.drag_id.push($(item).attr('id'));
                 });
@@ -448,7 +448,7 @@ if (!UICommon) {
             accountSetup: function (id) {
                 for (var i = 0; i < id.length; i++) {
                     Sortable.create(document.getElementById(id[i]), {
-                        handle: '.btn_move',
+                        handle: '.btn-move',
                         animation: 150,
                         scrollSensitivity: 30,
                         deley: 3,
@@ -456,7 +456,7 @@ if (!UICommon) {
                             var el = $(this.el);
                             var accPnnel = el.children('.li');
                             _chosen = accPnnel.filter('.sortable-chosen');
-                            $('.new_list_drag .li').removeClass('chosen');
+                            $('.new-list-drag .li').removeClass('chosen');
                             accPnnel.filter(':not(.sortable-drag)').addClass('opac');
                         },
                         onEnd: function () {
@@ -464,10 +464,10 @@ if (!UICommon) {
                             var accPnnel = el.children('.li');
                             accPnnel.filter(':not(.sortable-drag)').removeClass('opac');
                             _chosen.addClass('chosen');
-                            //if(accPnnel.find('.btn_move_del').length) accPnnel.find('.btn_move_del').hide();
+                            //if(accPnnel.find('.btn-move-del').length) accPnnel.find('.btn-move-del').hide();
 
                             // 순서 변경 여부 개발 펑션 호출 - 없을 경우 퍼블 인터렉션 펑션만 호출
-                            var btnMove = _chosen.children('.btn_move').eq(1);
+                            var btnMove = _chosen.children('.btn-move').eq(1);
                             if (window.SPA_COMMON) {
                                 window.SPA_COMMON.callbackWithSPA('chkModfiList', btnMove);
                             }
@@ -477,17 +477,17 @@ if (!UICommon) {
                 }
             },
             selectDragSort: function () {
-                $(document).off('click', '.sel_drag_sort .selection input').on('click', '.sel_drag_sort .selection input', function (e) {
+                $(document).off('click', '.sel-drag-sort .selection input').on('click', '.sel-drag-sort .selection input', function (e) {
                     var _this = $(this);
-                    var _listDrag = $('.new_list_drag')
+                    var _listDrag = $('.new-list-drag')
                     var _st = $(window).scrollTop();
 
-                    if (_this.closest('.selection').hasClass('drag_move')) {
-                        _listDrag.removeClass('type_drag').addClass('drag');
+                    if (_this.closest('.selection').hasClass('drag-move')) {
+                        _listDrag.removeClass('type-drag').addClass('drag');
                         orderList.compareOff();
 
-                    } else if (_this.closest('.selection').hasClass('button_move')) {
-                        _listDrag.removeClass('drag').addClass('type_drag');
+                    } else if (_this.closest('.selection').hasClass('button-move')) {
+                        _listDrag.removeClass('drag').addClass('type-drag');
                         orderList.init('orderSet');
                         $('body,html').animate({ scrollTop: _st }, 0);
                     }
@@ -523,10 +523,10 @@ if (!UICommon) {
                 // accordionButton.slideToggler();
             },
             set: function () {
-                $('.js_accordion').each(function () {
+                $('.js-accordion').each(function () {
                     var $tit = $(this).find('.tit'),
                         $li = $(this).find('> li'),
-                        $btn = $tit.find('.btn_acco');
+                        $btn = $tit.find('.btn-acco');
                     
                     // if (!$tit.find('.arrow').length) // async 개발화면 로드 관련 주석 20220916
                     if (!($tit.find('.arrow').length == $li.length)) $tit.append('<span class="arrow"><span class="hidden">열기</span></span>');
@@ -543,29 +543,29 @@ if (!UICommon) {
                         $li.parents('li').addClass('on').children('a').attr('aria-expanded', true);
                     }
                 });
-                $('.js_toggle').each(function () {
+                $('.js-toggle').each(function () {
                     var $this = $(this);
                     if (!$this.find('.arrow').length) $this.append('<span class="arrow"><span class="hidden">열기</span></span>');
                 });
             },
             accordion: function () {
 
-                if ($('.js_accordion li').hasClass('on')) {
-                    $('.js_accordion li.on').children('.toggle_panel').css('display', 'block');
+                if ($('.js-accordion li').hasClass('on')) {
+                    $('.js-accordion li.on').children('.toggle-panel').css('display', 'block');
                 }
-                var $trigger = '.js_accordion a.tit, .js_accordion button.tit, .js_accordion .btn_acco';
+                var $trigger = '.js-accordion a.tit, .js-accordion button.tit, .js-accordion .btn-acco';
                 $(document).off('click', $trigger).on('click', $trigger, function (e) { //2022-07-20 es
                     e.preventDefault();
                     e.stopPropagation(); // button event stop
                     var _this = $(this),
                         _li = _this.parents('li'),
                         _lipar = _this.parent('li'),
-                        _litree = $('.toggle_panel > ul > li'),
-                        _parent = _li.parent('.js_accordion'),
+                        _litree = $('.toggle-panel > ul > li'),
+                        _parent = _li.parent('.js-accordion'),
                         spd = 300;
 
                     if (_parent.hasClass('live')) {
-                        $(this).next('.toggle_panel').stop().clearQueue().slideToggle(spd, function () {
+                        $(this).next('.toggle-panel').stop().clearQueue().slideToggle(spd, function () {
                             if ($(this).prev('.tit').hasClass('on')) {
                                 $(this).prev('.tit').attr({ 'aria-expanded': 'false' }).removeClass('on');
                                 $(this).parent('li').removeClass('on');
@@ -578,27 +578,27 @@ if (!UICommon) {
                         });
                     } else if (_parent.hasClass('tree')) {
                         if (_lipar.hasClass('on')) {
-                            _this.attr('aria-expanded', 'false').parent('li').removeClass('on').find('.toggle_panel').slideUp(spd);
+                            _this.attr('aria-expanded', 'false').parent('li').removeClass('on').find('.toggle-panel').slideUp(spd);
 
-                            if (_this.parent('li').find('.list_acco li').is('.on')) {
+                            if (_this.parent('li').find('.list-acco li').is('.on')) {
                                 _litree.removeClass('on').children('a').attr('aria-expanded', 'false');
                                 _this.find('.arrow>span.hidden').text('열기');
                             } else {
-                                _this.closest('.js_accordion').find('> li').removeClass('on').children('a').attr('aria-expanded', 'false');
+                                _this.closest('.js-accordion').find('> li').removeClass('on').children('a').attr('aria-expanded', 'false');
                             }
                         } else {
-                            _this.attr('aria-expanded', 'true').parent('li').find('> .toggle_panel').slideDown(spd).parent('li').addClass('on');
+                            _this.attr('aria-expanded', 'true').parent('li').find('> .toggle-panel').slideDown(spd).parent('li').addClass('on');
                             _lipar.siblings('li').removeClass('on').children('a').attr('aria-expanded', 'false');
-                            _lipar.siblings('li').find('> .toggle_panel').slideUp(spd).children('li').removeClass('on');
+                            _lipar.siblings('li').find('> .toggle-panel').slideUp(spd).children('li').removeClass('on');
                             _this.find('.arrow>span.hidden').text('닫기');
                         }
                     } else { // default
                         if (_li.hasClass('on')) {
-                            _this.attr('aria-expanded', 'false').parents('li').removeClass('on').find('.toggle_panel').slideUp(spd);
+                            _this.attr('aria-expanded', 'false').parents('li').removeClass('on').find('.toggle-panel').slideUp(spd);
                             _this.find('.arrow>span.hidden').text('열기');
                         } else {
-                            _this.attr('aria-expanded', 'true').parents('li').find('.toggle_panel').slideDown(spd).parents('li').addClass('on');
-                            if (!_parent.hasClass('toggle')) _li.siblings('li').removeClass('on').find('.btn_acco, .tit').attr('aria-expanded', 'false').next('.toggle_panel').slideUp(spd);
+                            _this.attr('aria-expanded', 'true').parents('li').find('.toggle-panel').slideDown(spd).parents('li').addClass('on');
+                            if (!_parent.hasClass('toggle')) _li.siblings('li').removeClass('on').find('.btn-acco, .tit').attr('aria-expanded', 'false').next('.toggle-panel').slideUp(spd);
                             _this.find('.arrow>span.hidden').text('닫기');
                         }
                     }
@@ -613,10 +613,10 @@ if (!UICommon) {
                 });
             },
             toggle: function () {
-                if ($('.js_toggle').length > 0) {
-                    $('.js_toggle').each(function () {
+                if ($('.js-toggle').length > 0) {
+                    $('.js-toggle').each(function () {
                         var _this = $(this);
-                        var _toggleSmWrap = _this.parents('.toggle_sm_wrap');
+                        var _toggleSmWrap = _this.parents('.toggle-sm-wrap');
                         if (_this.attr('aria-expanded') === 'true') {
                             if (_toggleSmWrap.length) {
                                 _toggleSmWrap.addClass('on');
@@ -630,17 +630,17 @@ if (!UICommon) {
                         }
                     });
                 };
-                $(document).off('click', '.js_toggle').on('click', '.js_toggle', function (e) {
+                $(document).off('click', '.js-toggle').on('click', '.js-toggle', function (e) {
                     e.preventDefault();
                     var _this = $(this),
-                        _toggleSmWrap = _this.parents('.toggle_sm_wrap'),
+                        _toggleSmWrap = _this.parents('.toggle-sm-wrap'),
                         _isToggleSmWrap = false;
 
                     if (_this.hasClass('switch')) { // accordion
                         if (_this.hasClass('on')) {
-                            _this.attr('aria-expanded', 'false').removeClass('on').parent('li').siblings('li').children('.js_toggle').removeClass('on').attr('aria-expanded', 'false');
+                            _this.attr('aria-expanded', 'false').removeClass('on').parent('li').siblings('li').children('.js-toggle').removeClass('on').attr('aria-expanded', 'false');
                         } else {
-                            _this.attr('aria-expanded', 'true').addClass('on').parent('li').siblings('li').children('.js_toggle').removeClass('on').attr('aria-expanded', 'false');
+                            _this.attr('aria-expanded', 'true').addClass('on').parent('li').siblings('li').children('.js-toggle').removeClass('on').attr('aria-expanded', 'false');
                         }
                     } else if (_toggleSmWrap.length) {
                         if (_toggleSmWrap.hasClass('on')) {
@@ -653,7 +653,7 @@ if (!UICommon) {
                             setTimeout(function () {
                                 _this.attr('aria-expanded', 'true');
                                 _toggleSmWrap.addClass('on');
-                                // _toggleSmWrap.find('.toggle_panel').attr('tabindex', '1').focus(); //221011 접근성수정
+                                // -toggleSmWrap.find('.toggle-panel').attr('tabindex', '1').focus(); //221011 접근성수정
                                 setTimeout(function () { _toggleSmWrap.find('.toggle_panel').removeAttr('tabindex') }, 100);
                                 _this.find('.arrow>span.hidden').text('닫기');
                             }, 0);
@@ -675,36 +675,36 @@ if (!UICommon) {
                     } else { // default   
                         var _st = $(window).scrollTop();
                         var _gap = 400;
-                        _this.parents('.js_toggle').toggleClass('on');
+                        _this.parents('.js-toggle').toggleClass('on');
 
                         if (_this.hasClass('on')) {
-                            _this.attr('aria-expanded', 'false').removeClass("on").next('.toggle_panel').slideUp(300);
+                            _this.attr('aria-expanded', 'false').removeClass("on").next('.toggle-panel').slideUp(300);
                             var _st = $(window).scrollTop() - _gap;
                         } else {
                             // 2022-05-13 수정 ::: slideDown시 durationScrollTo 호출
-                            _this.attr('aria-expanded', 'true').addClass("on").next('.toggle_panel').slideDown(300, () => {
-                                if (_this.parents('.inform_btm_wrap').length > 0) {
-                                    durationScrollTo(_this.parents('.inform_btm_wrap')[0].offsetTop - 32, 300)
+                            _this.attr('aria-expanded', 'true').addClass("on").next('.toggle-panel').slideDown(300, () => {
+                                if (_this.parents('.inform-btm-wrap').length > 0) {
+                                    durationScrollTo(_this.parents('.inform-btm-wrap')[0].offsetTop - 32, 300)
                                 }
                             });
                             // [Biz-007] 계좌순서 변경 기능 개선
-                            if (_this.next().children().hasClass('type_drag')) {
-                                orderList.compareOn('type_drag', _this);
+                            if (_this.next().children().hasClass('type-drag')) {
+                                orderList.compareOn('type-drag', _this);
                             }
                         }
                     }
                     if (_isToggleSmWrap) {
-                        (_toggleSmWrap.hasClass('exchange')) ? UICommon.scTop.topMove(_this.closest('.acc_pannel')) : UICommon.scTop.topMove(_toggleSmWrap);
+                        (_toggleSmWrap.hasClass('exchange')) ? UICommon.scTop.topMove(_this.closest('.acc-pannel')) : UICommon.scTop.topMove(_toggleSmWrap);
                     } else {
                         UICommon.scTop.topMove(_this);
                     }
-                    if (_this.closest('.ui_swiper').length) setTimeout(function () { UICommon.uiSwiper.update(_this.closest('.ui_swiper')) }, 100);
-                    if (_this.closest('.tab_swipe').length) setTimeout(function () { UICommon.tabMenu.tabSlider.update() }, 100);
+                    if (_this.closest('.ui-swiper').length) setTimeout(function () { UICommon.uiSwiper.update(_this.closest('.ui-swiper')) }, 100);
+                    if (_this.closest('.tab-swipe').length) setTimeout(function () { UICommon.tabMenu.tabSlider.update() }, 100);
                 });
             },
             // 자금관리 > 다른금융등록관리 : check와 함께 사용시
             toggler: function () {
-                $(document).off('click', '.js_toggler').on('click', '.js_toggler', function (e) {
+                $(document).off('click', '.js-toggler').on('click', '.js-toggler', function (e) {
                     var toggler = $(this),
                         target = $('#' + toggler.attr('aria-controls')),
                         isActive = toggler.attr('aria-expanded') == 'true' ? true : false,
@@ -726,7 +726,7 @@ if (!UICommon) {
                 });
             },
             // slideToggler: function() {
-            //     $(document).off('click', '.js_slide_toggler').on('click', '.js_slide_toggler', function(e){
+            //     $(document).off('click', '.js-slide-toggler').on('click', '.js-slide-toggler', function(e){
             //         var toggler = $(this),
             //             target = $('#' + toggler.attr('aria-controls')),
             //             isActive = toggler.attr('aria-expanded') == 'true' ? true : false,
@@ -755,7 +755,7 @@ if (!UICommon) {
             //             isActive = cTarget.prop('checked'),
             //             isSync = reminder.hasClass('sync'),
             //             isNoSync = reminder.hasClass('nosync'),
-            //             isSlide = tit.hasClass('js_slide_toggler'),
+            //             isSlide = tit.hasClass('js-slide-toggler'),
             //             speed = 400;
 
             //         if (!isNoSync) {
@@ -788,7 +788,7 @@ if (!UICommon) {
             //             panel = reminder.find('.panel'),
             //             isSync = reminder.hasClass('sync'),
             //             isNoSync = reminder.hasClass('nosync'),
-            //             isSlide = tit.hasClass('js_slide_toggler'),
+            //             isSlide = tit.hasClass('js-slide-toggler'),
             //             speed = 400;
 
             //         if (isActive) {
@@ -827,29 +827,29 @@ if (!UICommon) {
                 tabMenu.toggleBtnSet();
             },
             tab: function () {
-                $('.tab_wrap .tab_list a.active').attr('title', '선택됨');
-                $(document).on('click', '.tab_wrap [role=tab]', function (e) {
+                $('.tab-wrap .tab-list a.active').attr('title', '선택됨');
+                $(document).on('click', '.tab-wrap [role=tab]', function (e) {
                     e.preventDefault();
                     var _this = $(this),
-                        _tabWrap = _this.closest('.tab_wrap'),
-                        _thisPannel = _tabWrap.children('.tab_panel');
-                    if (_tabWrap.find('.ly_cnt').length) _thisPannel = _tabWrap.children('.ly_cnt').children('.tab_panel');
-                    if (_tabWrap.find('.tab_scroller').length) _thisPannel = _tabWrap.children('.tab_scroller').children('.tab_panel');
+                        _tabWrap = _this.closest('.tab-wrap'),
+                        _thisPannel = _tabWrap.children('.tab-panel');
+                    if (_tabWrap.find('.ly-cnt').length) _thisPannel = _tabWrap.children('.ly-cnt').children('.tab-panel');
+                    if (_tabWrap.find('.tab-scroller').length) _thisPannel = _tabWrap.children('.tab-scroller').children('.tab-panel');
                     var _thisControls = _thisPannel.filter('#' + _this.attr('aria-controls'));
 
                     _this.attr('aria-selected', 'true').siblings('[role=tab]').attr('aria-selected', 'false');
 
                     if (_thisPannel.length) {
-                        _thisControls.addClass('active').siblings('.tab_panel').removeClass('active');
-                        if (_thisControls.find('.ui_swiper').length) uiSwiper.update(_thisControls.find('.ui_swiper'));
+                        _thisControls.addClass('active').siblings('.tab-panel').removeClass('active');
+                        if (_thisControls.find('.ui-swiper').length) uiSwiper.update(_thisControls.find('.ui-swiper'));
                     };
-                    if (_this.closest('.pop_body').length) {
-                        _this.closest('.pop_body').stop().scrollTop(0);
+                    if (_this.closest('.pop-body').length) {
+                        _this.closest('.pop-body').stop().scrollTop(0);
                     }
                     tabMenu.tabScroll(_this);
                     tabMenu.tabBar();
                 });
-                $(document).on('click', '.tab_list a', function (e) {
+                $(document).on('click', '.tab-list a', function (e) {
                     var _this = $(this);
                     _this.addClass('active').attr('title', '선택됨').siblings('a').removeClass('active').removeAttr('title');
                     tabMenu.tabScroll(_this);
@@ -857,17 +857,17 @@ if (!UICommon) {
             },
             tabMove: function (el) {
                 if (el === undefined) {
-                    $('.tab_list').each(function () {
+                    $('.tab-list').each(function () {
                         $this = $(this);
                         ($this.find('[aria-selected=true]').length) ? el = $this.find('[aria-selected=true]') : el = $this.find('a.active');
-                        var $tabWrap = el.closest('.tab_wrap'),
-                            $lyCnt = $tabWrap.children('.ly_cnt'),
-                            $tabScroller = $tabWrap.children('.tab_scroller'),
-                            $thisPannel = $tabWrap.children('.tab_panel'),
+                        var $tabWrap = el.closest('.tab-wrap'),
+                            $lyCnt = $tabWrap.children('.ly-cnt'),
+                            $tabScroller = $tabWrap.children('.tab-scroller'),
+                            $thisPannel = $tabWrap.children('.tab-panel'),
                             index = el.index();
-                        if ($this.find('.tab_bar').length) index = index - 1;
-                        if ($lyCnt.length) $thisPannel = $lyCnt.children('.tab_panel');
-                        if ($tabScroller.length) $thisPannel = $tabScroller.children('.tab_panel');
+                        if ($this.find('.tab-bar').length) index = index - 1;
+                        if ($lyCnt.length) $thisPannel = $lyCnt.children('.tab-panel');
+                        if ($tabScroller.length) $thisPannel = $tabScroller.children('.tab-panel');
                         $thisPannel.eq(index).addClass('active');
                         tabMenu.tabScroll(el);
                     });
@@ -875,7 +875,7 @@ if (!UICommon) {
                 }
             },
             tabScroll: function (el) {
-                var $parent = el.closest('.tab_wrap').find('.tab_list'),
+                var $parent = el.closest('.tab-wrap').find('.tab-list'),
                     $parentWidth = $parent.outerWidth(),
                     $parentScrollW = $parent.get(0).scrollWidth,
                     sb = Number(el.css('margin-left').replace('px', '')),
@@ -891,16 +891,16 @@ if (!UICommon) {
                 }
             },
             tabBar: function () {
-                $('.tab_wrap').each(function () {
+                $('.tab-wrap').each(function () {
                     var $this = $(this),
-                        $bar = $this.find('.tab_bar');
+                        $bar = $this.find('.tab-bar');
                     if ($bar.length) {
                         var $btn = $this.find('[role=tab]'),
-                            $tabWrap = $this.closest('.tab_wrap'),
+                            $tabWrap = $this.closest('.tab-wrap'),
                             $active = $tabWrap.find('[aria-selected=true]'),
                             $list = $btn.parent();
                         //($tabWrap.hasClass('box')) ? $tabWrap.addClass('bar') : $tabWrap.addClass('line');
-                        $tabWrap.addClass('is_motion');
+                        $tabWrap.addClass('is-motion');
                         setTimeout(function () {
                             var $tabWidth = $active.outerWidth(),
                                 $listLeft = parseInt($list.css('margin-left')),
@@ -918,19 +918,19 @@ if (!UICommon) {
             tabSwipeArray: [], //2202-08-24 추가
             tabSlider: null,
             tabSwipe: function () {
-                if ($('.tab_swipe').length) {
-                    $('.tab_swipe').each(function () {
+                if ($('.tab-swipe').length) {
+                    $('.tab-swipe').each(function () {
                         var $this = $(this),
-                            $btn = $this.closest('.tab_wrap').find('.tab_list').find('button'),
-                            $active = $this.closest('.tab_wrap').find('.tab_list').find('[aria-selected=true]'),
-                            $panel = $this.find('.tab_panel'),
+                            $btn = $this.closest('.tab-wrap').find('.tab-list').find('button'),
+                            $active = $this.closest('.tab-wrap').find('.tab-list').find('[aria-selected=true]'),
+                            $panel = $this.find('.tab-panel'),
                             _tabFix = 0,
                             _headH = ($('#header').length>0) ? $('#header').outerHeight() : 0,
                             isFixed = false;
                         $(window).on('scroll', function () {
-                            if($this.closest('.tab_wrap').find('.tab_list_wrap.fixed').length) {
+                            if($this.closest('.tab-wrap').find('.tab-list-wrap.fixed').length) {
                                 isFixed = true;
-                                _tabFix = $this.closest('.tab_wrap').offset().top - _headH;
+                                _tabFix = $this.closest('.tab-wrap').offset().top - _headH;
                             } else {
                                 isFixed = false;
                                 _tabFix = 0;
@@ -953,7 +953,7 @@ if (!UICommon) {
                                     // [S] main tab 스와이퍼 개발 callback 추가
                                     this.$el.find('.swiper-slide').each(function () {
                                         var _this = $(this);
-                                        if (_this.closest('.m_service_tab').length && _this.is('.swiper-slide-active')) {
+                                        if (_this.closest('.m-service-tab').length && _this.is('.swiper-slide-active')) {
                                             if (window.SPA_COMMON) {
                                                 window.SPA_COMMON.callbackWithSPA('onMainSubSwiperChange', _this);
                                                 window.SPA_COMMON.callbackWithSPA('onMainSub2SwiperChange', _this);
@@ -975,22 +975,22 @@ if (!UICommon) {
                         $btn.on('click', function () {
                             var $this = $(this), 
                                 tabIndex = $this.index(),
-                                tabIndex = ($this.parent('.scroll_wrap').length) ? tabIndex : tabIndex - 1;
+                                tabIndex = ($this.parent('.scroll-wrap').length) ? tabIndex : tabIndex - 1;
                             tabMenu.tabSlider.slideTo(tabIndex);
-                            $panel.eq(tabIndex).attr('aria-hidden', false).siblings('.tab_panel').attr('aria-hidden', true);
+                            $panel.eq(tabIndex).attr('aria-hidden', false).siblings('.tab-panel').attr('aria-hidden', true);
                             if(isFixed) $('html, body').animate({scrollTop:_tabFix}, 300);
                         });
                         tabMenu.tabSlider.on('slideChangeTransitionStart', function () {
 
-                            var tabIndex = $this.find('.tab_panel.swiper-slide.swiper-slide-active').index(),
-                                thisSlide = $this.find('.tab_panel.swiper-slide.swiper-slide-active'),
+                            var tabIndex = $this.find('.tab-panel.swiper-slide.swiper-slide-active').index(),
+                                thisSlide = $this.find('.tab-panel.swiper-slide.swiper-slide-active'),
                                 $tabActive = $btn.eq(tabIndex);
                             $tabActive.attr('aria-selected', 'true').siblings('[role="tab"]').attr('aria-selected', 'false');
-                            $panel.eq(tabIndex).attr('aria-hidden', false).siblings('.tab_panel').attr('aria-hidden', true);
+                            $panel.eq(tabIndex).attr('aria-hidden', false).siblings('.tab-panel').attr('aria-hidden', true);
                             tabMenu.tabScroll($tabActive);
                             tabMenu.tabBar();
                             if(isFixed) $('html, body').animate({scrollTop:_tabFix}, 300);
-                            aniAdd('.m_ani');
+                            aniAdd('.m-ani');
                             if($this.find('.chart').length) UICommon._front.chartClear('.chart .bar.in'); //차트 애니메이션 리셋
                             // console.log(thisSlide);
                             // if (window.SPA_COMMON) {
@@ -1006,7 +1006,7 @@ if (!UICommon) {
                         var aniAdd = function(tar){
                             if($this.find(tar).length) $this.find(tar).removeClass('on').addClass('on');
                         };
-                        aniAdd('.m_ani');
+                        aniAdd('.m-ani');
 
                         //2202-08-24 추가
                         tabMenu.tabSwipeArray.push(tabMenu.tabSlider);
@@ -1019,21 +1019,21 @@ if (!UICommon) {
                 }
             },
             tabRadio: function () {
-                $('.tab_radio').each(function () {
+                $('.tab-radio').each(function () {
                     var $tabRadio = $(this),
                         $rdo = $tabRadio.find('input'),
                         $current = $tabRadio.find('input:checked'),
                         $tar = $tabRadio.attr('data-show'),
-                        $panel = $tabRadio.closest('.tab_wrap').find('.tab_panel');
+                        $panel = $tabRadio.closest('.tab-wrap').find('.tab-panel');
                     $panel.eq($current.parent().index()).addClass('active');
                     $rdo.on('change', function () {
                         var $this = $(this), tabIndex = $this.parent().index();
-                        $panel.eq(tabIndex).addClass('active').siblings('.tab_panel').removeClass('active');
+                        $panel.eq(tabIndex).addClass('active').siblings('.tab-panel').removeClass('active');
                     });
                 });
             },
             toggleBtnSet: function () {
-                $('.toggle_btn_set').each(function () {
+                $('.toggle-btn-set').each(function () {
                     var $toggleBtnSet = $(this),
                         $btn = $toggleBtnSet.find('button'),
                         $btnActive = $toggleBtnSet.find('button.active');
@@ -1042,8 +1042,8 @@ if (!UICommon) {
                         $('#' + $btnActive.attr('aria-controls')).show();
                     }
                 });
-                var $toggleBtn = '.toggle_btn_set button',
-                    $togglePanel = '.toggle_btn_panel';
+                var $toggleBtn = '.toggle-btn-set button',
+                    $togglePanel = '.toggle-btn-panel';
                 $($toggleBtn).off('click').on('click', function (e) {
                     var _this = $(this);
                     if (_this.hasClass('active')) {
@@ -1085,7 +1085,7 @@ if (!UICommon) {
             init: function (status) {
                 status > 0 ? status = status : status = $('.progress.div').attr('data-value');
                 $('.progress.div').attr({ 'aria-live': 'polite', 'aria-label': status + '% 진행중' });
-                $('.progress.div .progress_div').attr('style', 'width:' + status + '%;')
+                $('.progress.div .progress-div').attr('style', 'width:' + status + '%;')
             }
         }
 
@@ -1115,26 +1115,26 @@ if (!UICommon) {
         /* 툴팁 from tooltip.html */
         var tooltipButton = {
             init: function () {
-                $('.js_tooltip').off('click').on('click', function (e) {
+                $('.js-tooltip').off('click').on('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     _this = $(this);
                     var _winW = $('body').width(),
-                        _tooltipWrap = _this.parents('.tooltip_limited').find('.tooltip_wrap'),
+                        _tooltipWrap = _this.parents('.tooltip-limited').find('.tooltip-wrap'),
                         _tooltipWrapL = _this.offset().left - 24,
                         _tooltipWrapR = _winW - (_this.offset().left + 44);
 
                     if (_tooltipWrap.css('display') == 'block') {
                         _tooltipWrap.removeClass('show');
                         setTimeout(function () {
-                            _tooltipWrap.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip_limited').parent().css('z-index', '').parent().css('z-index', '');
+                            _tooltipWrap.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-limited').parent().css('z-index', '').parent().css('z-index', '');
                         }, 300);
                     } else {
-                        $('.tooltip_wrap').hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip_limited').parent().css('z-index', '').parent().css('z-index', '');
+                        $('.tooltip-wrap').hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-limited').parent().css('z-index', '').parent().css('z-index', '');
                         tooltipButton.position(_this, _tooltipWrap);
-                        _this.closest('.tooltip_limited').parent().css('z-index', '101').parent().css('z-index', '101');
+                        _this.closest('.tooltip-limited').parent().css('z-index', '101').parent().css('z-index', '101');
                         _tooltipWrap.show().attr('aria-hidden', 'false');
-                        _tooltipWrap.parents('.acc_pannel').parents('div').hasClass('section_f') ? _tooltipWrap.css({ 'left': -_tooltipWrapL - 8, 'right': -_tooltipWrapR - 8 }) : _tooltipWrap.css({ 'left': -_tooltipWrapL, 'right': -_tooltipWrapR });
+                        _tooltipWrap.parents('.acc-pannel').parents('div').hasClass('section-f') ? _tooltipWrap.css({ 'left': -_tooltipWrapL - 8, 'right': -_tooltipWrapR - 8 }) : _tooltipWrap.css({ 'left': -_tooltipWrapL, 'right': -_tooltipWrapR });
                         setTimeout(function () {
                             _tooltipWrap.addClass('show');
                         }, 100);
@@ -1143,22 +1143,22 @@ if (!UICommon) {
                     var close = function () {
                         _tooltipWrap.removeClass('show');
                         setTimeout(function () {
-                            _tooltipWrap.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip_limited').parent().css('z-index', '').parent().css('z-index', '');
+                            _tooltipWrap.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-limited').parent().css('z-index', '').parent().css('z-index', '');
                         }, 300);
                         setTimeout(function () { _this.focus(); }, 100);
                     };
 
-                    $('.btn_tooltip_x').off('click').on('click', function (e) {
+                    $('.btn-tooltip-x').off('click').on('click', function (e) {
                         e.preventDefault();
                         e.stopPropagation();
                         close();
                     });
 
                     $(document).on('click', function (e) {
-                        if ($(e.target).closest('.tooltip_limited').length === 0) {
+                        if ($(e.target).closest('.tooltip-limited').length === 0) {
                             _tooltipWrap.removeClass('show');
                             setTimeout(function () {
-                                _tooltipWrap.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip_limited').parent().css('z-index', '').parent().css('z-index', '');
+                                _tooltipWrap.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-limited').parent().css('z-index', '').parent().css('z-index', '');
                             }, 300);
                         }
                     });
@@ -1189,13 +1189,13 @@ if (!UICommon) {
 
         var selectItem = {
             init: function () {
-                if ($('.item_area').hasClass('active')) {
-                    $('.item_area.active').find('.item').append('<span class="hidden">선택</span>');
+                if ($('.item-area').hasClass('active')) {
+                    $('.item-area.active').find('.item').append('<span class="hidden">선택</span>');
                 }
-                $(document).on('click', '.js_list_item .item ', function () {
-                    $('.item_area').removeClass('active');
+                $(document).on('click', '.js-list-item .item ', function () {
+                    $('.item-area').removeClass('active');
                     $('.item').find('.hidden').remove();
-                    $(this).closest('.item_area').addClass('active');
+                    $(this).closest('.item-area').addClass('active');
                     $(this).append('<span class="hidden">선택</span>');
                 });
             }
@@ -1207,9 +1207,9 @@ if (!UICommon) {
                 this.staffHopeShowHide();
             },
             staffHopeShowHide: function () {
-                $(document).on('click', '.staff_hope .staff_hope_sel .rdoChk_box .selection input', function (e) {
+                $(document).on('click', '.staff-hope .staff-hope-sel .rdoChk-box .selection input', function (e) {
                     var radioIndex = $(this).parent().index();
-                    $('.staff_hope .staff_hope_cts').each(function (index) {
+                    $('.staff-hope .staff-hope-cts').each(function (index) {
                         $(this).removeClass('on').attr({ 'aria-hidden': 'true' });
                         if (radioIndex === index) {
                             $(this).addClass('on').attr({ 'aria-hidden': 'false' });
@@ -1238,7 +1238,7 @@ if (!UICommon) {
                     });
                     return this;
                 };
-                $(document).on('keyup', '.js_money', function () {
+                $(document).on('keyup', '.js-money', function () {
                     if ($(this).val().length < $(this).attr('maxlength') + 2) {
                         var _this = $(this),
                             _value = _this.val(),
@@ -1259,9 +1259,9 @@ if (!UICommon) {
         //디데이
         var dDay = {
             init: function () {
-                var day = $('.acc_day_info').find('.d-day');
-                var graphW = $('.graph_area').find('.default').outerWidth();
-                var graphA = $('.graph_area').find('.active').outerWidth();
+                var day = $('.acc-day-info').find('.d-day');
+                var graphW = $('.graph-area').find('.default').outerWidth();
+                var graphA = $('.graph-area').find('.active').outerWidth();
 
                 if (graphA < (graphW * 0.1)) {
                     day.css({ 'left': '0', 'transform': 'none' });
@@ -1273,7 +1273,7 @@ if (!UICommon) {
 
         var _front = {
             init: function () {
-                var $dragUse = ($(".list_drag").length > 0) ? true : false;
+                var $dragUse = ($(".list-drag").length > 0) ? true : false;
                 _front.$deviceH = $(window).height();
                 _front.$deviceV = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--sab"));
                 _front.$deviceS = (isNaN(_front.$deviceV)) ? 0 : _front.$deviceV;
@@ -1301,24 +1301,24 @@ if (!UICommon) {
                 $(document).on("click", "a[href='#'], a[href='#none']", function (e) { e.preventDefault(); });
 
                 // Content 여백(cmd 버튼)
-                !$(".btn_confirm_wrap").length > 0 ? $('#content').addClass('type2') : $('#content').removeClass('type2');
+                !$(".btn-confirm-wrap").length > 0 ? $('#content').addClass('type2') : $('#content').removeClass('type2');
 
                 //hr aria-hidden 추가 : 접근성
                 $('hr').attr('aria-hidden', 'true');
             },
             keypadDetect: function () {
-                var $exceptEl = '.m_new_guide';
+                var $exceptEl = '.m-new-guide';
                 if ($('html').hasClass('android') && !$($exceptEl).length) {
                     if (originalPotion !== false) {
-                        var wasWithKeyboard = $('html').hasClass('keypad_open');
+                        var wasWithKeyboard = $('html').hasClass('keypad-open');
                         var nowWithKeyboard = false;
                         if (originalPotion !== $(window).width() + $(window).height()) nowWithKeyboard = true;
-                        $('html').toggleClass('keypad_open', nowWithKeyboard);
+                        $('html').toggleClass('keypad-open', nowWithKeyboard);
                     }
                 }
             },
             scroll: function () {
-                var _isStep = ($targetPage().find(".js_step").length > 0) ? true : false;
+                var _isStep = ($targetPage().find(".js-step").length > 0) ? true : false;
                 if (_isStep) {
                     _front.step();
                 } else {
@@ -1326,7 +1326,7 @@ if (!UICommon) {
                 }
             },
             step: function () {
-                var _step = $targetPage().find(".js_step");
+                var _step = $targetPage().find(".js-step");
                 var _stepH = parseInt(_step.outerHeight());
                 var _hdH = $targetPage().find("#header").outerHeight() == undefined ? 0 : parseInt($targetPage().find("#header").outerHeight());
                 var _aniVal = _stepH + _hdH + 20;
@@ -1334,19 +1334,19 @@ if (!UICommon) {
 
                 $(window).on('scroll', function () {
                     var _st = $(this).scrollTop();
-                    if (_st > _aniVal) {
-                        if (!$('.js_step').hasClass('on')) _step.clone().prependTo('#content').addClass("on");
+                    if (_st > -aniVal) {
+                        if (!$('.js-step').hasClass('on')) _step.clone().prependTo('#content').addClass("on");
                     } else {
-                        $('.js_step.on').remove();
+                        $('.js-step.on').remove();
                     }
 
                     /* (_st > _aniVal) ? _step.addClass("on") : _step.removeClass("on"); */
                 });
             },
             drag: function () {
-                $(".js_drag_set .ico_set").on("click", function () {
-                    var _this = $(this).closest(".js_drag_set").addClass("on");
-                    $('.sel_drag_sort .drag_move input[type=radio]').prop('checked', true);
+                $(".js-drag-set .ico-set").on("click", function () {
+                    var _this = $(this).closest(".js-drag-set").addClass("on");
+                    $('.sel-drag-sort .drag-move input[type=radio]').prop('checked', true);
                     orderList.compareOff('re');
                 });
             },
@@ -1364,14 +1364,14 @@ if (!UICommon) {
             },
             //switch radio //main
             rdoFunc : function() {
-                $('.rdo_swipe input').each(function () {
+                $('.rdo-swipe input').each(function () {
                     var $this = $(this),
-                        $rdoSwipe = $this.closest('.rdo_swipe'),
+                        $rdoSwipe = $this.closest('.rdo-swipe'),
                         rdoNum = $this.closest('ul').find('li').length;
                     function cssSet() {
                         if ($this.prop('checked')) {
                             $this.closest('li').addClass('active').siblings('li').removeClass('active');
-                            var $bar = $this.closest('.rdo_swipe').find('.bar'),
+                            var $bar = $this.closest('.rdo-swipe').find('.bar'),
                                 _w = $this.closest('ul').width(),
                                 _x = $this.closest('li').position().left;
                             $bar.css({ 'width': _w / rdoNum, 'left': _x, 'opacity': 1, 'transform': 'scale(1)' });
@@ -1382,20 +1382,20 @@ if (!UICommon) {
             },
             btnClearSet: function (tar) { //input clear button set
                 var _this = tar;
-                var _parent = _this.parent(".form_ele");
+                var _parent = _this.parent(".form-ele");
                 var _langRem = 10;
-                if (!_this.parents('.form_group').is('.between') && !_this.parents('.form_row').is('.col') && !_parent.is('.outline') && _this.is(':not([type=tel], [type=hidden])') && !_this.is('[readonly], [disabled]') && !_this.parents('.unit').is('.decimal') && !_parent.is('.date')) {
+                if (!_this.parents('.form-group').is('.between') && !_this.parents('.form-row').is('.col') && !_parent.is('.outline') && _this.is(':not([type=tel], [type=hidden])') && !_this.is('[readonly], [disabled]') && !_this.parents('.unit').is('.decimal') && !_parent.is('.date')) {
                     var _inpBtn = _parent.find('.btn.point.round');
                     var _inpBtnW = Math.round(_inpBtn.outerWidth()) / _langRem;
 
-                    _parent.find('.btn_clear').remove();
-                    _this.css('padding-right', 3.6 + 'rem').siblings(".btn_clear").css('right', 0.6 + 'rem');
-                    _parent.append('<button type="button" class="btn_clear" aria-label="입력내용 초기화"></button>');
+                    _parent.find('.btn-clear').remove();
+                    _this.css('padding-right', 3.6 + 'rem').siblings(".btn-clear").css('right', 0.6 + 'rem');
+                    _parent.append('<button type="button" class="btn-clear" aria-label="입력내용 초기화"></button>');
 
-                    _this.val() == '' ? _parent.find('.btn_clear').hide() : _parent.find('.btn_clear').show();
+                    _this.val() == '' ? _parent.find('.btn-clear').hide() : _parent.find('.btn-clear').show();
 
                     if (_this.is('[type=password]')) _this.css('padding-right', 3.6 + 'rem');
-                    if (_this.siblings('.btn_sch')) _this.css('padding-right', (Math.round(_this.siblings('.btn_sch').outerWidth()) / _langRem) + 3.6 + 'rem').siblings('.btn_clear').css('right', _this.siblings('.btn_sch').outerWidth() / _langRem + 'rem');
+                    if (_this.siblings('.btn-sch')) _this.css('padding-right', (Math.round(_this.siblings('.btn-sch').outerWidth()) / _langRem) + 3.6 + 'rem').siblings('.btn-clear').css('right', _this.siblings('.btn-sch').outerWidth() / _langRem + 'rem');
                 };
             },
             form: function () {
@@ -1406,10 +1406,10 @@ if (!UICommon) {
                 $(".textarea").each(function () {
                     var _this = $(this);
                     var _textarea = _this.find("textarea");
-                    var _numInfo = _this.find(".num_info");
+                    var _numInfo = _this.find(".num-info");
                     var _numInfoLen = _numInfo.length;
 
-                    if (_this.hasClass('auto_height')) {
+                    if (_this.hasClass('auto-height')) {
                         _textarea.on('focusin', function () {
                             _this.closest('.textarea').addClass('focus');
                         }).on('blur', function () {
@@ -1417,11 +1417,11 @@ if (!UICommon) {
                         });
                     }
 
-                    if (_numInfoLen > 0) { _this.addClass("textarea_count") }
+                    if (_numInfoLen > 0) { _this.addClass("textarea-count") }
                     if (_textarea.is('[readonly]')) {
-                        _this.closest('.textarea').addClass("textarea_readonly");
+                        _this.closest('.textarea').addClass("textarea-readonly");
                     } else if (_textarea.is('[disabled]')) {
-                        _this.closest('.textarea').addClass("textarea_disabled");
+                        _this.closest('.textarea').addClass("textarea-disabled");
                     }
 
                     if (_textarea) {
@@ -1434,26 +1434,26 @@ if (!UICommon) {
                 });
 
                 //input init
-                $(".form_ele input").each(function (e) {
+                $(".form-ele input").each(function (e) {
                     var _this = $(this);
-                    var _parent = _this.parent(".form_ele");
+                    var _parent = _this.parent(".form-ele");
                     var _valueL = _this.val().length;
                     //UICommon._front.btnClearSet(_this); //input clear 추가
                     //_this.val().length > 0 ? _this.addClass('finished') :  _this.removeClass('finished');
                     if (!_this.is('[readonly]') && !_this.is('[disabled]')) {
                         _this.on('focusin', function () {
-                            _this.parent(".form_ele").addClass('focus');
-                            if (_this.closest('.form_date_term')) _this.closest('.form_date_term').addClass('focus');
+                            _this.parent(".form-ele").addClass('focus');
+                            if (_this.closest('.form-date-term')) _this.closest('.form-date-term').addClass('focus');
                         }).on('blur', function () {
-                            _this.parent(".form_ele").removeClass('focus');
-                            if (_this.closest('.form_date_term')) _this.closest('.form_date_term').removeClass('focus');
+                            _this.parent(".form-ele").removeClass('focus');
+                            if (_this.closest('.form-date-term')) _this.closest('.form-date-term').removeClass('focus');
                         });
                     } else {
-                        _this.next('.btn_clear').remove();
+                        _this.next('.btn-clear').remove();
                     }
 
                     // 단위 추가
-                    if (_this.data('unit') && _this.is(':not(.js_money)') && _this.is(':not([type=hidden])')) {
+                    if (_this.data('unit') && _this.is(':not(.js-money)') && _this.is(':not([type=hidden])')) {
                         var _dataUnit = _this.data('unit');
 
                         _this.siblings('.unit').remove();
@@ -1481,29 +1481,29 @@ if (!UICommon) {
                         if (_valueL) _this.siblings('.unit').addClass('on');
                     }
 
-                    if (_this.closest('.form_ele').hasClass('js_global_unit')) {
-                        if (_valueL) _this.closest('.form_ele').addClass('active').find('span.txt_unit').addClass('on');
+                    if (_this.closest('.form-ele').hasClass('js-global-unit')) {
+                        if (_valueL) _this.closest('.form-ele').addClass('active').find('span.txt-unit').addClass('on');
                     }
 
-                    _doc.off("keyup", ".form_ele input").on("keyup", ".form_ele input", function () {
+                    _doc.off("keyup", ".form-ele input").on("keyup", ".form-ele input", function () {
                         var _this = $(this);
-                        var _parent = _this.parent(".form_ele");
+                        var _parent = _this.parent(".form-ele");
                         var _valueL = _this.val().length;
-                        var _btn = _this.siblings(".btn_clear");
+                        var _btn = _this.siblings(".btn-clear");
 
                         //_this.val().length > 0 ? _this.addClass('finished') :  _this.removeClass('finished');
 
                         _this.next('.unit').addClass('on');
                         if (!_valueL) _this.next('.unit').removeClass('on');
 
-                        if (_this.closest('.form_ele').hasClass('js_global_unit')) {
-                            _this.closest('.form_ele').addClass('active').find('span.txt_unit').addClass('on');
-                            if (!_valueL) _this.closest('.form_ele').removeClass('active').find('span.txt_unit').removeClass('on');
+                        if (_this.closest('.form-ele').hasClass('js-global-unit')) {
+                            _this.closest('.form-ele').addClass('active').find('span.txt-unit').addClass('on');
+                            if (!_valueL) _this.closest('.form-ele').removeClass('active').find('span.txt-unit').removeClass('on');
                         }
 
                         _btn.toggle(Boolean(_this.val()));
-                        if (_parent.is('.int_pencil')) {
-                            _parent.find('.btn_pencil').hide().siblings(".btn_clear").css('right', 0.6 + 'rem');
+                        if (_parent.is('.int-pencil')) {
+                            _parent.find('.btn-pencil').hide().siblings(".btn-clear").css('right', 0.6 + 'rem');
                         }
 
                         UICommon._front.btnClearSet(_this); //input clear 추가
@@ -1514,25 +1514,25 @@ if (!UICommon) {
                             var _inpBtnW = Math.round(_inpBtn.outerWidth()) / _langRem;
 
                             if (!_this.is('[type=tel]')) {
-                                _this.css('padding-right', _inpBtnW + 3.6 + 'rem').siblings(".btn_clear").css('right', _inpBtnW + 0.6 + 'rem');
+                                _this.css('padding-right', _inpBtnW + 3.6 + 'rem').siblings(".btn-clear").css('right', _inpBtnW + 0.6 + 'rem');
                             } else {
                                 _this.css('padding-right', _inpBtnW + 0.6 + 'rem');
                             }
                         };
                     }).off("focusout").on("focusout", function () {
                         var _this = $(this);
-                        var _parent = _this.parent(".form_ele");
+                        var _parent = _this.parent(".form-ele");
                         var _valueL = _this.val().length;
                         if (!_valueL) _parent.find('.unit').removeClass('on');
 
-                    }).off('click', '.form_ele .btn_clear').on("click", ".form_ele .btn_clear", function () {
+                    }).off('click', '.form-ele .btn-clear').on("click", ".form-ele .btn-clear", function () {
                         var _this = $(this);
-                        var _parent = _this.parent(".form_ele");
+                        var _parent = _this.parent(".form-ele");
 
                         _this.removeAttr('style').hide().siblings('input').val('').focus();
                         _parent.find('.unit').removeClass('on');
 
-                        if (_parent.is('.int_pencil')) _parent.find('.btn_clear').hide().siblings(".btn_pencil").show();
+                        if (_parent.is('.int-pencil')) _parent.find('.btn-clear').hide().siblings(".btn-pencil").show();
                         if (_parent.find('.btn.point.round').length && !_this.is('[type=tel]')) {
                             var _inpBtn = _parent.find('.btn.point.round');
                             var _inpBtnW = Math.round(_inpBtn.outerWidth()) / 10;
@@ -1561,12 +1561,12 @@ if (!UICommon) {
                     
                     $rdo.on('change', function () {
                         var $this = $(this),
-                            $panel = $this.parent('.selection').parent().siblings('.rdo_panel');
-                        if ($this.closest('.rdoChk_group').length) $panel = $this.parent('.selection').siblings('.rdo_panel');
+                            $panel = $this.parent('.selection').parent().siblings('.rdo-panel');
+                        if ($this.closest('.rdoChk-group').length) $panel = $this.parent('.selection').siblings('.rdo-panel');
                         $panel.hide();
                         if ($this.parent('.selection').find('[aria-controls]')) {
-                            var $rdo = $this.closest('.form_row').find('[aria-controls]');
-                            if ($this.closest('.rdoChk_group').length) $rdo = $this.closest('.rdoChk_group').find('[aria-controls]');
+                            var $rdo = $this.closest('.form-row').find('[aria-controls]');
+                            if ($this.closest('.rdoChk-group').length) $rdo = $this.closest('.rdoChk-group').find('[aria-controls]');
                             $rdo.attr('aria-expanded', false);
                         }
                         if ($this.prop('checked') && $this.attr('aria-controls')) {
@@ -1614,7 +1614,7 @@ if (!UICommon) {
 
                     if($chk.attr('type') == 'checkbox') $chk.next('label').attr('role', 'checkbox');
                     if($chk.attr('type') == 'radio') {
-                        $chk.next('label').attr('role', 'radio').parents('.rdoChk_group, .rdoChk_box, ul, .rdoChk_box_hor, .rdoChk_box_hor_gap').attr('role', 'radiogroup');
+                        $chk.next('label').attr('role', 'radio').parents('.rdoChk-group, .rdoChk-box, ul, .rdoChk-box-hor, .rdoChk-box-hor-gap').attr('role', 'radiogroup');
                     }
                     $chk.prop('checked') ? $label.attr('aria-checked', true) : $label.attr('aria-checked', false);
 
@@ -1666,9 +1666,9 @@ if (!UICommon) {
                             if ($selId == undefined) $selId = 'none';
                             if ($title == undefined) $title = '선택';
                             const $btnTitle = '팝업으로 ' + $title;
-                            const $btnHtml = '<a href="#' + $selId + '" class="btn_select ui_select_open" title="' + $btnTitle + '" role="button"><span class="btn_select_val"></span></a>';
+                            const $btnHtml = '<a href="#' + $selId + '" class="btn-select ui-select-open" title="' + $btnTitle + '" role="button"><span class="btn-select-val"></span></a>';
 
-                            if (!$sel.siblings('.btn_select').length) {
+                            if (!$sel.siblings('.btn-select').length) {
                                 $sel.hide().after($btnHtml);
                                 const $forLbl = $('label[for="' + $selId + '"]');
                                 if ($forLbl.length) {
@@ -1679,11 +1679,11 @@ if (!UICommon) {
                                     const $val = $(this).val();
                                     let $selectTxt = $(this).find(':selected').text();
                                     if ($selectTxt == '') $selectTxt = '선택';
-                                    $(this).siblings('.btn_select').find('.btn_select_val').html($selectTxt);
+                                    $(this).siblings('.btn-select').find('.btn-select-val').html($selectTxt);
                                     if ($val == '') {
-                                        $(this).siblings('.btn_select').addClass('off');
+                                        $(this).siblings('.btn-select').addClass('off');
                                     } else {
-                                        $(this).siblings('.btn_select').removeClass('off');
+                                        $(this).siblings('.btn-select').removeClass('off');
                                     }
                                 });
                                 $sel.change();
@@ -1706,10 +1706,10 @@ if (!UICommon) {
                 });
 
                 //select
-                _doc.on("click touchstart mousedown", ".select_btn .btn_txt", function () {
-                    $(this).closest(".select_btn").addClass("active");
-                }).on("touchend mouseup", ".select_btn .btn_txt", function () {
-                    $(this).closest(".select_btn").removeClass("active");
+                _doc.on("click touchstart mousedown", ".select-btn .btn-txt", function () {
+                    $(this).closest(".select-btn").addClass("active");
+                }).on("touchend mouseup", ".select-btn .btn-txt", function () {
+                    $(this).closest(".select-btn").removeClass("active");
                 });
 
                 //switch
@@ -1722,13 +1722,13 @@ if (!UICommon) {
 
                 // main switch
 
-                $(document).on('change', '.rdo_swipe input[type=radio]', function (e) {
+                $(document).on('change', '.rdo-swipe input[type=radio]', function (e) {
                     var $this = $(this),
                         rdoNum = $this.closest('ul').find('li').length,
-                        $bar = $this.closest('.rdo_swipe').find('.bar');
+                        $bar = $this.closest('.rdo-swipe').find('.bar');
                     $bar.removeClass('off');
                     $this.closest('li').addClass('active').siblings('li').removeClass('active');
-                    if ($this.closest('.product_item').length) $this.closest('.product_item').find('>.checkbox>input').prop('checked', true);
+                    if ($this.closest('.product-item').length) $this.closest('.product-item').find('>.checkbox>input').prop('checked', true);
                     var _w = $this.closest('ul').width(),
                         _x = $this.closest('li').position().left;
                     $bar.css({ 'width': _w / rdoNum, 'left': _x, 'opacity': 1, 'transform': 'scale(1)' });
@@ -1736,14 +1736,14 @@ if (!UICommon) {
 
             },
             slider: function () {
-                if ($('.slider_select').length) {
-                    $('.slider_select').each(function () {
+                if ($('.slider-select').length) {
+                    $('.slider-select').each(function () {
                         var $slider = $(this).find('.slider'),
                             $list = $(this).find('.list'),
                             $inp = $(this).find('input[type=hidden]'),
                             $unit = $list.data('unit'),
                             $title = $list.attr('title'),
-                            //$sel = $(this).find('.i_val'),
+                            //$sel = $(this).find('.i-val'),
                             $min = parseInt($slider.data('min')),
                             $max = parseInt($slider.data('max')),
                             $val = parseInt($slider.data('value')),
@@ -1819,9 +1819,9 @@ if (!UICommon) {
             result: function () {
                 $('.result').each(function () {
                     $result = $(this);
-                    if ($result.find('.result_ico').length) return false;
+                    if ($result.find('.result-ico').length) return false;
                     if ($result.hasClass('success')) {
-                        var $icon = '<div class="result_ico">';
+                        var $icon = '<div class="result-ico">';
                         $icon += '<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">';
                         $icon += '<circle class="circle" cx="32.5" cy="32.5" r="32" fill="#F3F7FF"/>';
                         $icon += '<path fill-rule="evenodd" clip-rule="evenodd" d="M35.0014 34.1378C34.9945 34.3398 34.8287 34.5 34.6266 34.5H30.3734C30.1713 34.5 30.0055 34.3398 29.9986 34.1378L29.5132 19.8878C29.506 19.6758 29.6759 19.5 29.888 19.5H35.112C35.3241 19.5 35.494 19.6758 35.4868 19.8878L35.0014 34.1378ZM35.5 41.4916C35.5 43.1797 34.1544 44.5 32.5079 44.5C30.8456 44.5 29.5 43.1797 29.5 41.4916C29.5 39.8203 30.8456 38.5 32.5079 38.5C34.1544 38.5 35.5 39.8203 35.5 41.4916Z" fill="#0026D2"/>';
@@ -1829,16 +1829,16 @@ if (!UICommon) {
                         $icon += '</div>';
                         $result.prepend($icon);
                     } else if ($result.hasClass('fail')) {
-                        var $icon = '<div class="result_ico">';
+                        var $icon = '<div class="result-ico">';
                         $icon += '<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">';
                         $icon += '<circle class="circle" cx="30" cy="30" r="28" stroke-dasharray="180" stroke-dashoffset="180"/>';
-                        $icon += '<circle class="ex_mark2" cx="30" cy="41" r="3"/>';
-                        $icon += '<path class="ex_mark1" d="M30.3,17V33"/>';
+                        $icon += '<circle class="ex-mark2" cx="30" cy="41" r="3"/>';
+                        $icon += '<path class="ex-mark1" d="M30.3,17V33"/>';
                         $icon += '</svg>';
                         $icon += '</div>';
                         $result.prepend($icon);
                     } else if ($result.hasClass('info')) {
-                        var $icon = '<div class="result_ico">';
+                        var $icon = '<div class="result-ico">';
                         $icon += '<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">';
                         $icon += '<circle class="circle" cx="30" cy="30" r="28" stroke-dasharray="180" stroke-dashoffset="180"/>';
                         $icon += '<circle class="guide1" cx="30" cy="20" r="3"/>';
@@ -1853,12 +1853,12 @@ if (!UICommon) {
                 $(target).each(function () {
                     var $target = $(this);
                     $target.data('first', true);
-                    if($target.closest('.tab_swipe').length>0) isSwipe = false;
+                    if($target.closest('.tab-swipe').length>0) isSwipe = false;
                     $(window).scroll(function () {
                         if($target.closest('.swiper-slide-active').length) isSwipe = true;
                         if (UICommon.isScreenIn($target) && $target.data('first') == true && isSwipe) {
                             $target.data('first', false);
-                            if ($target.hasClass('chart_pie')) {
+                            if ($target.hasClass('chart-pie')) {
                                 var per = $target.find('.progress').attr('data-chart-per');
                                 var val = parseInt(per) / 2;
                                 var $circle = $target.find('.bar');
@@ -1933,14 +1933,14 @@ if (!UICommon) {
                 }
             },
             accAccoTipPos: function () {
-                var $accAccoTip = $('.acc_acco_list .toggle_panel').children('.tooltip_limited');
+                var $accAccoTip = $('.acc-acco-list .toggle-panel').children('.tooltip-limited');
                 if($accAccoTip.length) {
                     setTimeout(function () {
-                        $('.acc_acco_list').each(function () {
+                        $('.acc-acco-list').each(function () {
                             var $this = $(this);
-                            var $tip = $this.find('.toggle_panel').children('.tooltip_limited');
+                            var $tip = $this.find('.toggle-panel').children('.tooltip-limited');
                             if($tip.length) {
-                                var _cw = $this.find('.tit_area .cate').outerWidth();
+                                var _cw = $this.find('.tit-area .cate').outerWidth();
                                 $tip.css('left', Math.floor(_cw)+26);
                             }
                         });
@@ -2035,7 +2035,7 @@ if (!UICommon) {
                             $($pop).data('returnFocus', $currentTarget);
                             if (!!callback) callback();
                         });
-                        if ($('.m_app_bar_wrap').length) $('.m_app_bar_wrap').hide();
+                        if ($('.m-app-bar-wrap').length) $('.m-app-bar-wrap').hide();
                         $(this).dequeue();
                     });
                 };
@@ -2046,7 +2046,7 @@ if (!UICommon) {
                 const $btn = $pop.data('returnFocus');
                 const $wrap = $('#wrap').length ? $('#wrap') : $('body');
                 $pop.addClass('morphing-close');
-                if ($('.m_app_bar_wrap').length) $('.m_app_bar_wrap').show();
+                if ($('.m-app-bar-wrap').length) $('.m-app-bar-wrap').show();
                 const $popClose = function () {
                     const $popId = $pop.attr('id');
                     const $bgEl = '.morphing-bg[data-pop="#' + $popId + '"]';
@@ -2098,54 +2098,54 @@ if (!UICommon) {
                 uiMain.btnTop();
                 uiMain.trigger();
                 uiMain.nowListPos();
-                UICommon._front.fixed('.m_service_tab .tab_wrap .tab_list_wrap');
+                UICommon._front.fixed('.m-service-tab .tab-wrap .tab-list-wrap');
                 UICommon.accordionButton.toggle();
-                if($('.tab_swipe.swiper-initialized').length) UICommon.tabMenu.tabSlider.update();
+                if($('.tab-swipe.swiper-initialized').length) UICommon.tabMenu.tabSlider.update();
                 
             },
             btnTop: function () {
-                if(!$('.m_btn_top').length) $('#content').append('<button type="button" class="m_btn_top"><span class="hidden">화면최상단으로 이동</span></button>');
-                var $appBar = $('.m_app_bar'),
-                    $btnTop = $('.m_btn_top');
+                if(!$('.m-btn-top').length) $('#content').append('<button type="button" class="m-btn-top"><span class="hidden">화면최상단으로 이동</span></button>');
+                var $appBar = $('.m-app-bar'),
+                    $btnTop = $('.m-btn-top');
                 ($appBar.length) ? $btnTop.css('bottom', $appBar.outerHeight()+20) : $btnTop.css('bottom', 20);
                 $(window).on('scroll', function () {
                     var $scrollTop = $(this).scrollTop();
                     ($scrollTop > 100) ? $btnTop.addClass('show') : $btnTop.removeClass('show');
                 });
                 $(window).scroll();
-                $(document).on('click', '.m_btn_top', function (e) {
+                $(document).on('click', '.m-btn-top', function (e) {
                     e.preventDefault();
                     $('html,body').animate({ 'scrollTop': 0 }, 300);
                 });
             },
             appBar: function () {
                 setTimeout(function () {
-                    $('.m_app_bar_wrap').addClass('show');
+                    $('.m-app-bar-wrap').addClass('show');
                 }, 1000);
             },
             nowListPos: function () {
-                var $mNowList = $('.m_now_list');
+                var $mNowList = $('.m-now-list');
                 if(!$mNowList.length) return false;
-                var _areaH = $('.m_head_util').outerHeight() + 216;
+                var _areaH = $('.m-head-util').outerHeight() + 216;
                 var _top = $mNowList.offset().top;
-                (_areaH > _top) ? $('.m_now_list').addClass('reverse') : $('.m_now_list').removeClass('reverse');
+                (_areaH > _top) ? $('.m-now-list').addClass('reverse') : $('.m-now-list').removeClass('reverse');
             },
             numCopy: function () {
-                if($('.acc_num_copy').length) {
+                if($('.acc-num-copy').length) {
                     setTimeout(function () {
-                        $('.main_account').each(function () {
+                        $('.main-account').each(function () {
                             const $this = $(this);
-                            const $copy = $this.find('.acc_num_copy');
+                            const $copy = $this.find('.acc-num-copy');
                             $copy.removeAttr('style');
-                            const _nW = $this.find('.acc_num').outerWidth();
+                            const _nW = $this.find('.acc-num').outerWidth();
                             const _mgl = 7;
                             $this.removeClass('set').addClass('set');
                             $copy.css('left', Math.floor(_nW));
-                            if($this.find('.btn_balance_hide').length) {
-                                const $hide = $this.find('.btn_balance_hide');
-                                let $num = $this.find('.main_account_amount .num');
+                            if($this.find('.btn-balance-hide').length) {
+                                const $hide = $this.find('.btn-balance-hide');
+                                let $num = $this.find('.main-account-amount .num');
                                 if(!$num.is(':visible')) {
-                                    $num = $this.find('.g_txt');
+                                    $num = $this.find('.g-txt');
                                     $hide.addClass('gt');
                                 } else {
                                     $hide.removeClass('gt');
@@ -2154,29 +2154,29 @@ if (!UICommon) {
                                 const _bW = ($num.outerWidth()/2) - ($hide.outerWidth()/2) + _mgl;
                                 $hide.css({'top': Math.floor(_bT), 'margin-left': Math.floor(_bW)});
                             } else {
-                                $this.addClass('no_hide');
+                                $this.addClass('no-hide');
                             }
                         });
                     }, 100);
                 }
             },
             trigger: function () {
-                ($('.main_account_alert_set input').prop('checked')) ? $('.main_account_alert_set label').attr('aria-checked', true) : $('.main_account_alert_set label').attr('aria-checked', false);
-                $(document).on('focusin','.main_account_alert_set input',function(){
-                    $(this).closest('.main_account_alert_set').addClass('focus');
-                }).on('blur','.main_account_alert_set input',function(){
-                    $(this).closest('.main_account_alert_set').removeClass('focus');
+                ($('.main-account-alert-set input').prop('checked')) ? $('.main-account-alert-set label').attr('aria-checked', true) : $('.main-account-alert-set label').attr('aria-checked', false);
+                $(document).on('focusin','.main-account-alert-set input',function(){
+                    $(this).closest('.main-account-alert-set').addClass('focus');
+                }).on('blur','.main-account-alert-set input',function(){
+                    $(this).closest('.main-account-alert-set').removeClass('focus');
                 });
-                $(document).on('change','.main_account_alert_set input',function(){
+                $(document).on('change','.main-account-alert-set input',function(){
                     var $this = $(this),
-                        $txt = $this.closest('.main_account_alert_set').find('.hidden'),
-                        txt = $this.closest('.main_account_alert_set').find('.hidden').text();
+                        $txt = $this.closest('.main-account-alert-set').find('.hidden'),
+                        txt = $this.closest('.main-account-alert-set').find('.hidden').text();
                     if($this.prop('checked')){
                         $txt.text('알림끄기');
-                        $this.closest('.main_account_alert_set').find('label').attr('aria-checked', true);
+                        $this.closest('.main-account-alert-set').find('label').attr('aria-checked', true);
                     } else {
                         $txt.text('알림켜기');
-                        $this.closest('.main_account_alert_set').find('label').attr('aria-checked', false);
+                        $this.closest('.main-account-alert-set').find('label').attr('aria-checked', false);
                     }
                 });
             }
@@ -2185,15 +2185,15 @@ if (!UICommon) {
         /* 하단스크롤  */
         var anckorScroll = {
             init: function () {
-                $(document).on('click', '.btn_anckor', function (e) {
+                $(document).on('click', '.btn-anckor', function (e) {
                     var $html = $('html, body'),
                         $this = $(this);
                     $index = $this.index();
                     $thisID = $($this.attr('href'));
-                    $anckorFix = parseInt($('.anckor_fix').outerHeight()) + 48;
+                    $anckorFix = parseInt($('.anckor-fix').outerHeight()) + 48;
                     $offsetTop = $thisID.offset().top - $anckorFix;
 
-                    $('.btn_anckor').removeClass('active');
+                    $('.btn-anckor').removeClass('active');
                     $this.addClass('active');
 
                     if ($index > 0) {
@@ -2215,11 +2215,11 @@ if (!UICommon) {
                 scTop.btnSctop();
             },
             btnSctop: function () {
-                $(document).on('click', '.btn_sctop', function (e) {
+                $(document).on('click', '.btn-sctop', function (e) {
                     var $html = $('html, body');
                     $this = $(this);
                     $offsetTop = $this.offset().top - 70;
-                    if (!$('.sctop_fix').hasClass('on')) {
+                    if (!$('.sctop-fix').hasClass('on')) {
                         $html.animate({ scrollTop: $offsetTop }, 400);
                     }
                     e.preventDefault();
@@ -2227,15 +2227,15 @@ if (!UICommon) {
             },
             topMove: function (e) {
                 var $tar = $(e),
-                    $pBody = $tar.closest('.pop_body'),
-                    $header = $tar.closest('#wrap').find('.m_head_util'),
-                    $tabFixed = $tar.closest('#wrap').find('.tab_list_wrap.fixed'),
+                    $pBody = $tar.closest('.pop-body'),
+                    $header = $tar.closest('#wrap').find('.m-head-util'),
+                    $tabFixed = $tar.closest('#wrap').find('.tab-list-wrap.fixed'),
                     _hH = $header.length > 0 ? $header.outerHeight() + 10 : 10,
                     _tH = $tabFixed.length > 0 ? $tabFixed.outerHeight() : 10,
-                    $notMoveEl = '.main_account';
+                    $notMoveEl = '.main-account';
                 $html = $('html, body');
 
-                if ($tar.is('.tit') && $tar.parents().is('.js_accordion') || $tar.parents().is($notMoveEl)) {
+                if ($tar.is('.tit') && $tar.parents().is('.js-accordion') || $tar.parents().is($notMoveEl)) {
                     return false;
                 } else {
                     ($pBody.length) ? $pBody.animate({ 'scrollTop': $tar.position().top }, 400) : $html.animate({ 'scrollTop': $tar.offset().top - (_hH+_tH) }, 400);
@@ -2250,26 +2250,26 @@ if (!UICommon) {
             id: 'uiLayer',
             popClass: 'popup',
             pageClass: 'page',
-            wrapClass: 'pop_wrap',
-            sclWrapClass: 'pop_scl_wrap',
-            headClass: 'pop_head',
-            bodyClass: 'pop_body',
-            contClass: 'pop_section',
-            tabClass: 'tab_scroller',
-            footClass: 'pop_foot',
-            closeClass: 'pop_close',
+            wrapClass: 'pop-wrap',
+            sclWrapClass: 'pop-scl-wrap',
+            headClass: 'pop-head',
+            bodyClass: 'pop-body',
+            contClass: 'pop-section',
+            tabClass: 'tab-scroller',
+            footClass: 'pop-foot',
+            closeClass: 'pop-close',
             innerClass: 'section',
             showClass: 'show',
-            loadClass: 'load_show',
+            loadClass: 'load-show',
             etcCont: '#header,#gnb,#container,#footer',
-            focusedClass: 'pop__focused',
-            focusInClass: 'ui_focus_in',
-            removePopClass: 'ui_pop_remove',
-            closeRemoveClass: 'ui_pop_close_remove',
-            alertClass: 'ui_pop_alert',
-            lastPopClass: 'ui_pop_last',
-            bgNoCloseClass: 'bg_no_click',
-            noDimmedClass: 'no_dimmed',
+            focusedClass: 'pop--focused',
+            focusInClass: 'ui-focus-in',
+            removePopClass: 'ui-pop-remove',
+            closeRemoveClass: 'ui-pop-close-remove',
+            alertClass: 'ui-pop-alert',
+            lastPopClass: 'ui-pop-last',
+            bgNoCloseClass: 'bg-no-click',
+            noDimmedClass: 'no-dimmed',
             beforeCont: [],
             content: '',
             overlapChk: function () {
@@ -2309,11 +2309,11 @@ if (!UICommon) {
                 $html += '</div>';
                 $html += '</div>';
                 $html += '<div class="' + Layer.footClass + '">';
-                $html += '<div class="btn_area">';
+                $html += '<div class="btn-area">';
                 if (type === 'confirm' || type === 'prompt') {
-                    $html += '<span><button type="button" id="' + btnCancelId + '" class="btn solid medium secondary">취소</button></span>';
+                    $html += '<span><button type="button" id="' + btnCancelId + '" class="btn solid md secondary">취소</button></span>';
                 }
-                $html += '<span><button type="button" id="' + btnActionId + '" class="btn solid medium primary">확인</button></span>';
+                $html += '<span><button type="button" id="' + btnActionId + '" class="btn solid md primary">확인</button></span>';
                 $html += '</div>';
                 $html += '</div>';
                 $html += '</article>';
@@ -2434,7 +2434,7 @@ if (!UICommon) {
             },
             keyEvt: function () {
                 //컨펌팝업 버튼 좌우 방할기로 포거스 이동
-                $(document).on('keydown', '.' + Layer.alertClass + ' .pop_btn .button', function (e) {
+                $(document).on('keydown', '.' + Layer.alertClass + ' .pop-btn .button', function (e) {
                     const $keyCode = e.keyCode ? e.keyCode : e.which;
                     let $tar = '';
                     if ($keyCode == 37) $tar = $(this).prev();
@@ -2444,7 +2444,7 @@ if (!UICommon) {
             },
             selectId: 'uiSelectLayer',
             selectIdx: 0,
-            selectClass: 'ui_pop_select',
+            selectClass: 'ui-pop-select',
             select: function (target, col) {
                 const $target = $(target);
                 const $targetVal = $target.val();
@@ -2458,8 +2458,8 @@ if (!UICommon) {
                 let $opTxt = '';
                 let $opVal = '';
                 let $popHtml = '';
-                const $isTouch = $target.hasClass('is_swipe') ? true : false;
-                const $isTouchMove = $target.hasClass('is_swipe_move') ? true : false;
+                const $isTouch = $target.hasClass('is-swipe') ? true : false;
+                const $isTouchMove = $target.hasClass('is-swipe-move') ? true : false;
                 let $isFullPop = false;
 
                 Layer.selectIdx++;
@@ -2472,8 +2472,8 @@ if (!UICommon) {
                     Layer.popClass +
                     ' ' +
                     ($isFullPop ? 'full' : 'bottom') +
-                    ($isTouch || $isTouchMove ? ' is_swipe' : '') +
-                    ($isTouchMove ? ' touch_move' : '') +
+                    ($isTouch || $isTouchMove ? ' is-swipe' : '') +
+                    ($isTouchMove ? ' touch-move' : '') +
                     ' ' +
                     Layer.selectClass +
                     '" role="dialog" aria-hidden="true">';
@@ -2481,12 +2481,12 @@ if (!UICommon) {
                 $popHtml += '<div class="' + Layer.headClass + '">';
                 $popHtml += '<div>';
                 $popHtml += '<h1>' + $title + '</h1>';
-                $popHtml += '<a href="#" class="pop_close ui_pop_close" role="button" aria-label="팝업창 닫기"></a>';
+                $popHtml += '<a href="#" class="pop-close ui-pop-close" role="button" aria-label="팝업창 닫기"></a>';
                 $popHtml += '</div>';
                 $popHtml += '</div>';
                 $popHtml += '<div class="' + Layer.bodyClass + '">';
 
-                $popHtml += '<ul class="select_item_wrap';
+                $popHtml += '<ul class="select-item-wrap';
                 if (!!col) $popHtml += ' col' + col;
                 if ($addClass) $popHtml += ' ' + $addClass;
                 $popHtml += '">';
@@ -2498,11 +2498,11 @@ if (!UICommon) {
                     $opVal = $option.attr('value');
                     if ($opVal != '') {
                         $popHtml += '<li>';
-                        $popHtml += '<div class="select_item' + ($targetVal == $opVal ? ' selected' : '') + '">';
-                        $popHtml += '<a href="#" class="ui_pop_select_btn' + ($opDisabled ? ' disabled' : '') + '" role="button" data-value="' + $opVal + '"';
+                        $popHtml += '<div class="select-item' + ($targetVal == $opVal ? ' selected' : '') + '">';
+                        $popHtml += '<a href="#" class="ui-pop-select-btn' + ($opDisabled ? ' disabled' : '') + '" role="button" data-value="' + $opVal + '"';
                         if ($targetVal == $opVal) $popHtml += ' title="' + ($opTxt.length > 20 ? $opTxt.substring(20, $opTxt.lastIndexOf('(')) : $opTxt) + ' 선택됨"';
                         $popHtml += '>';
-                        $popHtml += '<div class="select_item_txt">' + $opTxt + '</div>';
+                        $popHtml += '<div class="select-item-txt">' + $opTxt + '</div>';
                         $popHtml += '</a>';
                         $popHtml += '</div>';
                         $popHtml += '</li>';
@@ -2517,7 +2517,7 @@ if (!UICommon) {
 
                 $target.data('popup', '#' + $popId);
 
-                $('#' + $popId).on('click', '.ui_pop_select_btn', function (e) {
+                $('#' + $popId).on('click', '.ui-pop-select-btn', function (e) {
                     e.preventDefault();
                     if (!$(this).hasClass('disabled')) {
                         const $btnVal = $(this).data('value');
@@ -2553,7 +2553,7 @@ if (!UICommon) {
             },
             selectUI: function () {
                 //셀렉트 팝업
-                $(document).on('click', '.ui_select_open', function (e) {
+                $(document).on('click', '.ui-select-open', function (e) {
                     e.preventDefault();
                     let $select = '';
                     if (Layer.isSelectOpen == false) {
@@ -2565,7 +2565,7 @@ if (!UICommon) {
                 $(document).on('click', '.ui-select-lbl', function (e) {
                     e.preventDefault();
                     const $tar = $(this).is('a') ? $(this).attr('href') : '#' + $(this).attr('for');
-                    $($tar).next('.ui_select_open').focus().click();
+                    $($tar).next('.ui-select-open').focus().click();
                 });
             },
             bottomTouch: function (tar) {
@@ -2576,11 +2576,11 @@ if (!UICommon) {
                 const $body = $popup.find('.' + Layer.bodyClass);
                 const $tabScroller = $body.find('.' + Layer.tabClass);
                 const $foot = $popup.find('.' + Layer.footClass);
-                const $trigger = $popup.hasClass('body_swipe') ? Layer.tabClass : Layer.headClass;
+                const $trigger = $popup.hasClass('body-swipe') ? Layer.tabClass : Layer.headClass;
                 let _footH = 0;
                 if ($foot.length) _footH = $foot.outerHeight();
                 //swipe 영역 추가
-                if ($popup.hasClass('is_swipe') && !$head.find('span.swipe').length) $head.prepend('<span class="swipe"></span>');
+                if ($popup.hasClass('is-swipe') && !$head.find('span.swipe').length) $head.prepend('<span class="swipe"></span>');
                 const $bodyMinHeight = $popup.find('span.swipe').outerHeight();
 
                 let isMove = false;
@@ -2616,7 +2616,7 @@ if (!UICommon) {
                         $duration += 10;
                     }, 10);
                     $wrap.stop(false, true);
-                    if ($(tar).hasClass('touch_move')) $(tar).addClass('touch-moving');
+                    if ($(tar).hasClass('touch-move')) $(tar).addClass('touch-moving');
                     if($tabScroller.hasClass('scroll')) $tabScroller.css('overflow-y','hidden');
                 });
 
@@ -2631,7 +2631,7 @@ if (!UICommon) {
                     $distanceY = $clientY - $startY;
 
                     const $min = $bodyMinHeight;
-                    const $max = $(tar).hasClass('touch_move') ? $popup.height() : $popup.outerHeight();
+                    const $max = $(tar).hasClass('touch-move') ? $popup.height() : $popup.outerHeight();
                     const $height = Math.max($min, Math.min($max, $startH - $distanceY));
                     const _bodyH = $height - _headH - _footH;
 
@@ -2661,13 +2661,13 @@ if (!UICommon) {
                     if ($distanceY !== 0) $directionY = $distanceY > 0 ? 'down' : 'up';
                     const $firstHeight = $this.data('first-height');
                     const $min = $bodyMinHeight;
-                    const $max = $(tar).hasClass('touch_move') ? $popup.height() : $popup.outerHeight();
+                    const $max = $(tar).hasClass('touch-move') ? $popup.height() : $popup.outerHeight();
 
                     clearInterval($durationTimer);
                     const $powerRatio = $duration === 0 || $distanceY === 0 ? 0 : Math.abs($distanceY) / $duration;
                     const $power = (1 + Math.round($powerRatio * 3)) * Math.round($powerRatio * 30);
                     const $powerDistance = Math.round((($distanceY * -1) / $duration) * $power);
-                    if ($(tar).hasClass('touch_move')) {
+                    if ($(tar).hasClass('touch-move')) {
                         $(tar).removeClass('touch-moving');
                         const $wrapHeight = $wrap.outerHeight();
                         const $endHeight = Math.max($min, Math.min($max, $wrapHeight + $powerDistance));
@@ -2683,9 +2683,9 @@ if (!UICommon) {
                             $popup.addClass('foot');
                             $wrap.css('padding-bottom', _footH);
                         }
-                    } else if ($(tar).hasClass('body_swipe')) {
+                    } else if ($(tar).hasClass('body-swipe')) {
                         const _tabS = $tabScroller.scrollTop();
-                        const _tabH = $body.find('.tab_list').outerHeight();
+                        const _tabH = $body.find('.tab-list').outerHeight();
                         //const popMaxH = $(window).height() - 30;
                         const popMaxH = $(window).height() * 0.9;
                         (_tabS <= 0) ? $tabScroller.removeClass('on').addClass('scroll') : $tabScroller.removeClass('scroll').addClass('on');
@@ -2734,7 +2734,7 @@ if (!UICommon) {
                 if (type === undefined) type = 'toast';
                 const $isAlarm = type === 'alarm';
                 const $isFn = !!fn;
-                const $className = '.' + type + '_box';
+                const $className = '.' + type + '-box';
 
                 if (delayTime == undefined) delayTime = 2000;
 
@@ -2758,7 +2758,7 @@ if (!UICommon) {
                         $(this).remove();
                     });
                 };
-                const $spaceH = $('.bottom_fixed-space').outerHeight();
+                const $spaceH = $('.bottom-fixed-space').outerHeight();
                 if ($spaceH) {
                     $toast.css('bottom', $spaceH);
                 }
@@ -2788,14 +2788,14 @@ if (!UICommon) {
                 const $popup = $(tar);
                 const $popWrap = $popup.find('.' + Layer.wrapClass);
                 const $popBody = $popup.find('.' + Layer.bodyClass);
-                const $btnPopClose = $popup.find('.pop_wrap .pop_close');
+                const $btnPopClose = $popup.find('.pop-wrap .pop-close');
                 const $tabScroller = $popup.find('.' + Layer.tabClass);
                 //const popMaxH = $(window).height() - 30;
                 const popMaxH = $(window).height() * 0.9;
-                $('html').removeClass('keypad_open');
+                $('html').removeClass('keypad-open');
                 if ($popup.closest('#wrap').length) $('#wrap').after($popup);
-                if ($('#wrap').length && !$popup.hasClass('no_dimmed')) $('#wrap').attr('aria-hidden', true);
-                if ($('#content').length && !$popup.hasClass('no_dimmed')) $('#content').attr('aria-hidden', true);
+                if ($('#wrap').length && !$popup.hasClass('no-dimmed')) $('#wrap').attr('aria-hidden', true);
+                if ($('#content').length && !$popup.hasClass('no-dimmed')) $('#content').attr('aria-hidden', true);
                 if ($tabScroller.length) $tabScroller.removeClass('on').addClass('scroll');
                 if ($popup.length && $popWrap.length) {
                     Layer.opening++;
@@ -2815,10 +2815,10 @@ if (!UICommon) {
                         $id = Layer.id + $idx;
                         $popup.attr('id', $id);
                     }
-                    if ($btnPopClose.length) $btnPopClose.attr('id', $id + '_dev');
-                    if (popTitle != undefined && popTitle != null && popTitle != '') $popup.find('.pop_head h1').text(popTitle);
-                    //if (popTitle === 'noTitle' && popTitle != '') $popup.find('.pop_head h1').empty();
-                    if (popTitle === 'noTitle' && popTitle != '') $popup.find('.pop_head h1').remove();
+                    if ($btnPopClose.length) $btnPopClose.attr('id', $id + '-dev');
+                    if (popTitle != undefined && popTitle != null && popTitle != '') $popup.find('.pop-head h1').text(popTitle);
+                    //if (popTitle === 'noTitle' && popTitle != '') $popup.find('.pop-head h1').empty();
+                    if (popTitle === 'noTitle' && popTitle != '') $popup.find('.pop-head h1').remove();
                     if ($btnPopClose.length && popClose === 'noClose') $btnPopClose.remove();
                     if (!$popup.hasClass(Layer.alertClass)) {
                         if (Layer.openPop.length) {
@@ -2835,22 +2835,22 @@ if (!UICommon) {
 
                     // bg close
                     if (!$popup.hasClass(Layer.alertClass) && !$popup.hasClass(Layer.bgNoCloseClass)) {
-                        const $bgClick = '<div class="pop_bg_close ui_pop_close" role="button" aria-label="팝업창 닫기"></div>';
-                        if (!$popup.find('.pop_bg_close').length) $popup.prepend($bgClick);
+                        const $bgClick = '<div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>';
+                        if (!$popup.find('.pop-bg-close').length) $popup.prepend($bgClick);
                     }
 
                     const $openDelay = 100 * Layer.opening;
                     const $callbackDelay = 450;
 
-                    if ($popup.hasClass('bottom')) $popup.find('.pop_body').addClass('scroll');
-                    if ($popup.hasClass('bottom') && $popup.find('.tab_wrap:not(.box)').length) {
-                        $popup.find('.pop_body').addClass('is_tab');
-                        if(!$popup.find('.tab_scroller').length) $popup.find('.tab_wrap:not(.box)').contents().not('.tab_list').wrapAll('<div class="tab_scroller scroll"></div>');
+                    if ($popup.hasClass('bottom')) $popup.find('.pop-body').addClass('scroll');
+                    if ($popup.hasClass('bottom') && $popup.find('.tab-wrap:not(.box)').length) {
+                        $popup.find('.pop-body').addClass('is-tab');
+                        if(!$popup.find('.tab-scroller').length) $popup.find('.tab-wrap:not(.box)').contents().not('.tab-list').wrapAll('<div class="tab-scroller scroll"></div>');
                     }
 
                     //tab 메뉴 체크
-                    if ($popup.find('.tab_wrap').length && $popup.hasClass('bottom')) {
-                        $popup.hasClass('transfer') ? $popup.addClass('body_swipe') : $popup.addClass('body_swipe default');
+                    if ($popup.find('.tab-wrap').length && $popup.hasClass('bottom')) {
+                        $popup.hasClass('transfer') ? $popup.addClass('body-swipe') : $popup.addClass('body-swipe default');
                     }
 
                     $popup.attr('aria-hidden', false);
@@ -2878,7 +2878,7 @@ if (!UICommon) {
                         if ($($focusEl).is($focusableEl)) {
                             $popup.data('returnFocus', $focusEl);
                             $focusEl.addClass(Layer.focusedClass);
-                            if ($focusEl.hasClass('btn_select')) $focusEl.closest('.select').addClass('focused');
+                            if ($focusEl.hasClass('btn-select')) $focusEl.closest('.select').addClass('focused');
                         }
                         //팝업 in 포커스
                         $popup.attr({ tabindex: 0 }).focus();
@@ -2902,18 +2902,18 @@ if (!UICommon) {
                         }
 
                         //팝업안 고정탭
-                        if ($popup.find('.tab_wrap').length) tabMenu.init();
+                        if ($popup.find('.tab-wrap').length) tabMenu.init();
 
                         //팝업안 swiper
-                        if ($popup.find('.ui_swiper').length) uiSwiper.update($popup.find('.ui_swiper'));
+                        if ($popup.find('.ui-swiper').length) uiSwiper.update($popup.find('.ui-swiper'));
 
                         //열기
-                        if (!$('html').hasClass('lock') && !$popup.hasClass('no_dimmed')) Body.lock();
+                        if (!$('html').hasClass('lock') && !$popup.hasClass('no-dimmed')) Body.lock();
                         $popWrap.scrollTop(0);
                         $popup.addClass(Layer.showClass);
 
                         //타이틀 유무 체크
-                        if ($popup.find('.pop_head h1').length == 0) $popup.addClass('no_title');
+                        if ($popup.find('.pop-head h1').length == 0) $popup.addClass('no-title');
 
                         //iframe
                         if ($('iframe.load-height').length) ui.Util.iframe();
@@ -2931,7 +2931,7 @@ if (!UICommon) {
                                 const $close = $wrap.find('.' + Layer.closeClass);
                                 const $body = $wrap.find('.' + Layer.bodyClass);
                                 const _contH = $wrap.find('.' + Layer.contClass).height();
-                                const $tabScroller = $body.find('.tab_scroller');
+                                const $tabScroller = $body.find('.tab-scroller');
                                 let _footH = 0;
                                 let _popH = 0;
                                 let isScroll = false;
@@ -2946,7 +2946,7 @@ if (!UICommon) {
                                 $wrap.css('max-height', popMaxH);
                                 $body.css('max-height', popMaxH - _headH - _footH);
                                 if ($popup.hasClass('transfer')) {
-                                    var $popMark = $('.pop_mark');
+                                    var $popMark = $('.pop-mark');
                                     if ($popMark.length) {
                                         var _tH = parseInt($(window).height() - ($popMark.offset().top + $popMark.height() + 24));
                                         _popH = (230 > _tH) ? 230 : _tH;
@@ -2959,7 +2959,7 @@ if (!UICommon) {
                                     _popH = parseInt(($(window).height() / 3) * 2);
                                 }
                                 let _bodyH = _popH - _headH - _footH;
-                                (_bodyH < _contH || $popup.find('.tab_wrap').length) ? isScroll = true : $body.removeClass('scroll').addClass('no_scroll');
+                                (_bodyH < _contH || $popup.find('.tab-wrap').length) ? isScroll = true : $body.removeClass('scroll').addClass('no-scroll');
                                 if ($popup.hasClass('transfer') || $popup.hasClass('half') || $popup.hasClass('default')) {
                                     if (isScroll) {
                                         $wrap.css('height', _popH);
@@ -2969,19 +2969,19 @@ if (!UICommon) {
                                 }
                                 //탭 컨텐츠 스크롤이 필요할때
                                 if($tabScroller.length) {
-                                    const _tabH = $body.find('.tab_list').outerHeight();
+                                    const _tabH = $body.find('.tab-list').outerHeight();
                                     $tabScroller.css('max-height', parseInt(_bodyH - _tabH));
                                 }
                                 //swipe 기능
-                                if ($popup.hasClass('is_swipe') && !$popup.hasClass('is_swipe__init') || $popup.hasClass('body_swipe')) {
-                                    $popup.addClass('is_swipe__init');
-                                    if (!$popBody.hasClass('no_scroll')) Layer.bottomTouch(tar);
+                                if ($popup.hasClass('is-swipe') && !$popup.hasClass('is-swipe--init') || $popup.hasClass('body-swipe')) {
+                                    $popup.addClass('is-swipe--init');
+                                    if (!$popBody.hasClass('no-scroll')) Layer.bottomTouch(tar);
                                 }
                             }
                         }, 100);
 
                         setTimeout(function () {
-                            if (!$popup.hasClass('no_dimmed')) $FocusEvt();
+                            if (!$popup.hasClass('no-dimmed')) $FocusEvt();
                             if (!!callback) callback();
                             $popup.trigger('Layer.show');
 
@@ -3040,7 +3040,7 @@ if (!UICommon) {
                     const $returnFocus = $popup.data('returnFocus');
                     if ($returnFocus != undefined) {
                         $returnFocus.removeClass(Layer.focusedClass).focus();
-                        if ($returnFocus.hasClass('btn_select')) $returnFocus.closest('.select').removeClass('focused');
+                        if ($returnFocus.hasClass('btn-select')) $returnFocus.closest('.select').removeClass('focused');
                     } else {
                         //리턴 포커스가 없을때
                         if ($('#header').length) {
@@ -3061,11 +3061,11 @@ if (!UICommon) {
                 //닫기
                 $popup.removeClass(Layer.showClass).data('focusMove', false).data('popPosition', false);
                 $popup.attr('aria-hidden', 'true').removeAttr('tabindex aria-labelledby');
-                if ($popup.hasClass('no_motion')) $closeDelay = 10;
+                if ($popup.hasClass('no-motion')) $closeDelay = 10;
 
                 const $closeAfter = function () {
                     $popup.removeAttr('style');
-                    if ($popup.hasClass('is_swipe')) {
+                    if ($popup.hasClass('is-swipe')) {
                         $popup.find('.' + Layer.wrapClass).removeAttr('style');
                         if ($popup.hasClass('full')) $popup.removeClass('full').addClass('bottom');
                     }
@@ -3077,7 +3077,7 @@ if (!UICommon) {
                         .removeAttr('tabindex');
                     $popup.find('.' + Layer.bodyClass).removeAttr('tabindex style');
                     $popup.find('.' + Layer.focusInClass).removeAttr('tabindex');
-                    if ($popup.find('.pop_close.last_focus').length) $popup.find('.pop_close.last_focus').remove();
+                    if ($popup.find('.pop-close.last-focus').length) $popup.find('.pop-close.last-focus').remove();
 
                     // 닫을 때 없어져야하는 요소
                     if ($popup.find('.' + Layer.closeRemoveClass).length) $popup.find('.' + Layer.closeRemoveClass).remove();
@@ -3129,7 +3129,7 @@ if (!UICommon) {
                     const $tit = $head.find('h1');
                     const $foot = $wrap.find('.' + Layer.footClass);
                     const $body = $wrap.find('.' + Layer.bodyClass);
-                    const _bodyH = $body.find('.pop_section').outerHeight();
+                    const _bodyH = $body.find('.pop-section').outerHeight();
                     let _footH = 0;
 
                     $head.removeAttr('style').removeClass('shadow');
@@ -3162,7 +3162,7 @@ if (!UICommon) {
                 const $scrollHeight = $wrap.hasClass(Layer.pageClass) ? $('body').get(0).scrollHeight : $wrap[0].scrollHeight;
                 const $wrapHeight = $wrap.hasClass(Layer.pageClass) ? $(window).height() : $wrap.outerHeight();
                 const $topClassName = 'pop-top-fixed';
-                const $bottomClassName = 'pop-bottom_fixed';
+                const $bottomClassName = 'pop-bottom-fixed';
                 if ($head.length) {
                     if ($scrollTop > 0) {
                         $head.addClass($topClassName);
@@ -3227,7 +3227,7 @@ if (!UICommon) {
 
                 $focusaEls.on('keydown', function (e) {
                     const $keyCode = e.keyCode ? e.keyCode : e.which;
-                    const $focusable = $tar.find($focusableEl).not('.last_focus');
+                    const $focusable = $tar.find($focusableEl).not('.last-focus');
                     const $focusLength = $focusable.length;
                     const $firstFocus = $focusable.first();
                     const $lastFocus = $focusable.last();
@@ -3256,7 +3256,7 @@ if (!UICommon) {
 
                 $tar.on('keydown', function (e) {
                     const $keyCode = e.keyCode ? e.keyCode : e.which;
-                    const $focusable = $tar.find($focusableEl).not('.last_focus');
+                    const $focusable = $tar.find($focusableEl).not('.last-focus');
                     const $lastFocus = $focusable.last();
 
                     if (e.target == this && $keyCode == 9) {
@@ -3267,8 +3267,8 @@ if (!UICommon) {
                     }
                 });
 
-                $(document).on('focusin', $tar.selector + ' .last_focus', function (e) {
-                    const $focusable = $tar.find($focusableEl).not('.last_focus');
+                $(document).on('focusin', $tar.selector + ' .last-focus', function (e) {
+                    const $focusable = $tar.find($focusableEl).not('.last-focus');
                     const $firstFocus = $focusable.first();
                     const $lastFocus = $focusable.last();
                     if ($isFirstBackTab) {
@@ -3295,7 +3295,7 @@ if (!UICommon) {
                 }, 100);
 
                 //열기
-                $(document).on('click', '.ui_pop_open', function (e) {
+                $(document).on('click', '.ui-pop-open', function (e) {
                     e.preventDefault();
                     const $pop = $(this).attr('href');
                     const $currentTarget = $(e.currentTarget);
@@ -3307,7 +3307,7 @@ if (!UICommon) {
                 });
 
                 //닫기
-                $(document).on('click', '.ui_pop_close', function (e) {
+                $(document).on('click', '.ui-pop-close', function (e) {
                     e.preventDefault();
                     let $pop = $(this).attr('href');
                     if ($pop == '#' || $pop == '#none' || $pop == undefined) $pop = $(this).closest('.' + Layer.popClass);
@@ -3349,9 +3349,9 @@ if (!UICommon) {
                 });
 
                 // 알람박스 닫기
-                $(document).on('click', '.alarm_box .close', function (e) {
+                $(document).on('click', '.alarm-box .close', function (e) {
                     e.preventDefault();
-                    const $box = $(this).closest('.alarm_box');
+                    const $box = $(this).closest('.alarm-box');
                     $box.removeClass('on');
                     $box.on('transitionend', function () {
                         $(this).remove();
@@ -3362,8 +3362,8 @@ if (!UICommon) {
             *   20220826: 좌우 분할 목록에 선택값이 있는 경우 해당 요소까지 자동 스크롤 처리
             */
             setScrollBetweenTop: function () {
-                if ($('.scroll_between_wrap').length > 0) {
-                    $(".scroll_between_wrap ul.list").each(function () {
+                if ($('.scroll-between-wrap').length > 0) {
+                    $(".scroll-between-wrap ul.list").each(function () {
                         var selectedElem = $(this).find('.sel');
                         // 20220831: 스크롤 위치 보정
                         var scrollTo = $(this).scrollTop() + selectedElem.position().top;
@@ -3398,10 +3398,10 @@ if (!UICommon) {
                     // console.log("custom events -->", $events);
 
                     let $paginationType = 'bullets';
-                    if ($this.hasClass('_fraction')) $paginationType = 'fraction';
+                    if ($this.hasClass('-fraction')) $paginationType = 'fraction';
 
                     let $navigation = false;
-                    if ($this.hasClass('_nav')) {
+                    if ($this.hasClass('-nav')) {
                         let $btnHtml = '';
                         $btnHtml += '<button type="button" aria-label="이전 슬라이드" class="swiper-button-prev swiper-button"><span class="hidden">이전 슬라이드</span></button>';
                         $btnHtml += '<button type="button" aria-label="다음 슬라이드" class="swiper-button-next swiper-button"><span class="hidden">다음 슬라이드</span></button>';
@@ -3424,9 +3424,9 @@ if (!UICommon) {
                         $this.removeAttr('data-space');
                     }
 
-                    let $loop = $this.hasClass('_loop') ? true : false;
-                    let $autoHeight = $this.hasClass('_autoHeight') ? true : false;
-                    let $centeredSlides = $this.hasClass('_center') ? true : false;
+                    let $loop = $this.hasClass('-loop') ? true : false;
+                    let $autoHeight = $this.hasClass('-autoHeight') ? true : false;
+                    let $centeredSlides = $this.hasClass('-center') ? true : false;
 
                     let $auto = false;
 
@@ -3458,8 +3458,8 @@ if (!UICommon) {
 
                     let baseSwiper;
                     let newGuideTime;
-                    if($this.find('.swiper-slide').length == 1 && $this.hasClass('img_banner')) {
-                        $this.addClass('no_swiper');
+                    if($this.find('.swiper-slide').length == 1 && $this.hasClass('img-banner')) {
+                        $this.addClass('no-swiper');
                     } else if($swiper.hasClass('swiper-initialized')) {
                         baseSwiper = $this.data('swiper');
                         if (baseSwiper !== undefined) baseSwiper.update();
@@ -3485,18 +3485,18 @@ if (!UICommon) {
                             centeredSlides: $centeredSlides,
                             autoplay: $auto,
                             parallax: $parallax,
-                            noSwipingClass: 'no_swiping',
+                            noSwipingClass: 'no-swiping',
                             on: {
                                 slideChangeTransitionEnd: function (e) {
                                     // [S] main 계좌 스와이퍼 개발 callback 추가
                                     this.$el.find('.swiper-slide').each(function () {
                                         var _this = $(this);
-                                        if (_this.parents().hasClass('main_account_section') && _this.is('.swiper-slide-active')) {
+                                        if (_this.parents().hasClass('main-account-section') && _this.is('.swiper-slide-active')) {
                                             if (window.SPA_COMMON) {
                                                 window.SPA_COMMON.callbackWithSPA('onMainSwiperChange', _this);                                                
                                             }
                                         }
-                                        if (_this.closest('.m_kb_youtube').length) {
+                                        if (_this.closest('.m-kb-youtube').length) {
                                             if (window.SPA_COMMON) {
                                                 window.SPA_COMMON.callbackWithSPA('onMainSub2SwiperChange', _this);
                                             }
@@ -3559,10 +3559,10 @@ if (!UICommon) {
                 });
             },
             UI: function () {
-                $(document).off('click', '.ui_swiper .swiper-auto-ctl').on('click', '.ui_swiper .swiper-auto-ctl', function (e) {
+                $(document).off('click', '.ui-swiper .swiper-auto-ctl').on('click', '.ui-swiper .swiper-auto-ctl', function (e) {
                     e.preventDefault();
                     const $this = $(this);
-                    const $closest = $this.closest('.ui_swiper');
+                    const $closest = $this.closest('.ui-swiper');
                     const $swiper = $closest.data('swiper');
                     if ($(this).hasClass('play')) {
                         $swiper.autoplay.start();
@@ -3592,9 +3592,9 @@ if (!UICommon) {
                     uiSwiper.ready(target);
                     uiSwiper.base(target);
                     uiSwiper.UI();
-                } else if ($('.ui_swiper').length) {
-                    uiSwiper.ready('.ui_swiper');
-                    uiSwiper.base('.ui_swiper');
+                } else if ($('.ui-swiper').length) {
+                    uiSwiper.ready('.ui-swiper');
+                    uiSwiper.base('.ui-swiper');
                     uiSwiper.UI();
                 }
             }
@@ -3602,14 +3602,14 @@ if (!UICommon) {
 
         var uiEffect = {
             button: function () {
-                var btnList = 'a.btn:not(.btn_link), button.btn:not(.btn_link)';
+                var btnList = 'a.btn:not(.btn-link), button.btn:not(.btn-link)';
                 $(document).on('click', btnList, function (e) {
                     var $btnEl = $(this),
                         $delay = 650;
 
                     if (!$btnEl.is('.disabled')) {
-                        if (!$btnEl.find('.btn_click_in').length) $btnEl.append('<em class="btn_click_in"></em>');
-                        var $btnIn = $btnEl.find('.btn_click_in'),
+                        if (!$btnEl.find('.btn-click-in').length) $btnEl.append('<em class="btn-click-in"></em>');
+                        var $btnIn = $btnEl.find('.btn-click-in'),
                             $btnMax = Math.max($btnEl.outerWidth(), $btnEl.outerHeight()),
                             $btnX = e.pageX - $btnEl.offset().left - $btnMax / 2,
                             $btnY = e.pageY - $btnEl.offset().top - $btnMax / 2;
