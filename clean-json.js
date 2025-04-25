@@ -26,30 +26,6 @@ function convertPxNumbersToRem(obj, base = 10) {
   }
 }
 
-// alpha 값을 rem에서 0.1 단위 실수로 변환하고 타입을 opacity로 변환
-function convertAlphaToOpacityFormat(obj) {
-  // 'alpha' 객체가 존재하는 경우
-  if (obj.alpha) {
-    const alphaObj = obj.alpha;
-    
-    // alpha 값만 변환
-    for (const key in alphaObj) {
-      const alphaValue = alphaObj[key];
-      if (alphaValue.value && alphaValue.value.endsWith('rem')) {
-        // rem 값을 실수로 변환 (1rem = 0.1)
-        const remValue = parseFloat(alphaValue.value.replace('rem', ''));
-        const opacityValue = (remValue / 10).toFixed(1); // rem을 0.1 단위로 변환
-
-        // 변환된 alpha 값을 opacity로 업데이트
-        alphaObj[key] = {
-          value: opacityValue,
-          type: 'opacity'
-        };
-      }
-    }
-  }
-}
-
 // 깊은 병합 함수
 function mergeDeep(target, source) {
   for (const key in source) {
@@ -81,9 +57,6 @@ try {
       outputJson[key] = inputJson[key];
     }
   }
-
-  // alpha 값을 변환해서 opacity 형식으로 변환
-  convertAlphaToOpacityFormat(outputJson);
 
   // px → rem 변환 (10px = 1rem 기준)
   convertPxNumbersToRem(outputJson);
