@@ -1291,6 +1291,10 @@
         "border-bottom-width": {
           "value": "0.1rem",
           "type": "dimension"
+        },
+        "message-gap-y": {
+          "value": "{gap.8}",
+          "type": "dimension"
         }
       },
       "message": {
@@ -1553,6 +1557,10 @@
       },
       "line-height": {
         "value": "{typo.line-height.font-size-16}",
+        "type": "dimension"
+      },
+      "message-gap-y": {
+        "value": "{gap.8}",
         "type": "dimension"
       }
     },
