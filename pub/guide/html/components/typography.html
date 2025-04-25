@@ -46,7 +46,7 @@
             <div data-class="h2">Body (p1~p3)</div>
             <script type="text/html">
 <p class="p-lg">.p-lg (Body Large Size 18px)</p>
-<p class="p-md">.p-md (Body Medium Size 16px)</p>
+<p class="p">.p-md (Body Medium Size 16px)</p>
 <p class="p-sm">.p-sm (Body Small Size 14px)</p>
             </script>
 
@@ -58,13 +58,35 @@
                 </div>
             </div>
             <script type="text/html">
-<ul class="depth bul">
+<h3 class="h3">1st (Bullet)</h3>
+<ul class="bullet-list bul">
     <li>1st Bullet 두줄 타입 내용은 여기에 나옵니다. </li>
     <li>2nd Bullet 두줄 타입 내용은 여기에 나옵니다. </li>
 </ul>
-<ul class="depth dash">
+<br>
+<h3 class="h3">2nd (Dash)</h3>
+<ul class="bullet-list dash">
     <li>1st Bullet 두줄 타입 내용은 여기에 나옵니다. </li>
     <li>2nd Bullet 두줄 타입 내용은 여기에 나옵니다. </li>
+</ul>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Component</div>
+            <script type="text/html">
+<h1 class="h1">페이지 타이틀</h1>
+<h1 class="h2">항목 타이틀 첫번째</h1>
+<p class="p">본문 텍스트가 올때 여러 항목이 나열되면 Bullet을 붙여서 처리, 한개만 올 때는 Bullet 없이 현재 문장 과 같이 작성됩니다.</p>
+<h1 class="h3">항목 타이틀 두번째</h1>
+<p class="p">본문 텍스트가 올때 여러 항목이 나열되면 Bullet을 붙여서 처리, 한개만 올 때는 Bullet 없이 현재 문장 과 같이 작성됩니다.</p>
+
+<ul class="bullet-list bul">
+    <li>1st Bullet 두줄 타입 내용은 여기에 나옵니다.       
+        <ul class="bullet-list dash">
+            <li>2nd Bullet 두줄 타입 내용은 여기에 나옵니다. </li>
+        </ul>
+    </li>
 </ul>
             </script>
         </div>
