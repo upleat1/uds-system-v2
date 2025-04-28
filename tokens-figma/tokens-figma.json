@@ -305,15 +305,15 @@
       },
       "font-weight": {
         "regular": {
-          "value": "400",
+          "value": "regular",
           "type": "text"
         },
         "Bold": {
-          "value": "700",
+          "value": "Bold",
           "type": "text"
         },
         "SemiBold": {
-          "value": "600",
+          "value": "SemiBold",
           "type": "text"
         }
       },
@@ -2357,6 +2357,76 @@
       },
       "bullet-icon-radius": {
         "value": "5rem",
+        "type": "dimension"
+      }
+    },
+    "Segmentedbutton": {
+      "small-background-color": {
+        "value": "{Color.background.white}",
+        "type": "color"
+      },
+      "small-disabled-background-color": {
+        "value": "{Color.background.gray200}",
+        "type": "color"
+      },
+      "small-selected-border-color": {
+        "value": "{Color.border.primary600}",
+        "type": "color"
+      },
+      "small-disabled-border-color": {
+        "value": "{Color.border.gray300}",
+        "type": "color"
+      },
+      "small-default-font-color": {
+        "value": "{Color.text.basic}",
+        "type": "color"
+      },
+      "small-selected-font-color": {
+        "value": "{Color.text.primary600}",
+        "type": "color"
+      },
+      "small-disabled-font-color": {
+        "value": "{Color.text.disabled}",
+        "type": "color"
+      },
+      "small-default-border-color": {
+        "value": "{Color.border.gray400}",
+        "type": "color"
+      },
+      "small-selected-font-weight": {
+        "value": "{typo.font-weight.regular}",
+        "type": "text"
+      },
+      "small-font-size": {
+        "value": "{font-size.body.medium}",
+        "type": "dimension"
+      },
+      "small-line-height": {
+        "value": "{typo.line-height.font-size-16}",
+        "type": "dimension"
+      },
+      "small-border-width": {
+        "value": "{border-width.regular}",
+        "type": "dimension"
+      },
+      "small-gap-x": {
+        "value": "{gap.8}",
+        "type": "dimension"
+      },
+      "small-radius": {
+        "value": "{radius.8}",
+        "type": "dimension"
+      },
+      "small-padding-y": {
+        "value": "{padding.8}",
+        "type": "dimension"
+      },
+      "small-padding-x": {
+        "value": "{padding.12}",
+        "type": "dimension"
+      },
+      "small-height": {
+        "value": "{number.40}",
         "type": "dimension"
       }
     }
