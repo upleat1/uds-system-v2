@@ -29,16 +29,27 @@
             </div>
         </div>
 
-        <div data-class="section">
-            <div data-class="h1">Type</div>
-            <div data-class="h2">Switch</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>각 선택 항목의 상태를 즉시 제어할 때 사용</div>
+        <div data-class="tab-warp">
+            <div data-class="tab-list" role="tablist">
+                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
+            </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+                <div data-class="section">
+                    접근성
                 </div>
             </div>
-            <div data-class="h2">large(24x24) / medium(20x20)</div>
-            <script type="text/html">
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="h2">Switch</div>
+                    <div data-class="box">
+                        <div data-class="list disc">
+                            <div>각 선택 항목의 상태를 즉시 제어할 때 사용</div>
+                        </div>
+                    </div>
+                    <div data-class="h2">large(24x24) / medium(20x20)</div>
+                    <script type="text/html">
 <div style="margin-top:.4rem;">
     <span class="switch">    
         <input type="checkbox" id="switch2">
@@ -61,7 +72,9 @@
         <label for="switch5"></label>
     </span>
 </div>
-            </script>
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
 

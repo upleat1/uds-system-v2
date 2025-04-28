@@ -61,83 +61,94 @@
             <a href="/pub/guide/html/sample/popup.html" target="-blank" title="새창" data-class="button">Popup Sample</a>
         </div>
 
-        <div data-class="box">
-            <div data-class="h3">
-                <p class="p-tit">1.바텀시트 정책</p>
-                <ul class="p-list">
-                    <li><strong class="p-tit2">일반 바텀시트</strong> : max값 90%만 적용하며 높이는 콘텐츠길이만큼 자동으로 지원. 콘텐츠가 90%이상이면 스크롤 자동 지원</li>
-                </ul>                
+        <div data-class="tab-warp">
+            <div data-class="tab-list" role="tablist">
+                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
             </div>
-        </div>
-
-        <!-- section : 팝업 설명 -->
-        <div data-class="section">
-            <div data-class="h1">사용법</div>
-            <div data-class="h2">Bottm Sheet</div>
-            <!-- 레이어 호출 설명 영역 -->
-            <div data-class="box">
-                <div data-class="list number">
-                    <div>
-                        기본
-                        <div data-class="list disc">
-                            <div>팝업 ID 기준으로 호출하기때문에 팝업끼리 ID가 중복되면 안됨. 중복일 경우 변경</div>
-                            <div>팝업의 ID는 임시ID(개발에서 변경 사용 가능)</div>
-                        </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+                <div data-class="section">
+                    접근성
+                </div>
+            </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+                <div data-class="box">
+                    <div data-class="h3">
+                        <p class="p-tit">1.바텀시트 정책</p>
+                        <ul class="p-list">
+                            <li><strong class="p-tit2">일반 바텀시트</strong> : max값 90%만 적용하며 높이는 콘텐츠길이만큼 자동으로 지원. 콘텐츠가 90%이상이면 스크롤 자동 지원</li>
+                        </ul>                
                     </div>
-                    <div>
-                        Popup Open
-                        <div>아래와 같이 함수 호출
+                </div>
+        
+                <!-- section : 팝업 설명 -->
+                <div data-class="section">
+                    <div data-class="h1">사용법</div>
+                    <div data-class="h2">Bottm Sheet</div>
+                    <!-- 레이어 호출 설명 영역 -->
+                    <div data-class="box">
+                        <div data-class="list number">
+                            <div>
+                                기본
+                                <div data-class="list disc">
+                                    <div>팝업 ID 기준으로 호출하기때문에 팝업끼리 ID가 중복되면 안됨. 중복일 경우 변경</div>
+                                    <div>팝업의 ID는 임시ID(개발에서 변경 사용 가능)</div>
+                                </div>
+                            </div>
+                            <div>
+                                Popup Open
+                                <div>아래와 같이 함수 호출
 <pre>
     UICommon.Layer.open('#팝업ID');
 </pre>
-                        </div>
-                        <div>콜백이벤트 삽입
+                                </div>
+                                <div>콜백이벤트 삽입
 <pre>
     UICommon.Layer.open('#팝업ID', function(){
         //팝업 오픈후 콜백이벤트 삽입
     });
 </pre>
-                        </div>
-                    </div>
-                    <div>
-                        Popup Close
-                        <div>아래와 같이 함수 호출
+                                </div>
+                            </div>
+                            <div>
+                                Popup Close
+                                <div>아래와 같이 함수 호출
 <pre>
     UICommon.Layer.close('#팝업ID');
 </pre>
-                        </div>
-                        <div>콜백이벤트 삽입
+                                </div>
+                                <div>콜백이벤트 삽입
 <pre>
     UICommon.Layer.close('#팝업ID', function(){
         //팝업 닫은 후 콜백이벤트 삽입
     });
 </pre>
-                        </div>
-                        <div>Popup안에 있는 버튼에 Popup Close기능을 주려면 'ui-pop-close' 클래스 추가</div>
-                        <div>'ui-pop-close' 클래스는 해당 용도가 아니면 에러를 발생할수 있으니 안쓸때는 삭제</div>
-                    </div> 
-                    <div>딤 클릭 이벤트 방지
-                        <div>'bg-no-click' 클래스를 Popup 최상단에 엘리먼트에 추가</div>
-                    </div>
-                    <div>닫기버튼 삭제
+                                </div>
+                                <div>Popup안에 있는 버튼에 Popup Close기능을 주려면 'ui-pop-close' 클래스 추가</div>
+                                <div>'ui-pop-close' 클래스는 해당 용도가 아니면 에러를 발생할수 있으니 안쓸때는 삭제</div>
+                            </div> 
+                            <div>딤 클릭 이벤트 방지
+                                <div>'bg-no-click' 클래스를 Popup 최상단에 엘리먼트에 추가</div>
+                            </div>
+                            <div>닫기버튼 삭제
 <pre>
     UICommon.Layer.open('#팝업ID','','noClose');
 </pre>
-                    </div>
-                    <div>타이틀 삭제
+                            </div>
+                            <div>타이틀 삭제
 <pre>
     UICommon.Layer.open('#팝업ID','noTitle');
 </pre>
-                    </div>
-                    <div>타이틀 변경
+                            </div>
+                            <div>타이틀 변경
 <pre>
     UICommon.Layer.open('#팝업ID','타이틀변경텍스트입력');
 </pre>
-                    </div>               
-                </div>
-            </div>
-
-            <script type="text/html" data-type="script">
+                            </div>               
+                        </div>
+                    </div>
+        
+                    <script type="text/html" data-type="script">
 $(function(){
     // Popup Open
     UICommon.Layer.open('#팝업ID');
@@ -207,13 +218,13 @@ $(function(){
     </article>
 </div>
 <!-- //layer html : default -->
-            </script>
-        </div>
-        <!-- //section : 팝업 설명 -->
-
-        <div data-class="section">
-            <div data-class="h1">Atomic</div>
-            <script type="text/html">
+                    </script>
+                </div>
+                <!-- //section : 팝업 설명 -->
+        
+                <div data-class="section">
+                    <div data-class="h1">Atomic</div>
+                    <script type="text/html">
 <ul data-class="demo-grid">
     <li>
         <div id="팝업ID" class="popup bottom ui-pop-last show foot close" style="max-width:375px;height:80px;" role="dialog" aria-hidden="false"
@@ -331,24 +342,18 @@ $(function(){
         </div>
     </li>
 </ul>
-
-
-
-
-
-
-            </script>
-        </div>
-
-        <div data-class="section">
-            <div data-class="h1">Type</div>
-            <div data-class="h2">flexible</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>기본형 바텀시트</div>
+                    </script>
                 </div>
-            </div>
-            <script type="text/html">
+        
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="h2">flexible</div>
+                    <div data-class="box">
+                        <div data-class="list disc">
+                            <div>기본형 바텀시트</div>
+                        </div>
+                    </div>
+                    <script type="text/html">
 <div id="팝업ID" class="popup bottom ui-pop-last show" style="height:500px" role="dialog" aria-hidden="false"
     aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
     <div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>
@@ -375,15 +380,15 @@ $(function(){
         <button type="button" class="pop-close ui-pop-close" aria-label="팝업창 닫기"></button>
     </article>
 </div>
-            </script>
-
-            <div data-class="h2">fixed</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>최대지점은 화면 높이의 90% 차지</div>
-                </div>
-            </div>
-            <script type="text/html">
+                    </script>
+        
+                    <div data-class="h2">fixed</div>
+                    <div data-class="box">
+                        <div data-class="list disc">
+                            <div>최대지점은 화면 높이의 90% 차지</div>
+                        </div>
+                    </div>
+                    <script type="text/html">
 <div id="팝업ID" class="popup bottom ui-pop-last show" style="height:500px" role="dialog" aria-hidden="false" aria-labelledby="bottomPopup2Label" style="display: block;" tabindex="0">
     <div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>
     <article class="pop-wrap" style="padding-bottom: 96.5938px; max-height: 450px;">
@@ -409,16 +414,16 @@ $(function(){
         <button type="button" class="pop-close ui-pop-close" aria-label="팝업창 닫기" id="bottomPopup2-dev"></button>
     </article>
 </div>
-            </script>
-        
-            <div data-class="h2">게이트형</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>상단 타이틀 없이 사용</div>
-                    <div>일정 기간동안 동일한 내용을 반복적으로 노출하는 경우 하단에 [다시보지 않기],[닫기] 버튼을 배치함</div>
-                </div>
-            </div>
-            <script type="text/html">
+                    </script>
+                
+                    <div data-class="h2">게이트형</div>
+                    <div data-class="box">
+                        <div data-class="list disc">
+                            <div>상단 타이틀 없이 사용</div>
+                            <div>일정 기간동안 동일한 내용을 반복적으로 노출하는 경우 하단에 [다시보지 않기],[닫기] 버튼을 배치함</div>
+                        </div>
+                    </div>
+                    <script type="text/html">
 <div id="팝업ID" class="popup bottom ui-pop-last show no-title" style="height:400px" role="dialog" aria-hidden="false" style="display: block;" tabindex="0">
     <div class="pop-bg-close ui-pop-close" role="button" aria-label="팝업창 닫기"></div>
     <article class="pop-wrap" style="max-height: 450px;">
@@ -440,7 +445,9 @@ $(function(){
         </div>
     </article>
 </div>                    
-            </script>
+                    </script>
+                </div>                
+            </div>
         </div>
     </div>
     

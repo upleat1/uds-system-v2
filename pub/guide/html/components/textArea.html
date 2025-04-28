@@ -26,10 +26,21 @@
             </div>
         </div>
 
-        <div data-class="section">
-            <div data-class="h1">Type</div>
-            <div data-class="h2">Basic</div>
-<script type="text/html">
+        <div data-class="tab-warp">
+            <div data-class="tab-list" role="tablist">
+                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
+            </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+                <div data-class="section">
+                    접근성
+                </div>
+            </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="h2">Basic</div>
+        <script type="text/html">
 <div class="form-group textarea default">
     <div class="form-area">
         <div class="form-label">레이블</div>
@@ -95,7 +106,9 @@
     </div>
 </div>
 <p class="form-tip info error">에러문구 영역입니다</p> 
-</script>
+        </script>
+                </div>                
+            </div>
         </div>
     </div>
 

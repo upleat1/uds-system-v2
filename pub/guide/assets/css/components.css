@@ -402,6 +402,25 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
     margin-top: 0;
 }
 
+[data-class="tab-warp"] {
+    margin: 30px 0 10px;
+}
+[data-class="tab-list"] {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--bdc_02, #dddddd);
+    border-radius: 5px;
+    background-color: var(--bg_05, #fff);
+}
+[data-class="button-tab"] {
+    flex: 1 0px;
+    padding: 10px;
+}
+[data-class="button-tab"][aria-selected="true"] {
+    color:#fff;
+    background-color:#333;
+}
+
 [data-class="preview"] {
     margin: 10px 0;
     border: 1px solid var(--bdc_02, #ddd);
@@ -610,6 +629,13 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
 [data-class*="sprite"][data-class*="active"] [data-class="image"] {
     display: block;
 }
+
+[data-class="tab-panel"] {display:none; position:relative; border:0; border-radius:0; box-shadow:none; z-index:3;}
+[data-class="tab-panel"].guide-active {display:block;}
+[data-class="tab-panel"]:focus::after {content:''; position:absolute; bottom:0;}
+[data-class="tab-panel"][tabindex='-1'] {display:none;}
+[data-class="tab-panel"][tabindex='0'] {display:block;}
+
 
 @media (max-width: 1400px) {
     [data-class="shortcut"] {

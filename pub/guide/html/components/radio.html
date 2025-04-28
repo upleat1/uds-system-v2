@@ -29,17 +29,28 @@
             </div>
         </div>
 
-        <div data-class="section">
-            <div data-class="h1">Type</div>
-            <div data-class="h2">Radio Button</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>두 개 이상의 항목에서 하나만 선택할 수 있는 경우에 사용</div>
-                    <div>선택되지 않은 Radio Button을 선택하는 순간, 이전에 선택한 항목은 자동으로 선택이 해제된다.</div>
+        <div data-class="tab-warp">
+            <div data-class="tab-list" role="tablist">
+                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
+            </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+                <div data-class="section">
+                    접근성
                 </div>
             </div>
-            <div data-class="h2">large(24x24) / medium(20x20)</div>
-            <script type="text/html">
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="h2">Radio Button</div>
+                    <div data-class="box">
+                        <div data-class="list disc">
+                            <div>두 개 이상의 항목에서 하나만 선택할 수 있는 경우에 사용</div>
+                            <div>선택되지 않은 Radio Button을 선택하는 순간, 이전에 선택한 항목은 자동으로 선택이 해제된다.</div>
+                        </div>
+                    </div>
+                    <div data-class="h2">large(24x24) / medium(20x20)</div>
+                    <script type="text/html">
 <div class="rdoChk-group inline">
     <span class="selection">
         <input type="radio" id="radioH1" name="radio-h1">
@@ -62,7 +73,9 @@
         <label for="radioH5" class="label"></label>
     </span>
 </div>
-            </script>
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
 

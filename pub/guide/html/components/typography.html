@@ -28,31 +28,42 @@
             </div>
         </div>
 
-        <div data-class="section">
-            <div data-class="h1">Type</div>
-            <div data-class="h2">Heading (h1~h4)</div>
-            <script type="text/html">
+        <div data-class="tab-warp">
+            <div data-class="tab-list" role="tablist">
+                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
+            </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+                <div data-class="section">
+                    접근성
+                </div>
+            </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="h2">Heading (h1~h4)</div>
+                    <script type="text/html">
 <h1 class="h1">.h1 (Heading Large Size 28px)</h1>
 <h2 class="h2">.h2 (Heading Medium Size 20px)</h2>
 <h3 class="h3">.h3 (Heading Small Size 18px)</h3>
 <h4 class="h4">.h4 (Heading xsmall Size 16px)</h4>
-            </script>
-
-            <div data-class="h2">Body (p1~p3)</div>
-            <script type="text/html">
+                    </script>
+        
+                    <div data-class="h2">Body (p1~p3)</div>
+                    <script type="text/html">
 <p class="p-lg">.p-lg (Body Large Size 18px)</p>
 <p class="p">.p-md (Body Medium Size 16px)</p>
 <p class="p-sm">.p-sm (Body Small Size 14px)</p>
-            </script>
-
-            <div data-class="h1">Bullet-list</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>아토믹 컴포넌트는 디자인 시스템의 기초를 이루며, 다양한 컴포넌트를 조합하고 확장할 수 있는 기반이 된다.<br>
-                        하지만, 이 요소들은 직접적인 사용보다 상위 구조(완성된 컴포넌트)에서 활용될 때 디자인 시스템의 일관성과 효율성을 극대화할 수 있다.</div>
-                </div>
-            </div>
-            <script type="text/html">
+                    </script>
+        
+                    <div data-class="h1">Bullet-list</div>
+                    <div data-class="box">
+                        <div data-class="list disc">
+                            <div>아토믹 컴포넌트는 디자인 시스템의 기초를 이루며, 다양한 컴포넌트를 조합하고 확장할 수 있는 기반이 된다.<br>
+                                하지만, 이 요소들은 직접적인 사용보다 상위 구조(완성된 컴포넌트)에서 활용될 때 디자인 시스템의 일관성과 효율성을 극대화할 수 있다.</div>
+                        </div>
+                    </div>
+                    <script type="text/html">
 <h3>1st (Bullet)</h3>
 <ul class="bullet-list bul">
     <li>1st Bullet 두줄 타입 내용은 여기에 나옵니다. </li>
@@ -64,12 +75,12 @@
     <li>1st Bullet 두줄 타입 내용은 여기에 나옵니다. </li>
     <li>2nd Bullet 두줄 타입 내용은 여기에 나옵니다. </li>
 </ul>
-            </script>
-        </div>
-
-        <div data-class="section">
-            <div data-class="h1">Example</div>
-            <script type="text/html">
+                    </script>
+                </div>
+        
+                <div data-class="section">
+                    <div data-class="h1">Example</div>
+                    <script type="text/html">
 <div class="section">
     <h1 class="h1">페이지 타이틀</h1>
     <h2 class="h2">항목 타이틀 첫번째</h2>
@@ -85,7 +96,9 @@
         </li>
     </ul>
 </div>
-            </script>
+                    </script>
+                </div>                
+            </div>
         </div>
     </div>
     

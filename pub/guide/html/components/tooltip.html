@@ -33,14 +33,25 @@
             </div>
         </div>
 
-        <div data-class="section">
-            <div data-class="h1">Type</div>
-            <div data-class="box">
-                타이틀 타입, 텍스트 타입, 블릿 리스트 유형에 맞춰 사용한다
+        <div data-class="tab-warp">
+            <div data-class="tab-list" role="tablist">
+                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
             </div>
-
-            <div data-class="h2">타이틀</div>
-            <script type="text/html">
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+                <div data-class="section">
+                    접근성
+                </div>
+            </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="box">
+                        타이틀 타입, 텍스트 타입, 블릿 리스트 유형에 맞춰 사용한다
+                    </div>
+        
+                    <div data-class="h2">타이틀</div>
+                    <script type="text/html">
 <div class="h3">
     <div class="tooltip-limited">
         <p class="tooltip"><button type="button" class="btn-tooltip js-tooltip" aria-label="도움말 자세히보기"></button></p>
@@ -53,10 +64,10 @@
         </div>
     </div>
 </div>
-            </script>
-
-            <div data-class="h2">텍스트</div>
-            <script type="text/html">
+                    </script>
+        
+                    <div data-class="h2">텍스트</div>
+                    <script type="text/html">
 <div class="h3">
     <div class="tooltip-limited">
         <p class="tooltip"><button type="button" class="btn-tooltip js-tooltip" aria-label="도움말 자세히보기"></button></p>
@@ -68,10 +79,10 @@
         </div>
     </div>
 </div>
-            </script>
-
-            <div data-class="h2">블릿 리스트</div>
-            <script type="text/html">
+                    </script>
+        
+                    <div data-class="h2">블릿 리스트</div>
+                    <script type="text/html">
 <div class="h3">
     <div class="tooltip-limited">
         <p class="tooltip"><button type="button" class="btn-tooltip js-tooltip" aria-label="도움말 자세히보기"></button></p>
@@ -87,10 +98,10 @@
         </div>
     </div>
 </div>
-            </script>
-
-            <div data-class="h2">Mix</div>
-            <script type="text/html">
+                    </script>
+        
+                    <div data-class="h2">Mix</div>
+                    <script type="text/html">
 <div class="h3">
     <div class="tooltip-limited">
         <p class="tooltip"><button type="button" class="btn-tooltip js-tooltip" aria-label="도움말 자세히보기"></button></p>
@@ -107,8 +118,11 @@
         </div>
     </div>
 </div>
-            </script>
+                    </script>
+                </div>
+            </div>
         </div>
+    </div>
     
     <script src="/pub/guide/assets/vendor/jquery.min.js"></script>
     <script src="/pub/guide/assets/vendor/lodash.min.js"></script>

@@ -29,17 +29,28 @@
             </div>
         </div>
 
-        <div data-class="section">
-            <div data-class="h1">Type</div>
-            <div data-class="h2">Basic</div>
-            <div data-class="box">
-                <div data-class="list disc">
-                    <div>옵션명은 2줄로 노출하지 않는다</div>
-                    <div>옵션명이 영역을 초과할 경우 말줄임표(...)를 노출할 수 있으나 지양한다</div>
+        <div data-class="tab-warp">
+            <div data-class="tab-list" role="tablist">
+                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
+            </div>
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+                <div data-class="section">
+                    접근성
                 </div>
             </div>
-            <div data-class="h3">large(24x24) / medium(20x20)</div>
-            <script type="text/html">
+            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="h2">Basic</div>
+                    <div data-class="box">
+                        <div data-class="list disc">
+                            <div>옵션명은 2줄로 노출하지 않는다</div>
+                            <div>옵션명이 영역을 초과할 경우 말줄임표(...)를 노출할 수 있으나 지양한다</div>
+                        </div>
+                    </div>
+                    <div data-class="h3">large(24x24) / medium(20x20)</div>
+                    <script type="text/html">
 <h3 class="h3">Basic</h3>
 <div class="rdoChk-group inline">
     <span class="selection checkbox lg off">
@@ -87,7 +98,9 @@
         <label for="checkCHK555" class="label"></label>
     </span>
 </div>
-            </script>
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
 

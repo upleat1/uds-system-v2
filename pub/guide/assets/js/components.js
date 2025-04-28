@@ -155,3 +155,42 @@ var Shortcut = (function() {
         });
     }
 })();
+
+var Tab = (function() {
+    (function init() {
+        setTab();
+        addEvent();
+    })();
+
+    function setTab() {
+        var tabs = $('[data-class="tab-list"]');
+        if (tabs.length == 0) return false;
+        _.each(tabs ,function(tab, i) {
+            var tab = $(tab),
+                el = tab.find('[aria-selected=true]'),
+                tabWrap = el.closest('[data-class="tab-warp"]'),
+                tabPannel = tabWrap.children('[data-class="tab-panel"]'),
+                index = el.index();
+            
+            tabPannel.eq(index).addClass('guide-active');
+        });
+    }
+
+    function addEvent() {
+        $(document).on('click', '[data-class*="button-tab"]', tabControl);
+    }
+
+    function tabControl(e) {
+        e.preventDefault();
+        var tab = $(this),
+            tabWrap = tab.closest('[data-class="tab-warp"]'),
+            tabPannel = tabWrap.children('[data-class="tab-panel"]'),
+            tabControls = tabPannel.filter('#' + tab.attr('aria-controls'));
+
+        tab.attr('aria-selected', 'true').siblings('[role=tab]').attr('aria-selected', 'false');
+
+        if (tabPannel.length) {
+            tabControls.addClass('guide-active').siblings('[data-class="tab-panel"]').removeClass('guide-active');
+        };
+    }   
+})();
