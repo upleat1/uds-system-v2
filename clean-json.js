@@ -11,6 +11,27 @@ const REMOVE_KEYS = [
   "semantic/light"
 ];
 
+// font-weight 변환 함수
+function convertFontWeight(obj) {
+  const fontWeightMap = {
+    "regular": 400,
+    "semibold": 600,
+    "bold": 700
+  };
+
+  for (const key in obj) {
+    const val = obj[key];
+    if (typeof val === 'object' && val !== null) {
+      if (val.type === 'text' && fontWeightMap[val.value.toLowerCase()]) {
+        // font-weight 값이 'regular', 'semibold', 'bold'일 때 숫자로 변환
+        val.value = fontWeightMap[val.value.toLowerCase()];
+      } else {
+        convertFontWeight(val); // 재귀
+      }
+    }
+  }
+}
+
 // 숫자(px)를 10px = 1rem 기준 rem 문자열로 변환
 function convertPxNumbersToRem(obj, base = 10) {
   for (const key in obj) {
@@ -57,6 +78,9 @@ try {
       outputJson[key] = inputJson[key];
     }
   }
+
+  // font-weight 값 변환
+  convertFontWeight(outputJson);
 
   // px → rem 변환 (10px = 1rem 기준)
   convertPxNumbersToRem(outputJson);

@@ -21,14 +21,14 @@
 .btn.stick.secondary.pressed {background:var(--button-stick-secondary-pressed-background-color); color:var(--button-stick-secondary-pressed-font-color)}
 .btn.stick.secondary:disabled {background:var(--button-stick-secondary-disabled-background-color); color:var(--button-stick-secondary-disabled-font-color);}
 
-.btn.stick.outlined {background:var(--button-stick-outlined-default-background-color); color:var(--button-stick-outlined-default-font-color); border:1px solid var(--button-stick-outlined-default-border-color)}
-.btn.stick.outlined.pressed {background:var(--button-stick-outlined-pressed-background-color); color:var(--button-stick-outlined-pressed-font-color); border:1px solid var(--button-stick-outlined-pressed-border-color)}
-.btn.stick.outlined:disabled {background:var(--button-stick-outlined-disabled-background-color); color:var(--button-stick-outlined-disabled-font-color); border:1px solid var(--button-stick-outlined-disabled-border-color)}
+.btn.stick.outlined {background:var(--button-stick-outlined-default-background-color); color:var(--button-stick-outlined-default-font-color); border:var(--button-stick-large-border-width) solid var(--button-stick-outlined-default-border-color)}
+.btn.stick.outlined.pressed {background:var(--button-stick-outlined-pressed-background-color); color:var(--button-stick-outlined-pressed-font-color); border:var(--button-stick-large-border-width) solid var(--button-stick-outlined-pressed-border-color)}
+.btn.stick.outlined:disabled {background:var(--button-stick-outlined-disabled-background-color); color:var(--button-stick-outlined-disabled-font-color); border:var(--button-stick-large-border-width) solid var(--button-stick-outlined-disabled-border-color)}
 
 /* Solid Button */
 .btn.solid {min-width:32.7rem;}
-.btn.solid.md {height:var(--button-solid-medium-height); line-height: 1; padding:0 var(--button-solid-medium-text-padding-x); font-size: var(--button-solid-medium-font-size); border-radius: var(--button-solid-medium-radius); border-width:var(--button-solid-medium-border-width)}
-.btn.solid.sm {height:var(--button-solid-small-height); line-height: 1; padding:0 var(--button-solid-small-text-padding-x); font-size: var(--button-solid-small-font-size); border-radius: var(--button-solid-small-radius); border-width:var(--button-solid-small-border-width)}
+.btn.solid.md {height:var(--button-solid-medium-height); line-height: var(--button-solid-medium-height); padding:0 var(--button-solid-medium-text-padding-x); font-size: var(--button-solid-medium-font-size); border-radius: var(--button-solid-medium-radius); border-width:var(--button-solid-medium-border-width)}
+.btn.solid.sm {height:var(--button-solid-small-height); line-height: var(--button-solid-small-height); padding:0 var(--button-solid-small-text-padding-x); font-size: var(--button-solid-small-font-size); border-radius: var(--button-solid-small-radius); border-width:var(--button-solid-small-border-width)}
 
 .btn.solid.primary {background:var(--button-solid-primary-default-background-color); color:var(--button-solid-primary-default-font-color);}
 .btn.solid.primary.pressed {background:var(--button-solid-primary-pressed-background-color); color:var(--button-solid-primary-pressed-font-color);}
@@ -40,12 +40,10 @@
 
 .btn.solid.outlined {background:var(--button-solid-outlined-default-background-color); color:var(--button-solid-outlined-default-font-color); border:1px solid var(--button-solid-outlined-default-border-color)}
 .btn.solid.outlined.pressed {background:var(--button-solid-outlined-pressed-background-color); color:var(--button-solid-outlined-pressed-font-color); border:1px solid var(--button-solid-outlined-pressed-border-color)}
-.btn.solid.outlined:disabled {background:var(--button-solid-outlined-disabled-background-color); color:var(--button-solid-outlined-disabled-font-color); border:1px solid var(--button-solid-outlined-disabled-border-color)}
+.btn.solid.outlined:disabled {background:var(--button-solid-outlined-disabled-background-color); color:var(--button-solid-outlined-disabled-font-color); border-color:var(--button-solid-outlined-disabled-border-color);}
 
 /* Text Button */
 .btn-text {display: inline-flex; align-items: center; vertical-align: middle;}
-.btn-text::before {width: auto;}
-
 .btn-text.lg {font-size: var(--button-text-large-font-size); line-height:var(--button-text-large-line-height)}
 .btn-text.md {font-size: var(--button-text-medium-font-size); line-height:var(--button-text-medium-line-height)}
 .btn-text.sm {font-size: var(--button-text-small-font-size); line-height:var(--button-text-small-line-height)}

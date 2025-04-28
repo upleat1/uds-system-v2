@@ -4,8 +4,8 @@
 /* Heading */
 h1, h2, h3, h4 {color:var(--color-text-title); vertical-align:middle; word-break:keep-all;}
 .h1 {font-size:var(--font-size-heading-large); line-height: var(--typo-line-height-font-size-28);}
-.h2 {margin:3.2rem 0 0;font-size:var(--font-size-heading-medium); line-height: var(--typo-line-height-font-size-20);} 
-.h3 {margin:3.2rem 0 0;font-size:var(--font-size-heading-small); line-height: var(--typo-line-height-font-size-18);} 
+.h2 {margin:var(--gap-28) 0 var(--gap-16);font-size:var(--font-size-heading-medium); line-height: var(--typo-line-height-font-size-20);} 
+.h3 {margin:var(--gap-32) 0 0;font-size:var(--font-size-heading-small); line-height: var(--typo-line-height-font-size-18);} 
 .h4 {margin:1.2rem 0 0; font-size:var(--font-size-heading-xsmall); line-height: var(--typo-line-height-font-size-16);}
 
 /* Body Text */
@@ -14,6 +14,8 @@ h1, h2, h3, h4 {color:var(--color-text-title); vertical-align:middle; word-break
 .p-sm {font-size: var(--font-size-body-small); line-height: var(--typo-line-height-font-size-14);}
 
 /*** Bullet List ***/
+.bullet-list {margin-top: var(--gap-16);}
+.bullet-list > li:first-child {margin-top: 0;}
 .bullet-list > li {position: relative; margin-top:var(--bulletlist-list-gap-y); font-size: var(--bulletlist-font-size); color:var(--bulletlist-font-color); line-height: var(--bulletlist-line-height);}
 .bullet-list > li:before {content:''; display:inline-block; position: absolute; left:0; top:var(--bulletlist-list-gap-y);}
 

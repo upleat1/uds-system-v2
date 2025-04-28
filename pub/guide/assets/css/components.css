@@ -616,9 +616,9 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
         display: block;
     }
 
-    [data-class="contents"] {
+/*     [data-class="contents"] {
         padding-left: 400px;
-    }
+    } */
 }
 
 @media (max-width: 1024px) {

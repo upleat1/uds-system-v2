@@ -305,15 +305,15 @@
       },
       "font-weight": {
         "regular": {
-          "value": "400",
+          "value": "regular",
           "type": "text"
         },
         "Bold": {
-          "value": "700",
+          "value": "Bold",
           "type": "text"
         },
         "SemiBold": {
-          "value": "600",
+          "value": "SemiBold",
           "type": "text"
         }
       },
