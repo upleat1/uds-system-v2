@@ -12,11 +12,8 @@
 
 .tooltip-wrap .tooltip-cont {padding-right:calc(var(--tooltip-close-toucharea) + var(--tooltip-padding-right)); font-size:var(--tooltip-text-font-size); color:var(--tooltip-text-font-color); line-height:var(--tooltip-text-line-height); white-space:normal;}
 .tooltip-wrap .tooltip-cont .p {font-size:inherit;}
-.tooltip-wrap .tooltip-cont .depth {margin-top:var(--tooltip-wrap-gap);}
-.tooltip-wrap .tooltip-cont .depth > li {color:var(--tooltip-text-font-color);}
-.tooltip-wrap .tooltip-cont .depth > li:before {background:var(--tooltip-text-font-color);}
-.tooltip-wrap .tooltip-cont .depth.bul > li:before {top:calc(((var(--tooltip-text-line-height) - var(--bulletlist-bullet-icon-size-height)) / 2)); border-radius:var(--radius-max);}
-.tooltip-wrap .tooltip-cont .depth.bul > li + li {margin-top:var(--tooltip-bullet-gap);}
-.tooltip-wrap .tooltip-cont .depth.depth > li:before {top:calc(((var(--tooltip-text-line-height) - var(--bulletlist-bullet-icon-size-height)) / 2)); border-radius:var(--radius-max);}
+.tooltip-wrap .tooltip-cont .bullet-list {margin-top:var(--tooltip-wrap-gap);}
+.tooltip-wrap .tooltip-cont .bullet-list > li {color:var(--tooltip-text-font-color);}
+.tooltip-wrap .tooltip-cont .bullet-list > li:before {background-color:var(--tooltip-text-font-color);}
 .tooltip-wrap .tooltip-tit {display:block; padding-right:var(--tooltip-close-toucharea); font-weight:var(--tooltip-title-font-weight); font-size:var(--tooltip-title-font-size); color:var(--tooltip-title-font-color); line-height:var(--tooltip-title-line-height);}
 .tooltip-wrap .tooltip-tit + .tooltip-cont {margin-top:var(--tooltip-wrap-gap); padding-right:0;}
