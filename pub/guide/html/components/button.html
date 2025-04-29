@@ -37,8 +37,8 @@
 
         <div data-class="tab-warp">
             <div data-class="tab-list" role="tablist">
-                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
-                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
+                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide02">코드</button>
             </div>
             <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
                 <div data-class="section">
@@ -46,65 +46,69 @@
                     <div data-class="g-conts-area section-link">
                         <h3 data-class="sec-tit">접근성 가이드라인</h3>
                         <div data-class="g-conts-area sp-sm">
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">모든 버튼에는 접근 가능한 이름을 제공한다.</p>
-                            <p data-class="g-desc">모든 버튼에는 기능, 목적을 이해할 수 있는 설명을 텍스트로 제공해야 한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
-                              <li role="listitem">WCAG 2.1 Name, Role, Value (A)</li>
-                            </ul>
-                          </div>
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">버튼의 기능을 설명할 수 있는 텍스트 레이블이 있는 아이콘 버튼에 대체 텍스트를 제공하지 않는다.</p>
-                            <p data-class="g-desc">이 경우 버튼의 아이콘은 강조와 버튼 용도의 빠른 인지를 위해 사용되는 것이므로 아이콘에 대체 텍스트를 제공하지 않아야 한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">KWCAG 2.2 적절한 대체 텍스트 제공</li>
-                              <li role="listitem">WCAG 2.1 Non-text Content (A)</li>
-                            </ul>
-                          </div>
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">버튼의 접근 가능한 이름은 버튼을 통해 실행되는 기능을 적절하게 설명할 수 있는 내용으로 제공한다.</p>
-                            <p data-class="g-desc">버튼이 아이콘 이미지만으로 제공되는 경우, 버튼의 텍스트 이름이 이미지에 대한 설명이 아니라 버튼의 기능에 대한 정확한 설명을 제공할 수 있는지에 유의하여 제공해야 한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
-                              <li role="listitem">WCAG 2.1 Headings and Labels (AA)</li>
-                            </ul>
-                          </div>
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">모든 버튼은 키보드로 접근하고 조작할 수 있도록 한다.</p>
-                            <p data-class="g-desc">비활성화, 사용불가 상태인 경우를 제외하고 모든 버튼은 키보드로 접근하고 조작할 수 있도록 해야 한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">KWCAG 2.2 키보드 사용 보장</li>
-                              <li role="listitem">WCAG 2.1 Keyboard (A)</li>
-                            </ul>
-                          </div>
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">버튼의 키보드 초점이 명확하게 표시되도록 한다.</p>
-                            <p data-class="g-desc">모든 버튼은 초점을 받은 상태가 시각적으로 명확하게 구분되어야 한다. 가능한 한 포커스링의 스타일은 사용자 에이전트에서 제공하는 기본 스타일을 유지한다. 만약 포커스링 스타일에 변경이 필요하다면 모든 유형의 버튼에서 포커스링이 가려지지 않고 명확하게 표시되며 인접 배경과 3:1
-                              이상의 명도 대비를 갖는지 확인해야 한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">KWCAG 2.2 초점 이동과 표시</li>
-                              <li role="listitem">WCAG 2.1 Focus Visible (AA)</li>
-                              <li role="listitem">WCAG 2.1 Non-text Contrast (AA)</li>
-                            </ul>
-                          </div>
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">버튼으로 작동하는 모든 요소는 스크린 리더에서 버튼으로 인지될 수 있도록 한다.</p>
-                            <p data-class="g-desc">&lt;button&gt;대신 불가피하게 다른 태그를 사용해야 하는 경우 role="button"을 사용하여 스크린 리더에서 요소의 역할이 버튼으로 인식될 수 있도록 해야 한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">WCAG 2.1 Name, Role, Value (A)</li>
-                            </ul>
-                          </div>
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">버튼을 적절한 크기로 제공한다.</p>
-                            <p data-class="g-desc">클릭, 터치 영역을 정교하게 조작하기 어려운 사용자를 고려하여, 마우스 상호작용에 대해서는 17px x 17px, 터치 상호작용에 대해서는 44px x 44px 이상의 영역에서 반응할 수 있는 컨트롤 크기를 사용할 것을 권장한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">KWCAG 2.2 조작 가능</li>
-                              <li role="listitem">WCAG 2.1 Target Size (AAA)</li>
-                            </ul>
-                          </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">모든 버튼에는 접근 가능한 이름을 제공한다.</p>
+                                <p data-class="g-desc">모든 버튼에는 기능, 목적을 이해할 수 있는 설명을 텍스트로 제공해야 한다.</p>
+                                <ul data-class="info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
+                                    <li role="listitem">WCAG 2.1 Name, Role, Value (A)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">버튼의 기능을 설명할 수 있는 텍스트 레이블이 있는 아이콘 버튼에 대체 텍스트를 제공하지 않는다.</p>
+                                <p data-class="g-desc">이 경우 버튼의 아이콘은 강조와 버튼 용도의 빠른 인지를 위해 사용되는 것이므로 아이콘에 대체 텍스트를 제공하지 않아야 한다.</p>
+                                <ul data-class="info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 적절한 대체 텍스트 제공</li>
+                                    <li role="listitem">WCAG 2.1 Non-text Content (A)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">버튼의 접근 가능한 이름은 버튼을 통해 실행되는 기능을 적절하게 설명할 수 있는 내용으로 제공한다.</p>
+                                <p data-class="g-desc">버튼이 아이콘 이미지만으로 제공되는 경우, 버튼의 텍스트 이름이 이미지에 대한 설명이 아니라 버튼의 기능에 대한 정확한 설명을 제공할 수 있는지에
+                                    유의하여 제공해야 한다.</p>
+                                <ul data-class="info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
+                                    <li role="listitem">WCAG 2.1 Headings and Labels (AA)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">모든 버튼은 키보드로 접근하고 조작할 수 있도록 한다.</p>
+                                <p data-class="g-desc">비활성화, 사용불가 상태인 경우를 제외하고 모든 버튼은 키보드로 접근하고 조작할 수 있도록 해야 한다.</p>
+                                <ul data-class="info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 키보드 사용 보장</li>
+                                    <li role="listitem">WCAG 2.1 Keyboard (A)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">버튼의 키보드 초점이 명확하게 표시되도록 한다.</p>
+                                <p data-class="g-desc">모든 버튼은 초점을 받은 상태가 시각적으로 명확하게 구분되어야 한다. 가능한 한 포커스링의 스타일은 사용자 에이전트에서 제공하는 기본 스타일을 유지한다.
+                                    만약 포커스링 스타일에 변경이 필요하다면 모든 유형의 버튼에서 포커스링이 가려지지 않고 명확하게 표시되며 인접 배경과 3:1
+                                    이상의 명도 대비를 갖는지 확인해야 한다.</p>
+                                <ul data-class="info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 초점 이동과 표시</li>
+                                    <li role="listitem">WCAG 2.1 Focus Visible (AA)</li>
+                                    <li role="listitem">WCAG 2.1 Non-text Contrast (AA)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">버튼으로 작동하는 모든 요소는 스크린 리더에서 버튼으로 인지될 수 있도록 한다.</p>
+                                <p data-class="g-desc">&lt;button&gt;대신 불가피하게 다른 태그를 사용해야 하는 경우 role="button"을 사용하여 스크린 리더에서 요소의 역할이 버튼으로
+                                    인식될 수 있도록 해야 한다.</p>
+                                <ul data-class="info-list decimal" role="list">
+                                    <li role="listitem">WCAG 2.1 Name, Role, Value (A)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">버튼을 적절한 크기로 제공한다.</p>
+                                <p data-class="g-desc">클릭, 터치 영역을 정교하게 조작하기 어려운 사용자를 고려하여, 마우스 상호작용에 대해서는 17px x 17px, 터치 상호작용에 대해서는 44px x
+                                    44px 이상의 영역에서 반응할 수 있는 컨트롤 크기를 사용할 것을 권장한다.</p>
+                                <ul data-class="info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 조작 가능</li>
+                                    <li role="listitem">WCAG 2.1 Target Size (AAA)</li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
+                    </div>
 
                 </div>
             </div>
@@ -120,20 +124,20 @@
                         </div>
                     </div>
                     <script type="text/html">
-<h3 data-class="h3">Primary</h3>
-<button type="button" data-class="btn stick lg primary">메인버튼(Normal)</button>
-<button type="button" data-class="btn stick lg primary pressed">메인버튼(Pressed)</button>
-<button type="button" data-class="btn stick lg primary" disabled>메인버튼(Disabled)</button>
+<h3 class="h3">Primary</h3>
+<button type="button" class="btn stick lg primary">메인버튼(Normal)</button>
+<button type="button" class="btn stick lg primary pressed">메인버튼(Pressed)</button>
+<button type="button" class="btn stick lg primary" disabled>메인버튼(Disabled)</button>
 
-<h3 data-class="h3">Secondary</h3>
-<button type="button" data-class="btn stick lg secondary">메인버튼(Normal)</button>
-<button type="button" data-class="btn stick lg secondary pressed">메인버튼(Pressed)</button>
-<button type="button" data-class="btn stick lg secondary" disabled>메인버튼(dsisabled)</button>
+<h3 class="h3">Secondary</h3>
+<button type="button" class="btn stick lg secondary">메인버튼(Normal)</button>
+<button type="button" class="btn stick lg secondary pressed">메인버튼(Pressed)</button>
+<button type="button" class="btn stick lg secondary" disabled>메인버튼(dsisabled)</button>
 
-<h3 data-class="h3">Outlined</h3>
-<button type="button" data-class="btn stick lg outlined">메인버튼(Normal)</button>
-<button type="button" data-class="btn stick lg outlined pressed">메인버튼(Pressed)</button>
-<button type="button" data-class="btn stick lg outlined" disabled>메인버튼(Disabled)</button>
+<h3 class="h3">Outlined</h3>
+<button type="button" class="btn stick lg outlined">메인버튼(Normal)</button>
+<button type="button" class="btn stick lg outlined pressed">메인버튼(Pressed)</button>
+<button type="button" class="btn stick lg outlined" disabled>메인버튼(Disabled)</button>
                     </script>
         
                     <div data-class="h2">Solid Button</div>
@@ -144,32 +148,32 @@
                         </div>
                     </div>
                     <script type="text/html">
-<h3 data-class="h3">Primary</h3>
-<button type="button" data-class="btn solid md primary">버튼명(Normal/medium)</button>
-<button type="button" data-class="btn solid md primary pressed">버튼명(Pressed/medium)</button>
-<button type="button" data-class="btn solid md primary" disabled>버튼명(Disabled/medium)</button>
+<h3 class="h3">Primary</h3>
+<button type="button" class="btn solid md primary">버튼명(Normal/medium)</button>
+<button type="button" class="btn solid md primary pressed">버튼명(Pressed/medium)</button>
+<button type="button" class="btn solid md primary" disabled>버튼명(Disabled/medium)</button>
 <br>
-<button type="button" data-class="btn solid sm primary">버튼명(Normal/small)</button>
-<button type="button" data-class="btn solid sm primary pressed">버튼명(Pressed/small)</button>
-<button type="button" data-class="btn solid sm primary" disabled>버튼명(Disabled/small)</button>
+<button type="button" class="btn solid sm primary">버튼명(Normal/small)</button>
+<button type="button" class="btn solid sm primary pressed">버튼명(Pressed/small)</button>
+<button type="button" class="btn solid sm primary" disabled>버튼명(Disabled/small)</button>
 
-<h3 data-class="h3">Secondary</h3>
-<button type="button" data-class="btn solid md secondary">버튼명(Normal/medium)</button>
-<button type="button" data-class="btn solid md secondary pressed">버튼명(Pressed/medium)</button>
-<button type="button" data-class="btn solid md secondary" disabled>버튼명(Disabled/medium)</button>
+<h3 class="h3">Secondary</h3>
+<button type="button" class="btn solid md secondary">버튼명(Normal/medium)</button>
+<button type="button" class="btn solid md secondary pressed">버튼명(Pressed/medium)</button>
+<button type="button" class="btn solid md secondary" disabled>버튼명(Disabled/medium)</button>
 <br>
-<button type="button" data-class="btn solid sm secondary">버튼명(Normal/small)</button>
-<button type="button" data-class="btn solid sm secondary pressed">버튼명(Pressed/small)</button>
-<button type="button" data-class="btn solid sm secondary" disabled>버튼명(Disabled/small)</button>
+<button type="button" class="btn solid sm secondary">버튼명(Normal/small)</button>
+<button type="button" class="btn solid sm secondary pressed">버튼명(Pressed/small)</button>
+<button type="button" class="btn solid sm secondary" disabled>버튼명(Disabled/small)</button>
 
-<h3 data-class="h3">Outlined</h3>
-<button type="button" data-class="btn solid md outlined">버튼명(Normal/medium)</button>
-<button type="button" data-class="btn solid md outlined pressed">버튼명(Pressed/medium)</button>
-<button type="button" data-class="btn solid md outlined" disabled>버튼명(Disabled/medium)</button>
+<h3 class="h3">Outlined</h3>
+<button type="button" class="btn solid md outlined">버튼명(Normal/medium)</button>
+<button type="button" class="btn solid md outlined pressed">버튼명(Pressed/medium)</button>
+<button type="button" class="btn solid md outlined" disabled>버튼명(Disabled/medium)</button>
 <br>
-<button type="button" data-class="btn solid sm outlined">버튼명(Normal/small)</button>
-<button type="button" data-class="btn solid sm outlined pressed">버튼명(Pressed/small)</button>
-<button type="button" data-class="btn solid sm outlined" disabled>버튼명(Disabled/small)</button>
+<button type="button" class="btn solid sm outlined">버튼명(Normal/small)</button>
+<button type="button" class="btn solid sm outlined pressed">버튼명(Pressed/small)</button>
+<button type="button" class="btn solid sm outlined" disabled>버튼명(Disabled/small)</button>
                     </script>
         
                     <div data-class="h2">Text Button</div>
@@ -179,43 +183,43 @@
                         </div>
                     </div>
                     <script type="text/html">
-<h3 data-class="h3">Normal</h3>
-<button type="button" data-class="btn-text default lg"><i data-class="left icon-duplicate"></i>텍스트버튼(18px)</button>
-<button type="button" data-class="btn-text default md"><i data-class="left icon-duplicate"></i>텍스트버튼(16px)</button>
-<button type="button" data-class="btn-text default sm"><i data-class="left icon-duplicate"></i>텍스트버튼(14px)</button>
+<h3 class="h3">Normal</h3>
+<button type="button" class="btn-text default lg"><i class="left icon-duplicate"></i>텍스트버튼(18px)</button>
+<button type="button" class="btn-text default md"><i class="left icon-duplicate"></i>텍스트버튼(16px)</button>
+<button type="button" class="btn-text default sm"><i class="left icon-duplicate"></i>텍스트버튼(14px)</button>
 <br>
-<button type="button" data-class="btn-text default lg">텍스트버튼(18px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text default md">텍스트버튼(16px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text default sm">텍스트버튼(14px)<i data-class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text default lg">텍스트버튼(18px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text default md">텍스트버튼(16px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text default sm">텍스트버튼(14px)<i class="right icon-arrow-right"></i></button>
 <br>
-<button type="button" data-class="btn-text default lg"><i data-class="left icon-duplicate"></i>텍스트버튼(18px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text default md"><i data-class="left icon-duplicate"></i>텍스트버튼(16px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text default sm"><i data-class="left icon-duplicate"></i>텍스트버튼(14px)<i data-class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text default lg"><i class="left icon-duplicate"></i>텍스트버튼(18px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text default md"><i class="left icon-duplicate"></i>텍스트버튼(16px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text default sm"><i class="left icon-duplicate"></i>텍스트버튼(14px)<i class="right icon-arrow-right"></i></button>
 
-<h3 data-class="h3">Secondary</h3>
-<button type="button" data-class="btn-text secondary lg"><i data-class="left icon-duplicate"></i>텍스트버튼(18px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text secondary md"><i data-class="left icon-duplicate"></i>텍스트버튼(16px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text secondary sm"><i data-class="left icon-duplicate"></i>텍스트버튼(14px)<i data-class="right icon-arrow-right"></i></button>
+<h3 class="h3">Secondary</h3>
+<button type="button" class="btn-text secondary lg"><i class="left icon-duplicate"></i>텍스트버튼(18px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text secondary md"><i class="left icon-duplicate"></i>텍스트버튼(16px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text secondary sm"><i class="left icon-duplicate"></i>텍스트버튼(14px)<i class="right icon-arrow-right"></i></button>
 
-<h3 data-class="h3">Disabled</h3>
-<button type="button" data-class="btn-text default lg" disabled><i data-class="left icon-duplicate"></i>텍스트버튼(18px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text default md" disabled><i data-class="left icon-duplicate"></i>텍스트버튼(16px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text default sm" disabled><i data-class="left icon-duplicate"></i>텍스트버튼(14px)<i data-class="right icon-arrow-right"></i></button>
+<h3 class="h3">Disabled</h3>
+<button type="button" class="btn-text default lg" disabled><i class="left icon-duplicate"></i>텍스트버튼(18px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text default md" disabled><i class="left icon-duplicate"></i>텍스트버튼(16px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text default sm" disabled><i class="left icon-duplicate"></i>텍스트버튼(14px)<i class="right icon-arrow-right"></i></button>
 
-<h3 data-class="h3">Danger</h3>
-<button type="button" data-class="btn-text danger lg"><i data-class="left icon-duplicate"></i>텍스트버튼(18px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text danger md"><i data-class="left icon-duplicate"></i>텍스트버튼(16px)<i data-class="right icon-arrow-right"></i></button>
-<button type="button" data-class="btn-text danger sm"><i data-class="left icon-duplicate"></i>텍스트버튼(14px)<i data-class="right icon-arrow-right"></i></button>
+<h3 class="h3">Danger</h3>
+<button type="button" class="btn-text danger lg"><i class="left icon-duplicate"></i>텍스트버튼(18px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text danger md"><i class="left icon-duplicate"></i>텍스트버튼(16px)<i class="right icon-arrow-right"></i></button>
+<button type="button" class="btn-text danger sm"><i class="left icon-duplicate"></i>텍스트버튼(14px)<i class="right icon-arrow-right"></i></button>
                     </script>
         
                     <div data-class="h2">Icon Button</div>
                     <script type="text/html">
-<h3 data-class="h3">단일 아이콘</h3>
-<button type="button" data-class="btn-icon icon-delete md" aria-label="대체텍스트"></button>
-<button type="button" data-class="btn-icon icon-delete lg" aria-label="대체텍스트"></button>
+<h3 class="h3">단일 아이콘</h3>
+<button type="button" class="btn-icon icon-delete md" aria-label="대체텍스트"></button>
+<button type="button" class="btn-icon icon-delete lg" aria-label="대체텍스트"></button>
 
-<h3 data-class="h3">배경 이미지</h3>
-<button type="button" data-class="btn-icon btn-tooltip js-tooltip" aria-label="도움말 자세히보기"></button>
+<h3 class="h3">배경 이미지</h3>
+<button type="button" class="btn-icon btn-tooltip js-tooltip" aria-label="도움말 자세히보기"></button>
                     </script>
                 </div>
         
@@ -224,16 +228,16 @@
         
                     <div data-class="h2">Confirm Button</div>
                     <script type="text/html">
-<div data-class="btn-confirm-wrap">
-    <div data-class="btn-area">
-        <button type="button" data-class="btn stick lg primary">메인버튼(Normal)</button>
+<div class="btn-confirm-wrap">
+    <div class="btn-area">
+        <button type="button" class="btn stick lg primary">메인버튼(Normal)</button>
     </div>
 </div>
 <br>
-<div data-class="btn-confirm-wrap">
-    <div data-class="btn-area">
-        <span><button type="button" data-class="btn stick lg secondary">부정</button></span>
-        <span><button type="button" data-class="btn stick lg primary">긍정</button></span>
+<div class="btn-confirm-wrap">
+    <div class="btn-area">
+        <span><button type="button" class="btn stick lg secondary">부정</button></span>
+        <span><button type="button" class="btn stick lg primary">긍정</button></span>
     </div>
 </div>
                     </script>
