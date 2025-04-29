@@ -742,3 +742,17 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
 html.dark [data-class="shortcut"] a>span::before{
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' enable-background='new 0 0 50 50'%3E%3Cpath d='M 12 6 C 10.3 6 9 7.3 9 9 L 9 39 L 11 37 L 11 9 C 11 8.4 11.4 8 12 8 L 38 8 C 38.6 8 39 8.4 39 9 L 39 41 C 39 41.6 38.6 42 38 42 L 16 42 L 14 44 L 38 44 C 39.7 44 41 42.7 41 41 L 41 9 C 41 7.3 39.7 6 38 6 L 12 6 z M 16 25 L 16 27 L 24.59375 27 L 9.09375 42.5 L 10.5 43.90625 L 26 28.40625 L 26 37 L 28 37 L 28 26 L 28 25 L 27 25 L 16 25 z' fill='%23fff' /%3E%3C/svg%3E%0A");
 }
+
+
+/*** 접근성 가이드 ***/
+[data-class="g-conts-area"] {font-size: 1.6rem; line-height: 1.4;}
+[data-class="g-h1"] {margin-bottom: 4rem; font-size: 2.8rem; font-weight: 700;}
+[data-class="g-h2"] {margin-top: 3.4rem; font-size: 2rem; font-weight: 700;}
+[data-class="g-desc"] {margin-top: 1.6rem; font-size: 1.6rem; line-height: 1.4;}
+
+[data-class*="g-list"] {margin-top: 1.6rem;}
+[data-class*="g-list"] > li:first-child {margin-top: 0;}
+[data-class*="g-list"] > li {position: relative; margin-top:.8rem; padding-left:1.6rem; word-break:keep-all; word-wrap:break-word;}
+[data-class*="g-list"] > li:before {content:''; display:inline-block; position: absolute; left:0; top:.8rem;}
+[data-class="g-list-bullet"] > li:before {width:.4rem; height:.4rem; background:#222; border-radius:50%;}
+[data-class="g-list-dash"] > li:before {width:.4rem; height:1px; background:#222;}
