@@ -745,14 +745,16 @@ html.dark [data-class="shortcut"] a>span::before{
 
 
 /*** 접근성 가이드 ***/
-[data-class="g-conts-area"] {font-size: 1.6rem; line-height: 1.4;}
-[data-class="g-h1"] {margin-bottom: 4rem; font-size: 2.8rem; font-weight: 700;}
-[data-class="g-h2"] {margin-top: 3.4rem; font-size: 2rem; font-weight: 700;}
-[data-class="g-desc"] {margin-top: 1.6rem; font-size: 1.6rem; line-height: 1.4;}
+[data-class="g-conts-area sp-sm"] {margin-bottom: 4rem; font-size: 1.6rem; line-height: 1.4;}
+[data-class*="g-desc-box"] {display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; margin-top: 4rem; gap: 1.6rem;}
 
-[data-class*="g-list"] {margin-top: 1.6rem;}
-[data-class*="g-list"] > li:first-child {margin-top: 0;}
-[data-class*="g-list"] > li {position: relative; margin-top:.8rem; padding-left:1.6rem; word-break:keep-all; word-wrap:break-word;}
-[data-class*="g-list"] > li:before {content:''; display:inline-block; position: absolute; left:0; top:.8rem;}
-[data-class="g-list-bullet"] > li:before {width:.4rem; height:.4rem; background:#222; border-radius:50%;}
-[data-class="g-list-dash"] > li:before {width:.4rem; height:1px; background:#222;}
+[data-class="sec-tit"] {font-size: 2.8rem; font-weight: 700;}
+[data-class="g-tit"] {font-size: 2rem; font-weight: 700;}
+[data-class="g-desc"] {font-size: 1.6rem; line-height: 1.4;}
+
+[data-class*="info-list"] {margin-top: 1.6rem}
+[data-class*="info-list"] > li:first-child {margin-top: 0;}
+[data-class*="info-list"] > li {position: relative; margin-top:.8rem; padding-left:1.6rem; word-break:keep-all; word-wrap:break-word;}
+[data-class*="info-list"] > li:before {content:''; display:inline-block; position: absolute; left:0; top:.8rem;}
+[data-class="info-list decimal"] > li:before {width:.4rem; height:.4rem; background:#222; border-radius:50%;}
+[data-class="info-list dash"] > li:before {width:.4rem; height:1px; background:#222;}
