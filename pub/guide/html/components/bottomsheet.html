@@ -63,15 +63,40 @@
 
         <div data-class="tab-warp">
             <div data-class="tab-list" role="tablist">
-                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide01">접근성</button>
-                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide02">코드</button>
+                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
             </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+            <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
                 <div data-class="section">
-                    접근성
+
+                    <div data-class="g-conts-area">
+                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
+                        <div data-class="g-conts-area">
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">모달과 내부 요소의 초점 이동 순서를 논리적으로 제공한다.</p>
+                            <p data-class="g-desc">모달 열기 버튼을 실행하여 창이 활성화되었을 때, 키보드 초점은 모달 자체 또는 모달 내에서 상호작용이 가능한 첫 번째 요소로 이동해야 하며, 모달을 닫거나 취소했을 때 초점은 모달 열기 버튼으로 이동해야 한다. 모달이 활성화된 상태에서 키보드 초점 및 스크린 리더의 가상 초점은
+                            모달 내부에서만 이동해야 한다. 이러한 키보드 상호작용 구현을 통해 키보드 사용자 및 스크린 리더 사용자는 별도의 탐색 과정 없이 변화된 맥락에서 콘텐츠를 계속적으로 이용할 수 있다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 초점 이동</li>
+                            <li>WCAG 2.1 Focus Order (A)</li>
+                            <li>WCAG 2.1 No Keyboard Trap (A)</li>
+                            </ul>
+                        </div>
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">모달의 닫기 버튼은 모달의 가장 마지막 요소로 마크업한다.</p>
+                            <p data-class="g-desc">'X' 아이콘으로 제공되는 모달의 닫기 버튼은 모달의 가장 마지막 요소로 마크업한다. 닫기 버튼이 모달의 헤더 바로 다음 또는 가장 첫 번째 요소로 제공될 경우 키보드 사용자는 본문의 콘텐츠 탐색 후 모달을 닫기 위해 콘텐츠를 역방향으로 탐색해야 하며 스크린 리더 사용자는 모달에
+                            본문 콘텐츠가 있음을 인지하지 못할 수 있다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 콘텐츠의 선형화</li>
+                            <li>WCAG 2.1 Meaningful Sequence (A)</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
                 <div data-class="box">
                     <h3>1.바텀시트 정책</h3>
                     <ul class="p-list">

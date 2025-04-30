@@ -1115,35 +1115,54 @@ if (!UICommon) {
         /* 툴팁 from tooltip.html */
         var tooltipButton = {
             init: function () {
-                $('.js-tooltip').off('click').on('click', function (e) {
+                this.tooltip = $('.js-tooltip');
+    
+                if (!this.tooltip.length) return;
+
+                this.setup();
+                this.addEvent();
+            },
+            setup: function () {
+                this.tooltip.each((index, item) => {
+                    // id 설정
+                    const _item = $(item),
+                          _tooltipPopover = _item.closest('.tooltip-wrap').find('.tooltip-popover'),
+                          _idx = `tooltip-popover-${index}${Math.random().toString(36).substring(2, 9)}`;
+                    
+                    _item.attr('aria-labelledby', _idx);
+                    _tooltipPopover.attr('id', _idx);
+                });
+            },
+            addEvent: function () {
+                this.tooltip.off('click').on('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     _this = $(this);
-                    var _winW = $('body').width(),
-                        _tooltipWrap = _this.parents('.tooltip-limited').find('.tooltip-wrap'),
-                        _tooltipWrapL = _this.offset().left - 24,
-                        _tooltipWrapR = _winW - (_this.offset().left + 44);
+                    let _winW = $('body').width(),
+                        _tooltipPopover = _this.parents('.tooltip-wrap').find('.tooltip-popover'),
+                        _tooltipPopoverL = _this.offset().left - 24,
+                        _tooltipPopoverR = _winW - (_this.offset().left + 44);
 
-                    if (_tooltipWrap.css('display') == 'block') {
-                        _tooltipWrap.removeClass('show');
+                    if (_tooltipPopover.css('display') == 'block') {
+                        _tooltipPopover.removeClass('show');
                         setTimeout(function () {
-                            _tooltipWrap.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-limited').parent().css('z-index', '').parent().css('z-index', '');
+                            _tooltipPopover.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-wrap').parent().css('z-index', '').parent().css('z-index', '');
                         }, 300);
                     } else {
-                        $('.tooltip-wrap').hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-limited').parent().css('z-index', '').parent().css('z-index', '');
-                        tooltipButton.position(_this, _tooltipWrap);
-                        _this.closest('.tooltip-limited').parent().css('z-index', '101').parent().css('z-index', '101');
-                        _tooltipWrap.show().attr('aria-hidden', 'false');
-                        _tooltipWrap.parents('.acc-pannel').parents('div').hasClass('section-f') ? _tooltipWrap.css({ 'left': -_tooltipWrapL - 8, 'right': -_tooltipWrapR - 8 }) : _tooltipWrap.css({ 'left': -_tooltipWrapL, 'right': -_tooltipWrapR });
+                        $('.tooltip-popover').hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-wrap').parent().css('z-index', '').parent().css('z-index', '');
+                        tooltipButton.position(_this, _tooltipPopover);
+                        _this.closest('.tooltip-wrap').parent().css('z-index', '101').parent().css('z-index', '101');
+                        _tooltipPopover.show().attr('aria-hidden', 'false');
+                        _tooltipPopover.parents('.acc-pannel').parents('div').hasClass('section-f') ? _tooltipPopover.css({ 'left': -_tooltipPopoverL - 8, 'right': -_tooltipPopoverR - 8 }) : _tooltipPopover.css({ 'left': -_tooltipPopoverL, 'right': -_tooltipPopoverR });
                         setTimeout(function () {
-                            _tooltipWrap.addClass('show');
+                            _tooltipPopover.addClass('show');
                         }, 100);
                     }
 
-                    var close = function () {
-                        _tooltipWrap.removeClass('show');
+                    let close = function () {
+                        _tooltipPopover.removeClass('show');
                         setTimeout(function () {
-                            _tooltipWrap.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-limited').parent().css('z-index', '').parent().css('z-index', '');
+                            _tooltipPopover.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-wrap').parent().css('z-index', '').parent().css('z-index', '');
                         }, 300);
                         setTimeout(function () { _this.focus(); }, 100);
                     };
@@ -1155,10 +1174,10 @@ if (!UICommon) {
                     });
 
                     $(document).on('click', function (e) {
-                        if ($(e.target).closest('.tooltip-limited').length === 0) {
-                            _tooltipWrap.removeClass('show');
+                        if ($(e.target).closest('.tooltip-wrap').length === 0) {
+                            _tooltipPopover.removeClass('show');
                             setTimeout(function () {
-                                _tooltipWrap.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-limited').parent().css('z-index', '').parent().css('z-index', '');
+                                _tooltipPopover.hide().removeClass('top').attr('aria-hidden', 'true').closest('.tooltip-wrap').parent().css('z-index', '').parent().css('z-index', '');
                             }, 300);
                         }
                     });
@@ -1933,12 +1952,12 @@ if (!UICommon) {
                 }
             },
             accAccoTipPos: function () {
-                var $accAccoTip = $('.acc-acco-list .toggle-panel').children('.tooltip-limited');
+                var $accAccoTip = $('.acc-acco-list .toggle-panel').children('.tooltip-wrap');
                 if($accAccoTip.length) {
                     setTimeout(function () {
                         $('.acc-acco-list').each(function () {
                             var $this = $(this);
-                            var $tip = $this.find('.toggle-panel').children('.tooltip-limited');
+                            var $tip = $this.find('.toggle-panel').children('.tooltip-wrap');
                             if($tip.length) {
                                 var _cw = $this.find('.tit-area .cate').outerWidth();
                                 $tip.css('left', Math.floor(_cw)+26);

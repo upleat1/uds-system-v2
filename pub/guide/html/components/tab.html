@@ -15,27 +15,78 @@
     <link rel="stylesheet" href="/pub/assets/css/common.css">
     <link rel="stylesheet" href="/pub/assets/css/components.css">
     <style>
-        .menu-wrap {
-            position: relative;
-        }
     </style>
 </head>
 
 <body>
     <div data-class="contents">
         <h1 data-class="component-name"><span>Tab<span></h1>
-        
+        <div data-class="box">
+            <div data-class="list disc">
+                <div>동일 계층의 콘텐츠를 그룹화해 화면 이동 없이 빠르게 탐색할 수 있다</div>
+            </div>
+        </div>
+
         <div data-class="tab-warp">
             <div data-class="tab-list" role="tablist">
-                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide01">접근성</button>
-                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide02">코드</button>
+                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
+                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
             </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+            <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
                 <div data-class="section">
-                    접근성
+                    <div data-class="g-conts-area">
+                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
+                        <div data-class="g-conts-area">
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭의 선택 상태를 색상으로만 구분하지 않는다.</p>
+                            <p data-class="g-desc">탭의 선택 상태를 색상 이외의 수단으로 구분할 수 있는 시각적 단서를 제공해야 한다. 밑줄 제공, 1px 이상의 테두리 차이, 식별자 제공 등의 방법으로 크기나 형태 차원에서 정보를 구분하는 방법을 사용할 수 있다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 색에 무관한 콘텐츠 인식</li>
+                            <li>WCAG 2.1 Use of Color (A)</li>
+                            </ul>
+                        </div>
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭을 키보드로 탐색하고 실행할 수 있도록 한다.</p>
+                            <p data-class="g-desc">탭은 키보드로 접근하여 조작할 수 있어야 한다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 키보드 사용 보장</li>
+                            <li>WCAG 2.1 Keyboard (A)</li>
+                            <li>WCAG 2.1 No Keyboard Trap (A)</li>
+                            </ul>
+                        </div>
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭의 키보드 초점이 명확하게 표시되도록 한다.</p>
+                            <p data-class="g-desc">모든 탭은 초점을 받은 상태가 시각적으로 명확하게 구분되어야 한다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 초점 이동</li>
+                            <li>WCAG 2.1 Focus Visible (AA)</li>
+                            <li>WCAG 2.1 Non-text Contrast (AA)</li>
+                            </ul>
+                        </div>
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭의 선택 상태를 스크린 리더로 확인할 수 있도록 한다.</p>
+                            <p data-class="g-desc">탭 레이블과 탭의 선택 상태를 텍스트로 제공하여 스크린 리더에서 정보를 인지할 수 있도록 해야 한다. 탭 버튼에 role="tab"로 역할을 부여하고 선택된 탭에 aria-selected="true"로 상태 정보를 전달하거나 title="현재 탭", title="선택됨"으로 선택
+                            상태에 대한 정보를 제공할 수 있다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 적절한 대체 텍스트 제공</li>
+                            <li>WCAG 2.1 Name, Role, Value (A)</li>
+                            </ul>
+                        </div>
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭과 패널의 역할 및 관계를 스크린 리더로 확인할 수 있도록 한다.</p>
+                            <p data-class="g-desc">탭 버튼 목록 영역은 role="tablist", 탭 버튼은 role="tab", 탭 패널은 role="tabpanel"로 역할을 부여한다. 그런 다음 탭 버튼과 탭 패널에 각각 id 속성과 속성값을 부여한 다음, 탭 버튼에는 aria-controls="[상응하는 탭 패널 id
+                            속성값]", aria-labelledby="[상응하는 탭 버튼 id 속성값]"을 설정하여 탭과 패널 간 연결 관계를 프로그램적으로 전달할 수 있다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 콘텐츠의 선형화</li>
+                            <li>WCAG 2.1 Info and Relationships (A)</li>
+                            <li>WCAG 2.1 Name, Role, Value (A)</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
                 <div data-class="section">
                     <div data-class="h1">Type</div>
                     <div data-class="h2">Line Tab</div>
@@ -48,51 +99,51 @@
 <div class="tab-wrap line"> <!-- 라인형 : line -->
     <div class="tab-list" role="tablist">
         <div class="scroll-wrap">
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanel-1">항목1</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanel-2">항목2</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanel-3">항목3</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanel-4">항목4</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanel-5">항목5</button>
+            <button type="button" id="tabLine1-1" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine1-1">항목1</button>
+            <button type="button" id="tabLine1-2" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanelLine1-2">항목2</button>
+            <button type="button" id="tabLine1-3" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine1-3">항목3</button>
+            <button type="button" id="tabLine1-4" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine1-4">항목4</button>
+            <button type="button" id="tabLine1-5" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine1-5">항목5</button>
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanel-1">
+    <div id="tabpanelLine1-1" class="tab-panel" role="tabpanel" aria-labelledby="tabLine1-1">
         <div class="section">
             항목1 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanel-2">
-        <div class="tab-wrap tab-list-sub">
+    <div id="tabpanelLine1-2" class="tab-panel" role="tabpanel" aria-labelledby="tabLine1-2">
+        <div class="tab-wrap line-secondary">
             <div class="tab-list" role="tablist">
-                <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpane1-2-1">하위항목1</button>
-                <button type="button" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpane1-2-2">하위항목2</button>
-                <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpane1-2-2">하위항목3</button>
-                <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpane1-2-2">하위항목4</button>
+                <button type="button" id="tabLine1-sub-1" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine1-sub-1">하위항목1</button>
+                <button type="button" id="tabLine1-sub-2" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanelLine1-sub-2">하위항목2</button>
+                <button type="button" id="tabLine1-sub-3" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine1-sub-3">하위항목3</button>
+                <button type="button" id="tabLine1-sub-4" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine1-sub-4">하위항목4</button>
             </div>
-            <div class="tab-panel" role="tabpanel" id="tabpane1-2-1">
+            <div id="tabpanelLine1-sub-1" class="tab-panel" role="tabpanel" aria-labelledby="tabLine1-sub-1">
                 <div class="section">하위항목1 콘텐츠</div>
             </div>
-            <div class="tab-panel" role="tabpanel" id="tabpane1-2-2">
+            <div id="tabpanelLine1-sub-2" class="tab-panel" role="tabpanel" aria-labelledby="tabLine1-sub-2">
                 <div class="section">하위항목2 콘텐츠 </div>
             </div>
-            <div class="tab-panel" role="tabpanel" id="tabpane1-2-3">
+            <div id="tabpanelLine1-sub-3" class="tab-panel" role="tabpanel" aria-labelledby="tabLine1-sub-3">
                 <div class="section">하위항목3 콘텐츠 </div>
             </div>
-            <div class="tab-panel" role="tabpanel" id="tabpane1-2-4">
+            <div id="tabpanelLine1-sub-4" class="tab-panel" role="tabpanel" aria-labelledby="tabLine1-sub-4">
                 <div class="section">하위항목4 콘텐츠 </div>
             </div>
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanel-3">
+    <div id="tabpanelLine1-3" class="tab-panel" role="tabpanel" aria-labelledby="tabLine1-3">
         <div class="section">
             항목3 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanel-4">
+    <div id="tabpanelLine1-4" class="tab-panel" role="tabpanel" aria-labelledby="tabLine1-4">
         <div class="section">
             항목4 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanel-5">
+    <div id="tabpanelLine1-5" class="tab-panel" role="tabpanel" aria-labelledby="tabLine1-5">
         <div class="section">
             항목5 콘텐츠 
         </div>
@@ -103,7 +154,8 @@
                     <div data-class="box">
                         <div data-class="list disc">
                             <div>링크 이동 a태그로 구성</div>
-                            <div>링크 없는 a태그 role=button 자동 추가</div>
+                            <div>링크 없는 a태그 role="button" 자동 추가</div>
+                            <div>활성화 a태그 title="선택됨" 자동 추가</div>
                         </div>
                     </div>
                     <script type="text/html">
@@ -119,7 +171,7 @@
     </div>
     <div class="link-panel">
         <div class="section">
-            링크형 메뉴테스트 메뉴테스트 메뉴테스트 메뉴테스트 메뉴테스트
+            링크형 항목 콘텐츠
         </div>
     </div>
 </div>
@@ -137,41 +189,36 @@
     <div class="tab-list" role="tablist">
         <i class="tab-bar" aria-hidden="true"></i> <!-- tab-bar : 있으면 자동으로 모션 적용, tab-wrap에 is-motion 추가됨 -->
         <div class="scroll-wrap">
-            <button type="button" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanelLine-1">메뉴테스트 1</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine-2">메뉴테스트 22</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine-3">메뉴테스트 333</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine-4">메뉴테스트 4444</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine-5">메뉴테스트 55555</button>
+            <button type="button" id="tabLine2-1" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanelLine2-1">항목1</button>
+            <button type="button" id="tabLine2-2" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine2-2">항목2</button>
+            <button type="button" id="tabLine2-3" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine2-3">항목3</button>
+            <button type="button" id="tabLine2-4" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine2-4">항목4</button>
+            <button type="button" id="tabLine2-5" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelLine2-5">항목5</button>
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanelLine-1">
-        
+    <div id="tabpanelLine2-1" class="tab-panel" role="tabpanel" aria-labelledby="tabLine2-1">
         <div class="section">
-            항목 1 콘텐츠 
+            항목1 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanelLine-2">
-        
+    <div id="tabpanelLine2-2" class="tab-panel" role="tabpanel" aria-labelledby="tabLine2-2">
         <div class="section">
-            항목 2 콘텐츠 
+            항목2 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanelLine-3">
-        
+    <div id="tabpanelLine2-3" class="tab-panel" role="tabpanel" aria-labelledby="tabLine2-3">
         <div class="section">
-            항목 3 콘텐츠 
+            항목3 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanelLine-4">
-        
+    <div id="tabpanelLine2-4" class="tab-panel" role="tabpanel" aria-labelledby="tabLine2-4">
         <div class="section">
-            항목 4 콘텐츠 
+            항목4 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanelLine-5">
-        
+    <div id="tabpanelLine2-5" class="tab-panel" role="tabpanel" aria-labelledby="tabLine2-5">
         <div class="section">
-            항목 5 콘텐츠 
+            항목5 콘텐츠 
         </div>
     </div>
 </div>
@@ -187,32 +234,30 @@
                     <script type="text/html">
 <div class="tab-wrap box"> <!-- 박스형 : box -->
     <div class="tab-list" role="tablist">
-        <button type="button" class="btn-tab" role="tab" aria-selected="true" aria-controls="tab2panel1-1">메뉴명</button>
-        <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tab2panel1-2">메뉴명</button>
+        <button type="button" id="tabBox1-1" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanelBox1-1">메뉴명1</button>
+        <button type="button" id="tabBox1-2" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelBox1-2">메뉴명2</button>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tab2panel1-1">
-        <div class="section">메뉴명 1 콘텐츠</div>
+    <div id="tabpanelBox1-1" class="tab-panel" role="tabpanel" aria-labelledby="tabBox1-1">
+        <div class="section">메뉴명1 콘텐츠</div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tab2panel1-2">
-        <div class="section">메뉴명 2 콘텐츠</div>
+    <div  id="tabpanelBox1-2" class="tab-panel" role="tabpanel" aria-labelledby="tabBox1-2">
+        <div class="section">메뉴명2 콘텐츠</div>
     </div>
 </div>
-                    </script>
-                    <script type="text/html">
 <div class="tab-wrap box"> <!-- 박스형 : box -->
     <div class="tab-list" role="tablist">
-        <button type="button" class="btn-tab" role="tab" aria-selected="true" aria-controls="tab2panel2-1">메뉴명</button>
-        <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tab2panel2-2">메뉴명</button>
-        <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tab2panel2-3">메뉴명</button>
+        <button type="button" id="tabBox1-3" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanelBox1-3">메뉴명3</button>
+        <button type="button" id="tabBox1-4" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelBox1-4">메뉴명4</button>
+        <button type="button" id="tabBox1-5" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelBox1-5">메뉴명5</button>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tab2panel2-1">
-        <div class="section">메뉴명 1 콘텐츠</div>
+    <div id="tabpanelBox1-3" class="tab-panel" role="tabpanel" aria-labelledby="tabBox1-3">
+        <div class="section">메뉴명3 콘텐츠</div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tab2panel2-2">
-        <div class="section">메뉴명 2 콘텐츠</div>
+    <div id="tabpanelBox1-4" class="tab-panel" role="tabpanel" aria-labelledby="tabBox1-4">
+        <div class="section">메뉴명4 콘텐츠</div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tab2panel2-3">
-        <div class="section">메뉴명 3 콘텐츠</div>
+    <div id="tabpanelBox1-5" class="tab-panel" role="tabpanel" aria-labelledby="tabBox1-5">
+        <div class="section">메뉴명5 콘텐츠</div>
     </div>
 </div>
                     </script>
@@ -223,14 +268,14 @@
 <div class="tab-wrap box"> <!-- 박스형 : box -->
     <div class="tab-list" role="tablist">
         <i class="tab-bar" aria-hidden="true"></i> <!-- tab-bar : 있으면 자동으로 모션 적용, tab-wrap에 is-motion 추가됨 -->
-        <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanel6-1">메뉴명</button>
-        <button type="button" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanel6-2">메뉴명</button>
+        <button type="button" id="tabBox2-1" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanelBox2-1">메뉴명1</button>
+        <button type="button" id="tabBox2-2" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanelBox2-2">메뉴명2</button>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanel6-1">
-        <div class="section">메뉴명 1 콘텐츠</div>
+    <div id="tabpanelBox2-1" class="tab-panel" role="tabpanel" aria-labelledby="tabBox2-1">
+        <div class="section">메뉴명1 콘텐츠</div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="tabpanel6-2">
-        <div class="section">메뉴명 2 콘텐츠</div>
+    <div id="tabpanelBox2-2" class="tab-panel" role="tabpanel" aria-labelledby="tabBox2-2">
+        <div class="section">메뉴명2 콘텐츠</div>
     </div>
 </div>
                 </script>
@@ -241,19 +286,19 @@
 <div class="tab-wrap box"> <!-- 박스형 : box -->
     <div class="tab-list" role="tablist">
         <i class="tab-bar" aria-hidden="true"></i> <!-- tab-bar : 있으면 자동으로 모션 적용, tab-wrap에 is-motion 추가됨 -->
-        <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="tabpanel7-1">메뉴명</button>
-        <button type="button" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanel7-2">메뉴명</button>
-        <button type="button" class="btn-tab" role="tab" aria-selected="true" aria-controls="tabpanel7-3">메뉴명</button>
+        <button type="button" id="tabSwipe1-1" class="btn-tab" role="tab" aria-selected="false" aria-controls="swipePanel1-1">메뉴명1</button>
+        <button type="button" id="tabSwipe1-2" class="btn-tab" role="tab" aria-selected="true" aria-controls="swipePanel1-2">메뉴명2</button>
+        <button type="button" id="tabSwipe1-3" class="btn-tab" role="tab" aria-selected="true" aria-controls="swipePanel1-3">메뉴명3</button>
     </div>
     <div class="tab-swipe">
-        <div class="tab-panel" role="tabpanel" id="tabpanel7-1">
-            <div style="height:100px;line-height:100px;background-color:#eee;text-align:center">메뉴명 1 콘텐츠</div>
+        <div id="swipePanel1-1" class="tab-panel" role="tabpanel" aria-labelledby="tabSwipe1-1">
+            <div style="height:100px;line-height:100px;background-color:#eee;text-align:center">메뉴명1 콘텐츠</div>
         </div>
-        <div class="tab-panel" role="tabpanel" id="tabpanel7-2">
-            <div style="height:100px;line-height:100px;background-color:#ccc;text-align:center">메뉴명 2 콘텐츠</div>
+        <div id="swipePanel1-2" class="tab-panel" role="tabpanel" aria-labelledby="tabSwipe1-2">
+            <div style="height:100px;line-height:100px;background-color:#ccc;text-align:center">메뉴명2 콘텐츠</div>
         </div>
-        <div class="tab-panel" role="tabpanel" id="tabpanel7-3">
-            <div style="height:100px;line-height:100px;background-color:#eee;text-align:center">메뉴명 3 콘텐츠</div>
+        <div id="swipePanel1-3" class="tab-panel" role="tabpanel" aria-labelledby="tabSwipe1-3">
+            <div style="height:100px;line-height:100px;background-color:#eee;text-align:center">메뉴명3 콘텐츠</div>
         </div>
     </div>
 </div>
@@ -268,19 +313,19 @@
 <div class="tab-wrap line"> <!-- 라인형 : line -->
     <div class="tab-list" role="tablist">
         <div class="scroll-wrap">
-            <button type="button" class="btn-tab" role="tab" aria-selected="true" aria-controls="swipePanel-1">메뉴테스트 1</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="swipePanel-2">메뉴테스트 22</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="swipePanel-3">메뉴테스트 333</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="swipePanel-4">메뉴테스트 4444</button>
-            <button type="button" class="btn-tab" role="tab" aria-selected="false" aria-controls="swipePanel-5">메뉴테스트 55555</button>
+            <button type="button" id="tabSwipe2-1" class="btn-tab" role="tab" aria-selected="true" aria-controls="swipePanel2-1">항목1</button>
+            <button type="button" id="tabSwipe2-2" class="btn-tab" role="tab" aria-selected="false" aria-controls="swipePanel2-2">항목2</button>
+            <button type="button" id="tabSwipe2-3" class="btn-tab" role="tab" aria-selected="false" aria-controls="swipePanel2-3">항목3</button>
+            <button type="button" id="tabSwipe2-4" class="btn-tab" role="tab" aria-selected="false" aria-controls="swipePanel2-4">항목4</button>
+            <button type="button" id="tabSwipe2-5" class="btn-tab" role="tab" aria-selected="false" aria-controls="swipePanel2-5">항목5</button>
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="swipePanel-1">
+    <div id="swipePanel2-1" class="tab-panel" role="tabpanel" aria-labelledby="tabSwipe2-1">
         <div class="section">
-            메뉴 1 콘텐츠 
+            항목1 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="swipePanel-2">
+    <div id="swipePanel2-2" class="tab-panel" role="tabpanel" aria-labelledby="tabSwipe2-2">
         <div class="section">
             <div class="ui-swiper">
                 <div class="swiper">
@@ -300,19 +345,19 @@
             </div>
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="swipePanel-3">
+    <div id="swipePanel2-3" class="tab-panel" role="tabpanel" aria-labelledby="tabSwipe2-3">
         <div class="section">
-            메뉴 3 콘텐츠 
+            항목3 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="swipePanel-4">
+    <div id="swipePanel2-4" class="tab-panel" role="tabpanel" aria-labelledby="tabSwipe2-4">
         <div class="section">
-            메뉴 4 콘텐츠 
+            항목4 콘텐츠 
         </div>
     </div>
-    <div class="tab-panel" role="tabpanel" id="swipePanel-5">
+    <div id="swipePanel2-5" class="tab-panel" role="tabpanel" aria-labelledby="tabSwipe2-4">
         <div class="section">
-            메뉴 5 콘텐츠 
+            항목5 콘텐츠 
         </div>
     </div>
 </div>
