@@ -31,13 +31,50 @@
 
         <div data-class="tab-warp">
             <div data-class="tab-list" role="tablist">
-                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide01">접근성</button>
-                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide02">코드</button>
+                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">코드</button>
+                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">접근성</button>
             </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+            <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="h2">Radio Button</div>
+                    <div data-class="box">
+                        <div data-class="list disc">
+                            <div>두 개 이상의 항목에서 하나만 선택할 수 있는 경우에 사용</div>
+                            <div>선택되지 않은 Radio Button을 선택하는 순간, 이전에 선택한 항목은 자동으로 선택이 해제된다.</div>
+                        </div>
+                    </div>
+                    <div data-class="h2">large(24x24) / medium(20x20)</div>
+                    <script type="text/html">
+<div class="rdoChk-group inline">
+    <span class="selection">
+        <input type="radio" id="radioH1" name="radio-h1">
+        <label for="radioH1" class="label">레이블(off)</label>
+    </span>
+    <span class="selection">
+        <input type="radio" id="radioH2" name="radio-h2" disabled>
+        <label for="radioH2" class="label">레이블(off/disabled)</label>
+    </span>
+    <span class="selection">
+        <input type="radio" id="radioH3" name="radio-h3" checked>
+        <label for="radioH3" class="label">레이블(on)</label>
+    </span>
+    <span class="selection">
+        <input type="radio" id="radioH4" name="radio-h4" checked disabled>
+        <label for="radioH4" class="label">레이블(on/disabled)</label>
+    </span>
+    <span class="selection alone">
+        <input type="radio" id="radioH5" name="radio-h5" checked aria-label="레이블(only)">
+        <label for="radioH5" class="label"></label>
+    </span>
+</div>
+                    </script>
+                </div>
+            </div>
+            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
                 <div data-class="section">
 
-                    <div data-class="g-conts-area section-link">
+                    <div data-class="g-conts-area">
                         <h3 data-class="sec-tit">접근성 가이드라인</h3>
                         <div data-class="g-conts-area sp-sm">
                             <div data-class="g-desc-box">
@@ -102,43 +139,6 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
-                <div data-class="section">
-                    <div data-class="h1">Type</div>
-                    <div data-class="h2">Radio Button</div>
-                    <div data-class="box">
-                        <div data-class="list disc">
-                            <div>두 개 이상의 항목에서 하나만 선택할 수 있는 경우에 사용</div>
-                            <div>선택되지 않은 Radio Button을 선택하는 순간, 이전에 선택한 항목은 자동으로 선택이 해제된다.</div>
-                        </div>
-                    </div>
-                    <div data-class="h2">large(24x24) / medium(20x20)</div>
-                    <script type="text/html">
-<div class="rdoChk-group inline">
-    <span class="selection">
-        <input type="radio" id="radioH1" name="radio-h1">
-        <label for="radioH1" class="label">레이블(off)</label>
-    </span>
-    <span class="selection">
-        <input type="radio" id="radioH2" name="radio-h2" disabled>
-        <label for="radioH2" class="label">레이블(off/disabled)</label>
-    </span>
-    <span class="selection">
-        <input type="radio" id="radioH3" name="radio-h3" checked>
-        <label for="radioH3" class="label">레이블(on)</label>
-    </span>
-    <span class="selection">
-        <input type="radio" id="radioH4" name="radio-h4" checked disabled>
-        <label for="radioH4" class="label">레이블(on/disabled)</label>
-    </span>
-    <span class="selection alone">
-        <input type="radio" id="radioH5" name="radio-h5" checked aria-label="레이블(only)">
-        <label for="radioH5" class="label"></label>
-    </span>
-</div>
-                    </script>
                 </div>
             </div>
         </div>

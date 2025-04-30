@@ -31,13 +31,49 @@
 
         <div data-class="tab-warp">
             <div data-class="tab-list" role="tablist">
-                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide01">접근성</button>
-                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide02">코드</button>
+                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">코드</button>
+                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">접근성</button>
             </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
+            <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="h2">Switch</div>
+                    <div data-class="box">
+                        <div data-class="list disc">
+                            <div>각 선택 항목의 상태를 즉시 제어할 때 사용</div>
+                        </div>
+                    </div>
+                    <div data-class="h2">large(24x24) / medium(20x20)</div>
+                    <script type="text/html">
+<div style="margin-top:.4rem;">
+    <span class="switch">    
+        <input type="checkbox" id="switch2">
+        <label for="switch2">레이블(off)</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch3" disabled>
+        <label for="switch3">레이블(off/disabled)</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch1" checked>
+        <label for="switch1">레이블(on)</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch4" checked disabled>
+        <label for="switch4">레이블(on/disabled)</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch5" checked aria-label="레이블(only)">
+        <label for="switch5"></label>
+    </span>
+</div>
+                    </script>
+                </div>
+            </div>
+            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
                 <div data-class="section">
 
-                    <div data-class="g-conts-area section-link">
+                    <div data-class="g-conts-area">
                         <h3 data-class="sec-tit">접근성 가이드라인</h3>
                         <div data-class="g-conts-area sp-sm">
                             <div data-class="g-desc-box">
@@ -89,42 +125,6 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
-                <div data-class="section">
-                    <div data-class="h1">Type</div>
-                    <div data-class="h2">Switch</div>
-                    <div data-class="box">
-                        <div data-class="list disc">
-                            <div>각 선택 항목의 상태를 즉시 제어할 때 사용</div>
-                        </div>
-                    </div>
-                    <div data-class="h2">large(24x24) / medium(20x20)</div>
-                    <script type="text/html">
-<div style="margin-top:.4rem;">
-    <span class="switch">    
-        <input type="checkbox" id="switch2">
-        <label for="switch2">레이블(off)</label>
-    </span>
-    <span class="switch">    
-        <input type="checkbox" id="switch3" disabled>
-        <label for="switch3">레이블(off/disabled)</label>
-    </span>
-    <span class="switch">    
-        <input type="checkbox" id="switch1" checked>
-        <label for="switch1">레이블(on)</label>
-    </span>
-    <span class="switch">    
-        <input type="checkbox" id="switch4" checked disabled>
-        <label for="switch4">레이블(on/disabled)</label>
-    </span>
-    <span class="switch">    
-        <input type="checkbox" id="switch5" checked aria-label="레이블(only)">
-        <label for="switch5"></label>
-    </span>
-</div>
-                    </script>
                 </div>
             </div>
         </div>

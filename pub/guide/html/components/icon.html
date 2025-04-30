@@ -47,56 +47,14 @@
 </head>
 <body>
     <div data-class="contents">
-        <div data-class="component-name"><span>아이콘</span></div>
+        <div data-class="component-name"><span>Icon</span></div>
 
         <div data-class="tab-warp">
             <div data-class="tab-list" role="tablist">
-                <button type="button" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide01">접근성</button>
-                <button type="button" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide02">코드</button>
+                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">코드</button>
+                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">접근성</button>
             </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide01">
-                <div data-class="section">
-
-                    <div data-class="g-conts-area">
-                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
-                        <div data-class="g-conts-area">
-                            <div class="g-desc-box">
-                                <p class="g-tit">의미가 없는 아이콘에 대체 텍스트를 제공하지 않는다.</p>
-                                <p class="g-desc">긴급 공지에는 아이콘 외에 레이블이 항상 표시되므로 스크린 리더 사용자에게 중복된 정보가 전달되지 않도록 아이콘 이미지에 대체 텍스트를 제공해서는 안 된다.</p>
-                                <ul class="krds-info-list decimal" role="list">
-                                    <li role="listitem">KWCAG 2.2 적절한 대체 텍스트 제공</li>
-                                    <li role="listitem">WCAG 2.1 Non-text Content (A)</li>
-                                </ul>
-                            </div>
-                            <div data-class="g-desc-box">
-                                <p data-class="g-tit">장식용 이미지를 제외한 모든 이미지에 대체 텍스트를 제공한다.</p>
-                                <p data-class="g-desc">대체 텍스트는 이미지가 제공하는 정보를 구체적이고 정확하면서도 간결한 내용으로 제공해야 한다. 이때, 대체 텍스트에 다음 내용이 포함되지 않도록
-                                    유의한다.</p>
-                                <div data-class="g-desc-wrap">
-                                    <p data-class="g-desc">'이미지', '그래픽'과 같이 요소의 역할과 중복되는 텍스트</p>
-                                    <p data-class="g-desc">이미지와 인접한 텍스트 설명과 동일한 설명</p>
-                                    <p data-class="g-desc">이미지에 없는 추가적인 정보</p>
-                                </div>
-                                <ul data-class="info-list decimal" role="list">
-                                    <li role="listitem">KWCAG 2.2 적절한 대체 텍스트 제공</li>
-                                    <li role="listitem">WCAG 2.1 Non-text Content (A)</li>
-                                </ul>
-                            </div>
-                            <div data-class="g-desc-box">
-                                <p data-class="g-tit">가능한 한 이미지 텍스트를 사용하지 않는다.</p>
-                                <p data-class="g-desc">텍스트 정보를 이미지 형식으로 제공하게 되면 사용자가 해상도 손실 없이 텍스트를 확대/축소할 수 없으며 명도 대비, 자간 동의 표현을 상황에 맞게 조정할
-                                    수 없게 된다. 저시력 사용자, 읽기 장애가 있는 사용자가 텍스트 정보의 표현 방식을 변경하여 콘텐츠를 인지할 수 있도록
-                                    심미적인 효과 또는 특정한 텍스트 표현이 필수적인 경우를 제외하고 이미지 텍스트를 사용하지 않아야 한다.</p>
-                                <ul data-class="info-list decimal" role="list">
-                                    <li role="listitem">WCAG 2.1 Images of Text (AA)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div data-class="tab-panel" role="tabpanel" id="tabpanelGuide02">
+            <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
                 <div data-class="section">
                     <div data-class="h1">Type</div>
                     <div data-class="h2">System Icon</div>
@@ -170,6 +128,48 @@
     </li>
 </ul>
                     </script>
+                </div>
+            </div>
+            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
+                <div data-class="section">
+
+                    <div data-class="g-conts-area">
+                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
+                        <div data-class="g-conts-area sp-sm">
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">의미가 없는 아이콘에 대체 텍스트를 제공하지 않는다.</p>
+                                <p data-class="g-desc">긴급 공지에는 아이콘 외에 레이블이 항상 표시되므로 스크린 리더 사용자에게 중복된 정보가 전달되지 않도록 아이콘 이미지에 대체 텍스트를 제공해서는 안 된다.</p>
+                                <ul class="krds-info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 적절한 대체 텍스트 제공</li>
+                                    <li role="listitem">WCAG 2.1 Non-text Content (A)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">장식용 이미지를 제외한 모든 이미지에 대체 텍스트를 제공한다.</p>
+                                <p data-class="g-desc">대체 텍스트는 이미지가 제공하는 정보를 구체적이고 정확하면서도 간결한 내용으로 제공해야 한다. 이때, 대체 텍스트에 다음 내용이 포함되지 않도록
+                                    유의한다.</p>
+                                <div data-class="g-desc-wrap">
+                                    <p data-class="g-desc">'이미지', '그래픽'과 같이 요소의 역할과 중복되는 텍스트</p>
+                                    <p data-class="g-desc">이미지와 인접한 텍스트 설명과 동일한 설명</p>
+                                    <p data-class="g-desc">이미지에 없는 추가적인 정보</p>
+                                </div>
+                                <ul data-class="info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 적절한 대체 텍스트 제공</li>
+                                    <li role="listitem">WCAG 2.1 Non-text Content (A)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">가능한 한 이미지 텍스트를 사용하지 않는다.</p>
+                                <p data-class="g-desc">텍스트 정보를 이미지 형식으로 제공하게 되면 사용자가 해상도 손실 없이 텍스트를 확대/축소할 수 없으며 명도 대비, 자간 동의 표현을 상황에 맞게 조정할
+                                    수 없게 된다. 저시력 사용자, 읽기 장애가 있는 사용자가 텍스트 정보의 표현 방식을 변경하여 콘텐츠를 인지할 수 있도록
+                                    심미적인 효과 또는 특정한 텍스트 표현이 필수적인 경우를 제외하고 이미지 텍스트를 사용하지 않아야 한다.</p>
+                                <ul data-class="info-list decimal" role="list">
+                                    <li role="listitem">WCAG 2.1 Images of Text (AA)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
