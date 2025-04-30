@@ -29,54 +29,10 @@
 
         <div data-class="tab-warp">
             <div data-class="tab-list" role="tablist">
-                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
-                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
+                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">코드</button>
+                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">접근성</button>
             </div>
             <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
-                <div data-class="section">
-
-                    <div data-class="g-conts-area">
-                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
-                        <div data-class="g-conts-area">
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">활성화 버튼에 이름을 제공한다.</p>
-                            <p data-class="g-desc">스크린 리더 사용자가 활성화 버튼의 용도를 이해할 수 있도록 각각의 버튼에 이름을 제공해야 한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
-                              <li role="listitem">WCAG 2.1 Non-text Content (A)</li>
-                              <li role="listitem">WCAG 2.1 Name, Role, Value (A)</li>
-                            </ul>
-                          </div>
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">활성화 버튼에 고유하고 적절한 이름을 제공한다.</p>
-                            <p data-class="g-desc">활성화 버튼이 맥락적으로 도움을 제공하고자 하는 본문 콘텐츠의 내용을 포함하고 있지 않다면 해당 정보를 활성화 버튼의 이름으로 포함하여 스크린 리더 사용자가 정확한 용도를 이해할 수 있도록 제공한다. 화면에 존재하는 다른 활성화 버튼과 혼동되지 않도록 모든 활성화 버튼의 이름은
-                              고유해야 한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
-                              <li role="listitem">WCAG 2.1 Headings and Labels (AA)</li>
-                            </ul>
-                          </div>
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">활성화 버튼과 컨테이너 영역을 aria-labelledby 속성으로 연결한다.</p>
-                            <p data-class="g-desc">이를 통해 시각을 활용하여 정보를 탐색하는 사용자가 활성화 버튼에 접근했을 때 툴팁 콘텐츠를 바로 확인할 수 있는 것처럼 스크린 리더 사용자도 동일한 방식으로 정보를 전달받을 수 있다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">WCAG 2.1 Info and Relationships (A)</li>
-                            </ul>
-                          </div>
-                          <div data-class="g-desc-box">
-                            <p data-class="g-tit">활성화 버튼과 팝오버 콘텐츠를 적절한 순서로 제공한다.</p>
-                            <p data-class="g-desc">스크린 리더 사용자가 도움말 팝오버 콘텐츠에 논리적인 순서로 접근할 수 있도록 관련 있는 활성화 버튼 다음 요소로 제공해야 한다.</p>
-                            <ul data-class="info-list decimal" role="list">
-                              <li role="listitem">KWCAG 2.2 콘텐츠의 선형화</li>
-                              <li role="listitem">WCAG 2.1 Meaningful Sequence (A)</li>
-                            </ul>
-                          </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
 
                 <div data-class="box">
                     <h3>js-tooltip 사용</h3>
@@ -131,6 +87,50 @@
                     </script>
                 </div>
 
+            </div>
+            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
+                <div data-class="section">
+
+                    <div data-class="g-conts-area">
+                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
+                        <div data-class="g-conts-area sp-sm">
+                          <div data-class="g-desc-box">
+                            <p data-class="g-tit">활성화 버튼에 이름을 제공한다.</p>
+                            <p data-class="g-desc">스크린 리더 사용자가 활성화 버튼의 용도를 이해할 수 있도록 각각의 버튼에 이름을 제공해야 한다.</p>
+                            <ul data-class="info-list decimal" role="list">
+                              <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
+                              <li role="listitem">WCAG 2.1 Non-text Content (A)</li>
+                              <li role="listitem">WCAG 2.1 Name, Role, Value (A)</li>
+                            </ul>
+                          </div>
+                          <div data-class="g-desc-box">
+                            <p data-class="g-tit">활성화 버튼에 고유하고 적절한 이름을 제공한다.</p>
+                            <p data-class="g-desc">활성화 버튼이 맥락적으로 도움을 제공하고자 하는 본문 콘텐츠의 내용을 포함하고 있지 않다면 해당 정보를 활성화 버튼의 이름으로 포함하여 스크린 리더 사용자가 정확한 용도를 이해할 수 있도록 제공한다. 화면에 존재하는 다른 활성화 버튼과 혼동되지 않도록 모든 활성화 버튼의 이름은
+                              고유해야 한다.</p>
+                            <ul data-class="info-list decimal" role="list">
+                              <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
+                              <li role="listitem">WCAG 2.1 Headings and Labels (AA)</li>
+                            </ul>
+                          </div>
+                          <div data-class="g-desc-box">
+                            <p data-class="g-tit">활성화 버튼과 컨테이너 영역을 aria-labelledby 속성으로 연결한다.</p>
+                            <p data-class="g-desc">이를 통해 시각을 활용하여 정보를 탐색하는 사용자가 활성화 버튼에 접근했을 때 툴팁 콘텐츠를 바로 확인할 수 있는 것처럼 스크린 리더 사용자도 동일한 방식으로 정보를 전달받을 수 있다.</p>
+                            <ul data-class="info-list decimal" role="list">
+                              <li role="listitem">WCAG 2.1 Info and Relationships (A)</li>
+                            </ul>
+                          </div>
+                          <div data-class="g-desc-box">
+                            <p data-class="g-tit">활성화 버튼과 팝오버 콘텐츠를 적절한 순서로 제공한다.</p>
+                            <p data-class="g-desc">스크린 리더 사용자가 도움말 팝오버 콘텐츠에 논리적인 순서로 접근할 수 있도록 관련 있는 활성화 버튼 다음 요소로 제공해야 한다.</p>
+                            <ul data-class="info-list decimal" role="list">
+                              <li role="listitem">KWCAG 2.2 콘텐츠의 선형화</li>
+                              <li role="listitem">WCAG 2.1 Meaningful Sequence (A)</li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

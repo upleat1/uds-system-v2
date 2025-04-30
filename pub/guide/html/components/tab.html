@@ -29,64 +29,10 @@
 
         <div data-class="tab-warp">
             <div data-class="tab-list" role="tablist">
-                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">접근성</button>
-                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">코드</button>
+                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">코드</button>
+                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">접근성</button>
             </div>
             <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
-                <div data-class="section">
-                    <div data-class="g-conts-area">
-                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
-                        <div data-class="g-conts-area">
-                        <div data-class="g-desc-box">
-                            <p data-class="g-tit">탭의 선택 상태를 색상으로만 구분하지 않는다.</p>
-                            <p data-class="g-desc">탭의 선택 상태를 색상 이외의 수단으로 구분할 수 있는 시각적 단서를 제공해야 한다. 밑줄 제공, 1px 이상의 테두리 차이, 식별자 제공 등의 방법으로 크기나 형태 차원에서 정보를 구분하는 방법을 사용할 수 있다.</p>
-                            <ul data-class="info-list decimal">
-                            <li>KWCAG 2.2 색에 무관한 콘텐츠 인식</li>
-                            <li>WCAG 2.1 Use of Color (A)</li>
-                            </ul>
-                        </div>
-                        <div data-class="g-desc-box">
-                            <p data-class="g-tit">탭을 키보드로 탐색하고 실행할 수 있도록 한다.</p>
-                            <p data-class="g-desc">탭은 키보드로 접근하여 조작할 수 있어야 한다.</p>
-                            <ul data-class="info-list decimal">
-                            <li>KWCAG 2.2 키보드 사용 보장</li>
-                            <li>WCAG 2.1 Keyboard (A)</li>
-                            <li>WCAG 2.1 No Keyboard Trap (A)</li>
-                            </ul>
-                        </div>
-                        <div data-class="g-desc-box">
-                            <p data-class="g-tit">탭의 키보드 초점이 명확하게 표시되도록 한다.</p>
-                            <p data-class="g-desc">모든 탭은 초점을 받은 상태가 시각적으로 명확하게 구분되어야 한다.</p>
-                            <ul data-class="info-list decimal">
-                            <li>KWCAG 2.2 초점 이동</li>
-                            <li>WCAG 2.1 Focus Visible (AA)</li>
-                            <li>WCAG 2.1 Non-text Contrast (AA)</li>
-                            </ul>
-                        </div>
-                        <div data-class="g-desc-box">
-                            <p data-class="g-tit">탭의 선택 상태를 스크린 리더로 확인할 수 있도록 한다.</p>
-                            <p data-class="g-desc">탭 레이블과 탭의 선택 상태를 텍스트로 제공하여 스크린 리더에서 정보를 인지할 수 있도록 해야 한다. 탭 버튼에 role="tab"로 역할을 부여하고 선택된 탭에 aria-selected="true"로 상태 정보를 전달하거나 title="현재 탭", title="선택됨"으로 선택
-                            상태에 대한 정보를 제공할 수 있다.</p>
-                            <ul data-class="info-list decimal">
-                            <li>KWCAG 2.2 적절한 대체 텍스트 제공</li>
-                            <li>WCAG 2.1 Name, Role, Value (A)</li>
-                            </ul>
-                        </div>
-                        <div data-class="g-desc-box">
-                            <p data-class="g-tit">탭과 패널의 역할 및 관계를 스크린 리더로 확인할 수 있도록 한다.</p>
-                            <p data-class="g-desc">탭 버튼 목록 영역은 role="tablist", 탭 버튼은 role="tab", 탭 패널은 role="tabpanel"로 역할을 부여한다. 그런 다음 탭 버튼과 탭 패널에 각각 id 속성과 속성값을 부여한 다음, 탭 버튼에는 aria-controls="[상응하는 탭 패널 id
-                            속성값]", aria-labelledby="[상응하는 탭 버튼 id 속성값]"을 설정하여 탭과 패널 간 연결 관계를 프로그램적으로 전달할 수 있다.</p>
-                            <ul data-class="info-list decimal">
-                            <li>KWCAG 2.2 콘텐츠의 선형화</li>
-                            <li>WCAG 2.1 Info and Relationships (A)</li>
-                            <li>WCAG 2.1 Name, Role, Value (A)</li>
-                            </ul>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
                 <div data-class="section">
                     <div data-class="h1">Type</div>
                     <div data-class="h2">Line Tab</div>
@@ -176,8 +122,7 @@
     </div>
 </div>
                     </script>
-                </div>
-                <div data-class="section">
+      
                     <div data-class="h2">Line Tab - 모션</div>
                     <div data-class="box">
                         <div data-class="list disc">
@@ -223,8 +168,7 @@
     </div>
 </div>
                     </script>
-                </div>
-                <div data-class="section">
+
                     <div data-class="h2">Box Tab</div>
                     <div data-class="box">
                         <div data-class="list disc">
@@ -261,8 +205,7 @@
     </div>
 </div>
                     </script>
-                </div>
-                <div data-class="section">
+                
                     <div data-class="h2">Box Tab - 모션</div>
                     <script type="text/html">
 <div class="tab-wrap box"> <!-- 박스형 : box -->
@@ -279,8 +222,7 @@
     </div>
 </div>
                 </script>
-                </div>
-                <div data-class="section">
+                
                     <div data-class="h2">Tab Panel Swipe</div>
                     <script type="text/html">
 <div class="tab-wrap box"> <!-- 박스형 : box -->
@@ -303,8 +245,7 @@
     </div>
 </div>
                 </script>
-                </div>
-                <div data-class="section">
+                
                     <div data-class="h2">Swipe 포함</div>
                     <div data-class="box">
                         탭패널 내 스와이프 포함
@@ -362,6 +303,60 @@
     </div>
 </div>
                     </script>
+                </div>
+            </div>
+            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
+                <div data-class="section">
+                    <div data-class="g-conts-area">
+                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
+                        <div data-class="g-conts-area sp-sm">
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭의 선택 상태를 색상으로만 구분하지 않는다.</p>
+                            <p data-class="g-desc">탭의 선택 상태를 색상 이외의 수단으로 구분할 수 있는 시각적 단서를 제공해야 한다. 밑줄 제공, 1px 이상의 테두리 차이, 식별자 제공 등의 방법으로 크기나 형태 차원에서 정보를 구분하는 방법을 사용할 수 있다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 색에 무관한 콘텐츠 인식</li>
+                            <li>WCAG 2.1 Use of Color (A)</li>
+                            </ul>
+                        </div>
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭을 키보드로 탐색하고 실행할 수 있도록 한다.</p>
+                            <p data-class="g-desc">탭은 키보드로 접근하여 조작할 수 있어야 한다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 키보드 사용 보장</li>
+                            <li>WCAG 2.1 Keyboard (A)</li>
+                            <li>WCAG 2.1 No Keyboard Trap (A)</li>
+                            </ul>
+                        </div>
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭의 키보드 초점이 명확하게 표시되도록 한다.</p>
+                            <p data-class="g-desc">모든 탭은 초점을 받은 상태가 시각적으로 명확하게 구분되어야 한다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 초점 이동</li>
+                            <li>WCAG 2.1 Focus Visible (AA)</li>
+                            <li>WCAG 2.1 Non-text Contrast (AA)</li>
+                            </ul>
+                        </div>
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭의 선택 상태를 스크린 리더로 확인할 수 있도록 한다.</p>
+                            <p data-class="g-desc">탭 레이블과 탭의 선택 상태를 텍스트로 제공하여 스크린 리더에서 정보를 인지할 수 있도록 해야 한다. 탭 버튼에 role="tab"로 역할을 부여하고 선택된 탭에 aria-selected="true"로 상태 정보를 전달하거나 title="현재 탭", title="선택됨"으로 선택
+                            상태에 대한 정보를 제공할 수 있다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 적절한 대체 텍스트 제공</li>
+                            <li>WCAG 2.1 Name, Role, Value (A)</li>
+                            </ul>
+                        </div>
+                        <div data-class="g-desc-box">
+                            <p data-class="g-tit">탭과 패널의 역할 및 관계를 스크린 리더로 확인할 수 있도록 한다.</p>
+                            <p data-class="g-desc">탭 버튼 목록 영역은 role="tablist", 탭 버튼은 role="tab", 탭 패널은 role="tabpanel"로 역할을 부여한다. 그런 다음 탭 버튼과 탭 패널에 각각 id 속성과 속성값을 부여한 다음, 탭 버튼에는 aria-controls="[상응하는 탭 패널 id
+                            속성값]", aria-labelledby="[상응하는 탭 버튼 id 속성값]"을 설정하여 탭과 패널 간 연결 관계를 프로그램적으로 전달할 수 있다.</p>
+                            <ul data-class="info-list decimal">
+                            <li>KWCAG 2.2 콘텐츠의 선형화</li>
+                            <li>WCAG 2.1 Info and Relationships (A)</li>
+                            <li>WCAG 2.1 Name, Role, Value (A)</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
