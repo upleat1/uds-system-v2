@@ -1978,6 +1978,18 @@
       "medium-line-height": {
         "value": "{typo.line-height.font-size-16}",
         "type": "dimension"
+      },
+      "large-checkbox-size": {
+        "value": "2.4rem",
+        "type": "dimension"
+      },
+      "medium-checkbox-size": {
+        "value": "2rem",
+        "type": "dimension"
+      },
+      "medium-checkbox-height": {
+        "value": "2.4rem",
+        "type": "dimension"
       }
     },
     "Radiobutton": {
@@ -1985,7 +1997,7 @@
         "value": "{Color.background.white}",
         "type": "color"
       },
-      "large-off-background-color": {
+      "large-off-border-color": {
         "value": "{Color.background.gray400}",
         "type": "color"
       },
@@ -1993,7 +2005,7 @@
         "value": "{Color.background.primary600}",
         "type": "color"
       },
-      "large-off-disabled-background-color": {
+      "large-off-disabled-border-color": {
         "value": "{Color.background.gray300}",
         "type": "color"
       },
@@ -2033,7 +2045,7 @@
         "value": "{font-size.body.large}",
         "type": "dimension"
       },
-      "border-width": {
+      "large-on-border-width": {
         "value": "{border-width.regular}",
         "type": "dimension"
       },
@@ -2043,6 +2055,18 @@
       },
       "large-line-height": {
         "value": "{typo.line-height.font-size-18}",
+        "type": "dimension"
+      },
+      "large-off-border-width": {
+        "value": "{border-width.medium}",
+        "type": "dimension"
+      },
+      "large-radiobutton-size": {
+        "value": "2.4rem",
+        "type": "dimension"
+      },
+      "large-on-icon-size": {
+        "value": "1.2rem",
         "type": "dimension"
       }
     },
