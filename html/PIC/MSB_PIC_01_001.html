@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>������</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">����������</h1>
+			<button type="button" class="action-prev" title="����"></button>
+		</div>
+	</header>
+    <div class="pg-container pic">
+		<div class="pg-content">
+            <h2 class="ht-2"><strong>ȫ�浿����</strong><br>���̴ٹ�ũ �̿���������</h2><!-- mod-date:0605: [���ټ�] role ���� -->
+            <div class="section">
+                <div class="mypage">
+                    <div class="my-pic">
+                        <div class="pic-img">
+                            <img src="/resources/img/@temp/@couple02.png" alt="�����ʻ��� �����Դϴ�"><!-- @���� ����̹��� --><!-- mod-date:0519: [���ټ�] title �߰� -->
+                        </div>
+                        <button type="button" class="pic-camera" title="�����ʻ��� �Կ��ϱ�"></button>
+                    </div>
+                    <button type="button" class="btn ico-edit">������</button>
+                    <p class="my-recent">�ֱ� ���� : 2023.01.03 11:13:27</p>
+                </div>
+
+                <div class="divider-f"></div>
+
+                <h3 class="ht-4">���� ��ü�ѵ�</h3>
+                <div class="boxs mgt-0">
+                    <ul class="lists data noline">
+                        <li>
+                            <div class="key">1ȸ</div>
+                            <div class="value">
+                                <span class="numbers-18 nums-bold" role="text"><span class="num">10,000,000</span><span class="num-unit">��</span></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">1��</div>
+                            <div class="value">
+                                <span class="numbers-18 nums-bold" role="text"><span class="num">5,000,000,000</span><span class="num-unit">��</span></span>
+                            </div>
+                        </li>
+                        <li class="li-divider">
+                            <div class="key">OTP</div>
+                            <div class="value"><button type="button" class="btn ico-arr-sm">�����</button></div>
+                            <!-- <button type="button" class="btn ico-arr-sm right">�����ϰ� OTP ����ϱ�</button> --><!-- ���ȼ��� �߱޹��� ���� ��� -->
+                        </li>
+                    </ul>
+                </div>
+
+                <h3 class="ht-4">��ī��</h3>
+                <div class="card-wrap mgt-0">
+                    <div class="card-head my-card fit">
+                        <div class="state-img on">
+                            <img src="/resources/img/common/@card-temp.png" alt="PAY�� ī��">
+                        </div><!-- mod-date:0427: alt�߰� --><!-- ī�� ���� ��� on Ŭ���� �߰� -->
+                        <div class="state-msg">PAY��üũī��2<br><span class="card-no">[7111]</span></div>
+                        <!-- <span class="badge state-posi state-btn">����ī��</span> --><!-- ����ī�� �� ��� -->
+                    </div>
+                    <div class="card-info sepe-line">
+                        <div class="state-date">2023�� 01��</div>
+                        <ul class="lists data">
+                            <li>
+                                <div class="key">ĳ�ù�</div>
+                                <div class="value">
+                                    <span class="numbers-18 nums-bold" role="text"><span class="num">49,380,000</span><span class="num-unit">��</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">�̿�ݾ�</div>
+                                <div class="value">
+                                    <span class="numbers-18 nums-bold" role="text"><span class="num">2,120,380,000</span><span class="num-unit">��</span></span>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- ī�� ���� ��� -->
+                <!-- <div class="card-wrap mgt-0">
+                    <div class="card-head my-card fit">
+                        <div class="state-img"></div>
+                        <div class="state-msg"><span class="fw-400">ī�� �̿�����</span><br>�ϻ� ������ �÷����ϼ���</div>
+                    </div>
+                    <div class="card-price line">
+                        <button type="button" class="btn ico-arr-sm right">ī�� ��û�ϱ�</button>
+                    </div>
+                </div> -->
+                <!-- //ī�� ���� ��� -->
+
+                <h3 class="ht-4">�����۱�/����</h3>
+                <!-- mod-date:0522: [���ټ�] role, aria-label �߰� -->
+                <ul class="ezpay-wrap">
+                    <li class="ezpay-item on" role="img" aria-label="���̹����� �������� ��ϵ�"><i class="ez-naver"></i><span class="ez-name">���̹�����</span></li><!-- ����: �������� ��Ͻ� on Ŭ���� �߰�, aria-label ���� -->
+                    <li class="ezpay-item on" role="img" aria-label="īī������ �������� ��ϵ�"><i class="ez-kakao"></i><span class="ez-name">īī������</span></li><!-- ����: �������� ��Ͻ� on Ŭ���� �߰�, aria-label ���� -->
+                    <li class="ezpay-item" role="img" aria-label="�佺 ��������"><i class="ez-toss"></i><span class="ez-name">�佺</span></li>
+                    <li class="ezpay-item" role="img" aria-label="������ ��������"><i class="ez-payco"></i><span class="ez-name">������</span></li>
+                    <li class="ezpay-item" role="img" aria-label="����ǹ��� ��������"><i class="ez-baemin"></i><span class="ez-name">����ǹ���</span></li>
+                </ul>
+                <!-- // -->
+
+                <h3 class="ht-4">���Ǽ���</h3>
+                <div class="line-box wide">
+                    <ul class="lists cus-bul">
+                        <li class="on"><!-- ����: ���� ��Ͻ� on Ŭ���� �߰� -->
+                            <div class="li-link"><!-- mod-date:0502: a�±׸� div�� ���� -->
+                                <span class="fc-sub">�ڵ���ü</span>
+                                <!-- <button type="button" class="btn ico-arr-sm right">��û�ϱ�</button> -->
+                                <button type="button" class="btn ico-arr-sm right">4��</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-link"><!-- mod-date:0502: a�±׸� div�� ���� -->
+                                <span class="fc-sub">������</span>
+                                <!-- <button type="button" class="btn ico-arr-sm right">�ڵ����� ��û�ϱ�</button> -->
+                                <button type="button" class="btn ico-arr-sm right">���� 1�� / ���漼 10��</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-link"><!-- mod-date:0502: a�±׸� div�� ���� -->
+                                <span class="fc-sub">ATM/���������</span>
+                                <button type="button" class="btn ico-arr-sm right">��û�ϱ�</button>
+                                <!-- <button type="button" class="btn ico-arr-sm right">����ϱ�</button> -->
+                            </div>
+                        </li>
+                        <li class="on">
+                            <div class="li-link"><!-- mod-date:0502: a�±׸� div�� ���� -->
+                                <span class="fc-sub">�ſ�����</span>
+                                <div class="li-btns">
+                                    <!-- <button type="button" class="btn ico-arr-sm right">��û/��ȸ�ϱ�</button> -->
+                                    <button type="button" class="btn ico-arr-sm right">�����ϱ� (23.01.01 ����)</button>
+                                    <button type="button" class="btn ico-arr-sm right">��ȸ�ϱ�</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3 class="ht-4">�˸�����</h3>
+                <div class="line-box wide">
+                    <ul class="lists cus-bul"><!-- mod-date:0907: cus-bul Ŭ�����߰� -->
+                        <li class="on">
+                            <div class="li-link"><!-- mod-date:0907: �±��߰� -->
+                                <span class="fc-sub">����ݾ˸�</span>
+                                <!-- <button type="button" class="btn ico-arr-sm right">�̿����</button> -->
+                                <button type="button" class="btn ico-arr-sm right">�˸���(SMS), ��Ǫ��</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-link">
+                                <span class="fc-sub">����&middot;���Ⱦ˸�</span>
+                                <!-- <button type="button" class="btn ico-arr-sm right">�̿����</button> -->
+                                <button type="button" class="btn ico-arr-sm right">��Ǫ��</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="li-link">
+                                <span class="fc-sub">�����ѵ��˸�</span>
+                                <!-- <button type="button" class="btn ico-arr-sm right">�̿����</button> -->
+                                <button type="button" class="btn ico-arr-sm right">9��9õ9�鸸�� (17,8%)</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

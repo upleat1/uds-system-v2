@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�ڵ����ΰ���>���</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">�ڵ����ΰ���</h1>
+			<button type="button" class="action-prev" title="����"></button>
+			<button type="button" class="action">���</button>
+		</div>
+	</header>
+    <div class="pg-container pbt bg01">
+		<div class="pg-content">
+            <div class="section">
+                <div class="lists-headnote sticky">
+                    <button type="button" class="btn md ico-chevron-sm" title="��ȸ ���� ����">
+                        <span class="eps">���������</span><!-- mod-date:1101: span �߰� -->
+                        <span class="fx-none">(0123)</span><!-- mod-date:1101: span �߰� -->
+                    </button><!-- mod-date:0518: [���ټ�] title �߰� -->
+                    <button type="button" class="btn md ico-chevron-sm" title="�ɼ� ����">��ϳ���</button><!-- mod-date:0518: [���ټ�] title �߰� -->
+                </div>
+                <div class="scroll-able" data-ui="scroll-able">
+                    <div class="scroll-hor">
+                        <button type="button" class="active" title="���õ�">��ü</button><!-- @����: ���õ� ��ư�� title="���õ�" �߰� --><!-- mod-date:0512: [���ټ�] aria-pressed ����, title �߰� -->
+                        <button type="button">��ϿϷ�</button>
+                        <button type="button">��Ͽ�û</button>
+                        <button type="button">��Ͻ���</button>
+                        <button type="button">��������</button>
+                    </div>
+                </div>
+
+                <div class="card-set">
+                    <div class="headnote">�� 3��</div>
+                    <div class="card-wrap" role="button" title="�󼼺���">
+                        <div class="card-head fit">
+                            <div class="state-msg">���ﵵ�ð���</div>
+                            <span class="btn ico-arr-right"></span>
+                            <span class="badge line-posi state-btn">��ϿϷ�</span>
+                            <!-- ��쿡 ���� ����
+                            <span class="badge line-nega state-btn">��Ͽ�û</span>
+                            <span class="badge line-nega state-btn">��Ͻ���</span>
+                            -->
+                        </div>
+                        <ul class="lists data">
+                            <li>
+                                <div class="key">���ι�ȣ</div>
+                                <div class="value">123456</div>
+                            </li>
+                            <li>
+                                <div class="key">������ȣ</div>
+                                <div class="value">20059876543210</div>
+                            </li>
+                            <li>
+                                <div class="key">�����</div>
+                                <div class="value">2023.01.15</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-wrap" role="button" title="�󼼺���">
+                        <div class="card-head fit">
+                            <div class="state-msg">KT</div>
+                            <span class="btn ico-arr-right"></span>
+                            <span class="badge line-nega state-btn">��Ͽ�û</span>
+                            <!-- ��쿡 ���� ����
+                            <span class="badge line-posi state-btn">��ϿϷ�</span>
+                            <span class="badge line-nega state-btn">��Ͻ���</span>
+                            -->
+                        </div>
+                        <ul class="lists data">
+                            <li>
+                                <div class="key">���ι�ȣ</div>
+                                <div class="value">123456</div>
+                            </li>
+                            <li>
+                                <div class="key">������ȣ</div>
+                                <div class="value">20059876543210</div>
+                            </li>
+                            <li>
+                                <div class="key">��û��</div>
+                                <div class="value">2023.01.15</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-wrap" role="button" title="�󼼺���">
+                        <div class="card-head fit">
+                            <div class="state-msg">�ѱ������������</div>
+                            <span class="btn ico-arr-right"></span>
+                            <span class="badge line-nega state-btn">��Ͻ���</span>
+                            <!-- ��쿡 ���� ����
+                            <span class="badge line-nega state-btn">��Ͽ�û</span>
+                            <span class="badge line-posi state-btn">��ϿϷ�</span>
+                            -->
+                        </div>
+                        <ul class="lists data">
+                            <li>
+                                <div class="key">���ι�ȣ</div>
+                                <div class="value">123456</div>
+                            </li>
+                            <li>
+                                <div class="key">������ȣ</div>
+                                <div class="value">20059876543210</div>
+                            </li>
+                            <li>
+                                <div class="key">�����</div>
+                                <div class="value">2023.01.15</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- ��� ��ȸX -->
+            <div class="result nodata">
+                <p class="tit">��û�� �ڵ����������� �����ϴ�.</p>
+            </div>
+            <!-- //��� ��ȸX -->
+		</div>
+	</div>
+</div>
+
+<!-- ���̾��˾� START -->
+
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

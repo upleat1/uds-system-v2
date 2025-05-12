@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>유플리트</title>
+    <link rel="stylesheet" href="/guide/resources/css/components.css">
+    <link rel="stylesheet" href="/guide/resources/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/component.css">
+</head>
+<body>
+    <div data-class="contents">
+        <div data-class="component-name"><span>완료메시지</span></div>
+        <div data-class="box">
+            타이틀성 문장에는 마침표(.) X
+        </div>
+        
+        <div data-class="section">
+            <div data-class="h1">Type</div>  
+            <div data-class="h2">성공</div>
+            <script type="text/html">
+<div class="result success">
+    <p class="tit">상품가입 완료</p>
+    <p class="txt">보조텍스트가 오는 라인 보조텍스트가 오는 라인 보조텍스트가 오는 라인</p>
+    <div class="btns">
+        <button type="button" class="btn btn-share">공유하기</button>
+    </div>
+    <div class="btns cont-foot">
+        <button type="button" class="btn outline lg">자동납부등록</button>
+    </div>
+</div>
+            </script>
+ 
+            <div data-class="h2">오류</div>
+            <script type="text/html">
+<div class="result fail">
+    <p class="tit">상품가입 실패</p>
+    <p class="txt">보조텍스트가 오는 라인 보조텍스트가 오는 라인 보조텍스트가 오는 라인</p>
+</div>
+            </script>
+
+            <div data-class="h2">No Data</div>
+            <script type="text/html">
+<div class="result nodata">
+    <p class="tit">검색 결과가 없습니다.</p>
+    <p class="txt">직장/사업자명을 다시 검색하시거나 직접입력을 선택해주세요.</p>
+    <div class="btns cont-foot">
+        <button type="button" class="btn outline lg">직접입력</button>
+    </div>
+</div>
+<br>
+<div class="result nodata sm">
+    <p class="tit">검색 결과가 없습니다.</p>
+    <div class="btns cont-foot">
+        <button type="button" class="btn outline lg">직접입력</button>
+    </div>
+</div>
+<div class="result nodata acc">
+    <p class="tit">내 계좌에 연결된<br>자동이체가 궁금하다면?</p>
+    <p class="txt">꼭 필요한 이체만 남기고 관리할 수 있어요.</p>
+    <div class="btns cont-foot">
+        <button type="button" class="btn outline lg">계좌이동서비스 바로가기</button>
+    </div>
+</div>
+            </script>
+        </div>
+        
+        <div data-class="section">   
+            <div data-class="h1">Component</div>  
+            <div data-class="h2">완료</div>
+
+            <div data-class="h3">계좌입력 전</div>
+            <script type="text/html">
+<div class="result info-01">
+    <p class="tit">타이틀</p>
+    <p class="txt">받는분께서 계좌입력 전입니다.<br>계좌를 입력해야 받는분 계좌로 입금됩니다.</p>
+</div>
+            </script>
+
+            <div data-class="h3">계좌입력 요청</div>
+            <script type="text/html">
+<div class="result info-02">
+    <p class="tit">타이틀</p>
+    <p class="txt">받는분께서 계좌입력 전입니다.<br>계좌를 입력해야 받는분 계좌로 입금됩니다.</p>
+</div>
+            </script>
+
+            <div data-class="h3">입금 대기중/자동납부등록 요청중</div>
+            <script type="text/html">
+<div class="result info-03">
+    <p class="tit">김저축님께 보낼 500,000원이<br>입금대기중입니다</p>
+    <p class="txt">받는분의 동의를 기다리고 있습니다.<br>01.20. 10:55까지 동의하셔야 받는분 계좌로 입금됩니다.</p>
+</div>
+            </script>
+
+            <div data-class="h3">이체완료</div>
+            <script type="text/html">
+<div class="result info-04">
+    <p class="tit">김저축님께서<br>10시 15분까지 동의해야 이체됩니다</p>
+    <p class="p-sub">김저축님께 보낼<br>100,000원이 대기중이에요.</p>
+</div>
+<div class="boxs line blue01 gap-lg" role="button" title="지방세 연간 일정 안내 상세보기">
+    <div class="section-texplan add-arr">
+        <div class="state-msg">
+            <strong class="msg-tit">지방세 연간 일정 안내</strong>
+        </div>
+    </div>
+</div>
+            </script>
+
+<!--             <div data-class="h3">기기변경완료</div>
+            <script type="text/html">
+<div class="result success">
+    <p class="tit">기기변경이 완료되었습니다.</p>
+    <p class="txt">이제 변경된 기기에서 유플리트를 이용할 수 있습니다.</p>
+    <p class="p-sub">SBI저축은행 2023.02.20<br>상품서비스 및 마케팅 이용동의에 동의하셨습니다.</p>
+</div>
+            </script> -->
+
+            <div data-class="h2">오류안내</div>
+            <div data-class="h3">오류500</div>
+            <script type="text/html">
+<div class="result error-500">
+    <p class="tit">일시적인 오류로 페이지를 표시할 수 없습니다</p>
+    <p class="txt">동일한 오류가 계속 발생하는 경우 고객센터에 문의해주시기 바랍니다.</p>
+    <p class="code-error">오류코드(SBQ012345)</p>
+</div>
+<div class="section">
+    <ul class="lists link-bg">
+        <li>
+            <a href="#none" class="li-link"><i class="ico-chatbot left"></i>챗봇에 상담하기</a>
+        </li>
+        <li>
+            <a href="tel:1566-2210" class="li-link" title="전화 앱으로 전환"><i class="ico-custom left"></i>고객센터에 전화하기 (1566-2210)</a>
+        </li>
+    </ul>
+</div>
+            </script>
+
+            <div data-class="h3">오류404</div>
+            <script type="text/html">
+<div class="result error-404">
+    <p class="tit">페이지를 찾을 수 없습니다</p>
+    <p class="txt">네트워크 상태가 불안정하여 잠시 후 다시 접속하여 주시기 바랍니다.<br>이용에 불편을 드려 죄송합니다.</p>
+</div>
+<div class="section">
+    <ul class="lists link-bg">
+        <li>
+            <a href="tel:1566-2210" class="li-link" title="전화 앱으로 전환"><i class="ico-custom left"></i>고객센터에 전화하기 (1566-2210)</a>
+        </li>
+    </ul>
+</div>
+            </script>
+
+            <div data-class="h3">시스템점검</div>
+            <script type="text/html">
+<div class="result system">
+    <p class="tit">시스템 점검 공지</p>
+    <p class="txt">고객님께 더 좋은 서비스를 제공하기 위해 서버 업데이트 작업을 진행합니다.</p>
+</div>
+<div class="section">
+    <h4 class="ht-4">시스템 점검시간</h4>
+    <ul class="lists data left">
+        <li>
+            <div class="key">점검시간</div>
+            <div class="value">2023.05.02 12:30 ~ 2023.05.02 12:30</div>
+        </li>
+        <li>
+            <div class="key">소요시간</div>
+            <div class="value">약 3시간 소요 예정</div>
+        </li>
+    </ul>
+</div>
+            </script>
+
+            <div data-class="h3">거래시간초과</div>
+            <script type="text/html">
+<div class="result over-time">
+    <p class="tit">이용해주셔서 감사합니다</p>
+    <p class="txt">요청하신 서비스 제공 시간이 종료되었습니다.<br>다음 서비스 가능 시간에 이용해주시기 바랍니다.</p>
+</div>
+<div class="section">
+    <h4 class="ht-4">거래가능 시간</h4>
+    <ul class="lists data left">
+        <li>
+            <div class="key">평일</div>
+            <div class="value">09:30 ~ 17:30</div>
+        </li>
+        <li>
+            <div class="key">토요일·공휴일</div>
+            <div class="value">휴무</div>
+        </li>
+    </ul>
+    <ul class="lists link-bg gap-md">
+        <li>
+            <a href="#none" class="li-link"><i class="ico-chatbot left"></i>챗봇에 상담하기</a>
+        </li>
+        <li>
+            <a href="tel:1566-2210" class="li-link" title="전화 앱으로 전환"><i class="ico-custom left"></i>고객센터에 전화하기 (1566-2210)</a>
+        </li>
+    </ul>
+</div>
+            </script>
+
+            <div data-class="h3">보이스피싱</div>
+            <script type="text/html">
+<div class="result error-01">
+    <p class="tit fc-nega">보이스피싱 피해주의</p>
+    <p class="txt fc-nega">보이스피싱 피해가 의심됩니다.<br>확인 후 다시 거래해주세요.</p>
+</div>
+            </script>
+
+            <div data-class="h3">이상금융거래 차단</div>
+            <script type="text/html">
+<div class="result error-02">
+    <p class="tit">이상금융거래 차단</p>
+    <p class="txt">이상금융거래가 의심되어 출금거래가 차단되었습니다. 금융거래를 계속하시려면 차단해제를 해주세요.</p>
+</div>
+            </script>
+
+            <div data-class="h3">로그인세션 오류</div>
+            <script type="text/html">
+<div class="result error-session">
+    <p class="tit">로그인 정보가 존재하지<br>않습니다</p>
+    <p class="txt">일시적인 오류로 로그아웃 되었습니다.<br>다시 로그인 후 이용해주세요.</p>
+</div>
+            </script>
+
+
+            <div data-class="h2">신분증촬영</div>
+            <div data-class="h3">촬영안내</div>
+            <script type="text/html">
+<div class="result idcard-01">
+    <p class="tit">신분증을 다시 제출해주세요</p>
+    <p class="txt">제출하신 신분증에 이상이 있어 금융거래 이용이 제한되었습니다.</p>
+</div>
+            </script>
+
+            <div data-class="h3">제출완료</div>
+            <script type="text/html">
+<div class="result success">
+    <p class="tit">신분증 제출이 완료되었습니다</p>
+    <p class="txt">확인 후 문자메시지로 결과를 안내해드리겠습니다.</p>
+</div>
+            </script>
+
+            <div data-class="h3">제출완료 확인중</div>
+            <script type="text/html">
+<div class="result idcard-02">
+    <p class="tit">제출하신 신분증을 확인중입니다</p>
+</div>
+            </script>
+
+            <div data-class="h3">제출자료 검토중</div>
+            <script type="text/html">
+<div class="result review">
+    <p class="tit">제출한 서류를 검토하고 있어요</p>
+</div>
+<ul class="lists data">
+    <li>
+        <div class="key">신청조건</div>
+        <div class="value">국가유공자</div>
+    </li>
+    <li>
+        <div class="key">제출일</div>
+        <div class="value">2023.01.23</div>
+    </li>
+</ul>
+            </script>
+
+            <div data-class="h2">info box</div>
+            <script type="text/html">
+<div class="result info-05 bg-info-box">
+    <p class="tit">SBI저축은행 모든 임직원은</p>
+    <p class="txt">금융소비자 권익보호를 최상의 가치로 삼고 금융소비자의 신뢰를 기반으로 함께 발전하는 은행이 되고자 다음을 다짐합니다.</p>
+</div>
+            </script>
+
+            <div data-class="h2">자동제출실패</div>
+    <script type="text/html">
+<div class="result fail">
+    <p class="tit">세금완납증명서 자동 제출을<br>하지 못했어요</p>
+    <p class="txt">미납한 국세가 있어요.</p>
+</div>
+<div class="section">
+    <div class="result-question-btn">
+        <P class="tit">대출금으로 세금을 납부하는 조건으로<br>진행하시겠어요?</P>
+        <div class="btns cont-foot between gap-sm">
+            <button type="button" class="btn outline lg">아니오</button>
+            <button type="button" class="btn outline lg">예</button>
+        </div>
+    </div>
+</div>
+    </script>
+
+    </div>
+</div>
+    
+<script src="/guide/resources/vendor/jquery.min.js"></script>
+<script src="/guide/resources/vendor/lodash.min.js"></script>
+<script src="/guide/resources/vendor/highlight/highlight.min.js"></script>
+<script src="/guide/resources/vendor/clipboard.min.js"></script>
+<script src="/guide/resources/js/components.js"></script>
+<script src="/resources/js/common-ui.js"></script>
+<script src="/resources/js/library/lottie.min.js"></script>
+
+    <script>
+        var locaLoading = lottie.loadAnimation({
+            container: document.getElementById('loadingAni2'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/resources/js/json/loadingAni2.json'
+        });
+    </script>
+    
+</body>
+</html>

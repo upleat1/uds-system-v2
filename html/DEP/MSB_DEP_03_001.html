@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>ȸ�����⿹��</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap prod-intro type3"><!-- mod-date:0921: Ŭ�����߰� --><!-- @���� bg: type3 -->
+    <header class="pg-header">
+        <div class="pg-gnb on"><!-- mod-date:0921: Ŭ�����߰� -->
+            <h1 class="ht-1">ȸ�����⿹��</h1>
+            <button type="button" class="action-prev" title="����"></button>
+            <button type="button" class="action-menu" title="���"></button>
+        </div>
+    </header>
+    <div class="pg-container dep">
+        <div class="pg-content">            
+            <div class="prod-type-set">
+                <div class="type-deposit-wrap" data-ui="ani-page"><!-- opt. type-[deposit|loan|etc]-wrap-->
+                    <div class="focus-visual">
+                        <span class="front-txt">�����ں�ȣ��ǰ</span>
+                        <div class="slogun">�����Ⱓ���� �����ϸ� �ߵ������� �����ݸ���! �δ���� <strong>ȸ�����⿹��</strong></div>
+                        <button type="button" class="btn dark md round">�����ϱ�</button>
+                        <img src="/resources/img/common/dep-03-000.png" class="end" alt="">
+                        <ul class="depth chk">
+                            <li>�� 1.0% (1��, ����, �����ݸ�)</li>
+                            <li>���� �� 3ȸ���� ���</li>
+                            <li>3, 6, 12���� ȸ���ֱ� �� ����</li>
+                        </ul>
+                    </div>
+
+                    <div class="calc-case">
+                        <strong class="noti">���⿹����� �̸� �˾ƺ�����</strong>
+                        <div class="case-flow">
+                            <span class="item-key">3�� ����</span>
+                            <div class="form-row item-value">
+                                <div class="form-ele line-fix">
+                                    <button type="button" class="select-btn on" title="�������޹�� ����">����(�����Ͻ�����)</button>
+                                </div>
+                            </div>
+                            <span class="item-key">���ڸ� �ް�</span>
+                            <div class="form-row item-value">
+                                <div class="form-ele line-fix">
+                                    <button type="button" class="select-btn add-unit on" title="��ġ�ݾ� �Է�">10,000,000</button><strong>��</strong>
+                                </div>
+                            </div>
+                            <span class="item-key aside">�� �־�θ�</span>
+                        </div>
+                        <div class="btns cont-foot">
+                            <button type="button" class="btn point lg fz-18">���� �� �޴� �ݾ��� ���ϱ��?</button>
+                        </div>
+
+                        <div class="boxs result01">
+                            <span>���⿹���(����)</span>
+                            <span class="numbers-24 nums-bold fc-point dis-block" role="text"><span class="num-unit">��</span><span class="num">123,456,789</span><span class="num-unit">��</span></span>
+                            <div class="fc-sub sepe-line">�⺻�ݸ� <strong>�� 4.9%</strong></div>
+                        </div>
+                    </div>
+
+                    <hr class="divider-f">
+
+                    <div class="cascade-wrap">
+                        <div class="cascade">
+                            <span class="badge tag-pt"></span><!-- Point 1-->
+                            <div class="tit">���⿹�ݺ���<br><strong>���� �ݸ��� �����</strong></div>
+                            <p class="descr">���⿹�ݺ��� 0.1% ���ݸ��� �� �ֱ� ������ ���⿹�ݿ� �����ϴ� �� ���� ȸ�����⿹���� �����ϴ� ���� �� ���� �ݸ��� ������� �� �־��.</p>
+                            <img src="/resources/img/common/dep-03-001.png" class="thumn" alt="">
+                        </div>
+                        <div class="cascade">
+                            <span class="badge tag-pt"></span>
+                            <div class="tit">3, 6, 12���� ���ÿ� ����<br><strong>�����ݸ��� ����ſ�</strong></div>
+                            <p class="descr">���� �� ������ �ݸ��� ������� �����ϴ� �����ݸ��� �ƴ϶�, �ų� ���õ� ���⿹��(3, 6, 12����) �ݸ��� ���ݸ� 0.1%�� ����Ǵ� �����ݸ� ��ǰ�̿���.</p>
+                            <img src="/resources/img/common/dep-03-002.png" class="thumn" alt="">
+                        </div>
+                        <div class="cascade">
+                            <span class="badge tag-pt"></span>
+                            <div class="tit">���� ������ȹ�� �°�<br><strong>�Ŵ� ���ڸ� ������(�ܸ�),<br>�ѹ��� ������(����)</strong><br>������ �� �־��</div>
+                            <p class="descr">���⿹���� ������ �� �������޹���� �ܸ�(�Ŵ� ���� �ޱ�), ����(�����Ͽ� �ѹ��� �ޱ�) �� ���� �� �־��. �ڻ� ��Ȳ�� �°� �����غ�����.</p>
+                            <img src="/resources/img/common/dep-03-003.png" class="thumn" alt="">
+                        </div>
+                        <div class="cascade">
+                            <span class="badge tag-pt"></span>
+                            <div class="tit">�����Ⱓ���ȸ� �����ϰ�<br>�ߵ��� �����ص�<br><strong>�����ݸ��� �� �����</strong></div>
+                            <p class="descr">������ �����ݸ� ���ؿ��� �ּҷ� �����ϰ� ���� ���Ŀ� ���� �ߵ������ϴ��� �����ݸ�(�⺻�ݸ� + ���ݸ�)�� ��� �� �����. �δ���� �������� �����ϰ� �����ص� �����ƿ�.</p>
+                            <img src="/resources/img/common/dep-03-004.png" class="thumn" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="accordion prod" data-ui="accordion">
+                    <li>
+                        <button type="button" class="acco-item" aria-expanded="false">��ǰ�ȳ�</button>
+                        <div class="acco-panel">
+                            <p class="ref-date">������ : 2023.05.06</p>
+                            <h2 class="ht-4">���Դ��</h2>
+                            <ul class="depth bul">
+                                <li>����, ���λ����, ����
+                                    <p class="depth info indent">���ͳݹ�ŷ ����/�̿� ���� ���ͳݹ�ŷ���� ���⿹�� ���� ����</p>
+                                </li>
+                            </ul>
+
+                            <h2 class="ht-4">��������</h2>
+                            <ul class="depth bul">
+                                <li>���⿹�� (��ġ��)</li>
+                            </ul>
+
+                            <h2 class="ht-4">����ݾ�</h2>
+                            <ul class="depth bul">
+                                <li>10���� ~ ���Ѿ���</li>
+                            </ul>
+
+                            <h2 class="ht-4">���Ⱓ</h2>
+                            <ul class="depth bul">
+                                <li>36����</li>
+                            </ul>
+
+                            <h2 class="ht-4">�������޹��</h2>
+                            <ul class="depth bul">
+                                <li>�����Ͻ����� (������ ���ڰ��)</li>
+                                <li>ȸ���� ���� (3,6,12���� ���޽�, ������ ���ڰ��)</li>
+                                <li>������ (�ܸ��� ���ڰ��)</li>
+                            </ul>
+
+                            <h2 class="ht-4">���������</h2>
+                            <ul class="depth bul">
+                                <li>����������������� ���� ����</li>
+                            </ul>
+
+                            <h2 class="ht-4">�����ں�ȣ</h2>
+                            <ul class="depth bul">
+                                <li>�� ������ �����ں�ȣ���� ���� ���ݺ�����簡 ��ȣ�մϴ�. ��ȣ �ѵ��� �� �������࿡ �ִ� ������ ��� ���ݺ�ȣ��� ������ǰ�ǿ��ݰ� ������ ���ڸ� ���� 1�δ� �ְ� 5õ�����̸�, 5õ������ �ʰ��ϴ� ������ �ݾ��� ��ȣ���� �ʽ��ϴ�.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" class="acco-item" aria-expanded="false">�ݸ�����</button>
+                        <div class="acco-panel">
+                            <h2 class="ht-4">�ݸ�</h2>
+                            <div class="table">
+                                <div class="table-headnote">(2023.01.16 / ȸ���ֱ⺰�����ݸ� / ����)</div>
+                                <table>
+                                    <caption>ȸ���ֱ⺰�� �⺻, ��� �� ����ݸ� �ȳ�</caption>
+                                    <colgroup>
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <th scope="col">ȸ���ֱ�</th>
+                                        <th scope="col">�⺻�ݸ�</th>
+                                        <th scope="col">���ݸ�</th>
+                                        <th scope="col">����ݸ�</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3����</td>
+                                            <td>���⿹�� 3���� �ݸ�</td>
+                                            <td></td>
+                                            <td>�⺻�ݸ�<br>+0.1%p</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6����</td>
+                                            <td>���⿹�� 6���� �ݸ�</td>
+                                            <td></td>
+                                            <td>�⺻�ݸ�<br>+0.1%p</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12����</td>
+                                            <td>���⿹�� 12���� �ݸ�</td>
+                                            <td></td>
+                                            <td>�⺻�ݸ�<br>+0.1%p</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table-footnote">
+                                    <p class="depth info">����ݸ��� ���ݸ��� ���Ե� �ݸ��� ���������� �ڵ�����˴ϴ�.</p>
+                                    <p class="depth info">�� �ݸ��� ���� ���� ���ݸ��� ����� �ݸ��Դϴ�.</p>
+                                </div>
+                            </div>
+
+                            <h2 class="ht-4">����ݸ� ���� (ȸ���ֱ� 12���� ���� ��)</h2>
+                            <ul class="depth bul">
+                                <li>�ݸ������ϰ� ���������� �Ʒ��� ���� ��<br>�������� 2023�� 1�� 1���̰�, ���ԱⰣ�� 3���� ����� ����ݸ��� ������ �����ϴ�.</li>
+                            </ul>
+                            <div class="table">
+                                <table>
+                                    <caption>ȸ��ȸ���� �ݸ��ȳ�</caption>
+                                    <colgroup>
+                                        <col style="width:25%">
+                                        <col>
+                                        <col style="width:35%">
+                                    </colgroup>
+                                    <thead>
+                                        <th scope="col">�Ⱓ</th>
+                                        <th scope="col">�ݸ�������</th>
+                                        <th scope="col">��������</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1ȸ��</td>
+                                            <td>2023.01.01</td>
+                                            <td>�� 2.50%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2ȸ��</td>
+                                            <td>2024.01.01</td>
+                                            <td>�� 2.60%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3ȸ��</td>
+                                            <td>2025.01.01</td>
+                                            <td>�� 2.70%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="table">
+                                <table>
+                                    <caption>ȸ���� �⺻, ���, �����ݸ� �ȳ�</caption>
+                                    <colgroup>
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <th scope="col">ȸ��<br>(�Ⱓ)</th>
+                                        <th scope="col">�⺻�ݸ�<br>(A)</th>
+                                        <th scope="col">���ݸ�<br>(B)</th>
+                                        <th scope="col">�����ݸ�<br>(A+B)</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1ȸ��<br>(23.1.1~12.31)</td>
+                                            <td>�� 2.50%</td>
+                                            <td>�� 0.2%</td>
+                                            <td>�� 2.70%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2ȸ��<br>(24.1.1~12.31)</td>
+                                            <td>�� 2.60%</td>
+                                            <td>�� 0.2%</td>
+                                            <td>�� 2.80%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3ȸ��<br>(25.1.1~12.31)</td>
+                                            <td>�� 2.70%</td>
+                                            <td>�� 0.2%</td>
+                                            <td>�� 2.90%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h2 class="ht-4">�ߵ������ݸ�</h2>
+                            <ul class="depth bul">
+                                <li>��ġ�Ⱓ�� ���� �ߵ������ݸ��� ���� ����˴ϴ�.</li>
+                                <li>���� ���� ȸ���ֱ� ���� ���� ���ʹ� �� ȸ���ֱ⺰ ���õ� �����ݸ��� ���ؾ��� ����� �� �ֽ��ϴ�.</li>
+                                <li>1���� �̸� : ������ ���� ���뿹�� �⺻�ݸ�</li>
+                                <li>1���� �̻� ȸ���ֱ� ���� ���� �̸� : �����ݸ� x 100% x �����(����ϼ�/�����ϼ�)�� �������� ���� ���뿹�� �⺻�ݸ� �� ū ��</li>
+                                <li>ȸ���ֱ� ���� ����: �����ݸ� X 100%</li>
+                                <li>������ ��� ������ �ߵ������ݸ� ����</li>
+                            </ul>
+                            
+                            <h2 class="ht-4">�ߵ������ݸ� ����</h2>
+                            <div class="table">
+                                <table>
+                                    <caption>ȸ���ֱ⺰ �����ȳ�</caption>
+                                    <colgroup>
+                                        <col style="width:30%">
+                                        <col style="width:30%">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <th scope="col" colspan="2">��ġ�Ⱓ</th>
+                                        <th scope="col">����ݸ�</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="3">ȸ���ֱ�<br>3����</td>
+                                            <td>1���� �̸�</td>
+                                            <td class="left">���Խ��� ���뿹�� �⺻�ݸ�</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bdl">3���� �̸�</td>
+                                            <td class="left">�����ݸ�x�����(����ϼ�/ȸ���ֱ��ϼ�)�� �������� ���� ���뿹�� �⺻�ݸ� �� ū ��</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bdl">3���� �̻�</td>
+                                            <td class="left">���� �� 3���� ������ ������ �����ݸ��� 100%����(��: ���� �� 5���� ��� �������� �ߵ� ���� ��)
+                                                <ul class="depth dash">
+                                                    <li>3��������: 1ȸ�� �����ݸ��� 100%</li>
+                                                    <li>�ܿ� 2����: 2ȸ�� ������ �����ݸ��� 100%</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3">ȸ���ֱ�<br>6����</td>
+                                            <td>1���� �̸�</td>
+                                            <td class="left">���Խ��� ���뿹�� �⺻�ݸ�</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bdl">6���� �̸�</td>
+                                            <td class="left">�����ݸ�x�����(����ϼ�/ȸ���ֱ��ϼ�)�� �������� ���� ���뿹�� �⺻�ݸ� �� ū ��</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bdl">6���� �̻�</td>
+                                            <td class="left">���� �� 6���� ������ ������ �����ݸ��� 100%����(��: ���� �� 8���� ��� �������� �ߵ� ���� ��)
+                                                <ul class="depth dash">
+                                                    <li>6��������: 1ȸ�� �����ݸ��� 100%</li>
+                                                    <li>�ܿ� 2����: 2ȸ�� ������ �����ݸ��� 100%</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3">ȸ���ֱ�<br>12����</td>
+                                            <td>1���� �̸�</td>
+                                            <td class="left">���Խ��� ���뿹�� �⺻�ݸ�</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bdl">12���� �̸�</td>
+                                            <td class="left">�����ݸ�x�����(����ϼ�/ȸ���ֱ��ϼ�)�� �������� ���� ���뿹�� �⺻�ݸ� �� ū ��</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bdl">12���� �̻�</td>
+                                            <td class="left">���� �� 12���� ������ ������ �����ݸ��� 100%����(��: ���� �� 14���� ��� �������� �ߵ� ���� ��)
+                                                <ul class="depth dash">
+                                                    <li>12��������: 1ȸ�� �����ݸ��� 100%</li>
+                                                    <li>�ܿ� 2����: 2ȸ�� ������ �����ݸ��� 100%</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h2 class="ht-4">���� �� �ݸ�</h2>
+                            <ul class="depth bul">
+                                <li>��� �Ⱓ���� ���� �� �ݸ��� ���� ����˴ϴ�.</li>
+                            </ul>
+                            <div class="table">
+                                <table>
+                                    <caption>���� �� 1���� �̳� �� �ʰ��� �����ݸ� �ȳ�</caption>
+                                    <colgroup>
+                                        <col style="width:50%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1���� �̳�</th>
+                                            <td>�����ݸ�</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1���� �ʰ�</th>
+                                            <td>�� 0.2%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" class="acco-item" aria-expanded="false">�Ϻ����� �� �����ȳ�</button>
+                        <div class="acco-panel">
+                            <h2 class="ht-4">�Ϻ�����</h2>
+                            <ul class="depth bul">
+                                <li>�ߵ����� ���� �ʾƵ� �ܾ� �Ϻθ� ����� �� �ֽ��ϴ�(���� ���߿� ������ �ݾ׺��� ���)</li>
+                            </ul>
+                            <div class="table v">
+                                <table>
+                                    <caption></caption>
+                                    <colgroup>
+                                        <col style="width:30%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">�̿�Ⱓ</th>
+                                            <td>������~������ ����</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">���Ƚ��</th>
+                                            <td>3ȸ</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">�̿�����</th>
+                                            <td>
+                                                <ul class="depth dash">
+                                                    <li>�ּ������ܾ� 10����</li>
+                                                    <li>������� �����ܾ� �ִ� 90% ��� ����</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">����ݸ�</th>
+                                            <td>
+                                                �ߵ������ݸ� ����<br>
+                                                �������� ȸ���ֱ� ���޽��� ���ʹ� �ߵ����� �� ������ *100% ����
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h2 class="ht-4">�����������(����1)</h2>
+                            <div class="table v">
+                                <table>
+                                    <caption></caption>
+                                    <colgroup>
+                                        <col style="width:30%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">�ڵ�����</th>
+                                            <td>�����Ͽ� ���ݰ� ���ڸ� ��������(�Ⱓ, ���Ծ�, �ڵ���ü)���� �ִ�3ȸ���� �ڵ����� ����
+                                                <p class="p-sub">(����������������� ���� �� ���ݸ� �ڵ�����Ǹ�, ���ڱݾ��� ������������� �ڵ��Ա�)</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">�ڵ�����</th>
+                                            <td>�����Ͽ� �ڵ����� �����Ǿ� ���ݰ� ���� ��� ��ݰ��·� �Ա�</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">��������</th>
+                                            <td>���� �� ���� �����ؾ� �ϸ�, ������ ���� ���ڴ� ���� �� �ݸ��� ����</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" class="acco-item" aria-expanded="false">��Ÿ�ȳ�</button>
+                        <div class="acco-panel">
+                            <h2 class="ht-4">�ߵ����� ���ǻ���</h2>
+                            <ul class="depth bul">
+                                <li>���� ���� �ߵ������ϸ� �ߵ������ݸ��� ����˴ϴ�.</li>
+                                <li>���ݸ��� �������� �� ����Ǹ�, �ߵ����� �ÿ��� ���ܵ˴ϴ�.</li>
+                                <li>����, �з� �� ������� ����Ű��� ��ϵǸ� �ߵ������� �� �����ϴ�.</li>
+                            </ul>
+
+                            <h2 class="ht-4">�ڵ����� ���ǻ���</h2>
+                            <ul class="depth bul">
+                                <li>����������������� ������ ��� ���ݸ� �ڵ����� �����մϴ�.</li>
+                                <li>����, �з� �� ����Ű��� ��ϵǸ� �ڵ�������� �ʽ��ϴ�.</li>
+                            </ul>
+                            
+                            <h2 class="ht-4">���ѻ���</h2>
+                            <ul class="depth bul">
+                                <li>���� ������·� ���Ǻ��� �Ұ�(��ӿ� ���� ���� ������ ����)</li>
+                                <li>���� ���� ����, �з�, ���з� ���� ��ϵǰų� ����Ű��� ��ϵ� ��� �ܾ��� ���/�Ա�/������ ���ѵ˴ϴ�.</li>
+                            </ul>
+
+                            <h2 class="ht-4">�������������</h2>
+                            <ul class="depth bul">
+                                <li>����ȸ���� �������Һ��� ��ȣ�� ���� ������ �Ǹſ�Ģ ���� ����� ������ �����ϴ� ���, �ش� ����� ����� �� ������ ���� ������ �� �ֽ��ϴ�.</li>
+                            </ul>
+
+                            <h2 class="ht-4">�ο� �� ���� ���� �ȳ�</h2>
+                            <ul class="depth bul">
+                                <li>��ǰ���� �� �ǹ�����, �Ҹ� �ο��� ���� ��� SBI�������� ��������(1566-2210) �Ǵ� ���ͳ� Ȩ������<a href="www.sbisb.co.kr" class="underline" title="SBIȨ������ �̵�">(www.sbisb.co.kr)</a>�� ������ �� �ְ�, ������ �߻��� ��쿡�� ����������(���� ���� 1322) � ������ ��û�� �� �ֽ��ϴ�.</li>
+                            </ul>
+
+                            <h2 class="ht-4">��Ÿ�ȳ�</h2>
+                            <ul class="depth bul">
+                                <li>���ü�� �� ��ǰ������ �� ����� �о ���� �����帮��, ����� ���� ������ ���� �Ǹ��� �ְ� ��ǰ�� �ֿ䳻��, �ŷ����� �� ���ǻ��׿� ���Ͽ� ����� ������ ��� ������ �� �ŷ��� ���� �ǰ� �帳�ϴ�.</li>
+                                <li>�ڼ��� ������ �� �ʿ��Ͻ� ��� SBI�������� ��������(1566-2210)�� �����Ͻñ� �ٶ��ϴ�.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button type="button" class="acco-item" aria-expanded="false">��ǰ������ �� �⺻���</button>
+                        <div class="acco-panel">
+                            <div class="prod-term-list">
+                                <button type="button" title="�󼼺��� �������̵�">ȸ�����⿹�� ��ǰ������</button>
+                                <button type="button" title="�󼼺��� �������̵�">���ݰŷ��⺻���</button>
+                                <button type="button" title="�󼼺��� �������̵�">��ġ�Ŀ��ݾ��</button>
+                                <button type="button" title="�󼼺��� �������̵�">ȸ�����⿹��Ư��</button>
+                                <button type="button" title="�󼼺��� �������̵�">���°��ڵ���ü���</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pg-content-foot">
+            <div class="inform-btm-wrap">
+                <!-- mod-date:0630: .mgt-0, .gap-xxxs Ŭ���� ���� -->
+                <div class="ad-wrap">
+                    <p class="ad-txt">SBI�������� �ع������� ������ �� 2023-011ȣ<br>(22.01.06 ~ 22.01.05)</p>
+                    <p class="ad-txt">��ǰ���ߺμ� : SBI�������� �������� 1566-2210</p>
+                    <div class="ad-btns">
+                        <button type="button" class="btn-deliver kakao" title="īī�������� �����ϱ�"></button>
+                        <button type="button" class="btn-deliver etc" title="�����ϱ� ������ ��ȯ"></button><!-- mod-date:1109: [���ټ�] title ���� -->
+                    </div>
+                </div>
+                <!-- // -->
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary">ȸ�����⿹�� �����ϱ�</button>
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+    
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

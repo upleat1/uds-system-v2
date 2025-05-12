@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>유플리트</title>
+    <link rel="stylesheet" href="/guide/resources/css/components.css">
+    <link rel="stylesheet" href="/guide/resources/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/contents.css">
+</head>
+<body>
+    <div data-class="contents">
+        <h1 data-class="component-name"><span>토글<span></h1>
+
+        <div data-class="section">
+            <div data-class="h1">Toggle</div>
+            <div data-class="h2">클릭영역</div>
+            <div data-class="h3">└ 전체</div>
+            <script type="text/html">
+<button type="button" class="btn ico-chevron-sm right" data-ui="toggle" aria-expanded="false">상세보기</button>
+<!-- <button type="button" class="toggle-btn" data-ui="toggle" aria-expanded="false">상세보기<i class="arrow"></i></button> -->
+<div class="toggle-panel">
+    내용<br>
+    내용<br>
+    내용<br>
+</div>
+            </script>
+
+            <div data-class="h3">└ 부분 버튼</div>
+            <script type="text/html">
+
+<div class="toggle-wrap">
+    <div class="tit">타이틀</div>
+    <button type="button" class="btn ico-chevron-sm right" data-ui="toggle" aria-expanded="false" aria-controls="toggleSample1">상세보기</button>
+</div>
+<div id="toggleSample1" class="toggle-panel">
+    내용<br>
+    내용<br>
+    내용<br>
+</div>
+
+<div class="toggle-wrap">
+    <div class="tit">타이틀</div>
+    <button type="button" class="btn ico-chevron-sm right" data-ui="toggle" aria-expanded="false" aria-controls="toggleSample2">상세보기</button>
+</div>
+<div id="toggleSample2" class="toggle-panel">
+    내용<br>
+    내용<br>
+    내용<br>
+</div>
+            </script>
+            
+            <div data-class="h2">토글방향</div>
+            <div data-class="h3">└ 위로 펼치기</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>pg-content영역에 .page-fit 클래스추가</div>
+                    <div>버튼의 텍스트변경으로 인해 텍스트변경, 아이콘 append 적용중</div>
+                </div>
+            </div>
+            <script type="text/html">
+<div class="pg-content-foot">
+    <div class="btns cont-foot toggle-reverse">    
+        <button type="button" class="btn secondary lg toggle-btn ico-chevron-sm" data-ui="toggle" aria-expanded="false" data-txt>
+            <span class="bef">자세히보기</span><span class="aft">닫기</span>
+        </button>
+        <div class="toggle-panel">
+            <div class="section">
+                <ul class="lists data free">
+                    <li>
+                        <div class="key">타이틀</div>
+                        <div class="value">내용 내용 내용 내용</div>
+                    </li>
+                    <li>
+                        <div class="key">타이틀 타이틀 타이틀</div>
+                        <div class="value">내용 내용 내용 내용</div>
+                    </li>
+                    <li>
+                        <div class="key">타이틀 타이틀</div>
+                        <div class="value">내용</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+            </script>
+        </div>
+
+            
+
+        <div data-class="section">
+            <div data-class="h1">Press</div>
+            <div data-class="h2">on/off 버튼</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>토글영역없이 버튼만 사용하는 경우는 data-ui="press" aria-pressed 적용 필요</div>
+                </div>
+            </div>
+            <script type="text/html">
+
+<button type="button" class="btn outline2 md round ico-favorite" aria-pressed="false" data-ui="press">즐겨찾기</button>
+<button type="button" class="aside ico-favo on" aria-pressed="true" data-ui="press" title="즐겨찾기"></button>
+
+            </script>
+
+
+        </div>
+    </div>
+    
+    <script src="/guide/resources/vendor/jquery.min.js"></script>
+    <script src="/guide/resources/vendor/lodash.min.js"></script>
+    <script src="/guide/resources/vendor/highlight/highlight.min.js"></script>
+    <script src="/guide/resources/vendor/clipboard.min.js"></script>
+    <script src="/guide/resources/js/components.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <script>
+    </script>
+</body>
+</html>

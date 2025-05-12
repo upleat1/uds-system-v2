@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>Ŀ������ģ���ʴ�</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">Ŀ�������ʴ�</h1>
+            <button type="button" class="action-prev" title="����"></button>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container inq">
+        <div class="pg-content">
+            <h2 class="ht-2"><strong>�Բ� �̿��� ģ����</strong><br>�ʴ����ּ���</h2><!-- mod-date:0605: [���ټ�] role ���� -->
+            <div class="section">
+                <div class="card-wrap single-switch" role="button" title="�󼼺���">
+                    <div class="card-head fit">
+                        <div class="state-msg fw-500">�ּҷϿ��� ã��</div>
+                        <span class="btn ico-arr-right state-btn"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">ģ�� �̸�</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <input type="text" placeholder="�Է����ּ���" title="ģ���̸� �Է�" value="" class="inp">
+                        </div>
+                    </div>   
+                    <p class="tip">�Ǹ����� �Է����ּ���.</p>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">ģ�� ����ó</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <input type="text" placeholder="���ڸ� �Է�" title="ģ������ó �Է�" value="" class="inp">
+                        </div>
+                    </div>   
+                </div>
+                <div class="form-group">
+                    <div class="form-rdochk">
+                        <strong class="fz-16">���� �Ա��� �˸�</strong>
+                        <span class="switch">    
+                            <input type="checkbox" id="switch" title="���� �Ա��� �˸�"><!-- mod-date:1124: title���� -->
+                            <label for="switch" class="label"></label>
+                        </span>
+                    </div>
+                    <div class="form-label gap-xs">�˸���</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="�˸��� ����">�ſ� 15��</button>
+                        </div>
+                    </div>
+                    <p class="tip">�ſ� �����Ͽ� �˸���(SMS)�� ��Ǫ�÷� �˷������.<br>(������ ���ڰ� ���� �޿��� ���Ͽ� �˸�)</p>
+                </div>
+            </div>
+        </div>
+        <div class="pg-content-foot">
+            <div class="inform-btm-wrap">
+                <h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>�ʴ���� ģ���� ����ݰ��°� ��� ȸ���� �����ϸ� Ŀ������ ���񽺸� �̿��� �� �ֽ��ϴ�.</li>
+                    <li>��� Ŀ�ÿ��Դ� Ŀ������ ��ȯ ���� �ŷ��������� �������ϴ�.</li>
+                    <li>�ʴ� �� Ŀ���� �����ϱ� �� ��ҵ� �����մϴ�.</li>
+                    <li>���� �Ա� �˸����񽺴� ���� �Ա��� ������ �ȳ��̸�, �ݾ��� �ڵ����� ��ü���� �ʽ��ϴ�.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">�ʴ��ϱ�</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<div id="viewWay" class="popup bottom fix foot show" data-height="50vh" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head h-auto">
+            <h1 id="bottomPopup2Label">�˸����� �������ּ���</h1>
+            <p class="message fw-400">���� �Ա����� ���ϸ� �ſ� �˸���(SMS)�� ��Ǫ�÷� �˷������.</p>
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="list-wrap gap-sm">
+                    <button type="button" class="list-block selected" title="���õ�"><!-- ����: ���ý� selected Ŭ���� �� title �߰� -->
+                        ������� ����
+                    </button>
+                    <button type="button" class="list-block">1��</button>
+                    <button type="button" class="list-block">2��</button>
+                    <button type="button" class="list-block">3��</button>
+                    <button type="button" class="list-block">4��</button>
+                    <button type="button" class="list-block">5��</button>
+                    <button type="button" class="list-block">6��</button>
+                    <button type="button" class="list-block">7��</button>
+                    <button type="button" class="list-block">8��</button>
+                    <button type="button" class="list-block">9��</button>
+                    <button type="button" class="list-block">10��</button>
+                    <button type="button" class="list-block">11��</button>
+                    <button type="button" class="list-block">12��</button>
+                    <button type="button" class="list-block">13��</button>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

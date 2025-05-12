@@ -1,0 +1,53 @@
+/*** Tab ***/
+/* Line Tab */
+.tab-wrap {position:relative; width:100%;}
+.tab-wrap::after {content:''; display:block; position:absolute; right:0; top:0; width:var(--upl-number-36); height:var(--upl-tab-line-default-line-height); z-index:1; background:linear-gradient(270deg, var(--upl-color-gray-white) 15%, var(--upl-color-alpha-white0) 100%);}
+.tab-wrap .btn-tab {overflow:visible; position:relative; margin:0; font-size:var(--upl-tab-line-default-font-size); color:var(--upl-tab-line-default-font-color); text-align:center;}
+.tab-wrap .btn-tab::after {content:''; position:absolute; z-index:3; bottom:calc(var(--upl-tab-line-default-border-width) * -1); left:50%; width:0; height:var(--upl-tab-line-selected-border-width); background:var(--upl-tab-line-selected-border-color); box-shadow:none;}
+.tab-wrap .btn-tab[aria-selected=true]::after, 
+.tab-wrap .btn-tab.active::after {left:0; width:100%; -webkit-transition:.2s; transition:.2s;}
+.tab-wrap .tab-list {position:relative; overflow-x:auto; white-space:nowrap;}
+.tab-wrap .tab-list::-webkit-scrollbar {display:none;}
+.tab-wrap .tab-panel {display:none; position:relative; border:0; border-radius:0; box-shadow:none; z-index:3;}
+.tab-wrap .tab-panel.active {display:block;}
+.tab-wrap .tab-panel:focus::after {content:''; position:absolute; bottom:0;}
+.tab-wrap .tab-panel[tabindex='-1'] {display:none;}
+.tab-wrap .tab-panel[tabindex='0'] {display:block;}
+.tab-wrap .link-panel {padding:0}
+
+.tab-wrap.line > .tab-list > .scroll-wrap {display:inline-flex; position:relative; min-width:100%; padding-right:calc(var(--upl-number-36) * 0.6); border-bottom:var(--upl-tab-line-default-border-width) solid var(--upl-tab-line-default-border-color); white-space:nowrap; text-align:center;}
+.tab-wrap.line > .tab-list > .scroll-wrap .btn-tab {display:block; overflow:visible; position:relative; height:var(--upl-tab-line-height); margin:0; padding:0 var(--upl-tab-line-padding-x); line-height: var(--upl-tab-line-default-line-height); letter-spacing:var(--upl-typo-letter-spacing-01); text-align:center;}
+.tab-wrap.line > .tab-list > .scroll-wrap a.btn-tab {line-height:var(--upl-tab-line-height);}
+.tab-wrap.line > .tab-list > .scroll-wrap .btn-tab[aria-selected=true], 
+.tab-wrap.line > .tab-list > .scroll-wrap .btn-tab.active {font-weight:var(--upl-typo-font-weight-bold); color:var(--upl-tab-line-selected-font-color);}
+.tab-wrap.line > .tab-list > .scroll-wrap .btn-tab + .btn-tab {margin-left:var(--upl-tab-line-default-gap-x);}
+.tab-wrap.line.is-motion > .tab-list > .scroll-wrap .btn-tab::after,
+.tab-wrap.line.is-motion > .tab-list > .scroll-wrap .btn-tab.active::after {display: none}
+.tab-wrap.line.is-motion > .tab-list > .tab-bar {position:absolute; left:0; bottom:0; width:0; height:var(--upl-tab-line-selected-border-width); z-index:1; background-color:var(--upl-tab-line-selected-border-color); transition:left 0.4s cubic-bezier(.25, .75, .5, 1.25);}
+
+.tab-wrap.line-secondary .tab-list {background:var(--upl-tab-line-secondary-background-color);}
+.tab-wrap.line-secondary .btn-tab[aria-selected=true]::after, 
+.tab-wrap.line-secondary .btn-tab.active::after {display:none;}
+.tab-wrap.line-secondary .btn-tab {padding:var(--upl-tab-line-secondary-padding-y) var(--upl-tab-line-secondary-padding-x); font-weight:var(--upl-tab-line-secondary-default-font-weight); font-size:var(--upl-tab-line-secondary-font-size); color:var(--upl-tab-line-secondary-default-font-color); line-height:var(--upl-tab-line-secondary-line-height);}
+.tab-wrap.line-secondary .btn-tab + .btn-tab {margin-left:var(--upl-tab-line-secondary-gap-x);}
+.tab-wrap.line-secondary .btn-tab[aria-selected=true], 
+.tab-wrap.line-secondary .btn-tab.active {font-weight:var(--upl-tab-line-secondary-selected-font-weight); color:var(--upl-tab-line-secondary-selected-font-color);}
+
+/* Box Tab */
+.tab-wrap.box::after {display:none;}
+.tab-wrap.box > .tab-list {display:inline-flex; width:100%; height:auto; margin:0; padding:var(--upl-tab-box-padding-y) var(--upl-tab-box-padding-x); border-radius:var(--upl-tab-box-radius); border-bottom:0; background-color:var(--upl-tab-box-default-background-color);}
+.tab-wrap.box > .tab-list:after {height:auto; border-bottom:0;}
+.tab-wrap.box > .tab-list > .btn-tab {width:100%; padding:0; font-weight:var(--upl-tab-box-font-weight); font-size:var(--upl-tab-box-font-size); color:var(--upl-tab-box-default-font-color); line-height:calc(var(--upl-tab-box-height) - var(--upl-tab-box-selected-border-width) * 2); border:var(--upl-tab-box-selected-border-width) solid transparent; border-radius:var(--upl-tab-box-radius);}
+.tab-wrap.box > .tab-list > .btn-tab + .btn-tab {margin-left:var(--upl-tab-box-gap-x);}
+.tab-wrap.box > .tab-list > .btn-tab[aria-selected='true'] {padding:0; font-weight:var(--upl-tab-box-selected-font-weight); font-size:var(--upl-tab-box-font-size); color:var(--upl-tab-box-selected-font-color); border:var(--upl-tab-box-selected-border-width) solid var(--upl-tab-box-selected-border-color); background-color:var(--upl-tab-box-selected-background-color);}
+.tab-wrap.box > .tab-list > .btn-tab[aria-selected='true']::after {display:none;}
+.tab-wrap.box.is-motion > .tab-list > .btn-tab {z-index:2;cursor:auto}
+.tab-wrap.box.is-motion > .tab-list > .btn-tab[aria-selected='true'] {background:none;box-shadow:none;border:none}
+.tab-wrap.box.is-motion > .tab-list > .tab-list,
+.tab-wrap.box.is-motion > .tab-list > .tab-list .btn-tab {background:none}
+.tab-wrap.box.is-motion > .tab-list > .tab-list::before {content:''; position:absolute; top:0; left:0; right:0; bottom:0; border-radius:var(--upl-tab-box-radius); background-color:var(--upl-tab-box-default-background-color);}
+.tab-wrap.box.is-motion > .tab-list > .tab-bar {position:absolute; left:0; top:var(--upl-tab-box-padding-y); bottom:var(--upl-tab-box-padding-y); width:0; border:var(--upl-tab-box-selected-border-width) solid var(--upl-tab-box-selected-border-color); border-radius:var(--upl-tab-box-radius); background-color:var(--upl-tab-box-selected-background-color); transition:left 0.4s cubic-bezier(.25, .75, .5, 1.25)}
+
+/* Swipe */
+.tab-swipe{overflow:hidden}
+.tab-swipe .tab-panel{display:block}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark-m">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>유플리트</title>
+    <link rel="stylesheet" href="/guide/resources/css/components.css">
+    <link rel="stylesheet" href="/guide/resources/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/component.css">
+    <link rel="stylesheet" href="/resources/css/library/swiper.min.css">
+
+    <style>
+        .accordion.prod {margin-right:-2rem;}
+    </style>
+</head>
+<body>
+    <div data-class="contents" style="height:100vh">
+        <div data-class="component-name"><span>아코디언</span></div>
+
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+            <div data-class="h2">클릭영역 : 전체</div>
+            <div data-class="box">클릭영역이 전체일 경우는 툴팁적용 안함</div>
+
+            <script type="text/html">
+<ul class="accordion" data-ui="accordion">
+    <li class="on">
+        <button type="button" class="acco-item" aria-expanded="true">제목 1</button>
+        <div class="acco-panel">
+            <p>콘텐츠 영역</p>
+        </div>
+    </li>
+    <li>
+        <button type="button" class="acco-item" aria-expanded="false">제목 2</button>
+        <div class="acco-panel">
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+        </div>
+    </li>
+    <li>
+        <button type="button" class="acco-item" aria-expanded="false">제목 3</button>
+        <div class="acco-panel">
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+        </div>
+    </li>
+</ul>
+            </script>
+
+            <div data-class="h2">클릭영역 : 버튼</div>
+            <script type="text/html">
+<ul class="accordion" data-ui="accordion">
+    <li>
+        <div class="acco-items">
+            <div class="acco-item">
+                제목1
+                <div class="tooltips">
+                    <p class="tooltip"><button type="button" class="btn-tooltip" data-ui="tooltip"><span class="hidden">제목1 도움말 자세히보기</span></button></p>
+                    <div class="tooltip-wrap" role="tooltip" aria-hidden="true">
+                        <p class="tooltip-tit">툴팁 타이틀영역</p>
+                        <div class="tooltip-cont"> 
+                            기본형과 타이틀형이 있습니다. <br>
+                            현재 툴팁은 타이틀형입니다.. <br>
+                            툴팁 영역으로 기본형과 타이틀형이 있습니다. 
+                            툴팁 영역으로 기본형과 타이틀형이 있습니다.
+                        </div>
+                        <button type="button" class="btn-tooltip-x"><span class="hidden">도움말 닫기</span></button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="acco-btn" aria-expanded="false" title="제목1"></button>                  
+        </div>        
+        <div class="acco-panel">
+            텍스트가 오는 영역 텍스트가 오는 영역 텍스트가 오는 영역
+            텍스트가 오는 영역 텍스트가 오는 영역 텍스트가 오는 영역  
+        </div>
+    </li>
+    <li>
+        <div class="acco-items">
+            <div class="acco-item">제목2</div>
+            <button type="button" class="acco-btn" aria-expanded="false" title="제목2"></button>                  
+        </div>   
+        <div class="acco-panel">
+            텍스트가 오는 영역 텍스트가 오는 영역 텍스트가 오는 영역
+            텍스트가 오는 영역 텍스트가 오는 영역 텍스트가 오는 영역  
+        </div>
+    </li>
+</ul>  
+            </script>
+
+            <div data-class="h2">1개씩 개별 제어</div>
+            <div data-class="box">.each-open 클래스 추가</div>
+
+            <script type="text/html">
+<ul class="accordion each-open" data-ui="accordion">
+    <li class="on">
+        <button type="button" class="acco-item" aria-expanded="true">제목 1</button>
+        <div class="acco-panel">
+            <p>콘텐츠 영역</p>
+        </div>
+    </li>
+    <li>
+        <button type="button" class="acco-item" aria-expanded="false">제목 2</button>
+        <div class="acco-panel">
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+        </div>
+    </li>
+    <li>
+        <button type="button" class="acco-item" aria-expanded="false">제목 3</button>
+        <div class="acco-panel">
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+        </div>
+    </li>
+</ul>
+            </script>
+
+            <div data-class="h2">서브 아코디언</div>
+            <script type="text/html">
+<ul class="accordion" data-ui="accordion">
+    <li>
+        <button type="button" class="acco-item" aria-expanded="false">제목 1</button>
+        <div class="acco-panel">
+            <ul class="accordion" data-ui="accordion">
+                <li>
+                    <button type="button" class="acco-item link">증명서 신청</button>
+                </li>
+                <li>
+                    <button type="button" class="acco-item" aria-expanded="false">발급 신청</button>
+                    <div class="acco-panel">
+                        <ul class="list-link">
+                            <li><a href="#none" class="link">OTP 최초발급</a></li>
+                            <li><a href="#none" class="link">OTP 재발급</a></li>
+                            <li><a href="#none" class="link">보안카드 재발급</a></li>
+                            <li><a href="#none" class="link">통장 재발급</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="acco-item" aria-expanded="false">오류해제/분실신고</button>
+                    <div class="acco-panel">
+                        <ul class="list-link">
+                            <li><a href="#none" class="link">인터넷뱅킹 이용제한 해제</a></li>
+                            <li><a href="#none" class="link">계좌 비밀번호 오류 해제</a></li>
+                            <li><a href="#none" class="link">장기미사용 이체제한 해제</a></li>
+                            <li><a href="#none" class="link">보안카드 비밀번호 오류 해제</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <button type="button" class="acco-item" aria-expanded="false">제목 2</button>
+        <div class="acco-panel">
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+        </div>
+    </li>
+    <li>
+        <button type="button" class="acco-item" aria-expanded="false">제목 3</button>
+        <div class="acco-panel">
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+            <p>콘텐츠 영역</p>
+        </div>
+    </li>
+</ul>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Component</h1></div>
+            <div data-class="h2">FAQ</div>
+            <script type="text/html">
+<div class="lists-headnote">
+    <span class="fz-14 fc-sub">전체 16건이 검색되었습니다.</span>
+</div>
+<div class="board-list">
+    <ul class="accordion faq" data-ui="accordion">
+        <li>
+            <button type="button" class="acco-item" aria-expanded="false">비대면 외화보통예금 신규란?</button>
+            <div class="acco-panel">지점 방문 없이 비대면 실명확인 방식으로 모바일을 통해 외화요구불예금을 신규 개설하는 서비스를 말합니다.</div>
+        </li>
+        <li>
+            <button type="button" class="acco-item" aria-expanded="false">이용 대상 고객은 어떻게 되나요? 개인/개인사업자/임의단체 모두 이용가능 한가요?</button>
+            <div class="acco-panel">지점 방문 없이 비대면 실명확인 방식으로 모바일을 통해 외화요구불예금을 신규 개설하는 서비스를 말합니다.</div>
+        </li>
+        <li>
+            <button type="button" class="acco-item" aria-expanded="false">비대면 외화보통예금 신규란?</button>
+            <div class="acco-panel">지점 방문 없이 비대면 실명확인 방식으로 모바일을 통해 외화요구불예금을 신규 개설하는 서비스를 말합니다.</div>
+        </li>
+    </ul>
+</div>
+            </script>
+
+
+        
+            <div data-class="h2">금융상품</div>
+            <script type="text/html">
+                
+    <ul class="accordion prod" data-ui="accordion">
+        <li>
+            <button type="button" class="acco-item" aria-expanded="false">
+                비대면 외화보통예금 신규란?
+            </button>
+            <div class="acco-panel">                            
+                지점 방문 없이 비대면 실명확인 방식으로 모바일을 통해 외화요구불예금을 신규 개설하는 서비스를 말합니다.
+            </div>
+        </li>
+        <li>
+            <button type="button" class="acco-item" aria-expanded="false">
+                이용 대상 고객은 어떻게 되나요? 개인/개인사업자/임의단체 모두 이용가능 한가요?
+            </button>
+            <div class="acco-panel">
+                지점 방문 없이 비대면 실명확인 방식으로 모바일을 통해 외화요구불예금을 신규 개설하는 서비스를 말합니다.
+            </div>
+        </li>
+        <li>
+            <button type="button" class="acco-item" aria-expanded="false">
+                비대면 외화보통예금 신규란?
+            </button>
+            <div class="acco-panel">                                 
+                지점 방문 없이 비대면 실명확인 방식으로 모바일을 통해 외화요구불예금을 신규 개설하는 서비스를 말합니다.
+            </div>
+        </li>
+    </ul>
+    
+            </script>
+        </div>
+
+
+
+    </div>
+    <script src="/guide/resources/vendor/jquery.min.js"></script>
+    <script src="/guide/resources/vendor/swiper.min.js"></script>
+    <script src="/guide/resources/vendor/lodash.min.js"></script>
+    <script src="/guide/resources/vendor/highlight/highlight.min.js"></script>
+    <script src="/guide/resources/vendor/clipboard.min.js"></script>
+    <script src="/guide/resources/js/components.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <script>
+        // accordion 호출
+        // UICommon.accordionButton.init();
+        
+        // tooltip 호출
+        // UICommon.tooltipButton.init();
+    </script>
+</body>
+</html>

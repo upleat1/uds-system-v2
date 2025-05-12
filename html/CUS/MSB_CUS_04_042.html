@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�������� ó����Ȳ</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap"><!-- Ǯ�˾�: .full Ŭ���� �߰� -->
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">����������ȣ</h1>
+			<button type="button" class="action-prev" title="����"></button>
+        </div>
+    </header>
+    <div class="pg-container cus">
+		<div class="pg-content">
+            <div class="tab-wrap round"><!-- mod-date:0531: .mgt-0 ���� -->
+                <div class="tab-list"><!-- mod-date:0531: .mgt-0 ���� -->
+                    <div class="scroll-wrap">
+                        <button type="button" role="tab" aria-controls="tab2panel2-1" aria-selected="false">��������ó����ħ</button>
+                        <button type="button" role="tab" aria-controls="tab2panel2-2" aria-selected="false">�ſ�����Ȱ��ü��</button><!-- mod-date:0628: �ؽ�Ʈ ���� -->
+                        <button type="button" role="tab" aria-controls="tab2panel2-3" aria-selected="false">�����Ǹ��ȳ���</button>
+                        <button type="button" role="tab" aria-controls="tab2panel2-4" aria-selected="false">��Ź �� ������Ȳ</button>
+                        <button type="button" role="tab" aria-controls="tab2panel2-5" aria-selected="false">������������û��</button>
+                        <button type="button" role="tab" aria-controls="tab2panel2-6" aria-selected="false">�ſ������̿� �� ������Ȳ��ȸ</button>
+                        <button type="button" role="tab" aria-controls="tab2panel2-7" aria-selected="true" class="active">�������� ó����Ȳ</button>
+                    </div>
+                    <i class="tab-bar" aria-hidden="true"></i>
+                </div>
+                <div class="tab-panel active" role="tabpanel" id="tab2panel2-7"><!-- mod-date:0531: .gap-md ���� -->
+                    <!-- @���� ���� -->
+                    <ul class="accordion prod" data-ui="accordion"><!-- mod-date:0531: .gap-lg ���� -->
+                        <li class="on">
+                            <button type="button" class="acco-item" aria-expanded="true">
+                                �̿���Ȳ
+                            </button>
+                            <div class="acco-panel agree-box">    
+                                <div class="table">
+                                    <table>
+                                        <caption>���̺� ���� ����</caption>
+                                        <colgroup>
+                                            <col style="width:40%">
+                                            <col>
+                                            <col style="width:40%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">ó���ϴ� ���������� ���� �� �׸�</th>
+                                                <th scope="col">�̿����</th>
+                                                <th scope="col">���� �� �̿�Ⱓ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2019��1��~2020��12�� �����û���� ���)</td>
+                                                <td>�ſ��򰡸��� ����</td>
+                                                <td>����ó�� ��ȹ �� ������ ���� �޼� �ñ��� ����, �̿�<br>(2021��5��~2022��5��)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2019��5��~2021��5�� �����û���� ���)</td>
+                                                <td>�ſ��򰡸��� ����</td>
+                                                <td>����ó�� ��ȹ �� ������ ���� �޼� �ñ��� ����, �̿�<br>(2021��9��~2022��8��)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2020��1��~2021��8�� �����û���� ���)</td>
+                                                <td>�ſ��򰡸��� ����</td>
+                                                <td>����ó�� ��ȹ �� ������ ���� �޼� �ñ��� ����, �̿�<br>(2021��10��~2022��9��)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2020��10��~2021��8��, 2022��1��~2022��4�� �����û���� ���)</td>
+                                                <td>�Ż�ǰ���� �� CSS����ȭ</td>
+                                                <td>����ó�� ��ȹ �� ������ ���� �޼� �ñ��� ����, �̿�<br>(2022��6��~2023��6��)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2022��1��~2022��4��, 2022��8��~2022��10�� �����û���� ���)</td>
+                                                <td>�����ǰ ����ũ���� �� ����͸�</td>
+                                                <td>����ó�� ��ȹ �� ������ ���� �޼� �ñ��� ����, �̿�<br>(2023��1��~2023��12��)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>   
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- mod-date:0901: ������� -->
+                            <button type="button" class="acco-item" aria-expanded="false">
+                                ������Ȳ
+                            </button>
+                            <div class="acco-panel agree-box">    
+                                <div class="table">
+                                    <table>
+                                        <caption>���̺� ���� ����</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col style="width:30%">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">�����޴���</th>
+                                                <th scope="col">�����޴� ���� �̿� ����</th>
+                                                <th scope="col">�����ϴ� ���������� ���� �� �������</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>�������ȿ�</td>
+                                                <td>�ſ��򰡸��� ������ ���� ������ ����</td>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2022��1��~2022��4��, 2022��8��~2022��10�� �����û���� ���)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>�������ȿ�</td>
+                                                <td>�ſ��򰡸��� ������ ���� ������ ����</td>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2019��5��~2021��5�� �����û���� ���)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>�������ȿ�</td>
+                                                <td>�ſ��򰡸��� ������ ���� ������ ����</td>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2020��1��~2021��8�� �����û���� ���)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>�������ȿ�</td>
+                                                <td>�Ż�ǰ���� �� CSS����ȭ�� ���� ������ ����</td>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2020��10��~2021��8��, 2022��1��~2022��4�� �����û���� ���)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>�������ȿ�</td>
+                                                <td>�����ǰ ����ũ���� �� ����͸��� ���� ������ ����</td>
+                                                <td>�����û����, �ѵ�����, �ſ�ŷ����� ��<br>(2022��1��~2022��4��, 2022��8��~2022��10�� �����û���� ���)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>   
+                                </div>
+                            </div>
+                            <!-- //������� -->
+                        </li>
+                    </ul>
+                    <!-- // -->
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�������հ���</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap"> 
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">�������հ���</h1>
+            <button type="button" class="action-prev" title="����"></button>
+        </div>
+    </header> 
+    <div class="pg-container crd flow-ini">
+        <div class="pg-content">
+            <div class="hgroup-2">
+                <h2 class="ht-2"><strong>�� ���¸�</strong><br>Ȯ���غ�����</h2>
+                <p class="txt">���� ����������� �̿� ����<br>�� ���� �ܾ��� �Ѵ��� ���������.</p>
+            </div>
+            <!-- mod-date:0531: .section div ���� -->
+            <div class="tab-wrap fit">
+                <div class="tab-list sticky top50" role="tablist">
+                    <div class="scroll-wrap">
+                        <button type="button" role="tab" aria-selected="false"  aria-controls="tabpanelLine-1-1">����</button>
+                        <button type="button" role="tab" aria-selected="false" aria-controls="tabpanelLine-1-2">��2����</button>
+                        <button type="button" role="tab" aria-selected="true" aria-controls="tabpanelLine-1-3">���ǻ�</button>
+                    </div>
+                    <i class="tab-bar" aria-hidden="true"></i>
+                </div>
+                <div class="tab-panel active" role="tabpanel" id="tabpanelLine-1-3">
+                    <!-- @����1 -->
+                    <div class="item-wrap">
+                        <div class="bg-item-box type2">
+                            <i class="ci-24x st-279"></i>
+                            <div class="item-txt">DB��������</div>
+                            <div class="item-deco" role="text"><span class="hidden">��ȸ�� �׸�</span> 1</div>
+                        </div>
+
+                        <div class="chk-card-wrap">
+                            <div class="chk-card r chk-null" role="text" aria-labelledby="chkCard01"><!-- ����: aria-labelledby �߰�(���ټ�) -->
+                                <div class="chk-inr" id="chkCard01" aria-hidden="true"><!-- ����: aria-labelledby�� id ���� �� aria-hidden �߰�(���ټ�) -->
+                                    <div class="item-deco">
+                                        <span class="badge state-prod03">��������</span>
+                                    </div>
+                                    <div class="item-name">���뿹�� (IBK ����Ѱ�������)</div>
+                                    <div class="item-desc">01234121234567</div>
+                                    <div class="numbers-18 nums-bold" role="text"><span class="num">1,000,000</span><span class="num-unit">��</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- @����2 -->
+                    <div class="item-wrap">
+                        <div class="bg-item-box type2">
+                            <i class="ci-24x st-209"></i>
+                            <div class="item-txt">����Ÿ�����ֽ�ȸ��</div>
+                            <div class="item-deco" role="text"><span class="hidden">��ȸ�� �׸�</span> 2</div>
+                        </div>
+
+                        <div class="chk-card-wrap">
+                            <div class="chk-card r chk-null already" role="text" role="text" aria-labelledby="chkCard02-1">
+                                <div class="chk-inr" id="chkCard02-1" aria-hidden="true">
+                                    <div class="item-deco">
+                                        <span class="badge state-prod03">��������</span>
+                                    </div>
+                                    <div class="item-name">������ǰ</div>
+                                    <div class="item-desc">01234121234567</div>
+                                    <div class="numbers-18 nums-bold" role="text"><span class="num">100,000</span><span class="num-unit">��</span></div>
+                                </div>
+                            </div>
+                            <div class="chk-card r chk-null" role="text" aria-labelledby="chkCard02-2">
+                                <div class="chk-inr" id="chkCard02-2" aria-hidden="true">
+                                    <div class="item-deco">
+                                        <span class="badge state-prod03">��������</span>
+                                    </div>
+                                    <div class="item-name">������ǰ</div>
+                                    <div class="item-desc">01234121234567</div>
+                                    <div class="numbers-18 nums-bold" role="text"><span class="num">100,000</span><span class="num-unit">��</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- @����3 -->
+                    <div class="item-wrap">
+                        <div class="bg-item-box type2">
+                            <i class="ci-24x st-243"></i>
+                            <div class="item-txt">�ѱ���������</div>
+                            <div class="item-deco" role="text"><span class="hidden">��ȸ�� �׸�</span> 2</div>
+                        </div>
+
+                        <div class="chk-card-wrap">
+                            <div class="chk-card r chk-null checked" role="text" aria-labelledby="chkCard03-1">
+                                <div class="chk-inr" id="chkCard03-1" aria-hidden="true">
+                                    <div class="item-deco">
+                                        <span class="badge state-prod03">��������</span>
+                                    </div>
+                                    <div class="item-name">������ǰ</div>
+                                    <div class="item-desc">01234121234567</div>
+                                    <div class="numbers-18 nums-bold" role="text"><span class="num">100,000</span><span class="num-unit">��</span></div>
+                                </div>
+                            </div>
+                            <div class="chk-card r chk-null disable" role="text" aria-labelledby="chkCard03-2" aria-disabled="true"><!-- ����: ����Ұ� �� disable Ŭ���� �߰�, aria-disabled �߰� -->
+                                <div class="chk-inr" id="chkCard03-2" aria-hidden="true">
+                                    <div class="item-deco">
+                                        <span class="badge state-prod03">��������</span>
+                                        <span class="txt">��Ȱ����</span>
+                                        <span class="badge line-nega">����Ұ�</span>
+                                    </div>
+                                    <div class="item-name">������ǰ</div>
+                                    <div class="item-desc">01234121234567</div>
+                                    <div class="numbers-18 nums-bold" role="text"><span class="num">100</span><span class="num-unit">��</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns cont-foot right">
+                    <button type="button" class="btn ico-arr right">���� ����</button>
+                </div>
+            </div>
+
+            <!-- ���¸�� X -->
+            <div class="result nodata">
+                <p class="tit">��ȸ�� ���°� �����.</p>
+            </div>
+            <!-- //���¸�� X -->
+        </div>
+    </div>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

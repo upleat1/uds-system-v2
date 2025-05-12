@@ -1,0 +1,25 @@
+/*** Icon ***/
+[class*="icon"] {display:inline-block; width:var(--upl-iconsize-md); height:var(--upl-iconsize-md); vertical-align:middle;} /* default basic size */
+[class*="icon"]::before {content:''; display:block; width:100%; height:100%; background-size:100%; background-repeat:no-repeat; background-position: 50% 50%;}
+[class*="icon"].xxxs {width:var(--upl-iconsize-xxxs); height:var(--upl-iconsize-xxxs);} /* 1.2rem size */
+[class*="icon"].xxs {width:var(--upl-iconsize-xxs); height:var(--upl-iconsize-xxs);} /* 1.4rem size */
+[class*="icon"].xsm {width:var(--upl-iconsize-xsm); height:var(--upl-iconsize-xsm);} /* 1.6rem size */
+[class*="icon"].sm {width:var(--upl-iconsize-sm); height:var(--upl-iconsize-sm);} /* 1.8rem size */
+[class*="icon"].smd {width:var(--upl-iconsize-smd); height:var(--upl-iconsize-smd);} /* 2rem size */
+[class*="icon"].md {width:var(--upl-iconsize-md); height:var(--upl-iconsize-md);} /* 2.4rem basic size */
+[class*="icon"].mlg {width:var(--upl-iconsize-mlg); height:var(--upl-iconsize-mlg);} /* 3.2rem size */
+[class*="icon"].lg {width:var(--upl-iconsize-lg); height:var(--upl-iconsize-lg);} /* 4rem size */
+[class*="icon"].xlg {width:var(--upl-iconsize-xlg); height:var(--upl-iconsize-xlg);} /* 4.8rem size */
+[class*="icon"].xxlg {width:var(--upl-iconsize-xxlg); height:var(--upl-iconsize-xxlg);} /* 6.4rem size */
+[class*="icon"].xxxlg {width:var(--upl-iconsize-xxxlg); height:var(--upl-iconsize-xxxlg);} /* 7.2rem size */
+
+.icon-arrow-right:before {background-image:url(/resources/img/common/ico-24x-arrow-right.svg);}
+.icon-arrow-down:before {background-image:url(/resources/img/common/ico-24x-arrow-down.svg);}
+.icon-system-info:before {background-image:url(/resources/img/common/ico-24x-system-info.svg);}
+.icon-close:before {background-image:url(/resources/img/common/ico-24x-close.svg);}
+.icon-delete:before {background-image:url(/resources/img/common/ico-24x-delete.svg);}
+.icon-duplicate:before {background-image:url(/resources/img/common/ico-24x-duplicate.svg);}
+.icon-info:before {background-image:url(/resources/img/common/ico-24x-info.svg);}
+.icon-success:before {background-image:url(/resources/img/common/ico-24x-success.svg);}
+.icon-error:before {background-image:url(/resources/img/common/ico-24x-error.svg);}
+.icon-tooltip:before {background-image:url(/resources/img/common/ico-24x-tooltip.svg);}

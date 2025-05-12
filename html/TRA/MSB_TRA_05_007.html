@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>����Ʈ/���������>��ݰ��°���</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">��ݰ��°���</h1>
+			<button type="button" class="action-prev" title="����"></button>
+		</div>
+	</header>
+    <div class="pg-container tra">
+		<div class="pg-content">
+            <h2 class="ht-2"><strong>��� ������</strong><br>������ �� �־��</h2>
+			<div class="section">
+                <!-- mod-date:0524: �������� -->
+                <ul class="depth bul">
+                    <li>��û�� ���񽺸� Ȯ���ϰ� ���񽺸� �����ϰų� �߰��� ��û�� �� �־��. (1�� �̻� ���� ���� �ʼ�)</li>
+                    <li>���񽺸� ��� OFF�ϸ� ����Ʈ/������ ��ݼ��񽺰� ��� �����ſ�.</li>
+                    <li>���񽺸� ��û�ø��� ������ �����ϸ�, �����ϴ� ��� ���񽺸� �̿��� �� �����..</li>
+                </ul>
+                <!-- // -->
+
+                <div class="form-group gap-md">
+                    <h3 class="ht-4">�������</h3><!-- mod-date:0626: ��ũ������ -->
+                    <ul class="lists mix">
+                        <li class="sm">
+                            <span class="fc-sub">����Ʈ���</span>
+                            <div class="form-rdochk right switch-pos">
+                                <span class="switch">
+                                    <input type="checkbox" id="switch1" title="����Ʈ��� Ȱ�� ����" class="toastChk">
+                                    <label for="switch1" class="label"></label>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="sm">
+                            <span class="fc-sub">���������</span>
+                            <div class="form-rdochk right switch-pos">
+                                <span class="switch">
+                                    <input type="checkbox" id="switch2" title="��������� Ȱ�� ����" class="toastChk">
+                                    <label for="switch2" class="label"></label>
+                                </span>
+                            </div>
+                        </li>
+                        <!-- mod-date:0524: ����ѵ����� ���� -->
+                    </ul>
+
+                    <div class="btns cont-foot right"><!-- mod-date:0426: Ŭ���� ���� -->
+                        <button type="button" class="btn link">����Ʈ/������ ��ݼ��� ����</button><!-- mod-date:0612: ���� ���� -->
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary" data-ui="pop-open" onclick="UICommon.Layer.open('#checkInfo')">�����ϱ�</button>
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<div id="checkInfo" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>����Ʈ/������ ��ݼ��񽺸� �����Ͻðھ��?</h1>
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <p class="message">���� �����Ͻø� ������ ����Ʈ/������ ��� ���񽺸� �ٽ� �̿��� �� �����.</p>
+            </div>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn secondary">�ƴϿ�</button>
+                <button type="button" class="btn primary">��</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

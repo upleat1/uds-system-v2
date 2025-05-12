@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark-m">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>유플리트</title>
+<link rel="stylesheet" href="/guide/resources/css/components.css">
+    <link rel="stylesheet" href="/guide/resources/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/component.css">
+    <style>
+        .point {color:red;}
+        .fc-white {background-color:black}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <div data-class="component-name">텍스트</div>
+        <div data-class="box">
+            Pretendard : 한글(특수문자 포함) / Spoqa : 숫자, 콤마<br>
+            본문 기본 - font-size:<strong class="point">14px</strong> / color:<strong class="point">#13161c</strong> / font-weight:<strong class="point">400</strong> 
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Type</div>            
+            <div data-class="h2">Default</div>
+            <script type="text/html">
+<p class="p">.p 본문 텍스트</p>
+<p class="p-sub">.p-sub 서브 텍스트</p>
+<p class="p-error">한줄 형태로 지원되는 가이드 텍스트입니다.</p>
+<p class="underline">.underline 언더라인 텍스트</p>
+            </script>
+
+            <div data-class="h2">금액</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <p class="point">18px 이상 강조되는 금액은 <strong>.numbers (.num + .num-unit) 클래스</strong>를 사용한다.</p>
+                    <p>.nums-bold : font-weight 700 + 500 / color #16181c</p>
+                </div>
+            </div>
+            <script type="text/html">
+금액 기본 - 
+<p class="numbers fz-14">14px 문장 내에서 123,456,789원 금액을 사용합니다.</p>
+<p class="numbers fz-24">24px 문장 내에서 123,456,789원 금액을 사용합니다.</p>
+<p class="numbers fz-24 fw-700">컨텐츠 타이틀 문장 내에서 123,456,789원 금액을 사용합니다.</p>
+<br>
+<br>
+금액(강조) - <span class="numbers fc-point">123,456,789원</span>
+<br>
+금액(강조/Bold) - <span class="numbers fc-point fw-700">123,456,789원</span>
+<br>
+금액 예외 19px + 18px - <span class="numbers-18" role="text"><span class="num">123,456,789</span><span class="num-unit">원</span></span>
+<br>
+금액 예외 21px + 20px - <span class="numbers-20" role="text"><span class="num">123,456,789</span><span class="num-unit">원</span></span>
+<br>
+금액 예외 25px + 24px - <span class="numbers-24" role="text"><span class="num">123,456,789</span><span class="num-unit">원</span></span>
+<br>
+금액 예외(강조) 19px + 18px / 700 + 500 - <span class="numbers-18 nums-bold" role="text"><span class="num-unit">총</span><span class="num">123,456,789</span><span class="num-unit">원</span></span>
+<br>
+금액 예외(강조) 29px + 28px / 700 + 500 - <span class="numbers-28 nums-bold" role="text"><span class="num-unit">총</span><span class="num">123,456,789</span><span class="num-unit">원</span></span>
+<br>
+금액 예외(강조) 19px + 18px / 700 + 500 / blue - <span class="numbers-18 nums-bold fc-point" role="text"><span class="num-unit">총</span><span class="num">123,456,789</span><span class="num-unit">원</span></span>
+            </script>
+
+            
+            <div data-class="h2">두께</div>
+            <script type="text/html">
+<p class="fw-400">Regular - 400</p>
+<p class="fw-500">Medium - 500</p>
+<p class="fw-700">Bold - 700</p>
+            </script>
+
+            <div data-class="h2">크기</div>
+            <script type="text/html">
+<p class="fz-12">font-size: 1.2rem</p>
+<p class="fz-13">font-size: 1.3rem</p>
+<p class="fz-14">font-size: 1.4rem</p>
+<p class="fz-15">font-size: 1.5rem</p>
+<p class="fz-16">font-size: 1.6rem</p>
+<p class="fz-18">font-size: 1.8rem</p>
+<p class="fz-20">font-size: 2rem</p>
+<p class="fz-28">font-size: 2.8rem</p>
+            </script>
+
+            <div data-class="h2">색상</div>
+            <script type="text/html">
+<p class="fc">.fc : #13161c</p>
+<p class="fc-sub">.fc-sub : #696e77</p>
+<p class="fc-point">.fc-point : #0086ff</p>
+<p class="fc-nega">.fc-nega : #ec4956</p>
+<p class="fc-posi">.fc-posi : #0086ff</p>
+<p class="fc-black">.fc-black : #000</p>
+<p class="fc-white">.fc-white : #fff</p>
+            </script>
+
+            <div data-class="h2">박스형</div>
+            <script type="text/html">
+<div class="bg-txt-box">
+    <p class="p">출국사실을 확인하기 위해서는 개인정보보호법 제15조(개인정보수집.이용) 및 제 18조(개인정보의 이용•제공 제한)에 따라 고객님의 주민등록번호 및 성명을 출국정보 조회 시스템을 운영하고 있는 금융결제원을 통하여 법무부 출입국관리사무소로 전송하고, 확인 받는 것에 대해여 동의해 주시기 바랍니다.</p>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Depth List</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>li 1개는 리스트 형식이 아닌 일반 텍스트로 적용</div>
+                    <div>한 줄은 p태그 사용<br>
+                        2줄이상 ul li 태그 사용
+                    </div>
+                </div>
+            </div>
+            <div data-class="h2">기본(블릿없음)</div>
+            <script type="text/html">
+<ul class="depth">
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. </li>
+</ul>
+<br>
+<ul class="depth sm">
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. </li>
+</ul>
+            </script>
+            <div data-class="h2">bullet(한 줄일 경우 포함)</div>
+            <script type="text/html">
+<ul class="depth bul">
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. </li>
+</ul>
+<br>
+<p class="depth bul">휴대폰을 변경하신 경우 기존 단말기에서는 유플리트를 이용할 수 없습니다.</p>
+            </script>
+            
+            <div data-class="h2">dash</div>
+            <script type="text/html">
+<ul class="depth dash">
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+</ul>
+            </script>
+            
+            <div data-class="h2">number</div>
+            <script type="text/html">
+<ol class="depth num">
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+</ol>
+<br>
+<ol class="depth num sm">
+    <li>수신상품 신규거래</li>
+    <li>수신상품 신규 이후 1개월 이내 대출거래(본인명의 또는 중소기업 대표자인 경우 해당 기업)</li>
+</ol>
+<br>
+<ol class="depth num lg">
+    <li>수신상품 신규거래</li>
+    <li>수신상품 신규 이후 1개월 이내 대출거래(본인명의 또는 중소기업 대표자인 경우 해당 기업)</li>
+</ol>
+<br>
+<ol class="depth num round">
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+</ol>
+<br>
+<ol class="depth num round bg">
+    <li>
+        <p class="tit">회색 bg 라운드 숫자 리스트입니다.</p>
+    </li>
+    <li>
+        <p class="tit">회색 bg 라운드 숫자 리스트입니다.</p>
+    </li>
+    <li>
+        <p class="tit">회색 bg 라운드 숫자 리스트입니다.</p>
+    </li>
+</ol>
+<br>
+<ol class="depth num round bg sm">
+    <li>회색 bg 라운드 작은 숫자 리스트입니다.</li>
+    <li>회색 bg 라운드 작은 숫자 리스트입니다.</li>
+    <li>회색 bg 라운드 작은 숫자 리스트입니다.</li>
+</ol>
+<br>
+<ol class="depth num round bg sm2">
+    <li>회색 bg 라운드 작은 숫자 리스트입니다.</li>
+    <li>회색 bg 라운드 작은 숫자 리스트입니다.</li>
+    <li>회색 bg 라운드 작은 숫자 리스트입니다.</li>
+</ol>
+            </script>
+
+            <div data-class="h2">info</div>
+            <script type="text/html">
+<p class="depth info">한줄 형태로 지원되는 가이드 텍스트입니다.</p>
+<p class="depth info fc-nega">한줄 형태로 지원되는 가이드 텍스트입니다.</p>
+<br>
+<ul class="depth info">
+    <li>실버바 가격은 국제 은가격 및 원달러 환율의 변동에 따라 실시간으로 변동될 수 있으며, 조회가격과 실제 거래가격이 다를 수 있습니다.</li>
+    <li>실버바 거래는 최종 거래 후 취소할 수 없습니다.</li>
+    <li class="fc-nega">실버바 가격은 국제 은가격 및 원달러 환율의 변동에 따라 실시간으로 변동될 수 있으며, 조회가격과 실제 거래가격이 다를 수 있습니다.</li>
+</ul>
+            </script>
+
+            <div data-class="h2">point</div>
+            <script type="text/html">
+<p class="depth point">한줄 형태로 지원되는 가이드 텍스트입니다.</p>
+<br>
+<ul class="depth point">
+    <li>여러줄 형태로 지원되는 가이드 텍스트입니다.</li>
+    <li>여러줄 형태로 지원되는 가이드 텍스트입니다.</li>
+    <li>여러줄 형태로 지원되는 가이드 텍스트입니다.</li>
+</ul>
+            </script>
+
+            <div data-class="h2">check</div>
+            <script type="text/html">
+<ul class="depth chk"><!-- lg -->
+    <li>연결할 계좌에 최근 3개월 내 급여이체내역이 <span class="fc-point">3건 이상</span> 있어야 해요.</li>
+    <li>이직 등 사유로 급여계좌가 변경돼도 괜찮아요.</li>
+    <li>급여이체내역이 있는 모든 계좌를 연결해주세요.</li>
+</ul>
+            </script>
+
+            <div data-class="h2">Code Error</div>
+            <script type="text/html">
+<p class="code-error">오류코드(SBQ012345)</p>
+            </script>
+
+            <div data-class="h2">Mix</div>
+            <script type="text/html">
+<ul class="depth bul">
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.
+        <ul class="depth dash">
+            <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+            <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.
+                <p class="depth info">한줄 형태로 지원되는 가이드 텍스트입니다.</p>
+            </li>
+        </ul>
+    </li>
+    <li>가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다. 가이드 텍스트가 나오는 라인입니다.</li>
+</ul>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">안내문구</div>
+            <div data-class="h2">컨텐츠 상단 > 안내문구</div>
+            <script type="text/html">
+<div class="inform-top-wrap">
+    <ul class="depth bul">
+        <li>휴면계좌의 종류 및 잔액에 따라 환급방법이 다릅니다.</li>
+        <li>계좌번호 위에 표시된 를 눌러 환급방법을 확인해보세요.</li>
+        <li>계좌번호 위에 표시된 를 눌러 환급방법을 확인해보세요.</li>
+    </ul>
+</div>
+            </script> 
+
+
+            <div data-class="h2">컨텐츠 하단 > 알려드려요</div>
+            <script type="text/html">
+<div class="inform-btm-wrap">
+    <h4 class="ht-4">알려드려요</h4>
+    <ul class="depth bul">
+        <li>본인명의의 계좌만 인증이 가능합니다.</li>  
+        <li>은행별 점검시간에는 계좌인증이 불가합니다.</li>  
+        <li>평생계좌번호, 가상계좌, 증권, 펀드, 적금, 정기에금등은 계좌인증이 불가능 할 수 있습니다.<p class="emp-sub">상단공백 4픽셀 w:500 color01, 경찰청 112 | 금융감독원 1331</p></li>  
+    </ul>
+    <button type="button" class="btn ico-arr-sm">OTP 발급/등록하기</button>
+</div>
+            </script> 
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Component</div>
+            <div data-class="h2">테스트용</div>
+            <script type="text/html">
+<div class="section">
+    <div class="hgroup-2">
+        <h2 class="ht-2"><strong>h2. 26px 본문타이틀</strong><br>신분증 정보를 입력해주세요</h2>
+        <p class="txt">주민등록증 도는 운전면허증의 정보를 입력하여 본인확인을 진행합니다.</p>
+    </div>
+    <h3 class="ht-3">h3. 18px 본문타이틀</h3>
+    <h4 class="ht-4">h4. 16px 본문타이틀</h4>
+    <P class="p">본문 텍스트 14px</P>
+    <h4 class="ht-4">h4. 16px 본문타이틀</h4>
+    <P class="p">본문 텍스트 14px</P>
+    <p class="depth info">한줄 형태로 지원되는 가이드 텍스트입니다.</p>
+    <h4 class="ht-4">h4. 16px 본문타이틀</h4>
+    <ul class="depth bul">
+        <li>양도 및 상속에 의한 명의변경은 불가합니다.</li>
+        <li>비대면 전용상품으로 영업점을 통한 신규, 입금, 해지 가 불가합니다.</li>
+    </ul>
+</div>
+<div class="section">
+    <h3 class="ht-3">h3. 18px 본문타이틀</h3>
+    <h4 class="ht-4">h4. 16px 본문타이틀</h4>
+    <div class="table">
+        <div class="table-headnote">(2023.01.16/세전)</div>
+        <table>
+            <caption>테이블 제목 정보</caption>
+            <colgroup>
+                <col style="width:30%">
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">제목</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">제목</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th scope="row" class="left">합계</th>
+                    <td colspan="2" class="right">123,456,789원</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td class="right">내용</td>
+                    <td class="right">내용
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td class="right">내용</td>
+                    <td class="right">내용
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+        <div class="table-footnote">
+            <p class="depth info">자동연장재예치 우대금리는 재예치 시 만기 적용금리에 적용금리에 가산됩니다.</p>  
+        </div> 
+    </div>
+    <h4 class="ht-4">h4. 16px 본문타이틀</h4>
+    <div class="table">
+<!--         <div class="table-headnote">(2023.01.16/세전)</div> -->
+        <table>
+            <caption>테이블 제목 정보</caption>
+            <colgroup>
+                <col style="width:30%">
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">제목</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">제목</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th scope="row" class="left">합계</th>
+                    <td colspan="2" class="right"><span class="numbers" role="text"><span class="num">123,456,789</span><span class="num-unit">원</span></span></td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td class="right">내용</td>
+                    <td class="right">내용
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td class="right">내용</td>
+                    <td class="right">내용
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+        <div class="table-footnote">
+            <p class="depth info">자동연장재예치 우대금리는 재예치 시 만기 적용금리에 적용금리에 가산됩니다.</p>  
+            <p class="depth info">금리쿠폰 : 이벤트 참여에 따라 발급한 우대금리쿠폰 적용 시</p>  
+        </div> 
+    </div>
+    <h4 class="ht-4">h4. 16px 본문타이틀</h4>
+    <ul class="depth bul">
+        <li>양도 및 상속에 의한 명의변경은 불가합니다.</li>
+        <li>비대면 전용상품으로 영업점을 통한 신규, 입금, 해지 가 불가합니다.</li>
+        <li>비대면 전용상품으로 영업점을 통한 신규, 입금, 해지 가 불가합니다.</li>
+    </ul>
+</div>
+            </script> 
+        </div>
+    </div>
+</div>
+    
+    <script src="/guide/resources/vendor/jquery.min.js"></script>
+    <script src="/guide/resources/vendor/lodash.min.js"></script>
+    <script src="/guide/resources/vendor/highlight/highlight.min.js"></script>
+    <script src="/guide/resources/vendor/clipboard.min.js"></script>
+    <script src="/guide/resources/js/components.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+</body>
+</html>

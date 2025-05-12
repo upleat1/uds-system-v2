@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="title" content="유플리트">
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/guide/resources/images/favicon.ico">  -->
+	<link rel="stylesheet" type="text/css" href="/guide/resources/css/ui_guide.css">
+	<script src="/guide/resources/vendor/jquery.min.js"></script>
+	<script src="/guide/resources/vendor/swiper.min.js"></script>
+	<script src="/guide/resources/js/worksheet.temp.js"></script>
+	<script src="/guide/resources/js/worksheet.js"></script>
+	<title>Worksheet | 유플리트 Publishing Guide</title>
+</head>
+
+<body data-project="app" data-util="worksheet" class="worksheet_v2">
+	<div id="gWrap" data-category="worksheet">
+		<header id="gHeader">
+			<h1>유플리트 | App</h1>
+			<button type="button" class="btn_util"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="50px" viewBox="0 0 65 65" xml:space="preserve"><path class="bar b1" d="M20,23.912h23.997c0,0,16.004-0.501,16.004,13.416 S46.75,47.912,41.834,42.995S22.668,23.412,22.668,23.412"></path><path class="bar b2" d="M24.751,41.995H44c0,0,16.001,1.167,16.001-12.25 c0-13.417-9.508-15.157-18.004-6.745S22.001,42.995,22.001,42.995"></path><line class="bar b3" x1="30.125" y1="32.999" x2="43.997" y2="32.999"></line></svg><span class="offscreen">메뉴열기</span></button>
+			<div class="g_util">
+				<div class="g_search">
+				<input type="text" id="Gsearch" placeholder="검색어를 입력하세요">
+					<button type="button" id="btnGsearch"><span class="offscreen">검색하기</span></button>
+				</div>
+				<div class="switch">
+					<span class="bar"></span>
+					<ul>
+						<li><a href="/guide/html/worksheet.html" target="_blank">Worksheet</a></li>
+						<li><a href="/guide/html/guide.html" target="_blank">Guide</a></li>
+						<li><a href="/guide/html/document.html" target="_blank">Document</a></li>
+					</ul>
+				</div>
+				<div class="g_project">
+					<button type="button" class="current" title="프로젝트 목록보기">App</button>
+					<ul class="g_list" data-project-list="App, PC, Admin">
+                        <li><a href="/guide/html/worksheet.html" data-host="https://d-app.sbisb.co.kr" target="_blank">App</a></li>
+                        <li><a href="/guide/html/worksheet.html" data-host="https://d-m.sbisb.co.kr" target="_blank">Mweb</a></li>
+                        <li><a href="/SBP/guide/html/worksheet.html" data-host="https://d-www.sbisb.co.kr" target="_blank">PC</a></li>
+                        <li><a href="/guide/html/worksheet.html" data-host="https://d-adm.sbisb.co.kr" target="_blank">Admin</a></li>
+					</ul>
+				</div>
+				<button type="button" class="btn_responsive"><i><i><i class="offscreen">메뉴</i></i></i></button>
+			</div>
+		</header>
+		<div id="gContainer">
+			<div class="g_titles">
+				<h2>Worksheet</h2>
+				<div class="g_project_status">
+					<div class="g_count total">
+						<span class="lb">총본수</span><strong class="num"></strong>
+					</div>
+					<div class="g_count working">
+						<span class="lb">총진행본수</span><strong class="num"></strong>
+					</div>
+					<div class="g_count cp_num">
+						<span class="lb">총완료본수</span><strong class="num"></strong>
+					</div>
+					<div class="g_project_ing">
+						<span class="ing">진행률 : <strong class="num"></strong>%</span> <span class="graph"><span
+								class="bar"></span></span>
+					</div>
+				</div>
+			</div>
+			<div class="g_content">
+				<div class="g_board_tab"></div>
+				<div class="g_board_panel active">
+					<div class="panel_head">
+						<div class="g_target"></div>
+						<div class="g_status">
+							<span class="num total">본수 : <strong class="num"></strong></span>
+							<span class="num working">진행본수 : <strong class="num"></strong></span>
+							<span class="num cp_num">완료본수 : <strong class="num"></strong></span>
+							<span class="g_status_box"><span class="bar"></span><span class="ing">진행률 : <strong class="num"></strong>%</span></span></span>
+						</div>
+					</div>
+					<div class="g_alert_btn_set"></div>
+					<div class="g_board"></div>
+				</div>
+			</div>
+		</div>
+		<div class="frame_device">
+			<div class="head">
+				<a href="#" class="newWindow" target="_blank"><span class="offscreen">새창으로</span></a>
+				<h2><span class="p_id"></span><span class="p_name"></span></h2>
+				<button type="button" class="disconnect"><span class="offscreen">팝업으로 분리</span></button>
+			</div>
+			<div class="device">
+				<div class="btn_size_set"><button type="button">280</button><button type="button">320</button><button type="button">360</button><button type="button">375</button><button type="button">768</button></div>
+				<iframe src="" frameborder="0" name="device"></iframe>
+			</div>
+		</div>
+	</div>
+	<div id="gContainer2">
+		<div class="g_board"></div>
+	</div>
+	<div class="btm_btn_set"><button type="button" class="btn_guide_top"><span class="offscreen">TOP</span></button><button type="button" class="btn_light_mode"><i></i><i></i><i></i><i></i><span class="offscreen">다크모드</span></button></div>
+</body>
+</html>

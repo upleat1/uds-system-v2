@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>���������ǹ�Ȯ��>��ü�� ���� ��ü������ �� �� �� ������</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <button type="button" class="action-chatbot" title="ê��"></button>
+            <button type="button" class="action">�ݱ�</button>
+        </div>
+    </header> 
+    <div class="pg-container ckc">
+        <div class="pg-content">
+            <div class="hgroup-2">
+                <h2 class="ht-2"><strong>��ü �������� �� �� ���ǻ�����</strong> Ȯ�����ּ���</h2>
+            </div>
+            <div class="section">
+                <div class="prod-chk-wrap">
+                    <div class="prod-chk on"><!-- �ӽ� / ����: on Ŭ���� ���� -->
+                        <div class="form-sel">
+                            <input type="checkbox" id="term1" checked><!-- �ӽ� / ����: checked �Ӽ� ���� -->
+                            <label for="term1" class="label"><span class="fc-nega">��ü �������� �ִ� 8.837%�Դϴ�.</span><br>(�����ݸ� 5.837% + ��ü���������� 3%)</label><!-- mod-date:0915: �������� --><!-- mod-date:0907: br�߰� -->
+                        </div>
+                        <div class="prod-chk-inr">
+                            <p class="desc">��ü���ڰ� �߻��ϴ� ���� ������ �����ϴ�.</p>
+                            <ol class="depth num round">
+                                <li><span class="underline">���ڸ� �����ϱ�� ������ ��</span>�� �������� ���� ���</li>
+                                <li><span class="underline">������ ��ȯ�ϱ�� ������ ��</span>�� ��ȯ���� ���� ��</li>
+                                <!-- <li><span class="underline">���һ�ȯ���� ��ȯ�ϱ�� �� ��</span>�� ��ȯ���� ���� ��</li> --><!-- mod-date:0915: ������� -->
+                                <li><span class="underline">���Űŷ��⺻��� ��7������ ���� ���� ���� ä�������ǹ� ����</span>�� �ش�� ��</li>
+                            </ol>
+                        </div>
+                        <div class="prod-chk-inr center">
+                            <p class="desc">���� 330,000,000���� ��ü������ 8.837%�� 1���� ��ü�� ���</p>
+                            <p class="fc-sub">1���� ������ X ��ü������ X {��ü�ϼ�/365}</p><!-- mod-date:0915: �������� -->
+                            <p class="desc fc-point">��ü���� �� 0000��</p>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term2">
+                            <label for="term2" class="label">
+                                ��ü ��, ��ü ������ ����ݸ��� <span class="fc-nega">��ü�������� 3.0%</span>�� ����˴ϴ�.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term3">
+                            <label for="term3" class="label">
+                                �ܱ� �Ǵ� ����� ��ü ������ �ſ��򰡻翡 ��ϵǸ� �����ǿ� �����˴ϴ�. ��ü�� �ؼҵ� �Ŀ��� 3�� �Ǵ� 5�Ⱓ ���νſ��򰡿� �ݿ��Ǿ� ���� �ſ뵵�Ǵ�������� ���� �������� ���� �� �ֽ��ϴ�.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term4">
+                            <label for="term4" class="label">
+                                <span class="fc-nega">�������� 2ȸ�� ��ü �Ǵ� ���� ������</span>�� <span class="fc-nega">������ ������ ���</span>�Ǿ�, <span class="fc-nega">����� ���׿� ���Ͽ� ��� ��ȯ</span>�Ͽ��� �մϴ�. ����, <span class="fc-nega">��ü ��Ͽ� ���� �ſ� ���� ������(�ſ�ī�� ��� ����, Ÿ�� ����� ��ȯ ��û ��)</span>�� �߻��� �� ������, �Ҽ� �� �������� ���� ���� ��ġ�� ����� �� �ֽ��ϴ�.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term5">
+                            <label for="term5" class="label">
+                                ����������� 5��(������ ����) �̻� ��ü�� ��� �ܱ⿬ü������ �ſ����� ȸ�翡 �����Ǿ� �����ŷ� ����(�ſ�ī�� ���� ��) ���� �� �ְ�, ���νſ����� �϶� �� �̿� ���� �ݸ���� �� �������� �߻��� �� �ֽ��ϴ�. �ܱ⿬ü���� ��� �� ���� �������� ������ �ܱ⿬ü������ �����Ǿ ���νſ� ������ �����Ⱓ ȸ������ ���� �� �ֽ��ϴ�.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term6">
+                            <label for="term6" class="label">
+                                ����������� 3���� �̻� ��ü�� ��� 3������ �Ǵ� ���� ��� �����߻��Ϸ� ��, �׳����� 7��(������ ����) �ȿ� ���Ϲݽſ����� �����Ծࡻ �� ���� ��ü������ ��ϵ˴ϴ�.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term7">
+                            <label for="term7" class="label">
+                                ��⿬ü������ ��ϵ� �� <span class="fc-nega">��ü�ݾ��� ��ȯ�� ��ϻ����� �����Ǵ� ��쿡��</span> ��ϱⰣ �� �ݾ׿� ���� <span class="fc-nega">��������� �ִ� 1�� ���� �������� �� �ֽ��ϴ�.</span> �� ������� ���� �������� ����(���� �ű� �� ���� ����, �ſ����� �϶� ��)�� �ʷ��� ���� ������ �������ּ���.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term8">
+                            <label for="term8" class="label">
+                                ���Ϲݽſ����� �����Ծࡻ �������� ��ü���� ��� ������ ����� �� ������, �� ��� ����� ���ؿ� ���� ��ü������ ��ϵ˴ϴ�.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary lg" disabled>������ Ȯ���߾��</button>
+        </div>
+    </div>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

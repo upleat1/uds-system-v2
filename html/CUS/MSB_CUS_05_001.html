@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>��� �� �̿뵿��</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap"> 
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">��� �� �̿뵿��</h1>
+            <button type="button" class="action-prev" title="����"></button>
+        </div>
+    </header>
+    <div class="pg-container cus">
+        <div class="pg-content">
+            <div class="section">
+                <div class="agree-group">
+                    <div class="agree-item">
+                        <div class="form-label fz-16">�ʼ����</div><!-- mod-date:0320: �ؽ�Ʈ ���� -->
+                        <div class="agree-inr">
+                            <div class="agree-item btn-link">
+                                <span class="form-sel sm">
+                                    <input type="checkbox" id="term1-1" name="chk1" disabled>
+                                    <label for="term1-1" class="label" title="���ڱ����ŷ� �⺻��� �ٷΰ���">���ڱ����ŷ� �⺻���</label><!-- mod-date:0830: ���� -->
+                                </span>
+                            </div>
+                            <div class="agree-item btn-link">
+                                <span class="form-sel sm">
+                                    <input type="checkbox" id="term1-2" name="chk1">
+                                    <label for="term1-2" class="label" title="���̴ٹ�ŷ ���� �̿��� �ٷΰ���">���̴ٹ�ŷ ���� �̿���</label>
+                                </span>
+                            </div>
+                            <div class="agree-item btn-link">
+                                <span class="form-sel sm">
+                                    <input type="checkbox" id="term1-3" name="chk1">
+                                    <label for="term1-3" class="label" title="������ü ��� �ٷΰ���">������ü ���</label>
+                                </span>
+                            </div>
+                            <div class="agree-item btn-link">
+                                <span class="form-sel sm">
+                                    <input type="checkbox" id="term1-4" name="chk1">
+                                    <label for="term1-4" class="label" title="�˸����� �̿��� �ٷΰ���">�˸����� �̿���</label>
+                                </span>
+                            </div>
+                            <div class="agree-item btn-link">
+                                <span class="form-sel sm">
+                                    <input type="checkbox" id="term1-5" name="chk1">
+                                    <label for="term1-5" class="label" title="����(�ſ�)���� �������̿뵿�Ǿ�� �ٷΰ���">����(�ſ�)���� ����&middot;�̿뵿�Ǿ��</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agree-group">
+                    <div class="agree-item">
+                        <div class="form-label fz-16">�̿뵿��</div>
+                        <span class="form-sel">
+                            <input type="checkbox" id="term2-1" name="chk2">
+                            <label for="term2-1" class="label fw-500">(ȸ��)��ǰ���� �� ������ �̿뵿��<span class="badge state-relief">�Ƚ�</span></label>
+                        </span>
+                    </div>
+                    <div class="agree-item-inr">
+                        <div class="rdoChk-group"><!-- mod-date:0901: .flexible Ŭ�������� -->
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term2-1-1" name="chk2">
+                                <label for="term2-1-1" class="label">��Ǫ��</label>
+                            </span>
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term2-1-2" name="chk2">
+                                <label for="term2-1-2" class="label">�˸���(SMS)</label>
+                            </span>
+                            <!-- mod-date:1017: �׸��߰� -->
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term2-1-3" name="chk2">
+                                <label for="term2-1-3" class="label">�̸���</label>
+                            </span>
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term2-1-4" name="chk2">
+                                <label for="term2-1-4" class="label">����</label>
+                            </span>
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term2-1-5" name="chk2">
+                                <label for="term2-1-5" class="label">��ȭ</label>
+                            </span>
+                            <!-- //1017: �׸��߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="agree-group">
+                    <div class="agree-item">
+                        <span class="form-sel">
+                            <input type="checkbox" id="term3-1" name="chk3">
+                            <label for="term3-1" class="label fw-500">(����)��ǰ���� �� ������ �̿뵿��<span class="badge state-relief">�Ƚ�</span></label>
+                        </span>
+                    </div>
+                    <div class="agree-item-inr">
+                        <div class="rdoChk-group"><!-- mod-date:0901: .flexible Ŭ�������� -->
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term3-1-1" name="chk3">
+                                <label for="term3-1-1" class="label">��Ǫ��</label>
+                            </span>
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term3-1-2" name="chk3">
+                                <label for="term3-1-2" class="label">�˸���(SMS)</label>
+                            </span>
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term3-1-3" name="chk3">
+                                <label for="term3-1-3" class="label">�̸���</label>
+                            </span>
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term3-1-4" name="chk3">
+                                <label for="term3-1-4" class="label">����</label>
+                            </span>
+                            <span class="form-sel sm">
+                                <input type="checkbox" id="term3-1-5" name="chk3">
+                                <label for="term3-1-5" class="label">��ȭ</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="agree-group"><!-- mod-date:0329: class ���� -->
+                    <div class="agree-item">
+                        <span class="form-sel">
+                            <input type="checkbox" id="term4" name="chk4">
+                            <label for="term4" class="label fw-500">�ѵ�/�ݸ� �˸� ������������</label>
+                        </span>
+                    </div>
+                    <div class="agree-item-inr">
+                        <ul class="depth bul">
+                            <li>�ѵ�/�ݸ� �˸� ����&middot;�̿�&middot;���� ����<span class="badge state-relief">�Ƚ�</span></li>
+                            <li>�ѵ�/�ݸ� �˸� ��ȸ ����<span class="badge state-warning">����</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="agree-group">
+                    <div class="agree-item">
+                        <span class="form-sel">
+                            <input type="checkbox" id="term5" name="chk3">
+                            <label for="term5" class="label fw-500">NICE�ſ�������� �̿뵿��</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

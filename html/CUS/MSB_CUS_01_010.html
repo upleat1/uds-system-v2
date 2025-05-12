@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>1:1 ���� �����Է�</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">1:1 ���ǵ��</h1>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container cus">
+		<div class="pg-content">
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label">��������</div>
+                    <div class="form-row">
+                        <div class="form-ele"><!-- mod-date:0329: ��ũ�� ���� �� ���̾��˾� �߰� -->
+                            <button type="button" class="select-btn" data-ui="pop-open" title="�������� ����" onclick="UICommon.Layer.open('#selectDefalut1')">�������ּ���</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">����</div>
+                    <div class="form-row"><!-- ������ error Ŭ���� �߰� -->
+                        <div class="form-ele">
+                            <input type="text" placeholder="�Է����ּ���" title="���� �Է�" class="inp">
+                        </div>
+                    </div>
+                    <!-- <p class="tip error">������ �� �Է����ּ���.</p> --><!-- ������ error Ŭ���� �߰�, [���ټ�] id ���� -->
+                </div>
+                <div class="form-group">
+                    <div class="form-label">���ǳ���</div>
+                    <div class="form-row textarea"><!-- ������ error Ŭ���� �߰� -->
+                        <textarea title="���ǳ��� �ۼ�" placeholder="��Ȯ�� �亯�� ���� �ڼ��� ������ �Է����ּ���."></textarea> <!-- mod-date:0613: [���ټ�] title ���� -->
+                        <p class="byte"><span><em class="curr">0</em> / 4,000</span></p>
+                    </div>
+                    <!-- <p class="tip error">���������Դϴ�.</p> --><!-- ������ error Ŭ���� �߰�, [���ټ�] id ���� -->
+                </div>
+                <div class="form-group">
+                    <div class="form-label fz-16">�亯�˸�</div>
+                    <div class="form-rdochk"><!-- mod-date:0315: rdobox class ���� -->
+                        <span class="form-sel">
+                            <input type="radio" id="radioH1" name="radio-h">
+                            <label for="radioH1" class="label">���ڸ޽���</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioH2" name="radio-h">
+                            <label for="radioH2" class="label">�����ʱ�</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="pg-content-foot">
+			<div class="inform-btm-wrap">
+				<h4 class="ht-4">�˷������</h4>
+                <p class="depth bul">�亯 �Ⱓ�� ��� 1~2�� ���� �ɸ��ϴ�.</p><!-- mod-date:0322: ��ũ�� ���� -->
+			</div>
+		</div>
+	</div>
+    <footer class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">����ϱ�</button>
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- �������� ���� �˾� -->
+<div id="selectDefalut1" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>���������� �������ּ���</h1>
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="list-wrap">
+                    <button type="button" class="list-block selected" title="���õ�"><!-- ����: ���ý� selected Ŭ���� �� title �߰� -->
+                        ������
+                    </button>
+                    <button type="button" class="list-block">
+                        �ſ����
+                    </button>
+                    <button type="button" class="list-block">
+                        �㺸����(�ߵ���/���ô㺸)
+                    </button>
+                    <button type="button" class="list-block">
+                        �����δ���(���յ�/�޻��)
+                    </button>
+                    <button type="button" class="list-block">
+                        üũī��
+                    </button>
+                    <button type="button" class="list-block">
+                        ����
+                    </button>
+                    <button type="button" class="list-block">
+                        ATM/CD
+                    </button>
+                    <button type="button" class="list-block">
+                        ����/����
+                    </button>
+                    <button type="button" class="list-block">
+                        ����/��Ÿ
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //�������� ���� �˾� -->
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

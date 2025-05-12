@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>Upleat Design System</title>
+    <link rel="stylesheet" href="/guide/resources/css/components.css">
+    <link rel="stylesheet" href="/guide/resources/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" href="/resources/css/_variables.css">
+    <link rel="stylesheet" href="/resources/css/common.css">
+    <link rel="stylesheet" href="/resources/css/components.css">
+    <style>
+        [data-class="demo"] .tooltip-popover {position: relative; left: inherit !important; right: inherit !important;}
+        [data-class="demo"] .h3 {margin-top: 0;}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <h1 data-class="component-name"><span>Tooltip<span></h1>
+        <div data-class="box">
+            <div data-class="list disc">
+                <div>특정 영역에 대한 도움말이나 부가 정보를 제공한다</div>
+            </div>
+        </div>
+
+        <div data-class="tab-warp">
+            <div data-class="tab-list" role="tablist">
+                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true" aria-controls="tabpanelGuide01">코드</button>
+                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false" aria-controls="tabpanelGuide02">접근성</button>
+            </div>
+            <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
+
+                <div data-class="box">
+                    <h3>js-tooltip 사용</h3>
+                    <ul class="p-list">
+                        <li>1. .btn-tooltip 버튼에 .js-tooltip 스크립트 클래스 추가</li>
+                        <li>2. 툴팁 레이어는 디바이스 위치에 따라 상하 자동 노출</li>
+                    </ul>
+                </div>
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="box">
+                        타이틀 타입, 텍스트 타입, 블릿 리스트 유형에 맞춰 사용한다
+                    </div>
+        
+                    <div data-class="h2">title</div>
+                    <script type="text/html">
+<div class="h3">
+    <div class="tooltip-wrap">
+        <p class="tooltip"><button type="button" class="btn-tooltip js-tooltip" aria-label="도움말 자세히보기" aria-labelledby="tooltip-popover"></button><!-- 활성화 버튼 --></p>
+        <div class="tooltip-popover" role="tooltip" aria-hidden="true">
+            <p class="tooltip-tit">툴팁타이틀</p>
+            <div class="tooltip-cont">
+                툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다.
+                <ul class="bullet-list bul">
+                    <li>두줄 타입 내용은 여기에 나옵니다. 두줄 타입 내용은 여기에 나옵니다. 두줄 타입 내용은 여기에 나옵니다.</li>
+                    <li>두줄 타입 내용은 여기에 나옵니다. 두줄 타입 내용은 여기에 나옵니다. 두줄 타입 내용은 여기에 나옵니다.</li>
+                </ul>
+            </div>
+            <button type="button" class="btn-tooltip-x" aria-label="도움말 닫기"></button>
+        </div>
+    </div>
+</div>
+                    </script>
+        
+                    <div data-class="h2">text</div>
+                    <script type="text/html">
+<div class="h3">
+    <div class="tooltip-wrap">
+        <p class="tooltip"><button type="button" class="btn-tooltip js-tooltip" aria-label="도움말 자세히보기"></button><!-- 활성화 버튼 --></p>
+        <div class="tooltip-popover" role="tooltip" aria-hidden="true">
+            <div class="tooltip-cont">
+                툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다. 툴팁에 들어가는 내용입니다.
+                <ul class="bullet-list bul">
+                    <li>두줄 타입 내용은 여기에 나옵니다. 두줄 타입 내용은 여기에 나옵니다. 두줄 타입 내용은 여기에 나옵니다.</li>
+                    <li>두줄 타입 내용은 여기에 나옵니다. 두줄 타입 내용은 여기에 나옵니다. 두줄 타입 내용은 여기에 나옵니다.</li>
+                </ul>
+            </div>
+            <button type="button" class="btn-tooltip-x" aria-label="도움말 닫기"></button>
+        </div>
+    </div>
+</div>
+                    </script>
+                </div>
+
+            </div>
+            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
+                <div data-class="section">
+
+                    <div data-class="g-conts-area">
+                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
+                        <div data-class="g-conts-area sp-sm">
+                          <div data-class="g-desc-box">
+                            <p data-class="g-tit">활성화 버튼에 이름을 제공한다.</p>
+                            <p data-class="g-desc">스크린 리더 사용자가 활성화 버튼의 용도를 이해할 수 있도록 각각의 버튼에 이름을 제공해야 한다.</p>
+                            <ul data-class="info-list decimal" role="list">
+                              <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
+                              <li role="listitem">WCAG 2.1 Non-text Content (A)</li>
+                              <li role="listitem">WCAG 2.1 Name, Role, Value (A)</li>
+                            </ul>
+                          </div>
+                          <div data-class="g-desc-box">
+                            <p data-class="g-tit">활성화 버튼에 고유하고 적절한 이름을 제공한다.</p>
+                            <p data-class="g-desc">활성화 버튼이 맥락적으로 도움을 제공하고자 하는 본문 콘텐츠의 내용을 포함하고 있지 않다면 해당 정보를 활성화 버튼의 이름으로 포함하여 스크린 리더 사용자가 정확한 용도를 이해할 수 있도록 제공한다. 화면에 존재하는 다른 활성화 버튼과 혼동되지 않도록 모든 활성화 버튼의 이름은
+                              고유해야 한다.</p>
+                            <ul data-class="info-list decimal" role="list">
+                              <li role="listitem">KWCAG 2.2 적절한 링크 텍스트</li>
+                              <li role="listitem">WCAG 2.1 Headings and Labels (AA)</li>
+                            </ul>
+                          </div>
+                          <div data-class="g-desc-box">
+                            <p data-class="g-tit">활성화 버튼과 컨테이너 영역을 aria-labelledby 속성으로 연결한다.</p>
+                            <p data-class="g-desc">이를 통해 시각을 활용하여 정보를 탐색하는 사용자가 활성화 버튼에 접근했을 때 툴팁 콘텐츠를 바로 확인할 수 있는 것처럼 스크린 리더 사용자도 동일한 방식으로 정보를 전달받을 수 있다.</p>
+                            <ul data-class="info-list decimal" role="list">
+                              <li role="listitem">WCAG 2.1 Info and Relationships (A)</li>
+                            </ul>
+                          </div>
+                          <div data-class="g-desc-box">
+                            <p data-class="g-tit">활성화 버튼과 팝오버 콘텐츠를 적절한 순서로 제공한다.</p>
+                            <p data-class="g-desc">스크린 리더 사용자가 도움말 팝오버 콘텐츠에 논리적인 순서로 접근할 수 있도록 관련 있는 활성화 버튼 다음 요소로 제공해야 한다.</p>
+                            <ul data-class="info-list decimal" role="list">
+                              <li role="listitem">KWCAG 2.2 콘텐츠의 선형화</li>
+                              <li role="listitem">WCAG 2.1 Meaningful Sequence (A)</li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/guide/resources/vendor/jquery.min.js"></script>
+    <script src="/guide/resources/vendor/lodash.min.js"></script>
+    <script src="/guide/resources/vendor/highlight/highlight.min.js"></script>
+    <script src="/guide/resources/vendor/clipboard.min.js"></script>
+    <script src="/guide/resources/js/components.js"></script>
+    
+    <!-- Loading Custom Script -->
+    <script src="/resources/js/common-ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+    <title>유플리트</title>
+    <link rel="stylesheet" href="/guide/resources/css/components.css">
+    <link rel="stylesheet" href="/guide/resources/vendor/highlight/github-gist.css">
+    
+    <!-- resource -->
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/common.css">
+    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/component.css">
+    <style>
+        .agree-check .form-sel-box {margin:0.5rem 0}
+        [data-class='box devInfo'] {    
+            margin: 10px 0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #f9fafc;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.5;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        [data-class*=devInfo] {background-color:yellow; color:block;}
+        [data-class*=devInfo] strong,
+        [data-class*=point] {color:red}
+    </style>
+</head>
+<body>
+    <div data-class="contents">
+        <h1 data-class="component-name"><span>폼<span></h1>     
+        <div data-class="section">
+            <div data-class="h1">Type</div>
+                <div data-class="h2">Input</div>
+                <div data-class="box">
+                    <div data-class="list disc">
+                        <div>Input Type 구분<br>
+                            문자 : text / 숫자 : tel / 문자 + 숫자 : text / 비밀번호: password
+                        </div>
+                        <div>form label<br> 
+                            기본(input, selectbox) .form-label : 13px 400 컬러03 / 하단 여백 없음<br>
+                            예외(radio, checkbox) .form-label.fz-16 : 16px 500 컬러01 / 하단 여백 8px
+                        </div>
+                    </div>
+                </div>
+
+                <div data-class="h3">System</div>
+                <div data-class="box">
+                    <div data-class="list disc">
+                        <div>input Type="text"</div>
+                    </div>
+                </div>
+                <div data-class="box devInfo">
+                    <div data-class="list disc">
+                        <strong>[개발가이드/접근성]</strong> 
+                        <ol>
+                            <li>1. id/for 연결 대신 title="" 사용</li>
+                            <li>2. div.form-row & p.tip 에 .error 클래스 추가</li>
+                            <li>3. [개발전용] 에러 발생할 때, 해당 영역으로 focus 이동</li>
+                        </ol>
+                    </div>
+                </div>
+                <script type="text/html">
+<h3 class="ht-4">타이틀</h3>
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" placeholder="입력내용" title="타이틀명" value="텍스트" class="inp">
+        </div>
+    </div>  
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" placeholder="입력내용" title="타이틀명" value="텍스트" class="inp none-clear"><!-- clear버튼 노출X -->
+        </div>
+    </div>    
+    <p class="tip">안내메세지</p>
+</div>
+
+<div class="form-group">
+    <div class="form-label">Error</div>
+    <div class="form-row error"><!-- 에러시 error 클래스 추가 -->
+        <div class="form-ele"> 
+            <input type="text" placeholder="입력내용" title="타이틀명" value="텍스트" class="inp">
+        </div>
+    </div>   
+    <p class="tip error">(개발전용) 에러 메시지</p><!-- 에러시 error 클래스 추가 -->
+    <p class="tip">안내메세지</p>
+    <p class="tip success">성공메세지</p>
+</div>
+
+<div class="form-group">
+    <div class="form-label">Readonly</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" title="타이틀명" value="텍스트" readonly class="inp">
+        </div>
+    </div>  
+</div>
+
+<div class="form-group">
+    <div class="form-label">Disabled</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" placeholder="입력내용" title="타이틀명" value="텍스트" disabled class="inp">
+        </div>
+    </div>  
+</div>
+                </script>
+
+<!--                 <div data-class="h3">Input + Text</div>
+                <script type="text/html">
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row">
+        <div class="form-ele">입력내용</div>
+    </div> 
+</div>
+                </script> -->
+
+
+            
+<!--                 <div data-class="h3">보안키패드, 숫자커스텀키패드 (안드로이드 접근성 대응) - 개발 공통에서 처리</div>
+                <div data-class="box">
+                    div에 <span style="color:red">role="button" aria-label="변경된 value값, title명 입력"</span> 추가<br>
+                    input 에 <span style="color:red">aria-hidden="true" class="bg-white" readonly</span> 추가<br>
+                    * [이체금액] 버튼을 클릭해서 value값이 변경될 때마다 aria-label 에 변경되는 값이 적용되어야 함
+                </div>
+                <script type="text/html">
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row">
+        <div class="form-ele" role="button" aria-label="출금계좌정보 입력" title="입력된 value삽입되는 부분" onclick="">            
+            <input type="tel" placeholder="입력내용" title="출금계좌정보" value="" aria-hidden="true" readonly class="inp bg-white">
+        </div>
+    </div>
+</div>
+                </script>
+            </div> -->
+
+            <div data-class="h3">Custom(버튼형)</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>보안키패드(password, masking), 숫자커스텀키패드 안드로이드 접근성 대응</div>
+                </div>
+            </div>
+            <div data-class="box devInfo">
+                <div data-class="list disc">
+                    <strong>[개발가이드]</strong> 
+                    <ol data-class="list disc">
+                        <li>1. value값이 입력되면 button(.inp-btn)에 .on 클래스 추가</li>
+                        <li>2. readonly 스타일은 button(.select-btn)에 .readonly 클래스 추가</li>
+                        <li>3. value값 우측 정렬일 경우, button(.inp-btn)에 .right 클래스 추가</li>
+                    </ol>
+                </div>
+            </div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row">
+        <div class="form-ele">            
+            <button type="button" title="출금계좌정보 입력" class="inp-btn">숫자만입력</button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">value</div>
+    <div class="form-row">
+        <div class="form-ele">            
+            <button type="button" title="출금계좌정보 입력" class="inp-btn on" aria-label="입력됨">value 값 노출</button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">Readonly</div>
+    <div class="form-row">
+        <div class="form-ele">            
+            <button type="button" title="출금계좌정보 입력" class="inp-btn on readonly">value 값 노출</button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">Disabled</div>
+    <div class="form-row">
+        <div class="form-ele">            
+            <button type="button" title="출금계좌정보 입력" class="inp-btn on" disabled>value 값 노출</button>
+        </div>
+    </div>
+</div>
+                </script>
+
+                <div data-class="h3">Custom(버튼형) + Unit</div>
+                <div data-class="box">
+                    <ul>
+                        <li>숫자 커스텀 키패드 + 단위</li>
+                        <li>input 오른쪽에 단위가 붙을때 사용</li>
+                    </ul>
+                </div>
+                <div data-class="box devInfo">
+                    <div data-class="list disc">
+                        <strong>[개발가이드/접근성]</strong> 
+                        <ol>
+                            <li>1. 활성화 : .on 클래스 추가</li>
+                            <li>2. 숫자일 경우(우측정렬) : .right 클래스 추가</li>
+                        </ol>
+                    </div>
+                </div>
+                <script type="text/html">
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="이체금액 입력" class="inp-btn right">0</button>
+            <span class="unit">원</span>
+        </div>
+    </div>
+    <p class="form-hangul" aria-hidden="true">삼만구천육백원</p>
+    <div class="form-btm-wrap right">
+        <p class="form-sum">출금가능금액 : <span class="numbers fc-posi">1,787,888,000원</span></p>
+        <p class="form-sum">1일 이체잔여한도 : <span class="numbers fc-nega">21,787,888,000원</span></p>
+    </div>
+    <p class="tip">안내메세지</p>
+    <div class="btns form-foot">
+        <button type="button" class="btn outline sm">버튼</button>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label right">최대 300만원</div>
+    <div class="form-row between"><!-- 에러시 error 클래스 추가 -->
+        <span class="row-tit">1회</span>
+        <div class="form-ele">
+            <button type="button" title="이체한도 입력" class="inp-btn right on">15,000</button><!-- 개발: 입력 완료시 on 클래스 추가 -->
+            <span class="unit">만원</span>
+        </div>
+    </div>
+    <p class="form-hangul" aria-hidden="true">1억 5천만원</p>
+    <!-- <p class="tip error">error msg</p> --><!-- 에러시 error 클래스 추가 -->
+</div>
+
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="이체금액 입력" class="inp-btn right">금액입력</button>
+            <span class="unit">원</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="이체금액 입력" class="inp-btn right on readonly">111</button>
+            <span class="unit">원</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="이체금액 입력" class="inp-btn right on" disabled>111</button>
+            <span class="unit">원</span>
+        </div>
+    </div>
+</div>
+                </script>
+            </div>
+            
+            <div data-class="section">
+                <div data-class="h2">Selectbox</div>
+<!--                 <div data-class="box">
+                    <div data-class="list disc">
+                        <div>모든 selectbox는 바텀시트 노출</div>
+                    </div>
+                </div>
+                <div data-class="h3">System</div>
+                <div data-class="box">lectbox
+                    <div data-class="list disc">
+                        <div>바텀시트 하단 버튼이 없는 스타일</div> 
+                        <div>옵션 텍스트 리스트가 노출될 때만 사용</div>
+                    </div>
+                </div> -->
+<!--                 <script type="text/html">
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <select id="selectPop" class="select-btn" title="출금계좌정보 선택">
+                <option value="">옵션선택</option>
+                <option value="1">옵션1</option>
+                <option value="2">옵션2</option>
+                <option value="3">옵션3</option>
+                <option value="4">옵션4</option>
+                <option value="5">옵션5</option>
+            </select>
+        </div>
+    </div>
+</div>
+                </script> -->
+
+                <div data-class="h3">Custom(버튼형)</div>
+                <div data-class="box devInfo">
+                    <div data-class="list disc">
+                        <strong>[개발가이드/접근성]</strong> 
+                        <ol>
+                            <li>1. id/for 연결 대신 title="" 사용</li>
+                            <li>2. value값이 입력될 때, button(.select-btn)에 .on 클래스 추가</li>
+                            <li>3. readonly 스타일은 button(.select-btn)에 .readonly 클래스 추가</li>
+                        </ol>
+                    </div>
+                </div>
+                <script type="text/html">
+<div class="form-group">
+    <div class="form-label">출금계좌정보</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn" title="출금계좌정보 선택"  onclick="UICommon.Layer.open('#selectFlow')">선택하세요</button>
+        </div>
+    </div>
+    <p class="tip">안내 메세지</p>
+
+    <!-- 선택한 계좌정보 입력시 -->
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn on" title="시작계좌 선택">
+                <i class="ci-18x bk-000" role="img" aria-label="SBI저축은행(유플리트)"></i><span>입출금통장(3210)</span>
+            </button>
+        </div>
+    </div>
+    <!-- //선택한 계좌정보 입력시 -->
+</div>
+
+<div class="form-group">
+    <div class="form-label">Value</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn on" title="출금계좌정보 선택">000000-00-000000</button>
+        </div>
+    </div>
+    <p class="tip">안내메세지</p>
+</div>
+
+<div class="form-group">
+    <div class="form-label">Readonly</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn readonly" title="출금계좌정보">000000-00-000000</button>
+        </div>
+    </div>    
+</div>
+
+<div class="form-group">
+    <div class="form-label">Disabled</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn" title="출금계좌정보" disabled>000000-00-000000</button>
+        </div>
+    </div>    
+</div>
+                </script>
+            </div>
+            
+            <div data-class="section">
+                <div data-class="h2">Textarea</div>
+                <div data-class="box devInfo">
+                    <div data-class="list disc">
+                        <strong>[개발가이드/접근성]</strong> 
+                        <ol>
+                            <li>1. value값이 입력될 때, button(.select-btn)에 .on 클래스 추가</li>
+                            <li>2. byte 표시 없을 경우 .form-row 에 .nobyte 클래스 추가</li>
+                            <li>3. div.form-row & p.tip 에 .error 클래스 추가</li>
+                            <li>4. [개발전용] 에러 발생할 때, 해당 영역으로 focus 이동</li>
+                        </ol>
+                    </div>
+                </div>
+                <script type="text/html">
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row textarea">
+        <textarea title="타이틀명" placeholder="내용을 입력해주세요."></textarea>
+        <div class="form-foot">  
+            <p class="byte"><span><em class="curr">3</em> / 2001</span></p>
+        </div>
+    </div>
+</div>
+<div class="btns form-foot">
+    <button type="button" class="btn outline md">버튼</button>
+</div>
+
+<div class="form-group">
+    <div class="form-label">Error</div>
+    <div class="form-row textarea error"><!-- 에러시 error 클래스 추가 -->
+        <textarea title="타이틀명" placeholder="내용을 입력해주세요."></textarea> 
+        <p class="byte"><span><em class="curr">3</em> / 2001</span></p>
+    </div>
+    <p class="tip error">에러문구입니다.에러문구입니다..에러문구입니다..에러문구입니다..에러문구입니다..에러문구입니다..에러문구입니다..에러문구입니다.</p><!-- 에러시 error 클래스 추가 -->
+</div>
+<div class="btns form-foot">
+    <button type="button" class="btn outline md">버튼</button>
+</div>
+
+<div class="form-group">
+    <div class="form-label">No Byte</div>
+    <div class="form-row textarea nobyte"><!-- byte 없을 경우, .nobyte 클래스 추가 -->
+        <textarea title="타이틀명" placeholder="내용을 입력해주세요."></textarea>
+    </div>
+    <p class="tip error">에러문구입니다.에러문구입니다..에러문구입니다..에러문구입니다..에러문구입니다..에러문구입니다..에러문구입니다..에러문구입니다.</p><!-- 에러시 error 클래스 추가 -->
+</div>
+
+<div class="form-group">
+    <div class="form-label">Readonly</div>
+    <div class="form-row textarea">
+        <textarea name="frm-cont" title="타이틀명" readonly>입력텍스트</textarea>     
+        <p class="byte"><span><em class="curr">3</em> / 2001</span></p>    
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">Disabled</div>
+    <div class="form-row textarea">
+        <textarea name="frm-cont" title="타이틀명" disabled>입력텍스트</textarea>
+        <div class="form-foot">  
+            <p class="byte"><span><em class="curr">3</em> / 2001</span></p>
+        </div>         
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">Auto Height</div>
+    <div class="form-row textarea auto-height">
+        <textarea title="타이틀명" placeholder="내용을 입력해주세요." oninput="this.parentNode.dataset.value = this.value" rows="1" class="inp"></textarea>
+    </div>
+</div>
+                </script>
+
+<script>
+// $('.textarea.auto-height >textarea').innerHeight($('#inputString5').prop('scrollHeight'));//화면로드시 placeholder값체크후 높이값변경
+
+// $('.textarea.auto-height >textarea').on({//세부내용 textarea처리
+// 	'click':function(){
+// 		if($(this).val() == ''){
+// 			var -pholder = ($(this).attr('placeholder'));
+// 			$(this).val(-pholder)
+// 		}
+// 	},
+// 	'keyup':function(){//텍스트 입력시 높이값 변경
+// 		if($(this).innerHeight() !==  $(this).prop('scrollHeight')){
+// 			$(this).innerHeight($(this).prop('scrollHeight'));
+// 		}
+// 	},
+// 	'focusout':function(){//텍스트 입력후 높이값 변경
+// 		$(this).innerHeight('4.6rem')
+// 		$(this).innerHeight($(this).prop('scrollHeight'));
+// 	}
+// });
+</script>
+        </div>
+            
+
+        <div data-class="section">
+            <div data-class="h2">Radio</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>Radio, Checkbox 에서는 <span data-class="point">.form-label 에 .fz-16 클래스 추가</span><br> 
+                        (16px 500 컬러01 / 하단 여백 8px)
+                    </div>
+                </div>
+            </div>
+            <div data-class="box devInfo">
+                <div data-class="list disc">
+                    <strong>[개발가이드/접근성]</strong>
+                    <div>id/for 연결 필수</div>
+                </div>
+            </div>
+            <div data-class="h3">Horizontal</div>   
+            <script type="text/html">
+<h4 class="ht-4">타이틀</h4>
+<div class="form-group">
+    <div class="form-label fz-16">레이블</div>
+    <div class="form-rdochk">
+        <span class="form-sel">
+            <input type="radio" id="radioH1_1" name="radio-h1" checked>
+            <label for="radioH1_1" class="label">항목1</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioH1_2" name="radio-h1">
+            <label for="radioH1_2" class="label">항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioH1_3" name="radio-h1" disabled>
+            <label for="radioH1_3" class="label">비활성화</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioH1_4" name="radio-hd1" checked disabled>
+            <label for="radioH1_4" class="label">비활성화(checked)비활성화(checked)비활성화(checked)</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioH1_5" name="radio-h1">
+            <label for="radioH1_5" class="label"></label>
+        </span>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label fz-16">레이블</div>
+    <div class="form-rdochk">
+        <span class="form-sel lg">
+            <input type="radio" id="radioH2_1" name="radio-h2" checked>
+            <label for="radioH1_1" class="label">항목1</label>
+        </span>
+        <span class="form-sel lg">
+            <input type="radio" id="radioH2_2" name="radio-h2">
+            <label for="radioH2_2" class="label">항목2</label>
+        </span>
+        <span class="form-sel lg">
+            <input type="radio" id="radioH2_3" name="radio-h2" disabled>
+            <label for="radioH2_3" class="label">비활성화</label>
+        </span>
+        <span class="form-sel lg">
+            <input type="radio" id="radioH2_4" name="radio-hd2" checked disabled>
+            <label for="radioH2_4" class="label">비활성화(checked)비활성화(checked)비활성화(checked)</label>
+        </span>
+        <span class="form-sel lg">
+            <input type="radio" id="radioH2_5" name="radio-h2">
+            <label for="radioH2_5" class="label"></label>
+        </span>
+    </div>
+</div>
+            </script>
+
+
+            <div data-class="h3">Vertical</div>  
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label fz-16">레이블</div>
+    <div class="form-rdochk v">
+        <span class="form-sel">
+            <input type="radio" id="radioV1" name="radio-v" checked>
+            <label for="radioV1" class="label">항목1</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioV2" name="radio-v">
+            <label for="radioV2" class="label">항목2</label>
+        </span>
+    </div>
+</div>
+            </script>
+
+
+            <div data-class="h3">Fit</div>  
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label fz-16">레이블</div>
+    <div class="form-rdochk fit">
+        <span class="form-sel">
+            <input type="radio" id="radioF1" name="radio-f" checked>
+            <label for="radioF1" class="label">항목1</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioF2" name="radio-f">
+            <label for="radioF2" class="label">항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioF3" name="radio-f">
+            <label for="radioF3" class="label">항목2</label>
+        </span>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h3">Box</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label fz-16">레이블(form-label.lb-box)</div>
+    <div class="form-rdochk rdobox">
+        <span class="form-sel">
+            <input type="radio" id="radioBox1-1" name="radio-box11" checked>
+            <label for="radioBox1-1" class="label">항목</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBox1-2" name="radio-box11">
+            <label for="radioBox1-2" class="label">항목</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBox1-3" name="radio-box11_temp" checked disabled>
+            <label for="radioBox1-3" class="label">항목</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBox1-4" name="radio-box11" disabled>
+            <label for="radioBox1-4" class="label">항목</label>
+        </span>
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-rdochk rdobox v">
+        <span class="form-sel">
+            <input type="radio" id="qaBox6-1" name="qa-box6">
+            <label for="qaBox6-1" class="label">은행직원</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="qaBox6-2" name="qa-box6">
+            <label for="qaBox6-2" class="label">대출모집인</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="qaBox6-3" name="qa-box6">
+            <label for="qaBox6-3" class="label">기타</label>
+        </span>
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-rdochk rdobox col-2">
+        <span class="form-sel">
+            <input type="radio" id="qaBox3-1" name="qa-box3">
+            <label for="qaBox3-1" class="label">전화</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="qaBox3-2" name="qa-box3">
+            <label for="qaBox3-2" class="label">문자메세지</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="qaBox3-3" name="qa-box3">
+            <label for="qaBox3-3" class="label">이메일</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="qaBox3-4" name="qa-box3">
+            <label for="qaBox3-4" class="label">기타</label>
+        </span>
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-label fz-16">레이블</div>
+    <div class="form-rdochk rdobox col-3">
+        <span class="form-sel">
+            <input type="radio" id="radioBox9-1" name="radio-box119" checked>
+            <label for="radioBox9-1" class="label">항목</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBox9-2" name="radio-box119">
+            <label for="radioBox9-2" class="label">항목</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBox9-3" name="radio-box119">
+            <label for="radioBox9-3" class="label">항목</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBox9-4" name="radio-box119">
+            <label for="radioBox9-4" class="label">항목</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBox9-5" name="radio-box119" disabled>
+            <label for="radioBox9-5" class="label">항목</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBox9-6" name="radio-box119" checked disabled>
+            <label for="radioBox9-6" class="label">항목</label>
+        </span>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label fz-16">레이블(4개병렬)</div>
+    <div class="form-rdochk rdobox fit">
+        <span class="form-sel">
+            <input type="radio" id="radioBoxFit1-1" name="radio-box-fit1" aria-expanded="false" aria-controls="certificate01" checked>
+            <label for="radioBoxFit1-1" class="label">PC출력</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBoxFit1-2" name="radio-box-fit1" aria-expanded="false" aria-controls="certificate02">
+            <label for="radioBoxFit1-2" class="label">이메일</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBoxFit1-3" name="radio-box-fit1" aria-expanded="false" aria-controls="certificate03">
+            <label for="radioBoxFit1-3" class="label">팩스</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="radioBoxFit1-4" name="radio-box-fit1" aria-expanded="false" aria-controls="certificate04">
+            <label for="radioBoxFit1-4" class="label">문자메시지</label>
+        </span>
+    </div>
+</div>
+
+<!-- 이미지교체하면 주석삭제 -->
+<div class="agree-check">
+    <div class="form-sel-box">
+        <input type="checkbox" id="term333A" name="chk">
+        <label for="term333A" class="label">전체약관을 확인하고 동의합니다.</label>
+    </div>
+    <div class="form-sel-box">
+        <input type="checkbox" id="term333C" name="chk" disabled>
+        <label for="term333C" class="label">전체약관을 확인하고 동의합니다.</label>
+    </div>
+    <div class="form-sel-box">
+        <input type="checkbox" id="term333D" name="chk" checked disabled>
+        <label for="term333D" class="label">전체약관을 확인하고 동의합니다.</label>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h3">Toggle</div>
+            <script type="text/html">
+<div class="form-rdochk v">
+    <span class="form-sel">
+        <input type="radio" id="radioVtoggle1" name="radioVtoggle" aria-expanded="true" aria-controls="radioVpanel1" checked>
+        <label for="radioVtoggle1" class="label">항목1</label>
+    </span>
+    <div class="rdo-panel" id="radioVpanel1">
+        항목1 내용
+    </div>
+    <span class="form-sel">
+        <input type="radio" id="radioVtoggle2" name="radioVtoggle" aria-expanded="false" aria-controls="radioVpanel2">
+        <label for="radioVtoggle2" class="label">항목2</label>
+    </span>
+    <div class="rdo-panel" id="radioVpanel2">
+        항목2 내용
+    </div>
+    <span class="form-sel">
+        <input type="radio" id="radioVtoggle3" name="radioVtoggle" aria-expanded="false" aria-controls="radioVpanel3">
+        <label for="radioVtoggle3" class="label">항목3</label>
+    </span>
+    <div class="rdo-panel" id="radioVpanel3">
+        항목3 내용
+    </div>
+</div>
+
+
+<div class="form-group">
+    <div class="form-label fz-16">조회기간</div>
+    <div class="form-rdochk rdobox col-3">
+        <span class="form-sel">
+            <input type="radio" id="reMethod1" name="reMethod">
+            <label for="reMethod1" class="label">실시간</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="reMethod2" name="reMethod" aria-expanded="false" aria-controls="reMethodPanel2">
+            <label for="reMethod2" class="label">1일1회(20시)</label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="reMethod3" name="reMethod" aria-expanded="false" aria-controls="reMethodPanel3">
+            <label for="reMethod3" class="label">시간별<br>시간별</label>
+        </span>
+    </div>
+    <div class="rdo-panel" id="reMethodPanel2">
+        1일1회(20시)
+    </div>
+    <div class="rdo-panel" id="reMethodPanel3">
+        <h3 class="hidden">시간별</h3>
+        <div class="form-rdochk fit">
+            <span class="form-sel">
+                <input type="radio" id="timeRdo1" name="timeRdo" checked>
+                <label for="timeRdo1" class="label">1시간</label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="timeRdo2" name="timeRdo" checked>
+                <label for="timeRdo2" class="label">3시간</label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="timeRdo3" name="timeRdo" checked>
+                <label for="timeRdo3" class="label">4시간</label>
+            </span>
+        </div>
+    </div>     
+</div>
+            </script>
+        </div>
+        
+        <div data-class="section">
+            <div data-class="h2">Checkbox</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>Radio, Checkbox 에서는 <span data-class="point">.form-label 에 .fz-16 클래스 추가</span><br> 
+                        (16px 500 컬러01 / 하단 여백 8px)
+                    </div>
+                    <div>기본 (.form-sel.sm) : font-size 14px, color: --color-03 (#696e77)</div>
+                </div>
+            </div>
+            <div data-class="box devInfo">
+                <div data-class="list disc">
+                    <strong>[개발가이드/접근성]</strong>
+                    <div>id/for 연결 필수</div>
+                </div>
+            </div>
+            <div data-class="h3">Horizontal</div>
+            <script type="text/html">
+<h4 class="ht-4">타이틀</h4>
+<div class="form-group">
+    <div class="form-label fz-16"><span style="color: hotpink;">♥ </span>레이블</div>
+    <div class="form-rdochk">
+        <span class="form-sel">
+            <input type="checkbox" id="checkSize1" checked>
+            <label for="checkSize1" class="label">항목1</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="checkSize2">
+            <label for="checkSize2" class="label">항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="checkSize3" disabled>
+            <label for="checkSize3" class="label">비활성화</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="checkSize4" checked disabled>
+            <label for="checkSize4" class="label">비활성화(checked)</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="checkSize5">
+            <label for="checkSize5" class="label"></label>
+        </span>
+    </div>
+
+    <div class="form-label fz-16">레이블</div>
+    <div class="form-rdochk">
+        <span class="form-sel lg">
+            <input type="checkbox" id="checkSize1" checked>
+            <label for="checkSize1" class="label">항목1</label>
+        </span>
+        <span class="form-sel lg">
+            <input type="checkbox" id="checkSize2">
+            <label for="checkSize2" class="label">항목2</label>
+        </span>
+        <span class="form-sel lg">
+            <input type="checkbox" id="checkSize3" disabled>
+            <label for="checkSize3" class="label">비활성화</label>
+        </span>
+        <span class="form-sel lg">
+            <input type="checkbox" id="checkSize4" checked disabled>
+            <label for="checkSize4" class="label">비활성화(checked)</label>
+        </span>
+        <span class="form-sel lg">
+            <input type="checkbox" id="checkSize5">
+            <label for="checkSize5" class="label"></label>
+        </span>
+    </div>
+
+    <div class="form-label fz-16">레이블</div>
+    <div class="form-rdochk">
+        <span class="form-sel sm">
+            <input type="checkbox" id="checkCHK111" checked>
+            <label for="checkCHK111" class="label">항목1</label>
+        </span>
+        <span class="form-sel sm">
+            <input type="checkbox" id="checkCHK222">
+            <label for="checkCHK222" class="label">항목2</label>
+        </span>
+        <span class="form-sel sm">
+            <input type="checkbox" id="checkCHK333" disabled>
+            <label for="checkCHK333" class="label">비활성화</label>
+        </span>
+        <span class="form-sel sm">
+            <input type="checkbox" id="checkCHK444" checked disabled>
+            <label for="checkCHK444" class="label">체크상태 : 비활성화</label>
+        </span>
+        <span class="form-sel sm">
+            <input type="checkbox" id="checkCHK555">
+            <label for="checkCHK555" class="label"></label>
+        </span>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h3">vertical</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label fz-16">조회기간</div>
+    <div class="form-rdochk v">
+        <span class="form-sel">
+            <input type="checkbox" id="checkChecked" checked>
+            <label for="checkChecked" class="label">항목1</em></label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="check">
+            <label for="check" class="label">항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="checkDisabled" disabled>
+            <label for="checkDisabled" class="label">비활성화</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="checkCheckedDisabled" checked disabled>
+            <label for="checkCheckedDisabled" class="label">체크상태 : 비활성화</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="checkAlone">
+            <label for="checkAlone" class="label"></label>
+        </span>
+    </div>
+</div>
+            </script>
+            
+            <div data-class="h3">Flexible</div>
+            <script type="text/html">
+
+<div class="form-group">
+    <div class="form-label fz-16">조회기간</div>
+    <div class="rdoChk-group flexible">
+        <span class="form-sel">
+            <input type="checkbox" id="mid3" checked>
+            <label for="mid3" class="label">항목1</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="mid4">
+            <label for="mid4" class="label">항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="mid5">
+            <label for="mid4" class="label">항목항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="mid6">
+            <label for="mid6" class="label">항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="mid7">
+            <label for="mid7" class="label">항목항목항목항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="mid8">
+            <label for="mid8" class="label">항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="mid9">
+            <label for="mid9" class="label">항목2</label>
+        </span>
+    </div>
+</div>
+            </script>
+
+
+            <div data-class="h3">Fit</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label fz-16">조회기간</div>
+    <div class="form-rdochk fit">
+        <span class="form-sel">
+            <input type="checkbox" id="mid3" checked>
+            <label for="mid3" class="label">항목1</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="mid4">
+            <label for="mid4" class="label">항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="mid5">
+            <label for="mid4" class="label">항목2</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="mid6">
+            <label for="mid6" class="label">항목2</label>
+        </span>
+    </div>
+</div>
+            </script>
+
+
+            <div data-class="h3">Toggle</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label fz-16">조회기간</div>
+    <div class="form-rdochk v">
+        <span class="form-sel">
+            <input type="checkbox" id="chkToggle1" aria-expanded="false" aria-controls="chkPanel1" checked>
+            <label for="chkToggle1" class="label">항목1</label>
+        </span>
+        <div class="chk-panel" id="chkPanel1">
+            항목1 내용
+        </div>
+        <span class="form-sel">
+            <input type="checkbox" id="chkToggle2" aria-expanded="false" aria-controls="chkPanel2">
+            <label for="chkToggle2" class="label">항목2</label>
+        </span>
+        <div class="chk-panel" id="chkPanel2">
+            항목2 내용
+        </div>
+        <span class="form-sel">
+            <input type="checkbox" id="chkToggle3" aria-expanded="false" aria-controls="chkPanel3">
+            <label for="chkToggle3" class="label">항목3</label>
+        </span>
+        <div class="chk-panel" id="chkPanel3">
+            항목3 내용
+        </div>
+    </div>
+</div>
+            </script>
+
+            
+
+            <div data-class="h3">[WD] Box 타입</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-rdochk box">
+        <span class="form-sel">
+            <input type="checkbox" id="midA31">
+            <label for="midA31" class="label">
+                SKT
+                <span class="descr">신분증과 본인명의의 계좌를 확인하여 실명확인을 진행합니다.</span>
+            </label>
+        </span>
+        <span class="form-sel limit-h">
+            <input type="checkbox" id="midA71" checked>
+            <label for="midA71" class="label">
+                SKT
+                <span class="badge state-posi in-loc">정상</span>
+            </label>
+        </span>
+    </div>
+</div>
+<br>
+<div class="form-group">
+    <div class="form-rdochk box right-ini">
+        <span class="form-sel">
+            <input type="checkbox" id="midA31">
+            <label for="midA31" class="label">
+                SKT
+                <span class="descr">우측여백...기본으로 변경 신분증과 본인명의의 계좌를 확인하여 실명확인을 진행합니다.</span>
+            </label>
+        </span>
+        <span class="form-sel limit-h">
+            <input type="radio" id="midA71" checked>
+            <label for="midA71" class="label">
+                SKT
+                <span class="badge state-posi in-loc">정상</span>
+            </label>
+        </span>
+    </div>
+</div>
+<br>
+<div class="form-group">
+    <div class="form-rdochk box">
+        <span class="form-sel">
+            <input type="radio" id="midA51" name="midA" checked>
+            <label for="midA51" class="label">
+                SKT
+                <span class="descr">신분증과 본인명의의 계좌를 확인하여 실명확인을<br>진행합니다.</span>
+                <span class="badge state-posi in-loc">정상</span>
+            </label>
+        </span>
+        <span class="form-sel">
+            <input type="radio" id="midA61" name="midA">
+            <label for="midA61" class="label">
+                SKT
+                <span class="descr">등록기간 : 유플리트</span>
+                <span class="badge state-posi in-loc"><span class="hidden">상태</span>정상</span>
+            </label>
+        </span>
+    </div>
+</div>
+<br>
+<div class="form-group">
+    <div class="form-rdochk box">
+        <span class="form-sel ico ico-24x-22 lg">
+            <input type="radio" id="midA1" name="midA" checked>
+            <label for="midA1" class="label">
+                신분증 촬영<span class="descr">주민등록증 또는 운전면허증을 촬영하여 인증을 진행합니다.</span>
+            </label>
+        </span>
+        <span class="form-sel ico ico-24x-23 lg">
+            <input type="radio" id="midA2" name="midA">
+            <label for="midA2" class="label">
+                모바일 신분증<span class="descr">행정안전부에서 발급받은 모바일신분증앱을 이용하여 인증합니다.</span>
+            </label>
+        </span>
+    </div>
+</div>
+            </script>
+        </div>
+
+        <div data-class="section">
+            <div data-class="h2">Column지정[col3] - 약관 통신사선택</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label fz-16">조회기간</div>
+    <div class="form-rdochk col3">
+        <span class="form-sel">
+            <input type="checkbox" id="midA3" checked>
+            <label for="midA3" class="label">SKT</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="midA4">
+            <label for="midA4" class="label">KT</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="midA5">
+            <label for="midA5" class="label">LG U+</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="midA6">
+            <label for="midA6" class="label">알뜰폰</label>
+        </span>
+        <span class="form-sel">
+            <input type="checkbox" id="midA7">
+            <label for="midA7" class="label">페이코</label>
+        </span>
+    </div>
+</div>
+            </script>
+        </div>
+        
+                
+        <div data-class="section">
+            <div data-class="h2">Switch</div>
+            <div data-class="h3">Default</div>
+            <script type="text/html">
+<div class="form-label fz-16">레이블</div>
+<div class="form-rdochk">
+    <span class="switch">    
+        <input type="checkbox" id="switch5" title="레이블123" checked>
+        <label for="switch5" class="label"></label>
+    </span>
+</div>
+
+<div class="form-label">레이블</div>
+<div class="form-rdochk">
+    <span class="switch right">    
+        <input type="checkbox" id="switch1" checked>
+        <label for="switch1" class="label">활성</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch2" checked>
+        <label for="switch2" class="label">활성</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch3" disabled>
+        <label for="switch3" class="label">비활성</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch4" checked disabled>
+        <label for="switch4" class="label">체크상태 비활성</label>
+    </span>
+    <span class="switch">    
+        <input type="checkbox" id="switch4" checked disabled>
+        <label for="switch4" class="label"></label> <!-- 단독 사용 -->
+    </span>
+</div>
+
+            </script>
+            
+            <!-- <div data-class="h3">상승/하락</div>    
+            <script type="text/html">
+<span class="switch rate">    
+    <input type="checkbox" id="switch-rate" name="switch-rate" title="상승" checked>
+    <label for="switch-rate" class="label"></label>
+</span>
+            </script> -->
+        </div>
+
+        <div data-class="section">
+            <div data-class="h1">Component</div>
+            <div data-class="h2">이름</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">이름<span class="required" role="img" aria-label="필수">*</span></div>
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" value="" title="이름" id="inp-2" class="inp" required>
+        </div>
+    </div>
+</div>
+            </script>
+    
+            <div data-class="h2">성별</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label fz-16">성별</div>
+    <div class="form-row">
+        <div class="form-rdochk rdobox">
+            <span class="form-sel">
+                <input type="radio" id="gender1" name="gender" checked>
+                <label for="gender1" class="label">남</label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="gender2" name="gender">
+                <label for="gender2" class="label">여</label>
+            </span>
+        </div>
+    </div>
+</div>
+            </script>
+    
+            <div data-class="h2">이메일주소</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">이메일</div>
+    <div class="form-row v inp-ref-wrap"><!-- inp-ref-wrap 레이어 식별클래스 -->
+        <div class="form-ele">
+            <input type="text" placeholder="입력내용" title="이메일 입력" value="텍스트" class="inp">
+        </div>
+        <div class="inp-ref-pos">
+            <div class="inp-ref">
+                <div class="ref-list list-mail">
+                    <a href="#" role="button">서울시 <em>마포</em>구</a>
+                    <a href="#" role="button">서울시 <em>마포</em>구</a>
+                    <a href="#" role="button">서울시 <em>마포</em>구</a>
+                    <a href="#" role="button">서울시 <em>마포</em>구</a>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+
+<div class="form-group">
+    <div class="form-label">이메일</div>
+    <div class="form-row">
+        <div class="form-ele wp-30">
+            <input type="text" title="ID" placeholder="아이디" value="" class="inp">
+        </div>
+        <span class="space">@</span>
+        <div class="form-ele">
+            <button type="button" class="select-btn" title="도메인 선택">도메인</button>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" value="" title="도메인 직접입력" class="inp">
+        </div>
+    </div>
+    <div class="form-btm-wrap">
+        <span class="form-sel">
+            <input type="checkbox" id="noEmail">
+            <label for="noEmail" class="label">이메일 없음</label>
+        </span>
+    </div>
+</div> 
+
+            </script>
+
+            <div data-class="h2">전화번호</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">휴대폰</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="휴대폰번호 입력" class="inp-btn">휴대폰번호</button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">휴대폰</div>
+    <div class="form-row">
+        <div class="form-ele wp-30">
+            <button type="button" title="휴대폰번호 앞자리 입력" class="select-btn on">010</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="휴대폰번호 뒷자리 입력" class="inp-btn">휴대폰번호 뒷자리</button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">휴대폰</div>
+    <div class="form-row">
+        <div class="form-ele wp-30">
+            <button type="button" class="select-btn on" title="휴대폰번호 앞자리 선택">010</button><!-- 선택: on -->
+        </div>
+        <div class="form-ele">
+            <button type="button" title="휴대폰번호 뒷자리 입력" class="inp-btn">8자리</button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">휴대폰</div>
+    <div class="form-row">
+        <div class="form-ele wp-30">
+            <button type="button" class="select-btn on" title="휴대폰번호 앞자리 선택">010</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="휴대폰번호 중간자리 입력" class="inp-btn on">1234</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="휴대폰번호 끝자리 입력" class="inp-btn on">5678</button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">통신사 포함</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn" title="통신사 선택">통신사</button>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-ele wp-30">
+            <button type="button" class="select-btn" maxlength="4" title="휴대폰번호 앞자리 선택">010</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="휴대폰번호 뒷자리 입력" class="inp-btn">8자리</button>
+        </div>
+    </div>
+</div>
+            </script>
+                
+
+
+            <div data-class="h2">인증번호</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">인증번호</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="인증번호 입력" class="inp-btn">인증번호</button>
+        </div>      
+    </div>
+    <div class="form-btm-wrap between">
+        <p role="text" class="count-time"><span class="tit">잔여시간 : </span>2분 59초</p>
+        <button type="button" class="btn outline xs">인증시간연장</button>
+    </div>
+    <div class="btns right">
+        <button type="button" class="btn icon">인증번호가 오지않나요?<i class="ico-arr"></i></button>
+    </div>
+</div>
+            </script>
+    
+            <div data-class="h2">주민등록번호, 보안카드, 비밀번호</div>
+            <div data-class="box">
+                입력받을 필요 없는 부분은 inp-btn.masking-ele 에 span.already 추가 (● 자리수만큼)
+                <br>└ span.already 는 색상 변동 X
+                <br>└ inp-bnt.masking-ele 에 on 클래스가 붙을 때, span.already로 감싸지 않은 부분 즉, 입력 받은 부분은 색상이 변경됨
+            </div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">주민등록번호_성별</div>
+    <div class="form-row"><!-- 에러시 error 클래스 추가 -->
+        <div class="form-ele">
+            <button type="button" title="주민등록번호 앞 6자리 입력" class="inp-btn">앞6자리 입력</button>
+        </div>
+        <span class="space">-</span>
+        <div class="form-ele">
+            <button type="button" title="주민등록번호 뒤 7자리 입력" class="inp-btn masking-ele">●●●●●●●</button><!-- 개발: 입력 완료시 on 클래스 추가 -->
+        </div>
+    </div>
+    <!-- <p class="tip error">생년월일 앞자리 6자리를 입력해주세요.</p> --><!-- 에러시 error 클래스 추가 -->
+    <!-- <p class="tip error">생년월일 뒷자리 1자리를 입력해주세요.</p> --><!-- 에러시 error 클래스 추가 -->
+    <!-- <p class="tip error">생년월일 뒷자리 1자리를 정확히 입력해주세요.</p> --><!-- 에러시 error 클래스 추가 -->
+</div>
+<div class="form-group">
+    <div class="form-label">주민번호</div>
+    <div class="form-row"><!-- 에러시 error 클래스 추가 -->
+        <div class="form-ele">
+            <button type="button" title="주민등록번호 앞 6자리 입력" class="inp-btn">801230</button>
+        </div>
+        <span class="space">-</span>
+        <div class="form-ele masking">
+            <div class="form-ele w-20">
+                <button type="button" title="주민등록번호 뒷자리 중 첫번째자리 입력" class="inp-btn">2</button>
+            </div>
+            <span class="masking-ele" aria-hidden="true">●●●●●●</span>
+        </div>
+    </div>
+    <!-- <p class="tip error">생년월일 앞자리 6자리를 입력해주세요.</p> --><!-- 에러시 error 클래스 추가 -->
+    <!-- <p class="tip error">생년월일 뒷자리 1자리를 입력해주세요.</p> --><!-- 에러시 error 클래스 추가 -->
+    <!-- <p class="tip error">생년월일 뒷자리 1자리를 정확히 입력해주세요.</p> --><!-- 에러시 error 클래스 추가 -->
+</div>
+<div class="form-group">
+    <div class="form-label">주민등록번호(입력을 받지 않는 경우_버튼X)</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="주민등록번호 앞 6자리 입력" class="inp-btn"></button>
+        </div>
+        <span class="space">-</span>
+        <div class="form-ele masking" aria-label="주민등록번호 뒷자리, 7자리 입력됨">
+            <span class="masking-ele" aria-hidden="true">●●●●●●</span>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-label">주민등록번호</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="주민등록번호 앞 6자리 입력" class="inp-btn">앞6자리 입력</button>
+        </div>
+        <span class="space">-</span>
+        <div class="form-ele">
+            <button type="button" title="주민등록번호 뒷자리, 첫번째자리 입력됨" class="inp-btn on readonly inpt-mask-union" readonly>1<span class="masking-ele" aria-hidden="true">●●●●●●</span></button>
+        </div>
+    </div>
+    <!-- <p class="tip error">생년월일 앞자리 6자리를 입력해주세요.</p> --><!-- 에러시 error 클래스 추가 -->
+</div>
+<div class="form-group">
+    <div class="form-label">보안카드/비밀번호(일부만 입력 받는 경우)</div><br>
+    <div class="form-label"><strong>보안카드번호</strong> <span class="fc-sub fw-400">뒤 4자리</span></div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="보안카드 뒤 4자리 입력" class="inp-btn masking-ele"><span class="already">●●●●</span>●●●●</button><!-- 개발: 입력 완료시 on 클래스 추가 -->
+        </div>
+    </div>
+</div> 
+
+            </script>
+
+            <div data-class="h2">사업자번호</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">사업자번호</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="사업자번호 첫번째 3자리" class="inp-btn">3자리</button>
+        </div>
+        <span class="space">-</span>
+        <div class="form-ele">
+            <button type="button" title="사업자번호 중간 2자리" class="inp-btn">2자리</button>
+        </div>
+        <span class="space">-</span>
+        <div class="form-ele">
+            <button type="button" title="사업자번호 마지막 5자리" class="inp-btn">5자리</button>
+        </div>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h2">소득확인증명서 발급번호</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">
+        가입자격확인서류 정보입력
+    </div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="소득확인증명서 발급번호 첫번째 4자리" class="inp-btn">4자리</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="소득확인증명서 발급번호 두번째 3자리" class="inp-btn">3자리</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="소득확인증명서 발급번호 세번째 4자리" class="inp-btn">4자리</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="소득확인증명서 발급번호 네번째 3자리" class="inp-btn">3자리</button>
+        </div>
+    </div>
+</div>
+            </script>
+
+  
+
+            <div data-class="h2">면허번호</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">면허번호</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn" title="면허번호 첫번째 자리 선택">12</button>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="면허번호 두번째 자리 입력" class="inp-btn">12</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="면허번호 세번째 자리 입력" class="inp-btn">12</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="면허번호 네번째 자리 입력" class="inp-btn">12</button>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-label">면허번호</div>
+    <div class="form-row"><!-- 개발: 에러시 error 클래스 추가 -->
+        <!-- mod-date:0519 : 마크업 수정 -->
+        <div class="form-ele wp-40">
+            <button type="button" class="select-btn" title="면허 앞자리 지역번호 선택">11(서울)</button><!-- 개발: value값 선택시 on 클래스 추가 -->
+        </div>
+        <div class="form-ele">            
+            <button type="button" class="inp-btn" title="면허번호 뒷자리입력">숫자 10자리 입력</button><!-- 개발: value값 입력시 on 클래스 추가 -->
+        </div>
+        <!-- //mod-date:0519 : 마크업 수정 -->
+    </div>
+    <p class="tip error">면허번호는 필수 입력 항목입니다.</p><!-- 개발: 에러시 error 클래스 추가 -->
+</div>
+<div class="form-group">
+    <div class="form-label">면허번호</div>
+    <div class="form-row"><!-- 개발: 에러시 error 클래스 추가 -->
+        <div class="form-ele wp-20">
+            <button type="button" class="select-btn" title="면허 앞자리 지역번호 선택">11</button><!-- 개발: value값 선택시 on 클래스 추가 -->
+        </div>
+        <span class="space">-</span>
+        <div class="form-ele">
+            <button type="button" class="inp-btn" title="">12</button>
+        </div>
+        <span class="space">-</span>
+        <div class="form-ele wp-30">
+            <button type="button" title="보안카드 뒤 4자리 입력" class="inp-btn masking-ele"><span class="already">●●●●●●</span></button><!-- 개발: 입력 완료시 on 클래스 추가 -->
+        </div>
+        <span class="space">-</span>
+        <div class="form-ele">
+            <button type="button" class="inp-btn" title="">90</button>
+        </div>
+    </div>
+    <p class="tip error">면허번호는 필수 입력 항목입니다.</p><!-- 개발: 에러시 error 클래스 추가 -->
+</div>
+
+<div class="form-group">
+    <div class="form-label">면허번호</div>
+    <div class="form-row-resp">
+        <div class="form-row ele-end">
+            <div class="form-ele wp-33">
+                <button type="button" class="select-btn" title="면허 앞자리 지역번호 선택">서울(11)</button><!-- 개발: value값 선택시 on 클래스 추가 -->
+            </div>
+            <span class="space">-</span>
+        </div>
+        <div class="form-row">
+            <div class="form-ele">
+                <button type="button" class="inp-btn" title="">12</button>
+            </div>
+            <span class="space">-</span>
+            <div class="form-ele wp-40">
+                <button type="button" title="보안카드 뒤 4자리 입력" class="inp-btn masking-ele"><span class="already">●●●●●●</span></button><!-- 개발: 입력 완료시 on 클래스 추가 -->
+            </div>
+            <span class="space">-</span>
+            <div class="form-ele">
+                <button type="button" class="inp-btn" title="">90</button>
+            </div>
+        </div>
+    </div>
+    <p class="tip error">면허번호는 필수 입력 항목입니다.</p><!-- 개발: 에러시 error 클래스 추가 -->
+</div>
+
+
+
+            </script>
+    
+            <div data-class="h2">아파트 동/호수</div>
+            <script type="text/html">
+<div class="form-group apart">
+    <div class="form-label">동/호수</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" placeholder="아파트 동" title="아파트 동" value="10" class="inp right"><!-- mod-date:0822: text 타입으로 변경-->
+            <span class="unit">동</span>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="아파트 호수" class="inp-btn right on">1204</button>                      
+            <span class="unit">호</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group apart">
+    <div class="form-label">동/호수</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" placeholder="입력내용" title="타이틀명" value="텍스트" class="inp right"><!-- mod-date:0822: text 타입으로 변경-->
+            <span class="unit">동</span>
+        </div>
+        <div class="form-ele">
+            <button type="button" title="아파트 호수" class="inp-btn right on">1204</button>                      
+            <span class="unit">호</span>
+        </div>
+    </div>
+</div>
+    
+<div class="form-group apart">
+    <div class="form-label">추가정보</div>
+    <div class="form-row multi-row">
+        <div class="form-ele">
+            <span class="like-label fx-none">거주</span>
+            <button type="button" title="추가정보 거주층수" class="inp-btn right on">10</button>
+            <span class="unit">층</span>
+        </div>
+        <div class="form-ele">
+            <span class="like-label fx-none">전체</span>
+            <button type="button" title="추가정보 전체층수" class="inp-btn right on">
+                <span>20</span>
+            </button>
+            <span class="unit">층</span>
+        </div>
+        <div class="form-ele">
+            <span class="like-label fx-none">방</span>
+            <button type="button" title="추가정보 방갯수" class="inp-btn right on">
+                <span>20</span>
+            </button>
+            <span class="unit">개</span>
+        </div>
+    </div>
+</div>
+            </script>
+    
+            <div data-class="h2">주소</div>
+            <div data-class="h3">주소에 우편번호가 줄바꿈으로 들어가는 경우</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div>주소입력을 버튼으로 지정하고 검색영역은 단순보여지는 영역으로 지정</div>
+                </div>
+            </div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">집주소 (실제거주지주소)</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="inp-btn justify" title="주소 검색" disabled>
+                <span>선택해주세요</span>
+                <span class="point sm" aria-hidden="true">검색</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">회사명</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="회사명 검색" class="inp-btn justify on"><!-- 회사명 입력후 on 클래스 적용 -->
+                <span class="address">SBI저축은행</span>
+                <span class="point sm" aria-hidden="true">검색</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">주소</div>
+    <div class="form-row">
+        <div class="form-ele addr"><!-- 주소 입력후 addr 클래스 적용 -->
+            <button type="button" title="주소 검색" class="inp-btn justify on"><!-- 주소 입력후 on 클래스 적용 -->
+                <span class="address">경기 연천군 전곡읍 남계로 408 (한반도통일미래센터) 1101동 504호</span>
+                <span class="point sm" aria-hidden="true">검색</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">주택정보</div>
+    <div class="form-row">
+        <div class="form-ele addr"><!-- 주소 입력후 addr 클래스 적용 -->
+            <button type="button" title="주소 검색" class="inp-btn justify on"><!-- 주소 입력후 on 클래스 적용 -->
+                <span class="address"><strong class="post-num">11040</strong>서울특별시 강동구 성내동 코오롱(1차)</span>
+                <span class="point sm" aria-hidden="true">검색</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">주택정보</div>
+    <div class="form-row">
+        <div class="form-ele addr"><!-- 주소 입력후 addr 클래스 적용 -->
+            <button type="button" title="주소 검색" class="inp-btn justify readonly on"><!-- 주소 입력후 on 클래스 적용 -->
+                <span class="address"><strong class="post-num">11040</strong>서울특별시 강동구 성내동 코오롱(1차)</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="form-label">집주소 (실제거주지주소)</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="inp-btn justify" title="주소 검색">
+                <span>선택해주세요</span>
+                <span class="point sm" aria-hidden="true">검색</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="tit-form-wrap">
+    <h3 class="ht-3">
+        <span>지방세 납부주소</span>
+    </h3>
+    <span class="form-sel">
+        <input type="checkbox" id="addrChk">
+        <label for="addrChk" class="label">집주소와 동일</em></label>
+    </span>
+</div>
+<div class="form-group">
+    <div class="form-label">주소</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="inp-btn justify" title="주소 검색">
+                <span class="address">검색해주세요</span>
+                <span class="point sm" aria-hidden="true">검색</span>
+            </button>
+        </div>
+    </div>
+    <!-- 주소 입력 후 -->
+    <div class="form-row">
+        <div class="form-ele addr"><!-- 개발: 주소 입력후 addr 클래스 적용 -->
+            <button type="button" class="inp-btn justify on" title="주소 검색"><!-- 개발: 주소 입력후 on 클래스 적용 -->
+                <span class="address full">
+                    <span class="type01"><strong class="post-num">12345</strong>(도로명) 서울시 강동구 양재대로 101길 코오롱 1차 101-7201</span>
+                    <span class="type02">(지번) 서울시 강동구 성내동 385-9 코오롱 1차 101동 7201</span>
+                </span>
+                <span class="point sm" aria-hidden="true">검색</span>
+            </button>
+        </div>
+    </div>
+    <!-- //주소 입력 후 -->
+</div>
+
+
+            </script>
+
+
+<!-- <div class="form-group address">
+    <div class="addr-tit">주소</div>
+    공통태그(공통영역)
+    <div class="addr-sch">
+        <button type="button" class="btn point xs">주소검색</button>
+        주소 검색 후 노출
+        <div class="addr-cts">
+            <span class="addr-post number">07343</span>
+            <p>서울특별시 영등포구 국제금융로 108-6(여의도동, 진주아파트)</p>
+            <p>301동 1507호</p>
+        </div>
+        //주소 검색 후 노출
+    </div>
+    //공통태그(공통영역)
+    <div class="addr-check-wrap">
+        <span class="form-sel">
+            <input type="checkbox" id="sameAddr2" name="">
+            <label for="sameAddr2" class="label"><em>자택주소와 동일</em></label>
+        </span>
+    </div>
+</div> -->
+            </script>
+    
+            <div data-class="h2">자동이체일</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">자동이체일</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn" title="자동이체일 선택">자동이체일</button>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-label">자동입금 일자</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn on" title="자동입금 일자 선택">매월 21일</button>
+        </div>
+        <span class="unit">마다</span>
+    </div>
+    <p class="depth info">입력하신 일자가 없는 달은 해당월 말일에 금액이 이동됩니다.</p>
+</div>
+            </script>
+    
+            <div data-class="h2">생년월일</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">생년월일</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="생년월일 입력" class="inp-btn">YYMMDD</button> 
+        </div> 
+    </div>
+</div>
+            </script>
+
+            <div data-class="h2">날짜선택</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">날짜선택</div>
+    <div class="form-row">
+        <div class="form-ele calendar">
+            <button type="button" title="생년월일 선택" class="inp-btn">생년월일</button>
+        </div> 
+    </div>
+</div>
+            </script>
+    
+            <div data-class="h2">기간선택</div>
+            <div data-class="box">
+                <div data-class="list disc">                                        
+                    <div>레이블 뒤에 박형형태의 폼요소시 레이블에 .rdochk 적용하면 하단공백 추가<br>label="form-label fz-16"</div>
+                    <div>form-ele 영역에 over-calendar클래스 적용하면 투명버튼이 전체를 덮음</div>
+                </div>
+            </div>
+
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">기간선택</div>
+    <div class="form-row">
+        <div class="form-ele calendar">
+            <button type="button" title="시작일 선택" class="inp-btn on">2023.10.08</button>
+        </div> 
+        <span class="space">~</span>
+        <div class="form-ele calendar">
+            <button type="button" title="종료일 선택" class="inp-btn on">2023.10.08</button>
+        </div> 
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-label">자동이체기간</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="자동이체 시작일" class="inp-btn center readonly">2023.01.16</button>
+        </div> 
+        <span class="space">~</span>
+        <div class="form-ele">
+            <button type="button" title="자동이체 종료일" class="inp-btn center readonly">2024.01.16</button>
+        </div> 
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-label fz-16">기간선택</div>
+    <div class="form-row">
+        <div class="form-rdochk rdobox">
+            <span class="form-sel">
+                <input type="radio" id="radioBox9-11" name="radio-box119" checked>
+                <label for="radioBox9-11" class="label">3개월</label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="radioBox9-12" name="radio-box119">
+                <label for="radioBox9-12" class="label">6개월</label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="radioBox9-13" name="radio-box119">
+                <label for="radioBox9-13" class="label">12개월</label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="radioBox9-14" name="radio-box119">
+                <label for="radioBox9-14" class="label">기간선택</label>
+            </span>
+        </div>
+    </div>
+    <div class="form-row by-box">
+        <div class="form-ele calendar">
+            <button type="button" title="시작일 선택" class="inp-btn on">2023.10.08</button>
+        </div> 
+        <span class="space">~</span>
+        <div class="form-ele calendar">
+            <button type="button" title="종료일 선택" class="inp-btn on">2023.10.08</button>
+        </div>
+    </div>
+    <div class="tip">최대 3개월까지 조회할 수 있습니다.</div>
+
+    <div class="form-row">
+        <div class="form-rdochk rdobox">
+            <span class="form-sel">
+                <input type="radio" id="period11" name="period-2" checked>
+                <label for="period11" class="label"><em>당일</em></label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="period22" name="period-2">
+                <label for="period22" class="label"><em>1주일</em></label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="period33" name="period-2">
+                <label for="period33" class="label"><em>1개월</em></label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="period44" name="period-2">
+                <label for="period44" class="label"><em>3개월</em></label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="period45" name="period-2">
+                <label for="period45" class="label"><em>6개월</em></label>
+            </span>
+        </div>
+    </div>
+</div>
+            </script>
+
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">기간선택</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn on" title="시작일 선택">2023.10.08.08</button>
+        </div>
+        <span class="space">~</span>
+        <div class="form-ele">
+            <button type="button" class="select-btn on" title="종료일 선택">2023.10.08</button>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-label">기간선택</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn" title="시작일 선택">선택하세요</button>
+        </div>
+        <div class="form-ele">
+            <button type="button" class="select-btn" title="종료일 선택">선택하세요</button>
+        </div>
+    </div>
+</div>
+             </script>
+    
+            <div data-class="h2">지로번호</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">지로번호</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="지로번호 입력" class="inp-btn">지로번호</button>
+        </div>
+    </div>
+    <div class="btns form-foot right">
+        <button type="button" class="btn icon">자주쓰는 지로번호<i class="ico-arr"></i></button>
+    </div>
+</div>
+            </script>
+
+
+            <div data-class="h2">인증번호 재요청</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">SMS 인증번호</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="SMS 인증번호 입력" class="inp-btn on">123456</button><!-- 개발: 입력 완료시 on 클래스 추가 -->
+            <button type="button" class="btn point xs">인증번호 재요청</button>
+        </div>
+    </div>
+    <p class="tip">고객정보에 등록된 휴대전화로 전송된 인증번호를 입력해주세요.</p>
+</div>
+            </script>
+
+            <div data-class="h2">입력방지숫자</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">입력방지숫자</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" title="입력방지숫자 입력" class="inp-btn">입력해주세요</button><!-- 개발: 입력 완료시 on 클래스 추가 -->
+            <div class="btns fx-none">
+                <button type="button" class="btn point sm">새로고침</button>
+                <button type="button" class="btn point sm">음성인식</button>
+            </div>
+        </div>
+    </div>
+</div>
+            </script>
+
+            <div data-class="h2">출금계좌번호</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">출금계좌번호</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <button type="button" class="select-btn active" title="출금계좌번호 선택">000000-00-000000</button>
+        </div>
+    </div>
+    <div class="form-btm-wrap right">
+        <p class="sum-hint">출금가능금액 : <span class="numbers fc-posi">1,787,888,000원</span></p>
+        <p class="sum-hint">1일 이체잔여한도 : <span class="numbers fc-nega">21,787,888,000원</span></p>                
+    </div>
+    <div class="btns form-foot right">
+        <button type="button" class="btn icon">잔액/수수료 확인<i class="ico-arr"></i></button>
+    </div>
+</div>
+            </script>
+    
+            <div data-class="h2">이체금액</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div><strong>[정책]</strong><br>
+                        원, 만원, 개, %, g, kg 단위는 우측에 고정 / placeholder는 좌측 정렬 / 숫자는 우측 정렬</div>
+                    <div><strong>[단위가 있을 경우]</strong><br>
+                        .input 클래스에 .unit.js-unit / input 태그에 data-unit 추가
+                    </div>
+                </div>
+            </div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label fz-16">이체금액</div>
+    <div class="form-row">
+        <div class="form-rdochk rdobox">
+            <span class="form-sel">
+                <input type="radio" id="period3-11" name="period-3" checked>
+                <label for="period3-11" class="label"><em>3만원</em></label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="period3-12" name="period-3">
+                <label for="period3-12" class="label"><em>5만원</em></label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="period3-13" name="period-3">
+                <label for="period3-13" class="label"><em>10만원</em></label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="period3-14" name="period-3">
+                <label for="period3-14" class="label"><em>100만원</em></label>
+            </span>
+            <span class="form-sel">
+                <input type="radio" id="period3-15" name="period-3">
+                <label for="period3-15" class="label"><em>전액</em></label>
+            </span>
+        </div>
+    </div>
+    <div class="form-row"> 
+        <div class="form-ele">
+            <button type="button" title="이체금액 입력" class="inp-btn">숫자만 입력</button> 
+        </div>
+    </div>
+    <p class="form-hangul" aria-hidden="true">삼만구천육백원</p>
+</div>
+            </script>
+    
+    
+            <div data-class="h2">Input 양쪽 정렬</div>
+            <div data-class="box">
+                <div data-class="list disc">
+                    <div><strong>[정책]</strong><br>
+                        원, 만원, 개, %, g, kg 단위는 우측에 고정 / placeholder는 좌측 정렬 / 숫자는 우측 정렬
+                    </div>
+                </div>
+            </div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">레이블</div>
+    <div class="form-row between">
+        <span class="row-tit">10g</span>
+        <div class="form-ele">
+            <button type="button" title="10g일때 kg 입력" class="inp-btn right on">9999</button> 
+            <span class="unit">kg</span>
+        </div>
+    </div>
+</div>
+            </script>
+    
+            <div data-class="h2">검색</div>
+            <script type="text/html">
+<div class="form-group">
+    <div class="form-label">검색</div>
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" title="검색어" placeholder="입력내용" class="inp">
+            <button type="button" title="검색" class="sz-40 btn-sch"><i class="ico-search"></i></button>
+        </div>
+    </div>
+    <div class="btns form-foot right">
+        <button type="button" class="btn icon">자세히 보기<i class="ico-arr"></i></button>
+    </div>
+    <div class="form-row">
+        <div class="form-ele">
+            <input type="text" title="검색어" placeholder="입력내용" class="inp">
+            <button type="button" class="btn point sm">검색</button>
+        </div>
+    </div>
+</div>
+            </script>
+    </div>
+
+
+    
+    <div data-class="section">
+        <div data-class="h2">Slider Input</div>
+        <script type="text/html">
+<div class="form-group">
+    <div class="form-label">
+        <label for="exPer">환율우대율(%)</label>
+    </div>
+    <div class="form-row unlock">
+        <div class="slider-select unit">
+            <div class="slider" data-min="0" data-max="100" data-step="10" data-value="1" data-drainage="5" data-sync="#exPerSel" aria-hidden="true"></div>
+            <div class="range" title="환율우대율(%)을 선택해주세요" data-unit="%"></div>
+            <input type="hidden" title="선택한 환율우대율">
+        </div>
+    </div>
+    <div class="form-label">
+        <label for="ex-money">금액</label>
+    </div>
+    <div class="form-row"> 
+        <div class="form-ele">
+            <select name="exPerSel" id="exPerSel">
+                <option value="0">0</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+        <div class="form-ele flex70">
+            <div class="form-ele">
+                <button type="button" title="금액(숫자만 입력) 입력" class="inp-btn">숫자만 입력</button> 
+                <span class="unit">원</span>
+            </div>
+        </div>
+    </div>
+    <p class="form-hangul" aria-hidden="true">삼만구천육백원</p>
+</div>
+        </script>
+
+        
+    <div data-class="section">
+        <div data-class="h2">Slider Range</div>
+        <div data-class="box">
+            <div data-class="list disc">
+                <div>&lt;output id=AA"&gt;와 &lt;input oninput=AA.value=value"&gt;의 연결이 필요</div>
+            </div>
+        </div>
+        <script type="text/html">
+<div class="range-wrap">
+    <!-- mod-date:1129:aria-hidden 제거 -->
+    <span class="numbers-24 nums-bold txt"><span class="num"><output id="rangevalue1" class="rangevalue"></output></span><span class="num-unit">개월</span></span><!-- //mod-date:0605: [접근성] aria-hidden 추가 -->
+    <p class="fc-sub center">만기일 : 2024년 1월 26일</p>
+    <input type="range" id="range1" class="range" value="30" min="1" max="120" step="1" class="range-target" oninput="rangevalue1.value=value">
+    <ul class="num-range">
+        <li>1년</li>
+        <li>10년</li>
+    </ul>
+</div>
+<div class="range-wrap">
+    <!-- mod-date:1129:aria-hidden 제거 -->
+    <span class="numbers-24 nums-bold txt"><span class="num"><output id="rangevalue3" class="rangevalue"></output></span><span class="num-unit">년</span></span><!-- //mod-date:0605: [접근성] aria-hidden 추가 -->
+    <p class="fc-sub center">만기일 : 2024년 1월 26일</p>
+    <input type="range" id="range2" class="range" value="5" min="0" max="10" step="1" class="range-target" oninput="rangevalue3.value=value">
+    <ul class="num-range">
+        <li>1년</li>
+        <li>10년</li>
+    </ul>
+</div>
+        </script>
+
+
+    </div>
+
+    <div id="selectFlow" class="popup bottom foot" role="dialog" aria-hidden="true"><div class="pop-bg-close" data-ui="pop-close" role="button" aria-label="팝업창 닫기"></div>
+    <article class="pop-wrap" style="max-height: 710px; height: auto;" tabindex="0">
+        <!-- LON_04_012 -->
+        <div class="stream-wrap" style="display: flex;">
+            <div class="pop-head">
+                <h1 id="selectFlowLabel">직군을 선택해주세요</h1>
+            </div>
+            <div class="pop-body"><!-- mod-date:0629: .no-scroll 클래스 삭제 -->
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="선택됨">대기업/중소기업/공공기관</button><!-- 개발: 선택시 selected 클래스 및 title 추가 -->
+                        <button type="button" class="list-block">교사/공무원/군인</button>
+                        <button type="button" class="list-block">의료직 종사자</button>
+                        <button type="button" class="list-block">법무직 종사자</button>
+                        <button type="button" class="list-block">금융직 종사자</button>
+                        <button type="button" class="list-block">교육직 종사자</button>
+                        <button type="button" class="list-block">언론직 종사자</button>
+                        <button type="button" class="list-block">전문직 종사자</button>
+                        <button type="button" class="list-block">건설/유통/숙박/운수</button>
+                        <button type="button" class="list-block">그외 직업</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns" style="display: none;">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">확인</button>
+                </div>
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="1" onclick="UICommon.Layer.moveStream()">다음</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- LON_04_013 -->
+        <div class="stream-wrap" style="display: none;">
+            <div class="pop-head">
+                <h1 id="selectFlowLabel">직업을 선택해주세요</h1>
+            </div>
+            <div class="pop-body"><!-- mod-date:0629: .no-scroll 클래스 삭제 -->
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="선택됨">판사</button><!-- 개발: 선택시 selected 클래스 및 title 추가 -->
+                        <button type="button" class="list-block">검사</button>
+                        <button type="button" class="list-block">변호사</button>
+                        <button type="button" class="list-block">사법연수생</button>
+                        <button type="button" class="list-block">사법연수생</button>
+                        <button type="button" class="list-block">사무직</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns" style="display: none;">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">확인</button>
+                </div>
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-next" data-no="2" onclick="UICommon.Layer.moveStream()">다음</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LON_04_015 -->
+        <div class="stream-wrap" style="display: none;">
+            <div class="pop-head">
+                <h1 id="selectFlowLabel">고용형태를 선택해주세요</h1>
+            </div>
+            <div class="pop-body"><!-- mod-date:0629: .no-scroll 클래스 삭제 -->
+                <div class="section">
+                    <div class="list-wrap">
+                        <button type="button" class="list-block selected" title="선택됨">정규직</button><!-- 개발: 선택시 selected 클래스 및 title 추가 -->
+                        <button type="button" class="list-block">비정규직</button>
+                        <button type="button" class="list-block">일용근로자</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns">
+                    <button type="button" class="btn primary lg" data-ui="pop-close">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="팝업창 닫기" id="selectFlow-dev">닫기</button>
+    </article>
+</div>
+
+
+    </div>
+    <script src="/guide/resources/vendor/jquery.min.js"></script>
+    <script src="/guide/resources/vendor/jquery-ui.min.js"></script>
+    <script src="/guide/resources/vendor/lodash.min.js"></script>
+    <script src="/guide/resources/vendor/highlight/highlight.min.js"></script>
+    <script src="/guide/resources/vendor/clipboard.min.js"></script>
+    <script src="/guide/resources/js/components.js"></script>
+    <script src="/resources/js/common-ui.js"></script>  
+
+</body>
+</html>

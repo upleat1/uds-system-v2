@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>üũī���û>���������Է�</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">üũī���û</h1>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container ckc">
+        <div class="pg-content">
+            <h2 class="ht-2"><strong>�������� ������</strong><br>�Է����ּ���</h2><!-- mod-date:0605: [���ټ�] role ���� -->
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label">�����̸�</div>
+                    <div class="form-row">
+                        <div class="form-ele wp-40 error"><!-- ����: ������ error Ŭ���� �߰� -->
+                            <input type="text" placeholder="��" title="�����̸� �� �Է�" aria-describedby="inp-1" value="" class="inp">
+                        </div>
+                        <div class="form-ele"><!-- ����: ������ error Ŭ���� �߰� -->
+                            <input type="text" placeholder="�̸�" title="�����̸� �̸� �Է�" value="" class="inp">
+                        </div>
+                    </div>
+                    <p class="tip error" id="inp-1">���� ���� �� �Է����ּ���.</p><!-- ����: ������ error Ŭ���� �߰� -->
+                    <p class="tip">������ ���� �̸��� ��ġ�ؾ� �ϸ�, ������ ���� ��� ���� ���� �������� �Է����ּ���.</p>
+                </div>
+
+                <h3 class="ht-3">ī��޴°�</h3><!-- ��۱�� ���� -->
+                <div class="form-group mgt-0">
+                    <div class="form-rdochk rdobox">
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-1" name="radio-box1" aria-controls="radioVpanel1-1" checked><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                            <label for="radioBox1-1" class="label">��</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-2" name="radio-box1" aria-controls="radioVpanel1-2"><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                            <label for="radioBox1-2" class="label">����</label>
+                        </span>
+                    </div>
+                    <!-- @�� -->
+                    <div class="rdo-panel gap-md" id="radioVpanel1-1"><!-- mod-date:0518: [���ټ�] class, id ���� -->
+                        <div class="form-group">
+                            <div class="form-label">���ּ�</div>
+                            <div class="form-row">
+                                <div class="form-ele addr"><!-- mod-date:0602: Ŭ���� �߰� -->
+                                    <button type="button" class="inp-btn justify on" aria-describedby="addr1"><!-- ����: �ּ� �Է��� on Ŭ���� �߰� -->
+                                        <span class="address"><strong class="post-num">11040</strong>����� ������ �ܴٸ��� 39 (������, �ε�����) 4��</span>
+                                        <span class="point sm" aria-hidden="true">�˻�</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="tip">BCī����� ���������� ���� ����ſ�.</p>
+                            <p class="tip error" id="addr1">�����޽���</p>
+                        </div>
+                    </div>
+
+                    <!-- @���� -->
+                    <div class="rdo-panel gap-md" id="radioVpanel1-2"><!-- mod-date:0518: [���ټ�] class, id ���� -->
+                        <div class="form-group">
+                            <div class="form-label">����</div>
+                            <div class="form-row">
+                                <div class="form-ele">
+                                    <button type="button" title="����� �˻�" class="inp-btn justify"><!-- ����: ȸ��� �Է��� on Ŭ���� ���� -->
+                                        <span class="address eps">���ø�Ʈ</span><!-- mod-date:0602: eps �߰� -->
+                                        <span class="point sm" aria-hidden="true">�˻�</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-label">�����ּ�</div>
+                            <div class="form-row">
+                                <div class="form-ele addr"><!-- ����: �ּ� �Է��� addr Ŭ���� �߰� -->
+                                    <button type="button" title="���� �ּ� �˻�" class="inp-btn justify"><!-- ����: �ּ� �Է��� on Ŭ���� �߰� -->
+                                        <span class="address"><strong class="post-num">11040</strong>����� ������ �ܴٸ��� 39 (������, �ε�����) 4��</span>
+                                        <span class="point sm" aria-hidden="true">�˻�</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="tip">BCī����� ���������� ���� �����ؿ�.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="ht-3">ī��޴º�</h3>
+                <div class="form-group mgt-0">
+                    <div class="form-rdochk rdobox">
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox2-1" name="radio-box2" checked>
+                            <label for="radioBox2-1" class="label">����</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox2-2" name="radio-box2">
+                            <label for="radioBox2-2" class="label">���� �Ǵ� Ÿ��</label>
+                        </span>
+                    </div>
+                    <p class="tip gap-xsm">'���� �Ǵ� Ÿ��' �ޱ⸦ �����ϸ� Ÿ�ε� ī�带 ���� �� �־��.</p>
+                    <p class="tip">üũī�� �븮 ������ ��� ��� �� ��� �����մϴ�.</p>
+                </div>
+
+                <h3 class="ht-3">�̿볻���� Ȯ�ι��</h3>
+                <div class="form-group mgt-0">
+                    <div class="form-rdochk rdobox">
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox3-1" name="radio-box3" checked>
+                            <label for="radioBox3-1" class="label">��</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox3-2" name="radio-box3" aria-controls="reMethodPanel3-2"><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                            <label for="radioBox3-2" class="label">�̸���</label>
+                        </span>
+                    </div>
+                    <!-- @�̸��� -->
+                    <div class="rdo-panel gap-md" id="reMethodPanel3-2">
+                        <div class="form-group">
+                            <div class="form-label">�̸���</div>
+                            <div class="form-row v inp-ref-wrap"><!-- ������ error Ŭ���� �߰� -->
+                                <div class="form-ele">
+                                    <input type="text" placeholder="�Է����ּ���" title="�̸��� �Է�" class="inp">
+                                </div>
+                                <div class="inp-ref-pos" style="display:none">
+                                    <div class="inp-ref">
+                                        <div class="ref-list list-mail">
+                                            <a href="#" role="button">kimjeju<em>@naver.com</em></a>
+                                            <a href="#" role="button">kimjeju<em>@hanmail.net</em></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <p class="tip error">�̸����� �� �Է����ּ���.</p> --><!-- ������ error Ŭ���� �߰� -->
+                            <!-- <p class="tip error">�̸��� �ּ����°� �ƴմϴ�.</p> --><!-- ������ error Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">����</button>
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<div id="selectAcc" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>���¸� �������ּ���</h1>
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="list-wrap-acc">
+                    <div class="list-block-wrap">
+                        <div class="list-block-btn" role="button">
+                            <i class="ci-40x bk-000"></i>
+                            <div class="list-info">
+                                <strong class="list-name">���������</strong>
+                                <p class="bank-detail">
+                                    <span>���̴ٹ�ũ</span>
+                                    <span>02819111111117</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-block-wrap">
+                        <div class="list-block-btn" role="button">
+                            <i class="ci-40x bk-000"></i>
+                            <div class="list-info">
+                                <strong class="list-name">���������</strong>
+                                <p class="bank-detail">
+                                    <span>���̴ٹ�ũ</span>
+                                    <span>02819111111117</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-block-wrap">
+                        <div class="list-block-btn" role="button">
+                            <i class="ci-40x bk-000"></i>
+                            <div class="list-info">
+                                <strong class="list-name">���������</strong>
+                                <p class="bank-detail">
+                                    <span>���̴ٹ�ũ</span>
+                                    <span>02819111111117</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

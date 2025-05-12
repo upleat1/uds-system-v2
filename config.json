@@ -1,9 +1,20 @@
 {
-    "source": ["tokens/*.json"],
+    "source": ["tokens/tokens.json"],
     "platforms": {
       "scss": {
         "transformGroup": "scss",
-        "prefix": "upleat",
+        "prefix": "upl",
+        "buildPath": "pub/assets/scss/",
+        "files": [
+          {
+            "destination": "_variables.scss",
+            "format": "scss/variables"
+          }
+        ]
+      },
+      "css": {
+        "transformGroup": "css",
+        "prefix": "upl",
         "buildPath": "pub/assets/css/",
         "files": [
           {

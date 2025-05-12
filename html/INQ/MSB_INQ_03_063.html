@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>���°��� - �ڵ���ü���</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">�ڵ���ü���</h1>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container inq">
+        <div class="pg-content">
+            <h2 class="ht-2">�ὴ ���ڵ���(1234)��<br><strong>�ڵ���ü�� ������ �� �־��</strong></h2>
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label">��ݰ���</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="��ݰ��� ����"  onclick="UICommon.Layer.open('#selectFlow')">�������ּ���</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- mod-date:0612: ���� ���� -->
+                <div class="form-group">
+                    <div class="form-label">�ڵ���ü�ֱ�</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="�ڵ���ü�ֱ� ����">�ſ� 10��</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">�ڵ���ü��</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" title="�ڵ���ü�� �Է�" class="inp-btn right">0</button>
+                            <span class="unit">��</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //mod-date:0612: ���� ���� -->
+                <div class="form-group">
+                    <div class="form-label">�ڵ���ü�Ⱓ</div>
+                    <div class="form-row">
+                        <div class="form-ele calendar">
+                            <button type="button" title="�ڵ���ü�Ⱓ ������ ����" class="inp-btn on">2023.01.16</button>
+                        </div> 
+                        <span class="space">~</span>
+                        <div class="form-ele calendar"><!-- mod-date:0417: Ŭ���� �߰� -->
+                            <button type="button" title="�ڵ���ü ������" class="inp-btn readonly">2024.01.16</button><!-- mod-date:0417: Ŭ���� ���� -->
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <!-- mod-date:1031: �����߰� -->
+            <div class="section opt-order">
+                <button type="button" class="toggle-btn btn md fz-16 center order-last ico-chevron-md" data-ui="toggle" aria-expanded="false" data-txt>
+                    <span class="bef">�߰��Է�</span><span class="aft">�ݱ�</span>
+                </button><!-- mod-date:0407: type button �߰� -->
+                <div class="toggle-panel" style="display:block;">
+                    <div class="not-merge">
+                        <div class="form-group">
+                            <div class="form-label">�޴º� ���� ǥ��</div>
+                            <div class="form-row">
+                                <div class="form-ele">
+                                    <input type="text" placeholder="10�� �̳��� �Է����ּ���" title="�޴º� ���� ǥ�� �Է�" value="" class="inp" maxlength="10" oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                </div>
+                            </div>   
+                            <!-- <p class="tip error">���� �޽���</p> -->
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="form-label">������ ǥ��</div>
+                            <div class="form-row">
+                                <div class="form-ele">
+                                    <input type="text" placeholder="10�� �̳��� �Է����ּ���" title="������ ǥ�� �Է�" value="" class="inp" maxlength="10">
+                                </div>
+                            </div>   
+                            <!-- <p class="tip error">���� �޽���</p> -->
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="form-label">�޸�</div>
+                            <div class="form-row">
+                                <div class="form-ele">
+                                    <input type="text" placeholder="20�� �̳��� �Է����ּ���" title=" �Է�" value="" class="inp" maxlength="10">
+                                </div>
+                            </div>   
+                            <!-- <p class="tip error">���� �޽���</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //1031: �����߰� -->
+        </div>
+        <div class="pg-content-foot">
+            <div class="inform-btm-wrap">
+                <h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>���� �ڵ���ü�� ���Ͽ��� ��ݵǸ�,  ����Ͽ� 1ȸ(09:00~10:00)�� ��ݵ˴ϴ�.</li>
+                    <li>���� �ڵ���ü ����, ������ ����� �Ϸ� �������� �� �� �ֽ��ϴ�.(��� ���� ����, ���� �Ұ�)</li>
+                    <li>���� �ڵ���ü�� �������� ������ �����Ϸ� �����˴ϴ�.</li>
+                    <li>CMS �ڵ���ü�� ��ü ������ 2������ ���� ����Ͽ��� �ϸ�, ��ü ������ �� �����Ͽ� ��ݵǾ� ������(������ ��� ���� ������)�� �Աݵ˴ϴ�.</li>
+                    <li>���� ������¸� �����ϰ��� �ϴ� ��쿡�� ��ϵ� �ڵ���ü�� ���� �� �ٽ� ����ϼž� �մϴ�.</li>
+                    <li>�ڵ���ü ����Ͽ��� ���������� ��ü�Ǿ����� �ڵ���ü ������� Ȯ���Ͻñ� �ٶ��ϴ�.</li>
+                    <li>�ڵ���ü ���Ͽ� �ڵ���ü �ֱ⸦ ���Ϸ� ���� �ÿ��� ��������� �߻��� �� �ֽ��ϴ�.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary" disabled>����ϱ�</button>
+        </div>
+    </footer>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

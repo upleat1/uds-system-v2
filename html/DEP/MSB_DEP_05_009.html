@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>���ݰ���</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap"> 
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">���ݰ���</h1>
+            <button type="button" class="action-chatbot" title="ê��"></button>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container dep">
+        <div class="pg-content">
+            <h2 class="ht-2">��������<br><strong>���������� �Է����ּ���</strong></h2>
+            <div class="section">
+                <div class="boxs line">
+                    <div class="range-wrap">
+                        <div class="range-during"><output id="rangevalue1" class="rangevalue"></output><span class="num-unit">����</span></div><!-- ��mod-date:1128:[���ټ�] aria-hidden ���� // 0605: [���ټ�] aria-hidden �߰� -->
+                        <span class="numbers-24 nums-bold txt fc-point"><span class="num-unit">��</span><span class="num">4.9</span><span class="num-unit">%</span></span><!-- mod-date:0915: .fc-point �߰� -->
+                        <p class="range-date">������ : 2023.01.26</p><!-- mod-date:0620: ��¥���ù�ư ���� -->
+                        <h3 class="ht-4 sepe-line mgb-0">
+                            <label for="range1">���ԱⰣ</label> <!-- mod-date:1128: [���ټ�] label �߰� -->
+                        </h3>
+                        <input type="range" id="range1" class="range" value="12" min="3" max="24" step="1" class="range-target" oninput="rangevalue1.value=value">
+                        <ul class="num-range">
+                            <li>�ּ�<br>3����</li>
+                            <li>�ִ�<br>24����</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label">��ǥ��</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" title="��ǥ�� �Է�" class="inp-btn right on">50,000</button>
+                            <span class="unit">��</span>
+                        </div>
+                    </div>
+                </div>                
+                <button type="button" class="btn primary lg full gap-sm">�ֱ⺰ ���Ծ� ���</button><!-- mod-date:1128:aira-expanded ���� -->
+
+                <!-- �ֱ⺰ ���Ծ� Ŭ���� �������� ���� -->
+                <div class="form-group">
+                    <div class="form-label fz-16">�ֱ⺰ ���Ծ�</div>
+                    <div class="form-rdochk rdobox v">
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-1" name="radio-box11" checked>
+                            <label for="radioBox1-1" class="label">�ſ� 83,019��</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-2" name="radio-box11">
+                            <label for="radioBox1-2" class="label">���� 18,458��</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-3" name="radio-box11">
+                            <label for="radioBox1-3" class="label">���� 2,725��</label>
+                        </span>
+                    </div>
+                </div>
+                <!--//�ֱ⺰ ���Ծ� Ŭ���� �������� ���� -->
+
+                <!-- ���Ծ� ������ �������� ���� -->
+                <div class="form-group">
+                    <div class="form-label">������</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="������ ����">���� ������</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <div class="form-label">���Ծ�</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" title="���Ծ� �Է�" class="inp-btn right on">50,000</button>
+                                <span class="unit">��</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label">�ݸ�����</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" class="select-btn on" title="�ݸ����� ����">�� 0.1% �ݸ����</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label">��������</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" class="select-btn on" title="�������� ����">�Ϲݰ���</button>
+                            </div>
+                        </div>
+                    </div>  
+                </div>     
+                <div class="btns cont-foot right">
+                    <button type="button" class="btn ico-arr-sm right" style="display:block;">������ѵ� Ȯ��</button>
+                    <button type="button" class="btn ico-arr-sm right" style="display:none;">������������� �ȳ�</button>
+                </div>  
+                <button type="button" class="btn primary lg full gap-sm">���� ����� ���</button><!-- mod-date:1128:aira-expanded ���� --><!-- 2������ 'show'�� ��쿡 aria-expanded="true"�� ���� -->
+                <!--//���Ծ� ������ �������� ���� -->
+
+                <!-- 2���������� -->
+                <button type="button" class="btn primary lg full gap-sm">�ֱ⺰ ���Ծ� ���</button><!-- mod-date:0915: ��۱�� ���� --><!-- mod-date:0518: data-ui, aria-controls �߰� -->
+                
+                <!-- @�ֱ⺰ ���Ծ� ��� ��ư Ŭ���� ���� -->
+                <div class="toggle-panel gap-md"><!-- mod-date:0915: id���� --><!-- mod-date:0518: class, id �߰� -->
+                    <div class="boxs blue01">
+                        <ul class="lists data noline">
+                            <li>
+                                <div class="key">���⿹���</div>
+                                <div class="value">
+                                    <span class="numbers-18 nums-bold fc-point" role="text"><span class="num">31,271,947</span><span class="num-unit">��</span></span>
+                                </div>
+                            </li>
+                            <li class="li-divider">
+                                <div class="key">���Ծ�</div>
+                                <div class="value">600,000��</div>
+                            </li>
+                            <li>
+                                <div class="key">������</div>
+                                <div class="value">���� �ݿ���</div>
+                            </li>
+                            <li>
+                                <div class="key">����Ƚ��</div>
+                                <div class="value">52 ȸ</div>
+                            </li>
+                            <li>
+                                <div class="key">����ݸ�</div>
+                                <div class="value">�� 2.7 %<br>(���ݸ� 0.1% ����)</div>
+                            </li>
+                            <li>
+                                <div class="key">����</div>
+                                <div class="value">31,200,000��</div>
+                            </li>
+                            <li>
+                                <div class="key">��������</div>
+                                <div class="value">87,990��(����)</div>
+                            </li>
+                            <li>
+                                <div class="key">��������</div>
+                                <div class="value">�Ϲݰ���(15.4 %)</div>
+                            </li>
+                            <li>
+                                <div class="key">����</div>
+                                <div class="value">13,549��</div>
+                            </li>
+                            <!-- mod-date:0525: �׸���� -->
+                            <li>
+                                <div class="key">���ԱⰣ</div>
+                                <div class="value">12����<br>YYYY.MM.DD����</div>
+                            </li>
+                            <!-- //mod-date:0525: �׸���� -->
+                        </ul>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-label">��ݰ���</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" class="select-btn" title="��ݰ��� ����">�������ּ���</button>
+                            </div>
+                        </div>
+                        <p class="tip error">��ݰ��� �ܾ��� �����ؿ�.</p>
+                    </div>
+                    <!-- mod-date:1017: ���� �߰� -->   
+                    <div class="form-group">
+                        <div class="form-label">����� ���ݾ�</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" title="���Ծ� �Է�" class="inp-btn right on">3,600,000</button>
+                                <span class="unit">��</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //1017: ���� �߰� -->  
+                    <div class="form-group">
+                        <div class="form-label">�����������</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" class="select-btn" title="����������� ����">�������ּ���</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label">��й�ȣ����</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" class="select-btn" title="��й�ȣ���� ����">�������ּ���</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="ht-4">������/��ǰ��������<br>�̸���/�˸���(SMS)���� �����帱�Կ�.</h3><!-- mod-date:0525: �������� -->
+                    <div class="boxs light-blue">
+                        <ul class="lists data noline">
+                            <li>
+                                <div class="key">�̸���</div>
+                                <div class="value fw-700">abcdefg@sbisb.co.kr</div>
+                            </li>
+                            <li>
+                                <div class="key">����ó</div>
+                                <div class="value fw-700">010-1234-5678</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="agree-group gap-md">
+                        <div class="agree-item btn-link">
+                            <span class="form-sel lg">
+                                <input type="checkbox" id="term1" name="chk" aria-label="�������� ��ǰ������ �ٷΰ���">
+                                <label for="term1" class="label" title="�������� ��ǰ������ �ٷΰ���" aria-hidden="true">������/��ǰ������ Ȯ���ϱ�</label><!-- mod-date:0525: �������� -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--//2���������� -->
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary">����</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

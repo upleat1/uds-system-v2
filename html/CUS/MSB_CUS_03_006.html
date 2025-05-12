@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>������ã��</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap"><!-- Ǯ�˾�: .full Ŭ���� �߰� -->
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">������ã��</h1>
+            <button type="button" class="action">�ݱ�</button>
+        </div>
+    </header>  
+    <div class="pg-container cus">
+        <div class="pg-content">
+            <h2 class="ht-2">����� ���̴ٹ�ũ<br><strong>�������� ã�ƺ�����</strong></h2><!-- mod-date:0605: [���ټ�] role ���� --><!-- mod-date:0629: ��ũ�� ���� -->
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label">����</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" data-ui="pop-open" title="���� ����" onclick="UICommon.Layer.open('#selectDefalut1')">�������ּ���</button><!-- ����: value�� �Է½� on Ŭ���� �߰� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="lists-headnote">
+                    <div class="col">
+                        <span class="fz-14 fc-sub">�� N�� ����</span><!-- mod-date:0629: �ؽ�Ʈ ���� -->
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn ico-loca">����ġ�˻�</button>
+                    </div>
+                </div>
+                <ul class="lists full link-sch">
+                    <li>
+                        <a href="#" role="button" class="li-link">
+                            <div class="sch-inr"><!-- mod-date:0629: class ���� -->
+                                <div class="sch-tit"><!-- mod-date:0629: class ���� -->
+                                    <div class="sch-main ico-map fw-700">û������</div>
+                                    <div class="sch-sub"><span class="dist">195m</span>[����] ��� ��õ�� ������ ������ 167</div><!-- mod-date:0629: ��ũ�� ���� -->
+                                </div>
+                                <i class="ico-arrow"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" role="button" class="li-link">
+                            <div class="sch-inr"><!-- mod-date:0629: class ���� -->
+                                <div class="sch-tit"><!-- mod-date:0629: class ���� -->
+                                    <div class="sch-main ico-map fw-700">��������</div>
+                                    <div class="sch-sub">[����] ���� ����div�� 1111</div>
+                                </div>
+                                <i class="ico-arrow"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" role="button" class="li-link">
+                            <div class="sch-inr"><!-- mod-date:0629: class ���� -->
+                                <div class="sch-tit"><!-- mod-date:0629: class ���� -->
+                                    <div class="sch-main ico-map fw-700">��������</div><!-- mod-date:0629: ��ũ�� ���� -->
+                                    <div class="sch-sub">[����] ���� ����div�� 1111</div>
+                                </div>
+                                <i class="ico-arrow"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- mod-date:0629: ��ũ�� ���� -->
+                <!-- <div class="btns cont-foot center">
+                    <button type="button" class="btn ico-more">������</button>
+                </div> -->
+                <!-- //mod-date:0629: ��ũ�� ���� -->
+            </div>
+        </div>
+        <div class="pg-content-foot">
+			<div class="inform-btm-wrap">
+				<h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>������ �����ð� : ���� 09:30 ~ 18:00(�ָ�, ������ �޹�)</li><!-- mod-date:0629: ��ũ�� ���� -->
+                    <li>SBI�������� �������� : 1566-2210</li><!-- mod-date:0901: �������� -->
+                </ul>
+			</div>
+		</div>
+    </div>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- ���� ���� �˾� -->
+<div id="selectDefalut1" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>������ �������ּ���</h1>
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <!-- mod-date:0629: �ؽ�Ʈ ���� -->
+                <div class="list-wrap">
+                    <button type="button" class="list-block selected" title="���õ�"><!-- ����: ���ý� selected Ŭ���� �� title �߰� -->
+                        ��ü
+                    </button>
+                    <button type="button" class="list-block">
+                        ����Ư����
+                    </button>
+                    <button type="button" class="list-block">
+                        ��⵵
+                    </button>
+                    <button type="button" class="list-block">
+                        ��õ����
+                    </button>
+                    <button type="button" class="list-block">
+                        ��������
+                    </button>
+                    <button type="button" class="list-block">
+                        �뱸����
+                    </button>
+                    <button type="button" class="list-block">
+                        ��������
+                    </button>
+                    <button type="button" class="list-block">
+                        ��������
+                    </button>
+                    <button type="button" class="list-block">
+                        ��������
+                    </button>
+                </div>
+                <!-- //mod-date:0629: �ؽ�Ʈ ���� -->
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //���� ���� �˾� -->
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+        <meta name="format-detection" content="telephone=no">
+        <title>레이어 풀 팝업</title>
+        <link rel="stylesheet" data-description="공통 스타일" href="/resources/css/common.css">
+        <link rel="stylesheet" data-description="공통 컴포넌트 스타일" href="/resources/css/component.css">
+        <link rel="stylesheet" data-description="컨텐츠 스타일" href="/resources/css/contents.css">
+        <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+        <script src="/resources/js/library/jquery-ui.min.js"></script>
+        <style>
+            .lock .pg-wrap {height: auto;}
+        </style>
+    </head>
+<body>
+    <div class="pg-wrap">
+        <header class="pg-header"></header>
+    
+        
+        <div class="pg-container tra">
+            <div class="pg-content">
+                <div class="result success">
+                    <p class="tit">
+                        김저축님에게<br>500,000원을 보냈어요
+                    </p>
+    
+                    <br/>
+                    <div>
+                        <button data-ui="pop-open" data-target="pop1" type="button" class="btn point lg">팝업1 바텀</button>
+                        <button data-vo="pop2" type="button" class="btn point lg">팝업2 alert</button>
+                    </div>
+                    <br/>
+                    <div>
+                        <button data-vo="pop3" type="button" class="btn point lg">팝업3 모달</button>
+                        <button data-ui="full-open" data-target="popup4" type="button" class="btn point lg">팝업4 풀</button>
+                    </div>
+                </div>
+                <div class="section">
+                    <ul class="lists data free">
+                        <li>
+                            <div class="key">이체구분</div>
+                            <div class="value">즉시이체</div>
+                        </li>
+                        <li>
+                            <div class="key">이체일시</div>
+                            <div class="value">2023.01.17 11:45:20</div>
+                        </li>
+                        <li>
+                            <div class="key">보낸계좌</div>
+                            <div class="value">입출금통장(1234)</div>
+                        </li>
+                        <li>
+                            <div class="key">받은계좌</div>
+                            <div class="value">SBI저축 01234121234567</div>
+                        </li>
+                        <li>
+                            <div class="key">받는분 통장 표기</div>
+                            <div class="value">홍길동</div>
+                        </li>
+                        <li>
+                            <div class="key">내통장 표기</div>
+                            <div class="value">김저축</div>
+                        </li>
+                        <li>
+                            <div class="key">수수료</div>
+                            <div class="value">0원</div>
+                        </li>
+                    </ul>
+                </div>
+    
+                <br/>
+                <div id="appSection" class="section">
+                    <button data-vo="pop3" type="button" class="btn point lg">팝업3 모달</button>
+                    <button data-ui="full-open" data-target="popup4" type="button" class="btn point lg">팝업4 풀</button>
+                </div>
+            </div>
+        </div>
+    
+        <footer class="pg-footer"> 
+            <div class="btns">
+                <button data-ui="full-open" data-target="smp0020109" data-target-move="left" data-href="/guide/html/sample/incl/full-case1.html" type="button" class="btn secondary xlg">풀 팝업</button>
+                <button type="button" class="btn primary">뷰 이동</button>
+            </div>
+        </footer>
+    
+    </div>
+    <div id="popup3" class="popup modal" role="dialog" aria-hidden="true">
+        <article class="pop-wrap">
+            <div class="pop-head">
+                <h1 id="popupAlertLabel" class="d-none">알림</h1>
+            </div>
+            <div class="pop-body">
+                <div class="section">
+                    <div class="message">
+                        <div class="form-group">
+                            <div class="form-label">text1</div>
+                            <div class="form-row">
+                                <div class="form-ele">
+                                    <input  type="text" placeholder="입력내용" title="타이틀명" value="1234" class="inp">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label">text2</div>
+                            <div class="form-row">
+                                <div class="form-ele">
+                                    <input type="text" placeholder="입력내용" title="타이틀명" value="abcd" class="inp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-foot">
+                <div class="btns">
+                    <button type="button" class="btn secondary lg" data-action="close">취소</button>
+                    <button type="button" class="btn primary lg" data-ui="pop-close">확인</button>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div id="popup4" class="pg-wrap h-auto full" data-move="left">
+        <header class="pg-header">
+            <div class="pg-gnb">
+                <h1 class="ht-1">popup4 팝업</h1>
+                <button type="button" class="action" data-ui="full-close">취소</button>
+            </div>
+        </header>  
+        <div class="pg-container pbt">
+            <div class="pg-content">
+                <br/>
+                <div>
+                    <button data-ui="full-open" data-target="smp0020109" data-target-move="left" data-href="/guide/html/sample/incl/full-case1.html" type="button" class="btn primary lg">풀팝업</button>
+                    <button data-ui="pop-open" data-target="pop1" type="button" class="btn primary lg">팝업1 바텀</button>
+                    <button data-vo="pop2" type="button" class="btn primary lg">팝업2 alert</button>
+                </div>
+    
+                <h2 class="ht-2-result">한국전력공사 총 2건 납부가<br>완료되었어요</h2>
+                <div class="section">
+                    <h3 class="ht-4">한국전력공사10월분</h3>
+                    <ul class="lists data">
+                        <li>
+                            <div class="key">납부금액</div>
+                            <div class="value">
+                                <strong class="numbers fc-point">53,000원</strong>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">고객번호</div>
+                            <div class="value">0886-95-4532</div>
+                        </li>
+                        <li>
+                            <div class="key">납부자명</div>
+                            <div class="value">김저축</div>
+                        </li>
+                        <li>
+                            <div class="key">수납기관</div>
+                            <div class="value">한국전력공사</div>
+                        </li>
+                        <li>
+                            <div class="key">수납기관 연락처</div>
+                            <div class="value">1899-6300</div>
+                        </li>
+                    </ul>
+    
+                    <h3 class="ht-4">한국전력공사11월분</h3>
+                    <ul class="lists data">
+                        <li>
+                            <div class="key">납부금액</div>
+                            <div class="value">
+                                <strong class="numbers fc-point">97,000원</strong>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="key">고객번호</div>
+                            <div class="value">2123-10-9987</div>
+                        </li>
+                        <li>
+                            <div class="key">납부자명</div>
+                            <div class="value">김저축</div>
+                        </li>
+                        <li>
+                            <div class="key">수납기관</div>
+                            <div class="value">한국전력공사</div>
+                        </li>
+                        <li>
+                            <div class="key">수납기관 연락처</div>
+                            <div class="value">1899-6300</div>
+                        </li>
+                    </ul>
+    
+                    <div class="boxs">
+                        <ul class="lists data noline">
+                            <li>
+                                <div class="key">출금계좌</div>
+                                <div class="value">입출금통장(0001)</div>
+                            </li>
+                            <li>
+                                <div class="key">출금계좌 잔액</div>
+                                <div class="value">
+                                    <strong class="numbers fc-point">10,287,000원</strong>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- 업무 SCRIPT START -->
+<script src="/resources/js/common-ui.js"></script>
+<script>
+    // modal popup
+    $(document).on('click', '[data-target=pop1]', e=>{
+        if(!$('#smp0020202').length) {
+            $.ajax({
+                url: '/guide/html/sample/incl/popup1.html',
+            })
+            .done(function(result) {
+                let html = result;
+                $('body').append(html);
+                UICommon.Layer.open('#smp0020202')
+            });
+        }else UICommon.Layer.open('#smp0020202');
+    })
+    $(document).on('click', '[data-vo=pop2]', e=>{ UICommon.Layer.alert('alert')})
+    $(document).on('click', '[data-vo=pop3]', e=>{
+        if(!$('#popup3').length) {
+            $.ajax({
+                url: '/guide/html/sample/incl/popup3.html',
+            })
+            .done(function(result) {
+                let html = result;
+                $('body').append(html);
+                UICommon.Layer.open('#popup3');
+            });
+        }else UICommon.Layer.open('#popup3');
+    })
+    $(document).on('click', '[data-vo=popA]', e=>{ 
+        UICommon.uiFullpop.clear(e, function() {
+            console.log('all clear')
+        });
+    })
+</script>
+<!-- //업무 SCRIPT END -->
+<style>
+    /* *:focus {
+        border: 2px solid red;
+    } */
+</style>
+</body>
+</html>

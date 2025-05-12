@@ -1,0 +1,80 @@
+[
+    {
+        "directory": "/html/NTC"
+    },
+    {
+        "state": null,
+        "id": "MSB_NTC_01_001",
+        "type": "본창",
+        "depth1": "공지사항",
+        "depth2": "목록",
+        "depth3": null,
+        "depth4": null,
+        "name": "목록",
+        "worker": "이희영",
+        "workdate": "2023-03-27",
+        "change": "2023-09-19",
+        "complete": "완료",
+        "etc": ["0919: 강조컬러 추가","0421: 탭메뉴추가"]
+    },
+    {
+        "state": null,
+        "id": "MSB_NTC_01_002",
+        "type": "본창",
+        "depth1": "공지사항",
+        "depth2": "상세",
+        "depth3": null,
+        "depth4": null,
+        "name": "상세(+이미지)",
+        "worker": "이희영",
+        "workdate": "2023-03-27",
+        "change": "2023-10-12",
+        "complete": "완료",
+        "etc": ["1012: 파일보기 아이콘 변경","0721: 마크업 삭제, 문구수정, 클래스 type2 추가", "0504: 다운로드 추가"]
+    },
+    {
+        "state": null,
+        "id": "MSB_NTC_01_002_01",
+        "type": "본창",
+        "depth1": "공지사항",
+        "depth2": "상세",
+        "depth3": null,
+        "depth4": null,
+        "name": "상세(+테이블)",
+        "worker": "이희영",
+        "workdate": "2023-03-27",
+        "change": null,
+        "complete": "완료",
+        "etc": null
+    },
+    {
+        "state": null,
+        "id": "MSB_NTC_01_002_02",
+        "type": "본창",
+        "depth1": "공지사항",
+        "depth2": "상세",
+        "depth3": null,
+        "depth4": "상세(+테이블)",
+        "name": "중도해지이율 변경 안내",
+        "worker": "백은숙",
+        "workdate": "2023-11-27",
+        "change": null,
+        "complete": "완료",
+        "etc": ["1127: 신규"]
+    },
+    {
+        "state": null,
+        "id": "MSB_NTC_01_003",
+        "type": "풀",
+        "depth1": "공지사항",
+        "depth2": "이미지보기",
+        "depth3": null,
+        "depth4": null,
+        "name": "이미지보기",
+        "worker": "강병욱",
+        "workdate": "2023-07-21",
+        "change": null,
+        "complete": "완료",
+        "etc":["0702:추가작업"]
+    }
+]

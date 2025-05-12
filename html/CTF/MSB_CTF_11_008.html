@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>���º���õ¡��������</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+			<h1 class="ht-1">���º���õ¡��������</h1>
+			<button type="button" class="action-prev" title="����"></button>
+		</div>
+	</header>
+    <div class="pg-container ctf">
+		<div class="pg-content">
+			<h2 class="ht-2"><strong>�߱� �Ⱓ��</strong> �������ּ���</h2>
+			<div class="section">
+                <div class="form-group">
+                    <div class="form-label fz-16">�߱ޱⰣ</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox fit">
+                            <span class="form-sel">
+                                <input type="radio" id="period01" name="period" checked>
+                                <label for="period01" class="label"><em>1����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period02" name="period">
+                                <label for="period02" class="label"><em>3����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period03" name="period">
+                                <label for="period03" class="label"><em>12����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period04" name="period">
+                                <label for="period04" class="label"><em>�Ⱓ����</em></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-row by-box">
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn on">2023.01.03</button>
+                        </div> 
+                        <span class="space">~</span>
+                        <div class="form-ele calendar">
+                            <button type="button" title="�Ϸ��� ����" class="inp-btn on">2023.01.10</button>
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="form-rdochk v mgb-0">
+                            <span class="form-sel sm mgb-0">
+                                <input type="checkbox" id="checkCHK333">
+                                <label for="checkCHK333" class="label">�ֹε�Ϲ�ȣ/���¹�ȣ ����</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary" data-ui="pop-open" onclick="UICommon.Layer.open('#checkInfo');">��û�ϱ�</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<!-- ����Ȯ�� �˾� -->
+<div id="checkInfo" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>YYYY.MM.DD~YYYY.MM.DD �Ⱓ�� ���º� ��õ¡�������� 1���� PC�� �߱��Ͻðھ��?</h1>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn secondary">�ƴϿ�</button>
+                <button type="button" class="btn primary">��</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //����Ȯ�� �˾� -->
+<!-- ���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

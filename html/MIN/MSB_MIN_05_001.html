@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>��ü������ȸ</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">��ü������ȸ</h1>
+            <button type="button" class="action-prev" title="����"></button>
+        </div>
+    </header>
+    <div class="pg-container min bg01">
+        <div class="pg-content">
+            <div class="section white-padbox">
+                <div class="boxs blue04 info-box mgt-0 scene01" id="scene1">
+                    <div class="tooltips">
+                        <span class="num-tit">������</span><!-- mod-date:1017: ��ġ���� -->
+                        <p class="tooltip">
+                            <button type="button" class="btn-tooltip reverse" data-ui="tooltip"><span class="hidden">���� �ڼ�������</span></button>
+                        </p>
+                        <div class="tooltip-wrap" role="tooltip" aria-hidden="true">
+                            <div class="tooltip-cont"> SBI���������� �����, ����&middot;���ݰ����� ���ܾ��Դϴ�.</div><!-- mod-date:0728: �������� -->
+                            <button type="button" class="btn-tooltip-x"><span class="hidden">���� �ݱ�</span></button>
+                        </div>
+                    </div>
+                    <div class="gap-xs right">
+                        <span class="money">
+                            <span class="numbers-24" role="text">
+                                <span class="num fw-700">5,000,000</span><span class="num-unit">��</span>                                
+                                <span class="num-unit">�ܾ׼���</span><!-- mod-date:0725: �ܾ׼���� -->
+                            </span>                            
+                        </span>
+                    </div>
+                    <!-- mod-date:0725: �ܾ׼���� -->
+                    <div class="form-rdochk pos-rt">
+                        <span class="switch reverse">    
+                            <input type="checkbox" id="switch5" checked title="�ܾ׼����"> <!-- mod-date:1128:���ټ� title���� ���� -->
+                            <label for="switch5" class="label"><span class="move-label" aria-hidden="true">�ܾ�</span></label>
+                        </span>
+                    </div>
+                    <!-- //�ܾ׼���� -->
+                </div>
+
+                <button type="button" class="boxs-arr bg01 ico-openbank">
+                    ���¹�ŷ �ٷΰ���
+                </button>
+            </div>
+
+            <div>
+                <div class="tab-wrap round mgt-0"><!-- mod-date:0823: mgt-0 �߰� -->
+                    <div class="tab-list tab-list-bg01 sticky top50" data-ui="scroll-able"><!-- mod-date:0823: tab-list-bg01 �߰� -->
+                        <div class="scroll-wrap">
+                            <button type="button" class="active">��ü 13</button><!-- mod-date:0626: ���ھտ� ���� -->
+                            <button type="button">����� 3</button>
+                            <button type="button">����&middot;���� 3</button>
+                            <button type="button">���� 5</button>
+                            <button type="button">���� 3</button>
+                        </div>
+                    </div>
+
+                    <div class="scroll-panel" role="tabpanel" id="tab2panel2-1">
+                        <!-- ����� -->
+                        <div class="acc-item-wrap">
+                            <div class="item-prod sticky top100">
+                                <strong>����� <span class="fc-point">3</span><span class="hidden">��</span></strong>
+                                <span class="price"><span class="hidden">����� ���ܾ�</span>14,500,000��</span>
+                            </div>
+                            <div class="item-list-set">
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name">����������������</strong>
+                                    <span class="badge round-blue">�ѵ�����</span>
+                                    <span class="badge round-blue">�ѵ�����</span>
+                                    <span class="badge round-blue">�ѵ�����</span>
+                                    <p class="bank-detail">
+                                        <span>SBI</span><span>02819131234567</span><button type="button" class="ico-copy" title="���¹�ȣ ����"></button>
+                                    </p>
+                                    <!-- mod-date:0831: list-price �߰� --><!-- mod-date:0713: justify�׷��߰� �� ��ư��ġ�̵� -->
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">10,123,456,789</span><span class="num-unit">��</span></span>
+                                            <button type="button" class="btn primary2 sm">��ü</button>
+                                        </div>
+                                    </div>
+                                    <!-- //list-price �߰� --><!-- //0713: justify�׷��߰� �� ��ư��ġ�̵� -->
+                                    <button class="ico-meatball" title="��������� ���°���"></button>
+                                </div>
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name">���̳ʽ��»��̴�</strong>
+                                    <span class="fc-point">(D-30)</span>
+                                    <p class="bank-detail">
+                                        <span>SBI</span><span>02819131234567</span><button type="button" class="ico-copy" title="���¹�ȣ ����"></button>
+                                    </p>
+                                    <!-- mod-date:0831: list-price �߰� -->
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">-123,456,789</span><span class="num-unit">��</span></span>
+                                            <button type="button" class="btn primary2 sm">��ü</button>
+                                        </div>
+                                    </div>
+                                    <!-- //list-price �߰� -->
+                                    <button class="ico-meatball" title="���̳ʽ��»��̴� ���°���"></button>
+                                </div>
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name">���뿹��������Ŀ��</strong>
+                                    <span class="ico-couple"></span>
+                                    <span class="badge round-purple">�������</span>
+                                    <p class="bank-detail">
+                                        <span>SBI</span><span>02819131234567</span><button type="button" class="ico-copy" title="���¹�ȣ ����"></button>
+                                    </p>
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">10,123,456,789</span><span class="num-unit">��</span></span>
+                                            <button type="button" class="btn primary2 sm">��ü</button>
+                                        </div>
+                                    </div>
+                                    <button class="ico-meatball" title="���뿹��������Ŀ�� ���°���"></button>
+                                </div>
+                            </div>
+                        </div>                            
+                        <!--//����� -->
+
+                        <!-- ����.���� -->
+                        <div class="acc-item-wrap">
+                            <div class="item-prod sticky top100">
+                                <strong>����&middot;���� <span class="fc-point">3</span><span class="hidden">��</span></strong>
+                                <span class="price"><span class="hidden">�������� ���ܾ�</span>14,500,000��</span>
+                            </div>
+                            <div class="item-list-set">
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name">�������⿹��</strong>
+                                    <span class="fc-point">(D-30)</span>
+                                    <p class="bank-detail">
+                                        <span>SBI</span><span>02819131234567</span><button type="button" class="ico-copy" title="���¹�ȣ ����"></button>
+                                    </p>
+                                    <!-- mod-date:0713: justify�׷��߰� -->
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">123,456,789</span><span class="num-unit">��</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- //0713: justify�׷��߰� -->
+                                    <button class="ico-meatball" title="�������⿹�� ���°���"></button>
+                                </div>
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name">�����������ݶ�����</strong>
+                                    <span class="badge round-purple">�������</span><!-- mod-date:1005: Ŭ������ ���� -->
+                                    <p class="bank-detail">
+                                        <span>SBI</span><span>02819131234567</span><button type="button" class="ico-copy" title="���¹�ȣ ����"></button>
+                                    </p>
+                                    <!-- mod-date:0713: justify�׷��߰� -->
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">123,456,789</span><span class="num-unit">��</span></span>
+                                        </div>
+                                    </div>
+                                    <button class="ico-meatball" title="�����������ݶ����� ���°���"></button>
+                                </div>
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name">���ݺ���Ŀ�ø�������</strong>
+                                    <span class="ico-couple"></span>
+                                    <span class="badge round-blue">�ѵ�����</span>
+                                    <p class="bank-detail">
+                                        <span>SBI</span><span>02819131234567</span><button type="button" class="ico-copy" title="���¹�ȣ ����"></button>
+                                    </p>
+                                    <!-- mod-date:0713: justify�׷��߰� -->
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">123,456,789</span><span class="num-unit">��</span></span>
+                                        </div>
+                                    </div>
+                                    <button class="ico-meatball" title="���ݺ���Ŀ�ø������� ���°���"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//����.���� -->
+
+                        <!-- ���� -->
+                        <div class="acc-item-wrap">
+                            <div class="item-prod sticky top100">
+                                <strong>���� <span class="fc-point">3</span><span class="hidden">��</span></strong>
+                                <span class="price"><span class="hidden">���� ���ܾ�</span>14,500,000��</span>
+                            </div>
+                            <div class="item-list-set">
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name">�¶������ô㺸����</strong>
+                                    <span class="fc-point">(D-30)</span>
+                                    <p class="bank-detail">
+                                        <span>SBI</span><span>02819131234567</span><button type="button" class="ico-copy" title="���¹�ȣ ����"></button>
+                                    </p>
+                                    <!-- mod-date:0713: justify�׷��߰� -->
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">123,456,789</span><span class="num-unit">��</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- //0713: justify�׷��߰� -->
+                                    <button class="ico-meatball" title="�¶������ô㺸���� ���°���"></button>
+                                </div>
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name">ǥ�ػ��յ�</strong>
+                                    <span class="badge round-purple">�������</span><!-- mod-date:1005: Ŭ������ ���� -->
+                                    <p class="bank-detail">
+                                        <span>SBI</span><span>02819131234567</span><button type="button" class="ico-copy" title="���¹�ȣ ����"></button>
+                                    </p>
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">123,456,789</span><span class="num-unit">��</span></span>
+                                            <button type="button" class="btn primary2 sm">��ü</button>
+                                        </div>
+                                    </div>
+                                    <button class="ico-meatball" title="ǥ�ػ��յ� ���°���"></button>
+                                </div>
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name">��������</strong>
+                                    <span class="fc-point">(D-0)</span>
+                                    <p class="bank-detail">
+                                        <span>SBI</span><span>02819131234567</span><button type="button" class="ico-copy" title="���¹�ȣ ����"></button>
+                                    </p>
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <!-- <span class="numbers-20" role="text"><span class="num fw-700">123,456,789</span><span class="num-unit">��</span></span> -->
+                                            <span class="numbers-20" role="text"><span class="num fw-700"></span><span class="num-unit unit-hidden">�ܾ׼���</span></span><!-- mod-date:0911: �ܾ׼��� ��Ÿ�� �߰� -->
+                                            <button type="button" class="btn primary2 sm">��ü</button>
+                                        </div>
+                                    </div>
+                                    <button class="ico-meatball" title="�������� ���°���"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//���� -->
+
+                        <!-- ���� -->
+                        <div class="acc-item-wrap">
+                            <div class="item-prod sticky top100">
+                                <strong>���� <span class="fc-point">3</span><span class="hidden">��</span></strong>
+                                <div class="tooltips">
+                                    <p class="tooltip"><button type="button" class="btn-tooltip" data-ui="tooltip"><span class="hidden">���� �ڼ�������</span></button></p>
+                                    <div class="tooltip-wrap" role="tooltip" aria-hidden="true">
+                                        <div class="tooltip-cont"> 
+                                            <ul class="depth bul">
+                                                <li>��������Ȳ�� �ſ� 25�� ���� ���� �����ڷᰡ ������Ʈ�ǹǷ�, ���� �����¿� �ټ� ���̰� ���� �� �ֽ��ϴ�.</li>
+                                                <li>ó�����������(�� ACE����) �������� <span class="fc-point">2022�� 7�� 1��</span> ���� ������Ʈ ������ ��ȸ���� �ʽ��ϴ�.<span class="fc-point">(��ȸ���� �������)</span><br>�ش� ������ ���Ǵ� ó������� ��������(��1599-4600)�� ���ǹٶ��ϴ�.</li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn-tooltip-x"><span class="hidden">���� �ݱ�</span></button>
+                                    </div>
+                                </div>
+                                <span class="price"><span class="hidden">���� ���ܾ�</span>14,500,000��</span>
+                            </div>
+                            <div class="item-list-set">
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name block">(��)KB���������÷�Ƽ�ѿ��ݺ��� II 1��(�⺻��)</strong>
+                                    <!-- mod-date:0713: justify�׷��߰� -->
+                                    <div class="list-price">
+                                        <div class="justify">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">123,456,789</span><span class="num-unit">��</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- //0713: justify�׷��߰� -->
+                                    <button class="ico-meatball" title="(��)KB���������÷�Ƽ�ѿ��ݺ��� II 1��(�⺻��) ���°���"></button>
+                                </div>
+                                <div class="item-lists">
+                                    <button type="button" class="btn-detail-view" title="{���¸�} �ŷ����� �󼼺���"></button> <!-- mod-date:1219:[���ټ�] ��ư��ġ���� --><!-- mod-date:1018:[���ټ�]�߰� -->
+                                    <strong class="acc-name block">(��)KB���������÷�Ƽ�ѿ��ݺ��� II 1��(�⺻��)</strong>                                    
+                                    <div class="justify">
+                                        <div class="list-price">
+                                            <span class="numbers-20" role="text"><span class="num fw-700">123,456,789</span><span class="num-unit">��</span></span>
+                                        </div>
+                                    </div>
+                                    <button class="ico-meatball" title="(��)KB���������÷�Ƽ�ѿ��ݺ��� II 1��(�⺻��) ���°���"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//���� -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="prod-bnr-set"><!-- mod-date:0823: prod-bnr-set �����߰� -->
+                <!-- mod-date:0913: ����� �߰� -->
+                <button type="button" class="boxs-arr bg02">
+                    <strong>�����</strong>����� ���� ������ �޾ƺ�����
+                </button>
+                <!-- //prod-bnr-set �����߰� -->
+
+                <button type="button" class="boxs-arr bg02">
+                    <strong>����&middot;����</strong>�ݸ� ���� ��ǰ��?
+                </button>
+
+                <button type="button" class="boxs-arr bg03">
+                    <strong>����</strong>�� �ѵ��� ���ϱ��?
+                </button>
+            </div>
+
+            <div class="btns cont-foot center">
+                <button type="button" class="fz-16 fw-500 underline">����������ȸ</button>
+            </div>
+            <!-- <div style="height:20rem"></div> --><!-- mod-date:0619:�ϴܰ����߰�:1023:���� �Ʒ��ŷ� ��ü -->
+            <div class="extra-block"></div><!-- mod-date:1023 -->
+        </div>
+    </div>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+    $(window).on('load', function() {
+        UICommon.uiScrollTab.init();
+    })
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�����ֿ���׾ȳ�(�޻��)</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap"> 
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">�ٷ����޻�� ��û</h1>
+            <button type="button" class="action-chatbot" title="ê��"></button>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container lon">
+        <div class="pg-content">
+            <div class="hgroup-2">
+                <h2 class="ht-2">��û�ϴ� ������ <strong>�ֿ䳻���� �����ص帱�Կ�</strong></h2>
+                <p class="txt">�ϳ��� �ѱ�� �Ĳ��� Ȯ���غ�����.</p>
+                <p class="hidden">��ư�� �����Ͻø� ������ �� ������ �ڵ����� �������� �Ѿ�ϴ�</p><!-- mod-date:1211: �������� -->
+            </div>
+            <div class="section" data-ui="uiStep">
+                <ul class="depth chk lg">
+                    <li>���� �⺻������ Ȯ�����ּ���.</li>
+                </ul>
+                <div class="prod-chk-wrap">
+                    <div class="prod-chk"><!-- �ӽ� / ����: on Ŭ���� �߰� -->
+                        <div class="form-sel">
+                            <input type="checkbox" id="term1" name="chk"><!-- �ӽ� / ����: checked �Ӽ� �߰� -->
+                            <label for="term1" class="label">�������� <span class="fc-point">2,000����</span>�� <span class="fc-point">8.9%</span><br>�����ݸ��� ������� �����̿���.</label><!-- mod-date:0907: br�߰� -->
+                        </div>
+                        <div class="prod-chk-inr">
+                            <ul class="depth bul">
+                                <li>����ݸ��� <span class="underline">���� ���رݸ�</span>�� <span class="underline">����ݸ��� ��</span>���� �����ؿ�. (���رݸ�: ������ �������� ��ü 1�� ���� ���⿹Ź�� ������� �ݸ�)</li><!-- mod-date:0602: �ؽ�Ʈ ���� -->
+                                <li>
+                                    <span class="underline">�������� �޴� ������ �����ݸ�</span>�� �����ֱ� ���� ���� ���رݸ� ������ ���� ����ݸ��� �����ſ�.
+                                    <div class="line-box prod-img-wrap" aria-hidden="true"><!-- mod-date:0628: aria-hidden �߰� --><!-- mod-date:0526: class ���� -->
+                                        <h3 class="tit">�����ݸ�</h3>
+                                        <img src="/resources/img/common/img-repay-5.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="gap-ssm">�����ݸ��� �ݸ���±⿡�� ���ںδ��� ������ �� ������, �ݸ��϶��⿡�� ���� �δ��� ���� ���ɼ��� �־��.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term2" name="chk">
+                            <label for="term2" class="label">��û�ϴ� <span class="fc-point">�ٷ����޻��</span> ��ǰ�� <span class="fc-point">�Ϲ��ڱݴ���</span> �̿���.</label>
+                        </div>
+                        <div class="prod-chk-inr">
+                            <p class="depth bul">�� ��ǰ�� �Ϲ��ڱݴ���� ������ �ݾ� ���� ������ �� ���� ������ �߻��ϰ�, �̹� ������ �ݾ��� �ٽ� ����� �� �����.</p>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term3" name="chk">
+                            <label for="term3" class="label">����Ⱓ�� �� <span class="fc-point">12����,</span><br><span class="fc-point">��������</span> 2023.12.31�̿���.</label>
+                        </div>
+                    </div>
+                </div>
+                <ul class="depth chk lg">
+                    <li>��ȯ�� ���� �ֿ䳻���� Ȯ�����ּ���.</li>
+                </ul>
+                <div class="prod-chk-wrap">
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term4" name="chk">
+                            <label for="term4" class="label">������� <span class="fc-point">���ݱյ���һ�ȯ</span>���� <span class="fc-point">�ſ� 25��</span>�� ��ȯ�ؿ�.</label>
+                        </div>
+                        <div class="prod-chk-inr">
+                            <ul class="depth bul">
+                                <li>���� �յ���һ�ȯ�� <span class="underline">���һ�ȯ �Ⱓ���� ������ �յ��ϰ� ������ ��ȯ�ϰ�, ���ڴ� �ſ� �ܾ׿� ���Ͽ� �ΰ��� �ݾ��� �����ϴ� ���</span>�̿���.</li>
+                                <li>���� ���ڳ��ξ��� ũ����, <span class="underline">�پ��� ���ݿ� ���� ���ڱݾ��� �پ����.</span>
+                                    <div class="line-box prod-img-wrap" aria-hidden="true"><!-- mod-date:0628: aria-hidden �߰� --><!-- mod-date:0526: class ���� -->
+                                        <h3 class="tit">���ݱյ���һ�ȯ</h3>
+                                        <img src="/resources/img/common/img-repay-3.png" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term5" name="chk">
+                            <label for="term5" class="label">����Ⱓ ���� �� <span class="fc-point">4,200,120��</span>�� ���ڸ� �����ؿ�.<br><span class="fc-point">(�� ������ 24,200,120��)</span></label><!-- mod-date:0907: �ؽ�Ʈ���� -->
+                        </div>
+                        <div class="prod-chk-inr">
+                            <div class="line-box prod-img-wrap gap-xxxs"><!-- mod-date:0526: class ���� -->
+                                <img src="/resources/img/common/img-repay-8.png" alt="">
+                            </div>
+                            <ul class="depth bul gap-ssm">
+                                <li>������ �� ������� ������, �ߵ���ȯ �� �߻��� ������� �� �����ݿ� ���Ե� ���� �ʾƿ�.</li>
+                                <li>�ݸ��� ������� ������ �����ݸ��� �������� ���������, ���� �ݸ������� ���� �� �������� �޶��� �� �־��.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="depth chk lg">
+                    <li>������ �� ����� Ȯ�����ּ���.</li>
+                </ul>
+                <div class="prod-chk-wrap">
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term6" name="chk">
+                            <label for="term6" class="label">���� �� ������ �Ϻ� Ȥ�� ���θ� ��ȯ�ص� <span class="fc-point">��ȯ�ؾ��</span>�� �����.</label>
+                        </div>
+                        <div class="prod-chk-inr">
+                            <p class="depth bul">�ߵ���ȯ�ؾ�ݴ� <span class="underline">���� ��ȯ�� ���� �̸� ������� ��ȯ�ϴ� ��� �δ��ϴ� �ݾ�</span>�̿���.</p>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term7" name="chk">
+                            <label for="term7" class="label">�������� <span class="fc-point">�����.</span></label>
+                        </div>
+                        <div class="prod-chk-inr">
+                            <ul class="depth bul">
+                                <li>�������������� ���� ������� ü�� �� �����ϴ� �������� ����ݾ׿� ���� ���αݾ��� �޶�����.</li>
+                                <li>������ ���������� 50%�� �δ��ؿ�.</li>
+                            </ul>
+                            <div class="table gap-ssm">
+                                <table>
+                                    <caption>������ �ȳ�</caption>
+                                    <colgroup>
+                                        <col style="width:33%">
+                                        <col style="width:23%">
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" rowspan="2">����ݾ�</th>
+                                            <th scope="col" rowspan="2">���μ���</th>
+                                            <th scope="col" colspan="2">�������δ�</th><!-- mod-date:0524: class ���� -->
+                                        </tr>
+                                        <tr>
+                                            <th scope="col" class="bdl">����</th>
+                                            <th scope="col">����</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>5õ���� ����</td>
+                                            <td>�����</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5õ�����ʰ� ~ 1��� ����</td>
+                                            <td>7����</td>
+                                            <td>3.5����</td>
+                                            <td>3.5����</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1����ʰ� ~ 10��� ����</td>
+                                            <td>15����</td>
+                                            <td>7.5����</td>
+                                            <td>7.5����</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10��� �ʰ�</td>
+                                            <td>35����</td>
+                                            <td>17.5����</td>
+                                            <td>17.5����</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term8" name="chk">
+                            <label for="term8" class="label">���α���������� <span class="fc-point">�Ͻó���</span>�� ������ �����ᰡ �־��.</label><!-- mod-date:0907: �ؽ�Ʈ���� -->
+                        </div>
+                        <div class="prod-chk-inr">
+                            <ul class="depth bul">
+                                <li>���α�������� �����ݾ�(����ݾ��� 90%)�� �� 2.0%�� �ش��ϴ� �ݾ��� �����Ḧ �δ��ؾ� �ؿ�.</li>
+                                <li>��ȸ����������(1.0%p), ���ҵ�û��(0.5%p), ���������̼���(0.1%p) �� ������ ���� ������ ���� �� �־��.</li>
+                                <li>�Ͻó��� �����ϸ�, ����ݾ׿��� �����ΰ� �ѹ��� ó���Ǿ� �Ǽ��� �ݾ��� ���������� ������ �����Ḧ ó���� �ʿ䰡 ��� �����ؿ�.</li>
+                                <li>���ҳ��θ� �����ϸ�, 1ȸ�� �����Ḹ ó���Ǿ�, �Ͻó��� ���� �Ǽ��� �ݾ��� ũ���� ���� ���α���������� ������ ����ó���� �ʿ��ؿ�.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- mod-date:0607: ��ũ�� �߰� -->
+                <ul class="depth chk lg">
+                    <li>��Ÿ ���ǻ����� Ȯ�����ּ���.</li><!-- mod-date:0613: �ؽ�Ʈ ���� -->
+                </ul>
+                <div class="prod-chk-wrap">
+                    <div class="prod-chk">
+                        <div class="form-sel">
+                            <input type="checkbox" id="term9" name="chk">
+                            <label for="term9" class="label">�ش��ǰ�� <span class="fc-point">�����δ���</span> ��ǰ����, <span class="fc-point">��ü �߻� ��</span> ���� ��������� ���������� û���� �� ������, �̿� ���� <span class="fc-point">����������� ������� ����� �� �ֽ��ϴ�.</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- //mod-date:0607: ��ũ�� �߰� -->
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">�����ϰ� ��� Ȯ���ϱ�</button>
+            <!-- <button type="button" class="btn primary complete">��� Ȯ���߾��</button> -->
+        </div>
+    </footer>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+    $('.pg-wrap .btn').on('click', function() {
+        if($(this).hasClass('complete')) UICommon.Layer.alert('�������� ����')
+    })
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�޷�</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+	<header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">Ÿ��Ʋ��</h1>
+            <button type="button" class="action-prev" title="����"></button>
+            <button type="button" class="action-menu" title="���"></button>
+        </div>
+	</header>
+    <div class="pg-container cmm">
+		<div class="pg-content">
+			<div class="section">
+                <!-- �����Է�O(���ð���) -->
+                <div class="form-group">
+                    <div class="form-label">��¥����(�ӽ�Ÿ��Ʋ)</div><!-- �ʿ������ ���� -->
+                    <div class="form-row">
+                        <div class="form-ele calendar">
+                            <button type="button" title="��¥ ����" class="inp-btn">YYYY.MM.DD</button>
+                        </div> 
+                    </div>
+                </div>
+                <!-- //�����Է�O(���ð���) -->
+
+                <!-- �Ⱓ����(�����Է�X) -->
+                <div class="form-group">
+                    <div class="form-label">�Ⱓ����(�ӽ�Ÿ��Ʋ)</div><!-- �ʿ������ ���� -->
+                    <div class="form-row">
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn">YYYY.MM.DD</button>
+                        </div> 
+                        <span class="space">~</span>
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn">YYYY.MM.DD</button>
+                        </div> 
+                    </div>
+                </div>
+                <!-- //�Ⱓ����(�����Է�X) -->
+			</div>
+
+            <div class="section">
+                <h3 class="ht-3">�Ⱓ��ȸ</h3>
+                <div class="form-group">
+                    <div class="form-label row-box">��ȸ�Ⱓ</div>
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox">
+                            <span class="form-sel">
+                                <input type="radio" id="period1-1" name="period-1" checked>
+                                <label for="period1-1" class="label"><em>����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period1-2" name="period-1">
+                                <label for="period1-2" class="label"><em>1����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period1-3" name="period-1">
+                                <label for="period1-3" class="label"><em>1����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period1-4" name="period-1">
+                                <label for="period1-4" class="label"><em>3����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period1-5" name="period-1">
+                                <label for="period1-5" class="label"><em>6����</em></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-row by-box">
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn" onclick="UICommon.Layer.open('#periodPop');">YYYY.MM.DD</button>
+                        </div> 
+                        <span class="space">~</span>
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn">YYYY.MM.DD</button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+<!-- ���̾��˾� START -->
+<div id="periodPop" class="popup bottom" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head">
+            <h1>��ȸ�Ⱓ�� �������ּ���</h1>
+        </div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="form-rdochk rdobox">
+                            <span class="form-sel">
+                                <input type="radio" id="period2-1" name="period-pop" checked>
+                                <label for="period2-1" class="label"><em>3����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period2-2" name="period-pop">
+                                <label for="period2-2" class="label"><em>6����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period2-3" name="period-pop">
+                                <label for="period2-3" class="label"><em>12����</em></label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="period2-4" name="period-pop">
+                                <label for="period2-4" class="label"><em>�Ⱓ����</em></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-row by-box">
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn">YYYY.MM.DD</button>
+                        </div> 
+                        <span class="space">~</span>
+                        <div class="form-ele calendar">
+                            <button type="button" title="������ ����" class="inp-btn">YYYY.MM.DD</button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn primary" data-ui="pop-close">Ȯ��</button>
+            </div>
+        </div>
+        <button type="button" class="pop-close" data-ui="pop-close" aria-label="�˾�â �ݱ�">�ݱ�</button>
+    </article>
+</div>
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

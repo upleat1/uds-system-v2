@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>���ݰ���</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap"> 
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">���ݰ���</h1>
+            <button type="button" class="action-chatbot" title="ê��"></button>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container dep">
+        <div class="pg-content">
+            <div class="section">
+                <div class="boxs line mgt-0">
+                    <div class="range-wrap">
+                        <div class="range-during"><output id="rangevalue1" class="rangevalue"></output><span class="num-unit">����</span></div><!-- mod-date:0605: [���ټ�] aria-hidden �߰� -->
+                        <span class="numbers-24 nums-bold txt fc-point"><span class="num-unit">��</span><span class="num">4.9</span><span class="num-unit">%</span></span><!-- mod-date:0915: .fc-point �߰� -->
+                        <p class="range-date">������ : <button type="button" class="btn ico-calr underline" title="��¥����">2023.01.26</button></p>
+                        <h3 class="ht-4 sepe-line mgb-0">
+                            <label for="range1">���ԱⰣ</label> <!-- mod-date:1128: [���ټ�] label �߰� -->
+                        </h3>
+                        <input type="range" id="range1" class="range" value="12" min="1" max="36" step="1" class="range-target" oninput="rangevalue1.value=value">
+                        <ul class="num-range">
+                            <li>1����</li>
+                            <li>36����</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label fz-16">�������޹��
+                        <button type="button" class="btn-tooltip" data-ui="pop-open" onclick=""><span class="hidden">���� �ڼ�������</span>
+                    </div>
+                    <div class="form-rdochk rdobox">
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-1" name="radio-box11">
+                            <label for="radioBox1-1" class="label">�ܸ�<br>(�ſ�����)</label>
+                        </span>
+                        <span class="form-sel">
+                            <input type="radio" id="radioBox1-2" name="radio-box11" checked>
+                            <label for="radioBox1-2" class="label">����<br>(�����Ͻ�����)</label>
+                        </span>
+                    </div>
+                    <p class="depth info">��Ŀ� ���� ������ɾ��� �޶��� �� �־��.</p><!-- mod-date:0904: �ؽ�Ʈ���� -->
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label">��ġ�ݾ�</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" title="��ġ�ݾ� �Է�" class="inp-btn right on">30,000,000</button>
+                            <span class="unit">��</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label">�ݸ�����</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="�ݸ����� ����">(B-��ŷ) ���⿹�� ��0.5% �������</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label">��������</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn on" title="�������� ����">�Ϲݰ���</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns cont-foot right">
+                    <button type="button" class="btn ico-arr-sm right" style="display:block;">������ѵ� Ȯ��</button>
+                    <button type="button" class="btn ico-arr-sm right" style="display:none;">������������� �ȳ�</button>
+                </div>
+
+                <!-- 2���������� -->
+                <button type="button" class="btn primary lg full gap-sm">���⿹��� ���</button><!-- mod-date:0518: data-ui, aria-controls �߰� -->
+
+                <!-- @���⿹��� ��� ��ư Ŭ���� ���� -->
+                <div class="toggle-panel gap-md" id="cont1-1"><!-- mod-date:0518: class, id �߰� -->
+                    <div class="boxs mgt-0"><!-- mod-date:0914: Ŭ���� ���� -->
+                        <ul class="lists data free noline"><!-- mod-date:0914: Ŭ���� ���� -->
+                            <!-- mod-date:0914: ��ũ�� ���� -->
+                            <li class="align-justify direction">
+                                <div class="key">
+                                    <h4 class="ht-4 mgb-0">���⿹���</h4>
+                                </div>
+                                <div class="value">
+                                    <span class="numbers-20 nums-bold fc-point" role="text"><span class="num">123,456,789</span><span class="num-unit">��</span></span>
+                                </div>
+                            </li>
+                            <!-- //��ũ�� ���� -->
+                            <li class="li-divider">
+                                <div class="key">��ġ�ݾ�</div>
+                                <div class="value">30,000,000��</div>
+                            </li>
+                            <li>
+                                <div class="key">����ݸ�</div>
+                                <div class="value">�� 5.3%<br>(���ݸ� 0.5% ����)</div>
+                            </li>
+                            <li>
+                                <div class="key">��������</div>
+                                <div class="value">1,271,947��(����)</div>
+                            </li>
+                            <li>
+                                <div class="key">�������޹��</div>
+                                <div class="value">����(�����Ͻ�����)</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-label">��ݰ���</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" class="select-btn on" title="��ݰ��� ����">���������(9876)</button>
+                            </div>
+                        </div>
+                        <!-- �������޹�� �ܸ����ý� -->
+                        <p class="tip">���������ڸ� �Աݹ��� ���� ���Ǵ� ���·� ���� �� [���°���&gt;�ڵ���ü] �޴����� �ٲ� �� �־��.</p>
+                        <!--//�������޹�� �ܸ����ý� -->
+                        <p class="tip error">��ݰ��� �ܾ��� �����ؿ�.</p>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label">�����������</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" class="select-btn on" title="����������� ����">�ڵ�����</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- �����������:�ڵ����� ���ý� ���� -->
+                    <div class="form-group">
+                        <div class="form-label">�ڵ�������</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" class="select-btn on" title="�ڵ������� ����">���ݸ� ����(���ڴ� ��ǥ���·� �Ա�)</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//�����������:�ڵ����� ���ý� ���� -->
+                    <div class="form-group">
+                        <div class="form-label">��й�ȣ����</div>
+                        <div class="form-row">
+                            <div class="form-ele">
+                                <button type="button" class="select-btn" title="��й�ȣ���� ����">�������ּ���</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="ht-4">�������� ��ǰ��������<br>�̸���/�˸���(SMS)���� �����帱�Կ�</h3><!-- mod-date:0602: ��ħǥ���� -->
+                    <div class="boxs light-blue">
+                        <ul class="lists data noline">
+                            <li>
+                                <div class="key">�̸���</div>
+                                <div class="value fw-700">abcdefg@sbisb.co.kr</div>
+                            </li>
+                            <li>
+                                <div class="key">����ó</div>
+                                <div class="value fw-700">010-1234-5678</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="agree-group gap-md">
+                        <div class="agree-item btn-link">
+                            <span class="form-sel lg">
+                                <input type="checkbox" id="term1" name="chk" aria-label="�������� ��ǰ������ �ٷΰ���">
+                                <label for="term1" class="label" title="�������� ��ǰ������ �ٷΰ���" aria-hidden="true">�������� ��ǰ������ Ȯ���ϱ�</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //���⿹��� ��� ��ư Ŭ���� ���� -->
+                <!--//2���������� -->
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary">����</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

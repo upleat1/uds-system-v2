@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�ٸ�������ȸ ��������</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/library/sortable.min.js"></script>
+    <script src="/resources/js/library/jquery.ui.touch-punch.min.js"></script><!-- �������������� js �߰� -->
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">��������</h1>
+            <button type="button" class="action">�ݱ�</button>
+        </div>
+    </header>  
+    <div class="pg-container inq">
+        <div class="pg-content">
+            <div class="section">
+                <div class="sel-swap-wrap">
+                    <button type="button" class="p-sub-link" data-sort="reset" title="���� ��� ������ �ʱ�ȭ"><i class="ico-re-try"></i><span>�������</span></button>
+                    <button type="button" class="sel-drag" data-sort="drag" title="drag & drop ������� ��������"></button>
+                    <button type="button" class="sel-up-down on" data-sort="arrow" title="up/down ������� ��������"></button><!-- sort type "on" Ŭ���� ���� -->
+                </div>
+                <div class="swap-wrap">
+                    <div class="swap-area">
+                        <h3 class="menu-tit">����� <span>3</span></h3>
+                        <ul class="swap-list" data-ui="uiSortable">
+                            <li>
+                                <div class="key"><i class="ci-24x bk-004"></i>KB��������(1234)</div>
+                                <div class="value">1,123,000</div>
+                                <div class="button-area">
+                                    <div class="drag-drop">
+                                        <button type="button" class="drag-btn" title="��������"></button>
+                                    </div>
+                                    <div class="up-down">
+                                        <button type="button" class="up-btn" data-sort="up" title="���� �̵�"></button>
+                                        <button type="button" class="down-btn" data-sort="down" title="�Ʒ��� �̵�"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key"><i class="ci-24x bk-000"></i>���뿹��(1234)</div>
+                                <div class="value">100,000</div>
+                                <div class="button-area">
+                                    <div class="drag-drop">
+                                        <button type="button" class="drag-btn" title="��������"></button>
+                                    </div>
+                                    <div class="up-down">
+                                        <button type="button" class="up-btn" data-sort="up" title="���� �̵�"></button>
+                                        <button type="button" class="down-btn" data-sort="down" title="�Ʒ��� �̵�"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key"><i class="ci-24x bk-090"></i>īī����ũ �����(1234)</div>
+                                <div class="value">100,000</div>
+                                <div class="button-area">
+                                    <div class="drag-drop">
+                                        <button type="button" class="drag-btn" title="��������"></button>
+                                    </div>
+                                    <div class="up-down">
+                                        <button type="button" class="up-btn" data-sort="up" title="���� �̵�"></button>
+                                        <button type="button" class="down-btn" data-sort="down" title="�Ʒ��� �̵�"></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swap-area">
+                        <h3 class="menu-tit">����/���� <span>3</span></h3>
+                        <ul class="swap-list" data-ui="uiSortable">
+                            <li>
+                                <div class="key"><i class="ci-24x bk-004"></i>KB��������(1234)</div>
+                                <div class="value">1,123,000</div>
+                                <div class="button-area">
+                                    <div class="drag-drop">
+                                        <button type="button" class="drag-btn" title="��������"></button>
+                                    </div>
+                                    <div class="up-down">
+                                        <button type="button" class="up-btn" data-sort="up" title="���� �̵�"></button>
+                                        <button type="button" class="down-btn" data-sort="down" title="�Ʒ��� �̵�"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key"><i class="ci-24x bk-000"></i>���뿹��(1234)</div>
+                                <div class="value">100,000</div>
+                                <div class="button-area">
+                                    <div class="drag-drop">
+                                        <button type="button" class="drag-btn" title="��������"></button>
+                                    </div>
+                                    <div class="up-down">
+                                        <button type="button" class="up-btn" data-sort="up" title="���� �̵�"></button>
+                                        <button type="button" class="down-btn" data-sort="down" title="�Ʒ��� �̵�"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key"><i class="ci-24x bk-090"></i>īī����ũ �����(1234)</div>
+                                <div class="value">100,000</div>
+                                <div class="button-area">
+                                    <div class="drag-drop">
+                                        <button type="button" class="drag-btn" title="��������"></button>
+                                    </div>
+                                    <div class="up-down">
+                                        <button type="button" class="up-btn" data-sort="up" title="���� �̵�"></button>
+                                        <button type="button" class="down-btn" data-sort="down" title="�Ʒ��� �̵�"></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swap-area">
+                        <h3 class="menu-tit">�������� <span>3</span></h3>
+                        <ul class="swap-list" data-ui="uiSortable">
+                            <li>
+                                <div class="key"><i class="ci-24x bk-004"></i>KB��������(1234)</div>
+                                <div class="value">1,123,000</div>
+                                <div class="button-area">
+                                    <div class="drag-drop">
+                                        <button type="button" class="drag-btn" title="��������"></button>
+                                    </div>
+                                    <div class="up-down">
+                                        <button type="button" class="up-btn" data-sort="up" title="���� �̵�"></button>
+                                        <button type="button" class="down-btn" data-sort="down" title="�Ʒ��� �̵�"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key"><i class="ci-24x bk-000"></i>���뿹��(1234)</div>
+                                <div class="value">100,000</div>
+                                <div class="button-area">
+                                    <div class="drag-drop">
+                                        <button type="button" class="drag-btn" title="��������"></button>
+                                    </div>
+                                    <div class="up-down">
+                                        <button type="button" class="up-btn" data-sort="up" title="���� �̵�"></button>
+                                        <button type="button" class="down-btn" data-sort="down" title="�Ʒ��� �̵�"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key"><i class="ci-24x bk-090"></i>īī����ũ �����(1234)</div>
+                                <div class="value">100,000</div>
+                                <div class="button-area">
+                                    <div class="drag-drop">
+                                        <button type="button" class="drag-btn" title="��������"></button>
+                                    </div>
+                                    <div class="up-down">
+                                        <button type="button" class="up-btn" data-sort="up" title="���� �̵�"></button>
+                                        <button type="button" class="down-btn" data-sort="down" title="�Ʒ��� �̵�"></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ���� ���� �� -->
+                    <div class="result nodata">
+                        <p class="tit">���� ������ �ڻ��� ���<br>������ ������ �� �����.</p>
+                    </div>
+                    <!-- //���� ���� �� -->
+                </div>
+            </div>
+        </div>
+        <div class="pg-content-foot">
+            <div class="inform-btm-wrap">
+                <h4 class="ht-4">�˷������</h4>
+                <ul class="depth bul">
+                    <li>���´� ���� ��ǰ �������� ���� �����ؿ�.</li>
+                    <li>ī��, ���̴� ����������� ������ �� �־��.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="pg-footer">
+        <div class="btns">
+            <button type="button" class="btn primary">�����ϱ�</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���� SCRIPT START -->
+<!-- jquery.ui.touch-punch.min.js ���� �ʿ� ��� Ȯ�� -->
+<script>
+    UICommon.uiSortable.init();
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>

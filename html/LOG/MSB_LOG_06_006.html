@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>�� ���� ����</title>
+    <link rel="stylesheet" data-description="���� ��/ref="/resources/css/common.css">
+    <link rel="stylesheet" data-description="���� �����/��" href="/resources/css/component.css">
+    <link rel="stylesheet" data-description="������ �/href="/resources/css/contents.css">
+    <script src="/resources/js/library/jquery-3.3.1-min.js"></script>
+    <script src="/resources/js/library/jquery-ui.min.js"></script>
+    <script src="/resources/js/common-ui.js"></script>
+    <!-- // -->
+</head>
+<body>
+<div class="pg-wrap">
+    <header class="pg-header">
+        <div class="pg-gnb">
+            <h1 class="ht-1">�� ���� ����</h1>
+            <button type="button" class="action">���</button>
+        </div>
+    </header>
+    <div class="pg-container log">
+		<div class="pg-content">
+			<div class="section">
+				<h2 class="ht-3">�⺻����</h2>
+                <div class="form-group">
+                    <div class="form-label">����ó</div>
+                    <div class="form-row">
+                        <div class="form-ele">            
+                            <button type="button" title="����ó �Է�" class="inp-btn on">010-1234-5678</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">�ּ�</div>
+                    <div class="form-row">
+                        <!-- mod-date:0324: �ּҿ��� �˻���ư ǥ�� -->
+                        <div class="form-ele addr"><!-- �ּ� �Է��� addr Ŭ���� ���� -->
+                            <button type="button" title="�ּ� �Է�" class="inp-btn justify on"><!-- �ּ� �Է��� on Ŭ���� ���� -->
+                                <span class="address">��� ��õ�� ������ ����� 408 (�ѹݵ����Ϲ̷�����) 1101�� 504ȣ</span>
+                                <span class="point sm" aria-hidden="true">�˻�</span>
+                            </button>
+                        </div>
+                        <!-- //�ּҿ��� �˻���ư ǥ�� -->
+                    </div>
+                </div>
+			</div>
+            <div class="section">
+                <h2 class="ht-3">��������</h2>
+                <div class="form-group">
+                    <div class="form-label">����</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="���� ����">���� ����</button><!-- mod-date:0403: select�� ��ư������ ���� -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="section">
+                <h2 class="ht-3">�����ŷ�����</h2>
+                <div class="form-group">
+                    <div class="form-label">�ڱ���ó</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="�ڱ���ó ����">�ڱ���ó ����</button><!-- mod-date:0403: select�� ��ư������ ���� -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label">��������</div>
+                    <div class="form-row">
+                        <div class="form-ele">
+                            <button type="button" class="select-btn" title="�������� ����">�������� ����</button><!-- mod-date:0403: select�� ��ư������ ���� -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="ht-3">�ؿ� ������ �ǹ��� �ֳ���?</h2>
+                <div class="form-group">
+                    <div class="form-row v">
+                        <div class="form-rdochk rdobox">
+                            <span class="form-sel">
+                                <input type="radio" id="rdoTax1" name="rdoTax">
+                                <label for="rdoTax1" class="label">�ƴϿ�</label>
+                            </span>
+                            <span class="form-sel">
+                                <input type="radio" id="rdoTax2" name="rdoTax" aria-controls="rdoTaxPanel" checked><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                                <label for="rdoTax2" class="label">��</label>
+                            </span>
+                        </div>
+                        <div id="rdoTaxPanel" class="rdo-panel">
+                            <h3 class="ht-3 gap-xl">�ؿ� ��������</h3>
+                            <div class="form-group">
+                                <div class="form-label">�����ǹ�����</div>
+                                <div class="form-row">
+                                    <div class="form-ele">
+                                        <button type="button" class="select-btn" title="�����ǹ����� ����">�������ּ���</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- @���������� �̱��� ��츸 ���� -->
+                            <div class="form-group">
+                                <div class="form-label">��������</div>
+                                <div class="form-row">
+                                    <div class="form-ele">
+                                        <button type="button" class="select-btn" title="�������� ����">�������ּ���</button><!-- mod-date:0403: select�� ��ư������ ���� -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //@���������� �̱��� ��츸 ���� -->
+                            <div class="form-group">
+                                <div class="form-rdochk">
+                                    <span class="form-sel">
+                                        <input type="radio" id="rdoTaxNumO" name="chkTaxNum" aria-controls="chkTaxNumO" checked><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                                        <label for="rdoTaxNumO" class="label">�����ڹ�ȣ �Է�</label>
+                                    </span>
+                                    <span class="form-sel">
+                                        <input type="radio" id="rdoTaxNumX" name="chkTaxNum" aria-controls="chkTaxNumX"><!-- mod-date:0518: [���ټ�] aria-expanded ���� -->
+                                        <label for="rdoTaxNumX" class="label">�����ڹ�ȣ ����</label>
+                                    </span>
+                                </div>
+                                <!-- @�����ڹ�ȣ O -->
+                                <div id="chkTaxNumO" class="rdo-panel gap-xs"> <!-- gap-xs: �ӽ� -->
+                                    <div class="form-group">
+                                        <div class="form-label">������ ��ȣ</div>
+                                        <div class="form-row">
+                                            <div class="form-ele">            
+                                                <button type="button" title="�����ڹ�ȣ �Է�" class="inp-btn">�Է����ּ���</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //@�����ڹ�ȣ O -->
+                                <!-- @�����ڹ�ȣ X -->
+                                <div id="chkTaxNumX" class="rdo-panel gap-xs"> <!-- gap-xs: �ӽ� -->
+                                    <div class="form-group">
+                                        <div class="form-label">����</div>
+                                        <div class="form-row">
+                                            <div class="form-ele">
+                                                <button type="button" class="select-btn" title="���� ����">�������ּ���</button><!-- mod-date:0403: select�� ��ư������ ���� -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //@�����ڹ�ȣ X -->
+                            </div>
+
+                            <h3 class="ht-3 gap-xl">��������</h3>
+                            <div class="form-group">
+                                <div class="form-label">���� ��</div>
+                                <div class="form-row">
+                                    <div class="form-ele">
+                                        <input type="text" placeholder="Family name" title="���� �� �Է�" value="" class="inp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-label">���� �̸�</div>
+                                <div class="form-row">
+                                    <div class="form-ele">
+                                        <input type="text" placeholder="Given name" title="���� �̸� �Է�" value="" class="inp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-label">���� �ּ�</div>
+                                <div class="form-row">
+                                    <div class="form-ele">
+                                        <input type="text" placeholder="Street, City, State/Region, ZIP" title="���� �ּ� �Է�" value="" class="inp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-label">���� ���ּ�</div>
+                                <div class="form-row">
+                                    <div class="form-ele">
+                                        <input type="text" placeholder="Unit, building floor, etc." title="���� ���ּ� �Է�" value="" class="inp">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="pg-content-foot">
+			<div class="inform-btm-wrap">
+				<h4 class="ht-4">�˷������</h4>
+				<ul class="depth bul">
+					<li>�̱��� �����ڹ�ȣ �Է��� �ʼ� �Դϴ�.</li>  
+                    <li>���������� ���� ���� ��� ������ �߰��Ͽ� ����� �� �ֽ��ϴ�.</li>
+                    <li>���������� ����� ���, �ش� ������ ���� �����ڷḦ �����ؾ� �մϴ�.</li>
+                    <li>������� �� 51����7�׿� ���� �ؿܳ����ǹ��� ������ ������ ������ ����Ǵ� ��� ��������� �� ����� �뺸�Ͽ� ������ �ǹ��� �ֽ��ϴ�.</li>
+                    <li>�ؿ� �����ǹ��� ���� ������ �δ��ϰ� �ź�&middot;�����ϴ� ����, ���� ���� ���� ���� ���� ��������� �ǻ��ǹ��� �����ǹ��� �����ϴ� ���̹Ƿ� ������� �� 50���� ���� ��������� ���� ����û�� �Ű��˴ϴ�.</li>
+                    <li>��Ÿ ���ǻ����� ��������(1566-2210)�� �������ּ���.</li><!-- mod-date:0901: �������� -->
+				</ul>
+			</div>
+		</div>
+	</div>
+    <footer class="pg-footer"> 
+        <div class="btns">
+            <button type="button" class="btn primary" data-ui="pop-open" onclick="UICommon.Layer.open('#broadTaxPopup1');">�����������</button> 
+        </div>
+    </footer>
+</div>
+
+<!-- ���̾��˾� START -->
+<div id="broadTaxPopup1" class="popup modal" role="dialog" aria-hidden="true">
+    <article class="pop-wrap">
+        <div class="pop-head"></div>
+        <div class="pop-body">
+            <div class="section">
+                <div class="message">
+                    <div role="alert" aria-live="assertive" class="breakall">
+                        <p>�ؿܳ���(�̱�)�� �����Ͻø� �ؿܱ������� �������¹�(FATCA)�� �ǰ� ������� �������·� ��޵˴ϴ�.<br>�Ű� �� ����ÿ��� �̱����� �ƴ϶�� ����Ȯ�μ��� ���������� �����Ͽ��� �մϴ�.</p>
+                        <p class="code-notice">�ش������ �´��� �ٽ� �ѹ� Ȯ���Ͻñ� �ٶ��ϴ�.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop-foot">
+            <div class="btns">
+                <button type="button" class="btn primary lg" data-ui="pop-close">Ȯ��</button>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- //���̾��˾� END -->
+
+<!-- ���� SCRIPT START -->
+<script>
+</script>
+<!-- //���� SCRIPT END -->
+</body>
+</html>
