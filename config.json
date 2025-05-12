@@ -1,8 +1,9 @@
 {
     "source": ["tokens/*.json"],
     "platforms": {
-      "css": {
-        "transformGroup": "css",
+      "scss": {
+        "transformGroup": "scss",
+        "prefix": "upleat",
         "buildPath": "pub/assets/css/",
         "files": [
           {

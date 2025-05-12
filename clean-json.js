@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const inputFile = path.join(__dirname, './tokens-figma/tokens-figma.json');
+const inputFile = path.join(__dirname, './tokens/tokens-figma.json');
 const outputFile = path.join(__dirname, './tokens/tokens.json');
 
 // 제거할 루트 경로들
