@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="/guide/resources/vendor/highlight/github-gist.css">
     
     <!-- resource -->
-    <link rel="stylesheet" href="/resources/css/_variables.css">
-    <link rel="stylesheet" href="/resources/css/common.css">
-    <link rel="stylesheet" href="/resources/css/components.css">
+    <link rel="stylesheet" href="/resources/css/component/output.css">
 
     <style>
         [data-class="demo-grid"] {
@@ -56,8 +54,7 @@
             </div>
             <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
                 <div data-class="section">
-                    <div data-class="h1">Type</div>
-                    <div data-class="h2">System Icon</div>
+                    <div data-class="h1">System Icon</div>
                     <div data-class="box">
                         <div data-class="list disc">
                             <div>기본 아이콘을 24사이즈로 제작 후 컴포넌트화 하여 가이드된 사이즈로 조정하여 사용한다</div>
@@ -65,16 +62,35 @@
                     </div>
                     <script type="text/html">
 <div data-class="demo-grid">
-    <i class="icon-arrow-right"></i>
-    <i class="icon-system-info"></i>
-    <i class="icon-close"></i>
-    <i class="icon-delete"></i>
-    <i class="icon-arrow-down"></i>
-    <i class="icon-duplicate"></i>
-    <i class="icon-info"></i>
-    <i class="icon-success"></i>
-    <i class="icon-error"></i>
-    <i class="icon-tooltip"></i>
+    <i class="icon icon-arrow-right"></i>
+    <i class="icon icon-arrow-left"></i>
+    <i class="icon icon-arrow-down"></i>
+    <i class="icon icon-arrow-up"></i>
+    <i class="icon icon-close"></i>
+
+    <i class="icon icon-system-info"></i>    
+    <i class="icon icon-delete"></i>    
+    <i class="icon icon-duplicate"></i>
+    <i class="icon icon-info"></i>
+    <i class="icon icon-success"></i>
+    <i class="icon icon-error"></i>
+    <i class="icon icon-tooltip"></i>
+</div>
+                    </script>
+                    <div data-class="h2">Arrow Angle</div>
+                    <script type="text/html">
+<div data-class="demo-grid">
+    <i class="icon icon-angle"></i> <!-- default : down -->
+    <i class="icon icon-angle up"></i>
+    <i class="icon icon-angle left"></i>
+    <i class="icon icon-angle right"></i>
+</div>
+                    </script>
+
+                    <div data-class="h2">Icon Mask</div>
+                    <script type="text/html">
+<div data-class="demo-grid">
+    <i class="icon icon-duplicate-mask"></i> <!-- icon mask example -->
 </div>
                     </script>
         
@@ -82,48 +98,48 @@
                     <script type="text/html">
 <ul data-class="demo-grid">
     <li>
-        <i class="icon-system-info xxxlg"></i>
+        <i class="icon icon-system-info xxxlg"></i>
         <span>xxxlg : 72*72</span>
     </li>
     <li>
-        <i class="icon-system-info xxlg"></i>
+        <i class="icon icon-system-info xxlg"></i>
         <span>xxlg : 64*64</span>
     </li>
     <li>
-        <i class="icon-system-info xlg"></i>
+        <i class="icon icon-system-info xlg"></i>
         <span>xlg : 48*48</span>
     </li>
     <li>
-        <i class="icon-system-info lg"></i>
+        <i class="icon icon-system-info lg"></i>
         <span>xlg : 40*40</span>
     </li>
     <li>
-        <i class="icon-system-info mlg"></i>
+        <i class="icon icon-system-info mlg"></i>
         <span>mlg : 32*32</span>
     </li>
     <li>
         <span>basic size</span>
-        <i class="icon-system-info md"></i>
+        <i class="icon icon-system-info md"></i>
         <span>md : 24*24</span>
     </li>
     <li>
-        <i class="icon-system-info smd"></i>
+        <i class="icon icon-system-info smd"></i>
         <span>smd : 20*20</span>
     </li>
     <li>
-        <i class="icon-system-info sm"></i>
+        <i class="icon icon-system-info sm"></i>
         <span>sm : 18*18</span>
     </li>
     <li>
-        <i class="icon-system-info xsm"></i>
+        <i class="icon icon-system-info xsm"></i>
         <span>xsm : 16*16</span>
     </li>
     <li>
-        <i class="icon-system-info xxs"></i>
+        <i class="icon icon-system-info xxs"></i>
         <span>xxs: 14*14</span>
     </li>
     <li>
-        <i class="icon-system-info xxxs"></i>
+        <i class="icon icon-system-info xxxs"></i>
         <span>xxxs: 12*12</span>
     </li>
 </ul>
