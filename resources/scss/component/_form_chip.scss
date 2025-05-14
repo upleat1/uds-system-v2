@@ -3,28 +3,28 @@
 @mixin form-chip-size-variable() {
 	$form-chip-size: (
 		small: (
-			size-height: var(--krds-size-height-6),
+			size-height: var(--upl-size-height-6),
 			check-size: 1.2rem,
-			padding-x: var(--krds-padding-4),
-			radius: var(--krds-radius-medium1),
-			pc-font-size: var(--krds-pc-font-size-label-small),
-			mobile-font-size: var(--krds-pc-font-size-label-small),
+			padding-x: var(--upl-padding-4),
+			radius: var(--upl-radius-medium1),
+			pc-font-size: var(--upl-pc-font-size-label-small),
+			mobile-font-size: var(--upl-pc-font-size-label-small),
 		),
 		medium: (
-			size-height: var(--krds-size-height-7),
-			check-size: var(--krds-icon--size-small),
-			padding-x: var(--krds-padding-5),
-			radius: var(--krds-radius-medium2),
-			pc-font-size: var(--krds-pc-font-size-label-medium),
-			mobile-font-size: var(--krds-pc-font-size-label-medium),
+			size-height: var(--upl-size-height-7),
+			check-size: var(--upl-icon--size-small),
+			padding-x: var(--upl-padding-5),
+			radius: var(--upl-radius-medium2),
+			pc-font-size: var(--upl-pc-font-size-label-medium),
+			mobile-font-size: var(--upl-pc-font-size-label-medium),
 		),
 		large: (
-			size-height: var(--krds-size-height-8),
-			check-size: var(--krds-icon--size-small),
-			padding-x: var(--krds-padding-6),
-			radius: var(--krds-radius-medium3),
-			pc-font-size: var(--krds-pc-font-size-label-large),
-			mobile-font-size: var(--krds-pc-font-size-label-large),
+			size-height: var(--upl-size-height-8),
+			check-size: var(--upl-icon--size-small),
+			padding-x: var(--upl-padding-6),
+			radius: var(--upl-radius-medium3),
+			pc-font-size: var(--upl-pc-font-size-label-large),
+			mobile-font-size: var(--upl-pc-font-size-label-large),
 		),
 	) !default;
 
@@ -32,11 +32,11 @@
 	@each $size, $types in $form-chip-size {
 		@each $type, $value in $types {
 			//css variable 생성
-			--krds-form-chip--#{$type}-#{$size}: #{$value};
+			--upl-form-chip--#{$type}-#{$size}: #{$value};
 		}
 	}
 
-	--krds-form-chip--gap: var(--krds-gap-2);
+	--upl-form-chip--gap: var(--upl-gap-2);
 
 	//class 정의
 	& {
@@ -60,46 +60,46 @@
 
 //컬러 정의
 @mixin form-chip-color-variable($mode: light) {
-	--krds-form-chip--color-text: var(--krds-#{$mode}-color-text-basic);
-	--krds-form-chip--color-text-checked: var(--krds-#{$mode}-color-text-primary);
-	--krds-form-chip--color-text-disabled: var(--krds-#{$mode}-color-text-disabled-on);
-	--krds-form-chip--color-action: var(--krds-#{$mode}-color-action-white);
-	--krds-form-chip--color-action-checked: var(--krds-#{$mode}-color-action-primary-selected);
-	--krds-form-chip--color-action-disabled: var(--krds-#{$mode}-color-action-disabled);
-	--krds-form-chip--color-border: var(--krds-#{$mode}-color-border-gray);
-	--krds-form-chip--color-border-checked: var(--krds-#{$mode}-color-border-primary);
-	--krds-form-chip--color-border-disabled: var(--krds-#{$mode}-color-border-disabled);
-	--krds-form-chip--color-check: var(--krds-#{$mode}-color-element-disabled-dark);
-	--krds-form-chip--color-check-checked: var(--krds-#{$mode}-color-icon-primary);
-	--krds-form-chip--color-check-disabled: var(--krds-#{$mode}-color-icon-disabled-on);
+	--upl-form-chip--color-text: var(--upl-#{$mode}-color-text-basic);
+	--upl-form-chip--color-text-checked: var(--upl-#{$mode}-color-text-primary);
+	--upl-form-chip--color-text-disabled: var(--upl-#{$mode}-color-text-disabled-on);
+	--upl-form-chip--color-action: var(--upl-#{$mode}-color-action-white);
+	--upl-form-chip--color-action-checked: var(--upl-#{$mode}-color-action-primary-selected);
+	--upl-form-chip--color-action-disabled: var(--upl-#{$mode}-color-action-disabled);
+	--upl-form-chip--color-border: var(--upl-#{$mode}-color-border-gray);
+	--upl-form-chip--color-border-checked: var(--upl-#{$mode}-color-border-primary);
+	--upl-form-chip--color-border-disabled: var(--upl-#{$mode}-color-border-disabled);
+	--upl-form-chip--color-check: var(--upl-#{$mode}-color-element-disabled-dark);
+	--upl-form-chip--color-check-checked: var(--upl-#{$mode}-color-icon-primary);
+	--upl-form-chip--color-check-disabled: var(--upl-#{$mode}-color-icon-disabled-on);
 }
 
 //칩 사이즈 정의
 @mixin form-chip($size) {
-	gap: var(--krds-form-chip--gap);
-	height: var(--krds-form-chip--size-height-#{$size});
-	padding: 0 var(--krds-form-chip--padding-x-#{$size});
-	background-color: var(--krds-form-chip--color-action);
-	border: 0.1rem solid var(--krds-form-chip--color-border);
-	border-radius: var(--krds-form-chip--radius-#{$size});
-	font-size: var(--krds-form-chip--pc-font-size-#{$size});
-	color: var(--krds-form-chip--color-text);
+	gap: var(--upl-form-chip--gap);
+	height: var(--upl-form-chip--size-height-#{$size});
+	padding: 0 var(--upl-form-chip--padding-x-#{$size});
+	background-color: var(--upl-form-chip--color-action);
+	border: 0.1rem solid var(--upl-form-chip--color-border);
+	border-radius: var(--upl-form-chip--radius-#{$size});
+	font-size: var(--upl-form-chip--pc-font-size-#{$size});
+	color: var(--upl-form-chip--color-text);
 	transition: .4s cubic-bezier(.4, .0, .23, 1);
 	@include size-medium {
-		font-size: var(--krds-form-chip--mobile-font-size-#{$size});
+		font-size: var(--upl-form-chip--mobile-font-size-#{$size});
 	}
 }
 //check icon 정의
 @mixin form-chip-check($size, $mode: light) {
-	@include svg-icon($size: var(--krds-form-chip--check-size-#{$size}), $mode: #{$mode});
+	@include svg-icon($size: var(--upl-form-chip--check-size-#{$size}), $mode: #{$mode});
 	@include icon-set(ico_checkbox_checked);
-	background-color: var(--krds-form-chip--color-check);
+	background-color: var(--upl-form-chip--color-check);
 	transition: .4s cubic-bezier(.4, .0, .23, 1);
 }
 
 //모드 설정
 $mode-setting: light;
-.krds-form-chip {
+.upl-form-chip {
 	@include form-chip-color-variable($mode: #{$mode-setting});
 	@include form-chip-size-variable();
 
@@ -121,22 +121,22 @@ $mode-setting: light;
 		}
 		&:disabled {
 			~ label {
-				background-color: var(--krds-form-chip--color-action-disabled);
-				border-color: var(--krds-form-chip--color-border-disabled);
-				color: var(--krds-form-chip--color-text-disabled);
+				background-color: var(--upl-form-chip--color-action-disabled);
+				border-color: var(--upl-form-chip--color-border-disabled);
+				color: var(--upl-form-chip--color-text-disabled);
 				cursor: default;
 				&:before {
-					background-color: var(--krds-form-chip--color-check-disabled) !important;
+					background-color: var(--upl-form-chip--color-check-disabled) !important;
 				}
 			}
 		}
 		&:checked {
 			~ label {
-				background-color: var(--krds-form-chip--color-action-checked);
-				border-color: var(--krds-form-chip--color-border-checked);
-				color: var(--krds-form-chip--color-text-checked);
+				background-color: var(--upl-form-chip--color-action-checked);
+				border-color: var(--upl-form-chip--color-border-checked);
+				color: var(--upl-form-chip--color-text-checked);
 				&:before {
-					background-color: var(--krds-form-chip--color-check-checked);
+					background-color: var(--upl-form-chip--color-check-checked);
 				}
 			}
 		}
@@ -151,7 +151,7 @@ $mode-setting: light;
 			~ label {
 				&:before {
 					display: inline-flex !important;
-					background-color: var(--krds-form-chip--color-check-checked);
+					background-color: var(--upl-form-chip--color-check-checked);
 				}
 			}
 		}
@@ -173,10 +173,10 @@ $mode-setting: light;
 }
 
 //고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
 	//모드 설정
-	$mode-setting: high-contrast;
-	.krds-form-chip {
+	$mode-setting: dark;
+	.upl-form-chip {
 		@include form-chip-color-variable($mode: #{$mode-setting});
 
 		$size: medium;
@@ -191,14 +191,14 @@ $mode-setting: light;
 			&:disabled {
 				~ label {
 					&:before {
-						background-color: var(--krds-form-chip--color-check-disabled) !important;
+						background-color: var(--upl-form-chip--color-check-disabled) !important;
 					}
 				}
 			}
 			&:checked {
 				~ label {
 					&:before {
-						background-color: var(--krds-form-chip--color-check-checked);
+						background-color: var(--upl-form-chip--color-check-checked);
 					}
 				}
 			}

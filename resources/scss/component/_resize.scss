@@ -1,25 +1,25 @@
 /* 화면 크기 조정 */
 //사이즈 정의
 @mixin resize-size-variable() {
-	--krds-resize--list-icon-radius: var(--krds-radius-small2);
+	--upl-resize--list-icon-radius: var(--upl-radius-small2);
 }
 
 //컬러 정의
 @mixin resize-color-variable($mode: light) {
-	--krds-resize--list-icon-color-border: var(--krds-#{$mode}-color-border-gray);
-	--krds-resize--list-icon-color-border-selected: var(--krds-#{$mode}-color-element-secondary);
-	--krds-resize--list-icon-color-background: var(--krds-#{$mode}-color-action-secondary);
-	--krds-resize--list-icon-color-background-selected: var(--krds-#{$mode}-color-element-secondary);
+	--upl-resize--list-icon-color-border: var(--upl-#{$mode}-color-border-gray);
+	--upl-resize--list-icon-color-border-selected: var(--upl-#{$mode}-color-element-secondary);
+	--upl-resize--list-icon-color-background: var(--upl-#{$mode}-color-action-secondary);
+	--upl-resize--list-icon-color-background-selected: var(--upl-#{$mode}-color-element-secondary);
 }
 
 //모드 설정
 $mode-setting: light;
-/* krds-drop-wrap */
-.krds-drop-wrap {
+/* upl-drop-wrap */
+.upl-drop-wrap {
 	@include resize-size-variable();
 	@include resize-color-variable(#{$mode-setting});
 
-	&.krds-resize {
+	&.upl-resize {
 		.drop-menu {
 			min-width: 15rem;
 		}
@@ -28,18 +28,18 @@ $mode-setting: light;
 				white-space: nowrap;
 				&::before {
 					@include pseudo();
-					@include square(var(--krds-icon--size-large));
+					@include square(var(--upl-icon--size-large));
 					background: url(#{$url}/img/component/icon/head_ico_font_sample.svg) no-repeat center / contain;
 					flex-shrink: 0;
-					border-radius: var(--krds-resize--list-icon-radius);
-					border: 0.1rem solid var(--krds-resize--list-icon-color-border);
-					background-color: var(--krds-resize--list-icon-color-background);
+					border-radius: var(--upl-resize--list-icon-radius);
+					border: 0.1rem solid var(--upl-resize--list-icon-color-border);
+					background-color: var(--upl-resize--list-icon-color-background);
 				}
 				&.active {
 					&::before {
 						background-image: url(#{$url}/img/component/icon/head_ico_font_sample_white.svg);
-						border-color: var(--krds-resize--list-icon-color-border-selected);
-						background-color: var(--krds-resize--list-icon-color-background-selected);
+						border-color: var(--upl-resize--list-icon-color-border-selected);
+						background-color: var(--upl-resize--list-icon-color-background-selected);
 					}
 				}
 				$sizes: (
@@ -63,9 +63,9 @@ $mode-setting: light;
 	}
 }
 
-// krds-scaled-layout
-.krds-scaled-layout {
-	.krds-in-page-navigation-type {
+// upl-scaled-layout
+.upl-scaled-layout {
+	.upl-in-page-navigation-type {
 		& > .inner:not(.in-between) {
 			padding-right: 0;
 		}
@@ -74,22 +74,22 @@ $mode-setting: light;
 				padding-right: 0;
 			}
 		}
-		.krds-in-page-navigation-area {
+		.upl-in-page-navigation-area {
 			position: static;
-			margin-bottom: var(--krds-gap-9);
+			margin-bottom: var(--upl-gap-9);
 		}
 	}
 }
 
 //고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
 	//모드 설정
-	$mode-setting: high-contrast;
+	$mode-setting: dark;
 
-	/* krds-drop-wrap */
-	.krds-drop-wrap {
+	/* upl-drop-wrap */
+	.upl-drop-wrap {
 		@include resize-color-variable(#{$mode-setting});
-		&.krds-resize {
+		&.upl-resize {
 			.item-link {
 				&::before {
 					background: url(#{$url}/img/component/icon/head_ico_font_sample_white.svg) no-repeat center / contain;

@@ -4,7 +4,7 @@
       "scss": {
         "transformGroup": "scss",
         "prefix": "upl",
-        "buildPath": "pub/assets/scss/",
+        "buildPath": "resources/scss/common/",
         "files": [
           {
             "destination": "_variables.scss",
@@ -15,7 +15,7 @@
       "css": {
         "transformGroup": "css",
         "prefix": "upl",
-        "buildPath": "pub/assets/css/",
+        "buildPath": "resources/css/common/",
         "files": [
           {
             "destination": "_variables.css",

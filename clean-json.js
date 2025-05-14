@@ -1,17 +1,71 @@
 const fs = require('fs');
 const path = require('path');
 
-const inputFile = path.join(__dirname, './tokens/tokens-figma.json');
-const outputFile = path.join(__dirname, './tokens/tokens.json');
+const inputFile = path.join(__dirname, './tokens/tokens-figma.json'); // Figma에서 추출한 JSON 파일 경로
+const outputFile = path.join(__dirname, './tokens/tokens.json'); // 변환된 JSON 파일을 저장할 경로
 
 // 제거할 루트 경로들
 const REMOVE_KEYS = [
   "primitive/Value-set",
-  "component/Value-set",
-  "semantic/light"
+  "semantic/Value-set"
 ];
 
-// font-weight 변환 함수
+// mode/{key} 구조를 {key}로 변환하는 함수
+function removeModeKeyAndTransform(obj) {
+  for (const key in obj) {
+    if (typeof obj[key] === 'object' && obj[key] !== null) {
+      if (key.startsWith('mode/')) {
+        // 'mode/' 앞부분을 제거하고 나머지 부분만 추출
+        const newKey = key.replace(/^mode\//, '');
+        obj[newKey] = obj[key];
+        delete obj[key]; // 'mode/{key}' 키 삭제
+      } else {
+        // 다른 객체 속성들에 대해 재귀 호출
+        removeModeKeyAndTransform(obj[key]);
+      }
+    }
+  }
+}
+
+// 참조 경로 맵을 생성: { "primary.100": "light.primary.100", ... }
+function buildReferenceMap(obj, parentPath = [], map = {}) {
+  for (const key in obj) {
+    const val = obj[key];
+    const currentPath = [...parentPath, key];
+
+    if (val?.value !== undefined) {
+      const shortKey = currentPath.slice(-2).join('.');
+      const fullKey = currentPath.join('.');
+      map[shortKey] = fullKey;
+    }
+
+    if (typeof val === 'object' && val !== null) {
+      buildReferenceMap(val, currentPath, map);
+    }
+  }
+  return map;
+}
+
+// 참조 문자열을 실제 경로 기반으로 수정하고 mode 제거
+function fixValueReferences(obj, refMap) {
+  const refRegex = /\{([a-zA-Z0-9._-]+)\}/g;
+
+  for (const key in obj) {
+    const val = obj[key];
+    if (typeof val === 'object' && val !== null) {
+      if (typeof val.value === 'string') {
+        val.value = val.value.replace(refRegex, (_, refPath) => {
+          // 'mode' 부분을 제거
+          const fixedRefPath = refPath.replace(/^mode\./, '');  // mode를 제거
+          return `{${refMap[fixedRefPath] || fixedRefPath}}`;  // 참조 경로를 실제 경로로 변경
+        });
+      }
+      fixValueReferences(val, refMap);
+    }
+  }
+}
+
+// font-weight 변환
 function convertFontWeight(obj) {
   const fontWeightMap = {
     "regular": 400,
@@ -22,17 +76,16 @@ function convertFontWeight(obj) {
   for (const key in obj) {
     const val = obj[key];
     if (typeof val === 'object' && val !== null) {
-      if (val.type === 'text' && fontWeightMap[val.value.toLowerCase()]) {
-        // font-weight 값이 'regular', 'semibold', 'bold'일 때 숫자로 변환
+      if (val.type === 'text' && fontWeightMap[val.value?.toLowerCase?.()]) {
         val.value = fontWeightMap[val.value.toLowerCase()];
       } else {
-        convertFontWeight(val); // 재귀
+        convertFontWeight(val);
       }
     }
   }
 }
 
-// 숫자(px)를 10px = 1rem 기준 rem 문자열로 변환
+// px → rem 변환
 function convertPxNumbersToRem(obj, base = 10) {
   for (const key in obj) {
     const val = obj[key];
@@ -41,13 +94,13 @@ function convertPxNumbersToRem(obj, base = 10) {
         const rem = (val.value / base).toFixed(4).replace(/\.?0+$/, '');
         val.value = `${rem}rem`;
       } else {
-        convertPxNumbersToRem(val, base); // 재귀
+        convertPxNumbersToRem(val, base);
       }
     }
   }
 }
 
-// 깊은 병합 함수
+// 깊은 병합
 function mergeDeep(target, source) {
   for (const key in source) {
     if (
@@ -70,7 +123,7 @@ try {
 
   const outputJson = {};
 
-  // 불필요한 데이터 제거
+  // 불필요한 루트 제거 및 병합
   for (const key in inputJson) {
     if (REMOVE_KEYS.includes(key)) {
       mergeDeep(outputJson, inputJson[key]);
@@ -79,15 +132,22 @@ try {
     }
   }
 
-  // font-weight 값 변환
+  // mode/{key} 구조를 {key}로 변환
+  removeModeKeyAndTransform(outputJson);  // 'mode' → 제거하고, 나머지 키만 추출
+
+  // 참조 경로 자동 보정
+  const refMap = buildReferenceMap(outputJson);
+  fixValueReferences(outputJson, refMap);
+
+  // font-weight 변환
   convertFontWeight(outputJson);
 
-  // px → rem 변환 (10px = 1rem 기준)
+  // px → rem 변환
   convertPxNumbersToRem(outputJson);
 
-  // 변환된 JSON 파일로 저장
+  // 저장
   fs.writeFileSync(outputFile, JSON.stringify(outputJson, null, 2), 'utf8');
-  console.log(`✅ 변환 완료! 모든 px 숫자가 10px 기준 rem으로 처리되었습니다. 저장 경로: ${outputFile}`);
+  console.log(`✅ 변환 완료! 저장 경로: ${outputFile}`);
 
 } catch (err) {
   console.error('❌ 변환 중 오류 발생:', err.message);

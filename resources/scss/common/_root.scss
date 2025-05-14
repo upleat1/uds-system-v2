@@ -4,63 +4,63 @@
 $mode-setting: light;
 :root {
 	//* PRIMITIVE *
-	--krds-font-family-base: var(--krds-typo-font-type);
-	--krds-font-size-base: #{$font-size-base};
+	--upl-font-family-base: var(--upl-typo-font-type);
+	--upl-font-size-base: #{$font-size-base};
 
 	//line heights
 	@each $type, $value in $font-line-heights {
-		--krds-line-height-#{$type}: #{$value};
+		--upl-line-height-#{$type}: #{$value};
 	}
 
 	//letter spacings
 	@each $type, $value in $font-letter-spacings {
-		--krds-letter-spacing-#{$type}: #{$value};
+		--upl-letter-spacing-#{$type}: #{$value};
 	}
 
 	//font weight
 	@each $type, $value in $font-weights {
-		--krds-font-weight-#{$type}: #{$value};
+		--upl-font-weight-#{$type}: #{$value};
 	}
 
 	//transition
-	--krds-transition-base: #{$transition-base};
-	--krds-transition-fade: #{$transition-fade};
-	--krds-transition-collapse: #{$transition-collapse};
-	--krds-transition-collapse-width: #{$transition-collapse-width};
+	--upl-transition-base: #{$transition-base};
+	--upl-transition-fade: #{$transition-fade};
+	--upl-transition-collapse: #{$transition-collapse};
+	--upl-transition-collapse-width: #{$transition-collapse-width};
 
 	//contents size
-	--krds-contents-size: #{$contents-size};
-	--krds-contents-padding-x: #{$contents-padding-x-pc};
-	--krds-contents-wrap-size: #{$contents-wrap-size};
+	--upl-contents-size: #{$contents-size};
+	--upl-contents-padding-x: #{$contents-padding-x-pc};
+	--upl-contents-wrap-size: #{$contents-wrap-size};
 
 	//box shadow (only for focus outline)
-	--krds-box-shadow-outline: 0 0 0 0.4rem var(--krds-#{$mode-setting}-color-border-primary);
-	--krds-box-shadow-outline-inset: inset 0 0 0 0.2rem var(--krds-#{$mode-setting}-color-border-primary);
+	--upl-box-shadow-outline: 0 0 0 0.4rem var(--upl-#{$mode-setting}-color-border-primary);
+	--upl-box-shadow-outline-inset: inset 0 0 0 0.2rem var(--upl-#{$mode-setting}-color-border-primary);
 
 	//screen zoom sizes
 	@each $type, $value in $screen-zoom-sizes {
-		--krds-zoom-#{$type}: #{$value};
+		--upl-zoom-#{$type}: #{$value};
 	}
 
 	//text underline offset
-	--krds-font-underline-offset: #{$font-underline-offset-default};
+	--upl-font-underline-offset: #{$font-underline-offset-default};
 
 	//svg icon size
 	@each $size, $value in $icon-sizes {
-		--krds-icon--size-#{$size}: #{$value};
+		--upl-icon--size-#{$size}: #{$value};
 	}
 
 }
 
 //고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
 	//모드 설정
-	$mode-setting: high-contrast;
+	$mode-setting: dark;
 
 	:root {
 		//box shadow (only for focus outline)
-		--krds-box-shadow-outline: 0 0 0 0.4rem var(--krds-#{$mode-setting}-color-border-primary);
-		--krds-box-shadow-outline-inset: inset 0 0 0 0.2rem var(--krds-#{$mode-setting}-color-border-primary);
+		--upl-box-shadow-outline: 0 0 0 0.4rem var(--upl-#{$mode-setting}-color-border-primary);
+		--upl-box-shadow-outline-inset: inset 0 0 0 0.2rem var(--upl-#{$mode-setting}-color-border-primary);
 	}
 }
 
@@ -68,7 +68,7 @@ $mode-setting: light;
 @include size-large-less {
 	:root {
 		//contents size
-		--krds-contents-padding-x: #{$contents-padding-x-mobile};
+		--upl-contents-padding-x: #{$contents-padding-x-mobile};
 	}
 
 }

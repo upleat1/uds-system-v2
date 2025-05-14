@@ -1,76 +1,76 @@
 /* 페이지네이션 */
 //사이즈 정의
 @mixin pagination-size-variable() {
-    --krds-pagination-gap: var(--krds-gap-3);
-    --krds-pagination-margin-top: var(--krds-pc-gap-layout-h2-h3);
-    --krds-pagination--size-height: var(--krds-size-height-6);
-    --krds-pagination--radius: var(--krds-radius-medium1);
-    --krds-pagination--prev-btn-padding-left: var(--krds-padding-2);
-    --krds-pagination--prev-btn-padding-right: var(--krds-padding-3);
+    --upl-pagination-gap: var(--upl-gap-3);
+    --upl-pagination-margin-top: var(--upl-pc-gap-layout-h2-h3);
+    --upl-pagination--size-height: var(--upl-size-height-6);
+    --upl-pagination--radius: var(--upl-radius-medium1);
+    --upl-pagination--prev-btn-padding-left: var(--upl-padding-2);
+    --upl-pagination--prev-btn-padding-right: var(--upl-padding-3);
     @include size-medium {
-        --krds-pagination-gap: var(--krds-gap-7) var(--krds-gap-3);
-        --krds-pagination-margin-top: var(--krds-mobile-gap-layout-h2-h3);
+        --upl-pagination-gap: var(--upl-gap-7) var(--upl-gap-3);
+        --upl-pagination-margin-top: var(--upl-mobile-gap-layout-h2-h3);
     }
 }
 
 //컬러 정의
 @mixin pagination-color-variable($mode: light) {
-    --krds-pagination--color-text: var(--krds-#{$mode}-color-text-subtle);
-    --krds-pagination--color-text-active: var(--krds-#{$mode}-color-text-inverse-static);
-    --krds-pagination--color-action: var(--krds-#{$mode}-color-action-secondary);
-    --krds-pagination--color-action-hover: var(--krds-#{$mode}-color-action-secondary-hover);
-    --krds-pagination--color-action-pressed: var(--krds-#{$mode}-color-action-secondary-pressed);
-    --krds-pagination--color-action-active: var(--krds-#{$mode}-color-action-secondary-active);
+    --upl-pagination--color-text: var(--upl-#{$mode}-color-text-subtle);
+    --upl-pagination--color-text-active: var(--upl-#{$mode}-color-text-inverse-static);
+    --upl-pagination--color-action: var(--upl-#{$mode}-color-action-secondary);
+    --upl-pagination--color-action-hover: var(--upl-#{$mode}-color-action-secondary-hover);
+    --upl-pagination--color-action-pressed: var(--upl-#{$mode}-color-action-secondary-pressed);
+    --upl-pagination--color-action-active: var(--upl-#{$mode}-color-action-secondary-active);
 }
 
 //모드 설정
 $mode-setting: light;
-.krds-pagination {
+.upl-pagination {
     @include pagination-color-variable(#{$mode-setting});
     @include pagination-size-variable();
     & {
         @include flex-layout($ai: center, $jc: center);
-        gap: var(--krds-pagination-gap);
+        gap: var(--upl-pagination-gap);
         width: 100%;
-        margin-top: var(--krds-pagination-margin-top);
-        color: var(--krds-pagination--color-text);
+        margin-top: var(--upl-pagination-margin-top);
+        color: var(--upl-pagination--color-text);
     }
     .page-navi,
     .page-link {
         @include flex-layout($d: inline-flex, $jc: center, $ai: center);
-        height: var(--krds-pagination--size-height);
-        background-color: var(--krds-pagination--color-action);
-        border-radius: var(--krds-pagination--radius);
-        transition: var(--krds-transition-base);
+        height: var(--upl-pagination--size-height);
+        background-color: var(--upl-pagination--color-action);
+        border-radius: var(--upl-pagination--radius);
+        transition: var(--upl-transition-base);
         &:hover {
-            background-color: var(--krds-pagination--color-action-hover);
+            background-color: var(--upl-pagination--color-action-hover);
         }
         &:active {
-            background-color: var(--krds-pagination--color-action-pressed);
+            background-color: var(--upl-pagination--color-action-pressed);
         }
     }
     .page-navi {
         &.prev {
             order: 1;
-            padding: 0 var(--krds-pagination--prev-btn-padding-right) 0 var(--krds-pagination--prev-btn-padding-left);
+            padding: 0 var(--upl-pagination--prev-btn-padding-right) 0 var(--upl-pagination--prev-btn-padding-left);
             &::before {
                 @include flex-layout($d: inline-flex, $jc: center, $ai: center);
                 @include pseudo();
-                @include svg-icon($size: var(--krds-icon--size-medium), $mode: light);
+                @include svg-icon($size: var(--upl-icon--size-medium), $mode: light);
                 @include icon-set(ico_angle);
-                background-color: var(--krds-pagination--color-text);
+                background-color: var(--upl-pagination--color-text);
                 transform: rotate(90deg);
             }
         }
         &.next {
             order: 3;
-            padding: 0 var(--krds-pagination--prev-btn-padding-left) 0 var(--krds-pagination--prev-btn-padding-right);
+            padding: 0 var(--upl-pagination--prev-btn-padding-left) 0 var(--upl-pagination--prev-btn-padding-right);
             &::after {
                 @include flex-layout($d: inline-flex, $jc: center, $ai: center);
                 @include pseudo();
-                @include svg-icon($size: var(--krds-icon--size-medium), $mode: light);
+                @include svg-icon($size: var(--upl-icon--size-medium), $mode: light);
                 @include icon-set(ico_angle);
-                background-color: var(--krds-pagination--color-text);
+                background-color: var(--upl-pagination--color-text);
                 transform: rotate(-90deg);
             }
         }
@@ -78,41 +78,41 @@ $mode-setting: light;
     .page-links {
         @include flex-layout($jc: center, $ai: center);
         order: 2;
-        gap: var(--krds-gap-3);
+        gap: var(--upl-gap-3);
         .page-link {
-            @include square(var(--krds-pagination--size-height));
+            @include square(var(--upl-pagination--size-height));
             &.link-dot {
                 @include svg-icon($mode: light);
                 @include icon-set(ico_ellipsis);
             }
             &.active {
-                background-color: var(--krds-pagination--color-action-active);
-                font-weight: var(--krds-font-weight-bold);
-                color: var(--krds-pagination--color-text-active);
+                background-color: var(--upl-pagination--color-action-active);
+                font-weight: var(--upl-font-weight-bold);
+                color: var(--upl-pagination--color-text-active);
             }
         }
     }
     + .helper-box {
-        margin-top: var(--krds-padding-10);
+        margin-top: var(--upl-padding-10);
     }
 }
 
 //고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
     //모드 설정
-    $mode-setting: high-contrast;
-    .krds-pagination {
+    $mode-setting: dark;
+    .upl-pagination {
         @include pagination-color-variable(#{$mode-setting});
 
         .page-navi {
             &.prev {
                 &::before {
-                    @include svg-icon($size: var(--krds-icon--size-medium), $mode: #{$mode-setting});
+                    @include svg-icon($size: var(--upl-icon--size-medium), $mode: #{$mode-setting});
                 }
             }
             &.next {
                 &::after {
-                    @include svg-icon($size: var(--krds-icon--size-medium), $mode: #{$mode-setting});
+                    @include svg-icon($size: var(--upl-icon--size-medium), $mode: #{$mode-setting});
                 }
             }
         }
@@ -128,7 +128,7 @@ $mode-setting: light;
 
 //태블릿 & 모바일 전용 속성
 @include size-large-less {
-	.krds-pagination {
+	.upl-pagination {
 		.page-links{
 			.page-link{
 				&:nth-child(6),
@@ -143,7 +143,7 @@ $mode-setting: light;
 
 //태블릿 & 모바일 전용 속성
 @include size-medium {
-    .krds-pagination {
+    .upl-pagination {
 
 
 		flex-wrap: wrap;
@@ -158,7 +158,7 @@ $mode-setting: light;
 			}
 		}
         + .helper-box {
-            margin-top: var(--krds-padding-9);
+            margin-top: var(--upl-padding-9);
         }
     }
 }

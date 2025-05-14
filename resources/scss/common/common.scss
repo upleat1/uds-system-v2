@@ -1,8 +1,7 @@
 //공통
 
-
 @import "path";
-@import "/resources/css/token/krds_tokens.css"; //디자인 토큰
+@import "/resources/css/common/_variables.css";  /* 디자인 토큰 */
 @import "include";
 
 @import "root";

@@ -1,25 +1,25 @@
 /* 언어 변경 */
 //사이즈 정의
 @mixin resize-size-variable() {
-	--krds-language--top-title-pc-font-size: var(--krds-pc-font-size-navigation-depth-medium-bold);
-	--krds-language--top-title-mobile-font-size: var(--krds-mobile-font-size-navigation-depth-medium-bold);
-	--krds-language--top-title-sub-pc-font-size: var(--krds-pc-font-size-navigation-depth-small);
-	--krds-language--top-title-sub-mobile-font-size: var(--krds-mobile-font-size-navigation-depth-small);
+	--upl-language--top-title-pc-font-size: var(--upl-pc-font-size-navigation-depth-medium-bold);
+	--upl-language--top-title-mobile-font-size: var(--upl-mobile-font-size-navigation-depth-medium-bold);
+	--upl-language--top-title-sub-pc-font-size: var(--upl-pc-font-size-navigation-depth-small);
+	--upl-language--top-title-sub-mobile-font-size: var(--upl-mobile-font-size-navigation-depth-small);
 }
 
 //컬러 정의
 @mixin language-color-variable($mode: light) {
-	--krds-language--top-title-color: var(--krds-#{$mode}-color-text-secondary);
-	--krds-language--top-title-sub-color: var(--krds-#{$mode}-color-text-subtle);
+	--upl-language--top-title-color: var(--upl-#{$mode}-color-text-secondary);
+	--upl-language--top-title-sub-color: var(--upl-#{$mode}-color-text-subtle);
 }
 
 //모드 설정
 $mode-setting: light;
 
-.krds-drop-wrap {
+.upl-drop-wrap {
 	@include language-color-variable(#{$mode-setting});
 
-  &.krds-language {
+  &.upl-language {
     .drop-menu {
 			min-width: 20rem;
 		}
@@ -27,18 +27,18 @@ $mode-setting: light;
       .current-laguage {
         @include flex-layout($fd: column, $ai: flex-start);
         strong {
-          color: var(--krds-language--top-title-color);
-          font-weight: var(--krds-font-weight-bold);
-          font-size: var(--krds-language--top-title-pc-font-size);
+          color: var(--upl-language--top-title-color);
+          font-weight: var(--upl-font-weight-bold);
+          font-size: var(--upl-language--top-title-pc-font-size);
           @include size-medium {
-            font-size: var(--krds-language--top-title-mobile-font-size);
+            font-size: var(--upl-language--top-title-mobile-font-size);
           }
         }
         span {
-          color: var(--krds-language--top-title-sub-color);
-          font-size: var(--krds-language--top-title-sub-pc-font-size);
+          color: var(--upl-language--top-title-sub-color);
+          font-size: var(--upl-language--top-title-sub-pc-font-size);
           @include size-medium {
-            font-size: var(--krds-language--top-title-sub-mobile-font-size);
+            font-size: var(--upl-language--top-title-sub-mobile-font-size);
           }
         }
       }
@@ -50,12 +50,12 @@ $mode-setting: light;
 }
 
 //고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
   //모드 설정
-  $mode-setting: high-contrast;
+  $mode-setting: dark;
 
-  /* krds-drop-wrap */
-  .krds-drop-wrap {
+  /* upl-drop-wrap */
+  .upl-drop-wrap {
 		@include language-color-variable(#{$mode-setting});
   }
 }

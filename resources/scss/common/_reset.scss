@@ -5,21 +5,21 @@ html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	font-family: var(--krds-font-family-base);
-	color: var(--krds-#{$mode-setting}-color-text-basic);
-	font-weight: var(--krds-font-weight-regular);
-	line-height: var(--krds-line-height-base);
+	font-family: var(--upl-font-family-base);
+	color: var(--upl-#{$mode-setting}-color-text-basic);
+	font-weight: var(--upl-font-weight-regular);
+	line-height: var(--upl-line-height-base);
 	word-break: keep-all;
 	word-wrap: break-word;
 	-webkit-tap-highlight-color : transparent;
 	scroll-behavior: smooth;
 }
 html {
-	font-size: var(--krds-font-size-base);
+	font-size: var(--upl-font-size-base);
 }
 body {
-	background-color: var(--krds-#{$mode-setting}-color-background-white);
-	font-size: var(--krds-pc-font-size-body-medium);
+	background-color: var(--upl-#{$mode-setting}-color-background-white);
+	font-size: var(--upl-pc-font-size-body-medium);
 	overflow-x: hidden;
 }
 //시스템 고대비모드 켜도 우리 style 적용되도록
@@ -28,30 +28,30 @@ body {
 }
 
 //고대비모드
-@include color-mode(high-contrast) {
+@include color-mode(dark) {
 	//모드 설정
-	$mode-setting: high-contrast;
+	$mode-setting: dark;
 	html, body {
-		color: var(--krds-#{$mode-setting}-color-text-basic);
+		color: var(--upl-#{$mode-setting}-color-text-basic);
 	}
 	body {
-		background-color: var(--krds-#{$mode-setting}-color-background-white);
+		background-color: var(--upl-#{$mode-setting}-color-background-white);
 	}
 }
 *:focus {
 	//@include focus();
-	outline: 0.2rem solid var(--krds-light-color-border-inverse);
+	outline: 0.2rem solid var(--upl-light-color-border-inverse);
 	outline-offset: 0;
-	box-shadow: var(--krds-box-shadow-outline);
+	box-shadow: var(--upl-box-shadow-outline);
 	transition: outline 0s, box-shadow 0s !important;
 }
 ::-moz-selection {
-	background: var(--krds-color-light-secondary-50);
-	color: var(--krds-color-light-gray-0);
+	background: var(--upl-color-light-secondary-50);
+	color: var(--upl-color-light-gray-0);
 }
 ::selection {
-	background: var(--krds-color-light-secondary-50);
-	color: var(--krds-color-light-gray-0);
+	background: var(--upl-color-light-secondary-50);
+	color: var(--upl-color-light-gray-0);
 }
 
 body,
@@ -92,7 +92,7 @@ label,
 	box-sizing: border-box;
 	-webkit-text-size-adjust: none;
 	font-family: inherit;
-	line-height: var(--krds-line-height-base);
+	line-height: var(--upl-line-height-base);
 	letter-spacing: inherit;
 }
 pre {
@@ -119,7 +119,7 @@ h4,
 h5,
 h6,
 strong {
-	font-weight: var(--krds-font-weight-bold);
+	font-weight: var(--upl-font-weight-bold);
 }
 article,
 aside,
@@ -160,7 +160,7 @@ i {
 }
 a,
 button {
-	transition: var(--krds-transition-base);
+	transition: var(--upl-transition-base);
 }
 a,
 a:hover,
@@ -295,15 +295,15 @@ caption {
 }
 
 .inner {
-	max-width: var(--krds-contents-wrap-size);
-	padding-left: var(--krds-contents-padding-x);
-	padding-right: var(--krds-contents-padding-x);
+	max-width: var(--upl-contents-wrap-size);
+	padding-left: var(--upl-contents-padding-x);
+	padding-right: var(--upl-contents-padding-x);
 }
 
 //responsive mobile
 @include size-medium {
 	body {
-		font-size: var(--krds-mobile-font-size-body-medium);
+		font-size: var(--upl-mobile-font-size-body-medium);
 	}
 	.pc-only {
 		display: none !important;

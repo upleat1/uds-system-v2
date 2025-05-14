@@ -4,38 +4,38 @@
 	//컬러 변수 배열 생성
 	$tag-size: (
 		small: (
-			wrapper-gap-x: var(--krds-gap-2),
-			wrapper-gap-y: var(--krds-gap-3),
-			size-height: var(--krds-size-height-4),
+			wrapper-gap-x: var(--upl-gap-2),
+			wrapper-gap-y: var(--upl-gap-3),
+			size-height: var(--upl-size-height-4),
 			button-size: 1.2rem,
-			padding-x: var(--krds-padding-3),
-			pc-font-size: var(--krds-pc-font-size-label-xsmall),
-			mobile-font-size: var(--krds-mobile-font-size-label-xsmall),
+			padding-x: var(--upl-padding-3),
+			pc-font-size: var(--upl-pc-font-size-label-xsmall),
+			mobile-font-size: var(--upl-mobile-font-size-label-xsmall),
 		),
 		medium: (
-			wrapper-gap-x: var(--krds-gap-3),
-			wrapper-gap-y: var(--krds-gap-3),
-			size-height: var(--krds-size-height-5),
+			wrapper-gap-x: var(--upl-gap-3),
+			wrapper-gap-y: var(--upl-gap-3),
+			size-height: var(--upl-size-height-5),
 			button-size: 1.2rem,
-			padding-x: var(--krds-padding-4),
-			pc-font-size: var(--krds-pc-font-size-label-small),
-			mobile-font-size: var(--krds-mobile-font-size-label-small),
+			padding-x: var(--upl-padding-4),
+			pc-font-size: var(--upl-pc-font-size-label-small),
+			mobile-font-size: var(--upl-mobile-font-size-label-small),
 		),
 		large: (
-			wrapper-gap-x: var(--krds-gap-3),
-			wrapper-gap-y: var(--krds-gap-4),
-			size-height: var(--krds-size-height-6),
-			button-size: var(--krds-size-height-2),
-			padding-x: var(--krds-padding-5),
-			pc-font-size: var(--krds-pc-font-size-label-medium),
-			mobile-font-size: var(--krds-mobile-font-size-label-medium),
+			wrapper-gap-x: var(--upl-gap-3),
+			wrapper-gap-y: var(--upl-gap-4),
+			size-height: var(--upl-size-height-6),
+			button-size: var(--upl-size-height-2),
+			padding-x: var(--upl-padding-5),
+			pc-font-size: var(--upl-pc-font-size-label-medium),
+			mobile-font-size: var(--upl-mobile-font-size-label-medium),
 		),
 	) !default;
 
 	//css variable 생성
 	@each $size, $types in $tag-size {
 		@each $type, $value in $types {
-			--krds-btn-tag--#{$type}-#{$size}: #{$value};
+			--upl-btn-tag--#{$type}-#{$size}: #{$value};
 		}
 	}
 
@@ -44,7 +44,7 @@
 		@each $size, $types in $tag-size {
 			&.#{$size} {
 				@include tag-wrapper(#{$size});
-				.krds-btn-tag {
+				.upl-btn-tag {
 					@include tag(#{$size});
 					.btn-delete {
 						@include tag-delete-button(#{$size});
@@ -55,38 +55,38 @@
 	}
 }
 @mixin tag-wrapper($size) {
-	gap: var(--krds-btn-tag--wrapper-gap-y-#{$size}) var(--krds-btn-tag--wrapper-gap-x-#{$size});
+	gap: var(--upl-btn-tag--wrapper-gap-y-#{$size}) var(--upl-btn-tag--wrapper-gap-x-#{$size});
 }
 @mixin tag($size) {
-	gap: var(--krds-gap-1);
-	height: var(--krds-btn-tag--size-height-#{$size});
-	padding: var(--krds-padding-3) var(--krds-btn-tag--padding-x-#{$size});
-	border-radius: var(--krds-btn-tag--size-height-#{$size});
-	font-size: var(--krds-btn-tag--pc-font-size-#{$size});
-	line-height: var(--krds-line-height-none);
+	gap: var(--upl-gap-1);
+	height: var(--upl-btn-tag--size-height-#{$size});
+	padding: var(--upl-padding-3) var(--upl-btn-tag--padding-x-#{$size});
+	border-radius: var(--upl-btn-tag--size-height-#{$size});
+	font-size: var(--upl-btn-tag--pc-font-size-#{$size});
+	line-height: var(--upl-line-height-none);
 	@include size-medium {
-		font-size: var(--krds-btn-tag--mobile-font-size-#{$size});
+		font-size: var(--upl-btn-tag--mobile-font-size-#{$size});
 	}
 }
 @mixin tag-delete-button($size) {
-	@include square(var(--krds-btn-tag--button-size-#{$size}));
+	@include square(var(--upl-btn-tag--button-size-#{$size}));
 	@include icon-set (ico_delete_fill, $effect: pure);
-	line-height: var(--krds-line-height-none);
+	line-height: var(--upl-line-height-none);
 }
 
 //컬러 정의
 @mixin tag-color-variable($mode: light) {
-	--krds-btn-tag--color-text: var(--krds-#{$mode}-color-text-basic);
-	--krds-btn-tag--color-action: var(--krds-#{$mode}-color-action-white);
-	--krds-btn-tag--color-action-hover: var(--krds-#{$mode}-color-action-secondary-hover);
-	--krds-btn-tag--color-action-pressed: var(--krds-#{$mode}-color-action-secondary-pressed);
-	--krds-btn-tag--color-border: var(--krds-#{$mode}-color-border-gray-light);
-	--krds-btn-tag--color-border-hover: var(--krds-#{$mode}-color-action-secondary-hover);
-	--krds-btn-tag--color-border-pressed: var(--krds-#{$mode}-color-action-secondary-pressed);
+	--upl-btn-tag--color-text: var(--upl-#{$mode}-color-text-basic);
+	--upl-btn-tag--color-action: var(--upl-#{$mode}-color-action-white);
+	--upl-btn-tag--color-action-hover: var(--upl-#{$mode}-color-action-secondary-hover);
+	--upl-btn-tag--color-action-pressed: var(--upl-#{$mode}-color-action-secondary-pressed);
+	--upl-btn-tag--color-border: var(--upl-#{$mode}-color-border-gray-light);
+	--upl-btn-tag--color-border-hover: var(--upl-#{$mode}-color-action-secondary-hover);
+	--upl-btn-tag--color-border-pressed: var(--upl-#{$mode}-color-action-secondary-pressed);
 }
 //모드 설정
 $mode-setting: light;
-.krds-tag-wrap {
+.upl-tag-wrap {
 	@include tag-color-variable(#{$mode-setting});
 	@include tag-size-variable();
 
@@ -98,18 +98,18 @@ $mode-setting: light;
 		@include tag-wrapper(#{$size});
 	}
 
-	.krds-btn-tag {
+	.upl-btn-tag {
 		@include flex-layout($d: inline-flex, $ai: center);
 		position: relative;
-		background-color: var(--krds-btn-tag--color-action);
-		border: 0.1rem solid var(--krds-btn-tag--color-border);
-		transition: var(--krds-transition-base);
+		background-color: var(--upl-btn-tag--color-action);
+		border: 0.1rem solid var(--upl-btn-tag--color-border);
+		transition: var(--upl-transition-base);
 		@include tag(#{$size});
 		&:hover {
-			background-color: var(--krds-btn-tag--color-action-hover);
+			background-color: var(--upl-btn-tag--color-action-hover);
 		}
 		&:active {
-			background-color: var(--krds-btn-tag--color-action-pressed);
+			background-color: var(--upl-btn-tag--color-action-pressed);
 		}
 		&.link {
 			&:hover,
@@ -123,10 +123,10 @@ $mode-setting: light;
 	}
 }
 //고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
 	//모드 설정
-	$mode-setting: high-contrast;
-	.krds-tag-wrap {
+	$mode-setting: dark;
+	.upl-tag-wrap {
 		@include tag-color-variable(#{$mode-setting});
 	}
 }

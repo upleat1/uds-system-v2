@@ -1,21 +1,21 @@
 /* 건너뛰기 링크 */
 //사이즈 정의
 @mixin skip-link-size-variable() {
-  --krds-skip-link--pc-font-size: var(--krds-pc-font-size-body-small);
-  --krds-skip-link--mobile-font-size: var(--krds-mobile-font-size-body-small);
+  --upl-skip-link--pc-font-size: var(--upl-pc-font-size-body-small);
+  --upl-skip-link--mobile-font-size: var(--upl-mobile-font-size-body-small);
 }
 
 //컬러 정의
 @mixin skip-link-color-variable($mode: light) {
-  --krds-skip-link--color-background: var(--krds-#{$mode}-color-background-inverse);
-  --krds-skip-link-color-text: var(--krds-#{$mode}-color-text-basic-inverse);
+  --upl-skip-link--color-background: var(--upl-#{$mode}-color-background-inverse);
+  --upl-skip-link-color-text: var(--upl-#{$mode}-color-text-basic-inverse);
 }
 
 
 //모드 설정
 $mode-setting: light;
 
-#krds-skip-link {
+#upl-skip-link {
   @include skip-link-size-variable();
   @include skip-link-color-variable(#{$mode-setting});
   
@@ -25,7 +25,7 @@ $mode-setting: light;
   z-index: 10000;
   width: 100%;
   text-align: center;
-  background-color: var(--krds-skip-link--color-background);
+  background-color: var(--upl-skip-link--color-background);
   a {
     &:not(:focus) {
       @include sr-only;
@@ -33,25 +33,25 @@ $mode-setting: light;
     &:focus {
       @include flex-layout($ai: center, $jc: center);
       @include focus();
-      font-size: var(--krds-pc-font-size-body-small);
-      color: var(--krds-skip-link-color-text);
+      font-size: var(--upl-pc-font-size-body-small);
+      color: var(--upl-skip-link-color-text);
       width: 100%;
-      height: var(--krds-size-height-5);
+      height: var(--upl-size-height-5);
       margin: 0 auto;
       text-align: center;
       @include size-medium {
-        font-size: var(--krds-skip-link--mobile-font-size);
+        font-size: var(--upl-skip-link--mobile-font-size);
       }
     }
   }
 }
 
 //고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
   //모드 설정
-  $mode-setting: high-contrast;
+  $mode-setting: dark;
 
-  #krds-skip-link {
+  #upl-skip-link {
     @include skip-link-color-variable(#{$mode-setting});
   }
 }

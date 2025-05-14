@@ -2,101 +2,101 @@
 
 //사이즈 정의
 @mixin in-page-navigation-size-variable() {
-	--krds-in-page-navigation--width: 16rem;
-	--krds-in-page-navigation--gap: var(--krds-gap-5);
-	--krds-in-page-navigation--position-top: 25.6rem;
-	--krds-in-page-navigation--position-right: calc((100% - var(--krds-contents-wrap-size)) / 2 - (var(--krds-in-page-navigation--width) - var(--krds-contents-padding-x) + var(--krds-pc-gap-layout-contents-right)));
-	--krds-in-page-navigation--header-gap: var(--krds-gap-2);
-	--krds-in-page-navigation--header-caption-pc-font-size: var(--krds-pc-font-size-body-xsmall);
-	--krds-in-page-navigation--header-caption-mobile-font-size: var(--krds-mobile-font-size-body-xsmall);
-	--krds-in-page-navigation--header-title-pc-font-size: var(--krds-pc-font-size-heading-xsmall);
-	--krds-in-page-navigation--header-title-mobile-font-size: var(--krds-mobile-font-size-heading-xsmall);
-	--krds-in-page-navigation--list-anchor-border-radius: var(--krds-radius-small3);
-	--krds-in-page-navigation--list-anchor-pc-font-size: var(--krds-pc-font-size-navigation-depth-small);
-	--krds-in-page-navigation--list-anchor-mobile-font-size: var(--krds-mobile-font-size-navigation-depth-small);
-	--krds-in-page-navigation--action-gap: var(--krds-gap-3);
-	--krds-in-page-navigation--action-info-pc-font-size: var(--krds-pc-font-size-body-small);
-	--krds-in-page-navigation--action-info-mobile-font-size: var(--krds-mobile-font-size-body-small);
+	--upl-in-page-navigation--width: 16rem;
+	--upl-in-page-navigation--gap: var(--upl-gap-5);
+	--upl-in-page-navigation--position-top: 25.6rem;
+	--upl-in-page-navigation--position-right: calc((100% - var(--upl-contents-wrap-size)) / 2 - (var(--upl-in-page-navigation--width) - var(--upl-contents-padding-x) + var(--upl-pc-gap-layout-contents-right)));
+	--upl-in-page-navigation--header-gap: var(--upl-gap-2);
+	--upl-in-page-navigation--header-caption-pc-font-size: var(--upl-pc-font-size-body-xsmall);
+	--upl-in-page-navigation--header-caption-mobile-font-size: var(--upl-mobile-font-size-body-xsmall);
+	--upl-in-page-navigation--header-title-pc-font-size: var(--upl-pc-font-size-heading-xsmall);
+	--upl-in-page-navigation--header-title-mobile-font-size: var(--upl-mobile-font-size-heading-xsmall);
+	--upl-in-page-navigation--list-anchor-border-radius: var(--upl-radius-small3);
+	--upl-in-page-navigation--list-anchor-pc-font-size: var(--upl-pc-font-size-navigation-depth-small);
+	--upl-in-page-navigation--list-anchor-mobile-font-size: var(--upl-mobile-font-size-navigation-depth-small);
+	--upl-in-page-navigation--action-gap: var(--upl-gap-3);
+	--upl-in-page-navigation--action-info-pc-font-size: var(--upl-pc-font-size-body-small);
+	--upl-in-page-navigation--action-info-mobile-font-size: var(--upl-mobile-font-size-body-small);
 }
 //컬러 정의
 @mixin in-page-navigation-color-variable($mode: light) {
-	--krds-in-page-navigation--color-text-bolder: var(--krds-#{$mode}-color-text-bolder);
-	--krds-in-page-navigation--color-text-sub: var(--krds-#{$mode}-color-text-subtle);
-	--krds-in-page-navigation--list-anchor-color-text-selected: var(--krds-#{$mode}-color-text-secondary);
-	--krds-in-page-navigation--list-anchor-color-background: var(--krds-#{$mode}-color-action-secondary);
-	--krds-in-page-navigation--list-anchor-color-background-hover: var(--krds-#{$mode}-color-action-secondary-hover);
-	--krds-in-page-navigation--list-anchor-color-background-pressed: var(--krds-#{$mode}-color-action-secondary-pressed);
-	--krds-in-page-navigation--list-anchor-color-background-selected: var(--krds-#{$mode}-color-action-secondary-selected);
+	--upl-in-page-navigation--color-text-bolder: var(--upl-#{$mode}-color-text-bolder);
+	--upl-in-page-navigation--color-text-sub: var(--upl-#{$mode}-color-text-subtle);
+	--upl-in-page-navigation--list-anchor-color-text-selected: var(--upl-#{$mode}-color-text-secondary);
+	--upl-in-page-navigation--list-anchor-color-background: var(--upl-#{$mode}-color-action-secondary);
+	--upl-in-page-navigation--list-anchor-color-background-hover: var(--upl-#{$mode}-color-action-secondary-hover);
+	--upl-in-page-navigation--list-anchor-color-background-pressed: var(--upl-#{$mode}-color-action-secondary-pressed);
+	--upl-in-page-navigation--list-anchor-color-background-selected: var(--upl-#{$mode}-color-action-secondary-selected);
 }
 
 // 모드 설정
 $mode-setting: light;
 
-.krds-in-page-navigation-type {
+.upl-in-page-navigation-type {
 	@include in-page-navigation-size-variable();
 	@include in-page-navigation-color-variable(#{$mode-setting});
 	
-	.krds-in-page-navigation-area {
-		@include position($p: fixed, $t: var(--krds-in-page-navigation--position-top), $r: var(--krds-in-page-navigation--position-right));
+	.upl-in-page-navigation-area {
+		@include position($p: fixed, $t: var(--upl-in-page-navigation--position-top), $r: var(--upl-in-page-navigation--position-right));
 		@include flex-layout($fd: column);
-		gap: var(--krds-in-page-navigation--gap);
-		width: var(--krds-in-page-navigation--width);
-		transition: var(--krds-transition-base);
+		gap: var(--upl-in-page-navigation--gap);
+		width: var(--upl-in-page-navigation--width);
+		transition: var(--upl-transition-base);
 		z-index: 10;
 		> * {
 			width: 100%;
 		}
 		.in-page-navigation-header {
 			@include flex-layout($fd: column);
-			gap: var(--krds-in-page-navigation--header-gap);
+			gap: var(--upl-in-page-navigation--header-gap);
 			.quick-caption {
-				font-size: var(--krds-in-page-navigation--header-caption-pc-font-size);
+				font-size: var(--upl-in-page-navigation--header-caption-pc-font-size);
 			}
 			.quick-title {
-				font-size: var(--krds-in-page-navigation--header-title-pc-font-size);
-				font-weight: var(--krds-font-weight-bold);
-				color: var(--krds-in-page-navigation--color-text-bolder);
+				font-size: var(--upl-in-page-navigation--header-title-pc-font-size);
+				font-weight: var(--upl-font-weight-bold);
+				color: var(--upl-in-page-navigation--color-text-bolder);
 			}
 		}
 		.in-page-navigation-list {
 			ul {
 				@include flex-layout($fd: column);
-				gap: var(--krds-gap-2);
+				gap: var(--upl-gap-2);
 			}
 			li {
 				width: 100%;
 				> a {
 					position: relative;
 					display: block;
-					padding: var(--krds-padding-2) var(--krds-padding-3);
-					font-size: var(--krds-in-page-navigation--list-anchor-pc-font-size);
-					color: var(--krds-in-page-navigation--color-text-sub);
-					background-color: var(--krds-in-page-navigation--list-anchor-color-background);
-					border-radius: var(--krds-in-page-navigation--list-anchor-border-radius);
-					transition: var(--krds-transition-base);
+					padding: var(--upl-padding-2) var(--upl-padding-3);
+					font-size: var(--upl-in-page-navigation--list-anchor-pc-font-size);
+					color: var(--upl-in-page-navigation--color-text-sub);
+					background-color: var(--upl-in-page-navigation--list-anchor-color-background);
+					border-radius: var(--upl-in-page-navigation--list-anchor-border-radius);
+					transition: var(--upl-transition-base);
 					&:hover {
-						background-color: var(--krds-in-page-navigation--list-anchor-color-background-hover);
+						background-color: var(--upl-in-page-navigation--list-anchor-color-background-hover);
 					}
 					&:active {
-						background-color: var(--krds-in-page-navigation--list-anchor-color-background-pressed);
+						background-color: var(--upl-in-page-navigation--list-anchor-color-background-pressed);
 					}
 					&.active {
-						color: var(--krds-in-page-navigation--list-anchor-color-text-selected);
-						background-color: var(--krds-in-page-navigation--list-anchor-color-background-selected);
-						font-weight: var(--krds-font-weight-bold);
+						color: var(--upl-in-page-navigation--list-anchor-color-text-selected);
+						background-color: var(--upl-in-page-navigation--list-anchor-color-background-selected);
+						font-weight: var(--upl-font-weight-bold);
 					}
 				}
 			}
 		}
 		.in-page-navigation-action {
 			@include flex-layout($fd: column, $ai: center);
-			gap: var(--krds-in-page-navigation--action-gap);
-			.krds-btn {
+			gap: var(--upl-in-page-navigation--action-gap);
+			.upl-btn {
 				width: 100%;
 			}
 			.quick-info {
-				font-size: var(--krds-in-page-navigation--action-info-pc-font-size);
-				color: var(--krds-in-page-navigation--color-text-sub);
+				font-size: var(--upl-in-page-navigation--action-info-pc-font-size);
+				color: var(--upl-in-page-navigation--color-text-sub);
 			}
 		}
 	}
@@ -104,50 +104,50 @@ $mode-setting: light;
 
 // scroll-down
 .scroll-down {
-	.krds-in-page-navigation-type {
-		.krds-in-page-navigation-area {
+	.upl-in-page-navigation-type {
+		.upl-in-page-navigation-area {
 			top: 6rem;
 		}
 	}
 }
 
 // 고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
 	//모드 설정
-	$mode-setting: high-contrast;
+	$mode-setting: dark;
 
-	// krds-in-page-navigation-type
-	.krds-in-page-navigation-type {
-		.krds-in-page-navigation-area {
+	// upl-in-page-navigation-type
+	.upl-in-page-navigation-type {
+		.upl-in-page-navigation-area {
 			// var
 			@include in-page-navigation-color-variable(#{$mode-setting});
 
 			.in-page-navigation-header {
 				.quick-title {
-					color: var(--krds-in-page-navigation--color-text-bolder);
+					color: var(--upl-in-page-navigation--color-text-bolder);
 				}
 			}
 			.in-page-navigation-list {
 				li {
 					> a {
-						color: var(--krds-in-page-navigation--color-text-sub);
-						background-color: var(--krds-in-page-navigation--list-anchor-color-background);
+						color: var(--upl-in-page-navigation--color-text-sub);
+						background-color: var(--upl-in-page-navigation--list-anchor-color-background);
 						&:hover {
-							background-color: var(--krds-in-page-navigation--list-anchor-color-background-hover);
+							background-color: var(--upl-in-page-navigation--list-anchor-color-background-hover);
 						}
 						&:active {
-							background-color: var(--krds-in-page-navigation--list-anchor-color-background-pressed);
+							background-color: var(--upl-in-page-navigation--list-anchor-color-background-pressed);
 						}
 						&.active {
-							color: var(--krds-in-page-navigation--list-anchor-color-text-selected);
-							background-color: var(--krds-in-page-navigation--list-anchor-color-background-selected);
+							color: var(--upl-in-page-navigation--list-anchor-color-text-selected);
+							background-color: var(--upl-in-page-navigation--list-anchor-color-background-selected);
 						}
 					}
 				}
 			}
 			.in-page-navigation-action {
 				.quick-info {
-					color: var(--krds-in-page-navigation--color-text-sub);
+					color: var(--upl-in-page-navigation--color-text-sub);
 				}
 			}
 		}
@@ -156,40 +156,40 @@ $mode-setting: light;
 
 // 1680 / 1280 설정
 @media (max-width: 1680px) {
-	.krds-in-page-navigation-type {
+	.upl-in-page-navigation-type {
 		& > .inner:not(.in-between) {
-			padding-right: calc(var(--krds-in-page-navigation--width) + var(--krds-pc-gap-layout-contents-right) + var(--krds-contents-padding-x));
+			padding-right: calc(var(--upl-in-page-navigation--width) + var(--upl-pc-gap-layout-contents-right) + var(--upl-contents-padding-x));
 		}
 		.in-between {
 			.contents {
-				padding-right: calc(var(--krds-in-page-navigation--width) + var(--krds-pc-gap-layout-contents-right));
+				padding-right: calc(var(--upl-in-page-navigation--width) + var(--upl-pc-gap-layout-contents-right));
 			}
 		}
-		.krds-in-page-navigation-area {
-			--krds-in-page-navigation--position-right: calc((100% - var(--krds-contents-wrap-size)) / 2 + var(--krds-contents-padding-x));
+		.upl-in-page-navigation-area {
+			--upl-in-page-navigation--position-right: calc((100% - var(--upl-contents-wrap-size)) / 2 + var(--upl-contents-padding-x));
 		}
 	}
 }
 @media (max-width: 1280px) {
-	.krds-in-page-navigation-type {
-		.krds-in-page-navigation-area {
-			--krds-in-page-navigation--position-right: var(--krds-contents-padding-x);
+	.upl-in-page-navigation-type {
+		.upl-in-page-navigation-area {
+			--upl-in-page-navigation--position-right: var(--upl-contents-padding-x);
 		}
 	}
 }
 
 // responsive mobile
 @include size-medium {
-	.krds-in-page-navigation-type {
+	.upl-in-page-navigation-type {
 		& > .inner:not(.in-between) {
-			padding-right: var(--krds-contents-padding-x);
+			padding-right: var(--upl-contents-padding-x);
 		}
-		.krds-in-page-navigation-area {
+		.upl-in-page-navigation-area {
 			position: static;
 			width: 100%;
 			transition: none;
 			~ .tab-conts{
-				margin-top: var(--krds-gap-8);
+				margin-top: var(--upl-gap-8);
 			}
 
 			.in-page-navigation-action {

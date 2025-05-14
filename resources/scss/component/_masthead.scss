@@ -1,51 +1,51 @@
 /* 공식 배너 */
 //사이즈 정의
 @mixin masthead-size-variable() {
-	--krds-masthead--inner-gap-y: var(--krds-gap-2);
-	--krds-masthead--inner-gap-x: var(--krds-gap-5);
-	--krds-masthead--inner-min-size-height: var(--krds-size-height-5);
-	--krds-masthead--inner-padding-y: var(--krds-padding-2);
-	--krds-masthead--pc-font-size: var(--krds-pc-font-size-body-small);
-	--krds-masthead--mobile-font-size: var(--krds-mobile-font-size-body-small);
+	--upl-masthead--inner-gap-y: var(--upl-gap-2);
+	--upl-masthead--inner-gap-x: var(--upl-gap-5);
+	--upl-masthead--inner-min-size-height: var(--upl-size-height-5);
+	--upl-masthead--inner-padding-y: var(--upl-padding-2);
+	--upl-masthead--pc-font-size: var(--upl-pc-font-size-body-small);
+	--upl-masthead--mobile-font-size: var(--upl-mobile-font-size-body-small);
 
 	//태블릿 & 모바일 전용 속성
 	@include size-large-less {
-		--krds-masthead--inner-padding-y: 0;
+		--upl-masthead--inner-padding-y: 0;
 	}
 }
 
 //컬러 정의
 @mixin masthead-color-variable($mode: light) {
-	--krds-masthead--color-surface: var(--krds-#{$mode}-color-surface-secondary-subtler);
+	--upl-masthead--color-surface: var(--upl-#{$mode}-color-surface-secondary-subtler);
 }
 
 //모드 설정
 $mode-setting: light;
 
-#krds-masthead {
+#upl-masthead {
 	@include masthead-color-variable(#{$mode-setting});
 	@include masthead-size-variable();
 
 	& {
 		position: relative;
 		z-index: 70;
-		background-color: var(--krds-masthead--color-surface);
+		background-color: var(--upl-masthead--color-surface);
 	}
 	.toggle-head {
 		.inner {
 			position: relative;
-			gap: var(--krds-masthead--inner-gap-y) var(--krds-masthead--inner-gap-x);
-			min-height: var(--krds-masthead--inner-min-size-height);
-			padding-top: var(--krds-masthead--inner-padding-y);
-			padding-bottom: var(--krds-masthead--inner-padding-y);
+			gap: var(--upl-masthead--inner-gap-y) var(--upl-masthead--inner-gap-x);
+			min-height: var(--upl-masthead--inner-min-size-height);
+			padding-top: var(--upl-masthead--inner-padding-y);
+			padding-bottom: var(--upl-masthead--inner-padding-y);
 		}
 		.nuri-txt {
 			@include flex-layout($ai: center);
-			gap: var(--krds-gap-3);
-			font-size: var(--krds-masthead--pc-font-size);
+			gap: var(--upl-gap-3);
+			font-size: var(--upl-masthead--pc-font-size);
 			word-break: break-all;
 			@include size-medium {
-				font-size: var(--krds-masthead--mobile-font-size);
+				font-size: var(--upl-masthead--mobile-font-size);
 			}
 			&::before {
 				@include pseudo();
@@ -57,7 +57,7 @@ $mode-setting: light;
 	//마크업 삭제여부 결정해야함
 	.toggle-body {
 		height: 0;
-		transition: var(--krds-transition-base);
+		transition: var(--upl-transition-base);
 		overflow: hidden;
 	}
 	.inner {
@@ -67,11 +67,11 @@ $mode-setting: light;
 }
 
 //고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
 	//모드 설정
-	$mode-setting: high-contrast;
+	$mode-setting: dark;
 
-	#krds-masthead {
+	#upl-masthead {
 		@include masthead-color-variable(#{$mode-setting});
 	}
 }

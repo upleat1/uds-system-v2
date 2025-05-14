@@ -4,54 +4,54 @@
 	//변수 배열 설정
 	$button-size: (
 		xsmall: (
-			size-height: var(--krds-size-height-5),
-			padding-x: var(--krds-padding-4),
+			size-height: var(--upl-size-height-5),
+			padding-x: var(--upl-padding-4),
 			padding-y: 0,
-			gap: var(--krds-gap-1),
-			radius: var(--krds-radius-small3),
-			pc-font-size: var(--krds-pc-font-size-label-small),
-			mobile-font-size: var(--krds-mobile-font-size-label-small),
-			font-weight: var(--krds-font-weight-regular),
+			gap: var(--upl-gap-1),
+			radius: var(--upl-radius-small3),
+			pc-font-size: var(--upl-pc-font-size-label-small),
+			mobile-font-size: var(--upl-mobile-font-size-label-small),
+			font-weight: var(--upl-font-weight-regular),
 		),
 		small: (
-			size-height: var(--krds-size-height-6),
-			padding-x: var(--krds-padding-5),
+			size-height: var(--upl-size-height-6),
+			padding-x: var(--upl-padding-5),
 			padding-y: 0,
-			gap: var(--krds-gap-1),
-			radius: var(--krds-radius-medium1),
-			pc-font-size: var(--krds-pc-font-size-label-small),
-			mobile-font-size: var(--krds-mobile-font-size-label-small),
-			font-weight: var(--krds-font-weight-regular),
+			gap: var(--upl-gap-1),
+			radius: var(--upl-radius-medium1),
+			pc-font-size: var(--upl-pc-font-size-label-small),
+			mobile-font-size: var(--upl-mobile-font-size-label-small),
+			font-weight: var(--upl-font-weight-regular),
 		),
 		medium: (
-			size-height: var(--krds-size-height-7),
-			padding-x: var(--krds-padding-6),
+			size-height: var(--upl-size-height-7),
+			padding-x: var(--upl-padding-6),
 			padding-y: 0,
-			gap: var(--krds-gap-2),
-			radius: var(--krds-radius-medium2),
-			pc-font-size: var(--krds-pc-font-size-label-medium),
-			mobile-font-size: var(--krds-mobile-font-size-label-medium),
-			font-weight: var(--krds-font-weight-regular),
+			gap: var(--upl-gap-2),
+			radius: var(--upl-radius-medium2),
+			pc-font-size: var(--upl-pc-font-size-label-medium),
+			mobile-font-size: var(--upl-mobile-font-size-label-medium),
+			font-weight: var(--upl-font-weight-regular),
 		),
 		large: (
-			size-height: var(--krds-size-height-8),
-			padding-x: var(--krds-padding-7),
+			size-height: var(--upl-size-height-8),
+			padding-x: var(--upl-padding-7),
 			padding-y: 0,
-			gap: var(--krds-gap-2),
-			radius: var(--krds-radius-medium3),
-			pc-font-size: var(--krds-pc-font-size-label-large),
-			mobile-font-size: var(--krds-mobile-font-size-label-large),
-			font-weight: var(--krds-font-weight-regular),
+			gap: var(--upl-gap-2),
+			radius: var(--upl-radius-medium3),
+			pc-font-size: var(--upl-pc-font-size-label-large),
+			mobile-font-size: var(--upl-mobile-font-size-label-large),
+			font-weight: var(--upl-font-weight-regular),
 		),
 		xlarge: (
-			size-height: var(--krds-size-height-9),
-			padding-x: var(--krds-padding-8),
+			size-height: var(--upl-size-height-9),
+			padding-x: var(--upl-padding-8),
 			padding-y: 0,
-			gap: var(--krds-gap-2),
-			radius: var(--krds-radius-medium4),
-			pc-font-size: var(--krds-pc-font-size-label-large),
-			mobile-font-size: var(--krds-mobile-font-size-label-large),
-			font-weight: var(--krds-font-weight-regular),
+			gap: var(--upl-gap-2),
+			radius: var(--upl-radius-medium4),
+			pc-font-size: var(--upl-pc-font-size-label-large),
+			mobile-font-size: var(--upl-mobile-font-size-label-large),
+			font-weight: var(--upl-font-weight-regular),
 		),
 	) !default;
 
@@ -59,7 +59,7 @@
 	@each $size, $types in $button-size {
 		@each $type, $value in $types {
 			//css variable 생성
-			--krds-button--#{$type}-#{$size}: #{$value};
+			--upl-button--#{$type}-#{$size}: #{$value};
 		}
 	}
 
@@ -81,61 +81,61 @@
 	//변수 배열 정의
 	$button-color-variable: (
 		primary: (
-			fill: var(--krds-#{$mode}-color-button-primary-fill),
-			fill-hover: var(--krds-#{$mode}-color-button-primary-fill-hover),
-			fill-pressed: var(--krds-#{$mode}-color-button-primary-fill-pressed),
-			fill-disabled: var(--krds-#{$mode}-color-button-disabled-fill),
-			border: var(--krds-#{$mode}-color-button-primary-fill),
-			border-disabled: var(--krds-#{$mode}-color-button-disabled-border),
-			text: var(--krds-#{$mode}-color-text-inverse-static),
-			text-disabled: var(--krds-#{$mode}-color-text-disabled-on),
+			fill: var(--upl-#{$mode}-color-button-primary-fill),
+			fill-hover: var(--upl-#{$mode}-color-button-primary-fill-hover),
+			fill-pressed: var(--upl-#{$mode}-color-button-primary-fill-pressed),
+			fill-disabled: var(--upl-#{$mode}-color-button-disabled-fill),
+			border: var(--upl-#{$mode}-color-button-primary-fill),
+			border-disabled: var(--upl-#{$mode}-color-button-disabled-border),
+			text: var(--upl-#{$mode}-color-text-inverse-static),
+			text-disabled: var(--upl-#{$mode}-color-text-disabled-on),
 		),
 		secondary: (
-			fill: var(--krds-#{$mode}-color-button-secondary-fill),
-			fill-hover: var(--krds-#{$mode}-color-button-secondary-fill-hover),
-			fill-pressed: var(--krds-#{$mode}-color-button-secondary-fill-pressed),
-			fill-disabled: var(--krds-#{$mode}-color-button-disabled-fill),
-			border: var(--krds-#{$mode}-color-button-secondary-border),
-			border-disabled: var(--krds-#{$mode}-color-button-disabled-border),
-			text: var(--krds-#{$mode}-color-text-primary),
-			text-disabled: var(--krds-#{$mode}-color-text-disabled-on),
+			fill: var(--upl-#{$mode}-color-button-secondary-fill),
+			fill-hover: var(--upl-#{$mode}-color-button-secondary-fill-hover),
+			fill-pressed: var(--upl-#{$mode}-color-button-secondary-fill-pressed),
+			fill-disabled: var(--upl-#{$mode}-color-button-disabled-fill),
+			border: var(--upl-#{$mode}-color-button-secondary-border),
+			border-disabled: var(--upl-#{$mode}-color-button-disabled-border),
+			text: var(--upl-#{$mode}-color-text-primary),
+			text-disabled: var(--upl-#{$mode}-color-text-disabled-on),
 		),
-		tertiary: (
-			fill: var(--krds-#{$mode}-color-button-tertiary-fill),
-			fill-hover: var(--krds-#{$mode}-color-button-tertiary-fill-hover),
-			fill-pressed: var(--krds-#{$mode}-color-button-tertiary-fill-pressed),
-			fill-disabled: var(--krds-#{$mode}-color-button-disabled-fill),
-			border: var(--krds-#{$mode}-color-button-tertiary-border),
-			border-disabled: var(--krds-#{$mode}-color-button-disabled-border),
-			text: var(--krds-#{$mode}-color-text-basic),
-			text-disabled: var(--krds-#{$mode}-color-text-disabled-on),
+		outlined: (
+			fill: var(--upl-#{$mode}-color-button-outlined-fill),
+			fill-hover: var(--upl-#{$mode}-color-button-outlined-fill-hover),
+			fill-pressed: var(--upl-#{$mode}-color-button-outlined-fill-pressed),
+			fill-disabled: var(--upl-#{$mode}-color-button-disabled-fill),
+			border: var(--upl-#{$mode}-color-button-outlined-border),
+			border-disabled: var(--upl-#{$mode}-color-button-disabled-border),
+			text: var(--upl-#{$mode}-color-text-basic),
+			text-disabled: var(--upl-#{$mode}-color-text-disabled-on),
 		),
 		text: (
-			fill: var(--krds-#{$mode}-color-button-text-fill),
-			fill-hover: var(--krds-#{$mode}-color-button-text-fill-hover),
-			fill-pressed: var(--krds-#{$mode}-color-button-text-fill-pressed),
-			fill-disabled: var(--krds-#{$mode}-color-button-text-fill),
-			border: var(--krds-#{$mode}-color-button-text-border),
-			border-disabled: var(--krds-#{$mode}-color-border-transparency),
-			text: var(--krds-#{$mode}-color-text-basic),
-			text-disabled: var(--krds-#{$mode}-color-text-disabled),
+			fill: var(--upl-#{$mode}-color-button-text-fill),
+			fill-hover: var(--upl-#{$mode}-color-button-text-fill-hover),
+			fill-pressed: var(--upl-#{$mode}-color-button-text-fill-pressed),
+			fill-disabled: var(--upl-#{$mode}-color-button-text-fill),
+			border: var(--upl-#{$mode}-color-button-text-border),
+			border-disabled: var(--upl-#{$mode}-color-border-transparency),
+			text: var(--upl-#{$mode}-color-text-basic),
+			text-disabled: var(--upl-#{$mode}-color-text-disabled),
 		),
 		link: (
-			fill: var(--krds-#{$mode}-color-button-text-fill),
-			fill-hover: var(--krds-#{$mode}-color-button-text-fill),
-			fill-pressed: var(--krds-#{$mode}-color-button-text-fill),
-			fill-disabled: var(--krds-#{$mode}-color-button-text-fill),
-			border: var(--krds-#{$mode}-color-button-text-border),
-			border-disabled: var(--krds-#{$mode}-color-border-transparency),
-			text: var(--krds-#{$mode}-color-link-default),
-			text-disabled: var(--krds-#{$mode}-color-text-disabled),
+			fill: var(--upl-#{$mode}-color-button-text-fill),
+			fill-hover: var(--upl-#{$mode}-color-button-text-fill),
+			fill-pressed: var(--upl-#{$mode}-color-button-text-fill),
+			fill-disabled: var(--upl-#{$mode}-color-button-text-fill),
+			border: var(--upl-#{$mode}-color-button-text-border),
+			border-disabled: var(--upl-#{$mode}-color-border-transparency),
+			text: var(--upl-#{$mode}-color-link-default),
+			text-disabled: var(--upl-#{$mode}-color-text-disabled),
 		),
 	) !default;
 
 	//css variable 생성
 	@each $color, $types in $button-color-variable {
 		@each $type, $value in $types {
-			--krds-button--color-#{$color}-#{$type}: #{$value};
+			--upl-button--color-#{$color}-#{$type}: #{$value};
 		}
 	}
 
@@ -167,7 +167,7 @@
 						@include btn-color-disabled(#{$color});
 						&:not(.icon) {
 							.svg-icon {
-								background-color: var(--krds-button--color-#{$color}-text-disabled);
+								background-color: var(--upl-button--color-#{$color}-text-disabled);
 							}
 						}
 						&:hover {
@@ -182,78 +182,86 @@
 
 /* icon 버튼 사이즈 */
 $button-icon-size: (
-	xsmall: var(--krds-size-height-2),
-	small: var(--krds-size-height-3),
-	medium: var(--krds-size-height-4),
-	large: var(--krds-size-height-5),
-	xlarge: var(--krds-size-height-6),
+	xsmall: var(--upl-size-height-2),
+	small: var(--upl-size-height-3),
+	medium: var(--upl-size-height-4),
+	large: var(--upl-size-height-5),
+	xlarge: var(--upl-size-height-6),
 ) !default;
 
 //text버튼은 높이와 좌우 padding값이 달라 재정의 함
 @mixin btn-text-variable() {
 	//text버튼은 높이와 좌우 padding값이 달라 재정의 함
-	--krds-button--size-height-xsmall: var(--krds-size-height-3);
-	--krds-button--padding-x-xsmall: var(--krds-padding-1);
-	--krds-button--padding-y-xsmall: var(--krds-number-0);
-	--krds-button--size-height-small: var(--krds-size-height-4);
-	--krds-button--padding-x-small: var(--krds-padding-1);
-	--krds-button--padding-y-small: var(--krds-number-0);
-	--krds-button--size-height-medium: var(--krds-size-height-5);
-	--krds-button--padding-x-medium: var(--krds-padding-1);
-	--krds-button--padding-y-medium: var(--krds-number-2);
-	--krds-button--size-height-large: var(--krds-size-height-6);
-	--krds-button--padding-x-large: var(--krds-padding-1);
-	--krds-button--padding-y-large: 0.5rem;
-	--krds-button--size-height-xlarge: var(--krds-size-height-7);
-	--krds-button--padding-x-xlarge: var(--krds-padding-1);
-	--krds-button--padding-y-xlarge: 0.9rem;
+	--upl-button--size-height-xsmall: var(--upl-size-height-3);
+	--upl-button--padding-x-xsmall: var(--upl-padding-1);
+	--upl-button--padding-y-xsmall: var(--upl-number-0);
+
+	--upl-button--size-height-small: var(--upl-size-height-4);
+	--upl-button--padding-x-small: var(--upl-padding-1);
+	--upl-button--padding-y-small: var(--upl-number-0);
+
+	--upl-button--size-height-medium: var(--upl-size-height-5);
+	--upl-button--padding-x-medium: var(--upl-padding-1);
+	--upl-button--padding-y-medium: var(--upl-number-2);
+
+	--upl-button--size-height-large: var(--upl-size-height-6);
+	--upl-button--padding-x-large: var(--upl-padding-1);
+	--upl-button--padding-y-large: 0.5rem;
+
+	--upl-button--size-height-xlarge: var(--upl-size-height-7);
+	--upl-button--padding-x-xlarge: var(--upl-padding-1);
+	--upl-button--padding-y-xlarge: 0.9rem;
 }
 //link버튼은 font size와 좌우 padding값이 달라 재정의 함
 @mixin btn-link-variable() {
-	--krds-button--pc-font-size-xsmall: var(--krds-pc-font-size-label-small);
-	--krds-button--mobile-font-size-xsmall: var(--krds-mobile-font-size-label-small);
-	--krds-button--padding-x-xsmall: var(--krds-padding-1);
-	--krds-button--pc-font-size-small: var(--krds-pc-font-size-label-small);
-	--krds-button--mobile-font-size-small: var(--krds-mobile-font-size-label-small);
-	--krds-button--padding-x-small: var(--krds-padding-1);
-	--krds-button--pc-font-size-medium: var(--krds-pc-font-size-label-medium);
-	--krds-button--mobile-font-size-medium: var(--krds-mobile-font-size-label-medium);
-	--krds-button--padding-x-medium: var(--krds-padding-1);
-	--krds-button--pc-font-size-large: var(--krds-pc-font-size-label-large);
-	--krds-button--mobile-font-size-large: var(--krds-mobile-font-size-label-large);
-	--krds-button--padding-x-large: var(--krds-padding-1);
-	--krds-button--pc-font-size-xlarge: var(--krds-pc-font-size-label-large);
-	--krds-button--mobile-font-size-xlarge: var(--krds-mobile-font-size-label-large);
-	--krds-button--padding-x-xlarge: var(--krds-padding-1);
+	--upl-button--pc-font-size-xsmall: var(--upl-pc-font-size-label-small);
+	--upl-button--mobile-font-size-xsmall: var(--upl-mobile-font-size-label-small);
+	--upl-button--padding-x-xsmall: var(--upl-padding-1);
+
+	--upl-button--pc-font-size-small: var(--upl-pc-font-size-label-small);
+	--upl-button--mobile-font-size-small: var(--upl-mobile-font-size-label-small);
+	--upl-button--padding-x-small: var(--upl-padding-1);
+
+	--upl-button--pc-font-size-medium: var(--upl-pc-font-size-label-medium);
+	--upl-button--mobile-font-size-medium: var(--upl-mobile-font-size-label-medium);
+	--upl-button--padding-x-medium: var(--upl-padding-1);
+
+	--upl-button--pc-font-size-large: var(--upl-pc-font-size-label-large);
+	--upl-button--mobile-font-size-large: var(--upl-mobile-font-size-label-large);
+	--upl-button--padding-x-large: var(--upl-padding-1);
+	
+	--upl-button--pc-font-size-xlarge: var(--upl-pc-font-size-label-large);
+	--upl-button--mobile-font-size-xlarge: var(--upl-mobile-font-size-label-large);
+	--upl-button--padding-x-xlarge: var(--upl-padding-1);
 }
 
 //컬러별 variable
 @mixin btn-color($color) {
-	background-color: var(--krds-button--color-#{$color}-fill);
-	border-color: var(--krds-button--color-#{$color}-border);
-	color: var(--krds-button--color-#{$color}-text);
+	background-color: var(--upl-button--color-#{$color}-fill);
+	border-color: var(--upl-button--color-#{$color}-border);
+	color: var(--upl-button--color-#{$color}-text);
 }
 @mixin btn-color-hover($color) {
-	background-color: var(--krds-button--color-#{$color}-fill-hover);
+	background-color: var(--upl-button--color-#{$color}-fill-hover);
 }
 @mixin btn-color-pressed($color) {
-	background-color: var(--krds-button--color-#{$color}-fill-pressed);
+	background-color: var(--upl-button--color-#{$color}-fill-pressed);
 }
 @mixin btn-color-disabled($color) {
-	background-color: var(--krds-button--color-#{$color}-fill-disabled);
-	border-color: var(--krds-button--color-#{$color}-border-disabled);
-	color: var(--krds-button--color-#{$color}-text-disabled);
+	background-color: var(--upl-button--color-#{$color}-fill-disabled);
+	border-color: var(--upl-button--color-#{$color}-border-disabled);
+	color: var(--upl-button--color-#{$color}-text-disabled);
 }
 @mixin btn-color-icon($color) {
-	background-color: var(--krds-button--color-#{$color}-text);
+	background-color: var(--upl-button--color-#{$color}-text);
 }
 
 //모드 설정
 $mode-setting: light;
-.krds-btn {
+.upl-btn {
 	@include button-size-variable();
 }
-.krds-btn {
+.upl-btn {
 	@include button-color-variable(#{$mode-setting});
 
 	& {
@@ -263,13 +271,13 @@ $mode-setting: light;
 		border-style: solid;
 		cursor: pointer;
 		white-space: nowrap;
-		transition: var(--krds-transition-base);
+		transition: var(--upl-transition-base);
 		@include border-size-mode(#{$mode-setting});
 	}
 
 	.svg-icon {
 		@include btn-color-icon(primary);
-		transition: var(--krds-transition-base);
+		transition: var(--upl-transition-base);
 	}
 	&:hover {
 		@include btn-color-hover(primary);
@@ -293,43 +301,43 @@ $mode-setting: light;
 		//large 사이즈 기준 기본 세팅수정
 		display: inline-block;
 		height: auto !important;
-		padding: var(--krds-button--padding-y-large) var(--krds-button--padding-x-large);
+		padding: var(--upl-button--padding-y-large) var(--upl-button--padding-x-large);
 		text-align: left;
 		white-space: normal;
 		&.xsmall {
-			min-height: var(--krds-button--size-height-xsmall);
-			padding: var(--krds-button--padding-y-xsmall) var(--krds-button--padding-x-xsmall);
+			min-height: var(--upl-button--size-height-xsmall);
+			padding: var(--upl-button--padding-y-xsmall) var(--upl-button--padding-x-xsmall);
 			.svg-icon {
 				margin-bottom: -0.3rem;
 			}
 		}
 		&.small {
-			padding: var(--krds-button--padding-y-small) var(--krds-button--padding-x-small);
+			padding: var(--upl-button--padding-y-small) var(--upl-button--padding-x-small);
 			.svg-icon {
 				margin-bottom: -0.3rem;
 			}
 		}
 		&.medium {
-			padding: var(--krds-button--padding-y-medium) var(--krds-button--padding-x-medium);
+			padding: var(--upl-button--padding-y-medium) var(--upl-button--padding-x-medium);
 			.svg-icon {
 				margin-bottom: -0.4rem;
 			}
 		}
 		&.large {
-			padding: var(--krds-button--padding-y-large) var(--krds-button--padding-x-large);
+			padding: var(--upl-button--padding-y-large) var(--upl-button--padding-x-large);
 			.svg-icon {
 				margin-bottom: -0.5rem;
 			}
 		}
 		&.xlarge {
-			padding: var(--krds-button--padding-y-xlarge) var(--krds-button--padding-x-xlarge);
+			padding: var(--upl-button--padding-y-xlarge) var(--upl-button--padding-x-xlarge);
 			.svg-icon {
 				margin-bottom: -0.6rem;
 			}
 		}
 		&.h-auto {
 			height: auto;
-			padding: var(--krds-padding-1) !important;
+			padding: var(--upl-padding-1) !important;
 		}
 		.svg-icon {
 			display: inline-block;
@@ -341,68 +349,68 @@ $mode-setting: light;
 		//large 사이즈 기준 기본 세팅수정
 		display: inline-block;
 		height: auto !important;
-		padding: 0 var(--krds-button--padding-x-large);
-		font-size: var(--krds-button--pc-font-size-large);
+		padding: 0 var(--upl-button--padding-x-large);
+		font-size: var(--upl-button--pc-font-size-large);
 		text-align: left;
 		white-space: normal;
 		@include size-medium {
-			font-size: var(--krds-button--mobile-font-size-large);
+			font-size: var(--upl-button--mobile-font-size-large);
 		}
 		&.xsmall {
-			padding: 0 var(--krds-button--padding-x-xsmall);
-			font-size: var(--krds-button--pc-font-size-xsmall);
+			padding: 0 var(--upl-button--padding-x-xsmall);
+			font-size: var(--upl-button--pc-font-size-xsmall);
 			@include size-medium {
-				font-size: var(--krds-button--mobile-font-size-xsmall);
+				font-size: var(--upl-button--mobile-font-size-xsmall);
 			}
 			.svg-icon {
 				margin-bottom: -0.3rem;
 			}
 		}
 		&.small {
-			padding: 0 var(--krds-button--padding-x-small);
-			font-size: var(--krds-button--pc-font-size-small);
+			padding: 0 var(--upl-button--padding-x-small);
+			font-size: var(--upl-button--pc-font-size-small);
 			@include size-medium {
-				font-size: var(--krds-button--mobile-font-size-small);
+				font-size: var(--upl-button--mobile-font-size-small);
 			}
 			.svg-icon {
 				margin-bottom: -0.3rem;
 			}
 		}
 		&.medium {
-			padding: 0 var(--krds-button--padding-x-medium);
-			font-size: var(--krds-button--pc-font-size-medium);
+			padding: 0 var(--upl-button--padding-x-medium);
+			font-size: var(--upl-button--pc-font-size-medium);
 			@include size-medium {
-				font-size: var(--krds-button--mobile-font-size-medium);
+				font-size: var(--upl-button--mobile-font-size-medium);
 			}
 			.svg-icon {
 				margin-bottom: -0.4rem;
 			}
 		}
 		&.large {
-			padding: 0 var(--krds-button--padding-x-large);
-			font-size: var(--krds-button--pc-font-size-large);
+			padding: 0 var(--upl-button--padding-x-large);
+			font-size: var(--upl-button--pc-font-size-large);
 			@include size-medium {
-				font-size: var(--krds-button--mobile-font-size-large);
+				font-size: var(--upl-button--mobile-font-size-large);
 			}
 			.svg-icon {
 				margin-bottom: -0.5rem;
 			}
 		}
 		&.xlarge {
-			padding: 0 var(--krds-button--padding-x-xlarge);
-			font-size: var(--krds-button--pc-font-size-xlarge);
+			padding: 0 var(--upl-button--padding-x-xlarge);
+			font-size: var(--upl-button--pc-font-size-xlarge);
 			@include size-medium {
-				font-size: var(--krds-button--mobile-font-size-xlarge);
+				font-size: var(--upl-button--mobile-font-size-xlarge);
 			}
 			.svg-icon {
 				margin-bottom: -0.6rem;
 			}
 		}
 		&.basic {
-			$color: var(--krds-#{$mode-setting}-color-text-basic);
+			$color: var(--upl-#{$mode-setting}-color-text-basic);
 			color: $color;
 			@include underline();
-			text-decoration-color: var(--krds-#{$mode-setting}-color-border-transparency);
+			text-decoration-color: var(--upl-#{$mode-setting}-color-border-transparency);
 			.svg-icon {
 				background-color: $color;
 			}
@@ -413,7 +421,7 @@ $mode-setting: light;
 			}
 		}
 		&:hover {
-			$color: var(--krds-#{$mode-setting}-color-link-hover);
+			$color: var(--upl-#{$mode-setting}-color-link-hover);
 			color: $color;
 			.svg-icon {
 				background-color: $color;
@@ -421,14 +429,14 @@ $mode-setting: light;
 		}
 		&:active,
 		&:focus {
-			$color: var(--krds-#{$mode-setting}-color-link-pressed);
+			$color: var(--upl-#{$mode-setting}-color-link-pressed);
 			color: $color;
 			.svg-icon {
 				background-color: $color;
 			}
 		}
 		&:visited {
-			$color: var(--krds-#{$mode-setting}-color-link-visited);
+			$color: var(--upl-#{$mode-setting}-color-link-visited);
 			color: $color;
 			text-decoration: none;
 			.svg-icon {
@@ -444,14 +452,14 @@ $mode-setting: light;
 	/* icon 버튼 (텍스트 없음) */
 	&.icon {
 		@each $size, $value in $button-icon-size {
-			--krds-button--icon-size-#{$size}: #{$value};
+			--upl-button--icon-size-#{$size}: #{$value};
 		}
 
 		//기본 세팅
-		@include square(var(--krds-button--icon-size-medium));
+		@include square(var(--upl-button--icon-size-medium));
 		padding: 0 !important;
 		background-color: transparent;
-		border-color: var(--krds-#{$mode-setting}-color-border-transparency);
+		border-color: var(--upl-#{$mode-setting}-color-border-transparency);
 		color: inherit;
 		border: 0;
 		&:hover,
@@ -462,7 +470,7 @@ $mode-setting: light;
 		& {
 			@each $size, $value in $button-icon-size {
 				&.#{$size} {
-					@include square(var(--krds-button--icon-size-#{$size}));
+					@include square(var(--upl-button--icon-size-#{$size}));
 					//icon size
 					.svg-icon {
 						@include square(100%);
@@ -472,7 +480,7 @@ $mode-setting: light;
 		}
 
 		.svg-icon {
-			background-color: var(--krds-#{$mode-setting}-color-text-basic);
+			background-color: var(--upl-#{$mode-setting}-color-text-basic);
 		}
 		&.pure {
 			.svg-icon {
@@ -481,34 +489,34 @@ $mode-setting: light;
 		}
 		//새로고침, 토글 등 보더 아이콘 버튼 형태
 		&.border {
-			background-color: var(--krds-#{$mode-setting}-color-background-white);
-			border: 0.1rem solid var(--krds-#{$mode-setting}-color-border-gray);
-			border-radius: var(--krds-radius-max);
+			background-color: var(--upl-#{$mode-setting}-color-background-white);
+			border: 0.1rem solid var(--upl-#{$mode-setting}-color-border-gray);
+			border-radius: var(--upl-radius-max);
 
 			//icon size 1.6rem
 			&.large {
 				.svg-icon {
-					@include square(var(--krds-icon--size-xsmall));
+					@include square(var(--upl-icon--size-xsmall));
 				}
 			}
 			&.xlarge {
 				.svg-icon {
-					@include square(var(--krds-icon--size-xlarge));
+					@include square(var(--upl-icon--size-xlarge));
 				}
 			}
 			&[disabled],
 			&.disabled {
-				background-color: var(--krds-#{$mode-setting}-color-button-disabled-fill);
+				background-color: var(--upl-#{$mode-setting}-color-button-disabled-fill);
 			}
 		}
 	}
 }
 
 //고대비모드
-@include color-mode($mode: high-contrast) {
+@include color-mode($mode: dark) {
 	//모드 설정
-	$mode-setting: high-contrast;
-	.krds-btn {
+	$mode-setting: dark;
+	.upl-btn {
 		@include border-size-mode(#{$mode-setting});
 		@include button-color-variable(#{$mode-setting});
 
@@ -517,14 +525,14 @@ $mode-setting: light;
 			//class명 검토
 			&.ico-filter {
 				.num {
-					color: var(--krds-#{$mode-setting}-color-text-basic-inverse);
-					background-color: var(--krds-#{$mode-setting}-color-element-primary);
+					color: var(--upl-#{$mode-setting}-color-text-basic-inverse);
+					background-color: var(--upl-#{$mode-setting}-color-element-primary);
 				}
 			}
 		}
 		&.link {
 			&.basic {
-				$color: var(--krds-#{$mode-setting}-color-text-basic);
+				$color: var(--upl-#{$mode-setting}-color-text-basic);
 				color: $color;
 				&:not(.icon) {
 					.svg-icon {
@@ -533,7 +541,7 @@ $mode-setting: light;
 				}
 			}
 			&:hover {
-				$color: var(--krds-#{$mode-setting}-color-link-hover);
+				$color: var(--upl-#{$mode-setting}-color-link-hover);
 				color: $color;
 				&:not(.icon) {
 					.svg-icon {
@@ -543,7 +551,7 @@ $mode-setting: light;
 			}
 			&:active,
 			&:focus {
-				$color: var(--krds-#{$mode-setting}-color-link-pressed);
+				$color: var(--upl-#{$mode-setting}-color-link-pressed);
 				color: $color;
 				&:not(.icon) {
 					.svg-icon {
@@ -552,7 +560,7 @@ $mode-setting: light;
 				}
 			}
 			&:visited {
-				$color: var(--krds-#{$mode-setting}-color-link-visited);
+				$color: var(--upl-#{$mode-setting}-color-link-visited);
 				color: $color;
 				&:not(.icon) {
 					.svg-icon {
@@ -565,19 +573,19 @@ $mode-setting: light;
 		/* icon 버튼 (텍스트 없음) */
 		&.icon {
 			background-color: transparent;
-			border-color: var(--krds-#{$mode-setting}-color-border-transparency);
+			border-color: var(--upl-#{$mode-setting}-color-border-transparency);
 
 			.svg-icon {
-				background-color: var(--krds-#{$mode-setting}-color-text-basic);
+				background-color: var(--upl-#{$mode-setting}-color-text-basic);
 			}
 			//새로고침, 토글 등 보더 아이콘 버튼 형태
 			&.border {
-				background-color: var(--krds-#{$mode-setting}-color-background-white);
-				border-color: var(--krds-#{$mode-setting}-color-border-gray);
+				background-color: var(--upl-#{$mode-setting}-color-background-white);
+				border-color: var(--upl-#{$mode-setting}-color-border-gray);
 
 				&[disabled],
 				&.disabled {
-					background-color: var(--krds-#{$mode-setting}-color-button-disabled-fill);
+					background-color: var(--upl-#{$mode-setting}-color-button-disabled-fill);
 				}
 			}
 		}
