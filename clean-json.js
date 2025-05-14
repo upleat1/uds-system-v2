@@ -1,66 +1,62 @@
 const fs = require('fs');
 const path = require('path');
 
-const inputFile = path.join(__dirname, './tokens/tokens-figma.json'); // Figma에서 추출한 JSON 파일 경로
-const outputFile = path.join(__dirname, './tokens/tokens.json'); // 변환된 JSON 파일을 저장할 경로
+const inputFile = path.join(__dirname, './tokens/tokens-figma.json');
+const outputFile = path.join(__dirname, './tokens/tokens.json');
 
-// 제거할 루트 경로들
 const REMOVE_KEYS = [
   "primitive/Value-set",
   "semantic/Value-set"
 ];
 
-// mode/{key} 구조를 {key}로 변환하는 함수
-function removeModeKeyAndTransform(obj) {
+// mode/light → light, mode/dark → dark
+function flattenModeKeys(obj) {
+  if (obj['mode/light']) {
+    obj['light'] = obj['mode/light'];
+    delete obj['mode/light'];
+  }
+  if (obj['mode/dark']) {
+    obj['dark'] = obj['mode/dark'];
+    delete obj['mode/dark'];
+  }
+
   for (const key in obj) {
-    if (typeof obj[key] === 'object' && obj[key] !== null) {
-      if (key.startsWith('mode/')) {
-        // 'mode/' 앞부분을 제거하고 나머지 부분만 추출
-        const newKey = key.replace(/^mode\//, '');
-        obj[newKey] = obj[key];
-        delete obj[key]; // 'mode/{key}' 키 삭제
-      } else {
-        // 다른 객체 속성들에 대해 재귀 호출
-        removeModeKeyAndTransform(obj[key]);
-      }
+    if (typeof obj[key] === 'object') {
+      flattenModeKeys(obj[key]);
     }
   }
 }
 
-// 참조 경로 맵을 생성: { "primary.100": "light.primary.100", ... }
-function buildReferenceMap(obj, parentPath = [], map = {}) {
+// 전체 참조 경로 테이블 생성 (대소문자 구분 유지)
+function buildReferenceMap(obj, pathStack = [], map = {}) {
   for (const key in obj) {
     const val = obj[key];
-    const currentPath = [...parentPath, key];
-
-    if (val?.value !== undefined) {
-      const shortKey = currentPath.slice(-2).join('.');
-      const fullKey = currentPath.join('.');
-      map[shortKey] = fullKey;
-    }
-
+    const currentPath = [...pathStack, key]; // ex: ['light', 'Color', 'primary', '50']
     if (typeof val === 'object' && val !== null) {
+      if (val.value !== undefined) {
+        const fullPath = currentPath.join('.'); // ex: light.Color.primary.50
+        const shortPath = currentPath.slice(-3).join('.'); // ex: Color.primary.50
+        map[shortPath] = fullPath;
+      }
       buildReferenceMap(val, currentPath, map);
     }
   }
   return map;
 }
 
-// 참조 문자열을 실제 경로 기반으로 수정하고 mode 제거
-function fixValueReferences(obj, refMap) {
+// 참조 경로 수정 (대소문자 유지)
+function fixReferences(obj, refMap) {
   const refRegex = /\{([a-zA-Z0-9._-]+)\}/g;
 
   for (const key in obj) {
     const val = obj[key];
     if (typeof val === 'object' && val !== null) {
       if (typeof val.value === 'string') {
-        val.value = val.value.replace(refRegex, (_, refPath) => {
-          // 'mode' 부분을 제거
-          const fixedRefPath = refPath.replace(/^mode\./, '');  // mode를 제거
-          return `{${refMap[fixedRefPath] || fixedRefPath}}`;  // 참조 경로를 실제 경로로 변경
+        val.value = val.value.replace(refRegex, (_, refKey) => {
+          return refMap[refKey] ? `{${refMap[refKey]}}` : `{${refKey}}`;
         });
       }
-      fixValueReferences(val, refMap);
+      fixReferences(val, refMap);
     }
   }
 }
@@ -123,7 +119,7 @@ try {
 
   const outputJson = {};
 
-  // 불필요한 루트 제거 및 병합
+  // 제거 대상 루트 정리
   for (const key in inputJson) {
     if (REMOVE_KEYS.includes(key)) {
       mergeDeep(outputJson, inputJson[key]);
@@ -132,12 +128,14 @@ try {
     }
   }
 
-  // mode/{key} 구조를 {key}로 변환
-  removeModeKeyAndTransform(outputJson);  // 'mode' → 제거하고, 나머지 키만 추출
+  // mode/light → light
+  flattenModeKeys(outputJson);
 
-  // 참조 경로 자동 보정
+  // 참조 경로 매핑 (대소문자 구분)
   const refMap = buildReferenceMap(outputJson);
-  fixValueReferences(outputJson, refMap);
+
+  // 참조 경로 수정
+  fixReferences(outputJson, refMap);
 
   // font-weight 변환
   convertFontWeight(outputJson);
@@ -147,8 +145,8 @@ try {
 
   // 저장
   fs.writeFileSync(outputFile, JSON.stringify(outputJson, null, 2), 'utf8');
-  console.log(`✅ 변환 완료! 저장 경로: ${outputFile}`);
+  console.log(`✅ 참조값 대소문자 구분 포함 완료: ${outputFile}`);
 
 } catch (err) {
-  console.error('❌ 변환 중 오류 발생:', err.message);
+  console.error('❌ 변환 오류:', err.message);
 }

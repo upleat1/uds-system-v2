@@ -3,56 +3,39 @@
 @mixin button-size-variable() {
 	//변수 배열 설정
 	$button-size: (
-		xsmall: (
-			size-height: var(--upl-size-height-5),
-			padding-x: var(--upl-padding-4),
+		large: (
+			size-height: var(--upl-number-56),
+			line-height: var(--upl-number-56),
+			padding-x: var(--upl-padding-16),
 			padding-y: 0,
-			gap: var(--upl-gap-1),
-			radius: var(--upl-radius-small3),
-			pc-font-size: var(--upl-pc-font-size-label-small),
-			mobile-font-size: var(--upl-mobile-font-size-label-small),
-			font-weight: var(--upl-font-weight-regular),
-		),
-		small: (
-			size-height: var(--upl-size-height-6),
-			padding-x: var(--upl-padding-5),
-			padding-y: 0,
-			gap: var(--upl-gap-1),
-			radius: var(--upl-radius-medium1),
-			pc-font-size: var(--upl-pc-font-size-label-small),
-			mobile-font-size: var(--upl-mobile-font-size-label-small),
-			font-weight: var(--upl-font-weight-regular),
+			gap: var(--upl-gap-8),
+			radius: var(--upl-radius-12),
+			pc-font-size: var(--upl-font-size-body-largem),
+			mobile-font-size: var(--upl-font-size-body-large),
+			font-weight: var(--upl-typo-font-weight-regular),
 		),
 		medium: (
-			size-height: var(--upl-size-height-7),
-			padding-x: var(--upl-padding-6),
+			size-height: var(--upl-number-48),
+			line-height: var(--upl-number-48),
+			padding-x: var(--upl-padding-16),
 			padding-y: 0,
-			gap: var(--upl-gap-2),
-			radius: var(--upl-radius-medium2),
-			pc-font-size: var(--upl-pc-font-size-label-medium),
-			mobile-font-size: var(--upl-mobile-font-size-label-medium),
-			font-weight: var(--upl-font-weight-regular),
+			gap: var(---upl-gap-8),
+			radius: var(--upl-radius-12),
+			pc-font-size: var(--upl-font-size-body-medium),
+			mobile-font-size: var(--upl-font-size-body-medium),
+			font-weight: var(--upl-typo-font-weight-regular),
 		),
-		large: (
-			size-height: var(--upl-size-height-8),
-			padding-x: var(--upl-padding-7),
+		small: (
+			size-height: var(--upl-number-40),
+			line-height: var(--upl-number-40),
+			padding-x: var(--upl-padding-16),
 			padding-y: 0,
-			gap: var(--upl-gap-2),
+			gap: var(--upl-gap-8),
 			radius: var(--upl-radius-medium3),
-			pc-font-size: var(--upl-pc-font-size-label-large),
-			mobile-font-size: var(--upl-mobile-font-size-label-large),
-			font-weight: var(--upl-font-weight-regular),
-		),
-		xlarge: (
-			size-height: var(--upl-size-height-9),
-			padding-x: var(--upl-padding-8),
-			padding-y: 0,
-			gap: var(--upl-gap-2),
-			radius: var(--upl-radius-medium4),
-			pc-font-size: var(--upl-pc-font-size-label-large),
-			mobile-font-size: var(--upl-mobile-font-size-label-large),
-			font-weight: var(--upl-font-weight-regular),
-		),
+			pc-font-size: var(--upl-font-size-body-small),
+			mobile-font-size: var(--upl-font-size-body-small),
+			font-weight: var(--upl-typo-font-weight-regular),
+		)
 	) !default;
 
 	//css variable 생성
@@ -81,10 +64,10 @@
 	//변수 배열 정의
 	$button-color-variable: (
 		primary: (
-			fill: var(--upl-#{$mode}-color-button-primary-fill),
-			fill-hover: var(--upl-#{$mode}-color-button-primary-fill-hover),
-			fill-pressed: var(--upl-#{$mode}-color-button-primary-fill-pressed),
-			fill-disabled: var(--upl-#{$mode}-color-button-disabled-fill),
+			fill: var(--upl-#{$mode}-button-stick-primary-default-background-color),
+			fill-hover: var(--upl-#{$mode}-button-stick-primary-pressed-background-color),
+			fill-pressed: var(--upl-#{$mode}-button-stick-primary-pressed-background-color),
+			fill-disabled: var(--upl-#{$mode}-button-stick-primary-disabled-background-color),
 			border: var(--upl-#{$mode}-color-button-primary-fill),
 			border-disabled: var(--upl-#{$mode}-color-button-disabled-border),
 			text: var(--upl-#{$mode}-color-text-inverse-static),
@@ -229,7 +212,7 @@ $button-icon-size: (
 	--upl-button--pc-font-size-large: var(--upl-pc-font-size-label-large);
 	--upl-button--mobile-font-size-large: var(--upl-mobile-font-size-label-large);
 	--upl-button--padding-x-large: var(--upl-padding-1);
-	
+
 	--upl-button--pc-font-size-xlarge: var(--upl-pc-font-size-label-large);
 	--upl-button--mobile-font-size-xlarge: var(--upl-mobile-font-size-label-large);
 	--upl-button--padding-x-xlarge: var(--upl-padding-1);
