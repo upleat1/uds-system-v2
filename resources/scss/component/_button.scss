@@ -1,4 +1,4 @@
-/* Button */
+/*** Button ***/
 // 공통 숫자 변수 생성 함수
 @mixin button-size-vars($prefix, $size, $props) {
 	@each $name, $value in $props {

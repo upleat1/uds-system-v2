@@ -71,7 +71,7 @@
     @include textfield-color-variants('upl-textfield--labelinline', 'basic');
 }
 
-
+// Form Group
 .form-group {
     @include textfield-variables();
     position: relative;

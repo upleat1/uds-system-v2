@@ -53,9 +53,9 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-size: 100%;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50%;
 }
 .icon.xxxs {
   width: var(--upl-iconsize-xxxs);
@@ -114,8 +114,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-arrow-right.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -132,8 +130,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-arrow-left.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -150,8 +146,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-arrow-down.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -168,8 +162,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-arrow-up.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -186,8 +178,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-system-info.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -204,8 +194,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-close.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -222,8 +210,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-delete.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -240,8 +226,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-duplicate.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -258,8 +242,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-info.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -276,8 +258,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-success.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -294,8 +274,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-error.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -312,13 +290,11 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-tooltip.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
 .icon.icon-duplicate-mask:before {
-  background-color: var(--upl-color-red-900);
+  background-color: var(--upl-light-color-text-basic);
   background-image: none;
   forced-color-adjust: none;
   -webkit-mask-repeat: no-repeat;
@@ -343,8 +319,6 @@
   mask-image: none;
   background-image: url(../../img/component/icon/icon-arrow-down.svg);
   background-color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
   -webkit-mask: none;
   mask: none;
 }
@@ -454,7 +428,7 @@
   }
 }
 .upl-drop-wrap .drop-menu .drop-list .item-link .ico-go {
-  background-color: var(--upl-color-red-900);
+  background-color: var(--upl-light-color-text-basic);
   background-image: none;
   forced-color-adjust: none;
 }
@@ -501,7 +475,7 @@
   --upl-dropdown--list-item-color-text-selected: var(--upl-dark-color-text-secondary);
 }
 [data-upl-mode=dark] .upl-drop-wrap .drop-list .item-link .ico-go {
-  background-color: var(--upl-color-red-900);
+  background-color: var(--upl-dark-color-text-basic);
   background-image: none;
   forced-color-adjust: none;
 }
@@ -816,12 +790,12 @@ caption {
 }
 
 .svg-icon {
-  background-color: var(--upl-color-red-900);
+  background-color: var(--upl-light-color-text-basic);
   background-image: none;
   forced-color-adjust: none;
 }
 .svg-icon.pure {
-  background-color: var(--upl-color-red-900);
+  background-color: var(--upl-light-color-text-basic);
   background-image: none;
   background-color: transparent !important;
   forced-color-adjust: none;
