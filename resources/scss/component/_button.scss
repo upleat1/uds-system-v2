@@ -215,11 +215,11 @@
 				height: var(--upl-button-text-#{$size}-icon-size);
 
 				&.left {
-					padding-right: var(--upl-button-text-icon-gap);
+					margin-right: var(--upl-button-text-icon-gap);
 				}
 
 				&.right {
-					padding-left: var(--upl-button-text-icon-gap);
+					margin-left: var(--upl-button-text-icon-gap);
 				}
 			}
 		}
