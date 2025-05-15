@@ -1,0 +1,332 @@
+/*** TextField ***/
+// TextField Variables
+@mixin textfield-color-variants($prefix, $path) {
+    --#{$prefix}-default-border-color: var(--upl-light-color-inputcontrols-#{$path}-default-border-color);
+    --#{$prefix}-default-font-color: var(--upl-light-color-inputcontrols-#{$path}-default-font-color);
+    --#{$prefix}-default-background-color: var(--upl-light-color-inputcontrols-#{$path}-default-background-color);
+
+    --#{$prefix}-focused-border-color: var(--upl-light-color-inputcontrols-#{$path}-focused-border-color);
+    --#{$prefix}-focused-font-color: var(--upl-light-color-inputcontrols-#{$path}-focused-font-color);
+    --#{$prefix}-focused-background-color: var(--upl-light-color-inputcontrols-#{$path}-focused-background-color);
+
+    --#{$prefix}-filled-border-color: var(--upl-light-color-inputcontrols-#{$path}-filled-border-color);
+    --#{$prefix}-filled-font-color: var(--upl-light-color-inputcontrols-#{$path}-filled-font-color);
+    --#{$prefix}-filled-background-color: var(--upl-light-color-inputcontrols-#{$path}-filled-background-color);
+
+    --#{$prefix}-disabled-border-color: var(--upl-light-color-inputcontrols-#{$path}-disabled-border-color);
+    --#{$prefix}-disabled-font-color: var(--upl-light-color-inputcontrols-#{$path}-disabled-font-color);
+    --#{$prefix}-disabled-background-color: var(--upl-light-color-inputcontrols-#{$path}-disabled-background-color);
+
+    --#{$prefix}-readonly-border-color: var(--upl-light-color-inputcontrols-#{$path}-readonly-border-color);
+    --#{$prefix}-readonly-font-color: var(--upl-light-color-inputcontrols-#{$path}-readonly-font-color);
+    --#{$prefix}-readonly-background-color: var(--upl-light-color-inputcontrols-#{$path}-readonly-background-color);
+
+    --#{$prefix}-error-border-color: var(--upl-light-color-inputcontrols-#{$path}-error-border-color);
+    --#{$prefix}-error-font-color: var(--upl-light-color-inputcontrols-#{$path}-error-font-color);
+    --#{$prefix}-error-background-color: var(--upl-light-color-inputcontrols-#{$path}-error-background-color);
+}
+
+@mixin textfield-variables() {
+    // 공통 메시지
+    --upl-textfield--message-icon-gap: var(--upl-gap-4);
+    --upl-textfield--message-font-size: var(--upl-font-size-body-small);
+    --upl-textfield--message-info-font-color: var(--upl-light-color-inputcontrols-message-info-font-color);
+    --upl-textfield--message-error-font-color: var(--upl-light-color-inputcontrols-message-error-font-color);
+    --upl-textfield--message-success-font-color: var(--upl-light-color-inputcontrols-message-success-font-color);
+
+    // Basic 텍스트필드
+    --upl-textfield--basic-label-font-size: var(--upl-font-size-body-small);
+    --upl-textfield--basic-label-font-color: var(--upl-light-color-inputcontrols-basic-label-font-color);
+    --upl-textfield--basic-message-gap-y: var(--upl-gap-8);
+    --upl-textfield--basic-height: var(--upl-number-56);
+    --upl-textfield--basic-input-text-padding-x: var(--upl-padding-16);
+    --upl-textfield--basic-label-gap-y: var(--upl-gap-6);
+    --upl-textfield--basic-label-line-height: var(--upl-typo-line-height-font-size-14);
+    --upl-textfield--basic-input-font-weight: var(--upl-typo-font-weight-semi-bold);
+    --upl-textfield--basic-input-font-size: var(--upl-font-size-body-large);
+    --upl-textfield--basic-input-line-height: var(--upl-typo-line-height-font-size-18);
+    --upl-textfield--basic-radius: var(--upl-radius-12);
+    --upl-textfield--basic-border-left-width: var(--upl-number-1);
+    --upl-textfield--basic-border-top-width: var(--upl-number-1);
+    --upl-textfield--basic-border-right-width: var(--upl-number-1);
+    --upl-textfield--basic-border-bottom-width: var(--upl-number-1);
+
+    @include textfield-color-variants('upl-textfield--basic', 'basic');
+
+    // Label Inline 텍스트필드
+    --upl-textfield--labelinline-message-gap-y: var(--upl-gap-8);
+    --upl-textfield--labelinline-label-gap-y: var(--upl-gap-6);
+    --upl-textfield--labelinline-label-font-size: var(--upl-font-size-body-small);
+    --upl-textfield--labelinline-label-line-height: var(--upl-typo-line-height-font-size-14);
+    --upl-textfield--labelinline-input-line-height: var(--upl-typo-line-height-font-size-18);
+    --upl-textfield--labelinline-input-font-weight: var(--upl-typo-font-weight-semi-bold);
+    --upl-textfield--labelinline-input-font-size: var(--upl-font-size-body-large);
+    --upl-textfield--labelinline-height: var(--upl-number-84);
+    --upl-textfield--labelinline-input-text-gap-x: var(--upl-gap-16);
+    --upl-textfield--labelinline-input-text-padding-top: var(--upl-padding-16);
+    --upl-textfield--labelinline-default-font-color: var(--upl-light-color-inputcontrols-basic-default-font-color);
+    --upl-textfield--labelinline-radius: var(--upl-radius-16);
+    --upl-textfield--labelinline-border-width: var(--upl-number-1);
+
+    @include textfield-color-variants('upl-textfield--labelinline', 'basic');
+}
+
+
+.form-group {
+    @include textfield-variables();
+    position: relative;
+
+    &+.form-tip,
+    .form-row+& {
+        margin-top: var(--upl-gap-20);
+    }
+
+    .form-row {
+        display: flex;
+        align-items: center;
+
+        .space {
+            display: inline-block;
+            padding: 0 0.5rem;
+            vertical-align: middle;
+        }
+    }
+
+    .form-area {
+        position: relative;
+        width: 100%;
+    }
+
+    .form-ele {
+        .inp {
+            width: 100%;
+        }
+    }
+
+    &.basic {
+        +.form-tip {
+            @include textfield-variables();
+            margin-top: var(--upl-textfield--basic-message-gap-y);
+        }
+
+        .form-label {
+            margin-bottom: var(--upl-textfield--basic-label-gap-y);
+            font-size: var(--upl-textfield--basic-label-font-size);
+            line-height: var(--upl-textfield--basic-label-line-height);
+        }
+
+        .form-row .space {
+            align-self: flex-end;
+            height: var(--upl-textfield--basic-height);
+            line-height: var(--upl-textfield--basic-height);
+        }
+
+        .form-ele {
+            .inp {
+                position: relative;
+                height: var(--upl-textfield--basic-height);
+                padding: var(--upl-textfield--basic-input-text-padding-x);
+                font-weight: var(--upl-textfield--basic-input-font-weight);
+                font-size: var(--upl-textfield--basic-input-font-size);
+                line-height: var(--upl-textfield--basic-input-line-height);
+                border-radius: var(--upl-textfield--basic-radius);
+                border-style: solid;
+                border-width: var(--upl-textfield--basic-border-top-width) var(--upl-textfield--basic-border-right-width) var(--upl-textfield--basic-border-bottom-width) var(--upl-textfield--basic-border-left-width);
+            }
+
+            .btn-clear {
+                right: var(--upl-textfield--basic-input-text-padding-x);
+            }
+        }
+
+        &.default .inp {
+            border-color: var(--upl-textfield--basic-default-border-color);
+            color: var(--upl-textfield--basic-default-font-color);
+            background-color: var(--upl-textfield--basic-default-background-color);
+        }
+
+        &.focused .inp,
+        .inp:focus {
+            border-color: var(--upl-textfield--basic-focused-border-color);
+            color: var(--upl-textfield--basic-focused-font-color);
+            background-color: var(--upl-textfield--basic-focused-background-color);
+        }
+
+        &.filled .inp {
+            border-color: var(--upl-textfield--basic-filled-border-color);
+            color: var(--upl-textfield--basic-filled-font-color);
+            background-color: var(--upl-textfield--basic-filled-background-color);
+        }
+
+        &.disabled .inp,
+        .inp:disabled {
+            border-color: var(--upl-textfield--basic-disabled-border-color);
+            color: var(--upl-textfield--basic-disabled-font-color);
+            background: var(--upl-textfield--basic-disabled-background-color);
+        }
+
+        &.readonly .inp,
+        .inp[readonly] {
+            border-color: var(--upl-textfield--basic-readonly-border-color);
+            color: var(--upl-textfield--basic-readonly-font-color);
+            background-color: var(--upl-textfield--basic-readonly-background-color);
+        }
+
+        &.error .inp {
+            border-color: var(--upl-textfield--basic-error-border-color);
+            color: var(--upl-textfield--basic-error-font-color);
+            background-color: var(--upl-textfield--basic-error-background-color);
+        }
+    }
+
+    &.label-inline {
+        +.form-tip {
+            @include textfield-variables();
+            margin-top: var(--upl-textfield--labelinline-message-gap-y);
+        }
+
+        .form-label {
+            margin-bottom: var(--upl-textfield--labelinline-label-gap-y);
+            font-size: var(--upl-textfield--labelinline-label-font-size);
+            line-height: var(--upl-textfield--labelinline-label-line-height);
+        }
+
+        .inp {
+            height: var(--upl-textfield--labelinline-input-line-height);
+            font-weight: var(--upl-textfield--labelinline-input-font-weight);
+            font-size: var(--upl-textfield--labelinline-input-font-size);
+            line-height: var(--upl-textfield--labelinline-input-line-height);
+            background-color: transparent;
+            border: 0;
+        }
+
+        .form-area {
+            height: var(--upl-textfield--labelinline-height);
+            padding: var(--upl-textfield--labelinline-input-text-gap-x) var(--upl-textfield--labelinline-input-text-padding-top);
+            color: var(--upl-textfield--labelinline-default-font-color);
+            border-radius: var(--upl-textfield--labelinline-radius);
+            border: var(--upl-textfield--labelinline-border-width) solid var(--upl-textfield--labelinline-default-border-color);
+        }
+
+        &.default .form-area {
+            background-color: var(--upl-textfield--labelinline-default-background-color);
+        }
+
+        &.focused .form-area {
+            border-color: var(--upl-textfield--labelinline-focused-border-color);
+            color: var(--upl-textfield--labelinline-focused-font-color);
+            background-color: var(--upl-textfield--labelinline-focused-background-color);
+        }
+
+        &.filled .form-area {
+            border-color: var(--upl-textfield--labelinline-filled-border-color);
+            color: var(--upl-textfield--labelinline-filled-font-color);
+            background-color: var(--upl-textfield--labelinline-filled-background-color);
+        }
+
+        &.disabled .form-area {
+            border-color: var(--upl-textfield--labelinline-disabled-border-color);
+            color: var(--upl-textfield--labelinline-disabled-font-color);
+            background: var(--upl-textfield--labelinline-disabled-background-color);
+        }
+
+        &.readonly .form-area {
+            border-color: var(--upl-textfield--labelinline-readonly-border-color);
+            color: var(--upl-textfield--labelinline-readonly-font-color);
+            background-color: var(--upl-textfield--labelinline-readonly-background-color);
+        }
+
+        &.error .form-area {
+            border-color: var(--upl-textfield--labelinline-error-border-color);
+            color: var(--upl-textfield--labelinline-error-font-color);
+            background-color: var(--upl-textfield--labelinline-error-background-color);
+        }
+    }
+}
+
+// Label
+.form-label {
+    display: inline-block;
+    font-size: var(--upl-textfield--basic-label-font-size);
+    color: var(--upl-textfield--basic-label-font-color);
+}
+
+// Row
+.form-row {
+    display: flex;
+    width: 100%;
+
+    .form-ele {
+        position: relative;
+        width: 100%;
+    }
+}
+
+// Tip
+.form-tip {
+    @include textfield-variables();
+    position: relative;
+    padding-left: calc(var(--upl-iconsize-smd) + var(--upl-textfield--message-icon-gap));
+    font-size: var(--upl-textfield--message-font-size);
+    color: var(--upl-textfield--message-info-font-color);
+
+    &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: var(--upl-iconsize-smd);
+        height: var(--upl-iconsize-smd);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: var(--upl-iconsize-smd) auto;
+    }
+
+    &.info {
+        color: var(--upl-textfield--message-info-font-color);
+
+        &::before {
+            background-image: url(/resources/img/common/ico-20x-03.svg);
+        }
+    }
+
+    &.error {
+        color: var(--upl-textfield--message-error-font-color);
+
+        &::before {
+            background-image: url(/resources/img/common/ico-20x-03-error.svg);
+        }
+    }
+
+    &.success {
+        color: var(--upl-textfield--message-success-font-color);
+
+        &::before {
+            background-image: url(/resources/img/common/ico-20x-03-success.svg);
+        }
+    }
+}
+
+// Clear Button
+.form-ele {
+    .btn-clear {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: var(--upl-iconsize-smd);
+        height: var(--upl-iconsize-smd);
+        border-radius: 50%;
+        transform: translateY(-50%);
+        background-image: url(/resources/img/common/ico-20x-04.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: var(--upl-iconsize-smd) auto;
+    }
+
+    .inp[readonly]~.btn-clear,
+    .inp:disabled~.btn-clear {
+        display: none;
+    }
+}

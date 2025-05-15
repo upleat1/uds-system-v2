@@ -1,4 +1,19 @@
 /* Button */
+// 공통 숫자 변수 생성 함수
+@mixin button-size-vars($prefix, $size, $props) {
+	@each $name, $value in $props {
+		--upl-button-#{$prefix}-#{$size}-#{$name}: var(--upl-number-#{$value});
+	}
+}
+
+// 공통 텍스트 버튼 스타일 함수
+@mixin button-text-vars($size, $font-size, $line-height, $icon-size) {
+	--upl-button-text-#{$size}-font-size: var(--upl-number-#{$font-size});
+	--upl-button-text-#{$size}-line-height: var(--upl-number-#{$line-height});
+	--upl-button-text-#{$size}-icon-size: var(--upl-iconsize-#{$icon-size});
+}
+
+
 // Button Variables
 @mixin button-variables() {
 	// 공통 spacing
@@ -8,41 +23,34 @@
 	--upl-button-stick-wrap-gap-left: var(--upl-number-8);
 
 	// Stick Button Sizes
-	--upl-button-stick-large-height: var(--upl-number-56);
-	--upl-button-stick-large-padding-x: var(--upl-number-16);
-	--upl-button-stick-large-radius: var(--upl-number-12);
-	--upl-button-stick-large-font-size: var(--upl-number-18);
-	--upl-button-stick-large-line-height: var(--upl-number-26);
-	--upl-button-stick-large-border-width: var(--upl-number-1);
+	@include button-size-vars('stick', 'large', (height: 56,
+			padding-x: 16,
+			radius: 12,
+			font-size: 18,
+			line-height: 26,
+			border-width: 1));
 
-	// Solid Button Medium
-	--upl-button-solid-medium-height: var(--upl-number-48);
-	--upl-button-solid-medium-padding-x: var(--upl-number-16);
-	--upl-button-solid-medium-font-size: var(--upl-number-16);
-	--upl-button-solid-medium-radius: var(--upl-number-8);
-	--upl-button-solid-medium-border-width: var(--upl-number-1);
+	// Solid Button Sizes
+	@include button-size-vars('solid', 'medium', (height: 48,
+			padding-x: 16,
+			font-size: 16,
+			radius: 8,
+			border-width: 1));
 
-	// Solid Button Small
-	--upl-button-solid-small-height: var(--upl-number-40);
-	--upl-button-solid-small-padding-x: var(--upl-number-16);
-	--upl-button-solid-small-font-size: var(--upl-number-14);
-	--upl-button-solid-small-radius: var(--upl-number-6);
-	--upl-button-solid-small-border-width: var(--upl-number-1);
+	@include button-size-vars('solid', 'small', (height: 40,
+			padding-x: 16,
+			font-size: 14,
+			radius: 6,
+			border-width: 1));
 
 	// Text Button Sizes
-	--upl-button-text-large-font-size: var(--upl-number-18);
-	--upl-button-text-large-line-height: var(--upl-number-26);
-	--upl-button-text-medium-font-size: var(--upl-number-16);
-	--upl-button-text-medium-line-height: var(--upl-number-24);
-	--upl-button-text-small-font-size: var(--upl-number-14);
-	--upl-button-text-small-line-height: var(--upl-number-20);
-
-	--upl-button-text-large-icon-size: var(--upl-iconsize-sm);
-	--upl-button-text-medium-icon-size: var(--upl-iconsize-xsm);
-	--upl-button-text-small-icon-size: var(--upl-iconsize-xxs);
+	@include button-text-vars('large', 18, 26, sm);
+	@include button-text-vars('medium', 16, 24, xsm);
+	@include button-text-vars('small', 14, 20, xxs);
 
 	--upl-button-text-icon-gap: var(--upl-gap-4);
 }
+
 
 // Base Button
 .btn {
