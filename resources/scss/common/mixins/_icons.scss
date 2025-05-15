@@ -13,8 +13,6 @@
 		mask-image: none;
 		background-image: url(#{$url}/img/component/icon/#{$name});
 		background-color: transparent;
-		background-size: contain;
-		background-repeat: no-repeat;
 		-webkit-mask: none;
 		mask: none;
 	}
@@ -23,8 +21,7 @@
 //icon mask ( 추후 변경 예정 )
 @mixin svg-icon($size: var(--upl-iconsize-md), $mode: light, $effect: null) {
 	//@include square($size);
-	//background-color: var(--upl-#{$mode}-color-text-basic);
-	background-color: var(--upl-color-red-900);
+	background-color: var(--upl-#{$mode}-color-text-basic);
 	background-image: none;
 	@if ($effect == 'pure') { //mask 효과 없이 디자인된 svg 그대로 사용
 		background-color: transparent !important;
