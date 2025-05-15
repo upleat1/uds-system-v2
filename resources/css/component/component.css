@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Button */
 .btn {
   --upl-button-stick-wrap-height: 9.2rem;
   --upl-button-stick-wrap-padding-top: var(--upl-number-16);
