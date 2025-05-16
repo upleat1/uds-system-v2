@@ -1,0 +1,222 @@
+/*** DropDown SCSS ***/
+// 상태별 속성 묶음
+@mixin dropdown-state($type, $state, $prefix: upl-light-color-inputcontrols) {
+    --upl-dropdown--#{$type}-#{$state}-background-color: var(--#{$prefix}-#{$type}-#{$state}-background-color);
+    --upl-dropdown--#{$type}-#{$state}-font-color: var(--#{$prefix}-#{$type}-#{$state}-font-color);
+    --upl-dropdown--#{$type}-#{$state}-border-color: var(--#{$prefix}-#{$type}-#{$state}-border-color);
+}
+
+// label 관련 속성 묶음
+@mixin dropdown-label($type, $prefix: upl-light-color-inputcontrols) {
+    --upl-dropdown--#{$type}-label-gap-y: var(--upl-gap-6);
+    --upl-dropdown--#{$type}-label-font-size: var(--upl-font-size-body-small);
+    --upl-dropdown--#{$type}-label-font-color: var(--#{$prefix}-#{$type}-label-font-color);
+    --upl-dropdown--#{$type}-label-line-height: var(--upl-typo-line-height-font-size-14);
+}
+
+// 본문 텍스트 관련 속성
+@mixin dropdown-font($type) {
+    --upl-dropdown--#{$type}-font-weight: var(--upl-typo-font-weight-semi-bold);
+    --upl-dropdown--#{$type}-font-size: var(--upl-font-size-body-large);
+    --upl-dropdown--#{$type}-line-height: var(--upl-typo-line-height-font-size-18);
+}
+
+// 전체 스타일 정의 믹스인
+@mixin dropdown-variables {
+    // Basic
+    @include dropdown-label(basic);
+    @include dropdown-font(basic);
+    --upl-dropdown--basic-height: var(--upl-number-56);
+    --upl-dropdown--basic-text-padding-y: var(--upl-padding-16);
+    --upl-dropdown--basic-text-gap-x: var(--upl-gap-16);
+    --upl-dropdown--basic-radius: var(--upl-radius-12);
+    --upl-dropdown--basic-border-top-width: var(--upl-border-width-regular);
+    --upl-dropdown--basic-border-left-width: var(--upl-border-width-regular);
+    --upl-dropdown--basic-border-right-width: var(--upl-border-width-regular);
+    --upl-dropdown--basic-border-bottom-width: var(--upl-border-width-regular);
+
+    @include dropdown-state(basic, default);
+    @include dropdown-state(basic, focused);
+    @include dropdown-state(basic, filled);
+    @include dropdown-state(basic, readonly);
+    @include dropdown-state(basic, disabled);
+    @include dropdown-state(basic, error);
+
+    // Label Inline
+    @include dropdown-label(label-inline);
+    @include dropdown-font(label-inline);
+    --upl-dropdown--label-inline-height: var(--upl-number-84);
+    --upl-dropdown--label-inline-text-padding-x: var(--upl-padding-16);
+    --upl-dropdown--label-inline-border-width: var(--upl-border-width-regular);
+    --upl-dropdown--label-inline-radius: var(--upl-radius-16);
+
+    @include dropdown-state(label-inline, default);
+    @include dropdown-state(label-inline, focused);
+    @include dropdown-state(label-inline, filled);
+    @include dropdown-state(label-inline, readonly);
+    @include dropdown-state(label-inline, disabled);
+    @include dropdown-state(label-inline, error);
+}
+
+
+// DropDown Styles
+.form-group.dropdown {
+    @include dropdown-variables();
+
+    .select {
+        position: relative;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 1.6rem;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            background-image: url(/resources/img/common/ico-16x-01.svg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 2rem auto;
+        }
+    }
+
+    &.disabled .select::after {
+        background-image: url(/resources/img/common/ico-16x-01-disabled.svg);
+    }
+
+    .select-btn {
+        position: relative;
+        line-height: 1;
+        width: 100%;
+        text-align: left;
+    }
+
+    // Basic 스타일
+    &.basic {
+        .form-label {
+            margin-bottom: var(--upl-dropdown--basic-label-gap-y);
+            font-size: var(--upl-dropdown--basic-label-font-size);
+            color: var(--upl-dropdown--basic-label-font-color);
+            line-height: var(--upl-dropdown--basic-label-line-height);
+        }
+
+        .select .select-btn {
+            height: var(--upl-dropdown--basic-height);
+            padding: var(--upl-dropdown--basic-text-padding-y) calc(var(--upl-dropdown--basic-text-padding-y) + var(--upl-iconsize-smd) + var(--upl-dropdown--basic-text-gap-x)) var(--upl-dropdown--basic-text-padding-y) var(--upl-dropdown--basic-text-padding-y);
+            font-weight: var(--upl-dropdown--basic-font-weight);
+            font-size: var(--upl-dropdown--basic-font-size);
+            line-height: var(--upl-dropdown--basic-line-height);
+            border-radius: var(--upl-dropdown--basic-radius);
+            border-style: solid;
+            border-width: var(--upl-dropdown--basic-border-top-width) var(--upl-dropdown--basic-border-right-width) var(--upl-dropdown--basic-border-bottom-width) var(--upl-dropdown--basic-border-left-width);
+        }
+
+        &.default .select .select-btn {
+            background-color: var(--upl-dropdown--basic-default-background-color);
+            color: var(--upl-dropdown--basic-default-font-color);
+            border-color: var(--upl-dropdown--basic-default-border-color);
+        }
+
+        &.focused .select .select-btn,
+        .select .select-btn:focus {
+            background-color: var(--upl-dropdown--basic-focused-background-color);
+            color: var(--upl-dropdown--basic-focused-font-color);
+            border-color: var(--upl-dropdown--basic-focused-border-color);
+        }
+
+        &.filled .select .select-btn {
+            background-color: var(--upl-dropdown--basic-filled-background-color);
+            color: var(--upl-dropdown--basic-filled-font-color);
+            border-color: var(--upl-dropdown--basic-filled-border-color);
+        }
+
+        &.readonly .select .select-btn,
+        .select .select-btn[readonly] {
+            background-color: var(--upl-dropdown--basic-readonly-background-color);
+            color: var(--upl-dropdown--basic-readonly-font-color);
+            border-color: var(--upl-dropdown--basic-readonly-border-color);
+        }
+
+        &.disabled .select .select-btn,
+        .select .select-btn:disabled {
+            background: var(--upl-dropdown--basic-disabled-background-color);
+            color: var(--upl-dropdown--basic-disabled-font-color);
+            border-color: var(--upl-dropdown--basic-disabled-border-color);
+        }
+
+        &.error .select .select-btn {
+            background-color: var(--upl-dropdown--basic-error-background-color);
+            color: var(--upl-dropdown--basic-error-font-color);
+            border-color: var(--upl-dropdown--basic-error-border-color);
+        }
+
+        .form-row .space {
+            display: inline-block;
+            padding: 2.2rem 0.5rem 0;
+        }
+    }
+
+    // Label Inline 스타일
+    &.label-inline {
+        .select::after {
+            right: 0;
+        }
+
+        .form-label {
+            margin-bottom: var(--upl-dropdown--label-inline-label-gap-y);
+            font-size: var(--upl-dropdown--label-inline-label-font-size);
+            color: var(--upl-dropdown--label-inline-label-font-color);
+            line-height: var(--upl-dropdown--label-inline-label-line-height);
+        }
+
+        .form-area .select-btn {
+            font-weight: var(--upl-dropdown--label-inline-font-weight);
+            font-size: var(--upl-dropdown--label-inline-font-size);
+            line-height: var(--upl-dropdown--label-inline-line-height);
+            border-width: var(--upl-dropdown--label-inline-border-width);
+            border-radius: var(--upl-dropdown--label-inline-radius);
+        }
+
+        &.default .select .select-btn {
+            background-color: var(--upl-dropdown--label-inline-default-background-color);
+            color: var(--upl-dropdown--label-inline-default-font-color);
+            border-color: var(--upl-dropdown--label-inline-default-border-color);
+        }
+
+        &.focused .select .select-btn,
+        .select .select-btn:focus {
+            background-color: var(--upl-dropdown--label-inline-focused-background-color);
+            color: var(--upl-dropdown--label-inline-focused-font-color);
+            border-color: var(--upl-dropdown--label-inline-focused-border-color);
+        }
+
+        &.filled .select .select-btn {
+            background-color: var(--upl-dropdown--label-inline-filled-background-color);
+            color: var(--upl-dropdown--label-inline-filled-font-color);
+            border-color: var(--upl-dropdown--label-inline-filled-border-color);
+        }
+
+        &.readonly .select .select-btn,
+        .select .select-btn[readonly] {
+            background-color: var(--upl-dropdown--label-inline-readonly-background-color);
+            color: var(--upl-dropdown--label-inline-readonly-font-color);
+            border-color: var(--upl-dropdown--label-inline-readonly-border-color);
+        }
+
+        &.disabled .select .select-btn,
+        .select .select-btn:disabled {
+            background-color: var(--upl-dropdown--label-inline-disabled-background-color);
+            color: var(--upl-dropdown--label-inline-disabled-font-color);
+            border-color: var(--upl-dropdown--label-inline-disabled-border-color);
+        }
+
+        &.error .select .select-btn {
+            background-color: var(--upl-dropdown--label-inline-error-background-color);
+            color: var(--upl-dropdown--label-inline-error-font-color);
+            border-color: var(--upl-dropdown--label-inline-error-border-color);
+        }
+    }
+}
