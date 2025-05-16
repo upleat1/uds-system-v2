@@ -1,0 +1,311 @@
+/*** Dialog(Popup) ***/
+//사이즈 정의
+@mixin dialog-size-variables() {
+	--upl-dialogs--radius: var(--upl-radius-16);
+	--upl-dialogs--padding-x: var(--upl-padding-24);
+	--upl-dialogs--padding-y: var(--upl-padding-24);
+	// 폰트 사이즈 공통 정의 추후 확인 필요
+	// --upl-dialogs--title-font-weight: 700;
+	// --upl-dialogs--title-font-size: var(--upl-font-size-heading-medium);
+	// --upl-dialogs--title-line-height: 2.8rem;
+	--upl-dialogs--text-font-size: var(--upl-font-size-body-medium);
+	--upl-dialogs--text-line-height: var(--upl-typo-line-height-font-size-16);
+	--upl-dialogs--icon-gap: var(--upl-gap-16);
+	--upl-dialogs--icon-text-gap: var(--upl-gap-16);
+	--upl-dialogs--wrap-gap: var(--upl-gap-32);
+	--upl-dialogs--button-gap: var(--upl-gap-10);
+}
+
+//컬러 정의
+@mixin dialog-color-variable($mode: light) {
+	--upl-dialogs--background-color: var(--upl-#{$mode}-color-background-white);
+	--upl-dialogs--dim-color : var(--upl-#{$mode}-color-alpha-inverse75);
+	--upl-dialogs--title-font-color : var(--upl-#{$mode}-color-text-title);
+	--upl-dialogs--text-font-color : var(--upl-#{$mode}-color-text-basic);
+}
+
+//dialog default css
+@mixin dialog-default {
+	display: none;
+	@include position($p: fixed, $t: 0, $l: 0);
+	@include square(100%);	
+	z-index: 200;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background:rgba(0,0,0,0);
+	-webkit-transition: background 0.4s 0.1s;
+	transition: background 0.4s 0.1s;
+}
+
+//dialog head default css
+@mixin dialog-title-default {
+	margin: 0;
+	// font-weight: var(--upl-dialogs--title-font-weight);
+	// font-size: var(--upl-dialogs--title-font-size);
+	// line-height: var(--upl-dialogs--title-line-height);
+	color: var(--upl-dialogs--title-font-color);
+}
+
+//모드 설정
+$mode-setting: light;
+
+//추후 common 이동
+:root{
+    --upl-sab: calc(constant(safe-area-inset-bottom) / 2);
+    --upl-sab: calc(env(safe-area-inset-bottom) / 2);
+}
+.left {text-align:left !important;} /* 텍스트 정렬 */
+.right {text-align:right !important;}
+.center {text-align:center !important;}
+.top {vertical-align:top !important;}
+.middle {vertical-align:middle !important;}
+.bottom {vertical-align:bottom !important;}
+.scroll {overflow:auto; position:relative; width:100%;} /* 스크롤 */
+
+
+//lock 설정
+html.lock, 
+.lock {
+	body { 
+		overflow:hidden;
+	}
+	#wrap {
+		@include position($p: fixed, $b: 0, $l: 0);
+		@include square(100%);
+		-webkit-overflow-scrolling:none;
+	}
+}
+
+//콘텐츠 체크박스 영역
+.btn-check-wrap {
+	display: flex;
+	.btn-check-column {
+		display:block;
+		width:100%;
+	}
+}
+
+//message
+.result {
+	display:block;
+	margin:0 auto;
+	text-align:center;
+	&[class*=system]::before {
+		content:''; 
+		display:block;
+		width:var(--upl-iconsize-xxlg);
+		height:var(--upl-iconsize-xxlg);
+		margin:0 auto var(--upl-dialogs--icon-gap);
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:100%;
+	}
+
+	&.system-info::before {
+		background-image:url(/resources/img/component/icon/icon-system-info.svg);
+	}
+	&.system-success::before {
+		background-image:url(/resources/img/component/icon/icon-system-info.svg);
+	}
+	&.system-fail::before {
+		background-image:url(/resources/img/component/icon/icon-system-info.svg);
+	}
+	.tit {
+		font-size:var(--upl-font-size-heading-medium);
+		color:var(--upl-#{$mode-setting}-color-text-tit);
+		font-weight:var(--upl-typo-font-weight-bold);
+	}
+	.txt {
+		margin-top:var(--upl-dialogs--icon-text-gap);
+		font-size:var(--upl-font-size-body-medium);
+		color:var(--upl-dialogs--text-font-color);
+	}
+}
+
+// 팝업
+.popup {
+	@include dialog-size-variables();
+	@include dialog-color-variable(#{$mode-setting});
+	@include dialog-default();
+
+	.pop-close {
+		display:block;
+		overflow:hidden;
+		position:absolute;
+		@include square(var(--upl-touch-44));
+		background-image:url(#{$url}/img/component/icon/icon-close.svg);
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:var(--upl-iconsize-md);
+	}
+	.pop-bg-close {
+		display:block;
+		@include position($p: fixed, $t: 0, $b: 0, $l: 0, $r: 0);
+		pointer-events:auto;
+	}
+	&.bg-no-click {
+		.pop-bg-close {
+			display:none !important;
+		}
+	}
+
+	//pop-wrap
+	.pop-wrap {
+		width:100%;
+		max-height:100%;
+		background-color:var(--upl-dialogs--background-color);
+		-webkit-transform:translate3d(0, 10%, 0);
+		transform:translate3d(0, 10%, 0);
+		-webkit-transition:margin 0.4s,opacity 0.4s,visibility 0.4s,-webkit-transform 0.4s;
+		transition:margin 0.4s,opacity 0.4s,visibility 0.4s,-webkit-transform 0.4s;
+		visibility:hidden;
+		opacity:0;
+	}
+
+	//pop-head
+	.pop-head {
+		position:relative;
+		width:100%;
+		.h2 {
+			@include dialog-title-default();
+			text-align:left;
+		}
+	}
+	
+	//pop-body
+	.pop-body {
+		height:100%;
+		-webkit-transform:translate3d(0, 0, 0);
+		transform:translate3d(0, 0, 0);
+		-webkit-transform:translateZ(0);
+		transform:translateZ(0);
+		-webkit-overflow-scrolling:touch;
+		position:relative;
+		z-index:100;
+	}
+	.pop-section {
+		position:relative;
+		padding:0 var(--upl-dialogs--padding-x);
+		font-size:var(--upl-dialogs--text-font-size);
+		color:var(--upl-dialogs--text-font-color);
+		line-height:var(--upl-dialogs--text-line-height);
+	}
+
+	//pop-foot
+	.pop-foot {
+		> div {padding:0;}
+		.btn-area {
+			display:flex;
+			.btn {
+				width:100%;
+				min-width:auto;
+			}
+			span {
+				display:block;
+				width:100%
+			}
+			span + span {
+				margin-left:var(--upl-dialogs--button-gap);
+			}
+		}
+
+	}
+	&.foot {
+		.pop-foot {
+			@include position($b: 0, $l: 0);
+			width:100%;
+			z-index:210;
+			-webkit-transform:translate3d(0, 0, 0);
+			transform:translate3d(0, 0, 0);
+			-webkit-transform:translateZ(0);
+			transform:translateZ(0);
+		}
+	}
+
+	//기본타입 modal : 닫기 x 버튼 없음
+	&.modal {
+		padding: var(--upl-number-64) var(--upl-number-32);
+		-webkit-box-align:center;
+		-ms-flex-align:center;
+		align-items:center;
+		-webkit-box-pack:center;
+		-ms-flex-pack:center;
+		justify-content:center;
+
+		.pop-wrap {
+			overflow: hidden;
+			max-width: 64rem;
+			border-radius: var(--upl-dialogs--radius);
+			margin:0 auto;
+
+			.pop-body:first-child > .pop-section {
+				padding-top: var(--upl-dialogs--padding-y);
+			}
+		}
+		.pop-head {
+			> div {
+				min-height:auto;
+				padding: var(--upl-dialogs--padding-y) var(--upl-dialogs--padding-x);
+			}
+		}
+		.pop-foot {
+			> div {
+				padding: var(--upl-dialogs--wrap-gap) var(--upl-dialogs--padding-x) var(--upl-dialogs--padding-y);
+			}
+		}
+		.pop-section {
+			.section {
+				margin-top: var(--upl-dialogs--padding-y);
+			}
+		}
+		.btn-check-wrap {
+			padding-top: var(--upl-dialogs--wrap-gap);
+		}
+
+		/* 모달 no-title */
+		&.no-title {
+			.pop-head > div {
+				padding-bottom:0;
+			}
+		}
+	}
+
+	//alert, confirm
+	&.modal.alert {
+		z-index:300;
+		.message {
+			word-break:break-all;
+			text-align:left;
+		}
+	}
+}
+
+//활성화
+.popup.show {
+	display:block !important;
+	background-color:var(--upl-dialogs--dim-color);
+	-webkit-transition-delay:0s !important;
+	transition-delay:0s !important;
+
+	.pop-wrap {
+		-webkit-transform:translate3d(0, 0, 0) !important;
+		transform:translate3d(0, 0, 0) !important;
+		-webkit-transform:translateZ(0) !important;
+		-webkit-transition-delay:0.1s !important;
+		transition-delay:0.1s !important;
+		visibility:visible !important;
+		opacity:1 !important;
+	}
+
+	&.modal {
+		display:-webkit-box !important;
+		display:-ms-flexbox !important;
+		display:flex !important;
+	}
+
+	&.no-dimmed {
+		background:none;
+		@include position($p: fixed, $t: initial, $l: initial, $b: 0);
+		height:auto;
+	}
+}

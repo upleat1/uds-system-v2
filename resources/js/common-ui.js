@@ -2310,7 +2310,7 @@ if (!UICommon) {
             alertHtml: function (type, popId, btnActionId, btnCancelId) {
                 let $html = '<div id="' + popId + '" class="' + Layer.popClass + ' modal alert ' + Layer.alertClass + '" role="dialog" aria-hidden="true">';
                 $html += '<article class="' + Layer.wrapClass + '">';
-                $html += '<div class="' + Layer.headClass + '"><div><h1>알림</h1></div></div>';
+                $html += '<div class="' + Layer.headClass + '"><div><h1 class="h2">알림</h1></div></div>';
                 $html += '<div class="' + Layer.bodyClass + '">';
                 $html += '<div class="' + Layer.contClass + '">';
                 if (type === 'prompt') {
@@ -2330,9 +2330,9 @@ if (!UICommon) {
                 $html += '<div class="' + Layer.footClass + '">';
                 $html += '<div class="btn-area">';
                 if (type === 'confirm' || type === 'prompt') {
-                    $html += '<span><button type="button" id="' + btnCancelId + '" class="btn solid md secondary">취소</button></span>';
+                    $html += '<span><button type="button" id="' + btnCancelId + '" class="btn solid medium secondary">취소</button></span>';
                 }
-                $html += '<span><button type="button" id="' + btnActionId + '" class="btn solid md primary">확인</button></span>';
+                $html += '<span><button type="button" id="' + btnActionId + '" class="btn solid medium primary">확인</button></span>';
                 $html += '</div>';
                 $html += '</div>';
                 $html += '</article>';
