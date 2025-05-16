@@ -2,25 +2,25 @@
 // 공통 숫자 변수 생성 함수
 @mixin button-size-vars($prefix, $size, $props) {
 	@each $name, $value in $props {
-		--upl-button-#{$prefix}-#{$size}-#{$name}: var(--upl-number-#{$value});
+		--upl-button--#{$prefix}-#{$size}-#{$name}: var(--upl-number-#{$value});
 	}
 }
 
 // 공통 텍스트 버튼 스타일 함수
 @mixin button-text-vars($size, $font-size, $line-height, $icon-size) {
-	--upl-button-text-#{$size}-font-size: var(--upl-number-#{$font-size});
-	--upl-button-text-#{$size}-line-height: var(--upl-number-#{$line-height});
-	--upl-button-text-#{$size}-icon-size: var(--upl-iconsize-#{$icon-size});
+	--upl-button--text-#{$size}-font-size: var(--upl-number-#{$font-size});
+	--upl-button--text-#{$size}-line-height: var(--upl-number-#{$line-height});
+	--upl-button--text-#{$size}-icon-size: var(--upl-iconsize-#{$icon-size});
 }
 
 
 // Button Variables
 @mixin button-variables() {
 	// 공통 spacing
-	--upl-button-stick-wrap-height: 9.2rem;
-	--upl-button-stick-wrap-padding-top: var(--upl-number-16);
-	--upl-button-stick-wrap-padding-x: var(--upl-number-24);
-	--upl-button-stick-wrap-gap-left: var(--upl-number-8);
+	--upl-button--stick-wrap-height: 9.2rem;
+	--upl-button--stick-wrap-padding-top: var(--upl-number-16);
+	--upl-button--stick-wrap-padding-x: var(--upl-number-24);
+	--upl-button--stick-wrap-gap-left: var(--upl-number-8);
 
 	// Stick Button Sizes
 	@include button-size-vars('stick', 'large', (height: 56,
@@ -48,7 +48,7 @@
 	@include button-text-vars('medium', 16, 24, xsm);
 	@include button-text-vars('small', 14, 20, xxs);
 
-	--upl-button-text-icon-gap: var(--upl-gap-4);
+	--upl-button--text-icon-gap: var(--upl-gap-4);
 }
 
 
@@ -63,12 +63,12 @@
 	// STICK BUTTON
 	&.stick {
 		&.large {
-			height: var(--upl-button-stick-large-height);
-			padding: 0 var(--upl-button-stick-large-padding-x);
-			font-size: var(--upl-button-stick-large-font-size);
-			line-height: var(--upl-button-stick-large-line-height);
-			border-radius: var(--upl-button-stick-large-radius);
-			border-width: var(--upl-button-stick-large-border-width);
+			height: var(--upl-button--stick-large-height);
+			padding: 0 var(--upl-button--stick-large-padding-x);
+			font-size: var(--upl-button--stick-large-font-size);
+			line-height: var(--upl-button--stick-large-line-height);
+			border-radius: var(--upl-button--stick-large-radius);
+			border-width: var(--upl-button--stick-large-border-width);
 		}
 
 		&.primary {
@@ -103,7 +103,7 @@
 		&.outlined {
 			background: var(--upl-light-color-button-stick-outlined-default-background-color);
 			color: var(--upl-light-color-button-stick-outlined-default-font-color);
-			border: var(--upl-button-stick-large-border-width) solid var(--upl-light-color-button-stick-outlined-default-border-color);
+			border: var(--upl-button--stick-large-border-width) solid var(--upl-light-color-button-stick-outlined-default-border-color);
 
 			&.pressed {
 				background: var(--upl-light-color-button-stick-outlined-pressed-background-color);
@@ -126,23 +126,23 @@
 		&.medium,
 		&.small {
 			display: inline-block;
-			padding: 0 var(--upl-button-solid-medium-padding-x);
-			border-width: var(--upl-button-solid-medium-border-width);
+			padding: 0 var(--upl-button--solid-medium-padding-x);
+			border-width: var(--upl-button--solid-medium-border-width);
 			line-height: inherit;
 
 			&.medium {
-				height: var(--upl-button-solid-medium-height);
-				line-height: var(--upl-button-solid-medium-height);
-				font-size: var(--upl-button-solid-medium-font-size);
-				border-radius: var(--upl-button-solid-medium-radius);
+				height: var(--upl-button--solid-medium-height);
+				line-height: var(--upl-button--solid-medium-height);
+				font-size: var(--upl-button--solid-medium-font-size);
+				border-radius: var(--upl-button--solid-medium-radius);
 			}
 
 			&.small {
-				height: var(--upl-button-solid-small-height);
-				line-height: var(--upl-button-solid-small-height);
-				font-size: var(--upl-button-solid-small-font-size);
-				border-radius: var(--upl-button-solid-small-radius);
-				border-width: var(--upl-button-solid-small-border-width);
+				height: var(--upl-button--solid-small-height);
+				line-height: var(--upl-button--solid-small-height);
+				font-size: var(--upl-button--solid-small-font-size);
+				border-radius: var(--upl-button--solid-small-radius);
+				border-width: var(--upl-button--solid-small-border-width);
 			}
 		}
 
@@ -187,10 +187,10 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: var(--upl-button-stick-wrap-height);
-		padding: var(--upl-button-stick-wrap-padding-top) var(--upl-button-stick-wrap-padding-x) 0;
+		height: var(--upl-button--stick-wrap-height);
+		padding: var(--upl-button--stick-wrap-padding-top) var(--upl-button--stick-wrap-padding-x) 0;
 		z-index: 150;
-		gap: var(--upl-button-stick-wrap-gap-left);
+		gap: var(--upl-button--stick-wrap-gap-left);
 
 		>span,
 		.btn {
@@ -215,19 +215,19 @@
 
 	@each $size in (large, medium, small) {
 		&.#{$size} {
-			font-size: var(--upl-button-text-#{$size}-font-size);
-			line-height: var(--upl-button-text-#{$size}-line-height);
+			font-size: var(--upl-button--text-#{$size}-font-size);
+			line-height: var(--upl-button--text-#{$size}-line-height);
 
 			[class*='icon'] {
-				width: var(--upl-button-text-#{$size}-icon-size);
-				height: var(--upl-button-text-#{$size}-icon-size);
+				width: var(--upl-button--text-#{$size}-icon-size);
+				height: var(--upl-button--text-#{$size}-icon-size);
 
 				&.left {
-					margin-right: var(--upl-button-text-icon-gap);
+					margin-right: var(--upl-button--text-icon-gap);
 				}
 
 				&.right {
-					margin-left: var(--upl-button-text-icon-gap);
+					margin-left: var(--upl-button--text-icon-gap);
 				}
 			}
 		}

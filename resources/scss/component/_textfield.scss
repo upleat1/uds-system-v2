@@ -71,12 +71,11 @@
     @include textfield-color-variants('upl-textfield--labelinline', 'basic');
 }
 
-// Form Group
+// Form
 .form-group {
     @include textfield-variables();
     position: relative;
 
-    &+.form-tip,
     .form-row+& {
         margin-top: var(--upl-gap-20);
     }
@@ -202,7 +201,7 @@
 
         .form-area {
             height: var(--upl-textfield--labelinline-height);
-            padding: var(--upl-textfield--labelinline-input-text-gap-x) var(--upl-textfield--labelinline-input-text-padding-top);
+            padding: var(--upl-textfield--labelinline-input-text-padding-top) var(--upl-textfield--labelinline-input-text-gap-x);
             color: var(--upl-textfield--labelinline-default-font-color);
             border-radius: var(--upl-textfield--labelinline-radius);
             border: var(--upl-textfield--labelinline-border-width) solid var(--upl-textfield--labelinline-default-border-color);

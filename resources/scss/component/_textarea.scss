@@ -1,0 +1,129 @@
+/*** Textarea ***/
+$textarea-states: (
+  default: (font-color, border-color, background-color),
+  focused: (font-color, border-color),
+  filled: (font-color),
+  readonly: (font-color, border-color, background-color),
+  disabled: (font-color, border-color, background-color),
+  error: (font-color, border-color, background-color)
+);
+
+@mixin textarea-variables() {
+  // 공통
+  --upl-textarea--message-gap-y: var(--upl-gap-8);
+  --upl-textarea--label-gap-y: var(--upl-radius-6);
+  --upl-textarea--label-font-size: var(--upl-font-size-body-small);
+  --upl-textarea--label-line-height: var(--upl-typo-line-height-font-size-14);
+  --upl-textarea--height: var(--upl-number-84);
+  --upl-textarea--padding-x: var(--upl-padding-16);
+  --upl-textarea--padding-y: var(--upl-padding-14);
+  --upl-textarea--byte-gap-y: var(--upl-gap-8);
+  --upl-textarea--border-width: var(--upl-border-width-regular);
+  --upl-textarea--radius: var(--upl-radius-16);
+  --upl-textarea--font-size: var(--upl-font-size-body-medium);
+  --upl-textarea--line-height: var(--upl-typo-line-height-font-size-16);
+
+  // 상태별 변수 반복 생성
+  @each $state, $props in $textarea-states {
+    @each $prop in $props {
+      --upl-textarea--#{$state}-#{$prop}: var(--upl-light-color-inputcontrols-basic-#{$state}-#{$prop});
+    }
+  }
+}
+
+// Textarea
+.form-group.textarea {
+    @include textarea-variables();
+
+    .form-tip {
+        margin-top: var(--upl-textarea--message-gap-y);
+    }
+
+    .form-label {
+        margin-bottom: var(--upl-textarea--label-gap-y);
+        font-size: var(--upl-textarea--label-font-size);
+        color: var(--upl-textarea--label-font-color);
+        line-height: var(--upl-textarea--label-line-height);
+    }
+
+    .form-ele {
+        position: relative;
+    }
+
+    textarea {
+        width: 100%;
+        height: var(--upl-textarea--height);
+        padding: var(--upl-textarea--padding-y) var(--upl-textarea--padding-x) calc(var(--upl-textarea--padding-y) + var(--upl-textarea--label-line-height) + var(--upl-textarea--byte-gap-y)) var(--upl-textarea--padding-x);
+        border-color: var(--upl-textarea--default-border-color);
+        border-width: var(--upl-textarea--border-width);
+        border-style: solid;
+        border-radius: var(--upl-textarea--radius);
+        font-size: var(--upl-textarea--font-size);
+        line-height: var(--upl-textarea--line-height);
+        -webkit-appearance: none;
+        resize: none;
+        background-color: transparent;
+
+        &::placeholder,
+        &::-webkit-input-placeholder {
+            font-size: var(--upl-textarea--font-size);
+            // font-family 설정 주석
+        }
+
+        &:read-only::placeholder,
+        &[readonly]::placeholder,
+        &[readonly]::-webkit-input-placeholder {
+            color: var(--upl-textarea--default-font-color);
+        }
+    }
+
+    &.default textarea {
+        color: var(--upl-textarea--default-font-color);
+        border-color: var(--upl-textarea--default-border-color);
+        background-color: var(--upl-textarea--default-background-color);
+    }
+
+    &.focused textarea,
+    textarea:focus {
+        border-color: var(--upl-textarea--focused-border-color);
+        color: var(--upl-textarea--focused-font-color);
+    }
+
+    &.filled textarea {
+        color: var(--upl-textarea--filled-font-color);
+    }
+
+    &.readonly textarea,
+    textarea[readonly] {
+        color: var(--upl-textarea--readonly-font-color);
+        border-color: var(--upl-textarea--readonly-border-color);
+        background-color: var(--upl-textarea--readonly-background-color);
+    }
+
+    &.disabled textarea,
+    textarea[disabled] {
+        color: var(--upl-textarea--disabled-font-color);
+        border-color: var(--upl-textarea--disabled-border-color);
+        background-color: var(--upl-textarea--disabled-background-color);
+    }
+
+    &.error textarea {
+        color: var(--upl-textarea--error-font-color);
+        border-color: var(--upl-textarea--error-border-color);
+        background-color: var(--upl-textarea--default-background-color);
+    }
+
+    .byte {
+        position: absolute;
+        bottom: var(--upl-textarea--padding-y);
+        right: var(--upl-textarea--padding-x);
+        font-size: var(--upl-textarea--label-font-size);
+        color: var(--upl-textarea--default-font-color);
+        line-height: var(--upl-textarea--label-line-height);
+        text-align: right;
+
+        .curr {
+            color: var(--upl-textarea--focused-font-color);
+        }
+    }
+}
