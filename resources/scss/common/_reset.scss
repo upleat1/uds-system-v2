@@ -41,9 +41,9 @@ body {
 *:focus {
 	//@include focus();
 	outline: 0.2rem solid var(--upl-light-color-border-inverse);
-	outline-offset: 0;
-	box-shadow: var(--upl-box-shadow-outline);
-	transition: outline 0s, box-shadow 0s !important;
+	// outline-offset: 0;
+	// box-shadow: var(--upl-box-shadow-outline);
+	// transition: outline 0s, box-shadow 0s !important;
 }
 ::-moz-selection {
 	background: var(--upl-color-light-secondary-50);
@@ -158,10 +158,10 @@ address,
 i {
 	font-style: normal;
 }
-a,
-button {
-	transition: var(--upl-transition-base);
-}
+// a,
+// button {
+// 	transition: var(--upl-transition-base);
+// }
 a,
 a:hover,
 a:active,

@@ -1,130 +1,130 @@
-/* 툴팁 */
+/*** Tooltip ***/
 //사이즈 정의
 @mixin tooltip-size-variable() {
-	--upl-tooltip--popover-radius: var(--upl-radius-small3);
-	--upl-tooltip--popover-radius-box: var(--upl-radius-xlarge2);
-	--upl-tooltip--popover-contents-pc-font-size: var(--upl-pc-font-size-body-small);
-	--upl-tooltip--popover-contents-mobile-font-size: var(--upl-mobile-font-size-body-small);
-	--upl-tooltip--popover-margin-x: 2.4rem;
+  --upl-tooltip--title-font-weight: var(--upl-typo-font-weight-semi-bold);
+  --upl-tooltip--title-font-size: var(--upl-font-size-heading-xsmall);
+  --upl-tooltip--title-line-height: var(--upl-typo-line-height-font-size-20);
+  --upl-tooltip--title-gap: var(--upl-gap-8);
+  --upl-tooltip--text-font-size: var(--upl-font-size-body-small);
+  --upl-tooltip--text-line-height: var(--upl-typo-line-height-font-size-14);
+  --upl-tooltip--text-gap: var(--upl-gap-12);
+  --upl-tooltip--padding-left: var(--upl-padding-20);
+  --upl-tooltip--padding-right: var(--upl-padding-16);
+  --upl-tooltip--padding-top: var(--upl-padding-16);
+  --upl-tooltip--padding-bottom: var(--upl-padding-16);
+  --upl-tooltip--btn-close-padding-top: var(--upl-padding-18);
+  --upl-tooltip--btn-close-toucharea: var( --upl-touch-40);
+  --upl-tooltip--wrap-gap: var(--upl-gap-8);
+  --upl-tooltip--bullet-gap: var(--upl-gap-8);
+  --upl-tooltip--radius: var(--upl-radius-8:);
 }
 
 //컬러 정의
 @mixin tooltip-color-variable($mode: light) {
-	--upl-tooltip--popover-inline-color-text: var(--upl-#{$mode}-color-text-basic-inverse);
-	--upl-tooltip--popover-box-color-text: var(--upl-#{$mode}-color-text-basic);
-	--upl-tooltip--popover-color-border: var(--upl-#{$mode}-color-border-gray);
-	--upl-tooltip--popover-color-surface: var(--upl-#{$mode}-color-surface-inverse);
-	--upl-tooltip--popover-box-color-surface: var(--upl-#{$mode}-color-surface-white-subtler);
+	--upl-tooltip--background-color: var(--upl-#{$mode}-color-alpha-inverse80);
+	--upl-tooltip--title-font-color: var(--upl-#{$mode}-color-text-title-inverse);
+	--upl-tooltip--text-font-color: var(--upl-#{$mode}-color-text-basic-inverse);
+	--upl-tooltip--btn-close-background-color: var(--upl-#{$mode}-color-background-white);	
 }
 
 //모드 설정
 $mode-setting: light;
-.upl-tooltip-popover {
+
+.btn-tooltip {
+	display:inline-block;
+	overflow:hidden;
+	@include square(var(--upl-iconsize-md));
+	margin-top: calc(var(--upl-number-2) * -1);
+	@include icon-set('icon-tooltip.svg', $effect: pure);
+	vertical-align:middle;
+
+	span {
+		line-height:2rem;
+		vertical-align:bottom;
+	}
+}
+.tooltip-wrap{
 	@include tooltip-size-variable();
 	@include tooltip-color-variable(#{$mode-setting});
 
-	display: none;
-	position: fixed;
-	z-index: 100;
-	white-space: nowrap;
-	font-size: var(--upl-tooltip--popover-contents-pc-font-size);
-	border-radius: var(--upl-tooltip--popover-radius);
-	padding: var(--upl-padding-2) var(--upl-padding-5);
-	color: var(--upl-tooltip--popover-inline-color-text);
-	background-color: var(--upl-tooltip--popover-color-surface);
-  top: 0;
-  left: 0;
-	&.active {
-		display: block;
+	display:inline-block;
+	position:relative;
+	white-space:normal;
+
+	.tooltip {
+		display: inline-block;
 	}
-	&::before {
-		--tooltip-arrow-size: 0.8rem;
-		--tooltip-arrow-gap: calc((var(--tooltip-arrow-size) / 2) * -1);
-		@include pseudo();
-		@include square(var(--tooltip-arrow-size));
+	.btn-tooltip-x {
 		display: block;
+
+		@include position($t: var(--upl-number-7), $r: var(--upl-tooltip--padding-right));
+		@include square(var(--upl-tooltip--btn-close-toucharea));
+		&::after {
+			content: '';
+			display: block;
+			@include square(var(--upl-iconsize-sm));
+			margin: 0 auto;
+			@include icon-set('icon-close.svg');
+			background-color: var(--upl-tooltip--btn-close-background-color);
+		}
+	}
+
+	.tooltip-popover {
+		display: none;
 		position: absolute;
-		background-color: var(--upl-tooltip--popover-color-surface);
-		left: var(--tooltip-arrow-gap);
-		top: 50%;
-		transform: translateY(-50%) rotate(45deg);
-	}
-	&.tooltip-box {
-		white-space: normal;
-		max-width: 36rem;
-		border: 0.1rem solid var(--upl-tooltip--popover-color-border);
-		border-radius: var(--upl-tooltip--popover-radius-box);
-		padding: var(--upl-padding-8);
-		color: var(--upl-tooltip--popover-box-color-text);
-		background-color: var(--upl-tooltip--popover-box-color-surface);
-		&::before {
-			--tooltip-arrow-size: 1.2rem;
-			border: 0.1rem solid var(--upl-tooltip--popover-color-border);
-			border-top-color: transparent;
-			border-left-color: transparent;
-			background-color: var(--upl-tooltip--popover-box-color-surface);
-		}
-	}
-	&.right {
-		&::before {
-			left: calc(100% + var(--tooltip-arrow-gap));
-		}
-	}
-	&.bottom,
-	&.top {
-		&::before {
-			top: calc(100% + var(--tooltip-arrow-gap));
-			left: 50%;
-			transform: translateX(-50%) rotate(45deg);
-		}
-		&.right {
-			&::before {
-				left: calc(100% - var(--upl-tooltip--popover-margin-x));
-			}
-		}
-		&.left {
-			&::before {
-				left: var(--upl-tooltip--popover-margin-x);
-			}
-		}
-	}
-	&.bottom {
-		&::before {
-			top: var(--tooltip-arrow-gap);
-		}
-		&.tooltip-box {
-			&::before {
-				transform: translateX(-50%) rotate(-135deg);
-			}
-		}
-	}
-}
+		left: 0;
+		right: 0;
+		margin-top: var(--upl-tooltip--wrap-gap);
+		padding: var(--upl-tooltip--padding-top) var(--upl-tooltip--padding-right) var(--upl-tooltip--padding-bottom) var(--upl-tooltip--padding-left);
+		border-radius: var(--upl-tooltip--radius);
+		background-color: var(--upl-tooltip--background-color);
+		text-align: left;
+		z-index: 100;
+		opacity: 0;
+		transform: scaleY(0.8) translateY(-1.0rem);
+		transform-origin: top left;
+		transition: opacity .3s cubic-bezier(.25, .75, .5, 1.25), transform .3s cubic-bezier(.25, .75, .5, 1.25);
 
-//고대비모드
-@include color-mode($mode: dark) {
-	//모드 설정
-	$mode-setting: dark;
-	.upl-tooltip-popover {
-		@include tooltip-color-variable(#{$mode-setting});
-	}
-}
-
-//responsive mobile
-@include size-medium {
-	.upl-tooltip-popover {
-		font-size: var(--upl-tooltip--popover-contents-mobile-font-size);
-	}
-}
-
-@media (max-width: 420px) {
-	.upl-tooltip-popover {
-		width: calc(100% - (var(--upl-contents-padding-x) * 2));
-		@include position-center(x);
-		&::before {
-			display: none;
+		&.top {
+			bottom: 25px;
+			transform-origin: bottom left;
+			transform: scaleY(0.8) translateY(1.0rem);
 		}
-		&.tooltip-box {
-			max-width: 100%;
+		&.show {
+			opacity: 1;transform: scaleY(1) translateY(0);
+		}
+		&.active {
+			display: block;
+		}
+		.tooltip-cont {
+			padding-right: calc(var(--upl-tooltip--btn-close-toucharea) + var(--upl-tooltip--padding-right));
+			font-size: var(--upl-tooltip--text-font-size);
+			color: var(--upl-tooltip--text-font-color);
+			line-height: var(--upl-tooltip--text-line-height);
+			white-space: normal;}
+		.tooltip-cont .p {
+			font-size: inherit;
+		}
+		.tooltip-cont .bullet-list {
+			margin-top: var(--upl-tooltip--wrap-gap);
+		}
+		.tooltip-cont .bullet-list > li {
+			color: var(--upl-tooltip--text-font-color);
+		}
+		.tooltip-cont .bullet-list > li:before {
+			background-color: var(--upl-tooltip--text-font-color);
+		}
+		.tooltip-tit {
+			display: block;
+			padding-right: var(--upl-tooltip--btn-close-toucharea);
+			font-weight: var(--upl-tooltip--title-font-weight);
+			font-size: var(--upl-tooltip--title-font-size);
+			color: var(--upl-tooltip--title-font-color);
+			line-height: var(--upl-tooltip--title-line-height);
+		}
+		.tooltip-tit + .tooltip-cont {
+			margin-top: var(--upl-tooltip--wrap-gap);
+			padding-right: 0;
 		}
 	}
 }

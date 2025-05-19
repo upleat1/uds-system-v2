@@ -12,6 +12,8 @@
 		-webkit-mask-image: none;
 		mask-image: none;
 		background-image: url(#{$url}/img/component/icon/#{$name});
+		background-repeat :no-repeat;
+		background-size: 100%;
 		background-color: transparent;
 		-webkit-mask: none;
 		mask: none;
