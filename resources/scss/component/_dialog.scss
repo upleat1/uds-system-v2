@@ -65,15 +65,13 @@ $mode-setting: light;
 
 //lock 설정
 html.lock, 
-.lock {
-	body { 
-		overflow:hidden;
-	}
-	#wrap {
-		@include position($p: fixed, $b: 0, $l: 0);
-		@include square(100%);
-		-webkit-overflow-scrolling:none;
-	}
+.lock body {
+    overflow: hidden
+}
+.lock #wrap {
+   @include position($p: fixed, $b: 0, $l: 0);
+	@include square(100%);
+	-webkit-overflow-scrolling:none;
 }
 
 //콘텐츠 체크박스 영역

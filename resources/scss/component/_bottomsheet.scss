@@ -15,32 +15,38 @@
 	--upl-bottomsheet--btn-check-padding-y: var(--upl-padding-14);
 }
 
+//컬러 정의
+@mixin bottomsheet-color-variable($mode: light) {
+	--upl-bottomsheet--swipe-background-color:var(--upl-color-#{$mode}-gray-500);
+}
+
 //모드 설정
 $mode-setting: light;
 
 .popup.bottom {
 	@include bottomsheet-size-variables();
+	@include bottomsheet-color-variable();
 
 	.pop-wrap {
 		@include position($p: fixed, $b: 0);
-		overflow:hidden;	
-		border-radius:var(--upl-bottomsheet--top-radius) var(--upl-bottomsheet--top-radius) 0 0;
-		-webkit-transform:translate3d(0, 110%, 0);
-		transform:translate3d(0, 110%, 0);
-		opacity:1;
-		box-shadow:0 -0.5rem 0.6rem rgba(0,0,0,.1); 
+		overflow: hidden;	
+		border-radius: var(--upl-bottomsheet--top-radius) var(--upl-bottomsheet--top-radius) 0 0;
+		-webkit-transform: translate3d(0, 110%, 0);
+		transform: translate3d(0, 110%, 0);
+		opacity: 1;
+		box-shadow: 0 -0.5rem 0.6rem rgba(0,0,0,.1); 
 
 		@media (min-width:1024px) {
-			left:50%;
-			max-width:102.4rem;
-			margin-left:-51.2rem;
-			margin-right:auto;
+			left: 50%;
+			max-width: 102.4rem;
+			margin-left: -51.2rem;
+			margin-right: auto;
 		}
 	}
 
 	.pop-body {
-		overflow-x:hidden;
-		overflow-y:auto;
+		overflow-x: hidden;
+		overflow-y: auto;
 
 		/* 바텀 헤더 마크업 없는 경우 */
 		&:first-child {
@@ -60,51 +66,51 @@ $mode-setting: light;
 			display:block;
 			@include position($t: 0, $l: 0, $r: 0);
 			height:var(--upl-bottomsheet--untitled-noclose-head-size-height); 
-			z-index:30;
+			z-index: 30;
 		}
 		span.swipe::after {
 			content:''; 
 			@include position($t: 10px, $l: 50%);
-			width:var(--upl-number-32); 
-			height:var(--upl-number-4); 
-			margin-left:calc(var(--upl-number-16) * -1);
-			background-color:var(--upl-color-#{$mode-setting}-gray-500);
-			border-radius:var(--upl-radius-max);
+			width: var(--upl-number-32); 
+			height: var(--upl-number-4); 
+			margin-left: calc(var(--upl-number-16) * -1);
+			background-color: var(--upl-bottomsheet--swipe-background-color);
+			border-radius: var(--upl-radius-max);
 		}
 		span.swipe:only-child {position:unset;}
 	}
 
 	.pop-foot {
 		> div {
-			padding:var(--upl-bottomsheet--footer-padding-top) var(--upl-dialogs--padding-x) calc(var(--upl-sab) + var(--upl-bottomsheet--footer-padding-bottom));
+			padding: var(--upl-bottomsheet--footer-padding-top) var(--upl-dialogs--padding-x) calc(var(--upl-sab) + var(--upl-bottomsheet--footer-padding-bottom));
 		}
 		.btn-area span + span {
-			margin-left:var(--upl-bottomsheet--button-gap);
+			margin-left: var(--upl-bottomsheet--button-gap);
 		}
 	}
 
 	.btn-check-wrap {
-		padding:var(--upl-bottomsheet--btn-check-padding-y) 0;
+		padding: var(--upl-bottomsheet--btn-check-padding-y) 0;
 	}
 
 	//타이틀 있고, 닫기 x 버튼 있는 경우
 	.pop-close {
-		top:var(--upl-bottomsheet--btn-close-position-top);
-		right:var(--upl-bottomsheet--btn-close-position-right);
+		top: var(--upl-bottomsheet--btn-close-position-top);
+		right: var(--upl-bottomsheet--btn-close-position-right);
 	}
 	&.close .pop-head > div {
-		padding-right:calc(var(--upl-touch-44) + var(--upl-bottomsheet--title-padding-top) * 2);
+		padding-right: calc(var(--upl-touch-44) + var(--upl-bottomsheet--title-padding-top) * 2);
 	} 
 	//타이틀 없고, 닫기 x 버튼 있는 경우
 	&.close.no-title .pop-head > div {
-		min-height:var(--upl-bottomsheet--untitled-close-head-size-height);
+		min-height: var(--upl-bottomsheet--untitled-close-head-size-height);
 	}
 	&.close.no-title .pop-close {
-		top:var(--upl-bottomsheet--untitled-btn-close-position-top);
+		top: var(--upl-bottomsheet--untitled-btn-close-position-top);
 	}
-	//게이트형 : 타이틀 없고, 닫기 x 버튼 없는 경우
+	//게이트형 :  타이틀 없고, 닫기 x 버튼 없는 경우
 	&.no-title .pop-head > div {
-		min-height:var(--upl-bottomsheet--untitled-noclose-head-size-height);
-		padding:0;
+		min-height: var(--upl-bottomsheet--untitled-noclose-head-size-height);
+		padding: 0;
 	} 
 }
