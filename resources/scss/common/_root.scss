@@ -4,8 +4,12 @@
 $mode-setting: light;
 :root {
 	//* PRIMITIVE *
-	--upl-font-family-base: var(--upl-typo-font-type);
+	--upl-font-family-base: #{$font-family-base};
 	--upl-font-size-base: #{$font-size-base};
+
+	//safe-area
+    --upl-sab: calc(constant(safe-area-inset-bottom) / 2);
+    --upl-sab: calc(env(safe-area-inset-bottom) / 2);
 
 	//line heights
 	@each $type, $value in $font-line-heights {

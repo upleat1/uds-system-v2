@@ -19,7 +19,7 @@ html {
 }
 body {
 	background-color: var(--upl-#{$mode-setting}-color-background-white);
-	font-size: var(--upl-pc-font-size-body-medium);
+	font-size: var(--upl-font-size-body-medium);
 	overflow-x: hidden;
 }
 //시스템 고대비모드 켜도 우리 style 적용되도록
@@ -260,6 +260,7 @@ table {
 .blind,
 hr,
 .sr-only,
+.hidden,
 legend,
 caption {
 	@include sr-only;
@@ -279,6 +280,11 @@ caption {
 }
 .ar {
 	text-align: right !important;
+}
+.scroll {
+	overflow: auto; 
+	position: relative; 
+	width: 100%;
 }
 .underline {
 	@include underline();

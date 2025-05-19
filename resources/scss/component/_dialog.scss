@@ -50,18 +50,19 @@
 $mode-setting: light;
 
 //추후 common 이동
-:root{
-    --upl-sab: calc(constant(safe-area-inset-bottom) / 2);
-    --upl-sab: calc(env(safe-area-inset-bottom) / 2);
-}
-.hidden {overflow:hidden!important;position:absolute!important;width:0!important;height:0!important;clip:rect(0 0 0 0)!important;margin:0!important;padding:0!important;color:transparent!important;font-size:0!important} /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
-.left {text-align:left !important;} /* 텍스트 정렬 */
-.right {text-align:right !important;}
-.center {text-align:center !important;}
-.top {vertical-align:top !important;}
-.middle {vertical-align:middle !important;}
-.bottom {vertical-align:bottom !important;}
-.scroll {overflow:auto; position:relative; width:100%;} /* 스크롤 */
+// :root{
+//     --upl-sab: calc(constant(safe-area-inset-bottom) / 2);
+//     --upl-sab: calc(env(safe-area-inset-bottom) / 2);
+// }
+// .hidden {overflow:hidden!important;position:absolute!important;width:0!important;height:0!important;clip:rect(0 0 0 0)!important;margin:0!important;padding:0!important;color:transparent!important;font-size:0!important} /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+// .left {text-align:left !important;} /* 텍스트 정렬 */
+// .right {text-align:right !important;}
+// .center {text-align:center !important;}
+// .top {vertical-align:top !important;}
+// .middle {vertical-align:middle !important;}
+// .bottom {vertical-align:bottom !important;}
+/* 스크롤 */
+// .scroll {overflow:auto; position:relative; width:100%;} 
 
 //lock 설정
 html.lock, 
@@ -109,9 +110,9 @@ html.lock,
 		background-image:url(/resources/img/component/icon/icon-system-info.svg);
 	}
 	.tit {
-		font-size:var(--upl-font-size-heading-medium);
-		color:var(--upl-#{$mode-setting}-color-text-tit);
 		font-weight:var(--upl-typo-font-weight-bold);
+		font-size:var(--upl-font-size-heading-medium);
+		color:var(--upl-dialogs--title-font-color);	
 	}
 	.txt {
 		margin-top:var(--upl-dialogs--icon-text-gap);
