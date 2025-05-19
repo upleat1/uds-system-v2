@@ -50,9 +50,9 @@ $mode-setting: light;
 	--upl-font-underline-offset: #{$font-underline-offset-default};
 
 	//svg icon size
-	@each $size, $value in $icon-sizes {
-		--upl-icon--size-#{$size}: #{$value};
-	}
+	// @each $size, $value in $icon-sizes {
+	// 	--upl-icon--size-#{$size}: #{$value};
+	// }
 
 }
 

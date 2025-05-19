@@ -12,7 +12,7 @@ $breakpoint-xlarge: 1280px !default;
 $breakpoint-xxlarge: 1440px !default;
 
 //TYPO CUSTOM
-$font-family-base: "Pretendard GOV", sans-serif !default;
+$font-family-base: var(--upl-font-type), 'NotoSans', sans-serif !default;
 $font-size-base: 62.5% !default; //10px 1rem으로 설정
 
 $font-letter-spacings: (
@@ -49,13 +49,13 @@ $transition-collapse: max-height .4s ease !default;
 $transition-collapse-width: width .4s ease !default;
 
 //SVG ICON SIZE
-$icon-sizes: (
-	xsmall: var(--upl-size-height-2),
-	small: var(--upl-size-height-2),
-	medium: var(--upl-size-height-3),
-	large: var(--upl-size-height-4),
-	xlarge: var(--upl-size-height-4),
-) !default;
+// $icon-sizes: (
+// 	xsmall: var(--upl-size-height-2),
+// 	small: var(--upl-size-height-2),
+// 	medium: var(--upl-size-height-3),
+// 	large: var(--upl-size-height-4),
+// 	xlarge: var(--upl-size-height-4),
+// ) !default;
 
 //SCREEN ZOOM
 $screen-zoom-sizes: (
