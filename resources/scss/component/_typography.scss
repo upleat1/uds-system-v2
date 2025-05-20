@@ -1,27 +1,28 @@
-/*** Typography ***/
-// bullet list 공통 스타일
-@mixin bullet-icon($prefix, $size, $color, $radius: null) {
-    --#{$prefix}-icon-size-width: #{$size};
-    --#{$prefix}-icon-color: #{$color};
+/* Typography */
+// Bullet List 사이즈 변수
+@mixin bulletlist-size-variables() {
+    --upl-bulletlist--list-gap-y: var(--upl-gap-8);
+    --upl-bulletlist--font-size: var(--upl-font-size-body-small);
+    --upl-bulletlist--line-height: var(--upl-typo-line-height-font-size-14);
+    --upl-bulletlist--icon-gap-x: var(--upl-gap-8);
 
-    @if $radius !=null {
-        --#{$prefix}-icon-radius: #{$radius};
-    }
+    // 아이콘 사이즈 + radius
+    --upl-bulletlist--bullet-icon-size-width: var(--upl-number-4);
+    --upl-bulletlist--bullet-icon-radius: 50%;
+    --upl-bulletlist--dash-icon-size-width: var(--upl-number-6);
 }
 
-@mixin typography-variables() {
-    // 공통
-    --upl-bulletlist-list-gap-y: var(--upl-gap-8);
-    --upl-bulletlist-font-size: var(--upl-font-size-body-small);
-    --upl-bulletlist-line-height: var(--upl-typo-line-height-font-size-14);
-    --upl-bulletlist-font-color: var(--upl-color-light-gray-600);
-    --upl-bulletlist-icon-gap-x: var(--upl-gap-8);
+// Bullet List 컬러 변수 (light / dark 대응 가능하도록 $mode 사용)
+@mixin bulletlist-color-variables($mode: light) {
+    --upl-bulletlist--font-color: var(--upl-#{$mode}-color-text-secondary);
+    --upl-bulletlist--bullet-icon-color: var(--upl-#{$mode}-color-icon-primary);
+    --upl-bulletlist--dash-icon-color: var(--upl-#{$mode}-color-border-tertiary);
+}
 
-    // 불릿용
-    @include bullet-icon("upl-bulletlist-bullet", var(--upl-number-4), var(--upl-color-light-gray-800), 50%);
-
-    // 대시용
-    @include bullet-icon("upl-bulletlist-dash", var(--upl-number-6), var(--upl-color-light-gray-500));
+// 최종 Mixin
+@mixin bulletlist-variables {
+    @include bulletlist-size-variables;
+    @include bulletlist-color-variables(light);
 }
 
 // Heading
@@ -78,12 +79,12 @@ h4 {
     margin-top: var(--upl-gap-16);
 
     >li {
-        @include typography-variables();
+        @include bulletlist-variables();
         position: relative;
-        margin-top: var(--upl-bulletlist-list-gap-y);
-        font-size: var(--upl-bulletlist-font-size);
-        color: var(--upl-bulletlist-font-color);
-        line-height: var(--upl-bulletlist-line-height);
+        margin-top: var(--upl-bulletlist--list-gap-y);
+        font-size: var(--upl-bulletlist--font-size);
+        color: var(--upl-bulletlist--font-color);
+        line-height: var(--upl-bulletlist--line-height);
 
         &:first-child {
             margin-top: 0;
@@ -94,34 +95,34 @@ h4 {
             display: inline-block;
             position: absolute;
             left: 0;
-            top: var(--upl-bulletlist-list-gap-y);
+            top: var(--upl-bulletlist--list-gap-y);
         }
     }
 
     &.bul {
         >li {
-            padding-left: calc(var(--upl-bulletlist-bullet-icon-size-width) + var(--upl-bulletlist-icon-gap-x));
+            padding-left: calc(var(--upl-bulletlist--bullet-icon-size-width) + var(--upl-bulletlist--icon-gap-x));
             word-break: keep-all;
             word-wrap: break-word;
 
             &::before {
-                width: var(--upl-bulletlist-bullet-icon-size-width);
-                height: var(--upl-bulletlist-bullet-icon-size-width);
-                background: var(--upl-bulletlist-bullet-icon-color);
-                border-radius: var(--upl-bulletlist-bullet-icon-radius);
+                width: var(--upl-bulletlist--bullet-icon-size-width);
+                height: var(--upl-bulletlist--bullet-icon-size-width);
+                background: var(--upl-bulletlist--bullet-icon-color);
+                border-radius: var(--upl-bulletlist--bullet-icon-radius);
             }
         }
     }
 
     &.dash {
         >li {
-            padding-left: calc(var(--upl-bulletlist-dash-icon-size-width) + var(--upl-bulletlist-icon-gap-x));
-            color: var(--upl-bulletlist-dash-icon-color);
+            padding-left: calc(var(--upl-bulletlist--dash-icon-size-width) + var(--upl-bulletlist--icon-gap-x));
+            color: var(--upl-bulletlist--dash-icon-color);
 
             &::before {
-                width: var(--upl-bulletlist-dash-icon-size-width);
+                width: var(--upl-bulletlist--dash-icon-size-width);
                 height: 1px;
-                background: var(--upl-bulletlist-dash-icon-color);
+                background: var(--upl-bulletlist--dash-icon-color);
             }
         }
     }

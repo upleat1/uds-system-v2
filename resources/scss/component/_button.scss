@@ -1,4 +1,4 @@
-/*** Button ***/
+/* Button */
 // 공통 숫자 변수 생성 함수
 @mixin button-size-vars($prefix, $size, $props) {
 	@each $name, $value in $props {
@@ -13,9 +13,8 @@
 	--upl-button--text-#{$size}-icon-size: var(--upl-iconsize-#{$icon-size});
 }
 
-
 // Button Variables
-@mixin button-variables() {
+@mixin button-variables {
 	// 공통 spacing
 	--upl-button--stick-wrap-height: 9.2rem;
 	--upl-button--stick-wrap-padding-top: var(--upl-number-16);
@@ -51,7 +50,7 @@
 	--upl-button--text-icon-gap: var(--upl-gap-4);
 }
 
-
+// Button Style
 // Base Button
 .btn {
 	@include button-variables();
@@ -223,11 +222,11 @@
 				height: var(--upl-button--text-#{$size}-icon-size);
 
 				&.left {
-					margin-right: var(--upl-button--text-icon-gap);
+					padding-right: var(--upl-button--text-icon-gap);
 				}
 
 				&.right {
-					margin-left: var(--upl-button--text-icon-gap);
+					padding-left: var(--upl-button--text-icon-gap);
 				}
 			}
 		}

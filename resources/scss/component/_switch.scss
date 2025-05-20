@@ -1,199 +1,144 @@
-/* 토글 스위치 */
-//사이즈 정의
-@mixin form-toggle-switch-size-variable() {
-	//변수 배열 생성
-	$form-toggle-switch-size: (
-		medium: (
-			button-size-width: 3.2rem,
-			button-size-height: var(--upl-size-height-3),
-			check-size: var(--upl-form-toggle-switch--button-size-height-medium),
-			icon-size: 0.8rem,
-			button-radius: var(--upl-form-toggle-switch--button-size-height-medium),
-			pc-font-size: var(--upl-pc-font-size-label-medium),
-			mobile-font-size: var(--upl-mobile-font-size-label-medium),
-		),
-		large: (
-			button-size-width: 4rem,
-			button-size-height: var(--upl-size-height-4),
-			check-size: var(--upl-form-toggle-switch--button-size-height-large),
-			icon-size: 1rem,
-			button-radius: var(--upl-form-toggle-switch--button-size-height-large),
-			pc-font-size: var(--upl-pc-font-size-label-large),
-			mobile-font-size: var(--upl-mobile-font-size-label-large),
-			),
-	) !default;
-
-	//css variable 생성
-	@each $size, $types in $form-toggle-switch-size {
-		@each $type, $value in $types {
-			//css variable 생성
-			--upl-form-toggle-switch--#{$type}-#{$size}: #{$value};
-		}
-	}
-
-	--upl-form-toggle-switch--gap: var(--upl-gap-3);
-
-	//class 정의
-	& {
-		@each $size, $types in $form-toggle-switch-size {
-			//사이즈 별 class
-			&.#{$size} {
-				[type="checkbox"] {
-					~ label {
-						@include form-toggle-switch(#{$size});
-						.switch-toggle {
-							@include form-toggle-switch-button(#{$size});
-							& > i {
-								@include form-toggle-switch-check(#{$size});
-								&::before {
-									@include form-toggle-switch-icon(#{$size});
-								}
-							}
-						}
-					}
-					&:checked {
-						~ label {
-							.switch-toggle {
-								& > i {
-									@include form-toggle-switch-check-checked(#{$size});
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+/* Switch */
+// Switch 사이즈 관련 공통 변수 Mixin
+@mixin switch-size-variables($size) {
+	@if $size ==large {
+		--upl-switch--#{$size}-height: var(--upl-number-22);
+		--upl-switch--#{$size}-width: var(--upl-number-38);
+		--upl-switch--#{$size}-padding-left: calc(var(--upl-number-38) + var(--upl-padding-8));
+		--upl-switch--#{$size}-label-width: var(--upl-number-18);
+		--upl-switch--#{$size}-label-height: var(--upl-number-18);
+		--upl-switch--#{$size}-border-radius: var(--upl-radius-10);
+		--upl-switch--#{$size}-font-size: var(--upl-font-size-body-medium);
+		--upl-switch--#{$size}-line-height: var(--upl-typo-line-height-font-size-16);
 	}
 }
 
-//컬러 정의
-@mixin form-toggle-switch-color-variable($mode: light) {
-	--upl-form-toggle-switch--color-text: var(--upl-#{$mode}-color-text-basic);
-	--upl-form-toggle-switch--color-text-disabled: var(--upl-#{$mode}-color-text-disabled);
-	--upl-form-toggle-switch--button-color-background: var(--upl-#{$mode}-color-element-gray);
-	--upl-form-toggle-switch--button-color-background-checked: var(--upl-#{$mode}-color-element-primary);
-	--upl-form-toggle-switch--check-color-background: var(--upl-#{$mode}-color-element-inverse);
-	--upl-form-toggle-switch--button-color-background-disabled: var(--upl-#{$mode}-color-element-disabled-light);
-	--upl-form-toggle-switch--check-color-background-disabled: var(--upl-#{$mode}-color-element-disabled-dark);
-	--upl-form-toggle-switch--check-color-border: var(--upl-form-toggle-switch--button-color-background);
-	--upl-form-toggle-switch--check-color-border-checked: var(--upl-form-toggle-switch--button-color-background-checked);
-	--upl-form-toggle-switch--check-color-border-disabled: var(--upl-form-toggle-switch--button-color-background-disabled);
+// Switch 색상 변수 Mixin (mode 기본값: light)
+@mixin switch-color-variables($size, $mode: light) {
+	--upl-switch--#{$size}-off-fill: var(--upl-#{$mode}-color-selection-switch-#{$size}-off-background-color);
+	--upl-switch--#{$size}-on-fill: var(--upl-#{$mode}-color-selection-switch-#{$size}-on-background-color);
+	--upl-switch--#{$size}-off-disabled-fill: var(--upl-#{$mode}-color-selection-switch-#{$size}-off-disabled-background-color);
+	--upl-switch--#{$size}-on-disabled-fill: var(--upl-#{$mode}-color-selection-switch-#{$size}-on-disabled-background-color);
+	--upl-switch--#{$size}-circle-fill: var(--upl-color-light-gray-white); // 공통 값으로 보존
+	--upl-switch--#{$size}-off-font-color: var(--upl-#{$mode}-color-selection-#{$size}-off-font-color);
+	--upl-switch--#{$size}-off-disabled-font-color: var(--upl-#{$mode}-color-selection-#{$size}-off-disabled-font-color);
 }
 
-//switch 전체영역 사이즈 정의
-@mixin form-toggle-switch($size) {
-	gap: var(--upl-form-toggle-switch--gap);
-	font-size: var(--upl-form-toggle-switch--pc-font-size-#{$size});
-	line-height: var(--upl-form-toggle-switch--button-size-height-#{$size});
-	@include size-medium {
-		font-size: var(--upl-form-toggle-switch--mobile-font-size-#{$size});
-	}
-}
-//switch-toggle 사이즈 정의
-@mixin form-toggle-switch-button($size) {
-	width: var(--upl-form-toggle-switch--button-size-width-#{$size});
-	height: var(--upl-form-toggle-switch--button-size-height-#{$size});
-	border-radius: var(--upl-form-toggle-switch--button-radius-#{$size});
-}
-//switch-toggle > i(checker) 사이즈 정의
-@mixin form-toggle-switch-check($size) {
-	@include square(var(--upl-form-toggle-switch--check-size-#{$size}));
-	border-radius: var(--upl-radius-max);
-}
-//switch-toggle > i(checker) checked 시 위치 정의
-@mixin form-toggle-switch-check-checked($size) {
-	//버튼 넓이 - 체크버튼 넓이
-	left: calc(var(--upl-form-toggle-switch--button-size-width-#{$size}) - var(--upl-form-toggle-switch--check-size-#{$size}));
-}
-//switch-toggle > i::before(icon) 사이즈 정의
-@mixin form-toggle-switch-icon($size) {
-	@include svg-icon($size: #{var(--upl-form-toggle-switch--icon-size-#{$size})}, $mode: #{$mode-setting});
-	background-color: var(--upl-form-toggle-switch--button-color-background);
+// Switch 최종 Mixin
+@mixin switch-variables($size: large, $mode: light) {
+	@include switch-size-variables($size);
+	@include switch-color-variables($size, $mode);
 }
 
-//모드 설정
-$mode-setting: light;
-.upl-form-toggle-switch {
-	
-	@include form-toggle-switch-color-variable($mode: #{$mode-setting});
-
+// Switch Style
+[class^="switch"] {
+	@include switch-variables();
+	display: inline-block;
 	position: relative;
-	display: inline-flex;
-	
-	@include form-toggle-switch-size-variable();
+	vertical-align: top;
 
-	$size: large;
-
-	&.focus {
-		[type="checkbox"] ~ label {
-			@include focus();
-		}
-	}
-
-	[type="checkbox"] {
-		~ label {
-			display: inline-flex;
-			align-items: center;
-			@include form-toggle-switch(#{$size});
-			.switch-toggle {
-				@include form-toggle-switch-button(#{$size});
-				background-color: var(--upl-form-toggle-switch--button-color-background);
-				transition: .4s cubic-bezier(.4, .0, .23, 1);
-				& > i {
-					@include position($t: 0, $l: 0);
-					@include flex-layout($ai: center, $jc: center);
-					@include form-toggle-switch-check(#{$size});
-					background-color: var(--upl-form-toggle-switch--check-color-background);
-					border: 0.2rem solid var(--upl-form-toggle-switch--check-color-border);
-					box-sizing: border-box;
-					transition: .4s cubic-bezier(.4, .0, .23, 1);
-					&::before {
-						@include pseudo();
-						@include form-toggle-switch-icon(#{$size});
-						@include icon-set(ico_switch_off);
-						
-						margin-left: -0.1rem;
-					}
-				}
-			}
-		}
-		&:checked {
-			~ label {
-				.switch-toggle {
-					background-color: var(--upl-form-toggle-switch--button-color-background-checked);
-					& > i {
-						@include form-toggle-switch-check-checked(#{$size});
-						border-color: var(--upl-form-toggle-switch--check-color-border-checked);
-						&::before {
-							@include icon-set(ico_switch_on);
-							background-color: var(--upl-form-toggle-switch--check-color-border-checked);
-						}
-					}
-				}
-			}
-		}
-		&:disabled {
-			~ label {
-				.switch-toggle {
-					background-color: var(--upl-form-toggle-switch--button-color-background-disabled);
-					& > i {
-						background-color: var(--upl-form-toggle-switch--check-color-background-disabled);
-						border-color: var(--upl-form-toggle-switch--check-color-border-disabled);
-						&::before {
-							background-color: var(--upl-form-toggle-switch--button-color-background-disabled);
-						}
-					}
-				}
-			}
-		}
+	input {
+		position: absolute;
+		left: 0;
+		z-index: 0;
+		opacity: 0;
 	}
 }
 
-//고대비모드
-@include color-mode($mode: dark) {
-	//모드 설정
-	$mode-setting: dark;
-	.upl-form-toggle-switch {
-		@include form-toggle-switch-color-variable($mode: #{$mode-setting});
+.switch {
+	@include checkbox-variables;
+
+	display: inline-block;
+	position: relative;
+	height: var(--upl-switch--large-height);
+	vertical-align: top;
+
+	label {
+		display: block;
+		position: relative;
+		height: var(--upl-switch--large-height);
+		padding-left: var(--upl-switch--large-padding-left);
+		font-size: var(--upl-switch--large-font-size);
+		line-height: var(--upl-switch--large-line-height);
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+			width: var(--upl-switch--large-width);
+			height: var(--upl-switch--large-height);
+			margin-right: 0.8rem;
+			border-radius: var(--upl-switch--large-border-radius);
+			background: var(--upl-switch--large-off-fill);
+		}
+
+		&:after {
+			position: absolute;
+			top: 0.2rem;
+			left: 0.2rem;
+			content: '';
+			width: var(--upl-switch--large-label-width);
+			height: var(--upl-switch--large-label-width);
+			border-radius: 50%;
+			background: var(--upl-switch--large-circle-fill);
+			box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+			-webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+			transition: left 0.2s ease-out;
+		}
+
+		span {
+			font-size: 1.5rem !important;
+			color: var(--fc-03);
+			padding-left: 0.8rem;
+			line-height: 2.2rem;
+		}
+	}
+
+	input[type='checkbox'] {
+		@include checkbox-variables;
+		width: 100%;
+		height: 100%;
+		background: none !important;
+
+		+label {
+			display: block;
+			position: relative;
+			height: var(--upl-switch--large-height);
+		}
+
+		&:checked+label {
+			&:before {
+				background: var(--upl-switch--large-on-fill);
+			}
+
+			&:after {
+				left: 1.8rem;
+			}
+		}
+
+		&:disabled+label {
+			&:before {
+				background-color: var(--upl-switch--large-off-disabled-fill);
+			}
+
+			&:after {
+				float: left;
+			}
+
+			span {
+				color: var(--upl-switch--large-off-disabled-font-color);
+			}
+		}
+
+		&[checked]:disabled+label {
+			&:before {
+				background-color: var(--upl-switch--large-on-disabled-fill);
+			}
+
+			&:after {
+				float: right;
+			}
+		}
 	}
 }

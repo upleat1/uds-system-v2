@@ -9,11 +9,19 @@
 @import "textfield";
 @import "textarea";
 @import "dropdown";
+<<<<<<< HEAD
 @import "dialog";
 @import "bottomsheet";
 @import "tooltip";
 
 @import "tab";
+=======
+@import "checkbox";
+@import "radio";
+@import "switch";
+ 
+/* @import "tab";
+>>>>>>> fe91bf3 (es: scss 적용)
 @import "table";
 @import "text_list";
 @import "help_panel";
@@ -48,3 +56,4 @@
 @import "calendar";
 @import "resize";
 @import "language_switcher";
+ */

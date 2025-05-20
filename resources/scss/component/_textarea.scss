@@ -1,37 +1,52 @@
-/*** Textarea ***/
-$textarea-states: (
-  default: (font-color, border-color, background-color),
-  focused: (font-color, border-color),
-  filled: (font-color),
-  readonly: (font-color, border-color, background-color),
-  disabled: (font-color, border-color, background-color),
-  error: (font-color, border-color, background-color)
-);
-
-@mixin textarea-variables() {
-  // 공통
-  --upl-textarea--message-gap-y: var(--upl-gap-8);
-  --upl-textarea--label-gap-y: var(--upl-radius-6);
-  --upl-textarea--label-font-size: var(--upl-font-size-body-small);
-  --upl-textarea--label-line-height: var(--upl-typo-line-height-font-size-14);
-  --upl-textarea--height: var(--upl-number-84);
-  --upl-textarea--padding-x: var(--upl-padding-16);
-  --upl-textarea--padding-y: var(--upl-padding-14);
-  --upl-textarea--byte-gap-y: var(--upl-gap-8);
-  --upl-textarea--border-width: var(--upl-border-width-regular);
-  --upl-textarea--radius: var(--upl-radius-16);
-  --upl-textarea--font-size: var(--upl-font-size-body-medium);
-  --upl-textarea--line-height: var(--upl-typo-line-height-font-size-16);
-
-  // 상태별 변수 반복 생성
-  @each $state, $props in $textarea-states {
-    @each $prop in $props {
-      --upl-textarea--#{$state}-#{$prop}: var(--upl-light-color-inputcontrols-basic-#{$state}-#{$prop});
-    }
-  }
+/* Textarea */
+// 사이즈 관련 공통 변수 Mixin
+@mixin textarea-size-variables {
+    --upl-textarea--message-gap-y: var(--upl-gap-8);
+    --upl-textarea--label-gap-y: var(--upl-radius-6);
+    --upl-textarea--label-font-size: var(--upl-font-size-body-small);
+    --upl-textarea--label-line-height: var(--upl-typo-line-height-font-size-14);
+    --upl-textarea--label-font-color: var(--upl-light-color-input-basic-label-font-color);
+    --upl-textarea--height: var(--upl-number-84);
+    --upl-textarea--padding-x: var(--upl-padding-16);
+    --upl-textarea--padding-y: var(--upl-padding-14);
+    --upl-textarea--byte-gap-y: var(--upl-gap-8);
+    --upl-textarea--border-width: var(--upl-border-width-regular);
+    --upl-textarea--radius: var(--upl-radius-16);
+    --upl-textarea--font-size: var(--upl-font-size-body-medium);
+    --upl-textarea--line-height: var(--upl-typo-line-height-font-size-16);
 }
 
-// Textarea
+// 상태별 컬러 변수 Mixin (mode 기본값 light)
+@mixin textarea-color-variables($mode: light) {
+    --upl-textarea--default-font-color: var(--upl-#{$mode}-color-input-basic-default-font-color);
+    --upl-textarea--default-border-color: var(--upl-#{$mode}-color-input-basic-default-border-color);
+    --upl-textarea--default-background-color: var(--upl-#{$mode}-color-input-basic-default-background-color);
+
+    --upl-textarea--focused-font-color: var(--upl-#{$mode}-color-input-basic-focused-font-color);
+    --upl-textarea--focused-border-color: var(--upl-#{$mode}-color-input-basic-focused-border-color);
+
+    --upl-textarea--filled-font-color: var(--upl-#{$mode}-color-input-basic-filled-font-color);
+
+    --upl-textarea--readonly-font-color: var(--upl-#{$mode}-color-input-basic-readonly-font-color);
+    --upl-textarea--readonly-border-color: var(--upl-#{$mode}-color-input-basic-readonly-border-color);
+    --upl-textarea--readonly-background-color: var(--upl-#{$mode}-color-input-basic-readonly-background-color);
+
+    --upl-textarea--disabled-font-color: var(--upl-#{$mode}-color-input-basic-disabled-font-color);
+    --upl-textarea--disabled-border-color: var(--upl-#{$mode}-color-input-basic-disabled-border-color);
+    --upl-textarea--disabled-background-color: var(--upl-#{$mode}-color-input-basic-disabled-background-color);
+
+    --upl-textarea--error-font-color: var(--upl-#{$mode}-color-input-basic-error-font-color);
+    --upl-textarea--error-border-color: var(--upl-#{$mode}-color-input-basic-error-border-color);
+    --upl-textarea--error-background-color: var(--upl-#{$mode}-color-input-basic-error-background-color);
+}
+
+// 3. 최종 Mixin
+@mixin textarea-variables($mode: light) {
+    @include textarea-size-variables;
+    @include textarea-color-variables($mode);
+}
+
+// Textarea Style
 .form-group.textarea {
     @include textarea-variables();
 
@@ -62,18 +77,21 @@ $textarea-states: (
         line-height: var(--upl-textarea--line-height);
         -webkit-appearance: none;
         resize: none;
-        background-color: transparent;
 
-        &::placeholder,
-        &::-webkit-input-placeholder {
+        &::placeholder {
             font-size: var(--upl-textarea--font-size);
-            // font-family 설정 주석
         }
 
-        &:read-only::placeholder,
-        &[readonly]::placeholder,
-        &[readonly]::-webkit-input-placeholder {
+        &[readonly]::placeholder {
             color: var(--upl-textarea--default-font-color);
+        }
+
+        &[readonly] {
+            cursor: default;
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
         }
     }
 

@@ -2,7 +2,7 @@
 /* Radius */
 .rd-2 {border-radius: var(--upl-radius-2);}
 .rd-4 {border-radius: var(--upl-radius-4);}
-.rd-6 {border-radius: var(--upl-radius-6);} /* 2remn size */
+.rd-6 {border-radius: var(--upl-radius-6);} /* 2rem size */
 .rd-8 {border-radius: var(--upl-radius-8);} /* 2.4rem / 4.8rem size */
 .rd-10 {border-radius: var(--upl-radius-10);}
 .rd-12 {border-radius: var(--upl-radius-12);} /* 4.8rem / 5.6rem size */

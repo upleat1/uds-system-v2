@@ -1,77 +1,70 @@
-/*** TextField ***/
-// TextField Variables
-@mixin textfield-color-variants($prefix, $path) {
-    --#{$prefix}-default-border-color: var(--upl-light-color-inputcontrols-#{$path}-default-border-color);
-    --#{$prefix}-default-font-color: var(--upl-light-color-inputcontrols-#{$path}-default-font-color);
-    --#{$prefix}-default-background-color: var(--upl-light-color-inputcontrols-#{$path}-default-background-color);
+/* TextField */
+// 사이즈 관련 공통 변수 Mixin
+@mixin textfield-size-variables($type) {
+    @if $type ==basic {
+        // Basic 텍스트필드
+        --upl-textfield--basic-label-font-size: var(--upl-font-size-body-small);
+        --upl-textfield--basic-label-font-color: var(--upl-light-color-input-basic-label-font-color);
+        --upl-textfield--basic-message-gap-y: var(--upl-gap-8);
+        --upl-textfield--basic-height: var(--upl-number-56);
+        --upl-textfield--basic-input-text-padding-x: var(--upl-padding-16);
+        --upl-textfield--basic-label-gap-y: var(--upl-gap-6);
+        --upl-textfield--basic-label-line-height: var(--upl-typo-line-height-font-size-14);
+        --upl-textfield--basic-input-font-weight: var(--upl-typo-font-weight-semi-bold);
+        --upl-textfield--basic-input-font-size: var(--upl-font-size-body-large);
+        --upl-textfield--basic-input-line-height: var(--upl-typo-line-height-font-size-18);
+        --upl-textfield--basic-radius: var(--upl-radius-12);
+        --upl-textfield--basic-border-left-width: var(--upl-number-1);
+        --upl-textfield--basic-border-top-width: var(--upl-number-1);
+        --upl-textfield--basic-border-right-width: var(--upl-number-1);
+        --upl-textfield--basic-border-bottom-width: var(--upl-number-1);
+    }
 
-    --#{$prefix}-focused-border-color: var(--upl-light-color-inputcontrols-#{$path}-focused-border-color);
-    --#{$prefix}-focused-font-color: var(--upl-light-color-inputcontrols-#{$path}-focused-font-color);
-    --#{$prefix}-focused-background-color: var(--upl-light-color-inputcontrols-#{$path}-focused-background-color);
+    @else if $type ==labelinline {
+        // Label Inline 텍스트필드
+        --upl-textfield--labelinline-message-gap-y: var(--upl-gap-8);
+        --upl-textfield--labelinline-label-gap-y: var(--upl-gap-6);
+        --upl-textfield--labelinline-label-font-size: var(--upl-font-size-body-small);
+        --upl-textfield--labelinline-label-line-height: var(--upl-typo-line-height-font-size-14);
+        --upl-textfield--labelinline-input-line-height: var(--upl-typo-line-height-font-size-18);
+        --upl-textfield--labelinline-input-font-weight: var(--upl-typo-font-weight-semi-bold);
+        --upl-textfield--labelinline-input-font-size: var(--upl-font-size-body-large);
+        --upl-textfield--labelinline-height: var(--upl-number-84);
+        --upl-textfield--labelinline-input-text-gap-x: var(--upl-gap-16);
+        --upl-textfield--labelinline-input-text-padding-top: var(--upl-padding-16);
+        --upl-textfield--labelinline-default-font-color: var(--upl-light-color-input-basic-default-font-color);
+        --upl-textfield--labelinline-radius: var(--upl-radius-16);
+        --upl-textfield--labelinline-border-width: var(--upl-number-1);
+    }
 
-    --#{$prefix}-filled-border-color: var(--upl-light-color-inputcontrols-#{$path}-filled-border-color);
-    --#{$prefix}-filled-font-color: var(--upl-light-color-inputcontrols-#{$path}-filled-font-color);
-    --#{$prefix}-filled-background-color: var(--upl-light-color-inputcontrols-#{$path}-filled-background-color);
-
-    --#{$prefix}-disabled-border-color: var(--upl-light-color-inputcontrols-#{$path}-disabled-border-color);
-    --#{$prefix}-disabled-font-color: var(--upl-light-color-inputcontrols-#{$path}-disabled-font-color);
-    --#{$prefix}-disabled-background-color: var(--upl-light-color-inputcontrols-#{$path}-disabled-background-color);
-
-    --#{$prefix}-readonly-border-color: var(--upl-light-color-inputcontrols-#{$path}-readonly-border-color);
-    --#{$prefix}-readonly-font-color: var(--upl-light-color-inputcontrols-#{$path}-readonly-font-color);
-    --#{$prefix}-readonly-background-color: var(--upl-light-color-inputcontrols-#{$path}-readonly-background-color);
-
-    --#{$prefix}-error-border-color: var(--upl-light-color-inputcontrols-#{$path}-error-border-color);
-    --#{$prefix}-error-font-color: var(--upl-light-color-inputcontrols-#{$path}-error-font-color);
-    --#{$prefix}-error-background-color: var(--upl-light-color-inputcontrols-#{$path}-error-background-color);
-}
-
-@mixin textfield-variables() {
     // 공통 메시지
     --upl-textfield--message-icon-gap: var(--upl-gap-4);
     --upl-textfield--message-font-size: var(--upl-font-size-body-small);
-    --upl-textfield--message-info-font-color: var(--upl-light-color-inputcontrols-message-info-font-color);
-    --upl-textfield--message-error-font-color: var(--upl-light-color-inputcontrols-message-error-font-color);
-    --upl-textfield--message-success-font-color: var(--upl-light-color-inputcontrols-message-success-font-color);
-
-    // Basic 텍스트필드
-    --upl-textfield--basic-label-font-size: var(--upl-font-size-body-small);
-    --upl-textfield--basic-label-font-color: var(--upl-light-color-inputcontrols-basic-label-font-color);
-    --upl-textfield--basic-message-gap-y: var(--upl-gap-8);
-    --upl-textfield--basic-height: var(--upl-number-56);
-    --upl-textfield--basic-input-text-padding-x: var(--upl-padding-16);
-    --upl-textfield--basic-label-gap-y: var(--upl-gap-6);
-    --upl-textfield--basic-label-line-height: var(--upl-typo-line-height-font-size-14);
-    --upl-textfield--basic-input-font-weight: var(--upl-typo-font-weight-semi-bold);
-    --upl-textfield--basic-input-font-size: var(--upl-font-size-body-large);
-    --upl-textfield--basic-input-line-height: var(--upl-typo-line-height-font-size-18);
-    --upl-textfield--basic-radius: var(--upl-radius-12);
-    --upl-textfield--basic-border-left-width: var(--upl-number-1);
-    --upl-textfield--basic-border-top-width: var(--upl-number-1);
-    --upl-textfield--basic-border-right-width: var(--upl-number-1);
-    --upl-textfield--basic-border-bottom-width: var(--upl-number-1);
-
-    @include textfield-color-variants('upl-textfield--basic', 'basic');
-
-    // Label Inline 텍스트필드
-    --upl-textfield--labelinline-message-gap-y: var(--upl-gap-8);
-    --upl-textfield--labelinline-label-gap-y: var(--upl-gap-6);
-    --upl-textfield--labelinline-label-font-size: var(--upl-font-size-body-small);
-    --upl-textfield--labelinline-label-line-height: var(--upl-typo-line-height-font-size-14);
-    --upl-textfield--labelinline-input-line-height: var(--upl-typo-line-height-font-size-18);
-    --upl-textfield--labelinline-input-font-weight: var(--upl-typo-font-weight-semi-bold);
-    --upl-textfield--labelinline-input-font-size: var(--upl-font-size-body-large);
-    --upl-textfield--labelinline-height: var(--upl-number-84);
-    --upl-textfield--labelinline-input-text-gap-x: var(--upl-gap-16);
-    --upl-textfield--labelinline-input-text-padding-top: var(--upl-padding-16);
-    --upl-textfield--labelinline-default-font-color: var(--upl-light-color-inputcontrols-basic-default-font-color);
-    --upl-textfield--labelinline-radius: var(--upl-radius-16);
-    --upl-textfield--labelinline-border-width: var(--upl-number-1);
-
-    @include textfield-color-variants('upl-textfield--labelinline', 'basic');
+    --upl-textfield--message-info-font-color: var(--upl-light-color-input-message-info-font-color);
+    --upl-textfield--message-error-font-color: var(--upl-light-color-input-message-error-font-color);
+    --upl-textfield--message-success-font-color: var(--upl-light-color-input-message-success-font-color);
 }
 
-// Form
+// 상태별 컬러 변수 Mixin
+@mixin textfield-color-variables($mode, $type) {
+    $prefix: --upl-textfield--#{$type};
+
+    @each $state in (default, focused, filled, disabled, readonly, error) {
+        #{$prefix}-#{$state}-border-color: var(--upl-#{$mode}-color-input-basic-#{$state}-border-color);
+        #{$prefix}-#{$state}-font-color: var(--upl-#{$mode}-color-input-basic-#{$state}-font-color);
+        #{$prefix}-#{$state}-background-color: var(--upl-#{$mode}-color-input-basic-#{$state}-background-color);
+    }
+}
+
+// 최종 통합 Mixin
+@mixin textfield-variables($mode: light) {
+    @include textfield-size-variables(basic);
+    @include textfield-size-variables(labelinline);
+    @include textfield-color-variables($mode, basic);
+    @include textfield-color-variables($mode, labelinline);
+}
+
+// TextField Style
 .form-group {
     @include textfield-variables();
     position: relative;
