@@ -1,0 +1,94 @@
+/* Terms */
+// 공통 변수 Mixin
+@mixin terms-common-variables {
+    --upl-terms--gap: var(--upl-gap-8);
+}
+// 사이즈별 변수 Mixin
+@mixin terms-type-variables($type) {
+    @if $type ==box {
+        --upl-terms--#{$type}-padding: var(--upl-padding-16);
+        --upl-terms--#{$type}-fill: var(--upl-color-light-blue-50);
+        --upl-terms--#{$type}-border-radius: var(--upl-radius-12);
+    }
+
+    @else if $type ==link {
+        --upl-terms--#{$type}-padding-y: var(--upl-padding-12);
+        --upl-terms--#{$type}-padding-x: var(--upl-padding-16);
+        --upl-terms--#{$type}-icon-size: var(--upl-iconsize-xxs);
+        --upl-terms--#{$type}-icon-image: url(/resources/img/component/icon/icon-arrow-right.svg);
+    }
+    @else if $type ==toggle {
+        --upl-terms--#{$type}-icon-image: url(/resources/img/component/icon/icon-arrow-down.svg);
+    }
+}
+
+// 상태별 컬러 변수 Mixin (mode 기본값 light)
+@mixin terms-color-variables($mode: light) {
+    
+}
+
+// 최종 Checkbox 변수 Mixin
+@mixin terms-variables($mode: light) {
+    @include terms-common-variables;
+    @include terms-type-variables(box);
+    @include terms-type-variables(link);
+    @include terms-type-variables(toggle);
+    @include terms-color-variables($mode);
+}
+
+// Terms Style
+.terms-item {
+    @include terms-variables();
+    position: relative;
+    width: 100%;
+
+    &.box {
+        width: 100%;
+        padding: var(--upl-terms--box-padding);
+        margin-top: var(--upl-terms--gap);
+        background-color: var(--upl-terms--box-fill);
+        border-radius: var(--upl-terms--box-border-radius);
+
+        .selection {
+            margin: 0;
+        }
+    }
+
+    &.link,
+    &.toggle {
+
+        width: 100%;
+        margin-top: var(--upl-terms--gap);
+        padding: var(--upl-terms--link-padding-y) var(--upl-terms--link-padding-x);
+
+        .selection {
+            margin: 0;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: var(--upl-terms--link-padding-x);
+            width: var(--upl-terms--link-icon-size);
+            height: var(--upl-terms--link-icon-size);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: var(--upl-terms--link-icon-size) auto;
+            transform: translateY(-50%);
+        }
+    }
+
+    &.link {
+        &:after {
+            background-image: var(--upl-terms--link-icon-image);
+        }
+    }
+
+    &.toggle {
+        &:after {
+            background-image: var(--upl-terms--toggle-icon-image);
+        }
+    }
+}

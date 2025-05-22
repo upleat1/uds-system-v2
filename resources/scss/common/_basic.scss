@@ -1,0 +1,72 @@
+// SCSS 변수 리스트
+$radius-sizes: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20;
+$radius-comments: (
+    6: "2rem size",
+    8: "2.4rem / 4.8rem size",
+    12: "4.8rem / 5.6rem size",
+    16: "8.4rem size"
+);
+
+$gap-sizes: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 40, 48, 52, 56, 60, 64, 68, 72;
+$padding-sizes: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32;
+
+// Radius
+@each $size in $radius-sizes {
+    .rd-#{$size} {
+        border-radius: var(--upl-radius-#{$size});
+
+        @if map-has-key($radius-comments, $size) {
+            // #{map-get($radius-comments, $size)} // 주석으로 남기고 싶다면 이 줄을 사용하세요
+        }
+    }
+}
+
+.rd-max {
+    border-radius: var(--upl-radius-max);
+}
+
+// Margin
+@each $size in $gap-sizes {
+    .mg-#{$size} {
+        margin: var(--upl-gap-#{$size});
+    }
+
+    .mgt-#{$size} {
+        margin-top: var(--upl-gap-#{$size});
+    }
+
+    .mgb-#{$size} {
+        margin-bottom: var(--upl-gap-#{$size});
+    }
+
+    .mgl-#{$size} {
+        margin-left: var(--upl-gap-#{$size});
+    }
+
+    .mgr-#{$size} {
+        margin-right: var(--upl-gap-#{$size});
+    }
+}
+
+// Padding
+@each $size in $padding-sizes {
+    .pd-#{$size} {
+        padding: var(--upl-padding-#{$size});
+    }
+
+    .pdt-#{$size} {
+        padding-top: var(--upl-padding-#{$size});
+    }
+
+    .pdb-#{$size} {
+        padding-bottom: var(--upl-padding-#{$size});
+    }
+
+    .pdl-#{$size} {
+        padding-left: var(--upl-padding-#{$size});
+    }
+
+    .pdr-#{$size} {
+        padding-right: var(--upl-padding-#{$size});
+    }
+}

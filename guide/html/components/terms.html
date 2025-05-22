@@ -1,297 +1,280 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="format-detection" content="telephone=no">
-    <title>약관</title>
+    <meta name="format-detection" content="telephone=no">
+    <title>Upleat Design System</title>
     <link rel="stylesheet" href="/guide/resources/css/components.css">
     <link rel="stylesheet" href="/guide/resources/vendor/highlight/github-gist.css">
-    
+
     <!-- resource -->
-    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/common.css">
-    <link rel="stylesheet" data-description="공통 요소별 스타일" href="/resources/css/component.css">
+    <link rel="stylesheet" href="/resources/css/component/output.css">
+    <style>
+        .h3 {
+            margin-bottom: 1rem;
+        }
+
+        div+.h3 {
+            margin-top: 3rem;
+        }
+
+        .selection,
+        .switch {
+            display: inline-block;
+            margin: 1rem
+        }
+    </style>
 </head>
+
 <body>
     <div data-class="contents">
-        <div data-class="component-name"><span>약관</span></div>
+        <h1 data-class="component-name"><span>Terms<span></h1>
+        <!--         <div data-class="box">
+            <div data-class="list disc">
+                <div>사용자가 선택 옵션들을 제어할 수 있도록 돕는 컴포넌트</div>
+            </div>
+        </div> -->
 
-        <div data-class="section">
-            <div data-class="h1">Type</div>
-            <div data-class="h2">타입1</div>
-            <script type="text/html">
-<div class="agree-wrap">
-    <div class="agree-group">
-        <!-- <div class="agree-item">
-            <span class="form-sel lg">
-                <input type="checkbox" id="term1-1">
-                <label for="term1-1" class="label">약관명위에 투명버튼</label>
-            </span>
-            <button type="button" class="btn btn-link" title="입출금통장 상품설명서 바로가기"></button>
-        </div> 투명버튼이 위에 있는 경우 -->
-        <div class="agree-item btn-link">
-            <span class="form-sel lg">
-                <input type="checkbox" id="term1-2">
-                <label for="term1-2" class="label" title="입출금통장 상품설명서 바로가기">입출금통장 상품설명서 입출금통장 상품설명서 입출금통장 상품설명서 입출금통장 상품설명서 입출금통장 상품설명서</label>
+        <div data-class="tab-warp">
+            <div data-class="tab-list" role="tablist">
+                <button type="button" id="tabBtnGuide01" data-class="button-tab" role="tab" aria-selected="true"
+                    aria-controls="tabpanelGuide01">코드</button>
+                <button type="button" id="tabBtnGuide02" data-class="button-tab" role="tab" aria-selected="false"
+                    aria-controls="tabpanelGuide02">접근성</button>
+            </div>
+            <div id="tabpanelGuide01" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide01">
+                <div data-class="section">
+                    <div data-class="h1">Type</div>
+                    <div data-class="h2">Box</div>
+                    <script type="text/html">
+<div data-class="terms-wrap">
+    <div class="terms-group">
+        
+        <div class="terms-item box">
+            <span class="selection checkbox lg on">
+                <input type="checkbox" id="check1">
+                <label for="check1" class="label" title="전체동의 바로가기">전체동의</label>
             </span>
         </div>
+        <div class="terms-item box">
+            <span class="selection checkbox lg on">
+                <input type="checkbox" id="check1" checked>
+                <label for="check1" class="label" title="전체동의 바로가기">전체동의</label>
+            </span>
+        </div>
+        
     </div>
-    <div class="agree-group">
-        <div class="agree-item">
-            <span class="form-sel lg">
-                <input type="checkbox" id="term1-3">
-                <label for="term1-3" class="label">필수동의</label>
-            </span>
-        </div>
-        <div class="agree-inr">
-            <div class="agree-item btn-link">
-                <span class="form-sel sm">
-                    <input type="checkbox" id="term1-31" name="term1-3">
-                    <label for="term1-31" class="label" title="예금거래기본약관 바로가기">예금거래기본약관</label>
-                </span>
-            </div>
-            <div class="agree-item btn-link">
-                <span class="form-sel sm">
-                    <input type="checkbox" id="term1-32" name="term1-3">
-                    <label for="term1-32" class="label" title="입출금이자유로운예금약관 바로가기">입출금이자유로운예금약관 입출금이자유로운예금약관 입출금이자유로운예금약관 입출금이자유로운예금약관</label>
-                </span>
-            </div>
-            <div class="agree-item btn-link">
-                <span class="form-sel sm">
-                    <input type="checkbox" id="term1-33" name="term1-3">
-                    <label for="term1-33" class="label" title="입출금통장특약 바로가기">입출금통장특약</label>
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="form-label fz-16">납세의무</div>
-        <div class="form-rdochk">
-            <span class="form-sel">
-                <input type="checkbox" id="checkSize1-1" name="checkSize1" checked="">
-                <label for="checkSize1-1" class="label">국세납부</label>
-            </span>
-            <span class="form-sel">
-                <input type="checkbox" id="checkSize1-2" name="checkSize1">
-                <label for="checkSize1-2" class="label">해외납세</label>
-            </span>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="form-label fz-16">납세의무</div>
-        <div class="rdoChk-group flexible">
-            <span class="form-sel">
-                <input type="checkbox" id="checkSize2-1" name="checkSize2" checked>
-                <label for="checkSize2-1" class="label">국세</label>
-            </span>
-            <span class="form-sel">
-                <input type="checkbox" id="checkSize2-2" name="checkSize2">
-                <label for="checkSize2-2" class="label">해외납</label>
-            </span>
-            <span class="form-sel">
-                <input type="checkbox" id="checkSize2-3" name="checkSize2">
-                <label for="checkSize2-3" class="label">해외납세</label>
-            </span>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="form-label fz-16">납세의무</div>
-        <div class="rdoChk-group flexible">
-            <span class="form-sel">
-                <input type="radio" id="checkSize3-1" name="checkSize3" checked>
-                <label for="checkSize3-1" class="label">국세납부</label>
-            </span>
-            <span class="form-sel">
-                <input type="radio" id="checkSize3-2" name="checkSize3">
-                <label for="checkSize3-2" class="label">해외</label>
-            </span>
-            <span class="form-sel">
-                <input type="radio" id="checkSize3-3" name="checkSize3">
-                <label for="checkSize3-3" class="label">해외납</label>
-            </span>
-        </div>
-    </div>
-
-
-    <div class="agree-group">
-        <div class="agree-item">
-            <span class="form-sel lg">
-                <input type="checkbox" id="term1-4">
-                <label for="term1-4" class="label">선택약관</label>
-            </span>
-        </div>
-        <div class="agree-inr">
-            <div class="agree-item">
-                <span class="form-sel sm">
-                    <input type="checkbox" id="term1-5">
-                    <label for="term1-5" class="label fw-500" title="상품서비스 및 마케팅 동의 바로가기">상품서비스 및 마케팅 동의<span class="badge state-relief">안심</span></label>
-                </span>
-            </div>
-            <div class="agree-item-inr">
-                <div class="rdoChk-group">
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term1-51" name="term1-5">
-                        <label for="term1-51" class="label">앱푸시</label>
-                    </span>
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term1-52" name="term1-5">
-                        <label for="term1-52" class="label">문자(SMS)</label>
-                    </span>
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term1-53" name="term1-5">
-                        <label for="term1-53" class="label">전화</label>
-                    </span>
-                </div>
-            </div>
-            <div class="agree-item btn-link">
-                <span class="form-sel sm">
-                    <input type="checkbox" id="term1-6">
-                    <label for="term1-6" class="label fw-500" title="상품서비스 및 마케팅 동의 바로가기">상품서비스 및 마케팅 동의<span class="badge state-relief">안심</span></label>
-                </span>
-            </div>
-            <div class="agree-item-inr">
-                <div class="rdoChk-group flexible">
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term1-61" name="term1-6">
-                        <label for="term1-61" class="label">앱푸시</label>
-                    </span>
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term1-62" name="term1-6">
-                        <label for="term1-62" class="label">문자(SMS)</label>
-                    </span>
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term1-63" name="term1-6">
-                        <label for="term1-63" class="label">전화</label>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="agree-item">
-            <span class="form-sel lg">
-                <input type="checkbox" id="term1-7">
-                <label for="term1-7" class="label">인맥통장 이벤트 참여 동의 안내</label>
-            </span>
-        </div>
-        <div class="agree-item-inr">
-            <div class="agree-txt">
-                내 휴대폰 주소록에 등록된 지인이 입출금통장을 개설하면 본인과 지인에게 일정금액의 현금을 자동으로 지급합니다.<br>동의하지 않을 경우 이벤트에 참여가 불가능합니다.
-            </div>
-        </div>
-
-        <div class="agree-inr">
-            <div class="agree-item">
-                <span class="form-sel sm">
-                    <input type="checkbox" id="term1-8">
-                    <label for="term1-8" class="label">인맥통장 이벤트 참여 동의 안내</label>
-                </span>
-            </div>
-        </div>
-
-        <div class="agree-item-inr">
-            <div class="agree-txt">
-                내 휴대폰 주소록에 등록된 지인이 입출금통장을 개설하면 본인과 지인에게 일정금액의 현금을 자동으로 지급합니다.<br>동의하지 않을 경우 이벤트에 참여가 불가능합니다.
-            </div>
-        </div>
-
-        <div class="agree-item">
-            <span class="form-sel sm">
-                <input type="checkbox" id="term1-9">
-                <label for="term1-9" class="label">한도/금리 알림 정보제공 동의</label>
-            </span>
-        </div>
-        <div class="agree-item-inr">
-            <ul class="depth bul">
-                <li>한도/금리 알림 수집&middot;이용&middot;제공 동의</li>
-                <li>한도/금리 알림 조회 동의</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="agree-group rdochk">
-        <div class="agree-inr">
-            <div class="agree-item"><!--agree-item-inr-->
-                <div class="form-label fz-16">신용정보변동 알림</div>
-                <div class="rdoChk-group flexible">
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term2-3-1" name="chk5">
-                        <label for="term2-3-1" class="label">앱푸시</label>
-                    </span>
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term2-3-2" name="chk5">
-                        <label for="term2-3-2" class="label">알림톡(SMS)</label>
-                    </span>
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term2-3-3" name="chk5">
-                        <label for="term2-3-3" class="label">이메일</label>
-                    </span>
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term2-3-4" name="chk5">
-                        <label for="term2-3-4" class="label">우편</label>
-                    </span>
-                    <span class="form-sel sm">
-                        <input type="checkbox" id="term2-3-5" name="chk5">
-                        <label for="term2-3-5" class="label">전화</label>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="agree-group">
-        <div class="agree-item">
-            <span class="form-sel lg">
-                <input type="checkbox" id="term3-1" name="term3">
-                <label for="term3-1" class="label">예금자보호법 안내</label>
-            </span>
-        </div>
-        <div class="agree-inr">
-            <div class="agree-txt">
-                본인이 가입하는 금융상품의 예금자보호여부 및 보호한도(원금과 소정의 이자를 합하여 1인당 5천만원)에 대하여 설명을 보고, 충분히 이해하였음을 확인합니다.
-            </div>
-        </div>
-    </div>
-
-    <div class="agree-check">
-        <span class="form-sel lg">
-            <input type="checkbox" id="term-check1" name="term-check1">
-            <label for="term-check1" class="label">전체약관을 확인하고 동의합니다.</label>
-        </span>
-    </div>
-
-    <div class="form-rdochk add-line v">
-        <span class="form-sel lg">
-            <input type="checkbox" id="formChk01">
-            <label for="formChk01" class="label">타인으로부터 통장을 대여 요청 받은 사실이 있다면 신청이 불가합니다.</label>
-        </span>
-        <span class="form-sel lg">
-            <input type="checkbox" id="formChk01">
-            <label for="formChk01" class="label">타인으로부터 통장을 대여 요청 받은 사실이 있다면 신청이 불가합니다.</label>
-        </span>
-        <span class="form-sel lg last-exp">
-            <input type="checkbox" id="formChk03">
-            <label for="formChk03" class="label">마지막 라인 필요시 last-exp추가</label>
-        </span>
-    </div>
-
-
 </div>
-            </script>
+                    </script>
+                    <div data-class="h2">Link</div>
+                    <script type="text/html">
+<div data-class="terms-wrap">
+    <div class="terms-group">
+        
+        <div class="terms-item link" role="button" aria-label="체크박스 선택시 상세 페이지로 이동. 2레벨 동의 리스트">
+            <span class="selection checkbox lg on" aria-hidden="true">
+                <input type="checkbox" id="check2">
+                <label for="check2" class="label" title="2레벨 동의 리스트 바로가기">2레벨 동의 리스트</label>
+            </span>
+        </div>
+        <div class="terms-item link" role="button" aria-label="선택됨. 체크박스 선택시 상세 페이지로 이동. 2레벨 동의 리스트">
+            <span class="selection checkbox lg on" aria-hidden="true">
+                <input type="checkbox" id="check2" checked>
+                <label for="check2" class="label" title="2레벨 동의 리스트 바로가기">2레벨 동의 리스트</label>
+            </span>
+        </div>
+        
+    </div>
+</div>
+                    </script>
+                    <div data-class="h2">Toggle</div>
+                    <script type="text/html">
+<div data-class="terms-wrap">
+    <div class="terms-group">
+        
+        <h3 class="h3">Toggle</h3>
+        <div class="terms-item toggle" role="button" aria-expanded="false" aria-label="체크박스 선택시 3레벨 동의 리스트 상세보기">
+            <span class="selection checkbox md on" aria-hidden="true">
+                <input type="checkbox" id="check3">
+                <label for="check3" class="label" title="3레벨 동의 리스트 바로가기">3레벨 동의 리스트</label>
+            </span>
+        </div>
+        <div class="terms-item toggle" role="button" aria-expanded="true" aria-label="체크박스 선택시 3레벨 동의 리스트 상세보기">
+            <span class="selection checkbox md on" aria-hidden="true">
+                <input type="checkbox" id="check3" checked>
+                <label for="check3" class="label" title="3레벨 동의 리스트 바로가기">3레벨 동의 리스트</label>
+            </span>
+        </div>
+        
+    </div>
+</div>
+                    </script>
+                </div>
+                <div data-class="section">
+                    <div data-class="h1">Sample</div>
+                    <div data-class="h2">Basic</div>
+                    <script type="text/html">
+<div class="terms-wrap">
+    <div class="terms-group">
+        <h1 class="h1 mgb-28">약관에 동의해 주세요</h1>
+        
+        <div class="terms-item box">
+            <span class="selection checkbox lg on">
+                <input type="checkbox" id="check1" checked>
+                <label for="check1" class="label" title="전체동의 바로가기">전체동의</label>
+            </span>
+        </div>
+        <div class="terms-item link" role="button" aria-label="체크박스 선택시 3레벨 동의 리스트 상세보기">
+            <span class="selection checkbox lg on" aria-hidden="true">
+                <input type="checkbox" id="check2" checked>
+                <label for="check2" class="label" title="2레벨 동의 리스트 바로가기">2레벨 동의 리스트</label>
+            </span>
+        </div>
+        <div class="terms-item toggle" role="button" aria-expanded="true" aria-label="체크박스 선택시 3레벨 동의 리스트 상세보기">
+            <span class="selection checkbox md on" checked aria-hidden="true">
+                <input type="checkbox" id="check3">
+                <label for="check3" class="label" title="3레벨 동의 리스트 바로가기">3레벨 동의 리스트</label>
+            </span>
+        </div>
+        
+    </div>
+</div>
+                    </script>
+                </div>
+            </div>
+            <div id="tabpanelGuide02" data-class="tab-panel" role="tabpanel" aria-labelledby="tabBtnGuide02">
+                <div data-class="section g-description-area">
+
+                    <div data-class="g-conts-area">
+                        <h3 data-class="sec-tit">접근성 가이드라인</h3>
+                        <div data-class="g-conts-area sp-sm">
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">키보드를 이용하여 약관 내용을 확인할 수 있도록 제공한다.</p>
+                                <p data-class="g-desc">약관 내용 영역에 생성된 스크롤은 키보드를 이용하여 조작할 수 있도록 제공하여, 키보드 사용자가 스크롤 하단에 숨겨진 내용을
+                                    확인할 수 있어야 한다.</p>
+                                <ul data-class="g-info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 키보드 사용 보장</li>
+                                    <li role="listitem">WCAG 2.1 Keyboard (A)</li>
+                                    <li role="listitem">WCAG 2.1 No Keyboard Trap (A)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">약관 내용을 적절하게 구조화하여 제공한다.</p>
+                                <p data-class="g-desc">웹 문서에서 약관 내용을 제목, 문단 등으로 적절히 구조화하여 제공하면 보조 기기 사용자가 콘텐츠를 탐색하고 이해하기
+                                    쉬워진다.</p>
+                                <ul data-class="g-info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 제목 제공</li>
+                                    <li role="listitem">WCAG 2.1 Info and Relationships (A)</li>
+                                </ul>
+                            </div>
+                            <div data-class="g-desc-box">
+                                <p data-class="g-tit">동의함/동의하지 않음 옵션에 설명을 제공한다.</p>
+                                <p data-class="g-desc">동의함, 동의하지 않음 라디오 버튼 양식의 레이블은 양식 오른쪽에 배치한다. 동의 항목이 여러 개 제공되는 상황을 고려하여
+                                    스크린 리더 사용자가 각 라디오 버튼이 어떤 항목에 대한 동의 옵션인지 명확하게 확인할 수 있도록 aria-describedby 속성을 이용하여
+                                    상응하는 동의 항목의
+                                    제목과 연결한다.</p>
+                                <ul data-class="g-info-list decimal" role="list">
+                                    <li role="listitem">KWCAG 2.2 레이블 제공</li>
+                                    <li role="listitem">WCAG 2.1 Info and Relationships (A)</li>
+                                    <li role="listitem">WCAG 2.1 Labels or Instructions (A)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-class="g-conts-area">
+                        <h3 data-class="sec-tit">상호작용 가이드라인</h3>
+                        <div data-class="g-conts-area sp-sm">
+                          <h4 data-class="con-tit">목록 탐색</h4>
+                          <!-- table list -->
+                          <div data-class="g-table-wrap">
+                            <table data-class="tbl data col">
+                              <caption>상호작용 가이드라인, 목록 탐색에 대한 표는 구분, 설명의 구성으로 이루어져 있으며, 세부 항목으로는 Tab, Shift + Tab 항목을 포함한다.</caption>
+                              <colgroup>
+                                <col style="width: 15%">
+                                <col>
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">구분</th>
+                                  <th scope="col">설명</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Tab</th>
+                                  <td>목록 내 다음 인터페이스 요소로 키보드 초점이 이동하고 초점을 받은 요소에 키보드 포커스링이 표시된다.</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Shift + Tab</th>
+                                  <td>목록 내 이전 인터페이스 요소로 키보드 초점이 이동하고 초점을 받은 요소에 키보드 포커스링이 표시된다.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- //table list -->
+                        </div>
+        
+                        <div data-class="g-conts-area">
+                          <h4 data-class="con-tit">동의 옵션 선택</h4>
+                          <div data-class="g-desc-box">
+                            <h5 data-class="g-tit">일괄 선택</h5>
+                            <p data-class="g-desc">개별 선택 항목 중 단 하나라도 '동의 안 함' 옵션이 선택되어 있다면 일괄 선택 체크박스는 선택 해제 상태가 유지되어야 한다.</p>
+                            <!-- table list -->
+                            <div data-class="g-table-wrap">
+                              <table data-class="tbl data col">
+                                <caption>상호작용 가이드라인, 일괄 선택에 대한 표는 구분, 설명의 구성으로 이루어져 있으며, 세부 항목으로는 Click, Space 항목을 포함한다.</caption>
+                                <colgroup>
+                                  <col style="width: 15%">
+                                  <col>
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">설명</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Click</th>
+                                    <td>
+                                      일괄 선택 체크박스를 Click 하여 값이 선택되면 모든 동의 옵션의 ‘동의함’ 값이 선택된다. 체크박스를 Click 하여 값의 선택이 해제되면서 모든 동의 옵션의 ‘동의 안 함’ 값이 선택된다. <br>
+                                      초점은 체크박스에 유지되어야 한다.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Space</th>
+                                    <td>일괄 선택 체크박스가 초점을 가진 상태에서 Space 키에 대한 Keyup 이벤트가 발생하면 체크박스가 선택 상태로 전환되면서 모든 동의 옵션의 ‘동의함’ 값이 선택된다. 이 상태에서 다시 체크박스에 동일한 이벤트가 발생하면 값의 선택이 해제되면서 모든 동의 옵션의 ‘동의 안 함’ 값이 선택된다.
+                                      초점은 체크박스에 유지되어야 한다.</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <!-- //table list -->
+                          </div>
+                          <div data-class="g-desc-box">
+                            <h5 data-class="g-tit">개별 선택</h5>
+                            <p data-class="g-desc">라디오 버튼과 체크박스 컴포넌트의 가이드라인을 따른다.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
+    </div>
     <script src="/guide/resources/vendor/jquery.min.js"></script>
+    <script src="/guide/resources/vendor/jquery-ui.min.js"></script>
     <script src="/guide/resources/vendor/lodash.min.js"></script>
     <script src="/guide/resources/vendor/highlight/highlight.min.js"></script>
     <script src="/guide/resources/vendor/clipboard.min.js"></script>
     <script src="/guide/resources/js/components.js"></script>
     <script src="/resources/js/common-ui.js"></script>
-
-    <script>
-        //
-    </script>
 </body>
+
 </html>
