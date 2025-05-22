@@ -309,7 +309,7 @@ caption {
 //responsive mobile
 @include size-medium {
 	body {
-		font-size: var(--upl-mobile-font-size-body-medium);
+		// font-size: var(--upl-mobile-font-size-body-medium);
 	}
 	.pc-only {
 		display: none !important;

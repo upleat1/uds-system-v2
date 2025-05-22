@@ -111,7 +111,7 @@
 
 //reset text : popover/tooltip
 @mixin reset-text {
-	font-size: var(--upl-pc-font-size-body-medium);
+	font-size: var(--upl-font-size-body-medium);
 	font-style: normal;
 	font-weight: var(--upl-font-weight-regular);
 	line-height: var(--upl-line-height-base);
@@ -124,9 +124,9 @@
 	white-space: normal;
 	word-spacing: normal;
 	line-break: auto;
-	@include size-medium {
-		font-size: var(--upl-mobile-font-size-body-medium);
-	}
+	// @include size-medium {
+	// 	font-size: var(--upl-mobile-font-size-body-medium);
+	// }
 }
 
 //css animation visibility
