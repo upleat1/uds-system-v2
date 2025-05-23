@@ -39,7 +39,7 @@
 	--upl-tab-line-selected-font-color: var(--upl-#{$mode}-color-text-title);
 	--upl-tab-line-secondary-selected-font-color: var(--upl-#{$mode}-color-text-title);
 	--upl-tab-line-secondary-default-font-color: var(--upl-#{$mode}-color-text-subtitle);
-	--upl-tab-box-default-font-color: var(--upl-#{$mode}-color-text-gray500);
+	--upl-tab-box-default-font-color: var(--upl-color-#{$mode}-gray-500); /* primitive */
 	--upl-tab-box-selected-font-color: var(--upl-#{$mode}-color-text-title);	
 
 	--upl-tab-line-secondary-background-color: var(--upl-#{$mode}-color-background-gray100);

@@ -711,6 +711,7 @@ input[type=email],
 input[type=date],
 input[type=search],
 textarea {
+  -webkit-box-shadow: none;
   box-shadow: none;
   appearance: none;
   -webkit-appearance: none;
@@ -830,9 +831,6 @@ caption {
 }
 
 @media (max-width: 767px) {
-  body {
-    font-size: var(--upl-mobile-font-size-body-medium);
-  }
   .pc-only {
     display: none !important;
   }
