@@ -410,7 +410,7 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
     flex-wrap: wrap;
     border: 1px solid var(--upl-bdc_02, #dddddd);
     border-radius: 5px;
-    background-color: var(--upl-bg_05, #fff);
+    background-color: var(--upl-bg_01, #fff);
 }
 [data-class="button-tab"] {
     flex: 1 0px;
