@@ -1,6 +1,30 @@
 @charset "UTF-8";
 @import "/resources/css/common/_variables.css"; /* 디자인 토큰 */
 @import "/resources/css/library/swiper.min.css";
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: url(/resources/css/fonts/Pretendard-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: url(/resources/css/fonts/Pretendard-Medium.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: url(/resources/css/fonts/Pretendard-SemiBold.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: url(/resources/css/fonts/Pretendard-Bold.woff2) format("woff2");
+}
 :root {
   --upl-font-family-base: var(--upl-font-type), NotoSans, sans-serif;
   --upl-font-size-base: 62.5%;
@@ -354,154 +378,6 @@
 }
 .icon.icon-angle.right::before {
   transform: rotate(-90deg);
-}
-
-/* upl-drop-wrap */
-.upl-drop-wrap {
-  --upl-dropdown--menu-radius: var(--upl-radius-medium4);
-  --upl-dropdown--menu-padding: var(--upl-padding-3);
-  --upl-dropdown--menu-margin-top: var(--upl-padding-6);
-  --upl-dropdown--menu-gap: var(--upl-gap-3);
-  --upl-dropdown--list-item-radius: var(--upl-radius-medium2);
-  --upl-dropdown--list-item-height: var(--upl-size-height-7);
-  --upl-dropdown--list-item-pc-font-size: var(--upl-pc-font-size-navigation-depth-medium);
-  --upl-dropdown--list-item-mobile-font-size: var(--upl-mobile-font-size-navigation-depth-medium);
-  --upl-dropdown--menu-color-border: var(--upl-light-color-border-gray-light);
-  --upl-dropdown--menu-color-surface: var(--upl-light-color-surface-white-subtler);
-  --upl-dropdown--menu-color-alpha-shadow: 0 0 0.2rem 0 var(--upl-light-color-alpha-shadow1), 0 0.4rem 0.8rem 0 var(--upl-light-color-alpha-shadow2);
-  --upl-dropdown--list-item-color-action-hover: var(--upl-light-color-action-secondary-hover);
-  --upl-dropdown--list-item-color-action-pressed: var(--upl-light-color-action-secondary-pressed);
-  --upl-dropdown--list-item-color-action-selected: var(--upl-light-color-action-secondary-selected);
-  --upl-dropdown--list-item-color-text-selected: var(--upl-light-color-text-secondary);
-  display: inline-flex;
-  position: relative;
-}
-.upl-drop-wrap .drop-menu {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  display: none;
-  z-index: 6;
-  min-width: 13rem;
-  border-radius: var(--upl-dropdown--menu-radius);
-  padding: var(--upl-dropdown--menu-padding);
-  margin-top: var(--upl-dropdown--menu-margin-top);
-  background-color: var(--upl-dropdown--menu-color-surface);
-  border: 0.1rem solid var(--upl-dropdown--menu-color-border);
-  box-shadow: var(--upl-dropdown--menu-color-alpha-shadow);
-  transform: translateX(-50%);
-}
-.upl-drop-wrap .drop-menu::before {
-  content: "";
-  width: 1.2rem;
-  height: 1.2rem;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  display: block;
-  margin-bottom: -0.5rem;
-  margin-left: -0.6rem;
-  transform: rotate(-135deg);
-  background-color: var(--upl-dropdown--menu-color-surface);
-  border: 0.1rem solid var(--upl-dropdown--menu-color-border);
-  border-top-color: transparent;
-  border-left-color: transparent;
-}
-.upl-drop-wrap .drop-menu .drop-in {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: var(--upl-dropdown--menu-gap);
-  position: relative;
-  z-index: 1;
-}
-.upl-drop-wrap .drop-menu .drop-top {
-  width: 100%;
-  padding: var(--upl-padding-3) var(--upl-padding-6);
-  border-bottom: 0.1rem solid var(--upl-dropdown--menu-color-border);
-}
-.upl-drop-wrap .drop-menu .drop-bottom {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: row;
-  width: 100%;
-  padding: var(--upl-padding-3) 0;
-  border-top: 0.1rem solid var(--upl-dropdown--menu-color-border);
-}
-.upl-drop-wrap .drop-menu .drop-list {
-  width: 100%;
-}
-.upl-drop-wrap .drop-menu .drop-list .item-link {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  width: 100%;
-  gap: var(--upl-gap-3);
-  padding: 0 var(--upl-padding-6);
-  font-size: var(--upl-dropdown--list-item-pc-font-size);
-  border-radius: var(--upl-dropdown--list-item-radius);
-  height: var(--upl-dropdown--list-item-height);
-  background-color: var(--upl-dropdown--menu-color-surface);
-}
-@media (max-width: 767px) {
-  .upl-drop-wrap .drop-menu .drop-list .item-link {
-    font-size: var(--upl-dropdown--list-item-mobile-font-size);
-  }
-}
-.upl-drop-wrap .drop-menu .drop-list .item-link .ico-go {
-  background-color: var(--upl-light-color-text-basic);
-  background-image: none;
-  forced-color-adjust: none;
-}
-.upl-drop-wrap .drop-menu .drop-list .item-link:hover {
-  background-color: var(--upl-dropdown--list-item-color-action-hover);
-}
-.upl-drop-wrap .drop-menu .drop-list .item-link:active {
-  background-color: var(--upl-dropdown--list-item-color-action-pressed);
-}
-.upl-drop-wrap .drop-menu .drop-list .item-link.active {
-  font-weight: var(--upl-font-weight-bold);
-  color: var(--upl-dropdown--list-item-color-text-selected);
-  background-color: var(--upl-dropdown--list-item-color-action-selected);
-}
-.upl-drop-wrap.drop-left .drop-menu {
-  left: 0;
-  right: unset;
-  transform: none;
-}
-.upl-drop-wrap.drop-left .drop-menu::before {
-  left: 2.4rem;
-  margin-left: 0;
-}
-.upl-drop-wrap.drop-right .drop-menu {
-  left: unset;
-  right: 0;
-  transform: none;
-}
-.upl-drop-wrap.drop-right .drop-menu::before {
-  left: unset;
-  right: 2.4rem;
-}
-
-[data-upl-mode=dark] {
-  /* upl-drop-wrap */
-}
-[data-upl-mode=dark] .upl-drop-wrap {
-  --upl-dropdown--menu-color-border: var(--upl-dark-color-border-gray-light);
-  --upl-dropdown--menu-color-surface: var(--upl-dark-color-surface-white-subtler);
-  --upl-dropdown--menu-color-alpha-shadow: 0 0 0.2rem 0 var(--upl-dark-color-alpha-shadow1), 0 0.4rem 0.8rem 0 var(--upl-dark-color-alpha-shadow2);
-  --upl-dropdown--list-item-color-action-hover: var(--upl-dark-color-action-secondary-hover);
-  --upl-dropdown--list-item-color-action-pressed: var(--upl-dark-color-action-secondary-pressed);
-  --upl-dropdown--list-item-color-action-selected: var(--upl-dark-color-action-secondary-selected);
-  --upl-dropdown--list-item-color-text-selected: var(--upl-dark-color-text-secondary);
-}
-[data-upl-mode=dark] .upl-drop-wrap .drop-list .item-link .ico-go {
-  background-color: var(--upl-dark-color-text-basic);
-  background-image: none;
-  forced-color-adjust: none;
 }
 
 /* reset */
