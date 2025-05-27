@@ -408,6 +408,7 @@ caption, legend, .offscreen{position:absolute!important;height:1px!important;wid
 [data-class="tab-list"] {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
     border: 1px solid var(--upl-bdc_02, #dddddd);
     border-radius: 5px;
     background-color: var(--upl-bg_01, #fff);

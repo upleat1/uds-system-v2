@@ -700,12 +700,6 @@ caption {
   forced-color-adjust: none;
 }
 
-.inner {
-  max-width: var(--upl-contents-wrap-size);
-  padding-left: var(--upl-contents-padding-x);
-  padding-right: var(--upl-contents-padding-x);
-}
-
 @media (max-width: 767px) {
   .pc-only {
     display: none !important;
@@ -724,11 +718,6 @@ caption {
   .mob-line {
     display: block;
     line-height: inherit;
-  }
-}
-@media (min-width: 1024px) {
-  .inner {
-    margin: 0 auto;
   }
 }
 @media (min-width: 768px) {

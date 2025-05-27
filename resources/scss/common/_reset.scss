@@ -300,11 +300,11 @@ caption {
 	}
 }
 
-.inner {
-	max-width: var(--upl-contents-wrap-size);
-	padding-left: var(--upl-contents-padding-x);
-	padding-right: var(--upl-contents-padding-x);
-}
+// .inner {
+// 	max-width: var(--upl-contents-wrap-size);
+// 	padding-left: var(--upl-contents-padding-x);
+// 	padding-right: var(--upl-contents-padding-x);
+// }
 
 //responsive mobile
 @include size-medium {
@@ -325,9 +325,9 @@ caption {
 
 //responsive web
 @include size-large-more {
-	.inner {
-		margin: 0 auto;
-	}
+	// .inner {
+	// 	margin: 0 auto;
+	// }
 }
 
 @include size-medium-more {

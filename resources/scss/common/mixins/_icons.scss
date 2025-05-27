@@ -20,9 +20,8 @@
 	}
 }
 
-//icon mask ( 추후 변경 예정 )
+//icon mask
 @mixin svg-icon($size: var(--upl-iconsize-md), $mode: light, $effect: null) {
-	//@include square($size);
 	background-color: var(--upl-#{$mode}-color-text-basic);
 	background-image: none;
 	@if ($effect == 'pure') { //mask 효과 없이 디자인된 svg 그대로 사용
